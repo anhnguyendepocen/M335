@@ -1,0 +1,12 @@
+---
+title: "Class Discussion Materials"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Random Stuff
+
+* [Data is Beautiful](https://np.reddit.com/r/dataisbeautiful/){target="blank"}

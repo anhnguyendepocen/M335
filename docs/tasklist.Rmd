@@ -1,0 +1,114 @@
+---
+title: "Task List Form"
+params:
+  dtype: background
+  pbackground: FALSE
+  ptitle: FALSE
+output:
+  html_document:
+    keep_md: yes
+    toc_float:
+      collapsed: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+md_bullet <- mean  # junk line to stop coding error from showing up.  Is overwritten by source next line.
+source("../scripts/md_bullets.R")
+library(readxl)
+library(dplyr)
+library(stringr)
+
+cases <- read_excel(path = "../tasks_reading.xlsx", sheet = "CaseStudies")
+tasks <- read_excel(path = "../tasks_reading.xlsx", sheet = "Tasks")
+number = 1 # case study starting number
+dnumber = 1
+
+fname = paste("cs", str_pad(number, 2, "left", "0" ) , "_details.html", sep = "")
+text <- paste("#### [Case Study ", number, "](", file.path("weekly_projects", fname), ")\n\n", sep = "")
+
+fname_c = paste("task", str_pad(dnumber, 2, "left", "0" ) , "_details.html", sep = "")
+text_c <- paste("#### [Class Task ", dnumber, "](", file.path("class_tasks", fname), ")\n\n", sep = "")
+
+
+
+```
+
+```{r, results="asis"}
+cat("
+<style>
+ul {
+   color: black;
+   list-style-type: none;
+   list-style-position: outside;
+
+}
+
+</style>
+")
+```
+
+This page is provided to give you a one-page view of your task completion throughout the semester.  You can edit the `.md` file in your repository from `* [ ] blah blah blah` to `* [x] blah blah blah` to show the task as completed. You can see a [one-page view of all task backgrounds](backgrounds.html){target="blank"} as well.
+
+## Semester Deliverables
+
+#### [Semester Project](project.html)
+
+The deliverables for your [semester project](project.html) are assigned in [case study 9](weekly_projects/cs09_details.html) and [case study 12](weekly_projects/cs12_details.html). However you should keep a steady workflow on this project throughout the semester.  
+
+#### [Leadership](leadership.html)
+
+* [ ] Complete the class task before class starts
+* [ ] Be a class lead during class (complete at least one of the following)
+    * [ ] Supporting other students that need help getting through the last difficulties they had with the task
+    * [ ] Presenting key coding methods or steps to the entire class
+* [ ] Complete this task 12 times during the semester. 
+
+#### [Portfolio](weekly_projects/cs13_details.html)
+
+[Case study 13](weekly_projects/cs13_details.html) provides the checklist items for your portfolio. This portfolio package will be the basis of your final grade.  
+
+## Weekly Case Studies
+
+```{r results="asis"}
+class_cs <- expression({
+  # write current task header and link then list tasks
+  cat(text)
+  md_bullet(cases, group = list("Number" = number))
+  cat("\n\n")
+  # Step to the next task and header creation
+  number <- number + 1
+  fname = paste("cs", str_pad(number, 2, "left", "0" ) , "_details.html", sep = "")
+  text <- paste("#### [Case Study ", number, "](", file.path("weekly_projects", fname), ")\n\n", sep = "")
+
+})
+
+for(i in 1:13){
+eval(class_cs)  
+}
+
+```
+
+## Daily Class Tasks
+
+
+```{r results="asis"}
+class_task <- expression({
+  # write current task header and link then list tasks
+  cat(text_c)
+  md_bullet(tasks, group = list("Number" = dnumber))
+  cat("\n\n")
+  # Step to the next task and header creation
+  dnumber <- dnumber + 1
+  fname_c = paste("task", str_pad(dnumber, 2, "left", "0" ) , "_details.html", sep = "")
+  text_c <- paste("#### [Class Task ", dnumber, "](", file.path("class_tasks", fname_c), ")\n\n", sep = "")
+
+})
+
+for(i in 1:24){
+if (i == 1) cat(paste0("### Tasks 1 - 12\n\n")) 
+if (i == 13) cat(paste0("### Tasks 13 -24\n\n")) 
+eval(class_task)  
+}
+
+```

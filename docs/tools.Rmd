@@ -1,0 +1,21 @@
+---
+title: "Data Science Tools"
+output: 
+  html_document:
+    toc: FALSE
+params:
+  dtype: details
+  number: 3
+  ptitle: TRUE
+  pbackground: TRUE
+  taskname: "task-03"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r child="class_tasks/task03_details.Rmd"}
+
+```

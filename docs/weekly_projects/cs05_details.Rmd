@@ -1,0 +1,37 @@
+---
+output:  
+  html_document:  
+    keep_md: true  
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 5
+  casename: "cs-05"
+---
+
+```{r child="case_details_format.Rmd"}
+
+```
+
+
+### Code
+
+```{r codechucnk, eval=FALSE, echo=TRUE}
+not_restaurants <- c("development","Food preperation center", "Food Services center","bakery","Grocery","conceession","Cafeteria", "lunchroom","school","facility"," hall ")
+standalone_retail <- c("Wine","Spirits","Liquor","Convenience","drugstore","Flying J", "Rite Aid ","walgreens ","Love's Travel ")
+full_service_type <- c("Ristorante","mexican","pizza ","steakhouse"," grill ","buffet","tavern"," bar ","waffle","italian","steak house")
+quick_service_type <- c("coffee"," java "," Donut ","Doughnut"," burger ","Ice Cream ","custard ","sandwich ","fast food "," bagel ")
+quick_service_names <- restaurants$Restaurant[restaurants$Type %in% c("coffee","Ice Cream","Fast Food")]
+full_service_names <- restaurants$Restaurant[restaurants$Type %in% c("Pizza","Casual Dining","Fast Casual")]
+## After the above assignments the below rules need to be implemented
+# Over 4,000 ADD and NEW construction get assigned to Sit Down Restaurants
+# Under 4,000 sqft NEW construction get assigned to Fast Food
+# all Type == "Food/Beverage Service" that don't get grouped based on the above are called "Unknown"
+
+
+
+```
+
+
+

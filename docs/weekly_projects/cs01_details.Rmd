@@ -1,0 +1,26 @@
+---
+output:  
+  html_document:  
+    keep_md: true  
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 1
+  casename: "cs-01"
+---
+
+```{r child="case_details_format.Rmd"}
+
+```
+
+### Code Snippet
+
+
+```{r code1, eval=FALSE,echo=TRUE}
+
+plot(1:20)
+
+```
+
+

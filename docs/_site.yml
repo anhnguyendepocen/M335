@@ -1,0 +1,68 @@
+name: "Math/CS 335 Data Wrangling and Visualization"
+navbar:
+  title: "Math 335"
+  left:
+    - text: "Syllabus"
+      icon: fa-paperclip
+      href: syllabus.html
+    - text: "R"
+      icon: fa-area-chart
+      menu: 
+        - text: "R Background"
+          href: r_background.html
+        - text: "First Use of R"
+          href: r_help.html
+        - text: "R Visualization"
+          href: r_visualization.html
+      href: python_examples.html
+    - text: "Tasks"
+      icon: fa-file-text
+      menu:
+        - text: "Assignment Schedule"
+          href: homework_schedule.html
+        - text: "Task Backgrounds"
+          href: backgrounds.html
+        - text: "Semester Task List"
+          href: tasklist.html
+    - text: "Class Meeting"
+      icon: fa-university
+      href: class.html
+    - text: "Project"
+      icon: fa-tachometer
+      href: project.html
+    - text: Book
+      icon: fa-book
+      menu:
+        - text: "Course Textbook"
+        - text: "R for Data Science"
+          href: http://r4ds.had.co.nz/
+        - text: "Happy Git and Github for the useR"
+          href: http://happygitwithr.com/
+        - text: "---------------"
+        - text: "Supplemental Material"
+        - text: "Statistical Concepts in Presenting Data:"
+          href: http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf
+        - text: "Advanced R"
+          href: http://adv-r.had.co.nz/
+        - text: "R Packages"
+          href: http://r-pkgs.had.co.nz/
+        - text: "Plotly for R"
+          href: https://cpsievert.github.io/plotly_book/
+        - text: "DataThink.io"
+          href: http://datathink.io
+
+
+output_dir: '.'
+output:
+  html_document:
+    toc: true
+    theme: readable
+    highlight: textmate
+    mathjax: null
+    toc_depth: 5
+    toc_float:
+      collapsed: false
+
+
+
+

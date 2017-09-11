@@ -1,0 +1,12 @@
+---
+title: "R Markdown Guide"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r child="block007_first-use-rmarkdown.md"}
+
+```

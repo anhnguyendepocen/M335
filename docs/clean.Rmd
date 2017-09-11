@@ -1,0 +1,21 @@
+---
+title: "Clean Data"
+output: 
+  html_document:
+    toc: FALSE
+params:
+  dtype: details
+  number: 8
+  ptitle: TRUE
+  pbackground: TRUE
+  taskname: "task-08"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r child="class_tasks/task08_details.Rmd"}
+
+```

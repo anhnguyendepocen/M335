@@ -1,0 +1,400 @@
+# Class Tasks and Weekly Projects Backgrounds
+
+
+
+You can read the background on all tasks here.  The "Details" link below each background will take you to the full task.  If you would like to see all the individual tasks for each part of class you can review them on the [Task List Page](tasklist.html){target="blank"}
+
+# Class Tasks
+
+# Tasks 1-12
+
+## Task 1: Understanding Graphical Perception, R, and R-Studio Setup  
+To create graphics that clearly answer questions, you must understand the basics of how the human perceptual system works. [This 40-minute talk by John Rauser](https://youtu.be/fSgEeI2Xpdc){target="blank"}, a data scientist in the technology industry, will give you an overview. You can find the code for the majority of his graphics [here](https://github.com/jrauser/writing/blob/master/how_humans_see_data/hhsd_notes.Rmd){target="blank"}.
+
+You will also be responsible for getting R and Rstudio installed and running.
+
+
+ * [Details](class_tasks/task01_details.html)
+
+----------------------------------------
+
+## Task 2: Wax On, Wax off with Swirl  
+This task is intended to get all of us on the same page in R.  You will use the `library(swirl)` package to learn how to use R.  We will be covering Lessons 1-9.  Even if you have used R before, this will be an excellent refresher. If you do not get the title of this task, watch [this](https://www.youtube.com/watch?v=SMCsXl9SGgY). 
+
+ * [Details](class_tasks/task02_details.html)
+
+----------------------------------------
+
+
+## Task 3:  Let's git going  
+You have just been hired to a new data science team, and you need to collaborate on projects.  The team lead told you to connect to the team git repository on Github and create a user folder in the repository.  She wants you to include a `README.md` in your folder that describes who you are in a short paragraph.
+
+
+ * [Details](class_tasks/task03_details.html)
+
+
+----------------------------------------
+
+
+## Task 4: Becoming a databender  
+You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (`install.packages(nycflights13)`) your manager wants you to answer the following questions;
+
+1. If I am leaving before noon, what are my top two airline options at each airport (JFK, LGA, EWR) that will have the least amount of delay time?
+2. Which origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?
+3. Which destination airport is the worst airport for arrival time?
+
+Make sure to include visualizations to provide context for the answers.
+
+ * [Details](class_tasks/task04_details.html)
+
+
+-----------------------------
+
+
+## Task 5: World Data Investigation  
+
+The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.
+
+
+ * [Details](class_tasks/task05_details.html)
+
+----------------------------
+
+## Task 6: World Data Investigations - Part 2  
+The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to recreate some of their visualizations in R and then make them better.
+
+ * [Details](class_tasks/task06_details.html)
+
+----------------------------------------
+
+
+## Task 7: Same Data Different Format  
+
+Data formats are varied and differ by domains and software.  We could spend weeks on the different formats and file types that companies and governments use to store their data.  We will practice with a few standard formats that are often used for storing data. In the future, you will most likely have to do some research to figure out other formats (but you can do it with R or Python).  We have a challenge to read in the five formats of the [DOW data](https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova){target="blank"} and checking that they are all identical using `all.equal()`. One final note, your R script should do all the work.  That is your script should download the files and/or read directly from the web location of the file.
+
+ * [Details](class_tasks/task07_details.html)
+
+
+----------------------------------------
+
+
+## Task 8: Clean and Reformat (aka tidy)  
+
+With stock return data from the previous task, we need to tidy this data for the creation of a time series plot.  We want to look at the returns for each six-month period of the year in which the returns were reported.  Your plot should highlight the tighter spread of the DJIA as compared to the other two selection methods (DARTS and PROS).  We need to display a table of the DJIA returns with months on the rows and years in the columns (i.e. "spread" the data).  
+
+
+ * [Details](class_tasks/task08_details.html)
+
+----------------------------------------
+
+
+## Task 9: Take me out to the ball game  
+
+Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success.  As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The `library(Lahman)` package has a comprehensive set of baseball data.  It is great for testing out our relational data skills.  We will also need to a function to inflation adjust the player salaries - `library(blscrapeR)`. See [this guide for an example](https://cran.r-project.org/web/packages/blscrapeR/vignettes/Inflation_and_Prices.html){target="blank"}.
+
+ * [Details](class_tasks/task09_details.html)
+
+----------------------------------------
+
+
+## Task 10: Strings and grep  
+
+Using global regular expression print (grep) and regular expressions (regex) to find character string patterns is a valuable tool in data analysis and is available with all operating systems and many different programming languages.  It is a powerful tool once it is understood.  The recently developed `library(stringr)` package makes these tools much easier to use. The three tasks below can be completed in many different ways.  As a challenge, my code to complete this entire task less than 10 lines.
+
+
+ * [Details](class_tasks/task10_details.html)
+
+----------------------------------------
+
+
+## Task 11: Controlling categorical variables (factors)  
+
+When we are visualizing data with categorical variables, we have to deal with character strings as groupings. The problem with summarizing categorical data in a table or a plot is how to order the groups.  Using the concept of Factors allows us to dictate the order of these groupings for presentation. We will revisit the [stock data](https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova){target="blank"} from a previous task to create a table and a plot that has the months correctly labeled and ordered.
+
+ * [Details](class_tasks/task11_details.html)
+
+----------------------------------------
+
+
+## Task 12: Counting Words and Occurrences  
+
+In 1978 Susan Easton Black [penned an article](https://www.lds.org/ensign/1978/07/discovery?lang=eng){target="blank"} in the Ensign title *Even statistically, he is the dominant figure of the Book of Mormon.* which makes some statistical claims about the Book of Mormon. We are going to use some of our "string" skills to count words and occurrences in the New Testament and in the Book of Mormon.
+
+1. What is the average verse length (number of words) in the New Testament and the Book of Mormon?
+2. How often is the word Jesus in the New Testament and the Book of Mormon?
+3. How do the verses from each book in the Book of Mormon compare in average word length?
+
+ * [Details](class_tasks/task12_details.html)
+
+----------------------------------------
+
+# Tasks 13-24
+
+## Task 13:  How is the weather?  
+
+Use the `library(weatherdata)` package that is described [here](http://ram-n.github.io/weatherData/){target="blank"} and get the month of June for 2015, 2016, and 2017. You would use `getWeatherForDate(opt_detailed = TRUE, opt_temperature_columns = FALSE, opt_all_columns = TRUE)` for station `KRXE`.  We have a few coding tasks to help us get used to using dates. Create a visualization for each question.
+
+1. What day of the week had the highest temperature reading?
+2. What day of the week had the lowest temperature at 2 pm?
+
+ * [Details](class_tasks/task13_details.html)
+
+----------------------------------------
+
+
+## Task 14: Does the weather hurt my bottom line?  
+
+A car wash business wants to see if the temperature hurts their bottom line.  They have point of sale data for the months of April, May, June, and July.  You will need to aggregate the data into hourly sales totals and merge the sales data together with the temperature data to provide insight into the relationship between temperature and car wash sales. 
+
+ * [Details](class_tasks/task14_details.html)
+
+
+----------------------------------------
+
+
+## Task 15: My investment is better than yours  
+
+The stock market is overflowing with data.  There are many packages in R that allow us to get quick access to information on publicly traded companies.  Imagine that you and a friend each purchased about $1,000 of stock in three different stocks at the start of October last year, and you want to compare your performance.  Use the stock shares purchased and share prices to demonstrate how each of you fared assuming that did not change your allocations.
+
+ * [Details](class_tasks/task15_details.html)
+
+----------------------------------------
+
+
+## Task 16: The US Grocer (KR)  
+
+Interactive visualizations can often be powerful for data investigations.  They let your team get at questions in real time.  Use the Kroger (KR) stock price to build an interactive visualization of their performance over the last five years.  Annotate the graphic with a note of the reason at two or more time points, or intervals, where the price had significant shifts. 
+
+
+ * [Details](class_tasks/task16_details.html)
+
+----------------------------------------
+
+
+## Task 17: Building Functions  
+
+Go back to task 10 and build your code into two or three functions that performs the same work for the tasks.  Be prepared to present your functions in class.
+
+
+ * [Details](class_tasks/task17_details.html)
+
+----------------------------------------
+
+## Task 18: Making bad graphics  
+
+In `library(ggplot2)` there is a `diamonds` dataset that shows features of diamonds.  Your brother is about to go out and buy a diamond ring for his fiancee and needs some advice on what type of diamond to purchase. He knows that karat has a strong relationship with price.  He wants to know what other elements of the diamond he could sacrifice to maximize the karat size for a budget around $2,000. Some interesting details on diamonds can be found [here](https://www.americangemsociety.org/en/diamond-cut){target="blank"}.
+
+ * [Details](class_tasks/task18_details.html)
+
+----------------------------------------
+
+## Task 19: Spatial Data and Measure Data  
+
+Up to this point, we have dealt with data that fits into the tidy format without much effort.  Spatial data has many complicating factors that have made handling spatial data in R complicated.  Big strides are being made to make spatial data tidy in R.  However; we are in the middle of the transition.
+
+We will use `library(USAboundaries)`, `library(ggrepel)`, and `library(sf)` to make a map of the US and show the top 3 largest cities in each state. Specifically, you will use `library(ggplot2)` and the function `geom_sf()` to recreate the provided image.
+
+ * [Details](class_tasks/task19_details.html)
+
+----------------------------------------
+
+
+## Task 20: Getting in SHP  
+
+We have been asked by the state of Idaho to visualize permitted well locations with a production of more than 5000 gallons and the spatial relationship of the large wells to the locations of large dams (surface area larger than 50 acres).  They have provided a a [shp file](https://byuistats.github.io/M335/data/shp.zip) for us and given us a web address for the [well](https://research.idwr.idaho.gov/gis/Spatial/Wells/WellConstruction/wells.zip), [dam](https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip), and [water](https://research.idwr.idaho.gov/gis/Spatial/Hydrography/streams_lakes/c_250k/hyd250.zip) locations. They would like to have the `Snake River` and `Henrys Fork` rivers plotted.
+
+Their US map is projected to show the entire US.  You will need to subset the data to Idaho and then reproject the map, so Idaho is not tilted.
+
+
+ * [Details](class_tasks/task20_details.html)
+
+----------------------------------------
+
+
+## Task 21: Interactive Maps  
+
+Choose from [Task 19](https://byuistats.github.io/M335/class_tasks/task19_details.html) or [Task 20](https://byuistats.github.io/M335/class_tasks/task20_details.html) and recreate your plot using [leaflet](https://rstudio.github.io/leaflet/){target="blank"}
+
+
+ * [Details](class_tasks/task21_details.html)
+
+----------------------------------------
+
+
+
+## Task 22: Introduction to Big Data  
+
+This week we are going to get introduced to "big data" principles.  We will discuss some of the issues and terminology but will not have any coding tasks associated with "big data".  
+
+ * [Details](class_tasks/task22_details.html)
+
+----------------------------------------
+
+
+
+## Task 23: Should we do it?  
+
+This week we will learn new coding techniques and visualization principles.  However, your case study and weekly tasks will provide time to makes sure you have for the last task of the [semester project](https://byuistats.github.io/M335/project.html). Please complete the required reading.
+
+
+ * [Details](class_tasks/task23_details.html)
+
+----------------------------------------
+
+
+## Task 24: A Few views on Visualization  
+This week we will learn new coding techniques and visualization principles.  However, your case study and weekly tasks will provide time to makes sure you have for the last task of the [semester project](https://byuistats.github.io/M335/project.html). Please complete the required reading.
+
+ * [Details](class_tasks/task24_details.html)
+
+----------------------------------------
+
+
+# Case Studies
+
+
+
+## Case Study 1: Critiquing Visualizations and Slack Setup  
+Your first weekly project requires you to **submit** a review of 2-3 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
+
+The **submit** word above will require you to create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  Our slack channel is `f17dwv`, and it requires that you create an account with your `@byui.edu` email account.
+
+ * [Details](weekly_projects/cs01_details.html)
+
+
+----------------------------------------
+
+## Case Study 2: Wealth and Life Expectancy (Gapminder)  
+<!-- https://github.com/jennybc/gapminder -->
+[Hans Rosling](http://www.gapminder.org/news/sad-to-announce-hans-rosling-passed-away-this-morning/){target="blank"} is one of the most popular data scientists on the web. [His original TED talk](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target="blank"} was very popular among my friends when it came out.  We are going to create some graphics using his formatted data as our weekly case study. Note that we need to remove Kuwait from the data ([discussion on this](https://github.com/jennybc/gapminder/issues/9){target="blank"})
+
+ * [Details](weekly_projects/cs02_details.html)
+
+----------------------------------------
+
+
+<!-- title: "Case Study 3: " -->
+<!-- objectives: read in varied formats and visualizing comparisons and variation -->
+<!-- task 5 and 6 need chapters 7 and 11 -->
+
+
+
+## Case Study 3: Reducing Gun Deaths (FiveThirtyEight)  
+
+The world is a dangerous place.  During 2015 and 2016 there was a lot of discussion in the [news about police shootings](http://www.cbsnews.com/pictures/controversial-police-shootings/){target="blank"}.  [FiveThirtyEight](https://fivethirtyeight.com/){target="blank"} reported on [gun deaths in 2016](https://fivethirtyeight.com/features/gun-deaths/){target="blank"}.  As leaders in data journalism they have posted a [clean version of this data](https://github.com/fivethirtyeight/guns-data){target="blank"} for us to use. Their visualizations focused on yearly averages.  
+
+Our client wants to create commercials that help reduce the gun deaths in the US.  They would like to target the commercials to different seasons of the year (think month variable). Our challenge is to summarize and visualize seasonal trends in these data.
+
+
+ * [Details](weekly_projects/cs03_details.html)
+
+----------------------------------------
+
+
+
+## Case Study 4: I can clean your data  
+
+The [Scientific American argues](https://www.scientificamerican.com/article/why-are-we-getting-taller/){target="blank"} that humans have been getting taller over the years.  As the data scientists that we are becoming, we would like to find data that validates this concept. Our challenge is to show different male heights across the centuries.  
+
+This project is not as severe as the two quotes below, but it will give you a taste of pulling various data and file formats together into "tidy" data for visualization and analysis. You will not need to search for data as all the files are listed [here](https://byuistats.github.io/M335/maleheight.html)
+
+1. "Classroom data are like teddy bears and real data are like a grizzly bear with salmon blood dripping out its mouth." - [Jenny Bryan](https://twitter.com/JennyBryan){target="blank"}
+2. "Up to 80% of data analysis is spent on the process of cleaning and preparing data" - [Hadley Wickham](http://jstatsoft.org/v59/i10){target="blank"}
+
+
+
+ * [Details](weekly_projects/cs04_details.html)
+
+----------------------------------------
+
+##  Case Study 5: The collapse of construction in Idaho  
+
+It is 2010, and you are working for the Idaho restaurant commission, and they need your help getting a clearer picture of how restaurant construction changed across Idaho from 2008 to 2009.  They provided you a dataset of all commercial construction in Idaho for those two years. The data has a general category called `Food_Beverage_Service` that has other buildings besides restaurants in the category and will need some massaging to answer the following questions.
+
+1. How did full-service restaurant construction compare to quick service restaurant construction across county and years?
+2. How did restaurant construction fare compare to the other commercial construction in Idaho?
+3. Which county in Idaho spent the most on fast food construction each year?
+4. In that county how did other commercial construction compare?
+
+ * [Details](weekly_projects/cs05_details.html)
+
+----------------------------------------
+
+## Case Study 6: Counting names in scripture  
+
+In 1978 Susan Easton Black [penned an article](https://www.lds.org/ensign/1978/07/discovery?lang=eng){target="blank"} in the Ensign title *Even statistically, he is the dominant figure of the Book of Mormon.* which makes some statistical claims about the Book of Mormon.  With our "string" skills we are going to check her result and build an improved statistic using using number of words between references.  
+
+ * [Details](weekly_projects/cs06_details.html)
+
+----------------------------------------
+
+
+## Case Study 7: It's about time  
+
+We have transaction data for a few businesses that have been in operation for three months.  Each of these companies has come to your investment company for a loan to expand their business. Your boss has asked you to go through the transactions for each business and provide daily, weekly, and monthly gross revenue summaries and comparisons.  Your boss would like a short write up with tables and visualizations that help with the decision of which company did the best over the three month period.  You will also need to provide a short paragraph with your recommendation after building your analysis. 
+
+In our course we are only looking at understanding and visualizing recorded time series data.  If you would like to learn more about forecasting I would recommend [Forecasting: Principles and Practice](https://www.otexts.org/fpp2/){target="blank"} and for a quick introduction [see here](https://afit-r.github.io/ts_exploration){target="blank"}
+
+ * [Details](weekly_projects/cs07_details.html)
+
+<!-- You can use the quantmod (http://www.quantmod.com/) package to get historical stock prices for publicly traded companies on the NASDAQ and NYSE. Use the following code to download data on Amazon's stock price and get the times the data was sampled. -->
+
+
+----------------------------------------
+
+## Case Study 8: Interacting with time  
+
+Your data science income has ballooned, and you need to find somewhere to invest $25,000 that you have saved over the last year.  You have a savvy investment friend that is kind enough to tell you ten stocks he has been watching during the last year. You will need to visualize the last five years performance to help in the in the conversation with your friend. 
+
+Your friend is going to give you his tickers at the beginning of your half-hour meeting with him (he is a busy friend).  You will need to build an `.Rmd` file that will build a suite of visualizations rapidly for your conversation. You will need a series of stock performance graphics using `library(dygraphs)` and `library(ggplot2)`. In real life, you might use one or the other, but this task is built to help you move from `ts` and `xts` to `tidy` objects for visualization.  
+
+Specifically, in class the Tuesday following this case study you will get 5 - 10 ticker symbols and will need to build visualizations quickly that allows you to answer questions about the stocks in a few seconds.
+
+ * [Details](weekly_projects/cs08_details.html)
+
+----------------------------------------
+
+## Case Study 9: Get your project moving  
+
+This week we will learn new coding techniques and visualization principles.  However, your case study and weekly tasks will provide time to makes sure you have wrapped up the first two tasks of the [semester project](https://byuistats.github.io/M335/project.html).
+
+ * [Details](weekly_projects/cs09_details.html)
+
+----------------------------------------
+
+## Case Study 10: Building the past  
+
+You have been asked to support a story for the local paper (that has a web presence) that looks back on the housing collapse and the early effects of residential construction.  You have data on residential building permits from 1980 through 2010 for each county in the United States.  Your colleague that is writing the article would like a few maps and graphics that highlight the single family building permit patterns across your state as well as the patterns in the US.
+
+Remember the big story is the collapse of new building permits at the initial stages of the [mortgage crisis](https://en.wikipedia.org/wiki/Subprime_mortgage_crisis){target="blank"}.  Make sure your graphics highlight the collapse in a clear and honest manner.
+
+
+ * [Details](weekly_projects/cs10_details.html)
+
+----------------------------------------
+
+## Case Study 11: Interacting with space  
+
+You can recreate [Case Study 10](https://byuistats.github.io/M335/weekly_projects/cs10_details.html){target="blank"} or find your own spatial data to display using [leaflet](http://rstudio.github.io/leaflet/
+){target="blank"}.
+
+ * [Details](weekly_projects/cs11_details.html)
+
+----------------------------------------
+
+## Case Study 12: Keep your project moving  
+
+This week we will learn new coding techniques and visualization principles.  However, your case study and weekly tasks will provide time to makes sure you have the last task of the [semester project](https://byuistats.github.io/M335/project.html) completed.
+
+ * [Details](weekly_projects/cs12_details.html)
+
+----------------------------------------
+
+## Case Study 13: Finish well  
+
+Your case study and weekly tasks will provide time to makes sure you have wrapped up the class and get set for a great future in data science. Make sure you have address all the end of semester items.
+
+ * [Details](weekly_projects/cs13_details.html)
+
+----------------------------------------
+

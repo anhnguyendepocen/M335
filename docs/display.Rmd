@@ -1,0 +1,21 @@
+---
+title: "Display Data"
+output: 
+  html_document:
+    toc: FALSE
+params:
+  dtype: details
+  number: 3
+  ptitle: TRUE
+  pbackground: TRUE
+  casename: "cs-03"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r child="weekly_projects/cs03_details.Rmd"}
+
+```

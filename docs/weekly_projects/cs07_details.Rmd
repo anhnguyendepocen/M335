@@ -1,0 +1,20 @@
+---
+output:  
+  html_document:  
+    keep_md: true  
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 7
+  casename: "cs-07"
+---
+
+```{r child="case_details_format.Rmd"}
+
+```
+
+
+
+
+

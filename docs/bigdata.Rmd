@@ -1,0 +1,21 @@
+---
+title: "Big Data Overview"
+output: 
+  html_document:
+    toc: FALSE
+params:
+  dtype: details
+  number: 22
+  ptitle: TRUE
+  pbackground: TRUE
+  taskname: "task-22"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r child="class_tasks/task22_details.Rmd"}
+
+```

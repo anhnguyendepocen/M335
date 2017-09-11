@@ -1,0 +1,12 @@
+---
+title: "R Visualization"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=TRUE,warning=TRUE)
+```
+* [slick table to navigate GGplot2 commands](http://www.computerworld.com/article/2935394/business-intelligence/my-ggplot2-cheat-sheet-search-by-task.html){target="blank"}
+* [GGplot port to Python](http://ggplot.yhathq.com/){target="blank"}
+* [Python Bokeh port to R](https://hafen.github.io/rbokeh/){tarket="blank"}
+* [Plotly for R](https://cpsievert.github.io/plotly_book/){target="blank"}

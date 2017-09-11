@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Task List Form</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4,h5",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 335</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="syllabus.html">
+    <span class="fa fa-paperclip"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-area-chart"></span>
+     
+    R
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="r_background.html">R Background</a>
+    </li>
+    <li>
+      <a href="r_help.html">First Use of R</a>
+    </li>
+    <li>
+      <a href="r_visualization.html">R Visualization</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-file-text"></span>
+     
+    Tasks
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="homework_schedule.html">Assignment Schedule</a>
+    </li>
+    <li>
+      <a href="backgrounds.html">Task Backgrounds</a>
+    </li>
+    <li>
+      <a href="tasklist.html">Semester Task List</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="class.html">
+    <span class="fa fa-university"></span>
+     
+    Class Meeting
+  </a>
+</li>
+<li>
+  <a href="project.html">
+    <span class="fa fa-tachometer"></span>
+     
+    Project
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-book"></span>
+     
+    Book
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Course Textbook</li>
+    <li>
+      <a href="http://r4ds.had.co.nz/">R for Data Science</a>
+    </li>
+    <li>
+      <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Supplemental Material</li>
+    <li>
+      <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">Statistical Concepts in Presenting Data:</a>
+    </li>
+    <li>
+      <a href="http://adv-r.had.co.nz/">Advanced R</a>
+    </li>
+    <li>
+      <a href="http://r-pkgs.had.co.nz/">R Packages</a>
+    </li>
+    <li>
+      <a href="https://cpsievert.github.io/plotly_book/">Plotly for R</a>
+    </li>
+    <li>
+      <a href="http://datathink.io">DataThink.io</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Task List Form</h1>
+
+</div>
+
+
+<style>
+ul {
+   color: black;
+   list-style-type: none;
+   list-style-position: outside;
+
+}
+
+</style>
+<p>This page is provided to give you a one-page view of your task completion throughout the semester. You can edit the <code>.md</code> file in your repository from <code>* [ ] blah blah blah</code> to <code>* [x] blah blah blah</code> to show the task as completed. You can see a <a href="backgrounds.html" target="blank">one-page view of all task backgrounds</a> as well.</p>
+<div id="semester-deliverables" class="section level2">
+<h2>Semester Deliverables</h2>
+<div id="semester-project" class="section level4">
+<h4><a href="project.html">Semester Project</a></h4>
+<p>The deliverables for your <a href="project.html">semester project</a> are assigned in <a href="weekly_projects/cs09_details.html">case study 9</a> and <a href="weekly_projects/cs12_details.html">case study 12</a>. However you should keep a steady workflow on this project throughout the semester.</p>
+</div>
+<div id="leadership" class="section level4">
+<h4><a href="leadership.html">Leadership</a></h4>
+<ul>
+<li>[ ] Complete the class task before class starts</li>
+<li>[ ] Be a class lead during class (complete at least one of the following)
+<ul>
+<li>[ ] Supporting other students that need help getting through the last difficulties they had with the task</li>
+<li>[ ] Presenting key coding methods or steps to the entire class</li>
+</ul></li>
+<li>[ ] Complete this task 12 times during the semester.</li>
+</ul>
+</div>
+<div id="portfolio" class="section level4">
+<h4><a href="weekly_projects/cs13_details.html">Portfolio</a></h4>
+<p><a href="weekly_projects/cs13_details.html">Case study 13</a> provides the checklist items for your portfolio. This portfolio package will be the basis of your final grade.</p>
+</div>
+</div>
+<div id="weekly-case-studies" class="section level2">
+<h2>Weekly Case Studies</h2>
+<div id="case-study-1" class="section level4">
+<h4><a href="weekly_projects/cs01_details.html">Case Study 1</a></h4>
+<ul>
+<li>[ ] Find two or three articles/posts that have a good visualization that answers an interesting question</li>
+<li>[ ] Create an <code>.Rmd</code> file in R-Studio
+<ul>
+<li>[ ] Title it Case Study 1 in the YAML</li>
+<li>[ ] Include links to the visualization post you found</li>
+<li>[ ] Write a one paragraph critique of each visualization</li>
+<li>[ ] Add the R code below to your <code>.Rmd</code> file</li>
+<li>[ ] Knit the file to <code>.html</code> and keep the <code>.md</code> file as well</li>
+</ul></li>
+<li>[ ] Create an account on <a href="https://f17dwv.slack.com/signup" target="blank">slack</a>. You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is <code>hathawayj</code>.
+<ul>
+<li>[ ] Upload your intermediary <code>.md</code> file to the general channel in our Slack group</li>
+</ul></li>
+</ul>
+</div>
+<div id="case-study-2" class="section level4">
+<h4><a href="weekly_projects/cs02_details.html">Case Study 2</a></h4>
+<ul>
+<li>[ ] Watch the <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen" target="blank">Hons Rosling video</a></li>
+<li>[ ] Recreate the two graphics shown below (so they match exactly)
+<ul>
+<li>[ ] Build weighted average data set using <code>weighted.average()</code> and GDP with <code>mutate()</code></li>
+<li>[ ] Use <code>library(ggplot2)</code> and the <code>theme_bw()</code> to duplicate the first plot</li>
+<li>[ ] Use <code>library(ggplot2)</code> and the <code>theme_bw()</code> to duplicate the second plot. You will need to use the new data to make the black lines.</li>
+<li>[ ] Use <code>ggsave()</code> and save each plot as a <code>.png</code> with a width of 15 inches</li>
+</ul></li>
+<li>[ ] Build an Rmd file that has the following features
+<ul>
+<li>[ ] The title is the same as listed in the task</li>
+<li>[ ] You have two sections – 1) Background, 2) Images</li>
+<li>[ ] In the background section write a few sentences about what you learned making these plots</li>
+<li>[ ] In the Image section have two chunks. One for each image</li>
+</ul></li>
+<li>[ ] Save your <code>.Rmd',</code>.md<code>, and the two</code>.png`’s of the plots into your git repository.</li>
+</ul>
+</div>
+<div id="case-study-3" class="section level4">
+<h4><a href="weekly_projects/cs03_details.html">Case Study 3</a></h4>
+<ul>
+<li>[ ] Provide a brief summary of the <a href="https://fivethirtyeight.com/features/gun-deaths/" target="blank">FiveThirtyEight article</a>
+<ul>
+<li>[ ] Create one plot that is similar to one view of their visualization in the article</li>
+<li>[ ] Write a short paragraph summarizing their article</li>
+</ul></li>
+<li>[ ] Address the client’s need for emphasis areas of their commercials for different seasons of the year.
+<ul>
+<li>[ ] Provide plots that help them know the race and type of gun death that they should address (2-4 visualizations seem necessary)</li>
+<li>[ ] Write a short paragraph describing each image</li>
+</ul></li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li>[ ] Complete the recommended reading on posting issues.</li>
+<li>[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
+<li>[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
+</ul>
+</div>
+<div id="case-study-4" class="section level4">
+<h4><a href="weekly_projects/cs04_details.html">Case Study 4</a></h4>
+<ul>
+<li>[ ] Use the correct functions from <code>library(haven)</code> , <code>library(readr)</code>, and <code>library(readxl)</code> to load the 6 data sets listed <a href="https://byuistats.github.io/M335/maleheight.html" target="blank">here</a></li>
+<li>[ ] Tidy the Worldwide estimates <code>.xlsx</code> file
+<ul>
+<li>[ ] Make sure the file is in long format with year as a column</li>
+<li>[ ] Use the <code>separate()</code> and <code>mutate()</code> functions to create a decade column</li>
+</ul></li>
+<li>[ ] Import the other five datasets into R and combine them into one tidy dataset.
+<ul>
+<li>[ ] This dataset should have the following columns - birth_year, height.cm, height.in, and study_id</li>
+</ul></li>
+<li>[ ] Save the two tidy datasets to your repository</li>
+<li>[ ] Make a plot with decade on the x-axis and height in inches on the y-axis with the points from Germany highlighted based on the data from the <code>.xlsx</code> file.</li>
+<li>[ ] Make a small-multiples plot of the five studies to examine the question of height distribution across centuries</li>
+<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs summarizing your graphics and how those graphics answer the driving question</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li>[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
+<li>[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
+</ul>
+</div>
+<div id="case-study-5" class="section level4">
+<h4><a href="weekly_projects/cs05_details.html">Case Study 5</a></h4>
+<ul>
+<li>[ ] Load the R package from GitHub <code>devtools::install_github(&quot;hathawayj/buildings&quot;)</code> and find out what data is in the package</li>
+<li>[ ] Use the <code>ProjectTitle</code> column to create split out new groups from <code>Food_Beverage_Service</code> using the groupings in the code section below
+<ul>
+<li>[ ] Your client has a decent memory of the data and commercial construction in Idaho – Check your code and data to make sure you are not missing or incorrectly assigning groups to the buildings</li>
+<li>[ ] Your client expects to provide new data for 2010 and 2011 so your script needs to do the work. Make sure you don’t use Excel to manipulate anything</li>
+</ul></li>
+<li>[ ] Create an <code>.Rmd</code> file with 2-3 paragraphs summarizing your 4-5 graphics that inform the client questions</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li>[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
+<li>[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
+</ul>
+</div>
+<div id="case-study-6" class="section level4">
+<h4><a href="weekly_projects/cs06_details.html">Case Study 6</a></h4>
+<ul>
+<li>[ ] Get the scripture and savior name data into R
+<ul>
+<li>[ ] Use the <code>library(downloader)</code> R package and the <code>download()</code> function to download the data from <a href="http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip" class="uri">http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip</a></li>
+<li>[ ] Use the <code>unzip()</code> function to decompress the zip file that you downloaded</li>
+<li>[ ] Read in the <code>.csv</code> file that was in the zip file and examine the structure of the data</li>
+<li>[ ] Use <code>read_rds(gzcon(url(&quot;https://byuistats.github.io/M335/data/BoM_SaviorNames.rds&quot;)))</code> to download and load the Savior names table into R</li>
+</ul></li>
+<li>[ ] Use the list of Savior names and the Book of Mormon verses to figure out the average number of words between references to the Savior
+<ul>
+<li>[ ] Find each instance of a Savior name in the Book of Mormon</li>
+<li>[ ] Split on those instances and then count the number of words between each instance</li>
+<li>[ ] Use the example code below for some hints on how to tackle this task</li>
+</ul></li>
+<li>[ ] Report the average number of words between each Savior name</li>
+<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs summarizing your graphic that shows how the distance between Savior names is distributed across the Book of Mormon</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li>[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
+<li>[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
+</ul>
+</div>
+<div id="case-study-7" class="section level4">
+<h4><a href="weekly_projects/cs07_details.html">Case Study 7</a></h4>
+<ul>
+<li>[ ] Read in the data from <code>https://byuistats.github.io/M335/data/sales.csv</code> and format it for visualization and analysis
+<ul>
+<li>[ ] The data are for businesses in the mountain time zone make sure you read in times correctly</li>
+<li>[ ] This is point of sale (pos) data, so you will need to use <code>library(lubridate)</code> to create the correct time aggregations</li>
+<li>[ ] Check the data for any inaccuracies</li>
+</ul></li>
+<li>[ ] Help your boss understand which business is the best investment through visualizations
+<ul>
+<li>[ ] Provide an understanding and recommendation for hours of operation</li>
+<li>[ ] We don’t have employee numbers, but sales traffic can help. Provide some visualizations on customer traffic</li>
+<li>[ ] Provide a final comparison of the six companies and a final recommendation</li>
+</ul></li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li>[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
+<li>[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
+</ul>
+</div>
+<div id="case-study-8" class="section level4">
+<h4><a href="weekly_projects/cs08_details.html">Case Study 8</a></h4>
+<ul>
+<li>[ ] For your coding development use these tickers - <code>tickers_today &lt;- c(&quot;CXW&quot;, &quot;F&quot;, &quot;GM&quot;, &quot;JCP&quot;, &quot;KR&quot;, &quot;WDC&quot;, &quot;NKE&quot;,&quot;T&quot;, &quot;WDAY&quot;, &quot;WFC&quot;, &quot;WMT&quot;)</code></li>
+<li>[ ] Use <code>library(dygraphs)</code> to build interactive visualizations of the stock performances over the last 5 years.</li>
+<li>[ ] Make a <code>library(ggplot2)</code> graphic that helps you build a solid question around how an investor would use volume in their trading strategy</li>
+<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs summarizing your graphics and the choices you made in your visualization</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li>[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
+<li>[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
+</ul>
+</div>
+<div id="case-study-9" class="section level4">
+<h4><a href="weekly_projects/cs09_details.html">Case Study 9</a></h4>
+<ul>
+<li>[ ] Find 4-5 examples of data-driven answers and write a one-paragraph review of each.
+<ul>
+<li>[ ] List 2-3 items that are unique/good</li>
+<li>[ ] Identify 1 issue with the each example</li>
+</ul></li>
+<li>[ ] Develop a data driven question
+<ul>
+<li>[ ] Get feedback from 5-10 people on their interest in your question and summarize this feedback</li>
+<li>[ ] Find other examples of people addressing your question</li>
+<li>[ ] Present your question to a data scientist to get feedback on the quality of the question and if it can be addressed in 2-months.</li>
+</ul></li>
+<li>[ ] Build an interactive document that has links to sources with a description of the quality of each
+<ul>
+<li>[ ] Find 3-5 potential data sources (that are free) and document some information about the source</li>
+<li>[ ] Build an R script that reads in and formats the data for analysis</li>
+<li>[ ] Write a short summary of the read in process and some coding secrets you learned</li>
+<li>[ ] Include 2-3 quick visualizations that you used to check the quality of your data</li>
+<li>[ ] Summarize the limitations of your final compiled data in addressing your original question</li>
+</ul></li>
+</ul>
+</div>
+<div id="case-study-10" class="section level4">
+<h4><a href="weekly_projects/cs10_details.html">Case Study 10</a></h4>
+<ul>
+<li>[ ] Read in the <code>permits</code> data from <code>devtools::install_github(&quot;hathawayj/buildings&quot;)</code> and tidy it for spatial visualization needs
+<ul>
+<li>[ ] You will need to merge it with the spatial data so it will require some column mutation</li>
+</ul></li>
+<li>[ ] Use the <code>library(USAboundaries)</code> package to get the spatial maps for the US
+<ul>
+<li>[ ] You will need to use the FIPS numbers to merge with the permit data</li>
+</ul></li>
+<li>[ ] Create state level totals from the county level data to show general patterns across the US over time</li>
+<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs summarizing your graphics and the choices you made in your visualization to address the reporter’s needs</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li>[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
+<li>[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
+</ul>
+</div>
+<div id="case-study-11" class="section level4">
+<h4><a href="weekly_projects/cs11_details.html">Case Study 11</a></h4>
+<ul>
+<li>[ ] Choose one of the two options below
+<ul>
+<li>[ ] Recreate <a href="https://byuistats.github.io/M335/weekly_projects/cs10_details.html" target="blank">Case Study 10</a> tasks with leaflet</li>
+<li>[ ] Find your own spatial data that interests you and build a visualization</li>
+</ul></li>
+<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs summarizing your graphics and the choices you made in your visualization</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li>[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
+<li>[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
+</ul>
+</div>
+<div id="case-study-12" class="section level4">
+<h4><a href="weekly_projects/cs12_details.html">Case Study 12</a></h4>
+<ul>
+<li>[ ] Present your visualization based analysis that addresses your question
+<ul>
+<li>[ ] Choose your flavor of <code>.Rmd</code> for your presentation</li>
+<li>[ ] Build a stand-alone analysis that helps a reader answer the question at hand with that available data</li>
+<li>[ ] Present your analysis to your roommates (or spouse) and update your presentation based on the feedback</li>
+<li>[ ] Get feedback from 2-3 fellow classmates on your presentation and update it based on their feedback</li>
+<li>[ ] Present your draft presentation to a data scientist to review for clarity</li>
+<li>[ ] Present your work in class, at a society meeting, the research and creative works conference, or as a blog post online</li>
+</ul></li>
+</ul>
+</div>
+<div id="case-study-13" class="section level4">
+<h4><a href="weekly_projects/cs13_details.html">Case Study 13</a></h4>
+<ul>
+<li>[ ] Complete LinkedIn, GitHub, Slack profiles that have been connected to our BYU-I data science community</li>
+<li>[ ] A cover letter stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion</li>
+<li>[ ] A resume that includes the skills you have learned during our projects</li>
+<li>[ ] A semester task form that records your completed tasks during the semester</li>
+<li>[ ] Semester project submission on GitHub</li>
+<li>[ ] Submit this material electronically and in person during our exit interview</li>
+</ul>
+</div>
+</div>
+<div id="daily-class-tasks" class="section level2">
+<h2>Daily Class Tasks</h2>
+<div id="tasks-1---12" class="section level3">
+<h3>Tasks 1 - 12</h3>
+<div id="class-task-1" class="section level4">
+<h4><a href="class_tasks/cs01_details.html">Class Task 1</a></h4>
+<ul>
+<li>[ ] Get R and R-Studio running on your computer
+<ul>
+<li>[ ] Install the swirl package <code>install.packages(&quot;swirl&quot;)</code></li>
+<li>[ ] Use <code>library(swirl)</code> and follow directions to get ‘R Programming: The basics of programming in R’ course loaded</li>
+</ul></li>
+<li>[ ] Watch John Rauser Presentation
+<ul>
+<li>[ ] Use the <a href="http://bit.ly/m335rauser" target="blank">following google spreadsheet</a> to input your three favorite segments of the video. Use your course standardized name <code>lastname</code> <code>firstletterfirstname</code> – For example mine is <code>hathawayj</code>.</li>
+</ul></li>
+</ul>
+</div>
+<div id="class-task-2" class="section level4">
+<h4><a href="class_tasks/task02_details.html">Class Task 2</a></h4>
+<ul>
+<li>[ ] Complete Lessons 1-4 in the <code>library(swirl)</code> package of the course <code>install_course(&quot;R Programming E&quot;)</code>
+<ul>
+<li>[ ] Use <code>byui.m335@gmail.com</code> for the email address where you will send confirmation of the completion of each lesson.</li>
+<li>[ ] Use our course standardization for your name <code>lastname</code> <code>firstletterfirstname</code> for each. For example, mine is <code>hathawayj</code>.</li>
+</ul></li>
+<li>[ ] Complete Lessons 5-9 in the <code>library(swirl)</code> package of the course <code>install_course(&quot;R Programming E&quot;)</code>
+<ul>
+<li>[ ] Follow sub-directions above.</li>
+</ul></li>
+<li>[ ] Read a short article about the <a href="http://www.atlasobscura.com/articles/florence-nightingale-infographic" target="blank">data scientist Florence Nightengale</a> and write a two to three sentence paragraph critique of her coxcomb graphic based on your perceptions of quality graphics.
+<ul>
+<li>[ ] In class, be prepared to submit your write up electronically.</li>
+</ul></li>
+</ul>
+</div>
+<div id="class-task-3" class="section level4">
+<h4><a href="class_tasks/task03_details.html">Class Task 3</a></h4>
+<ul>
+<li>[ ] Install git on your computer</li>
+<li>[ ] Create a GitHub account</li>
+<li>[ ] Work through readings on git and github</li>
+<li>[ ] Make sure git works in R-Studio</li>
+<li>[ ] Add a folder to our class git repository
+<ul>
+<li>[ ] Name the folder lastname_firstname</li>
+<li>[ ] Add a README.md in the folder</li>
+<li>[ ] Type one or two sentences that describe you</li>
+<li>[ ] Make sure you pull and push</li>
+</ul></li>
+</ul>
+</div>
+<div id="class-task-4" class="section level4">
+<h4><a href="class_tasks/task04_details.html">Class Task 4</a></h4>
+<ul>
+<li>[ ] Address the three questions in the background description</li>
+<li>[ ] Create one <code>.rmd</code> file that has your report
+<ul>
+<li>[ ] Have a section for each question</li>
+<li>[ ] Make sure your code is in the report but defaults to hidden</li>
+<li>[ ] Write an introduction section that describes your results</li>
+<li>[ ] Add a short paragraph in each section describing the plot and any other essential elements of your work</li>
+</ul></li>
+<li>[ ] Push your <code>.Rmd</code>, <code>.md</code>, and <code>.html</code> to your GitHub repo</li>
+<li>[ ] Be prepared to discuss your analysis in the upcoming class</li>
+</ul>
+</div>
+<div id="class-task-5" class="section level4">
+<h4><a href="class_tasks/task05_details.html">Class Task 5</a></h4>
+<ul>
+<li>[ ] Review the <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> webpage and find a graphic that interests you.
+<ul>
+<li>[ ] Recreate that graphic in R after downloading the data from their website</li>
+<li>[ ] Find some interesting features on your graphic. Then do some reasearch online to find out the cause of that feature for an annotation that you can add to your plot.</li>
+<li>[ ] Use a <a href="http://ggplot2.tidyverse.org/reference/annotate.html">clean way</a> to add the information from the online search to your graphic</li>
+</ul></li>
+<li>[ ] Explore the world data on <code>child_mortality</code> and create an interesting graphic that highlights this dataset.
+<ul>
+<li>[ ] Use <code>devtools::install_github(&quot;drsimonj/ourworldindata&quot;) to get a larger dataset on</code>child_mortality`</li>
+<li>[ ] Create a graphic that you could use in a final presentation to summarize world child mortatility</li>
+</ul></li>
+<li>[ ] Include your plots in an <code>.Rmd</code> file with short paragraph describing your plots</li>
+<li>[ ] Push your <code>.Rmd</code>, <code>.md</code>, and <code>.html</code> to your GitHub repo</li>
+</ul>
+</div>
+<div id="class-task-6" class="section level4">
+<h4><a href="class_tasks/task06_details.html">Class Task 6</a></h4>
+<ul>
+<li>[ ] Explore the world data on <code>financing_healthcare</code> and create an interesting graphic that highlights this dataset.
+<ul>
+<li>[ ] Use <code>devtools::install_github(&quot;drsimonj/ourworldindata&quot;)</code> to get a larger dataset on <code>financing_healthcare</code></li>
+<li>[ ] Create a graphic that you could use in a final presentation to summarize world child mortatility</li>
+</ul></li>
+<li>[ ] Push your <code>.Rmd</code>, <code>.md</code>, and <code>.html</code> to your GitHub repo</li>
+</ul>
+</div>
+<div id="class-task-7" class="section level4">
+<h4><a href="class_tasks/task07_details.html">Class Task 7</a></h4>
+<ul>
+<li>[ ] Use the appropriate functions in <code>library(readr)</code>, <code>library(haven)</code>, <code>library(readxl)</code> to read in the five files found on <a href="https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova" target="blank">GitHub</a>
+<ul>
+<li>[ ] Use <code>read_rds(gzcon(url(&quot;WEBLOCATION.rds&quot;)))</code> to download and load the <code>.rds</code> file type</li>
+<li>[ ] Use the <code>library(downloader)</code> R package and use the <code>download()</code> function to download the xlsx data as <code>read_xlsx()</code> cannot read files from the web path</li>
+<li>[ ] Use <code>tempfile()</code> function for downloading files</li>
+</ul></li>
+<li>[ ] Check that all five files you have imported into R are in fact the same with <code>all.equal()</code></li>
+<li>[ ] Use one of the files to make a graphic showing the performance of the Dart, DJIA, and Pro stock selections
+<ul>
+<li>[ ] Include a boxplot, the jittered returns, and the average return in your graphic</li>
+</ul></li>
+<li>[ ] Save your <code>.R</code> script and your image to your repository and be ready to share your code that built your graphic in class</li>
+</ul>
+</div>
+<div id="class-task-8" class="section level4">
+<h4><a href="class_tasks/task08_details.html">Class Task 8</a></h4>
+<ul>
+<li>[ ] Import the Dart_Expert_Dow_6month_anova data from GitHub (see details in previous task)</li>
+<li>[ ] The <code>contestant_period</code> column is not “tidy” we want to create an <code>month_end</code> and <code>year_end</code> column from the information it contains</li>
+<li>[ ] Save your “tidy” data as an <code>.rds</code> object</li>
+<li>[ ] Create a plot that shows the six-month returns by the year in which the returns are collected</li>
+<li>[ ] Create a table of the DJIA returns with months on the rows and years in the columns (“spread” the data)</li>
+<li>[ ] Include your plots in an <code>.Rmd</code> file with short paragraph describing your plots. Make sure to display the <code>tidyr</code> code in your file</li>
+<li>[ ] Push your <code>.Rmd</code>, <code>.md</code>, and <code>.html</code> to your GitHub repo</li>
+</ul>
+</div>
+<div id="class-task-9" class="section level4">
+<h4><a href="class_tasks/task09_details.html">Class Task 9</a></h4>
+<ul>
+<li>[ ] Install the <code>library(Lahman)</code> and examine the available data sets available
+<ul>
+<li>[ ] Find the 4-5 different data sets that you will need to show full college and player names as well as their annual earnings</li>
+</ul></li>
+<li>[ ] Install the <code>library(blscrapeR)</code> and use the <code>inflation_adjust(2017)</code> function to get all earnings in 2017 dollars</li>
+<li>[ ] Make a plot showing how professional baseball player earnings that played baseball at BYU compared to the players from other Utah schools</li>
+<li>[ ] Save your <code>.R</code> script and image to your repository and be ready to share your code and image at the beginning of class</li>
+</ul>
+</div>
+<div id="class-task-10" class="section level4">
+<h4><a href="class_tasks/task10_details.html">Class Task 10</a></h4>
+<ul>
+<li>[ ] Use the <code>readr::read_lines()</code> function to read in each string - <a href="https://byuistats.github.io/M335/data/randomletters.txt" target="blank">randomletters.txt</a> and <a href="https://byuistats.github.io/M335/data/randomletters_wnumbers.txt" target="blank">randomletters_wnumbers.txt</a></li>
+<li>[ ] With the <code>randomletters.txt</code> file, pull out every 1700 letter (e.g. 1, 1700, 3400, <U+0085>) and find the quote that is hidden - the quote ends with a period</li>
+<li>[ ] With the <code>randomletters_wnumbers.txt</code> file, find all the numbers hidden and convert those numbers to letters using the letters order in the alphabet to decipher the message</li>
+<li>[ ] With the <code>randomletters.txt</code> file, remove all the spaces and periods from the string then find the longest sequence of vowels.</li>
+<li>[ ] Save your <code>.R</code> script to your repository and be ready to share your code solution at the beginning of class</li>
+</ul>
+</div>
+<div id="class-task-11" class="section level4">
+<h4><a href="class_tasks/task11_details.html">Class Task 11</a></h4>
+<ul>
+<li>[ ] Load your “tidy” data from the previous task using the stock return data</li>
+<li>[ ] Create a plot that shows the six-month returns by the month in which the returns are collected using the eight years of data</li>
+<li>[ ] Include your plots in an <code>.Rmd</code> file with short paragraph describing your plots. Make sure to display the <code>tidyr</code> code in your file</li>
+<li>[ ] Push your <code>.Rmd</code>, <code>.md</code>, and <code>.html</code> to your GitHub repo</li>
+</ul>
+</div>
+<div id="class-task-12" class="section level4">
+<h4><a href="class_tasks/task12_details.html">Class Task 12</a></h4>
+<ul>
+<li>[ ] Use the <code>library(downloader)</code> R package and the <code>download()</code> function to download the data from <a href="http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip" class="uri">http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip</a></li>
+<li>[ ] Use the <code>unzip()</code> function to decompress the zip file that you downloaded</li>
+<li>[ ] Read in the <code>.csv</code> file that was in the zip file and examine the structure of the data</li>
+<li>[ ] Address questions 1 &amp; 2 using the <code>stri_stats_latex()</code> and <code>str_locate_all()</code> functions from <code>install.packages(&quot;stringr&quot;)</code> and <code>install.packages(&quot;stringi&quot;)</code></li>
+<li>[ ] Create a visualization that addresses question 3</li>
+<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs and your graphics that answers the three questions</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+</ul>
+</div>
+</div>
+<div id="tasks-13--24" class="section level3">
+<h3>Tasks 13 -24</h3>
+<div id="class-task-13" class="section level4">
+<h4><a href="class_tasks/task13_details.html">Class Task 13</a></h4>
+<ul>
+<li>[ ] Create a <code>.png</code> image for each question</li>
+<li>[ ] Save your script and <code>.png</code> files to GitHub</li>
+<li>[ ] Be prepared to share your visualization and why your reasoning for how the visualization answers the question</li>
+</ul>
+</div>
+<div id="class-task-14" class="section level4">
+<h4><a href="class_tasks/task14_details.html">Class Task 14</a></h4>
+<ul>
+<li>[ ] Read in the car wash data <code>https://byuistats.github.io/M335/data/carwash.csv</code> and format it for the needs of this task
+<ul>
+<li>[ ] Create a new hourly grouping variable using <code>ceiling_date()</code> from <code>install.packages(&quot;lubridate&quot;)</code></li>
+<li>[ ] Aggregate the point of sale data into hour sales totals</li>
+</ul></li>
+<li>[ ] Use <code>getWeatherForDate(opt_detailed = TRUE, opt_temperature_columns = FALSE, opt_all_columns = TRUE)</code> for station <code>KRXE</code> from <code>library(weatherData)</code> to get the matching temperatures
+<ul>
+<li>[ ] Create a new hourly variable that matches your car wash hourly variable</li>
+</ul></li>
+<li>[ ] Merge the two datasets together</li>
+<li>[ ] Create a visualization that provides insight into the relationship between sales and temperature by hour of the day</li>
+</ul>
+</div>
+<div id="class-task-15" class="section level4">
+<h4><a href="class_tasks/task15_details.html">Class Task 15</a></h4>
+<ul>
+<li>[ ] List the three stocks that your friend picks and the three that you pick</li>
+<li>[ ] Pull the price performance data using <code>library(tidyquants)</code> or <code>library(quantmod)</code></li>
+<li>[ ] Build a visualization that shows who is winning each day of the competition</li>
+<li>[ ] In the previous visualization or with another visualization show which stock is helping the winner the competition</li>
+<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs summarizing your graphics and the choices you made in the data presentation</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+</ul>
+</div>
+<div id="class-task-16" class="section level4">
+<h4><a href="class_tasks/task16_details.html">Class Task 16</a></h4>
+<ul>
+<li>[ ] Build the <code>library(dygraphs)</code> plot that shows the Kroger (KG) stock price performance</li>
+<li>[ ] Add a few annotations to the plot that identify the historical context for the price change</li>
+<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs summarizing your graphics and the choices you made in the data presentation</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+</ul>
+</div>
+<div id="class-task-17" class="section level4">
+<h4><a href="class_tasks/task17_details.html">Class Task 17</a></h4>
+<ul>
+<li>[ ] Repeat the <a href="https://byuistats.github.io/M335/class_tasks/task10_details.html" target="blank">task 10 tasks</a> using three functions that you built</li>
+</ul>
+</div>
+<div id="class-task-18" class="section level4">
+<h4><a href="class_tasks/task18_details.html">Class Task 18</a></h4>
+<ul>
+<li>[ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate but poorly built to communicate data.</li>
+<li>[ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate and optimizes data communication.</li>
+<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs summarizing your 2 graphics and the choices you made in the data presentation</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+</ul>
+</div>
+<div id="class-task-19" class="section level4">
+<h4><a href="class_tasks/task19_details.html">Class Task 19</a></h4>
+<ul>
+<li>[ ] Create a <code>.png</code> image that closely matches my example
+<ul>
+<li>[ ] Note that <code>fill = NA</code> in <code>geom_sf()</code> will not fill the polygons with a grey color</li>
+<li>[ ] Note that <code>library(USAboundaries)</code> has three useful functions - <code>us_cities()</code>, <code>us_states()</code>, and <code>us_counties()</code></li>
+</ul></li>
+<li>[ ] Save your script and <code>.png</code> files to GitHub</li>
+</ul>
+</div>
+<div id="class-task-20" class="section level4">
+<h4><a href="class_tasks/task20_details.html">Class Task 20</a></h4>
+<ul>
+<li>[ ] Read in all four of the necessary shp file datasets (see description)</li>
+<li>[ ] Filter all the data for the specific needs of Idaho</li>
+<li>[ ] Create a <code>.png</code> image that plots the required information</li>
+<li>[ ] Save your script and <code>.png</code> files to GitHub</li>
+<li>[ ] Be prepared to discuss your observations of the well and dam locations in our next class meeting</li>
+</ul>
+</div>
+<div id="class-task-21" class="section level4">
+<h4><a href="class_tasks/task21_details.html">Class Task 21</a></h4>
+<ul>
+<li>[ ] See tasks for <a href="https://byuistats.github.io/M335/class_tasks/task19_details.html">Task 19</a> or <a href="https://byuistats.github.io/M335/class_tasks/task20_details.html">Task 20</a></li>
+</ul>
+</div>
+<div id="class-task-22" class="section level4">
+<h4><a href="class_tasks/task22_details.html">Class Task 22</a></h4>
+<ul>
+<li>[ ] Complete the listed reading for class discussion</li>
+<li>[ ] Find an additional article on R or Python and “big data” and write a summary of the article</li>
+<li>[ ] Create an <code>.Rmd</code> file summarizing your reading</li>
+<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+</ul>
+</div>
+<div id="class-task-23" class="section level4">
+<h4><a href="class_tasks/task23_details.html">Class Task 23</a></h4>
+<ul>
+<li>[ ] Complete listed reading for class discussion</li>
+</ul>
+</div>
+<div id="class-task-24" class="section level4">
+<h4><a href="class_tasks/task24_details.html">Class Task 24</a></h4>
+<ul>
+<li>[ ] Complete listed reading for class discussion</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>

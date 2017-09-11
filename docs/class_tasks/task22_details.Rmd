@@ -1,0 +1,16 @@
+---
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 22
+  taskname: "task-22"
+output:
+  html_document:
+    keep_md: true
+---
+
+```{r child="task_details_format.Rmd"}
+
+```
+

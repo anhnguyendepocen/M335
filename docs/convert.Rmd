@@ -1,0 +1,21 @@
+---
+title: "Importing Data"
+output: 
+  html_document:
+    toc: FALSE
+params:
+  dtype: details
+  number: 4
+  ptitle: TRUE
+  pbackground: TRUE
+  casename: "cs-04"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r child="weekly_projects/cs04_details.Rmd"}
+
+```

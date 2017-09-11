@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Spatial basics</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4,h5",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 335</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="syllabus.html">
+    <span class="fa fa-paperclip"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-area-chart"></span>
+     
+    R
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="r_background.html">R Background</a>
+    </li>
+    <li>
+      <a href="r_help.html">First Use of R</a>
+    </li>
+    <li>
+      <a href="r_visualization.html">R Visualization</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-file-text"></span>
+     
+    Tasks
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="homework_schedule.html">Assignment Schedule</a>
+    </li>
+    <li class="dropdown-header">Case and Task Backgrounds</li>
+  </ul>
+</li>
+<li>
+  <a href="class.html">
+    <span class="fa fa-university"></span>
+     
+    Class Meeting
+  </a>
+</li>
+<li>
+  <a href="project.html">
+    <span class="fa fa-tachometer"></span>
+     
+    Project
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-book"></span>
+     
+    Book
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Course Textbook</li>
+    <li>
+      <a href="http://r4ds.had.co.nz/">R for Data Science</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Supplemental Material</li>
+    <li>
+      <a href="http://adv-r.had.co.nz/">Advanced R</a>
+    </li>
+    <li>
+      <a href="http://r-pkgs.had.co.nz/">R Packages</a>
+    </li>
+    <li>
+      <a href="https://cpsievert.github.io/plotly_book/">Plotly for R</a>
+    </li>
+    <li>
+      <a href="http://datathink.io">DataThink.io</a>
+    </li>
+    <li>
+      <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">Statistical Concepts in Presenting Data:</a>
+    </li>
+    <li>
+      <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Spatial basics</h1>
+
+</div>
+
+
+<!-- Generated automatically from spatial-basics.yml. Do not edit by hand -->
+<div id="spatial-basics-wrangle" class="section level1">
+<h1>Spatial basics <small class='wrangle'>[wrangle]</small></h1>
+<p><small>(Builds on: <a href="list-cols.md">List columns</a>)</small><br />
+<small>(Leads to: <a href="spatial-vis.md">Spatial visualisation</a>)</small></p>
+<div id="spatial-packages" class="section level2">
+<h2>Spatial packages</h2>
+<p>In R, there are two main lineages of tools for dealing with spatial data: sp and sf.</p>
+<ul>
+<li><p>sp has been around for a while (the first release was in 2005), and it has a rich ecosystem of tools built on top of it. However, it uses a rather complex data structure, which can make it challenging to use.</p></li>
+<li><p>sf is newer (first released in October 2016!) so it doesn’t have such a rich ecosystem. However, it’s much easier to use and fits in very naturally with the tidyverse, and the ecosystem around it will grow rapidly.</p></li>
+</ul>
+<p>In this class, we’re going to use sf, so start by installing it:</p>
+<pre class="r"><code>install.packages(&quot;sf&quot;)</code></pre>
+</div>
+<div id="loading-data" class="section level2">
+<h2>Loading data</h2>
+<p>To read spatial data in R, use <code>read_sf()</code>. The following example reads an example dataset built into the sf package:</p>
+<pre class="r"><code>library(tidyverse)
+library(sf)
+
+# The counties of North Carolina
+nc &lt;- read_sf(system.file(&quot;shape/nc.shp&quot;, package = &quot;sf&quot;), 
+  quiet = TRUE,  
+  stringsAsFactors = FALSE
+)</code></pre>
+<p>I recommend always setting <code>quiet = TRUE</code> and <code>stringsAsFactors = FALSE</code>.</p>
+<p>Here we’re loading from a <strong>shapefile</strong> which is the way spatial data is most commonly stored. Despite the name a shapefile isn’t just one file, but is a collection of files that have the same name, but different extensions. Typically you’ll have four files:</p>
+<ul>
+<li><p><code>.shp</code> contains the geometry, and <code>.shx</code> contains an index into that geometry.</p></li>
+<li><p><code>.dbf</code> contains metadata about each geometry (the other columns in the data frame).</p></li>
+<li><p><code>.prf</code> contains the coordinate system and projection information. You’ll learn more about that shortly.</p></li>
+</ul>
+<p><code>read_sf()</code> can read in the majority of spatial file formats, so don’t worry if your data isn’t in a shapefile; the chances are <code>read_sf()</code> will still be able to read it.</p>
+</div>
+<div id="converting-data" class="section level2">
+<h2>Converting data</h2>
+<p>If you get a spatial object created by another package, us <code>st_as_sf()</code> to convert it to sf. For example, you can take data from the maps package (included in base R) and convert it to sf:</p>
+<pre class="r"><code>library(maps)
+#&gt; 
+#&gt; Attaching package: &#39;maps&#39;
+#&gt; The following object is masked from &#39;package:purrr&#39;:
+#&gt; 
+#&gt;     map
+nz_map &lt;- map(&quot;nz&quot;, plot = FALSE)
+nz_sf &lt;- st_as_sf(nz_map)</code></pre>
+</div>
+<div id="data-structure" class="section level2">
+<h2>Data structure</h2>
+<p><code>nc</code> is a data frame, and not a tibble, so when printing, it’s a good idea to use <code>head()</code> so you only see the first few rows:</p>
+<pre class="r"><code>head(nc)
+#&gt; Simple feature collection with 6 features and 14 fields
+#&gt; geometry type:  MULTIPOLYGON
+#&gt; dimension:      XY
+#&gt; bbox:           xmin: -81.74107 ymin: 36.07282 xmax: -75.77316 ymax: 36.58965
+#&gt; epsg (SRID):    4267
+#&gt; proj4string:    +proj=longlat +datum=NAD27 +no_defs
+#&gt;    AREA PERIMETER CNTY_ CNTY_ID        NAME  FIPS FIPSNO CRESS_ID BIR74
+#&gt; 1 0.114     1.442  1825    1825        Ashe 37009  37009        5  1091
+#&gt; 2 0.061     1.231  1827    1827   Alleghany 37005  37005        3   487
+#&gt; 3 0.143     1.630  1828    1828       Surry 37171  37171       86  3188
+#&gt; 4 0.070     2.968  1831    1831   Currituck 37053  37053       27   508
+#&gt; 5 0.153     2.206  1832    1832 Northampton 37131  37131       66  1421
+#&gt; 6 0.097     1.670  1833    1833    Hertford 37091  37091       46  1452
+#&gt;   SID74 NWBIR74 BIR79 SID79 NWBIR79                       geometry
+#&gt; 1     1      10  1364     0      19 MULTIPOLYGON(((-81.47275543...
+#&gt; 2     0      10   542     3      12 MULTIPOLYGON(((-81.23989105...
+#&gt; 3     5     208  3616     6     260 MULTIPOLYGON(((-80.45634460...
+#&gt; 4     1     123   830     2     145 MULTIPOLYGON(((-76.00897216...
+#&gt; 5     9    1066  1606     3    1197 MULTIPOLYGON(((-77.21766662...
+#&gt; 6     7     954  1838     5    1237 MULTIPOLYGON(((-76.74506378...
+head(nz_sf)
+#&gt; Simple feature collection with 6 features and 1 field
+#&gt; geometry type:  POLYGON
+#&gt; dimension:      XY
+#&gt; bbox:           xmin: 166.458 ymin: -46.91705 xmax: 175.552 ymax: -36.09273
+#&gt; epsg (SRID):    4326
+#&gt; proj4string:    +proj=longlat +datum=WGS84 +no_defs
+#&gt;                         geometry                    ID
+#&gt; 1 POLYGON((166.457992553711 -...        Anchor.Island 
+#&gt; 2 POLYGON((174.259948730469 -...       Arapawa.Island 
+#&gt; 3 POLYGON((166.580032348633 -...          Coal.Island 
+#&gt; 4 POLYGON((167.579833984375 -...       Codfish.Island 
+#&gt; 5 POLYGON((173.906433105469 -...     D&#39;Urville.Island 
+#&gt; 6 POLYGON((175.535934448242 -... Great.Barrier.Island</code></pre>
+<p>This is an ordinary data frame, with one exception: the <strong>geometry</strong> column. This column contains <strong>simple features</strong>, a standard way of representing two dimesional geometries like points, lines, polygons, multilines, and multipolygons. Multilines and multipolygons are nededed to represent geographic phenomena like a river with multiple branches, or a state made up of multiple islands.</p>
+<pre class="r"><code>nc$geometry
+#&gt; Geometry set for 100 features 
+#&gt; geometry type:  MULTIPOLYGON
+#&gt; dimension:      XY
+#&gt; bbox:           xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965
+#&gt; epsg (SRID):    4267
+#&gt; proj4string:    +proj=longlat +datum=NAD27 +no_defs
+#&gt; First 5 geometries:
+#&gt; MULTIPOLYGON(((-81.4727554321289 36.23435592651...
+#&gt; MULTIPOLYGON(((-81.2398910522461 36.36536407470...
+#&gt; MULTIPOLYGON(((-80.4563446044922 36.24255752563...
+#&gt; MULTIPOLYGON(((-76.0089721679688 36.31959533691...
+#&gt; MULTIPOLYGON(((-77.2176666259766 36.24098205566...</code></pre>
+<p>Use <code>plot()</code> to show the geometry. You’ll learn how to use ggplot2 for more complex data visualisations in the next unit.</p>
+<pre class="r"><code>plot(nc$geometry)</code></pre>
+<div class="figure">
+<img src="spatial-basics_files/figure-markdown_github/nc-plot-1.png" />
+
+</div>
+</div>
+<div id="manipulating-with-dplyr" class="section level2">
+<h2>Manipulating with dplyr</h2>
+<p>Since an sf object is just a data frame, you can manipulate it with dplyr. The following example gives you a taste:</p>
+<pre class="r"><code>nz_sf %&gt;%
+  mutate(area = as.numeric(st_area(geometry))) %&gt;%
+  filter(area &gt; 1e10)
+#&gt;                         geometry            ID         area
+#&gt; 1 POLYGON((172.74333190918 -3... North.Island  113469632351
+#&gt; 2 POLYGON((172.639053344727 -... South.Island  150444467051</code></pre>
+<p><code>st_area()</code> returns an object with units (i.e. <em>m</em><sup>2</sup>), which is precise, but a little annoying to work with. I used <code>as.numeric()</code> to convert to a regular numeric vector.</p>
+</div>
+<div id="geometry" class="section level2">
+<h2>Geometry</h2>
+<p>The geometry column is a list-column. You’ll learn more about list-columns later in the course, but in brief, they’re the richest and most complex type of column because a list can contain any other data structure, including other lists.</p>
+<p>It’s worthwhile to pull out one piece so you can see what’s going on under the hood:</p>
+<pre class="r"><code>str(nc$geometry[[1]])
+#&gt; List of 1
+#&gt;  $ :List of 1
+#&gt;   ..$ : num [1:27, 1:2] -81.5 -81.5 -81.6 -81.6 -81.7 ...
+#&gt;  - attr(*, &quot;class&quot;)= chr [1:3] &quot;XY&quot; &quot;MULTIPOLYGON&quot; &quot;sfg&quot;
+plot(nc$geometry[[1]])</code></pre>
+<div class="figure">
+<img src="spatial-basics_files/figure-markdown_github/unnamed-chunk-7-1.png" />
+
+</div>
+<p>Note the use of <code>[[</code> to extract a single element, here, the first polygon.</p>
+<p>This is list of lists of matrices:</p>
+<ul>
+<li><p>The top-level list has one element for each “landmass” in the county. We can find a more interesting case:</p>
+<pre class="r"><code>n &lt;- nc$geometry %&gt;% map_int(length)
+table(n)
+#&gt; n
+#&gt;  1  2  3 
+#&gt; 94  4  2
+
+interesting &lt;- nc$geometry[n == 3][[1]]
+plot(interesting)</code></pre>
+<div class="figure">
+<img src="spatial-basics_files/figure-markdown_github/unnamed-chunk-8-1.png" />
+
+</div>
+<pre class="r"><code>str(interesting)
+#&gt; List of 3
+#&gt;  $ :List of 1
+#&gt;   ..$ : num [1:26, 1:2] -76 -76 -76 -76 -76.1 ...
+#&gt;  $ :List of 1
+#&gt;   ..$ : num [1:7, 1:2] -76 -76 -75.9 -75.9 -76 ...
+#&gt;  $ :List of 1
+#&gt;   ..$ : num [1:5, 1:2] -75.9 -75.9 -75.8 -75.8 -75.9 ...
+#&gt;  - attr(*, &quot;class&quot;)= chr [1:3] &quot;XY&quot; &quot;MULTIPOLYGON&quot; &quot;sfg&quot;</code></pre>
+<p>This is a county made up of three non-contiguous pieces.</p></li>
+<li><p>The second-level list is not used in this dataset, but is needed when you have a landmass that contains an lake. (Or a landmass that contains an lake which has an island which has a pond).</p></li>
+<li><p>Each row of the matrix gives the location of a point on the boundary of the polygon.</p></li>
+</ul>
+</div>
+<div id="coordinate-system" class="section level2">
+<h2>Coordinate system</h2>
+<p>To correctly plot spatial data, you need know exactly what the numeric positions mean, i.e. what are they in reference to? This is called the <strong>coordinate reference system</strong> or CRS. Often spatial data is described in terms of latitude and longitude. You can check this with <code>st_is_longlat()</code>:</p>
+<pre class="r"><code>st_is_longlat(nc)
+#&gt; [1] TRUE</code></pre>
+<p>You might think that if you know the latitude and longitude of a point, you know exactly where it is on the Earth. However, things are not quite so simple, because latitude and longitude are based on the assumption that the Earth is a smooth ellipsoid, which is not true. Because different approximations work better in differently places, most countries have their own approximation: this is called the <strong>geodetic datum</strong>, or just <strong>datum</strong> for short.</p>
+<p>Take two minutes and watch this simple explanation of the datum: <a href="https://www.youtube.com/watch?v=xKGlMp__jog" class="uri">https://www.youtube.com/watch?v=xKGlMp__jog</a></p>
+<p>To get the datum and other coordinate system metadata, use <code>st_crs()</code>:</p>
+<pre class="r"><code>st_crs(nc)
+#&gt; $epsg
+#&gt; [1] 4267
+#&gt; 
+#&gt; $proj4string
+#&gt; [1] &quot;+proj=longlat +datum=NAD27 +no_defs&quot;
+#&gt; 
+#&gt; attr(,&quot;class&quot;)
+#&gt; [1] &quot;crs&quot;</code></pre>
+<p>Here the datum is “NAD27”, the <a href="https://en.wikipedia.org/wiki/North_American_Datum">North American Datum</a> of 1927 (NAD27)</p>
+<p>In this class, you won’t have to worry too much about the datum as sf and ggplot2 will take care of the details for you. But it’s good to know why it exists and how to identify it if something goes wrong.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>
