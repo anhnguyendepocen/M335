@@ -31,7 +31,10 @@ At the completion of this course, successful students will be able to:
 
 The [syllabus](syllabus.html) provides context for the details of how the class will operate and how grades will be earned.
 
-* [Syllabus](syllabus.html)
 * [Visualization in R](r_visualization.html)
 * [R Background](r_background.html)
 * [R Getting Started](r_help.html)
+
+----
+
+[DataCamp.com](https://www.datacamp.com){target="blank"} has also opened up their online courses for us to leverage during the semester.  If you are interested please contact me for the registration.

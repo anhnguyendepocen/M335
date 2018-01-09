@@ -1,4 +1,15 @@
-# Task List Form
+---
+title: "Task List Form"
+params:
+  dtype: background
+  pbackground: FALSE
+  ptitle: FALSE
+output:
+  html_document:
+    keep_md: yes
+    toc_float:
+      collapsed: true
+---
 
 
 
@@ -19,25 +30,50 @@ This page is provided to give you a one-page view of your task completion throug
 
 #### [Semester Project](project.html)
 
-The deliverables for your [semester project](project.html) are assigned in [case study 9](weekly_projects/cs09_details.html) and [case study 12](weekly_projects/cs12_details.html). However you should keep a steady workflow on this project throughout the semester.  
+The deliverables for your [semester project](project.html) are assigned in [case study 1](weekly_projects/cs01_details.html) and [case study 12](weekly_projects/cs12_details.html). However you should keep a steady workflow on this project throughout the semester.  
 
 #### [Leadership](leadership.html)
 
-* [ ] Complete the class task before class starts
-* [ ] Be a class lead during class (complete at least one of the following)
-    * [ ] Supporting other students that need help getting through the last difficulties they had with the task
-    * [ ] Presenting key coding methods or steps to the entire class
-* [ ] Complete this task 12 times during the semester. 
+Leadership in data science requires you to be prepared to answer the clients questions when the team meeting is scheduled.  We are treating class like the team meeting and you need to be prepared to answer and ask questions about the driving objectives from the client.
 
-#### [Portfolio](weekly_projects/cs13_details.html)
+##### Data Science Leader (A level)
 
-[Case study 13](weekly_projects/cs13_details.html) provides the checklist items for your portfolio. This portfolio package will be the basis of your final grade.  
+* [ ] Complete the class task by midnight of the due date at least 18 times.
+* [ ] Complete weekly case study by midnight of the due date at least 10 times.
+* [ ] Supporting other students that need help getting through the last difficulties they had with the task or case study of the previous week.
+
+##### Data Science Supporter (B level)
+
+* [ ] Complete the class task by midnight of the due date at least 12 times.
+* [ ] Complete weekly case study by midnight of the due date at least 6 times.
+* [ ] Supporting other students that need help getting through the last difficulties they had with the task or case study of the previous week.
+
+
+##### Data Science Wannabe (C level)
+
+* [ ] Complete the class task by midnight of the due date at least 8 times.
+* [ ] Complete weekly case study by midnight of the due date at least 4 times.
+* [ ] Supporting other students that need help getting through the last difficulties they had with the task or case study of the previous week.
+
+
+#### Portfolio
+
+[Case study 13](weekly_projects/cs13_details.html) provides the checklist items for your portfolio. This portfolio package will be the basis of your final grade. 
+
+* [ ] Complete LinkedIn, GitHub, Slack profiles that have been connected to our BYU-I data science community
+* [ ] A cover letter stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion
+* [ ] A resume that includes the skills you have learned during our projects
+* [ ] A semester task form that records your completed tasks during the semester
+* [ ] Semester project submission on GitHub
+* [ ] Submit this material electronically and in person during our exit interview
 
 ## Weekly Case Studies
 
 #### [Case Study 1](weekly_projects/cs01_details.html)
 
-* [ ] Find  two or three articles/posts that have a good visualization that answers an interesting question
+* [ ] Find 4-5 examples of data-driven answers and write a one-paragraph review of each.
+    * [ ] List 2-3 items that are unique/good
+    * [ ] Identify 1 issue with the each example
 * [ ] Create an `.Rmd` file in R-Studio
     * [ ] Title it Case Study 1 in the YAML
     * [ ] Include links to the visualization post you found
@@ -50,10 +86,11 @@ The deliverables for your [semester project](project.html) are assigned in [case
 #### [Case Study 2](weekly_projects/cs02_details.html)
 
 * [ ] Watch the [Hons Rosling video](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target="blank"}
-* [ ] Recreate the two graphics shown below (so they match exactly)
-    * [ ] Build weighted average data set using  `weighted.average()` and GDP with  `mutate()`
+* [ ] Recreate the two graphics shown below using `gapminder` dataset from `library(gapminder)` (get them to match as closely as you can)
     * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the first plot
-    * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the second plot. You will need to use the new data to make the black lines.
+    * [ ] Use  `scale_y_continuous(trans = "sqrt")` to get the correct scale on the y-axis.
+    * [ ] Build weighted average data set using  `weighted.mean()` and GDP with  `mutate()` and `group_by()` that will be the black continent average line on the second plot
+    * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the second plot. You will need to use the new data to make the black lines and dots showing the continent average.
     * [ ] Use `ggsave()` and save each plot as a `.png` with a width of 15 inches
 * [ ] Build an Rmd file that has the following features
     * [ ] The title is the same as listed in the task
@@ -64,26 +101,39 @@ The deliverables for your [semester project](project.html) are assigned in [case
 
 #### [Case Study 3](weekly_projects/cs03_details.html)
 
+* [ ] Address at least one of the three questions in the background description (if you have time try to tackle all three)
+* [ ] Create one `.rmd` file that has your report
+    * [ ] Have a section for each question
+    * [ ] Make sure your code is in the report but defaults to hidden
+    * [ ] Write an introduction section that describes your results
+    * [ ] make a plot of the data to show the answer to the specific question
+* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
+* [ ] Be prepared to discuss your analysis in the upcoming class
+
+#### [Case Study 4](weekly_projects/cs04_details.html)
+
 * [ ] Provide a brief summary of the [FiveThirtyEight article](https://fivethirtyeight.com/features/gun-deaths/){target="blank"}
-    * [ ] Create one plot that is similar to one view of their visualization in the article
+    * [ ] Create one plot that provides similar insight to their visualization in the article. It does not have to look like theirs.
     * [ ] Write a short paragraph summarizing their article
 * [ ] Address the client's need for emphasis areas of their commercials for different seasons of the year.
-    * [ ] Provide plots that help them know the race and type of gun death that they should address (2-4 visualizations seem necessary)
+    * [ ] Provide plots that help them know the different potential groups (variables) they could address in different seasons (2-4 visualizations seem necessary)
     * [ ] Write a short paragraph describing each image
 * [ ] Compile your `.md` and `.html` file into your git repository
 * [ ] Complete the recommended reading on posting issues.
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
-#### [Case Study 4](weekly_projects/cs04_details.html)
+#### [Case Study 5](weekly_projects/cs05_details.html)
 
 * [ ] Use the correct functions from `library(haven)` , `library(readr)`, and `library(readxl)` to load the 6 data sets listed [here](https://byuistats.github.io/M335/maleheight.html){target="blank"}
 * [ ] Tidy the Worldwide estimates `.xlsx` file
-    * [ ] Make sure the file is in long format with year as a column
-    * [ ] Use the `separate()` and `mutate()` functions to create a decade column
+    * [ ] Make sure the file is in long format with year as a column.  See [here](https://byuistats.github.io/M335/maleheight_tidy.html) for an example of the final format.
+    * [ ] Use the `separate()` and `mutate()` functions to create a decade column.
 * [ ] Import the other five datasets into R and combine them into one tidy dataset.
     * [ ] This dataset should have the following columns - birth_year, height.cm, height.in, and study_id
-* [ ] Save the two tidy datasets to your repository
+    * [ ] The BLS wage data does not have birth information.  Let's assume it is mid-twentieth century and use 1950.
+    * [ ] See the reading of [Task 7](https://byuistats.github.io/M335/class_tasks/task07_details.html) for how to read in dbf files.
+* [ ] Save the two tidy datasets to your repository - The world country estimates and the row-combined individual measurements.
 * [ ] Make a plot with decade on the x-axis and height in inches on the y-axis with the points from Germany highlighted based on the data from the `.xlsx` file.
 * [ ] Make a small-multiples plot of the five studies to examine the question of height distribution across centuries
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and how those graphics answer the driving question
@@ -91,22 +141,24 @@ The deliverables for your [semester project](project.html) are assigned in [case
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
-#### [Case Study 5](weekly_projects/cs05_details.html)
+#### [Case Study 6](weekly_projects/cs06_details.html)
 
-* [ ] Load the R package from GitHub `devtools::install_github("hathawayj/buildings")` and find out what data is in the package
-* [ ] Use the `ProjectTitle` column to create split out new groups from `Food_Beverage_Service` using the groupings in the code section below
-    * [ ] Your client has a decent memory of the data and commercial construction in Idaho -- Check your code and data to make sure you are not missing or incorrectly assigning groups to the buildings
-    * [ ] Your client expects to provide new data for 2010 and 2011 so your script needs to do the work.  Make sure you don't use Excel to manipulate anything
-* [ ] Create an `.Rmd` file with 2-3 paragraphs summarizing your 4-5 graphics that inform the client questions
+* [ ] Load the R package from GitHub `devtools::install_github("hathawayj/buildings")` and find out what [data is in the package](https://github.com/hathawayj/buildings)
+* [ ] Construction value is related to population in the area.  Join the `climate_zone_fips` data to the `buildings0809` data using the two `FIPS` columns for state and county.
+* [ ] After filtering to `Food_Beverage_Service` group of buildings in the `Type` variable, use the `ProjectTitle` column to create new subgroups from the groupings in the code section below and the restaurant names in `restaurants`.
+    * [ ] Restaurants that are not assigned using the names and keywords that are over 4000 square feet should be grouped into `Full Service Restaurants` and be in `Quick Servie Restaurants` if they are under 4000 square feet
+* [ ] Make sure your text strings your ar matching on are as standardized as possible
+    * [ ] leverage functions like `str_to_lower()` and `str_trim()` to get all the words in a standardized form
+    * [ ] you could use the `case_when()` function to create the subgroups.
+* [ ] Create an `.Rmd` file with 2-3 paragraphs summarizing your 3-4 graphics that inform the client questions
 * [ ] Compile your `.md` and `.html` file into your git repository
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
-#### [Case Study 6](weekly_projects/cs06_details.html)
+#### [Case Study 7](weekly_projects/cs07_details.html)
 
 * [ ] Get the scripture and savior name data into R
-    * [ ] Use the `library(downloader)` R package and the `download()` function to download the data from http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip
-    * [ ] Use the `unzip()` function to decompress the zip file that you downloaded
+    * [ ] Download the data from http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip
     * [ ] Read in the `.csv` file that was in the zip file and examine the structure of the data
     * [ ] Use `read_rds(gzcon(url("https://byuistats.github.io/M335/data/BoM_SaviorNames.rds")))` to download and load the Savior names table into R
 * [ ] Use the list of Savior names and the Book of Mormon verses to figure out the average number of words between references to the Savior
@@ -119,7 +171,7 @@ The deliverables for your [semester project](project.html) are assigned in [case
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
-#### [Case Study 7](weekly_projects/cs07_details.html)
+#### [Case Study 8](weekly_projects/cs08_details.html)
 
 * [ ] Read in the data from `https://byuistats.github.io/M335/data/sales.csv` and format it for visualization and analysis
     * [ ] The data are for businesses in the mountain time zone make sure you read in times correctly
@@ -133,7 +185,7 @@ The deliverables for your [semester project](project.html) are assigned in [case
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
-#### [Case Study 8](weekly_projects/cs08_details.html)
+#### [Case Study 9](weekly_projects/cs09_details.html)
 
 * [ ] For your coding development use these tickers - `tickers_today <- c("CXW", "F", "GM", "JCP", "KR", "WDC", "NKE","T", "WDAY", "WFC", "WMT")`
 * [ ] Use `library(dygraphs)` to build interactive visualizations of the stock performances over the last 5 years.
@@ -142,22 +194,6 @@ The deliverables for your [semester project](project.html) are assigned in [case
 * [ ] Compile your `.md` and `.html` file into your git repository
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
-
-#### [Case Study 9](weekly_projects/cs09_details.html)
-
-* [ ] Find 4-5 examples of data-driven answers and write a one-paragraph review of each.
-    * [ ] List 2-3 items that are unique/good
-    * [ ] Identify 1 issue with the each example
-* [ ] Develop a data driven question
-    * [ ] Get feedback from 5-10 people on their interest in your question and summarize this feedback
-    * [ ] Find other examples of people addressing your question
-    * [ ] Present your question to a data scientist to get feedback on the quality of the question and if it can be addressed in 2-months.
-* [ ] Build an interactive document that has links to sources with a description of the quality of each
-    * [ ] Find 3-5 potential data sources (that are free) and document some information about the source
-    * [ ] Build an R script that reads in and formats the data for analysis
-    * [ ] Write a short summary of the read in process and some coding secrets you learned
-    * [ ] Include 2-3 quick visualizations that you used to check the quality of your data
-    * [ ] Summarize the limitations of your final compiled data in addressing your original question
 
 #### [Case Study 10](weekly_projects/cs10_details.html)
 
@@ -173,8 +209,8 @@ The deliverables for your [semester project](project.html) are assigned in [case
 
 #### [Case Study 11](weekly_projects/cs11_details.html)
 
-* [ ] Choose one of the two options below
-    * [ ] Recreate [Case Study 10](https://byuistats.github.io/M335/weekly_projects/cs10_details.html){target="blank"} tasks with leaflet
+* [ ] Choose an option of recreating or using new data.
+    * [ ] Recreate [CS 10](https://byuistats.github.io/M335/weekly_projects/cs10_details.html){target="blank"} tasks with leaflet
     * [ ] Find your own spatial data that interests you and build a visualization
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in your visualization
 * [ ] Compile your `.md` and `.html` file into your git repository
@@ -183,9 +219,10 @@ The deliverables for your [semester project](project.html) are assigned in [case
 
 #### [Case Study 12](weekly_projects/cs12_details.html)
 
-* [ ] Present your visualization based analysis that addresses your question
+* [ ] Finalize first draft of your project analysis
     * [ ] Choose your flavor of `.Rmd` for your presentation
     * [ ] Build a stand-alone analysis that helps a reader answer the question at hand with that available data
+* [ ] Present your visualization based analysis that addresses your question
     * [ ] Present your analysis to your roommates (or spouse) and update your presentation based on the feedback
     * [ ] Get feedback from 2-3 fellow classmates on your presentation and update it based on their feedback
     * [ ] Present your draft presentation to a data scientist to review for clarity
@@ -218,65 +255,81 @@ The deliverables for your [semester project](project.html) are assigned in [case
 * [ ] Complete Lessons 1-4 in the `library(swirl)` package of the course `install_course("R Programming E")`
     * [ ] Use `byui.m335@gmail.com` for the email address where you will send confirmation of the completion of each lesson.
     * [ ] Use our course standardization for your name `lastname` `firstletterfirstname` for each. For example, mine is `hathawayj`.
-* [ ] Complete Lessons 5-9 in the `library(swirl)` package of the course `install_course("R Programming E")`
+    * [ ] Ignore the token submission step
+* [ ] Complete Lessons 5-7 in the `library(swirl)` package of the course `install_course("R Programming E")`
     * [ ] Follow sub-directions above.
 * [ ] Read a short article about the [data scientist Florence Nightengale](http://www.atlasobscura.com/articles/florence-nightingale-infographic){target="blank"} and write a two to three sentence paragraph critique of her coxcomb graphic based on your perceptions of quality graphics.
     * [ ] In class, be prepared to submit your write up electronically.
+* [ ] Create a [GitHub account](https://github.com/join?source=header-home){target="blank"} and post your github username on the google docs sheet in I-Learn
 
 #### [Class Task 3](class_tasks/task03_details.html)
 
 * [ ] Install git on your computer
-* [ ] Create a GitHub account
+* [ ] Make sure your GitHub account is registered
 * [ ] Work through readings on git and github
 * [ ] Make sure git works in R-Studio
-* [ ] Add a folder to our class git repository
-    * [ ] Name the folder lastname_firstname
-    * [ ] Add a README.md in the folder
+* [ ] Update your README.md in your repository (you will need to give me time to create your repo after you post your username)
     * [ ] Type one or two sentences that describe you
     * [ ] Make sure you pull and push
+* [ ] Check your folder structure in your git repo to match the format for our class - [see MCS 335 Folder Structure](https://byuistats.github.io/M335/tasklist.html)
 
 #### [Class Task 4](class_tasks/task04_details.html)
 
-* [ ] Address the three questions in the background description
+* [ ] Develop a few novel questions that data can answer
+    * [ ] Get feedback from 5-10 people on their interest in your questions and summarize this feedback
+    * [ ] Find other examples of people addressing your question
+    * [ ] Present your question to a data scientist to get feedback on the quality of the question and if it can be addressed in 2-months.
 * [ ] Create one `.rmd` file that has your report
     * [ ] Have a section for each question
-    * [ ] Make sure your code is in the report but defaults to hidden
-    * [ ] Write an introduction section that describes your results
-    * [ ] Add a short paragraph in each section describing the plot and any other essential elements of your work
 * [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
-* [ ] Be prepared to discuss your analysis in the upcoming class
+* [ ] Be prepared to discuss your results in the upcoming class
 
 #### [Class Task 5](class_tasks/task05_details.html)
 
-* [ ] Review the [Our World in Data](https://ourworldindata.org/){target="blank"} webpage and find a graphic that interests you.
-    * [ ] Recreate that graphic in R after downloading the data from their website
-    * [ ] Find some interesting features on your graphic. Then do some reasearch online to find out the cause of that feature for an annotation that you can add to your plot.
-    * [ ] Use a [clean way](http://ggplot2.tidyverse.org/reference/annotate.html) to add the information from the online search to your graphic
-* [ ] Explore the world data on `child_mortality` and create an interesting graphic that highlights this dataset.
-    * [ ] Use `devtools::install_github("drsimonj/ourworldindata") to get a larger dataset on `child_mortality`
-    * [ ] Create a graphic that you could use in a final presentation to summarize world child mortatility
-* [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots
-* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
+* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate but poorly built to communicate data.
+* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate and optimizes data communication.
+* [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your 2 graphics and the choices you made in the data presentation
+* [ ] Compile your `.md` and `.html` file into your git repository
 
 #### [Class Task 6](class_tasks/task06_details.html)
 
-* [ ] Explore the world data on `financing_healthcare` and create an interesting graphic that highlights this dataset.
-    * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `financing_healthcare`
-    * [ ] Create a graphic that you could use in a final presentation to summarize world child mortatility
+* [ ] Review the [Our World in Data](https://ourworldindata.org/){target="blank"} webpage and find a graphic that interests you.
+    * [ ] Recreate that graphic in R after downloading the data from their website
+* [ ] Explore the world data on `child_mortality` and create an interesting graphic that highlights this dataset.
+    * [ ] Use `devtools::install_github("drsimonj/ourworldindata") to get a larger dataset on `child_mortality`.  This will require `install.packages("devtools")`.
+    * [ ] Create a graphic that you could use in a presentation to summarize world child mortatility
+* [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots
 * [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
 
 #### [Class Task 7](class_tasks/task07_details.html)
 
+* [ ] Explore the world data on `financing_healthcare` and create an interesting graphic that highlights this dataset in relation to child mortality.
+    * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `financing_healthcare`
+    * [ ] Create a graphic that you could use in a final presentation to summarize world child mortatility (`child_mort` column)
+* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
+
+#### [Class Task 8](class_tasks/task08_details.html)
+
+* [ ] Build an interactive document that has links to sources with a description of the quality of each
+    * [ ] Find 3-5 potential data sources (that are free) and document some information about the source
+    * [ ] Build an R script that reads in, formats, and visualizes the data using the principles of exploratory analysis
+    * [ ] Write a short summary of the read in process and some coding secrets you learned
+    * [ ] Include 2-3 quick visualizations that you used to check the quality of your data
+    * [ ] Summarize the limitations of your final compiled data in addressing your original question
+* [ ] After formatting your date identify any follow on or alternate questions that you could use for your project
+
+#### [Class Task 9](class_tasks/task09_details.html)
+
 * [ ] Use the appropriate functions in `library(readr)`, `library(haven)`, `library(readxl)` to read in the five files found on [GitHub](https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova){target="blank"}
     * [ ] Use `read_rds(gzcon(url("WEBLOCATION.rds")))` to download and load the `.rds` file type
-    * [ ] Use the `library(downloader)` R package and use the `download()` function to download the xlsx data as `read_xlsx()` cannot read files from the web path
+    * [ ] Use the `library(downloader)` R package and use the `download(mode = "wb")` function to download the xlsx data as `read_xlsx()` cannot read files from the web path
     * [ ] Use `tempfile()` function for downloading files
 * [ ] Check that all five files you have imported into R are in fact the same with `all.equal()`
 * [ ] Use one of the files to make a graphic showing the performance of the Dart, DJIA, and Pro stock selections
     * [ ] Include a boxplot, the jittered returns, and the average return in your graphic
 * [ ] Save your `.R` script and your image to your repository and be ready to share your code that built your graphic in class
 
-#### [Class Task 8](class_tasks/task08_details.html)
+#### [Class Task 10](class_tasks/task10_details.html)
 
 * [ ] Import the Dart_Expert_Dow_6month_anova data from GitHub (see details in previous task)
 * [ ] The `contestant_period` column is not "tidy" we want to create an `month_end` and `year_end` column from the information it contains
@@ -286,7 +339,7 @@ The deliverables for your [semester project](project.html) are assigned in [case
 * [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots. Make sure to display the `tidyr` code in your file
 * [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
 
-#### [Class Task 9](class_tasks/task09_details.html)
+#### [Class Task 11](class_tasks/task11_details.html)
 
 * [ ] Install the `library(Lahman)` and examine the available data sets available
     * [ ] Find the 4-5 different data sets that you will need to show full college and player names as well as their annual earnings
@@ -294,7 +347,7 @@ The deliverables for your [semester project](project.html) are assigned in [case
 * [ ] Make a plot showing how professional baseball player earnings that played baseball at BYU compared to the players from other Utah schools
 * [ ] Save your `.R` script and image to your repository and be ready to share your code and image at the beginning of class
 
-#### [Class Task 10](class_tasks/task10_details.html)
+#### [Class Task 12](class_tasks/task12_details.html)
 
 * [ ] Use the `readr::read_lines()` function to read in each string - [randomletters.txt](https://byuistats.github.io/M335/data/randomletters.txt){target="blank"} and [randomletters_wnumbers.txt](https://byuistats.github.io/M335/data/randomletters_wnumbers.txt){target="blank"}
 * [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, <U+0085>) and find the quote that is hidden - the quote ends with a period
@@ -302,66 +355,56 @@ The deliverables for your [semester project](project.html) are assigned in [case
 * [ ] With the `randomletters.txt` file, remove all the spaces and periods from the string then find the longest sequence of vowels.
 * [ ] Save your `.R` script to your repository and be ready to share your code solution at the beginning of class
 
-#### [Class Task 11](class_tasks/task11_details.html)
+### Tasks 13 -24
+
+#### [Class Task 13](class_tasks/task13_details.html)
 
 * [ ] Load your "tidy" data from the previous task using the stock return data
 * [ ] Create a plot that shows the six-month returns by the month in which the returns are collected using the eight years of data
 * [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots. Make sure to display the `tidyr` code in your file
 * [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
 
-#### [Class Task 12](class_tasks/task12_details.html)
+#### [Class Task 14](class_tasks/task14_details.html)
 
-* [ ] Use the `library(downloader)` R package and the `download()` function to download the data from http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip
-* [ ] Use the `unzip()` function to decompress the zip file that you downloaded
+* [ ] Download the data from http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip
 * [ ] Read in the `.csv` file that was in the zip file and examine the structure of the data
-* [ ] Address questions 1 & 2 using the `stri_stats_latex()` and `str_locate_all()` functions from `install.packages("stringr")` and `install.packages("stringi")`
+* [ ] Address questions 1 & 2 using R functions from `install.packages("stringr")` and `install.packages("stringi")`
+    * [ ] Use the `stri_stats_latex()` and `str_locate_all()` functions from each package
 * [ ] Create a visualization that addresses question 3
 * [ ] Create an `.Rmd` file with 1-2 paragraphs and your graphics that answers the three questions
 * [ ] Compile your `.md` and `.html` file into your git repository
 
-### Tasks 13 -24
-
-#### [Class Task 13](class_tasks/task13_details.html)
+#### [Class Task 15](class_tasks/task15_details.html)
 
 * [ ] Create a `.png` image for each question
 * [ ] Save your script and `.png` files to GitHub
 * [ ] Be prepared to share your visualization and why your reasoning for how the visualization answers the question
 
-#### [Class Task 14](class_tasks/task14_details.html)
+#### [Class Task 16](class_tasks/task16_details.html)
 
 * [ ] Read in the car wash data `https://byuistats.github.io/M335/data/carwash.csv` and format it for the needs of this task
-    * [ ] Create a new hourly grouping variable using `ceiling_date()` from `install.packages("lubridate")`
+    * [ ] Convert the times from UTC time to mountain standard time using the right function out of `library(lubridate)`.
+    * [ ] Create a new hourly grouping variable using `ceiling_date()` from `library(lubridate)`
     * [ ] Aggregate the point of sale data into hour sales totals
-* [ ] Use `getWeatherForDate(opt_detailed = TRUE, opt_temperature_columns = FALSE, opt_all_columns = TRUE)` for station `KRXE` from `library(weatherData)` to get the matching temperatures
+* [ ] Use `riem_measures(station = "RXE",  date_start  = ,  date_end  =  )` for station `RXE` from `library(riem)` to get the matching temperatures
     * [ ] Create a new hourly variable that matches your car wash hourly variable
 * [ ] Merge the two datasets together
 * [ ] Create a visualization that provides insight into the relationship between sales and temperature by hour of the day
 
-#### [Class Task 15](class_tasks/task15_details.html)
+#### [Class Task 17](class_tasks/task17_details.html)
 
 * [ ] List the three stocks that your friend picks and the three that you pick
-* [ ] Pull the price performance data using `library(tidyquants)` or `library(quantmod)`
+* [ ] Pull the price performance data using `library(tidyquant)` or `library(quantmod)`
 * [ ] Build a visualization that shows who is winning each day of the competition
-* [ ] In the previous visualization or with another visualization show which stock is helping the winner the competition
+* [ ] In the previous visualization or with another visualization show which stock is helping the winner of the competition
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in the data presentation
 * [ ] Compile your `.md` and `.html` file into your git repository
 
-#### [Class Task 16](class_tasks/task16_details.html)
+#### [Class Task 18](class_tasks/task18_details.html)
 
 * [ ] Build the `library(dygraphs)` plot that shows the Kroger (KG) stock price performance
 * [ ] Add a few annotations to the plot that identify the historical context for the price change
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in the data presentation
-* [ ] Compile your `.md` and `.html` file into your git repository
-
-#### [Class Task 17](class_tasks/task17_details.html)
-
-* [ ] Repeat the [task 10 tasks](https://byuistats.github.io/M335/class_tasks/task10_details.html){target="blank"} using three functions that you built
-
-#### [Class Task 18](class_tasks/task18_details.html)
-
-* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate but poorly built to communicate data.
-* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate and optimizes data communication.
-* [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your 2 graphics and the choices you made in the data presentation
 * [ ] Compile your `.md` and `.html` file into your git repository
 
 #### [Class Task 19](class_tasks/task19_details.html)
@@ -392,6 +435,7 @@ The deliverables for your [semester project](project.html) are assigned in [case
 
 #### [Class Task 23](class_tasks/task23_details.html)
 
+* [ ] Repeat the [task 12 tasks](https://byuistats.github.io/M335/class_tasks/task12_details.html){target="blank"} using three functions that you built
 * [ ] Complete listed reading for class discussion
 
 #### [Class Task 24](class_tasks/task24_details.html)

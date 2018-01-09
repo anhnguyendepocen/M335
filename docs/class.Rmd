@@ -7,6 +7,61 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## Class Discussion
+
+* [Day 1](presentations_class/day_1.html){target="blank"}
+* [Day 2](presentations_class/day_2.html){target="blank"}
+* [Day 3](presentations_class/day_3.html){target="blank"}
+* [Day 4](presentations_class/day_4.html){target="blank"}
+* [Day 5](presentations_class/day_5.html){target="blank"}
+* [Day 6](presentations_class/day_6.html){target="blank"}
+* [Day 7](presentations_class/day_7.html){target="blank"}
+* [Day 8](presentations_class/day_8.html){target="blank"}
+* [Day 9](presentations_class/day_9.html){target="blank"}
+* [Day 10](presentations_class/day_10.html){target="blank"}
+
+### Characters and RegEx
+
+* [Day 11](presentations_class/day_11.html){target="blank"}
+* [Day 12](presentations_class/day_12.html){target="blank"}
+
+### Dates and Time
+
+* [Day 13](presentations_class/day_13.html){target="blank"}
+* [Day 14](presentations_class/day_14.html){target="blank"}
+* [Day 15](presentations_class/day_15.html){target="blank"}
+* [Day 16](presentations_class/day_16.html){target="blank"}
+
+### Functions and Vectors (Class Project Time)
+
+* [Day 17](presentations_class/day_17.html){target="blank"}
+* [Day 18](presentations_class/day_18.html){target="blank"}
+
+
+### Spatial
+
+
+* [Day 19](presentations_class/day_19.html){target="blank"}
+* [Day 20](presentations_class/day_20.html){target="blank"}
+* [Day 21](presentations_class/day_21.html){target="blank"}
+* [Day 22](presentations_class/day_22.html){target="blank"}
+
+
+### Last 2-weeks
+
+* [Day 23](presentations_class/day_23.html){target="blank"}
+* [Day 24](presentations_class/day_24.html){target="blank"}
+* [Day 25](presentations_class/day_25.html){target="blank"}
+* [Day 26](presentations_class/day_26.html){target="blank"}
+
+
 ## Random Stuff
 
+* [Spatial Class](spatial_class.html)
+* [hathaway restaurant code](https://byuistats.github.io/M335/presentations_class/restaurants_idaho.html)
+* [temple data sealing activity](temple_sealings.html)
+* [Overview of Git and GitHub us in our course](git_335.html).  Please note the folder structure you need in your repository.
+* [ggplot2 intro](https://stats.idre.ucla.edu/r/seminars/ggplot2_intro/): It has a nice example for `stat_summary()`
+* [git command workflow](https://byuistats.github.io/M335/images/Git_workflow_diagram.png){target="blank"}
 * [Data is Beautiful](https://np.reddit.com/r/dataisbeautiful/){target="blank"}

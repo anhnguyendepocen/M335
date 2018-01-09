@@ -1,4 +1,9 @@
-# Syllabus
+---
+title: "Syllabus"
+output:
+  html_document:
+    keep_md: yes
+---
 
 
 
@@ -36,6 +41,7 @@ This is a data coding class.  The prerequisites for this course include introduc
 * [Happy Git and Github for the useR](http://happygitwithr.com/){target="blank"}
 
 -------- 
+
 * [Fundamental Statistical Concepts in Presenting Data: Principles for Constructing Better Graphics](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf){target="blank"}
 * [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/){target="blank"} by Winston Chang.
 * [Advanced R](http://adv-r.had.co.nz/){target="blank"} by Hadley Wicham will also be leveraged as a reference book.
@@ -96,7 +102,7 @@ As we team, teacher and student, we have a challenge to become more in three mon
 
 In a specifications-grading system all tasks are evaluated on a high-standards pass/fail basis using detailed checklists of task requirements and expectations[^3].  Letter grades are earned by passing marks on a set of tasks. This system provides for a variety of choice and is closer to how learning, and work, is done in the real world. It will be easy for us to tell if work is complete, done in good faith, and consistent with the requirements.
 
-Here are our guiding learning objectives.  Click on each to see an example task that we could complete this semester.
+We have five concepts that guide our learning objectives.  Click on each to see an example task that we could complete this semester.
 
 1.	[Convert data from varied formats or structures to a desirable format for analysis and visualization.](convert.html)
 2.	[Clean, transform and merge data attributes/variables appropriately.](clean.html)
@@ -113,16 +119,94 @@ Here are our guiding learning objectives.  Click on each to see an example task 
 5. [Semester project](project.html) submission on GitHub
 6. Submit this material electronically and in person during our exit interview
 
-#### Grading Scale
+#### Competency Scale
 
-* **A:** Complete all class tasks, case studies, and all semester deliverables
-* **A-:** Complete at least 20 class tasks, all case studies, and all semester deliverables
-* **B+:** Complete at least 20 class tasks, at least 10 case studies, and all semester deliverables
-* **B-:** Complete at least 18 class tasks, at least 8 case studies, at least 8 leadership completions, and the semester deliverables excluding the semester project.
-* **C:** Complete at least 15 class tasks, at least 6 case studies, at least 4 leadership completions, and the semester deliverables excluding the semester project.
-* **C-:** Complete at least 15 class tasks and at least 6 case studies
+
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; float: right; margin-left: 10px;">
+<thead><tr>
+<th style="text-align:center;font-weight: bold;color: white;background-color: black;"> Grade </th>
+   <th style="text-align:center;font-weight: bold;color: white;background-color: black;"> Class Tasks </th>
+   <th style="text-align:center;font-weight: bold;color: white;background-color: black;"> Case Studies </th>
+   <th style="text-align:center;font-weight: bold;color: white;background-color: black;"> Semester Project </th>
+  </tr></thead>
+<tbody>
+<tr grouplength="2"><td colspan="4" style="border-bottom: 1px solid;"><strong>Leader</strong></td></tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1"> A </td>
+   <td style="text-align:center;"> 24 </td>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> yes </td>
+  </tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1"> A- </td>
+   <td style="text-align:center;"> 24 </td>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> yes </td>
+  </tr>
+<tr grouplength="3"><td colspan="4" style="border-bottom: 1px solid;"><strong>Supporter</strong></td></tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1"> B+ </td>
+   <td style="text-align:center;"> 20 </td>
+   <td style="text-align:center;"> 8 </td>
+   <td style="text-align:center;"> yes </td>
+  </tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1"> B </td>
+   <td style="text-align:center;"> 18 </td>
+   <td style="text-align:center;"> 8 </td>
+   <td style="text-align:center;"> no </td>
+  </tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1"> B- </td>
+   <td style="text-align:center;"> 18 </td>
+   <td style="text-align:center;"> 6 </td>
+   <td style="text-align:center;"> no </td>
+  </tr>
+<tr grouplength="2"><td colspan="4" style="border-bottom: 1px solid;"><strong>Wannabe</strong></td></tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1"> C </td>
+   <td style="text-align:center;"> 15 </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> no </td>
+  </tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1"> C- </td>
+   <td style="text-align:center;"> 15 </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> no </td>
+  </tr>
+<tr grouplength="1"><td colspan="4" style="border-bottom: 1px solid;"><strong>None</strong></td></tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1"> D </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> no </td>
+  </tr>
+</tbody>
+<tfoot>
+<tr>
+<td style = 'padding: 0; border:0;' colspan='100%'><sup>1</sup> See [the tasklist](tasklist.html) for a description work related to leader, supporter, wannabe</td>
+</tr>
+</tfoot>
+</table>
+
+In all grade levels above a C-, case study 13 must be completed.
+
+
+* **A:** Complete at least 24 class tasks, 13 case studies, the semester project, and the data science leader task 
+* **A-:** Complete at least 24 class tasks, 13 case studies, the semester project, and the data science leader task 
+* **B+:** Complete at least 20 class tasks, at least 8 case studies, at least 8 leadership completions, and all other semester deliverables
+* **B:** Complete at least 18 class tasks, at least 8 case studies, at least 8 leadership completions, and all semester deliverables excluding the semester project.
+* **B-:** Complete at least 18 class tasks, at least 6 case studies, at least 8 leadership completions, and the semester deliverables excluding the semester project.
+* **C:** Complete at least 15 class tasks, at least 5 case studies, at least 4 leadership completions, and the semester deliverables excluding the semester project.
+* **C-:** Complete at least 15 class tasks and at least 5 case studies
 * **D:** Complete at least 5 class tasks and at least 5 case studies
-* **F:** Anthing else
+* **F:** Anything else
+
+**Notes**
+
+- The definitive word is "complete".  Starting them or getting them almost done is not completing.  
+- Those that are data science majors must complete a semester project to get anything higher than a B-.
 
 ### Goals
 

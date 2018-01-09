@@ -1,3 +1,14 @@
+---
+params:
+  dtype: details
+  number: 4
+  ptitle: TRUE
+  pbackground: TRUE
+  taskname: "task-04"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
@@ -5,22 +16,14 @@
 
 
 
-## Task 4: Becoming a databender 
+## Task 4:  Asking the right questions 
 ### Background 
-You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (`install.packages(nycflights13)`) your manager wants you to answer the following questions;
+Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  This task supports your semester project.
 
-1. If I am leaving before noon, what are my top two airline options at each airport (JFK, LGA, EWR) that will have the least amount of delay time?
-2. Which origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?
-3. Which destination airport is the worst airport for arrival time?
-
-Make sure to include visualizations to provide context for the answers.
 
  * [Homework Schedule](../homework_schedule.html)
 
 
-
-
-### Tasks
 
 
 <style>
@@ -34,32 +37,23 @@ ul {
 </style>
 
 
-* [ ] Address the three questions in the background description
-* [ ] Create one `.rmd` file that has your report
-    * [ ] Have a section for each question
-    * [ ] Make sure your code is in the report but defaults to hidden
-    * [ ] Write an introduction section that describes your results
-    * [ ] Add a short paragraph in each section describing the plot and any other essential elements of your work
-* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
-* [ ] Be prepared to discuss your analysis in the upcoming class
-
-
 ### Reading
 
+This reading will help you complete the tasks below.
+
+* o [Creating Questions for your project](https://www.mindtools.com/pages/article/newTMC_88.htm){target='blank'}
 * o [Chapter 5: R for Data Science - Data transformation](http://r4ds.had.co.nz/transform.html){target='blank'}
-* o [Chapter 6: R for Data Science - Scripts](http://r4ds.had.co.nz/workflow-scripts.html){target='blank'}
-* o [Chapter 8: R for Data Science - Projects](http://r4ds.had.co.nz/workflow-projects.html){target='blank'}
 
-------
 
-**Additional Information**
-   
-* [Hadley dplyr motivation](http://datascience.la/hadley-wickham-presents-dplyr-at-user-2014/){target="blank"}   
-* [Hadley Introduces dplyr](http://datascience.la/hadley-wickhams-dplyr-tutorial-at-user-2014-part-1/){target="blank"}   
-* [Hadley dplyr part 2](https://www.youtube.com/watch?v=Ue08LVuk790&t=0s){target="blank"}   
+### Tasks
 
----------
 
-I made up databending.  It does not mean that we make up data or that we alter it.  Like [airbenders](http://avatar.wikia.com/wiki/Airbending){target="blank"} we control our data to answer the questions we need answered.  The key to databending is flexibility and finding and following the path of least resistence.
-
+* [ ] Develop a few novel questions that data can answer
+    * [ ] Get feedback from 5-10 people on their interest in your questions and summarize this feedback
+    * [ ] Find other examples of people addressing your question
+    * [ ] Present your question to a data scientist to get feedback on the quality of the question and if it can be addressed in 2-months.
+* [ ] Create one `.rmd` file that has your report
+    * [ ] Have a section for each question
+* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
+* [ ] Be prepared to discuss your results in the upcoming class
 

@@ -3,7 +3,7 @@ title: "R Markdown Guide"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup2, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 

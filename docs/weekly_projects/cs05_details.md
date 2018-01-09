@@ -1,24 +1,45 @@
+---
+output:  
+  html_document:  
+    keep_md: true  
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 5
+  casename: "cs-05"
+---
 
 
 
 
 
 
-##  Case Study 5: The collapse of construction in Idaho 
+## Case Study 5: I can clean your data 
 ### Background 
 
-It is 2010, and you are working for the Idaho restaurant commission, and they need your help getting a clearer picture of how restaurant construction changed across Idaho from 2008 to 2009.  They provided you a dataset of all commercial construction in Idaho for those two years. The data has a general category called `Food_Beverage_Service` that has other buildings besides restaurants in the category and will need some massaging to answer the following questions.
+The [Scientific American argues](https://www.scientificamerican.com/article/why-are-we-getting-taller/){target="blank"} that humans have been getting taller over the years.  As the data scientists that we are becoming, we would like to find data that validates this concept. Our challenge is to show different male heights across the centuries.  
 
-1. How did full-service restaurant construction compare to quick service restaurant construction across county and years?
-2. How did restaurant construction fare compare to the other commercial construction in Idaho?
-3. Which county in Idaho spent the most on fast food construction each year?
-4. In that county how did other commercial construction compare?
+This project is not as severe as the two quotes below, but it will give you a taste of pulling various data and file formats together into "tidy" data for visualization and analysis. You will not need to search for data as all the files are listed [here](https://byuistats.github.io/M335/maleheight.html)
+
+1. "Classroom data are like teddy bears and real data are like a grizzly bear with salmon blood dripping out its mouth." - [Jenny Bryan](https://twitter.com/JennyBryan){target="blank"}
+2. "Up to 80% of data analysis is spent on the process of cleaning and preparing data" - [Hadley Wickham](http://jstatsoft.org/v59/i10){target="blank"}
+
+
 
  * [Homework Schedule](../homework_schedule.html)
 
 
 
 
+
+
+### Reading
+
+This reading will help you complete the tasks below.
+
+* o [Hadley on Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf){target='blank'}
+* o [Chapter 18: R for Data Science - Pipes](http://r4ds.had.co.nz/pipes.html){target='blank'}
 
 
 ### Tasks
@@ -35,19 +56,23 @@ ul {
 </style>
 
 
-* [ ] Load the R package from GitHub `devtools::install_github("hathawayj/buildings")` and find out what data is in the package
-* [ ] Use the `ProjectTitle` column to create split out new groups from `Food_Beverage_Service` using the groupings in the code section below
-    * [ ] Your client has a decent memory of the data and commercial construction in Idaho -- Check your code and data to make sure you are not missing or incorrectly assigning groups to the buildings
-    * [ ] Your client expects to provide new data for 2010 and 2011 so your script needs to do the work.  Make sure you don't use Excel to manipulate anything
-* [ ] Create an `.Rmd` file with 2-3 paragraphs summarizing your 4-5 graphics that inform the client questions
+* [ ] Use the correct functions from `library(haven)` , `library(readr)`, and `library(readxl)` to load the 6 data sets listed [here](https://byuistats.github.io/M335/maleheight.html){target="blank"}
+* [ ] Tidy the Worldwide estimates `.xlsx` file
+    * [ ] Make sure the file is in long format with year as a column.  See [here](https://byuistats.github.io/M335/maleheight_tidy.html) for an example of the final format.
+    * [ ] Use the `separate()` and `mutate()` functions to create a decade column.
+* [ ] Import the other five datasets into R and combine them into one tidy dataset.
+    * [ ] This dataset should have the following columns - birth_year, height.cm, height.in, and study_id
+    * [ ] The BLS wage data does not have birth information.  Let's assume it is mid-twentieth century and use 1950.
+    * [ ] See the reading of [Task 7](https://byuistats.github.io/M335/class_tasks/task07_details.html) for how to read in dbf files.
+* [ ] Save the two tidy datasets to your repository - The world country estimates and the row-combined individual measurements.
+* [ ] Make a plot with decade on the x-axis and height in inches on the y-axis with the points from Germany highlighted based on the data from the `.xlsx` file.
+* [ ] Make a small-multiples plot of the five studies to examine the question of height distribution across centuries
+* [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and how those graphics answer the driving question
 * [ ] Compile your `.md` and `.html` file into your git repository
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
 
-### Reading
-
-* o [Regular Expressions in R](http://www.regular-expressions.info/rlanguage.html){target='blank'}
 
 
 
@@ -66,6 +91,15 @@ full_service_names <- restaurants$Restaurant[restaurants$Type %in% c("Pizza","Ca
 # Over 4,000 ADD and NEW construction get assigned to Sit Down Restaurants
 # Under 4,000 sqft NEW construction get assigned to Fast Food
 # all Type == "Food/Beverage Service" that don't get grouped based on the above are called "Unknown"
+
+# Example use case of case_when() function.  Make sure that your ProjectTitle variable has lower case words.
+# With older versions of dplyr .$ProjectTitle is needed in each str_detect.
+    mutate(build_type = case_when(
+      str_detect(ProjectTitle, "alteration") ~ "Alteration",
+      str_detect(ProjectTitle, "addition") ~ "Addition",
+      str_detect(ProjectTitle, "renov") ~ "Alteration",
+      !(str_detect(ProjectTitle, paste(c("alteration", "addition"), collapse = "|"))) ~ "New"
+    ))
 ```
 
 

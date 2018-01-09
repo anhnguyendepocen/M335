@@ -1,21 +1,29 @@
+---
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 8
+  taskname: "task-08"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
 
 
 
-## Task 8: Clean and Reformat (aka tidy) 
+## Task 8: Data to Answer Questions 
 ### Background 
 
-With stock return data from the previous task, we need to tidy this data for the creation of a time series plot.  We want to look at the returns for each six-month period of the year in which the returns were reported.  Your plot should highlight the tighter spread of the DJIA as compared to the other two selection methods (DARTS and PROS).  We need to display a table of the DJIA returns with months on the rows and years in the columns (i.e. "spread" the data).  
+Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your project.  After you find good data sourses make sure to complete the remaining tasks.
 
 
  * [Homework Schedule](../homework_schedule.html)
 
 
-
-
-### Tasks
 
 
 <style>
@@ -29,18 +37,23 @@ ul {
 </style>
 
 
-* [ ] Import the Dart_Expert_Dow_6month_anova data from GitHub (see details in previous task)
-* [ ] The `contestant_period` column is not "tidy" we want to create an `month_end` and `year_end` column from the information it contains
-* [ ] Save your "tidy" data as an `.rds` object
-* [ ] Create a plot that shows the six-month returns by the year in which the returns are collected
-* [ ] Create a table of the DJIA returns with months on the rows and years in the columns ("spread" the data)
-* [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots. Make sure to display the `tidyr` code in your file
-* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
-
-
 ### Reading
 
-* o [Chapter 12: R for Data Science - Tidy Data](http://r4ds.had.co.nz/tidy-data.html){target='blank'}
-* o [tidy R Package functions](https://rpubs.com/bradleyboehmke/data_wrangling){target='blank'}
-* o [openxlsx R package](https://github.com/awalker89/openxlsx){target='blank'}
+This reading will help you complete the tasks below.
+
+* o [Finding data to answer your question](https://www.dataquest.io/blog/free-datasets-for-projects/){target='blank'}
+* o [Find a post from the functional art](http://www.thefunctionalart.com){target='blank'}
+
+
+### Tasks
+
+
+* [ ] Build an interactive document that has links to sources with a description of the quality of each
+    * [ ] Find 3-5 potential data sources (that are free) and document some information about the source
+    * [ ] Build an R script that reads in, formats, and visualizes the data using the principles of exploratory analysis
+    * [ ] Write a short summary of the read in process and some coding secrets you learned
+    * [ ] Include 2-3 quick visualizations that you used to check the quality of your data
+    * [ ] Summarize the limitations of your final compiled data in addressing your original question
+* [ ] After formatting your date identify any follow on or alternate questions that you could use for your project
+
 

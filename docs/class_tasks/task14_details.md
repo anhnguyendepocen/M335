@@ -1,20 +1,32 @@
+---
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 14
+  taskname: "task-14"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
 
 
 
-## Task 14: Does the weather hurt my bottom line? 
+## Task 14: Counting Words and Occurrences 
 ### Background 
 
-A car wash business wants to see if the temperature hurts their bottom line.  They have point of sale data for the months of April, May, June, and July.  You will need to aggregate the data into hourly sales totals and merge the sales data together with the temperature data to provide insight into the relationship between temperature and car wash sales. 
+In 1978 Susan Easton Black [penned an article](https://www.lds.org/ensign/1978/07/discovery?lang=eng){target="blank"} in the Ensign title *Even statistically, he is the dominant figure of the Book of Mormon.* which makes some statistical claims about the Book of Mormon. We are going to use some of our "string" skills to count words and occurrences in the New Testament and in the Book of Mormon.
+
+1. What is the average verse length (number of words) in the New Testament compared to the Book of Mormon?
+2. How often is the word Jesus in the New Testament compared to the Book of Mormon?
+3. How does the word count distribution by verse look for each book in the Book of Mormon?
 
  * [Homework Schedule](../homework_schedule.html)
 
 
-
-
-### Tasks
 
 
 <style>
@@ -28,16 +40,23 @@ ul {
 </style>
 
 
-* [ ] Read in the car wash data `https://byuistats.github.io/M335/data/carwash.csv` and format it for the needs of this task
-    * [ ] Create a new hourly grouping variable using `ceiling_date()` from `install.packages("lubridate")`
-    * [ ] Aggregate the point of sale data into hour sales totals
-* [ ] Use `getWeatherForDate(opt_detailed = TRUE, opt_temperature_columns = FALSE, opt_all_columns = TRUE)` for station `KRXE` from `library(weatherData)` to get the matching temperatures
-    * [ ] Create a new hourly variable that matches your car wash hourly variable
-* [ ] Merge the two datasets together
-* [ ] Create a visualization that provides insight into the relationship between sales and temperature by hour of the day
-
-
 ### Reading
 
-* o [UX magazine: It's About Time](http://uxmag.com/articles/its-about-time){target='blank'}
+This reading will help you complete the tasks below.
+
+* o [Chapter 21: Iteration (21.1-21.5 is all you will need)](http://r4ds.had.co.nz/iteration.html){target='blank'}
+* o [stringi R package and the `stri_stats_latex()` function](https://rdrr.io/rforge/stringi/man/stri_stats_latex.html){target='blank'}
+
+
+### Tasks
+
+
+* [ ] Download the data from http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip
+* [ ] Read in the `.csv` file that was in the zip file and examine the structure of the data
+* [ ] Address questions 1 & 2 using R functions from `install.packages("stringr")` and `install.packages("stringi")`
+    * [ ] Use the `stri_stats_latex()` and `str_locate_all()` functions from each package
+* [ ] Create a visualization that addresses question 3
+* [ ] Create an `.Rmd` file with 1-2 paragraphs and your graphics that answers the three questions
+* [ ] Compile your `.md` and `.html` file into your git repository
+
 

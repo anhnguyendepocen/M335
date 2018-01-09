@@ -1,0 +1,55 @@
+---
+title: "Rauser Hightlights"
+author: "J. Hathaway"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Assembly - The grouping of detected graphical elements
+
+* **reification:** You experience more spatial information than is present in an image.
+* **emergence:** You recognize elements by a complete appearance.  Independent of the dots. (28:00)
+* **pragnanz (pithiness):** We strongly prefer to interpret stimuli as regular, simple, and orderly (28:55)
+    * Law of Closer: We combine points into a picture (29:00)
+    * Law of continuity: We group together objects that follow an established direction (29:12)
+    * Law of similarity: We tend to see elements that are physically similar as part of the same object (30:27)
+       shape, color, degree of curvature
+    * Law of proximity: We tend to group objects that are near each other into a group (32:05)
+* **Weber's Law:**  The "Just Noticeable Difference" is proportional to the size of the initial stimuli (35:24)
+    * 10 vs 20 is easy to discriminate, but 100 vs 110 is much more difficult
+    * White bars and blue bars (36:32)
+
+## My notes from the Presentation
+
+1. pre-attentive processing: Subconscious understanding of graphs.
+2. Only plot time-series if you have sequential data. (3:16)
+3. Bill Cleveland book (4:00)
+    * Detection
+    * Assembly
+    * Estimation
+4. Table look up is a very bad thing (9:47)
+5. Alphabetical sorting in a plot is almost always bad (10:27)
+6. Stacked bar charts are almost always poor.
+7. Just use two charts (I have this problem) (18:51)
+8. Pie charts are always a mistake (19:36)
+9. Comparison is trivial on a common scale (21:44)
+    * "Two table look ups and a slot."
+10. Standardize: Subtract the mean and divide by the standard deviation
+11. The dashboard metaphor is fundamentally flawed (23:45)
+    * This is the argument against software like tableau and maybe Excel's instant plot function
+12. Use two channels to encode information redundantly.  This is often a good choice.
+13. Dodged bar charts are often a bad idea (32:49)
+14. Excel's defaults are pretty bad (34:35)
+15. Weber's law is why grid lines are useful (36:48)
+16. Erase non-data ink, with reason -- Tufte (37:23)
+17. You are best at detecting slope near 45 degrees -- banking to 45 (38:10)
+18. Should I include zero in my scale -- it depends (39:02)
+    * bar charts are comparing lengths. The axis has to start at zero.
+19. Above all else show the variation in data -- Rauser (40:32)
+    
+> **Piecharts are the information visualization equivalent of a roofing hammer to the frontal lobe.**  They have no place in the world of grownups, and occupy the same semiotic space as short pants, a runny nose, and chocolate smeared on one's face. The are as professional as a pair of ---less chaps.  
+   
+**Coda Hale**

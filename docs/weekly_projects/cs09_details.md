@@ -1,19 +1,41 @@
+---
+output:  
+  html_document:  
+    keep_md: true  
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 9
+  casename: "cs-09"
+---
 
 
 
 
 
 
-## Case Study 9: Get your project moving 
+## Case Study 9: Interacting with time 
 ### Background 
 
-This week we will learn new coding techniques and visualization principles.  However, your case study and weekly tasks will provide time to makes sure you have wrapped up the first two tasks of the [semester project](https://byuistats.github.io/M335/project.html).
+Your data science income has ballooned, and you need to find somewhere to invest $25,000 that you have saved over the last year.  You have a savvy investment friend that is kind enough to tell you ten stocks he has been watching during the last year. You will need to visualize the last five years performance to help in the in the conversation with your friend. 
+
+Your friend is going to give you his tickers at the beginning of your half-hour meeting with him (he is a busy friend).  You will need to build an `.Rmd` file that will build a suite of visualizations rapidly for your conversation. You will need a series of stock performance graphics using `library(dygraphs)` and `library(ggplot2)`. In real life, you might use one or the other, but this task is built to help you move from `ts` and `xts` to `tidy` objects for visualization.  
+
+Specifically, in class the Tuesday following this case study you will get 5 - 10 ticker symbols and will need to build visualizations quickly that allows you to answer questions about the stocks in a few seconds.
 
  * [Homework Schedule](../homework_schedule.html)
 
 
 
 
+
+
+### Reading
+
+This reading will help you complete the tasks below.
+
+* o [See task 16](https://byuistats.github.io/M335/class_tasks/task16_details.html){target='blank'}
 
 
 ### Tasks
@@ -30,24 +52,15 @@ ul {
 </style>
 
 
-* [ ] Find 4-5 examples of data-driven answers and write a one-paragraph review of each.
-    * [ ] List 2-3 items that are unique/good
-    * [ ] Identify 1 issue with the each example
-* [ ] Develop a data driven question
-    * [ ] Get feedback from 5-10 people on their interest in your question and summarize this feedback
-    * [ ] Find other examples of people addressing your question
-    * [ ] Present your question to a data scientist to get feedback on the quality of the question and if it can be addressed in 2-months.
-* [ ] Build an interactive document that has links to sources with a description of the quality of each
-    * [ ] Find 3-5 potential data sources (that are free) and document some information about the source
-    * [ ] Build an R script that reads in and formats the data for analysis
-    * [ ] Write a short summary of the read in process and some coding secrets you learned
-    * [ ] Include 2-3 quick visualizations that you used to check the quality of your data
-    * [ ] Summarize the limitations of your final compiled data in addressing your original question
+* [ ] For your coding development use these tickers - `tickers_today <- c("CXW", "F", "GM", "JCP", "KR", "WDC", "NKE","T", "WDAY", "WFC", "WMT")`
+* [ ] Use `library(dygraphs)` to build interactive visualizations of the stock performances over the last 5 years.
+* [ ] Make a `library(ggplot2)` graphic that helps you build a solid question around how an investor would use volume in their trading strategy
+* [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in your visualization
+* [ ] Compile your `.md` and `.html` file into your git repository
+* [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
+* [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
 
-### Reading
-
-* o [Semester Project: Question Generation and Data Acquisition](https://byuistats.github.io/M335/project.html){target='blank'}
 
 
 

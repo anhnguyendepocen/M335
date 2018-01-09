@@ -1,0 +1,121 @@
+---
+title: "Ode to Tidy"
+author: J. Hathaway
+output: 
+  revealjs::revealjs_presentation:
+      lib_dir: externals
+      keep_md: true
+      incremental: true
+      theme: black
+      highlight: espresso
+      center: true
+      code_folding: hide
+      reveal_options:
+        previewLinks: true
+        mouseWheel: true
+        slideNumber: true
+        maxScale: 3
+        margin: 0
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(magrittr)
+library(ggrepel)
+```
+
+# Review
+
+## Class Review Concept
+
+> - Class Task 8: Create a table of the DJIA returns with months on the rows and years in the columns ("spread" the data)
+
+Can a few people write example code to get this done?  Can the others that got it done using `spread()` help those that haven't made it that far?
+
+## Review Timelines and Course Deliverables
+
+> - [Semester Leadership and Project](https://byuistats.github.io/M335/tasklist.html)
+> - [Semester Competencies](https://byuistats.github.io/M335/syllabus.html#grading_scale)
+
+## Case Study 4:  Combining Data
+
+> - [I can clean your data](https://byuistats.github.io/M335/weekly_projects/cs04_details.html)
+
+## Task 8: Why do people make messy columns?!?!
+
+> - [Task Summary](https://byuistats.github.io/M335/class_tasks/task08_details.html)
+> - [Who wants to show their work?](https://github.com/BYUI335)
+
+# Data Wild West
+
+## "Happy families are all alike; every unhappy family is unhappy in its own way." 
+
+**-- Leo Tolstoy**
+
+## "Tidy datasets are all alike, but every messy dataset is messy in its own way." 
+
+**-- Hadley Wickham**
+
+## "There is one glory of the sun, and another glory of the moon, and another glory of the stars: for one star differeth from another star in glory."
+
+**-- Paul (1 Corinthians 15:41)**
+
+## Really. How bad can it get?
+
+> * [R for Data Science Case Study](http://r4ds.had.co.nz/tidy-data.html#case-study)
+> * [Wrangling Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+# Tidy Data and Analysis
+
+## Tidy
+
+**There are three interrelated rules which make a dataset tidy:**
+
+1. Each variable must have its own column.
+2. Each observation must have its own row.
+3. Each value must have its own cell.
+
+## Data Challenge
+
+Read in this building utility data that is not very happy!
+
+* You want to use 
+    * `col_datetime(format = "%m%.%d%.%Y %H:%M")` and 
+    * `col_date(format = "%m%.%d%.%Y")` 
+    when you use `read_csv()`.
+* https://byuistats.github.io/M335/data/building_utility_values.csv
+
+```{r, eval=FALSE}
+util <- read_csv("https://byuistats.github.io/M335/data/building_utility_values.csv")
+```
+
+## First Challenge
+
+> * keep building variables, time variables and water variables
+> * Create a state variable  
+> * separate enddate into year, month, and day (three separate columns) and keep the enddate column
+
+## Second Challenge
+
+Use `library(dplyr)`, `library(tidyr)`, and `library(ggplot2)` to address the following.
+
+> * How many buildings do we have in each state?
+> * Create a graphic that compares the total potable gallons of water used by building over time to check the consistency of the data.
+
+## Third Challenge
+
+> * Find out how many total potable water measurements we have for each building by year?
+> * Match this table format below
+
+|id_number |2004 |2005 |2006 |2007 |
+|:---------|:----|:----|:----|:----|
+|0000OB    |-    |0    |0    |0    |
+|0012ZZ    |-    |0    |9    |3    |
+|......    |...  |...  |..   |...  |
+|1923ZZ    |-    |12   |12   |3    |
+
+## Fourth Challenge
+
+> * Use the `gather()` function so you can make a `facet_grid()` plot with the six different water variables shown for each building.  You will need a variable column with all six water columns gathered into it.
+> * What unique issue do you notice?

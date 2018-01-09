@@ -6,8 +6,8 @@ params:
   dtype: details
   ptitle: TRUE
   pbackground: TRUE
-  number: 1
-  casename: "cs-01"
+  number: 10
+  casename: "cs-10"
 ---
 
 ```{r child="case_details_format.Rmd"}

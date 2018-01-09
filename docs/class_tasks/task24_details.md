@@ -1,3 +1,14 @@
+---
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 24
+  taskname: "task-24"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
@@ -13,9 +24,6 @@ This week we will learn new coding techniques and visualization principles.  How
 
 
 
-### Tasks
-
-
 <style>
 ul {
    color: black;
@@ -27,11 +35,17 @@ ul {
 </style>
 
 
-* [ ] Complete listed reading for class discussion
-
-
 ### Reading
+
+This reading will help you complete the tasks below.
 
 * o [Perceptual Zen:  Learning to See (Overview)](https://www.tableau.com/blog/stephen-few-data-visualization){target='blank'}
 * o [Perceptual Zen:  Learning to See (Presentation)](http://conference.tableausoftware.com/2009/keynotes/stephen-few/Perceptual%20Zen%20Presentation%20-%20Print%20Version.pdf){target='blank'}
+
+
+### Tasks
+
+
+* [ ] Complete listed reading for class discussion
+
 

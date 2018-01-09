@@ -1,0 +1,123 @@
+# Getting Comfortable
+J. Hathaway  
+
+
+
+# Review
+
+
+
+## Case Study 10: Building the past
+> - [Case Study 10](https://byuistats.github.io/M335/weekly_projects/cs10_details.html)
+
+
+
+
+## Task 20: Getting in SHP
+> - [Task 20](https://byuistats.github.io/M335/class_tasks/task20_details.html)
+
+
+
+
+# Questions & Code
+
+## Joseph's Question
+
+Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence
+
+
+```r
+dams_path <- "https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip"
+df <- tempfile(); uf <- tempfile()
+download(dams_path, df, mode = "wb")
+unzip(df, exdir = uf)
+dams <- read_sf(uf)
+file.remove(df); file.remove(uf)
+```
+
+## My old code
+
+Try to write out what this is doing?
+
+
+
+```r
+#library(reshape) # this is needed for old code
+gcam <- read.csv("instructor/facetus_pnnl/USTrellis_Example/CASCaDE_A2_Full.csv", stringsAsFactors = FALSE)
+agcam <- subset(gcam[,c("scenario","region","input","sector",paste("X",seq(2005,2095,by=5),sep=""))],scenario=="GFDL_A2_RGCAM_medium,date=2012-26-11T18:22:24-05:00")
+agcam <- subset(agcam,sector%in%c("resid cooling","resid heating","comm cooling","comm heating"))
+agcam.m <- melt(data=agcam[,-1],id.var=c("region","input","sector"))
+agcam.m$heat.cool <- gsub("resid ","",gsub("comm ","",agcam.m$sector))
+agcam.c.split <- cast(data=agcam.m,region+heat.cool~variable,fun.aggregate=sum,value="value")
+agcam.cooling <- subset(agcam.c.split,heat.cool=="cooling")[,-2]
+agcam.heating <- subset(agcam.c.split,heat.cool=="heating")[,-2]
+agcam.split <- list(heating=agcam.heating,cooling=agcam.cooling)
+agcam.c <- cast(data=agcam.m,region~variable,fun.aggregate=sum,value="value")
+tgcam <- subset(gcam[,c("scenario","region","input","sector","X2005")],scenario=="GFDL_A2_RGCAM_medium,date=2012-26-11T18:22:24-05:00")
+tgcam <- subset(tgcam,sector%in%c("resid cooling","resid heating","comm cooling","comm heating"))
+mtgcam <- cast(data=tgcam,region~sector,value="X2005",fun.aggregate=sum)
+```
+
+## My new code
+
+
+```r
+library(tidyverse)
+
+gcamt <- read_csv("instructor/facetus_pnnl/USTrellis_Example/CASCaDE_A2_Full.csv")
+
+gcamtt <- gcamt %>% 
+  dplyr::filter(scenario=="GFDL_A2_RGCAM_medium,date=2012-26-11T18:22:24-05:00", 
+         sector %in% c("resid cooling","resid heating","comm cooling","comm heating")) %>%
+ # dplyr::mutate(skey = paste(region, input, sector, sep = "_")) %>%
+  dplyr::select(-scenario, - Units) %>%
+  tidyr::gather(key = year, value = energy,`1990`:`2095`, -region, - input, -sector) %>%
+  dplyr::mutate(heat.cool = gsub("resid ","",gsub("comm ","",sector)))
+
+gcam_totals <- gcamtt %>%
+  group_by(region, year, heat.cool, sector) %>%
+  summarise(energy = sum(energy)) %>% 
+  ungroup()
+```
+
+
+# "Big" Data
+
+## Scientists Vs. Analysts
+
+> - Best way to differentiate a data scientist from a data analyst. 
+>    - **Data Analyst:** If my tools and data can't answer a question, then the question doesn't get answered.
+>    - **Data Scientist:** If my tools and data can't answer a question, then I go get better tools and data.
+
+## Leaving your little computer
+
+> - [The science is the idea and data moving](https://www.youtube.com/embed/Ewd5PXgLXlU?start=488)
+> - [Big is different in many ways](https://www.youtube.com/embed/Ewd5PXgLXlU?start=690)
+
+# Maps Vs. Variables
+
+## What is wrong?
+
+"Here, you can take that, that's the final map of the numbers," Trump said, according to Reuters.  "It's pretty good, right? The red is obviously us." [1](http://www.businessinsider.com/trump-2016-electoral-map-reuters-interview-xi-jinping-china-2017-4)
+
+[Trump Map Tweet](../images/trump_map_tweet.png)
+
+## How could we spatially depict the variable of interest?
+
+- [Chloropleth Map](https://en.wikipedia.org/wiki/Choropleth_map)
+- [Cartograms](https://en.wikipedia.org/wiki/Cartogram)
+- [geofacets](https://hafen.github.io/geofacet/)
+
+## geofacet challenge
+
+Use the geofacet package to build a map that depicts the variables important more than the spatial area.
+
+> - Will need to aggregate your data the state level.
+> - Will need to use `install.packages("geofact")` and the `facet_geo()` function.
+
+[data](../data/nytimes_presidential_elections_2016_results_county.csv")
+
+## Checking out some results
+
+- Who has pushed their graphic?
+- [Check these out](http://www.businessinsider.com/2016-election-results-maps-population-adjusted-cartogram-2016-11/#heres-the-basic-electoral-college-map-with-states-that-hillary-clinton-won-in-blue-and-states-that-donald-trump-won-in-red-assuming-that-trumps-narrow-lead-in-michigan-continues-to-hold-1)

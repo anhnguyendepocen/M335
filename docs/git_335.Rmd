@@ -1,0 +1,111 @@
+---
+title: "GitHub, git, and Math 335"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+## Introduction
+
+Version control systems (VCS) allow developers to maintain a record of how their code has changed over time. When used properly, a VCS can help a developer track down the exact point in time when a bug was introduced or fixed, easily undo changes, and collaborate with other developers.
+
+There are many types of version control systems. Some of the more popular ones include CVS, subversion, mercurial, and git. In recent years, git has quickly become the most popular of the group.[^1]
+
+## Git
+
+Git stores files in a type of database called a `repository` or `repo`. Most data science teams that work with git keep a central repository on a server somewhere that everyone on the team can access. This repository stores the files and the history of every change made to each file, including who made the changes and when those changes were made.
+
+Git works with groups of changes called `commits`. A single commit might have many changes associated with it. Those changes might include updates to, existing files, the addition of new files, or the removal of files.
+
+Imagine a developer named Sally who has started a new job for US Robotics. She's told that her first assignment is to fix a bug in the positronic brain code that is causing all of the robots to walk around in circles. She takes the following steps:
+
+### Git Process
+
+---
+
+1. First, Sally will clone the central repository which creates a copy of the repository on her computer.
+
+```
+git clone https://github.com/us-robotics/brain.git
+```
+
+---
+
+2. Next, Sally finds the bug in the PositronicBrain.java file that is causing the odd behavior. She quickly fixes the bug and saves her changes.
+
+---
+
+3. Sally's next step is to add the PositronicBrain.java file to the list of changed files to commit.
+
+```
+git add PositronicBrain.java
+```
+
+---
+
+4. When Sally is done adding files, she will commit those changes, adding a brief message to describe her changes.
+
+```
+git commit -m "Fixed the bug that made robots attack ice cream shops."
+```
+---
+
+5. Now that her changes are finished before she can share them, she must pull any changes her teammates have made from the central repository into her local copy.
+
+```
+git pull
+```
+
+---
+
+6. After making sure that there isn't a conflict between her teammates' changes and her own, she is ready to push her changes up to the central repository.
+
+```
+git push
+```
+
+---
+
+Most of your interactions with a git repository will follow the same six steps that Sally followed. **Note the sequence of the pull and push commands.**
+
+This is critical when working with git: **Always pull before you push.**
+
+### MCS 335 Git Process
+
+As we are getting introduced to git and GitHub, you will be the only one that is working with your repository.  This will make the `git pull` less used in our day-to-day workflow. We will only need to get the workflow for adding files from our local repository to the GitHub central repository.
+
+After you have linked your GitHub repo with your local computer, then the commands on the right side of the below image are the ones that will be used each time you move files to GitHub. Note the command `rm -f .git/index.lock`.  At times this will need to be used when you get an error from Git that your files are locked.  After running the previous command, we can then move through the process as usual[^2]. 
+
+[This video](https://www.youtube.com/watch?v=E2d91v1Twcc) provides a succinct overview of the use of Git with the R-Studio graphical user interface (GUI).
+
+```{r, out.width="400px"}
+
+knitr::include_graphics("images/Git_workflow_diagram.png")
+
+```
+
+## MCS 335 Folder Structure
+
+After syncing your local computer with your class repository that we created for you, please [download this zipfile](data/M335_Tasks.zip) and then move the folder structure into your local repository (folder).  After you have moved the folders and `pushed` to your GitHub repository, your repo should match the folder structure in the following two images.
+
+
+```{r, out.width="800px"}
+
+knitr::include_graphics("images/RepoFolders.PNG")
+
+```
+
+---
+
+```{r, out.width="800px"}
+
+knitr::include_graphics("images/RepoFolders_sub.PNG")
+
+```
+
+
+
+[^1]: This material was lifted from https://byui-cs.github.io/CS246/week-04/prepare.html and https://byui-cs.github.io/CS246/week-04/teach.html
+[^2]: https://stackoverflow.com/questions/9282632/git-index-lock-file-exists-when-i-try-to-commit-but-cannot-delete-the-file

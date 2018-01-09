@@ -1,0 +1,111 @@
+# Understanding Time
+J. Hathaway  
+
+
+
+
+# Review
+
+## Case Study 6: Counting names in scripture
+> - [Case Study 6](https://byuistats.github.io/M335/weekly_projects/cs06_details.html)
+> - [How did we do?](https://github.com/BYUI335/hathaway)
+
+
+
+
+## Case Study 7: It's about time
+> - [Case Study 7](https://byuistats.github.io/M335/weekly_projects/cs07_details.html)
+
+
+
+
+## Task 13:  How is the weather?
+> - [Task 13](https://byuistats.github.io/M335/class_tasks/task13_details.html)
+
+
+
+
+
+# It is about time
+
+## The March Visualization
+
+In his iconic flow map of Napoleon's catastrophic 1812 invasion of Russia, Charles Joseph Minard blends and bends temporal and spatial representations. The path and number of outward-bound soldiers is represented by an initially thick tan ribbon while the dwindling numbers of retreating survivors are represented by a narrowing black band. In this visualization, the time it took to march into Russia is not clear. The only time stamps shown are for the return trip and progressing from right to left. In a sense, time is "bent" to advance the impact of the visual narrative.
+
+> - [The Image](http://uxmag.com/sites/default/files/uploads/whitney-its-about-time/Minard.png)
+
+
+## The Walmart March Visualization
+
+> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
+> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
+
+## The wind march
+
+> - [Current Wind](http://hint.fm/wind/)
+
+## The movie march
+
+What do we like? dislike?
+
+> - [Movie Performance over Time](http://www.nytimes.com/interactive/2008/02/23/movies/20080223_REVENUE_GRAPHIC.html?_r=0)
+
+# Date and Times
+
+## Notes
+
+- Note that when you use date-times in a numeric context (like in a histogram), 1 means 1 second, so a binwidth of 86400 means one day. For dates, 1 means 1 day.
+
+- Hawaii does not observe Daylight Saving Time and neither does Arizona (although the Navajo Nation, in northeastern Arizona, does). For many years, most of Indiana did not observe Daylight Saving Time with the exception of 10 counties. Beginning in 2006, all of Indiana now observes Daylight Saving Time. 
+
+## The Creators
+
+> - ymd(), mdy(), dmy(), ydm()
+> - make_date(), make_datetime()
+
+**Open R-Studio and Convert the following strings to date objects.**
+
+> - "January 21st, 2017"
+> - "2012-01-01"
+> - "March 2016 - 23"
+
+## The Creators (part 2)
+
+
+
+```r
+library(tidyverse)
+date_cols <- tibble(month = c(1, 3, 7), 
+                    day = c(23, 18, 1), 
+                    year = c(2017, 2017, 2016))
+
+# Will this one work in make_date()?
+date_cols <- tibble(month = c("Jaunary", "March", "July"), 
+                    day = c(23, 18, 1), 
+                    year = c(2017, 2017, 2016))
+```
+
+
+## The Formaters
+
+You can pull out individual parts of the date with the accessor functions; year(), month(), mday() (day of the month), yday() (day of the year), wday() (day of the week), hour(), minute(), and second().
+
+**Challenge**
+
+> - Tell me what weekday "March 23, 2016" falls on.
+> - What day of the year was it?
+
+## The Changers (1)
+
+> - floor_date(), 
+> - round_date(), and 
+> - ceiling_date()
+
+## The Changers (2)
+
+**Tackle the Following**
+
+- Add one month to "January 31st".  `jan31 <- ymd("2013-01-31")`
+- Add 27 hours and 15 minutes to "January 31st, 2013 06:35:27" (Use Sys.timezone(location = TRUE) or OlsonNames() to see a list of timezones)
+- https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html
+

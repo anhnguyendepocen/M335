@@ -1,4 +1,12 @@
-# I am a Data Scientist
+---
+title: "I am a Data Scientist"
+output:
+  html_document:
+    toc: true
+    keep_md: true
+    variant: markdown_github  
+  
+---
 
 
 
@@ -42,24 +50,25 @@ ul {
 * [ ] Find 4-5 examples of data-driven answers and write a one-paragraph review of each.
     * [ ] List 2-3 items that are unique/good
     * [ ] Identify 1 issue with the each example
-* [ ] Develop a data driven question
-    * [ ] Get feedback from 5-10 people on their interest in your question and summarize this feedback
+
+--------
+
+* [ ] Develop a few novel questions that data can answer
+    * [ ] Get feedback from 5-10 people on their interest in your questions and summarize this feedback
     * [ ] Find other examples of people addressing your question
     * [ ] Present your question to a data scientist to get feedback on the quality of the question and if it can be addressed in 2-months.
-* [ ] Build an interactive document that has links to sources with a description of the quality of each
-    * [ ] Find 3-5 potential data sources (that are free) and document some information about the source
-    * [ ] Build an R script that reads in and formats the data for analysis
-    * [ ] Write a short summary of the read in process and some coding secrets you learned
-    * [ ] Include 2-3 quick visualizations that you used to check the quality of your data
-    * [ ] Summarize the limitations of your final compiled data in addressing your original question
 
 
 #### Answer Development
 
-* [ ] Present your visualization based analysis that addresses your question
+
+
+* [ ] Build an interactive document that has links to sources with a description of the quality of each
+    * [ ] Find 3-5 potential data sources (that are free) and document some information about the source
+    * [ ] Build an R script that reads in, formats, and visualizes the data using the principles of exploratory analysis
+
+--------
+* [ ] Finalize first draft of your project analysis
     * [ ] Choose your flavor of `.Rmd` for your presentation
     * [ ] Build a stand-alone analysis that helps a reader answer the question at hand with that available data
-    * [ ] Present your analysis to your roommates (or spouse) and update your presentation based on the feedback
-    * [ ] Get feedback from 2-3 fellow classmates on your presentation and update it based on their feedback
-    * [ ] Present your draft presentation to a data scientist to review for clarity
-    * [ ] Present your work in class, at a society meeting, the research and creative works conference, or as a blog post online
+* [ ] Present your visualization based analysis that addresses your question

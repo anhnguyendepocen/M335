@@ -1,3 +1,14 @@
+---
+output:  
+  html_document:  
+    keep_md: true  
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 2
+  casename: "cs-02"
+---
 
 
 
@@ -16,6 +27,14 @@
 
 
 
+### Reading
+
+This reading will help you complete the tasks below.
+
+* o [Chapter 3: R for Data Science - Data visualization](http://r4ds.had.co.nz/data-visualisation.html){target='blank'}
+* o [Hans Rosling: The best stats you've ever seen](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target='blank'}
+
+
 ### Tasks
 
 
@@ -31,10 +50,11 @@ ul {
 
 
 * [ ] Watch the [Hons Rosling video](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target="blank"}
-* [ ] Recreate the two graphics shown below (so they match exactly)
-    * [ ] Build weighted average data set using  `weighted.average()` and GDP with  `mutate()`
+* [ ] Recreate the two graphics shown below using `gapminder` dataset from `library(gapminder)` (get them to match as closely as you can)
     * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the first plot
-    * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the second plot. You will need to use the new data to make the black lines.
+    * [ ] Use  `scale_y_continuous(trans = "sqrt")` to get the correct scale on the y-axis.
+    * [ ] Build weighted average data set using  `weighted.mean()` and GDP with  `mutate()` and `group_by()` that will be the black continent average line on the second plot
+    * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the second plot. You will need to use the new data to make the black lines and dots showing the continent average.
     * [ ] Use `ggsave()` and save each plot as a `.png` with a width of 15 inches
 * [ ] Build an Rmd file that has the following features
     * [ ] The title is the same as listed in the task
@@ -44,11 +64,6 @@ ul {
 * [ ] Save your `.Rmd', `.md`, and the two `.png`'s of the plots into your git repository.
 
 
-### Reading
-
-* o [What do people do with new data](https://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/){target='blank'}
-* o [Chapter 3: R for Data Science - Data visualization](http://r4ds.had.co.nz/data-visualisation.html){target='blank'}
-* o [Hans Rosling: The best stats you've ever seen](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target='blank'}
 
 
 

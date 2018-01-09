@@ -1,23 +1,39 @@
+---
+output:  
+  html_document:  
+    keep_md: true  
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 8
+  casename: "cs-08"
+---
 
 
 
 
 
 
-## Case Study 8: Interacting with time 
+## Case Study 8: It's about time 
 ### Background 
 
-Your data science income has ballooned, and you need to find somewhere to invest $25,000 that you have saved over the last year.  You have a savvy investment friend that is kind enough to tell you ten stocks he has been watching during the last year. You will need to visualize the last five years performance to help in the in the conversation with your friend. 
+We have transaction data for a few businesses that have been in operation for three months.  Each of these companies has come to your investment company for a loan to expand their business. Your boss has asked you to go through the transactions for each business and provide daily, weekly, and monthly gross revenue summaries and comparisons.  Your boss would like a short write up with tables and visualizations that help with the decision of which company did the best over the three month period.  You will also need to provide a short paragraph with your recommendation after building your analysis. 
 
-Your friend is going to give you his tickers at the beginning of your half-hour meeting with him (he is a busy friend).  You will need to build an `.Rmd` file that will build a suite of visualizations rapidly for your conversation. You will need a series of stock performance graphics using `library(dygraphs)` and `library(ggplot2)`. In real life, you might use one or the other, but this task is built to help you move from `ts` and `xts` to `tidy` objects for visualization.  
-
-Specifically, in class the Tuesday following this case study you will get 5 - 10 ticker symbols and will need to build visualizations quickly that allows you to answer questions about the stocks in a few seconds.
+In our course we are only looking at understanding and visualizing recorded time series data.  If you would like to learn more about forecasting I would recommend [Forecasting: Principles and Practice](https://www.otexts.org/fpp2/){target="blank"} and for a quick introduction [see here](https://afit-r.github.io/ts_exploration){target="blank"}
 
  * [Homework Schedule](../homework_schedule.html)
 
 
 
 
+
+
+### Reading
+
+This reading will help you complete the tasks below.
+
+* o [lubridate R package](http://lubridate.tidyverse.org/){target='blank'}
 
 
 ### Tasks
@@ -34,18 +50,19 @@ ul {
 </style>
 
 
-* [ ] For your coding development use these tickers - `tickers_today <- c("CXW", "F", "GM", "JCP", "KR", "WDC", "NKE","T", "WDAY", "WFC", "WMT")`
-* [ ] Use `library(dygraphs)` to build interactive visualizations of the stock performances over the last 5 years.
-* [ ] Make a `library(ggplot2)` graphic that helps you build a solid question around how an investor would use volume in their trading strategy
-* [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in your visualization
+* [ ] Read in the data from `https://byuistats.github.io/M335/data/sales.csv` and format it for visualization and analysis
+    * [ ] The data are for businesses in the mountain time zone make sure you read in times correctly
+    * [ ] This is point of sale (pos) data, so you will need to use `library(lubridate)` to create the correct time aggregations
+    * [ ] Check the data for any inaccuracies
+* [ ] Help your boss understand which business is the best investment through visualizations
+    * [ ] Provide an understanding and recommendation for hours of operation
+    * [ ] We don't have employee numbers, but sales traffic can help.  Provide some visualizations on customer traffic
+    * [ ] Provide a final comparison of the six companies and a final recommendation
 * [ ] Compile your `.md` and `.html` file into your git repository
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
 
-### Reading
-
-* o [See task 16](https://byuistats.github.io/M335/class_tasks/task16_details.html){target='blank'}
 
 
 

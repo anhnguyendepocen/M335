@@ -130,7 +130,7 @@ nc$geometry
 #> MULTIPOLYGON(((-77.2176666259766 36.24098205566...
 ```
 
-Use `plot()` to show the geometry. You'll learn how to use ggplot2 for more complex data visualisations in the next unit.
+Use `plot()` to show the geometry. You'll learn how to use ggplot2 for more complex data visualisations later.
 
 ``` r
 plot(nc$geometry)
@@ -157,7 +157,7 @@ nz_sf %>%
 #### Geometry
 
 
-The geometry column is a list-column. You'll learn more about list-columns later in the course, but in brief, they're the richest and most complex type of column because a list can contain any other data structure, including other lists.
+The geometry column is a list-column. In brief, they're the richest and most complex type of column because a list can contain any other data structure, including other lists.
 
 It's worthwhile to pull out one piece so you can see what's going on under the hood:
 
@@ -174,9 +174,9 @@ plot(nc$geometry[[1]])
 
 Note the use of `[[` to extract a single element, here, the first polygon.
 
-This is list of lists of matrices:
+This is a list of lists of matrices:
 
--   The top-level list has one element for each "landmass" in the county. We can find a more interesting case:
+-   The top-level list has one element for each "landmass" in the county. However, we can find a more interesting case:
 
     ``` r
     n <- nc$geometry %>% map_int(length)
@@ -205,14 +205,14 @@ This is list of lists of matrices:
 
     This is a county made up of three non-contiguous pieces.
 
--   The second-level list is not used in this dataset, but is needed when you have a landmass that contains an lake. (Or a landmass that contains an lake which has an island which has a pond).
+-   The second-level list is not used in this dataset, but is needed when you have a landmass that contains a lake. (Or a landmass that contains a lake which has an island which has a pond).
 
 -   Each row of the matrix gives the location of a point on the boundary of the polygon.
 
 #### Coordinate system
 
 
-To correctly plot spatial data, you need know exactly what the numeric positions mean, i.e. what are they in reference to? This is called the **coordinate reference system** or CRS. Often spatial data is described in terms of latitude and longitude. You can check this with `st_is_longlat()`:
+To correctly plot spatial data, you need to know exactly what the numeric positions mean, i.e. what are they in reference to? This is called the **coordinate reference system** or CRS. Often spatial data is described in terms of latitude and longitude. You can check this with `st_is_longlat()`:
 
 ``` r
 st_is_longlat(nc)
@@ -221,7 +221,7 @@ st_is_longlat(nc)
 
 You might think that if you know the latitude and longitude of a point, you know exactly where it is on the Earth. However, things are not quite so simple, because latitude and longitude are based on the assumption that the Earth is a smooth ellipsoid, which is not true. Because different approximations work better in differently places, most countries have their own approximation: this is called the **geodetic datum**, or just **datum** for short.
 
-Take two minutes and watch this simple explanation of the datum: <https://www.youtube.com/watch?v=xKGlMp__jog>
+Take two minutes and watch this [simple explanation of the datum](https://www.youtube.com/watch?v=xKGlMp__jog): <https://www.youtube.com/watch?v=xKGlMp__jog>
 
 To get the datum and other coordinate system metadata, use `st_crs()`:
 

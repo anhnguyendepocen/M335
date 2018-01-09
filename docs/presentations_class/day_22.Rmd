@@ -1,0 +1,160 @@
+---
+title: "Big Data, Data Science, and Tools"
+author: J. Hathaway
+output: 
+  revealjs::revealjs_presentation:
+      lib_dir: externals
+      keep_md: true
+      incremental: true
+      theme: black
+      highlight: espresso
+      center: true
+      code_folding: hide
+      reveal_options:
+        previewLinks: true
+        mouseWheel: true
+        slideNumber: true
+        maxScale: 3
+        margin: 0
+params:
+  day: 22
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(magrittr)
+library(ggrepel)
+library(knitr)
+library(stringr)
+
+invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
+read_chunk("temp")
+
+
+# case study completed
+cso <- ceiling(params$day/2) - 1
+csn <- ceiling(params$day/2) 
+
+casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
+casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
+
+link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
+link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
+
+# How did we do?
+hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
+
+# current task
+# 
+taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
+link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
+```
+
+# Review
+
+```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
+# For case study due next Saturday
+```
+
+`r title.text`
+`r link_new`
+
+
+```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
+# For current task that is due
+```
+
+`r title.text`
+`r link_task`
+
+
+```{r stuff, echo=FALSE}
+unlink("temp")
+```
+
+
+# Big Data Readings
+
+## The Material
+
+> - Questions about [Hadoop](https://www.youtube.com/watch?v=4DgTLaFNQq0&feature=youtu.be)?
+> - Questions about [Spark](https://mapr.com/blog/spark-101-what-it-what-it-does-and-why-it-matters/)?
+> - [Cleveland & Hafen Paper](http://onlinelibrary.wiley.com/doi/10.1002/sam.11242/epdf)
+
+## Cleveland & Hafen Discussion
+
+Let's move the tables around and have this conversation "book group" style.
+
+# Using TrelliscopeJS
+
+## Looking at an Example
+
+[Housing Prices](http://hafen.github.io/trelliscopejs-demo/housing/)
+
+## Loading Packages
+
+```{r c1, eval=FALSE}
+
+# devtools::install_github("hathawayj/buildings")
+# library(buildings)
+# devtools::install_github("hafen/trelliscopejs")
+library(trelliscopejs)
+library(tidyverse)
+data(permits, package="buildings")
+```
+## Nesting Data
+
+```{r c2, eval=FALSE}
+
+#by state and county
+
+by_stco <- permits %>%
+  filter(StateAbbr %in% c("WA", "ID", "UT"), variable == "Single Family") %>%
+  group_by(StateAbbr, countyname) %>%
+  nest()
+
+```
+
+## Adding Plots
+
+```{r c3, eval=FALSE}
+by_stco <- by_stco %>% 
+  mutate(
+    panel = map_plot(data,
+                     ~ ggplot(data = .x, aes(x = year, y = value)) +
+                       geom_point() +
+                       geom_line(color = "grey") +
+                       #xlim(2000, 2011) + 
+                       #ylim(0, 1250) +
+                       theme_bw()
+    ))
+```
+
+## Making the Magic
+
+```{r c4, eval=FALSE}
+
+# plot it
+my_display <- tempfile()
+by_stco %>%
+  trelliscope("permits", nrow = 2, ncol = 7, 
+              path = my_display, thumb = TRUE, width = 500)
+
+
+
+```
+
+# Spark and Big Data
+
+## Using R with Spark
+
+> - [Try out Sparklyr: R interface to Apache Spark](https://spark.rstudio.com)
+>    - [Nice Rstudio blog post](https://blog.rstudio.com/2016/09/27/sparklyr-r-interface-for-apache-spark/)
+>    - [Another example from H20](https://github.com/trestletech/user2016-sparklyr)
+>    - [Build Histogram from Distributed data](https://github.com/rstudio/sparkDemos/blob/master/prod/presentations/cloudera/sqlvis_histogram.R)
+
+

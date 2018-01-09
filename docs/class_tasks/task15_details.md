@@ -1,20 +1,31 @@
+---
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 15
+  taskname: "task-15"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
 
 
 
-## Task 15: My investment is better than yours 
+## Task 15:  How is the weather? 
 ### Background 
 
-The stock market is overflowing with data.  There are many packages in R that allow us to get quick access to information on publicly traded companies.  Imagine that you and a friend each purchased about $1,000 of stock in three different stocks at the start of October last year, and you want to compare your performance.  Use the stock shares purchased and share prices to demonstrate how each of you fared assuming that did not change your allocations.
+Use the `library(riem)` package that is described [here](https://github.com/ropensci/riem){target="blank"} and get the month of June for 2015, 2016, and 2017. You would use `riem_measures(station = "RXE", date_start = "2015-06-01", date_end = "2017-07-01")` for station `RXE`.  Once you have downloaded and formated the data, make sure to save it to your analysis folder as it will take a minute or two to download each time.   We have a few coding tasks to help us get used to using dates. Create a visualization for each question.
+
+1. What day of the week had the highest temperature reading?
+2. What day of the week had the lowest temperature at 2 pm?
 
  * [Homework Schedule](../homework_schedule.html)
 
 
-
-
-### Tasks
 
 
 <style>
@@ -28,15 +39,19 @@ ul {
 </style>
 
 
-* [ ] List the three stocks that your friend picks and the three that you pick
-* [ ] Pull the price performance data using `library(tidyquants)` or `library(quantmod)`
-* [ ] Build a visualization that shows who is winning each day of the competition
-* [ ] In the previous visualization or with another visualization show which stock is helping the winner the competition
-* [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in the data presentation
-* [ ] Compile your `.md` and `.html` file into your git repository
-
-
 ### Reading
 
-* o [tidyquants R package](https://github.com/business-science/tidyquant){target='blank'}
+This reading will help you complete the tasks below.
+
+* o [Chapter 16: R for Data Science - Dates and Times](http://r4ds.had.co.nz/dates-and-times.html){target='blank'}
+* o [Time Series Visualization Gallery](https://vcg.informatik.uni-rostock.de/~ct/timeviz/timeviz.html){target='blank'}
+
+
+### Tasks
+
+
+* [ ] Create a `.png` image for each question
+* [ ] Save your script and `.png` files to GitHub
+* [ ] Be prepared to share your visualization and why your reasoning for how the visualization answers the question
+
 

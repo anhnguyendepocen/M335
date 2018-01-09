@@ -18,6 +18,7 @@ output:
 
 **Additional Links**
 
+* o [Chapter 10: Happy Git and Github for the useR - Version Control](http://happygitwithr.com/push-pull-github.html)
 * o [git](http://nyuccl.org/pages/GitTutorial/){target="blank"}
 * o [githug](https://github.com/jennybc/githug){target="blank"}
 * o [Git for R users](http://haven.tidyverse.org/){target="blank"}

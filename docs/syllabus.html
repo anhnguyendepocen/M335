@@ -23,9 +23,17 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -34,10 +42,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -325,6 +335,9 @@ div.tocify {
     <li>
       <a href="tasklist.html">Semester Task List</a>
     </li>
+    <li>
+      <a href="readings.html">Weekly Reading List</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -375,6 +388,13 @@ div.tocify {
       <a href="http://datathink.io">DataThink.io</a>
     </li>
   </ul>
+</li>
+<li>
+  <a href="visitme.html">
+    <span class="fa fa-calendar"></span>
+     
+    Visit Me
+  </a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -494,7 +514,7 @@ D. Class activities<br />
 <h4>Specifications Grading</h4>
 <p>As we team, teacher and student, we have a challenge to become more in three months! We have worked hard to identify the specifications needed for a data visualization specialist (as an undergraduate). My goal is to align your grade with the skill specification you have mastered. In other words, the grade you want will determine how much work you will do. Individual tasks in the class will not be traditionally graded. If your work meets the specified criteria you will get full credit and only then (there is no partial credit on tasks).</p>
 <p>In a specifications-grading system all tasks are evaluated on a high-standards pass/fail basis using detailed checklists of task requirements and expectations<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>. Letter grades are earned by passing marks on a set of tasks. This system provides for a variety of choice and is closer to how learning, and work, is done in the real world. It will be easy for us to tell if work is complete, done in good faith, and consistent with the requirements.</p>
-<p>Here are our guiding learning objectives. Click on each to see an example task that we could complete this semester.</p>
+<p>We have five concepts that guide our learning objectives. Click on each to see an example task that we could complete this semester.</p>
 <ol style="list-style-type: decimal">
 <li><a href="convert.html">Convert data from varied formats or structures to a desirable format for analysis and visualization.</a></li>
 <li><a href="clean.html">Clean, transform and merge data attributes/variables appropriately.</a></li>
@@ -514,17 +534,184 @@ D. Class activities<br />
 <li>Submit this material electronically and in person during our exit interview</li>
 </ol>
 </div>
-<div id="grading-scale" class="section level4">
-<h4>Grading Scale</h4>
+<div id="competency-scale" class="section level4">
+<h4>Competency Scale</h4>
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="text-align:center;font-weight: bold;color: white;background-color: black;">
+Grade
+</th>
+<th style="text-align:center;font-weight: bold;color: white;background-color: black;">
+Class Tasks
+</th>
+<th style="text-align:center;font-weight: bold;color: white;background-color: black;">
+Case Studies
+</th>
+<th style="text-align:center;font-weight: bold;color: white;background-color: black;">
+Semester Project
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="2">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Leader</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1">
+A
+</td>
+<td style="text-align:center;">
+24
+</td>
+<td style="text-align:center;">
+13
+</td>
+<td style="text-align:center;">
+yes
+</td>
+</tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1">
+A-
+</td>
+<td style="text-align:center;">
+24
+</td>
+<td style="text-align:center;">
+13
+</td>
+<td style="text-align:center;">
+yes
+</td>
+</tr>
+<tr grouplength="3">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Supporter</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1">
+B+
+</td>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+yes
+</td>
+</tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1">
+B
+</td>
+<td style="text-align:center;">
+18
+</td>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+no
+</td>
+</tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1">
+B-
+</td>
+<td style="text-align:center;">
+18
+</td>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+no
+</td>
+</tr>
+<tr grouplength="2">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>Wannabe</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1">
+C
+</td>
+<td style="text-align:center;">
+15
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+no
+</td>
+</tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1">
+C-
+</td>
+<td style="text-align:center;">
+15
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+no
+</td>
+</tr>
+<tr grouplength="1">
+<td colspan="4" style="border-bottom: 1px solid;">
+<strong>None</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:center; padding-left: 2em;" indentlevel="1">
+D
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+no
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>1</sup> See <a href="tasklist.html">the tasklist</a> for a description work related to leader, supporter, wannabe
+</td>
+</tr>
+</tfoot>
+</table>
+<p>In all grade levels above a C-, case study 13 must be completed.</p>
 <ul>
-<li><strong>A:</strong> Complete all class tasks, case studies, and all semester deliverables</li>
-<li><strong>A-:</strong> Complete at least 20 class tasks, all case studies, and all semester deliverables</li>
-<li><strong>B+:</strong> Complete at least 20 class tasks, at least 10 case studies, and all semester deliverables</li>
-<li><strong>B-:</strong> Complete at least 18 class tasks, at least 8 case studies, at least 8 leadership completions, and the semester deliverables excluding the semester project.</li>
-<li><strong>C:</strong> Complete at least 15 class tasks, at least 6 case studies, at least 4 leadership completions, and the semester deliverables excluding the semester project.</li>
-<li><strong>C-:</strong> Complete at least 15 class tasks and at least 6 case studies</li>
+<li><strong>A:</strong> Complete at least 24 class tasks, 13 case studies, the semester project, and the data science leader task</li>
+<li><strong>A-:</strong> Complete at least 24 class tasks, 13 case studies, the semester project, and the data science leader task</li>
+<li><strong>B+:</strong> Complete at least 20 class tasks, at least 8 case studies, at least 8 leadership completions, and all other semester deliverables</li>
+<li><strong>B:</strong> Complete at least 18 class tasks, at least 8 case studies, at least 8 leadership completions, and all semester deliverables excluding the semester project.</li>
+<li><strong>B-:</strong> Complete at least 18 class tasks, at least 6 case studies, at least 8 leadership completions, and the semester deliverables excluding the semester project.</li>
+<li><strong>C:</strong> Complete at least 15 class tasks, at least 5 case studies, at least 4 leadership completions, and the semester deliverables excluding the semester project.</li>
+<li><strong>C-:</strong> Complete at least 15 class tasks and at least 5 case studies</li>
 <li><strong>D:</strong> Complete at least 5 class tasks and at least 5 case studies</li>
-<li><strong>F:</strong> Anthing else</li>
+<li><strong>F:</strong> Anything else</li>
+</ul>
+<p><strong>Notes</strong></p>
+<ul>
+<li>The definitive word is “complete”. Starting them or getting them almost done is not completing.<br />
+</li>
+<li>Those that are data science majors must complete a semester project to get anything higher than a B-.</li>
 </ul>
 </div>
 </div>

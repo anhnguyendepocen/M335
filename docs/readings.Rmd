@@ -1,0 +1,80 @@
+---
+title: "Weekly Readings"
+params:
+  dtype: background
+  pbackground: FALSE
+  ptitle: FALSE
+output:
+  html_document:
+    keep_md: yes
+    toc_float:
+      collapsed: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+md_link <- mean  # junk line to stop coding error from showing up.  Is overwritten by source next line.
+source("../scripts/md_bullets.R")
+library(readxl)
+library(dplyr)
+library(stringr)
+
+readings <- read_excel(path = "../tasks_reading.xlsx", sheet = "Reading")
+#md_link(readings, type = list("Type" = "case"), group = list("Number" = params$number))
+
+number = 1 # case study starting number
+dnumber = 1
+
+fname = paste("cs", str_pad(number, 2, "left", "0" ) , "_details.html", sep = "")
+text <- paste("#### [Case Study ", number, "](", file.path("weekly_projects", fname), ")\n\n", sep = "")
+
+text_c <- paste("#### Week ", dnumber, "\n\n", sep = "")
+
+
+
+```
+
+
+```{r, results="asis"}
+cat("
+<style>
+ul {
+   color: black;
+   list-style-type: none;
+   list-style-position: outside;
+
+}
+
+</style>
+")
+```
+
+
+
+```{r results="asis"}
+class_reading <- expression({
+  # write current task header and link then list tasks
+  cat(text_c)
+  cat("##### Class Tasks Reading\n")
+  md_link(readings, group = list("Number" = dnumber*2-1), type = list("Type" = "task"))
+  cat("\n")
+  md_link(readings, group = list("Number" = dnumber*2), type = list("Type" = "task"))
+  cat("\n")
+  cat("\n##### Case Study Reading\n")
+
+  md_link(readings, group = list("Number" = dnumber), type = list("Type" = "case"))
+  
+    cat("\n\n")
+
+  # Step to the next task and header creation
+  dnumber <- dnumber + 1
+  
+  text_c <- paste("#### Week ", dnumber, "\n\n", sep = "")
+  
+})
+
+for(i in 1:12){
+eval(class_reading)  
+}
+
+```

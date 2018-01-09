@@ -1,3 +1,14 @@
+---
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 21
+  taskname: "task-21"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
@@ -15,9 +26,6 @@ Choose from [Task 19](https://byuistats.github.io/M335/class_tasks/task19_detail
 
 
 
-### Tasks
-
-
 <style>
 ul {
    color: black;
@@ -29,10 +37,9 @@ ul {
 </style>
 
 
-* [ ] See tasks for [Task 19](https://byuistats.github.io/M335/class_tasks/task19_details.html) or [Task 20](https://byuistats.github.io/M335/class_tasks/task20_details.html)
-
-
 ### Reading
+
+This reading will help you complete the tasks below.
 
 * o [Leaflet for R: Introduction](http://rstudio.github.io/leaflet/){target='blank'}
 * o [Leaflet for R: The Map Widget](http://rstudio.github.io/leaflet/map_widget.html){target='blank'}
@@ -41,4 +48,11 @@ ul {
 * o [Leaflet for R: Popups and Labels](http://rstudio.github.io/leaflet/popups.html){target='blank'}
 * o [Leaflet for R: Lines and Shapes](http://rstudio.github.io/leaflet/shapes.html){target='blank'}
 * o [Leaflet for R: Colors](http://rstudio.github.io/leaflet/colors.html){target='blank'}
+
+
+### Tasks
+
+
+* [ ] See tasks for [Task 19](https://byuistats.github.io/M335/class_tasks/task19_details.html) or [Task 20](https://byuistats.github.io/M335/class_tasks/task20_details.html)
+
 

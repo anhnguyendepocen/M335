@@ -1,0 +1,115 @@
+---
+title: "Understanding Time"
+author: J. Hathaway
+output: 
+  revealjs::revealjs_presentation:
+      lib_dir: externals
+      keep_md: true
+      incremental: true
+      theme: black
+      highlight: espresso
+      center: true
+      code_folding: hide
+      reveal_options:
+        previewLinks: true
+        mouseWheel: true
+        slideNumber: true
+        maxScale: 3
+        margin: 0
+params:
+  day: 14
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(magrittr)
+library(ggrepel)
+library(knitr)
+library(stringr)
+
+invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
+read_chunk("temp")
+
+
+# case study completed
+cso <- ceiling(params$day/2) - 1
+csn <- ceiling(params$day/2) 
+
+casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
+casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
+
+link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
+link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
+
+# How did we do?
+hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
+
+# current task
+# 
+taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
+link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
+```
+
+# Review
+
+```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
+# For case study due next Saturday
+```
+
+`r title.text`
+`r link_new`
+
+
+```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
+# For current task that is due
+```
+
+`r title.text`
+`r link_task`
+
+
+```{r stuff, echo=FALSE}
+unlink("temp")
+```
+
+
+# Class Activity
+
+
+## The Walmart March Visualization
+
+> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
+> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
+
+
+## The Walmart Challenge
+
+Ignoring the color.  Let's recreate this graphic.  
+
+> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
+> - [Walmart Openings csv](https://byuistats.github.io/M335/data/Walmart_store_openings.csv)
+
+# Making new R package friends
+
+## The challenge
+
+1. Pick one of the R packages on the following slide
+2. Read material on the R package
+3. Build a working script that demonstrates the use of the R package.
+4. Write up a short presentation on the package.
+
+## The packages
+
+- [rio: The double click of data import](https://cran.r-project.org/web/packages/rio/vignettes/rio.html#data_import)
+- [janitor: making the cleaning easy](https://github.com/sfirke/janitor)
+- [tidytext: helps for text mining](https://github.com/juliasilge/tidytext)
+- [fst: yes it is fast](http://www.fstpackage.org/)
+- [glue: why should we paste](https://github.com/tidyverse/glue)
+- [reinstallr: getting your packages back](https://github.com/calligross/reinstallr)
+- [multidplyr: we need more than one dplyr?](http://www.business-science.io/code-tools/2016/12/18/multidplyr.html)
+
+

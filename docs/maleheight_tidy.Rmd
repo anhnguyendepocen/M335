@@ -1,0 +1,32 @@
+---
+title: "tidy_case_study.Rmd"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Example of the Tidy Excel File after formatting
+
+| Code|country                                  |century |decade |year | height.cm| year_decade| height.in|
+|----:|:----------------------------------------|:-------|:------|:----|---------:|-----------:|---------:|
+|   56|Belgium                                  |18      |1      |0    |     163.1|        1810|  64.21260|
+|  280|Federal Republic of Germany (until 1990) |18      |1      |0    |     167.8|        1810|  66.06299|
+|  250|France                                   |18      |1      |0    |     163.9|        1810|  64.52756|
+|  276|Germany                                  |18      |1      |0    |     167.8|        1810|  66.06299|
+|  528|Netherlands                              |18      |1      |0    |     166.0|        1810|  65.35433|
+|  246|Finland                                  |18      |1      |0    |     171.9|        1810|  67.67717|
+
+## Code for Combining Individual Measurements
+
+
+```{r, eval=FALSE}
+# these should be the only four columns that you keep from each dataset.
+select(birth_year, height.in, height.cm, study)
+#
+# then use the follwing to combine your five individual measures into one dataset.
+alld <- bind_rows(b19, g18, g19, us20, w20)
+```
+
+  

@@ -15,6 +15,20 @@ params:
 ```
 
 
+------
+
+**Additional Information**
+   
+* [Hadley dplyr motivation](http://datascience.la/hadley-wickham-presents-dplyr-at-user-2014/){target="blank"}   
+* [Hadley Introduces dplyr](http://datascience.la/hadley-wickhams-dplyr-tutorial-at-user-2014-part-1/){target="blank"}   
+* [Hadley dplyr part 2](https://www.youtube.com/watch?v=Ue08LVuk790&t=0s){target="blank"}   
+
+---------
+
+I made up databending.  It does not mean that we make up data or that we alter it.  Like [airbenders](http://avatar.wikia.com/wiki/Airbending){target="blank"} we control our data to answer the questions we need answered.  The key to databending is flexibility and finding and following the path of least resistence.
+
+
+
 
 
 

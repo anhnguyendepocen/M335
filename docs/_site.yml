@@ -24,6 +24,8 @@ navbar:
           href: backgrounds.html
         - text: "Semester Task List"
           href: tasklist.html
+        - text: "Weekly Reading List"
+          href: readings.html
     - text: "Class Meeting"
       icon: fa-university
       href: class.html
@@ -50,7 +52,9 @@ navbar:
           href: https://cpsievert.github.io/plotly_book/
         - text: "DataThink.io"
           href: http://datathink.io
-
+    - text: "Visit Me"
+      icon: fa-calendar
+      href: visitme.html
 
 output_dir: '.'
 output:
@@ -62,6 +66,8 @@ output:
     toc_depth: 5
     toc_float:
       collapsed: false
+    includes:
+      in_header: header.html
 
 
 

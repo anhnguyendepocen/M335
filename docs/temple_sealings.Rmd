@@ -1,0 +1,63 @@
+---
+title: "Temple Data Sealings"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+You can get the `.Rmd` file this [this link](temple_sealings.Rmd)
+
+# Loading my R packages
+
+```{r, packages}
+#install.packages('htmltab')
+# https://cran.r-project.org/web/packages/htmltab/vignettes/htmltab.html
+library(htmltab)
+library(reshape2)
+library(tidyverse)
+library(readr)
+library(purrr)
+library(lubridate)
+library(ggrepel)
+library(downloader)
+
+# has functions kml_coordinate, kml_points, kml_polygons
+source("https://gist.githubusercontent.com/briatte/18a4d543d1ccca194b2a03ac512be2b4/raw/5cd241ab780a33ec9a3ae6297a48f9035cda811d/get_points.r")
+
+```
+
+# Reading in raw data
+
+```{r, loadingdata}
+#kml file download http://ldschurchtemples.org/maps/
+bob <- tempfile()
+download("http://ldschurchtemples.org/maps/downloads/kml.php", bob)
+temple.locs <- kml_points(bob) %>% select(name, longitude, latitude)
+
+url_size <- "http://ldschurchtemples.org/statistics/dimensions/"
+url_time <- "http://ldschurchtemples.org/statistics/timelines/"
+
+dimensions <- htmltab(doc = url_size, 2) %>% as.tibble() 
+
+times_AnGrbr <- htmltab(doc = url_time, 3) %>% select(-Duration) %>% as.tibble() 
+times_GrbrDed <- htmltab(doc = url_time, 4) %>% select(-Duration) %>% as.tibble()
+```
+
+The [ldschurchtemples.org](http://ldschurchtemples.org/) has some nice data on LDS temples.  We will be using the following webpages to get location, size and timelines.
+
+* [location](http://ldschurchtemples.org/maps/){target="blank"}
+* [dimensions](http://ldschurchtemples.org/statistics/dimensions/){target="blank"}
+* [timelines](http://ldschurchtemples.org/statistics/timelines/){target="blank"}
+
+# Your Goal
+
+Merge all four data sets into a table that looks like the table below.  **Note that this activity is teaching how to merge data sets and check for poor merges.**
+
+
+|Temple                    |  longitude|   latitude|OrdinanceRooms |SealingRooms | SquareFootage|Announced  |Ground.Broken |Dedicated  |
+|:-------------------------|----------:|----------:|:--------------|:------------|-------------:|:----------|:-------------|:----------|
+|Aba Nigeria Temple        |   7.356719|   5.147644|2              |2            |         11500|2000-04-02 |2002-02-23    |2005-08-07 |
+|Accra Ghana Temple        |  -0.193706|   5.567490|2              |2            |         17500|1998-02-16 |2001-11-16    |2004-01-11 |
+|Adelaide Australia Temple | 138.635002| -34.892473|2              |2            |         10700|1999-03-17 |1999-05-29    |2000-06-15 |

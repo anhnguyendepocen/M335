@@ -25,17 +25,18 @@ It looks like the University of Tubingen changes the download links at times.  I
 
 The first file is under the Worldwide estimates of height by country and birth decade. 
 
-* [XLSX data file](http://www.uni-tuebingen.de/index.php?eID=tx_nawsecuredl&u=0&g=0&t=1504970796&hash=42d0b1d5e91231c2c62abc5b7924ab97de866839&file=fileadmin/Uni_Tuebingen/Fakultaeten/WiSo/Wiwi/Uploads/Lehrstuehle/Prof._Baten/Height.xlsx)
+* [XLSX data file](data/heights/Height.xlsx)
 
 Three other files should be used for this case study from their website.
 
-* [German male conscripts in Bavaria, 19th centery: Stata format](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/Fakultaeten/WiSo/Wiwi/Uploads/Schulung/Schulung5/Data_hub__Height/germanconscr.dta)
-* [Heights of bavarian male conscripts, 19th century: Stata format](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/Fakultaeten/WiSo/Wiwi/Uploads/Schulung/Schulung5/Data_hub__Height/germanprison.dta)
-* [Heights of south-east and south-west german soldiers born in the 18th century: DBF format ](http://www.uni-tuebingen.de/index.php?eID=tx_nawsecuredl&u=0&g=0&t=1504970796&hash=a6b284b121a6218c1c747fa885e28bf768255cb8&file=fileadmin/Uni_Tuebingen/Fakultaeten/WiSo/Wiwi/Uploads/Schulung/Schulung5/Data_hub__Height/Heights_south-east.zip)
+* [German male conscripts in Bavaria, 19th centery: Stata format](data/heights/germanconscr.dta)
+* [Heights of bavarian male conscripts, 19th century: Stata format](data/heights/germanprison.dta)
+* [Heights of south-east and south-west german soldiers born in the 18th century: DBF format ](data/heights/Heights_south-east.zip)
 
 ### R for Data Science Data
 
 * [BLS Wage and Height Data: csv format](https://github.com/hadley/r4ds/raw/master/data/heights.csv)
+* Let's assume that these are mid 20th century births. Use 1950 as the birth year.
 
 ### National Survey (Wisconsin)
 

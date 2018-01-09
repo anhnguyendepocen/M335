@@ -1,21 +1,28 @@
+---
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 5
+  taskname: "task-05"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
 
 
 
-## Task 5: World Data Investigation 
+## Task 5: Making bad graphics 
 ### Background 
 
-The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.
-
+In `library(ggplot2)` there is a `diamonds` dataset that shows features of diamonds.  Your brother is about to go out and buy a diamond ring for his fiancee and needs some advice on what type of diamond to purchase. He knows that karat has a strong relationship with price.  He wants to know what other elements of the diamond he could sacrifice to maximize the karat size for a budget around $2,000. Some interesting details on diamonds can be found [here](https://www.americangemsociety.org/page/4cs){target="blank"}.
 
  * [Homework Schedule](../homework_schedule.html)
 
 
-
-
-### Tasks
 
 
 <style>
@@ -29,18 +36,20 @@ ul {
 </style>
 
 
-* [ ] Review the [Our World in Data](https://ourworldindata.org/){target="blank"} webpage and find a graphic that interests you.
-    * [ ] Recreate that graphic in R after downloading the data from their website
-    * [ ] Find some interesting features on your graphic. Then do some reasearch online to find out the cause of that feature for an annotation that you can add to your plot.
-    * [ ] Use a [clean way](http://ggplot2.tidyverse.org/reference/annotate.html) to add the information from the online search to your graphic
-* [ ] Explore the world data on `child_mortality` and create an interesting graphic that highlights this dataset.
-    * [ ] Use `devtools::install_github("drsimonj/ourworldindata") to get a larger dataset on `child_mortality`
-    * [ ] Create a graphic that you could use in a final presentation to summarize world child mortatility
-* [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots
-* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
-
-
 ### Reading
 
-* o [Chapter 7: R for Data Science - Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html){target='blank'}
+This reading will help you complete the tasks below.
+
+* o [Graphical Perception: Theory, Experimentation, and Applications](https://www.jstor.org/stable/2288400?seq=1#page_scan_tab_contents){target='blank'}
+* o [Chapter 28: R for Data Science - Graphics for communication](http://r4ds.had.co.nz/graphics-for-communication.html){target='blank'}
+
+
+### Tasks
+
+
+* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate but poorly built to communicate data.
+* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate and optimizes data communication.
+* [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your 2 graphics and the choices you made in the data presentation
+* [ ] Compile your `.md` and `.html` file into your git repository
+
 

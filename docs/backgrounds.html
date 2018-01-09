@@ -23,9 +23,17 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -34,10 +42,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -319,6 +329,9 @@ div.tocify {
     <li>
       <a href="tasklist.html">Semester Task List</a>
     </li>
+    <li>
+      <a href="readings.html">Weekly Reading List</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -370,6 +383,13 @@ div.tocify {
     </li>
   </ul>
 </li>
+<li>
+  <a href="visitme.html">
+    <span class="fa fa-calendar"></span>
+     
+    Visit Me
+  </a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -404,7 +424,7 @@ div.tocify {
 </div>
 <div id="task-2-wax-on-wax-off-with-swirl" class="section level2">
 <h2>Task 2: Wax On, Wax off with Swirl</h2>
-<p>This task is intended to get all of us on the same page in R. You will use the <code>library(swirl)</code> package to learn how to use R. We will be covering Lessons 1-9. Even if you have used R before, this will be an excellent refresher. If you do not get the title of this task, watch <a href="https://www.youtube.com/watch?v=SMCsXl9SGgY">this</a>.</p>
+<p>This task is intended to get all of us on the same page in R. You will use the <code>library(swirl)</code> package to learn how to use R. We will be covering Lessons 1-7. Even if you have used R before, this will be an excellent refresher. If you do not get the title of this task, watch <a href="https://www.youtube.com/watch?v=SMCsXl9SGgY">this</a>.</p>
 <ul>
 <li><a href="class_tasks/task02_details.html">Details</a></li>
 </ul>
@@ -412,145 +432,138 @@ div.tocify {
 </div>
 <div id="task-3-lets-git-going" class="section level2">
 <h2>Task 3: Let’s git going</h2>
-<p>You have just been hired to a new data science team, and you need to collaborate on projects. The team lead told you to connect to the team git repository on Github and create a user folder in the repository. She wants you to include a <code>README.md</code> in your folder that describes who you are in a short paragraph.</p>
+<p>You have just been hired to a new data science team, and you need to collaborate on projects. The team lead told you to connect to your git repository on Github and edit the <code>README.md</code> in your repository. She wants you to describe who you are in a short paragraph.</p>
 <ul>
 <li><a href="class_tasks/task03_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-4-becoming-a-databender" class="section level2">
-<h2>Task 4: Becoming a databender</h2>
-<p>You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (<code>install.packages(nycflights13)</code>) your manager wants you to answer the following questions;</p>
-<ol style="list-style-type: decimal">
-<li>If I am leaving before noon, what are my top two airline options at each airport (JFK, LGA, EWR) that will have the least amount of delay time?</li>
-<li>Which origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?</li>
-<li>Which destination airport is the worst airport for arrival time?</li>
-</ol>
-<p>Make sure to include visualizations to provide context for the answers.</p>
+<div id="task-4-asking-the-right-questions" class="section level2">
+<h2>Task 4: Asking the right questions</h2>
+<p>Learning how to ask interesting questions takes time. As data scientists we need to learn how to ask questions that data can answer. This task supports your semester project.</p>
 <ul>
 <li><a href="class_tasks/task04_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-5-world-data-investigation" class="section level2">
-<h2>Task 5: World Data Investigation</h2>
-<p>The <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> website has world data. It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.</p>
+<div id="task-5-making-bad-graphics" class="section level2">
+<h2>Task 5: Making bad graphics</h2>
+<p>In <code>library(ggplot2)</code> there is a <code>diamonds</code> dataset that shows features of diamonds. Your brother is about to go out and buy a diamond ring for his fiancee and needs some advice on what type of diamond to purchase. He knows that karat has a strong relationship with price. He wants to know what other elements of the diamond he could sacrifice to maximize the karat size for a budget around $2,000. Some interesting details on diamonds can be found <a href="https://www.americangemsociety.org/page/4cs" target="blank">here</a>.</p>
 <ul>
 <li><a href="class_tasks/task05_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-6-world-data-investigations---part-2" class="section level2">
-<h2>Task 6: World Data Investigations - Part 2</h2>
-<p>The <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> website has world data. It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to recreate some of their visualizations in R and then make them better.</p>
+<div id="task-6-world-data-investigation" class="section level2">
+<h2>Task 6: World Data Investigation</h2>
+<p>The <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> website has world data. It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.</p>
 <ul>
 <li><a href="class_tasks/task06_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-7-same-data-different-format" class="section level2">
-<h2>Task 7: Same Data Different Format</h2>
-<p>Data formats are varied and differ by domains and software. We could spend weeks on the different formats and file types that companies and governments use to store their data. We will practice with a few standard formats that are often used for storing data. In the future, you will most likely have to do some research to figure out other formats (but you can do it with R or Python). We have a challenge to read in the five formats of the <a href="https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova" target="blank">DOW data</a> and checking that they are all identical using <code>all.equal()</code>. One final note, your R script should do all the work. That is your script should download the files and/or read directly from the web location of the file.</p>
+<div id="task-7-world-data-investigations---part-2" class="section level2">
+<h2>Task 7: World Data Investigations - Part 2</h2>
+<p>The <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> website has world data. It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to recreate some of their visualizations in R and then make them better.</p>
 <ul>
 <li><a href="class_tasks/task07_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-8-clean-and-reformat-aka-tidy" class="section level2">
-<h2>Task 8: Clean and Reformat (aka tidy)</h2>
-<p>With stock return data from the previous task, we need to tidy this data for the creation of a time series plot. We want to look at the returns for each six-month period of the year in which the returns were reported. Your plot should highlight the tighter spread of the DJIA as compared to the other two selection methods (DARTS and PROS). We need to display a table of the DJIA returns with months on the rows and years in the columns (i.e. “spread” the data).</p>
+<div id="task-8-data-to-answer-questions" class="section level2">
+<h2>Task 8: Data to Answer Questions</h2>
+<p>Finding good data takes time, and can take longer than the time to tidy your data. This task could easily take 3-6 hours to find the data you need for your project. After you find good data sourses make sure to complete the remaining tasks.</p>
 <ul>
-<li><a href="class_tasks/task08_details.html">Details</a></li>
+<li><h2 id="details"><a href="class_tasks/task08_details.html">Details</a></h2></li>
 </ul>
-<hr />
 </div>
-<div id="task-9-take-me-out-to-the-ball-game" class="section level2">
-<h2>Task 9: Take me out to the ball game</h2>
-<p>Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success. As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The <code>library(Lahman)</code> package has a comprehensive set of baseball data. It is great for testing out our relational data skills. We will also need to a function to inflation adjust the player salaries - <code>library(blscrapeR)</code>. See <a href="https://cran.r-project.org/web/packages/blscrapeR/vignettes/Inflation_and_Prices.html" target="blank">this guide for an example</a>.</p>
+<div id="task-9-same-data-different-format" class="section level2">
+<h2>Task 9: Same Data Different Format</h2>
+<p>Data formats are varied and differ by domains and software. We could spend weeks on the different formats and file types that companies and governments use to store their data. We will practice with a few standard formats that are often used for storing data. In the future, you will most likely have to do some research to figure out other formats (but you can do it with R or Python). We have a challenge to read in the five formats of the <a href="https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova" target="blank">DOW data</a> and checking that they are all identical using <code>all.equal()</code>. One final note, your R script should do all the work. That is your script should download the files and/or read directly from the web location of the file.</p>
 <ul>
 <li><a href="class_tasks/task09_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-10-strings-and-grep" class="section level2">
-<h2>Task 10: Strings and grep</h2>
-<p>Using global regular expression print (grep) and regular expressions (regex) to find character string patterns is a valuable tool in data analysis and is available with all operating systems and many different programming languages. It is a powerful tool once it is understood. The recently developed <code>library(stringr)</code> package makes these tools much easier to use. The three tasks below can be completed in many different ways. As a challenge, my code to complete this entire task less than 10 lines.</p>
+<div id="task-10-clean-and-reformat-aka-tidy" class="section level2">
+<h2>Task 10: Clean and Reformat (aka tidy)</h2>
+<p>With stock return data from the previous task, we need to tidy this data for the creation of a time series plot. We want to look at the returns for each six-month period of the year in which the returns were reported. Your plot should highlight the tighter spread of the DJIA as compared to the other two selection methods (DARTS and PROS). We need to display a table of the DJIA returns with months on the rows and years in the columns (i.e. “spread” the data).</p>
 <ul>
 <li><a href="class_tasks/task10_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-11-controlling-categorical-variables-factors" class="section level2">
-<h2>Task 11: Controlling categorical variables (factors)</h2>
-<p>When we are visualizing data with categorical variables, we have to deal with character strings as groupings. The problem with summarizing categorical data in a table or a plot is how to order the groups. Using the concept of Factors allows us to dictate the order of these groupings for presentation. We will revisit the <a href="https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova" target="blank">stock data</a> from a previous task to create a table and a plot that has the months correctly labeled and ordered.</p>
+<div id="task-11-take-me-out-to-the-ball-game" class="section level2">
+<h2>Task 11: Take me out to the ball game</h2>
+<p>Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success. As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The <code>library(Lahman)</code> package has a comprehensive set of baseball data. It is great for testing out our relational data skills. We will also need a function to inflation adjust the player salaries - <code>library(blscrapeR)</code>. See <a href="https://cran.r-project.org/web/packages/blscrapeR/vignettes/Inflation_and_Prices.html" target="blank">this guide for an example</a>.</p>
 <ul>
 <li><a href="class_tasks/task11_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-12-counting-words-and-occurrences" class="section level2">
-<h2>Task 12: Counting Words and Occurrences</h2>
-<p>In 1978 Susan Easton Black <a href="https://www.lds.org/ensign/1978/07/discovery?lang=eng" target="blank">penned an article</a> in the Ensign title <em>Even statistically, he is the dominant figure of the Book of Mormon.</em> which makes some statistical claims about the Book of Mormon. We are going to use some of our “string” skills to count words and occurrences in the New Testament and in the Book of Mormon.</p>
-<ol style="list-style-type: decimal">
-<li>What is the average verse length (number of words) in the New Testament and the Book of Mormon?</li>
-<li>How often is the word Jesus in the New Testament and the Book of Mormon?</li>
-<li>How do the verses from each book in the Book of Mormon compare in average word length?</li>
-</ol>
+<div id="task-12-strings-and-grep" class="section level2">
+<h2>Task 12: Strings and grep</h2>
+<p>Using global regular expression print (grep) and regular expressions (regex) to find character string patterns is a valuable tool in data analysis and is available with all operating systems and many different programming languages. It is a powerful tool once it is understood. The recently developed <code>library(stringr)</code> package makes these tools much easier to use. The three tasks below can be completed in many different ways. As a challenge, my code to complete this entire task less than 10 lines.</p>
 <ul>
 <li><a href="class_tasks/task12_details.html">Details</a></li>
+</ul>
+<hr />
+</div>
+<div id="task-13-controlling-categorical-variables-factors" class="section level2">
+<h2>Task 13: Controlling categorical variables (factors)</h2>
+<p>When we are visualizing data with categorical variables, we have to deal with character strings as groupings. The problem with summarizing categorical data in a table or a plot is how to order the groups. Using the concept of Factors allows us to dictate the order of these groupings for presentation. We will revisit the <a href="https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova" target="blank">stock data</a> from a previous task to create a table and a plot that has the months correctly labeled and ordered.</p>
+<ul>
+<li><a href="class_tasks/task13_details.html">Details</a></li>
+</ul>
+<hr />
+</div>
+<div id="task-14-counting-words-and-occurrences" class="section level2">
+<h2>Task 14: Counting Words and Occurrences</h2>
+<p>In 1978 Susan Easton Black <a href="https://www.lds.org/ensign/1978/07/discovery?lang=eng" target="blank">penned an article</a> in the Ensign title <em>Even statistically, he is the dominant figure of the Book of Mormon.</em> which makes some statistical claims about the Book of Mormon. We are going to use some of our “string” skills to count words and occurrences in the New Testament and in the Book of Mormon.</p>
+<ol style="list-style-type: decimal">
+<li>What is the average verse length (number of words) in the New Testament compared to the Book of Mormon?</li>
+<li>How often is the word Jesus in the New Testament compared to the Book of Mormon?</li>
+<li>How does the word count distribution by verse look for each book in the Book of Mormon?</li>
+</ol>
+<ul>
+<li><a href="class_tasks/task14_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
 </div>
 <div id="tasks-13-24" class="section level1">
 <h1>Tasks 13-24</h1>
-<div id="task-13-how-is-the-weather" class="section level2">
-<h2>Task 13: How is the weather?</h2>
-<p>Use the <code>library(weatherdata)</code> package that is described <a href="http://ram-n.github.io/weatherData/" target="blank">here</a> and get the month of June for 2015, 2016, and 2017. You would use <code>getWeatherForDate(opt_detailed = TRUE, opt_temperature_columns = FALSE, opt_all_columns = TRUE)</code> for station <code>KRXE</code>. We have a few coding tasks to help us get used to using dates. Create a visualization for each question.</p>
+<div id="task-15-how-is-the-weather" class="section level2">
+<h2>Task 15: How is the weather?</h2>
+<p>Use the <code>library(riem)</code> package that is described <a href="https://github.com/ropensci/riem" target="blank">here</a> and get the month of June for 2015, 2016, and 2017. You would use <code>riem_measures(station = &quot;RXE&quot;, date_start = &quot;2015-06-01&quot;, date_end = &quot;2017-07-01&quot;)</code> for station <code>RXE</code>. Once you have downloaded and formated the data, make sure to save it to your analysis folder as it will take a minute or two to download each time. We have a few coding tasks to help us get used to using dates. Create a visualization for each question.</p>
 <ol style="list-style-type: decimal">
 <li>What day of the week had the highest temperature reading?</li>
 <li>What day of the week had the lowest temperature at 2 pm?</li>
 </ol>
 <ul>
-<li><a href="class_tasks/task13_details.html">Details</a></li>
-</ul>
-<hr />
-</div>
-<div id="task-14-does-the-weather-hurt-my-bottom-line" class="section level2">
-<h2>Task 14: Does the weather hurt my bottom line?</h2>
-<p>A car wash business wants to see if the temperature hurts their bottom line. They have point of sale data for the months of April, May, June, and July. You will need to aggregate the data into hourly sales totals and merge the sales data together with the temperature data to provide insight into the relationship between temperature and car wash sales.</p>
-<ul>
-<li><a href="class_tasks/task14_details.html">Details</a></li>
-</ul>
-<hr />
-</div>
-<div id="task-15-my-investment-is-better-than-yours" class="section level2">
-<h2>Task 15: My investment is better than yours</h2>
-<p>The stock market is overflowing with data. There are many packages in R that allow us to get quick access to information on publicly traded companies. Imagine that you and a friend each purchased about $1,000 of stock in three different stocks at the start of October last year, and you want to compare your performance. Use the stock shares purchased and share prices to demonstrate how each of you fared assuming that did not change your allocations.</p>
-<ul>
 <li><a href="class_tasks/task15_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-16-the-us-grocer-kr" class="section level2">
-<h2>Task 16: The US Grocer (KR)</h2>
-<p>Interactive visualizations can often be powerful for data investigations. They let your team get at questions in real time. Use the Kroger (KR) stock price to build an interactive visualization of their performance over the last five years. Annotate the graphic with a note of the reason at two or more time points, or intervals, where the price had significant shifts.</p>
+<div id="task-16-does-the-weather-hurt-my-bottom-line" class="section level2">
+<h2>Task 16: Does the weather hurt my bottom line?</h2>
+<p>A car wash business wants to see if the temperature hurts their bottom line. They have point of sale data for the months of April, May, June, and July. You will need to aggregate the data into hourly sales totals and merge the sales data together with the temperature data to provide insight into the relationship between temperature and car wash sales.</p>
 <ul>
 <li><a href="class_tasks/task16_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-17-building-functions" class="section level2">
-<h2>Task 17: Building Functions</h2>
-<p>Go back to task 10 and build your code into two or three functions that performs the same work for the tasks. Be prepared to present your functions in class.</p>
+<div id="task-17-my-investment-is-better-than-yours" class="section level2">
+<h2>Task 17: My investment is better than yours</h2>
+<p>The stock market is overflowing with data. There are many packages in R that allow us to get quick access to information on publicly traded companies. Imagine that you and a friend each purchased about $1,000 of stock in three different stocks at the start of October last year, and you want to compare your performance up to this week. Use the stock shares purchased and share prices to demonstrate how each of you fared over the period you were competing (assuming that you did not change your allocations).</p>
 <ul>
 <li><a href="class_tasks/task17_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="task-18-making-bad-graphics" class="section level2">
-<h2>Task 18: Making bad graphics</h2>
-<p>In <code>library(ggplot2)</code> there is a <code>diamonds</code> dataset that shows features of diamonds. Your brother is about to go out and buy a diamond ring for his fiancee and needs some advice on what type of diamond to purchase. He knows that karat has a strong relationship with price. He wants to know what other elements of the diamond he could sacrifice to maximize the karat size for a budget around $2,000. Some interesting details on diamonds can be found <a href="https://www.americangemsociety.org/en/diamond-cut" target="blank">here</a>.</p>
+<div id="task-18-the-us-grocer-kr" class="section level2">
+<h2>Task 18: The US Grocer (KR)</h2>
+<p>Interactive visualizations can often be powerful for data investigations. They let your team get at questions in real time. Use the Kroger (KR) stock price to build an interactive visualization of their performance over the last five years. Annotate the graphic with a note of the reason at two or more time points, or intervals, where the price had significant shifts.</p>
 <ul>
 <li><a href="class_tasks/task18_details.html">Details</a></li>
 </ul>
@@ -592,7 +605,13 @@ div.tocify {
 </div>
 <div id="task-23-should-we-do-it" class="section level2">
 <h2>Task 23: Should we do it?</h2>
-<p>This week we will learn new coding techniques and visualization principles. However, your case study and weekly tasks will provide time to makes sure you have for the last task of the <a href="https://byuistats.github.io/M335/project.html">semester project</a>. Please complete the required reading.</p>
+<p>This week we will learn new coding techniques and visualization principles. Go back to task 12 and build your code into two or three <strong>functions</strong> that performs the same work for the tasks.</p>
+<ol style="list-style-type: decimal">
+<li>Your functions can allow the input of the spacing between characters or maybe a vector that picks of specific characters.</li>
+<li>Your functions could remove letters after periods and put the sentence into one string.</li>
+<li>Your function can allow the input of specific grep commands.</li>
+</ol>
+<p>Be prepared to present your functions in class.</p>
 <ul>
 <li><a href="class_tasks/task23_details.html">Details</a></li>
 </ul>
@@ -626,21 +645,32 @@ div.tocify {
 <li><a href="weekly_projects/cs02_details.html">Details</a></li>
 </ul>
 <hr />
-<!-- title: "Case Study 3: " -->
-<!-- objectives: read in varied formats and visualizing comparisons and variation -->
-<!-- task 5 and 6 need chapters 7 and 11 -->
 </div>
-<div id="case-study-3-reducing-gun-deaths-fivethirtyeight" class="section level2">
-<h2>Case Study 3: Reducing Gun Deaths (FiveThirtyEight)</h2>
-<p>The world is a dangerous place. During 2015 and 2016 there was a lot of discussion in the <a href="http://www.cbsnews.com/pictures/controversial-police-shootings/" target="blank">news about police shootings</a>. <a href="https://fivethirtyeight.com/" target="blank">FiveThirtyEight</a> reported on <a href="https://fivethirtyeight.com/features/gun-deaths/" target="blank">gun deaths in 2016</a>. As leaders in data journalism they have posted a <a href="https://github.com/fivethirtyeight/guns-data" target="blank">clean version of this data</a> for us to use. Their visualizations focused on yearly averages.</p>
-<p>Our client wants to create commercials that help reduce the gun deaths in the US. They would like to target the commercials to different seasons of the year (think month variable). Our challenge is to summarize and visualize seasonal trends in these data.</p>
+<div id="case-study-3-becoming-a-databender" class="section level2">
+<h2>Case Study 3: Becoming a databender</h2>
+<p>You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (<code>install.packages(&quot;nycflights13&quot;)</code>, <code>library(nycflights13)</code>) your manager wants you to answer the following questions;</p>
+<ol style="list-style-type: decimal">
+<li>If I am leaving before noon, which two airlines do you recommend at each airport (JFK, LGA, EWR) that will have the lowest delay time at the 75th percentile?</li>
+<li>Which origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?</li>
+<li>Which destination airport is the worst (you decide on the metric for worst) airport for arrival time?</li>
+</ol>
+<p>Make sure to include one visualization that shows the complexity of the data.</p>
 <ul>
-<li><a href="weekly_projects/cs03_details.html">Details</a></li>
+<li><a href="class_tasks/cs03_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="case-study-4-i-can-clean-your-data" class="section level2">
-<h2>Case Study 4: I can clean your data</h2>
+<div id="case-study-4-reducing-gun-deaths-fivethirtyeight" class="section level2">
+<h2>Case Study 4: Reducing Gun Deaths (FiveThirtyEight)</h2>
+<p>The world is a dangerous place. During 2015 and 2016 there was a lot of discussion in the <a href="http://www.cbsnews.com/pictures/controversial-police-shootings/" target="blank">news about police shootings</a>. <a href="https://fivethirtyeight.com/" target="blank">FiveThirtyEight</a> reported on <a href="https://fivethirtyeight.com/features/gun-deaths/" target="blank">gun deaths in 2016</a>. As leaders in data journalism, they have posted a clean version of this data in their GitHub repo called <a href="https://github.com/fivethirtyeight/guns-data" target="blank">full_data.csv</a> for us to use.</p>
+<p>While their visualizations focused on yearly averages, our client wants to create commercials that help reduce the gun deaths in the US. They would like to target the commercials in different seasons of the year (think month variable) to audiences that could have the most impact in reducing gun deaths. Our challenge is to summarize and visualize seasonal trends accros the other variables in these data.</p>
+<ul>
+<li><a href="weekly_projects/cs04_details.html">Details</a></li>
+</ul>
+<hr />
+</div>
+<div id="case-study-5-i-can-clean-your-data" class="section level2">
+<h2>Case Study 5: I can clean your data</h2>
 <p>The <a href="https://www.scientificamerican.com/article/why-are-we-getting-taller/" target="blank">Scientific American argues</a> that humans have been getting taller over the years. As the data scientists that we are becoming, we would like to find data that validates this concept. Our challenge is to show different male heights across the centuries.</p>
 <p>This project is not as severe as the two quotes below, but it will give you a taste of pulling various data and file formats together into “tidy” data for visualization and analysis. You will not need to search for data as all the files are listed <a href="https://byuistats.github.io/M335/maleheight.html">here</a></p>
 <ol style="list-style-type: decimal">
@@ -648,13 +678,13 @@ div.tocify {
 <li>“Up to 80% of data analysis is spent on the process of cleaning and preparing data” - <a href="http://jstatsoft.org/v59/i10" target="blank">Hadley Wickham</a></li>
 </ol>
 <ul>
-<li><a href="weekly_projects/cs04_details.html">Details</a></li>
+<li><a href="weekly_projects/cs05_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="case-study-5-the-collapse-of-construction-in-idaho" class="section level2">
-<h2>Case Study 5: The collapse of construction in Idaho</h2>
-<p>It is 2010, and you are working for the Idaho restaurant commission, and they need your help getting a clearer picture of how restaurant construction changed across Idaho from 2008 to 2009. They provided you a dataset of all commercial construction in Idaho for those two years. The data has a general category called <code>Food_Beverage_Service</code> that has other buildings besides restaurants in the category and will need some massaging to answer the following questions.</p>
+<div id="case-study-6-the-collapse-of-construction-in-idaho" class="section level2">
+<h2>Case Study 6: The collapse of construction in Idaho</h2>
+<p>It is 2010, and you are working for the Idaho restaurant commission, and they need your help getting a clearer picture of how restaurant construction changed across Idaho from 2008 to 2009. They <a href="https://github.com/hathawayj/buildings" target="blank">provided you a dataset</a> of all commercial construction in Idaho for those two years. The data has a variable <code>Type</code> with a general category called <code>Food_Beverage_Service</code> that has other buildings besides restaurants in the category. You will need to use the restaurant names (see <code>restaurants</code> data object) and some additional key words to create the correct subgroupings. Your client expects to provide new data for 2010 and 2011 so your script needs to do the work. Make sure you do not use Excel to manipulate anything.</p>
 <ol style="list-style-type: decimal">
 <li>How did full-service restaurant construction compare to quick service restaurant construction across county and years?</li>
 <li>How did restaurant construction fare compare to the other commercial construction in Idaho?</li>
@@ -662,41 +692,33 @@ div.tocify {
 <li>In that county how did other commercial construction compare?</li>
 </ol>
 <ul>
-<li><a href="weekly_projects/cs05_details.html">Details</a></li>
-</ul>
-<hr />
-</div>
-<div id="case-study-6-counting-names-in-scripture" class="section level2">
-<h2>Case Study 6: Counting names in scripture</h2>
-<p>In 1978 Susan Easton Black <a href="https://www.lds.org/ensign/1978/07/discovery?lang=eng" target="blank">penned an article</a> in the Ensign title <em>Even statistically, he is the dominant figure of the Book of Mormon.</em> which makes some statistical claims about the Book of Mormon. With our “string” skills we are going to check her result and build an improved statistic using using number of words between references.</p>
-<ul>
 <li><a href="weekly_projects/cs06_details.html">Details</a></li>
 </ul>
 <hr />
 </div>
-<div id="case-study-7-its-about-time" class="section level2">
-<h2>Case Study 7: It’s about time</h2>
+<div id="case-study-7-counting-names-in-scripture" class="section level2">
+<h2>Case Study 7: Counting names in scripture</h2>
+<p>In 1978 Susan Easton Black <a href="https://www.lds.org/ensign/1978/07/discovery?lang=eng" target="blank">penned an article</a> in the Ensign title <em>Even statistically, he is the dominant figure of the Book of Mormon.</em> which makes some statistical claims about the Book of Mormon. With our “string” skills we are going to check her result and build an improved statistic using using number of words between references.</p>
+<ul>
+<li><a href="weekly_projects/cs07_details.html">Details</a></li>
+</ul>
+<hr />
+</div>
+<div id="case-study-8-its-about-time" class="section level2">
+<h2>Case Study 8: It’s about time</h2>
 <p>We have transaction data for a few businesses that have been in operation for three months. Each of these companies has come to your investment company for a loan to expand their business. Your boss has asked you to go through the transactions for each business and provide daily, weekly, and monthly gross revenue summaries and comparisons. Your boss would like a short write up with tables and visualizations that help with the decision of which company did the best over the three month period. You will also need to provide a short paragraph with your recommendation after building your analysis.</p>
 <p>In our course we are only looking at understanding and visualizing recorded time series data. If you would like to learn more about forecasting I would recommend <a href="https://www.otexts.org/fpp2/" target="blank">Forecasting: Principles and Practice</a> and for a quick introduction <a href="https://afit-r.github.io/ts_exploration" target="blank">see here</a></p>
 <ul>
-<li><a href="weekly_projects/cs07_details.html">Details</a></li>
+<li><a href="weekly_projects/cs08_details.html">Details</a></li>
 </ul>
 <!-- You can use the quantmod (http://www.quantmod.com/) package to get historical stock prices for publicly traded companies on the NASDAQ and NYSE. Use the following code to download data on Amazon's stock price and get the times the data was sampled. -->
 <hr />
 </div>
-<div id="case-study-8-interacting-with-time" class="section level2">
-<h2>Case Study 8: Interacting with time</h2>
+<div id="case-study-9-interacting-with-time" class="section level2">
+<h2>Case Study 9: Interacting with time</h2>
 <p>Your data science income has ballooned, and you need to find somewhere to invest $25,000 that you have saved over the last year. You have a savvy investment friend that is kind enough to tell you ten stocks he has been watching during the last year. You will need to visualize the last five years performance to help in the in the conversation with your friend.</p>
 <p>Your friend is going to give you his tickers at the beginning of your half-hour meeting with him (he is a busy friend). You will need to build an <code>.Rmd</code> file that will build a suite of visualizations rapidly for your conversation. You will need a series of stock performance graphics using <code>library(dygraphs)</code> and <code>library(ggplot2)</code>. In real life, you might use one or the other, but this task is built to help you move from <code>ts</code> and <code>xts</code> to <code>tidy</code> objects for visualization.</p>
 <p>Specifically, in class the Tuesday following this case study you will get 5 - 10 ticker symbols and will need to build visualizations quickly that allows you to answer questions about the stocks in a few seconds.</p>
-<ul>
-<li><a href="weekly_projects/cs08_details.html">Details</a></li>
-</ul>
-<hr />
-</div>
-<div id="case-study-9-get-your-project-moving" class="section level2">
-<h2>Case Study 9: Get your project moving</h2>
-<p>This week we will learn new coding techniques and visualization principles. However, your case study and weekly tasks will provide time to makes sure you have wrapped up the first two tasks of the <a href="https://byuistats.github.io/M335/project.html">semester project</a>.</p>
 <ul>
 <li><a href="weekly_projects/cs09_details.html">Details</a></li>
 </ul>
@@ -713,7 +735,7 @@ div.tocify {
 </div>
 <div id="case-study-11-interacting-with-space" class="section level2">
 <h2>Case Study 11: Interacting with space</h2>
-<p>You can recreate <a href="https://byuistats.github.io/M335/weekly_projects/cs10_details.html" target="blank">Case Study 10</a> or find your own spatial data to display using <a href="http://rstudio.github.io/leaflet/" target="blank">leaflet</a>.</p>
+<p>You can recreate <a href="https://byuistats.github.io/M335/weekly_projects/cs10_details.html" target="blank">CS 10</a> or find your own spatial data to display using <a href="http://rstudio.github.io/leaflet/" target="blank">leaflet</a>.</p>
 <ul>
 <li><a href="weekly_projects/cs11_details.html">Details</a></li>
 </ul>
@@ -721,7 +743,7 @@ div.tocify {
 </div>
 <div id="case-study-12-keep-your-project-moving" class="section level2">
 <h2>Case Study 12: Keep your project moving</h2>
-<p>This week we will learn new coding techniques and visualization principles. However, your case study and weekly tasks will provide time to makes sure you have the last task of the <a href="https://byuistats.github.io/M335/project.html">semester project</a> completed.</p>
+<p>This week we will learn new coding techniques and visualization principles. However, your case study will provide time to makes sure you have the <a href="https://byuistats.github.io/M335/project.html">semester project</a> completed.</p>
 <ul>
 <li><a href="weekly_projects/cs12_details.html">Details</a></li>
 </ul>
@@ -730,6 +752,7 @@ div.tocify {
 <div id="case-study-13-finish-well" class="section level2">
 <h2>Case Study 13: Finish well</h2>
 <p>Your case study and weekly tasks will provide time to makes sure you have wrapped up the class and get set for a great future in data science. Make sure you have address all the end of semester items.</p>
+<p>Please write your cover letter to me about the class that <a href="syllabus.html">uses the syllabus</a> to justify your grade. Your resume would be in the format you would provide to a job or internship.</p>
 <ul>
 <li><a href="weekly_projects/cs13_details.html">Details</a></li>
 </ul>

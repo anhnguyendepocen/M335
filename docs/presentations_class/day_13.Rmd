@@ -1,0 +1,173 @@
+---
+title: "Understanding Time"
+author: J. Hathaway
+output: 
+  revealjs::revealjs_presentation:
+      lib_dir: externals
+      keep_md: true
+      incremental: true
+      theme: black
+      highlight: espresso
+      center: true
+      code_folding: hide
+      reveal_options:
+        previewLinks: true
+        mouseWheel: true
+        slideNumber: true
+        maxScale: 3
+        margin: 0
+params:
+  day: 13
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(magrittr)
+library(ggrepel)
+library(knitr)
+library(stringr)
+
+invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
+read_chunk("temp")
+
+
+# case study completed
+cso <- ceiling(params$day/2) - 1
+csn <- ceiling(params$day/2) 
+
+casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
+casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
+
+link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
+link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
+
+# How did we do?
+hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
+
+# current task
+# 
+taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
+link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
+
+# Review
+
+
+```{r csold, ref.label=casename_old, echo=FALSE, include=FALSE }
+# For case study due last Saturday
+```
+
+# Review
+
+`r title.text`
+`r link_old`
+`r hdwd`
+
+
+```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
+# For case study due next Saturday
+```
+
+`r title.text`
+`r link_new`
+
+
+```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
+# For current task that is due
+```
+
+`r title.text`
+`r link_task`
+
+
+```{r stuff, echo=FALSE}
+unlink("temp")
+```
+
+
+# It is about time
+
+## The March Visualization
+
+In his iconic flow map of Napoleon's catastrophic 1812 invasion of Russia, Charles Joseph Minard blends and bends temporal and spatial representations. The path and number of outward-bound soldiers is represented by an initially thick tan ribbon while the dwindling numbers of retreating survivors are represented by a narrowing black band. In this visualization, the time it took to march into Russia is not clear. The only time stamps shown are for the return trip and progressing from right to left. In a sense, time is "bent" to advance the impact of the visual narrative.
+
+> - [The Image](http://uxmag.com/sites/default/files/uploads/whitney-its-about-time/Minard.png)
+
+
+## The Walmart March Visualization
+
+> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
+> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
+
+## The wind march
+
+> - [Current Wind](http://hint.fm/wind/)
+
+## The movie march
+
+What do we like? dislike?
+
+> - [Movie Performance over Time](http://www.nytimes.com/interactive/2008/02/23/movies/20080223_REVENUE_GRAPHIC.html?_r=0)
+
+# Date and Times
+
+## Notes
+
+- Note that when you use date-times in a numeric context (like in a histogram), 1 means 1 second, so a binwidth of 86400 means one day. For dates, 1 means 1 day.
+
+- Hawaii does not observe Daylight Saving Time and neither does Arizona (although the Navajo Nation, in northeastern Arizona, does). For many years, most of Indiana did not observe Daylight Saving Time with the exception of 10 counties. Beginning in 2006, all of Indiana now observes Daylight Saving Time. 
+
+## The Creators
+
+> - ymd(), mdy(), dmy(), ydm()
+> - make_date(), make_datetime()
+
+**Open R-Studio and Convert the following strings to date objects.**
+
+> - "January 21st, 2017"
+> - "2012-01-01"
+> - "March 2016 - 23"
+
+## The Creators (part 2)
+
+
+```{r datecode, eval=FALSE}
+library(tidyverse)
+date_cols <- tibble(month = c(1, 3, 7), 
+                    day = c(23, 18, 1), 
+                    year = c(2017, 2017, 2016))
+
+# Will this one work in make_date()?
+date_cols <- tibble(month = c("Jaunary", "March", "July"), 
+                    day = c(23, 18, 1), 
+                    year = c(2017, 2017, 2016))
+
+```
+
+
+## The Formaters
+
+You can pull out individual parts of the date with the accessor functions; year(), month(), mday() (day of the month), yday() (day of the year), wday() (day of the week), hour(), minute(), and second().
+
+**Challenge**
+
+> - Tell me what weekday "March 23, 2016" falls on.
+> - What day of the year was it?
+
+## The Changers (1)
+
+> - floor_date(), 
+> - round_date(), and 
+> - ceiling_date()
+
+## The Changers (2)
+
+**Tackle the Following**
+
+- Add one month to "January 31st".  `jan31 <- ymd("2013-01-31")`
+- Add 27 hours and 15 minutes to "January 31st, 2013 06:35:27" (Use Sys.timezone(location = TRUE) or OlsonNames() to see a list of timezones)
+- https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html
+

@@ -1,3 +1,14 @@
+---
+output:  
+  html_document:  
+    keep_md: true  
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 1
+  casename: "cs-01"
+---
 
 
 
@@ -17,6 +28,16 @@ The **submit** word above will require you to create an account on [slack](https
 
 
 
+### Reading
+
+This reading will help you complete the tasks below.
+
+* o [Making your first R Markdown File](../rmarkdown_help.html){target='blank'}
+* o [Intro to R Markdown](http://rmarkdown.rstudio.com/articles_intro.html){target='blank'}
+* o [Chapter 27: R for Data Science - R Markdown](http://r4ds.had.co.nz/r-markdown.html){target='blank'}
+* o [Chapter 30: R for Data Science - R Markdwon workflow](http://r4ds.had.co.nz/r-markdown-workflow.html){target='blank'}
+
+
 ### Tasks
 
 
@@ -31,23 +52,19 @@ ul {
 </style>
 
 
-* [ ] Find  two or three articles/posts that have a good visualization that answers an interesting question
+* [ ] Find 4-5 examples of data-driven answers and write a one-paragraph review of each.
+    * [ ] List 2-3 items that are unique/good
+    * [ ] Identify 1 issue with the each example
 * [ ] Create an `.Rmd` file in R-Studio
     * [ ] Title it Case Study 1 in the YAML
     * [ ] Include links to the visualization post you found
     * [ ] Write a one paragraph critique of each visualization
     * [ ] Add the R code below to your `.Rmd` file
     * [ ] Knit the file to `.html` and keep the `.md` file as well
-* [ ] Create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
+* [ ] Create an account on [slack](https://w18dwv.slack.com/signup){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
     * [ ] Upload your intermediary `.md` file to the general channel in our Slack group
 
 
-### Reading
-
-* o [Making your first R Markdown File](../rmarkdown_help.html){target='blank'}
-* o [Intro to R Markdown](http://rmarkdown.rstudio.com/articles_intro.html){target='blank'}
-* o [Chapter 27: R for Data Science - R Markdown](http://r4ds.had.co.nz/r-markdown.html){target='blank'}
-* o [Chapter 30: R for Data Science - R Markdwon workflow](http://r4ds.had.co.nz/r-markdown-workflow.html){target='blank'}
 
 
 

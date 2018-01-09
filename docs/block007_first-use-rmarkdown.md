@@ -78,9 +78,9 @@ Write a single English sentence.
 
 Insert an empty R chunk, via the "Chunk" menu in upper right of source editor or with corresponding keyboard shortcut.
 
-    ```{r}
-    ## insert your brilliant WORKING code here
-    ```
+     ```{r}
+     ## insert your brilliant WORKING code here
+     ```
 
 Insert 1 to 3 lines of functioning code that begin the task at hand. "Walk through" and run those lines using the "Run" button or the corresponding keyboard shortcut. You MUST make sure your code actually works!
 
@@ -106,6 +106,17 @@ No matter what, technically you can publish this report merely by pushing a rend
 
 This is (sort of) another example of keeping things machine- and human-readable, which is bliss. By making `foo.Rmd` available, others can see and run your __actual code__. By sharing `foo.md` and/or `foo.html`, others can casually browse your end product and decide if they even want to bother.
 
+### Course Rmd Template
+
+We have built a template `.Rmd` file that you can use for our course.  It requires that you install a package from a GitHub repository.  Here are the steps.
+
+1. Use `install.packages("devtools")` to be able to use `library(devtools)` in your R.
+2. Go to https://github.com/dylanjm/Rtemplates and run the Rtemplates line related to stats.
+3. Now in R-Studio create a new `R Markdown ...` and then choose `From Template`.
+4. There should be an option that says `Math 335 Analysis`.  Select it and click `OK`.
+
+It will build the `YAML` that we would prefer for this course.
+
 ### Troubleshooting
 
 __Make sure RStudio and the `rmarkdown` package (and its dependencies) are up-to-date.__ In case of catastrophic failure to render R Markdown, consider that your software may be too old. R Markdown has been developing rapidly (written 2015-09), so you need a very current version of RStudio and `rmarkdown` to enjoy all the goodies we describe in this course.
@@ -114,17 +125,17 @@ __Get rid of your `.Rprofile`__, at least temporarily. I have found that a "matu
 
 __Insert a chunk in your `.Rmd` document so that it renders even when there are errors.__ Some errors are easier to diagnose if you can execute specific R statements during rendering and leave more evidence behind for forensic examination. Put this chunk:
 
-    ```{r setup, include = FALSE, cache = FALSE}  
-    knitr::opts_chunk$set(error = TRUE)  
-    ```
+     ```{r setup, include = FALSE, cache = FALSE}  
+     knitr::opts_chunk$set(error = TRUE)  
+     ```
     
 near the top of your R Markdown document if you want to soldier on through errors, i.e. turn `foo.Rmd` into `foo.md` and/or `foo.html` no matter what. This is also helpful if you are writing a tutorial and want to demo code that throws an error. You might want to keep this as an [RStudio snippet](https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets) for easy insertion.
 
 __Tolerate errors in one specific chunk.__ If it's undesirable to globally accept errors, you can still do this for a specific chunk like so:
 
-    ```{r wing-and-a-prayer, error = TRUE}  
-    ## your sketchy code goes here ;) 
-    ```
+     ```{r wing-and-a-prayer, error = TRUE}  
+     ## your sketchy code goes here ;) 
+     ```
 
 __Check your working directory.__ It's going to break your heart as you learn how often your mistakes are really mundane and basic. Ask me how I know. When things go wrong consider:
 

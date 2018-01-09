@@ -1,3 +1,14 @@
+---
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 19
+  taskname: "task-19"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
@@ -16,9 +27,6 @@ We will use `library(USAboundaries)`, `library(ggrepel)`, and `library(sf)` to m
 
 
 
-### Tasks
-
-
 <style>
 ul {
    color: black;
@@ -30,16 +38,25 @@ ul {
 </style>
 
 
+### Reading
+
+This reading will help you complete the tasks below.
+
+* o [Using SF package with tidyverse](https://byuistats.github.io/M335/spatial_reading.html){target='blank'}
+* o [SF R package](https://r-spatial.github.io/sf/){target='blank'}
+* o [USAboundaries R Package](https://github.com/ropensci/USAboundaries){target='blank'}
+* o [Video on spatial datums](https://www.youtube.com/watch?v=xKGlMp__jog){target='blank'}
+* o [Video 2 on spatial datums](https://www.youtube.com/watch?v=kXTHaMY3cVk){target='blank'}
+
+
+### Tasks
+
+
 * [ ] Create a `.png` image that closely matches my example
     * [ ] Note that `fill = NA` in `geom_sf()` will not fill the polygons with a grey color
     * [ ] Note that `library(USAboundaries)` has three useful functions - `us_cities()`, `us_states()`, and `us_counties()`
 * [ ] Save your script and `.png` files to GitHub
 
-
-### Reading
-
-* o [Using SF package with tidyverse](https://byuistats.github.io/M335/spatial_reading.html){target='blank'}
-* o [SF R package](https://r-spatial.github.io/sf/){target='blank'}
 
 ## Image
 

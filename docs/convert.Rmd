@@ -5,10 +5,10 @@ output:
     toc: FALSE
 params:
   dtype: details
-  number: 4
+  number: 5
   ptitle: TRUE
   pbackground: TRUE
-  casename: "cs-04"
+  casename: "cs-05"
 ---
 
 
@@ -16,6 +16,6 @@ params:
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
-```{r child="weekly_projects/cs04_details.Rmd"}
+```{r child="weekly_projects/cs05_details.Rmd"}
 
 ```

@@ -5,6 +5,11 @@ title: "Format File"
 
 ```{r message=FALSE, warning=FALSE, echo=FALSE }
 library(knitr)
+source("../../scripts/md_bullets.R")
+library(readxl)
+library(dplyr)
+readings <- read_excel(path = "../../tasks_reading.xlsx", sheet = "Reading")
+cases <- read_excel(path = "../../tasks_reading.xlsx", sheet = "CaseStudies")
 invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
 read_chunk("temp")
 ```
@@ -19,16 +24,20 @@ unlink("temp")
 ```
 
 
+### Reading
+
+This reading will help you complete the tasks below.
+
+```{r, results="asis", echo=FALSE}
+
+md_link(readings, type = list("Type" = "case"), group = list("Number" = params$number))
+
+```
+
+
 ### Tasks
 
 ```{r results="asis", echo=FALSE, message=FALSE, warning=FALSE}
-source("../../scripts/md_bullets.R")
-library(readxl)
-library(dplyr)
-readings <- read_excel(path = "../../tasks_reading.xlsx", sheet = "Reading")
-cases <- read_excel(path = "../../tasks_reading.xlsx", sheet = "CaseStudies")
-
-
 cat("
 <style>
 ul {
@@ -50,12 +59,5 @@ md_bullet(cases, group = list("Number" = params$number))
 ```
 
 
-### Reading
-
-```{r, results="asis", echo=FALSE}
-
-md_link(readings, type = list("Type" = "case"), group = list("Number" = params$number))
-
-```
 
 

@@ -1,24 +1,29 @@
+---
+params:
+  dtype: details
+  ptitle: TRUE
+  pbackground: TRUE
+  number: 12
+  taskname: "task-12"
+output:
+  html_document:
+    keep_md: true
+---
 
 
 
 
 
 
-## Task 12: Counting Words and Occurrences 
+## Task 12: Strings and grep 
 ### Background 
 
-In 1978 Susan Easton Black [penned an article](https://www.lds.org/ensign/1978/07/discovery?lang=eng){target="blank"} in the Ensign title *Even statistically, he is the dominant figure of the Book of Mormon.* which makes some statistical claims about the Book of Mormon. We are going to use some of our "string" skills to count words and occurrences in the New Testament and in the Book of Mormon.
+Using global regular expression print (grep) and regular expressions (regex) to find character string patterns is a valuable tool in data analysis and is available with all operating systems and many different programming languages.  It is a powerful tool once it is understood.  The recently developed `library(stringr)` package makes these tools much easier to use. The three tasks below can be completed in many different ways.  As a challenge, my code to complete this entire task less than 10 lines.
 
-1. What is the average verse length (number of words) in the New Testament and the Book of Mormon?
-2. How often is the word Jesus in the New Testament and the Book of Mormon?
-3. How do the verses from each book in the Book of Mormon compare in average word length?
 
  * [Homework Schedule](../homework_schedule.html)
 
 
-
-
-### Tasks
 
 
 <style>
@@ -32,18 +37,26 @@ ul {
 </style>
 
 
-* [ ] Use the `library(downloader)` R package and the `download()` function to download the data from http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip
-* [ ] Use the `unzip()` function to decompress the zip file that you downloaded
-* [ ] Read in the `.csv` file that was in the zip file and examine the structure of the data
-* [ ] Address questions 1 & 2 using the `stri_stats_latex()` and `str_locate_all()` functions from `install.packages("stringr")` and `install.packages("stringi")`
-* [ ] Create a visualization that addresses question 3
-* [ ] Create an `.Rmd` file with 1-2 paragraphs and your graphics that answers the three questions
-* [ ] Compile your `.md` and `.html` file into your git repository
-
-
 ### Reading
 
-* o [Chapter 21: Iteration (21.1-21.5 is all you will need)](http://r4ds.had.co.nz/iteration.html){target='blank'}
-* o [stringi R package and the `stri_stats_latex()` function](https://rdrr.io/rforge/stringi/man/stri_stats_latex.html){target='blank'}
-* o [downloader R Package](https://github.com/wch/downloader){target='blank'}
+This reading will help you complete the tasks below.
+
+* o [Chapter 14: R for Data Science - Strings](http://r4ds.had.co.nz/strings.html){target='blank'}
+* o [Five principles of effective data visualizations](https://www.thoughtworks.com/insights/blog/five-principles-effective-data-visualizations){target='blank'}
+* o [regexr.com (optional)](http://regexr.com/){target='blank'}
+* o [Regular Expression examples (optional)](https://qntm.org/files/re/re.html){target='blank'}
+* o [Regular Expression support applet (optional)](https://regex101.com/){target='blank'}
+* o [Regular Expression for R (optional)](http://stat545.com/block022_regular-expression.html){target='blank'}
+
+
+### Tasks
+
+
+* [ ] Use the `readr::read_lines()` function to read in each string - [randomletters.txt](https://byuistats.github.io/M335/data/randomletters.txt){target="blank"} and [randomletters_wnumbers.txt](https://byuistats.github.io/M335/data/randomletters_wnumbers.txt){target="blank"}
+* [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, <U+0085>) and find the quote that is hidden - the quote ends with a period
+* [ ] With the `randomletters_wnumbers.txt` file, find all the numbers hidden and convert those numbers to letters using the letters order in the alphabet to decipher the message
+* [ ] With the `randomletters.txt` file, remove all the spaces and periods from the string then find the longest sequence of vowels.
+* [ ] Save your `.R` script to your repository and be ready to share your code solution at the beginning of class
+* [ ] Schedule a mid-semester 15-minute interview to discuss your progress in the class.
+
 

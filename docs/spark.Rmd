@@ -1,0 +1,33 @@
+---
+title: "Spark and R"
+author: "J. Hathaway"
+date: "November 30, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+I have a decent background in using R for applied needs with Hadoop. I primarily used [RHIPE](https://github.com/delta-rho/RHIPE) and started using [datadr](https://github.com/delta-rho/datadr) as we were developing our big data methods and Pacific Northwest National Laboratory around 2012. While working on big data applications related to climate models, [Spark](https://en.wikipedia.org/wiki/Apache_Spark) started to pop up in conversations.  I seem to remember it being sold as the Hadoop killer but it looks like [leveraging them together is the recommended path](https://www.infoworld.com/article/3014440/big-data/five-things-you-need-to-know-about-hadoop-v-apache-spark.html).
+
+Using RHIPE I could write R code and then send my MapReduce reduce work
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SQYg3pUTLMY" frameborder="0" allowfullscreen></iframe>
+
+https://github.com/trestletech/user2016-sparklyr
+https://github.com/trestletech/user2016-sparklyr/blob/master/boroughs.Rmd
+
+## The Data
+
+https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95
+
+read_csv("https://data.cityofnewyork.us/resource/qiz3-axqb.csv")
+
+https://data.cityofnewyork.us/Education/2006-2012-School-Demographics-and-Accountability-S/ihfw-zy9j
+https://data.cityofnewyork.us/Education/2017-Diversity-Report-Pre-Kindergarten/vrs9-g7kz
+https://data.cityofnewyork.us/Education/2017-2018-Monthly-Attendance/p3s2-wa8x
+https://data.cityofnewyork.us/Transportation/Overhead-Electronic-Signs/yhdx-itry

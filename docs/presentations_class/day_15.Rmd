@@ -1,0 +1,138 @@
+---
+title: "Moving Time Part I"
+author: J. Hathaway
+output: 
+  revealjs::revealjs_presentation:
+      lib_dir: externals
+      keep_md: true
+      incremental: true
+      theme: black
+      highlight: espresso
+      center: true
+      code_folding: hide
+      reveal_options:
+        previewLinks: true
+        mouseWheel: true
+        slideNumber: true
+        maxScale: 3
+        margin: 0
+params:
+  day: 15
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(magrittr)
+library(ggrepel)
+library(knitr)
+library(stringr)
+
+invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
+read_chunk("temp")
+
+
+# case study completed
+cso <- ceiling(params$day/2) - 1
+csn <- ceiling(params$day/2) 
+
+casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
+casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
+
+link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
+link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
+
+# How did we do?
+hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
+
+# current task
+# 
+taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
+link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
+
+# Review
+```
+
+
+# Review
+
+```{r csold, ref.label=casename_old, echo=FALSE, include=FALSE }
+# For case study due last Saturday
+```
+
+`r title.text`
+`r link_old`
+`r hdwd`
+
+
+```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
+# For case study due next Saturday
+```
+
+`r title.text`
+`r link_new`
+
+
+```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
+# For current task that is due
+```
+
+`r title.text`
+`r link_task`
+
+
+```{r stuff, echo=FALSE}
+unlink("temp")
+```
+
+# Settling In
+
+## Socrative Quiz
+
+> - [Socrative Quiz on Time](https://socrative.com): **BYUICLASS**
+
+## R-Studio Connect and Interaction
+
+Time to set up our R-Studio to share interactive documents.
+
+>- shiny.byui.edu:3939 in R-Studio
+
+Viewing on the website.
+
+>- view with shiny.byui.edu
+
+
+
+## library(DT) - DataTables
+
+Make a new Rmd file that just has the following in it (including the yaml)
+
+```{r bob, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r bob2, eval=FALSE}
+library(DT)
+datatable(iris)
+```
+
+Putting information in your file [My interactive](https://shiny.byui.edu/connect/#/apps/3/access)
+
+
+
+
+## Remember the Goal
+
+"The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka!' but 'That's funny...'" -Isaac Asimov
+
+> - [Remembering Good Principles](https://youtu.be/fSgEeI2Xpdc)
+> - [Rauser view on time and data](https://www.youtube.com/embed/coNDCIMH8bk?start=628) - 10:28 to 17:50
+
+> - [Remembering the question](https://www.youtube.com/watch?v=-3dw09N5_Aw) - First 10 minutes
+>    - Correlation does not imply causation... The most popular defense of tiny minds in the face of uncomforatable evidence.
+>    - You are rewarded for finding answers to the "that's funny" statements.
+> - [Statistical Tests](https://www.youtube.com/embed/5Dnw46eC-0o)
+
