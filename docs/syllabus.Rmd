@@ -129,8 +129,8 @@ library(tidyverse)
 library(kableExtra)
 # https://haozhu233.github.io/kableExtra/awesome_table_in_html.html#grouped_columns__rows
 glevel <- data.frame(Grade = c("A", "A-", "B+", "B", "B-", "C", "C-", "D"),
-       `Class Tasks` = c(24, 24, 20, 18, 18, 15, 15, 5),
-       `Case Studies` = c(13, 13, 8, 8, 6, 5, 5, 5),
+       `Class Tasks` = c(24, 22, 20, 18, 18, 15, 15, 5),
+       `Case Studies` = c(13, 11, 8, 8, 6, 5, 5, 5),
        `Semester Project` = c("yes", "yes", "yes", "no", "no", "no", "no", "no"),
        Leadership = c("leader", "leader", "supporter", "supporter", "supporter", "wannabe", "wannabe", "-"), check.names = FALSE)
 

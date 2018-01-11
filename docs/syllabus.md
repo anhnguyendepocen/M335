@@ -139,8 +139,8 @@ We have five concepts that guide our learning objectives.  Click on each to see 
   </tr>
 <tr>
 <td style="text-align:center; padding-left: 2em;" indentlevel="1"> A- </td>
-   <td style="text-align:center;"> 24 </td>
-   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> 22 </td>
+   <td style="text-align:center;"> 11 </td>
    <td style="text-align:center;"> yes </td>
   </tr>
 <tr grouplength="3"><td colspan="4" style="border-bottom: 1px solid;"><strong>Supporter</strong></td></tr>
@@ -194,7 +194,7 @@ In all grade levels above a C-, case study 13 must be completed.
 
 
 * **A:** Complete at least 24 class tasks, 13 case studies, the semester project, and the data science leader task 
-* **A-:** Complete at least 24 class tasks, 13 case studies, the semester project, and the data science leader task 
+* **A-:** Complete at least 22 class tasks, 11 case studies, the semester project, and the data science leader task 
 * **B+:** Complete at least 20 class tasks, at least 8 case studies, at least 8 leadership completions, and all other semester deliverables
 * **B:** Complete at least 18 class tasks, at least 8 case studies, at least 8 leadership completions, and all semester deliverables excluding the semester project.
 * **B-:** Complete at least 18 class tasks, at least 6 case studies, at least 8 leadership completions, and the semester deliverables excluding the semester project.

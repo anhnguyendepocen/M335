@@ -33,6 +33,7 @@ ul {
 * o [Chapter 1:  R for Data Scientists](http://r4ds.had.co.nz/index.html){target='blank'}
 * o [R and R-Studio Practice](https://byuistats.github.io/M335/r_help.html){target='blank'}
 * o [John Rauser Talk](https://youtu.be/fSgEeI2Xpdc){target='blank'}
+* o [Effectively Communicating Numbers (pg 1-13)](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf){target='blank'}
 * o [Chapter 4: R for Data Scientists - Workflow Basics](http://r4ds.had.co.nz/workflow-basics.html){target='blank'}
 * o [Data Scientist Florence Nightengale](http://www.atlasobscura.com/articles/florence-nightingale-infographic){target='blank'}
 * o [Forbes:  Data science demand](https://www.forbes.com/sites/drewhansen/2016/10/21/become-data-scientist/#3e8a4f4c87d3){target='blank'}
@@ -41,7 +42,7 @@ ul {
 * o [Making your first R Markdown File](../rmarkdown_help.html){target='blank'}
 * o [Intro to R Markdown](http://rmarkdown.rstudio.com/articles_intro.html){target='blank'}
 * o [Chapter 27: R for Data Science - R Markdown](http://r4ds.had.co.nz/r-markdown.html){target='blank'}
-* o [Chapter 30: R for Data Science - R Markdwon workflow](http://r4ds.had.co.nz/r-markdown-workflow.html){target='blank'}
+* o [Chapter 30: R for Data Science - R Markdown workflow](http://r4ds.had.co.nz/r-markdown-workflow.html){target='blank'}
 
 #### Week 2
 
@@ -56,6 +57,8 @@ ul {
 * o [R-Studio and the Git GUI](https://www.youtube.com/watch?v=E2d91v1Twcc){target='blank'}
 * o [Creating Questions for your project](https://www.mindtools.com/pages/article/newTMC_88.htm){target='blank'}
 * o [Chapter 5: R for Data Science - Data transformation](http://r4ds.had.co.nz/transform.html){target='blank'}
+* o [DataCamp:  Data Wrangling Chapter of Introduction to Tidyverse](https://campus.datacamp.com/courses/introduction-to-the-tidyverse/data-wrangling-1?ex=1){target='blank'}
+* o [DataCamp:  Data Transformation Chapter of Introduction to Tidyverse](https://campus.datacamp.com/courses/introduction-to-the-tidyverse/grouping-and-summarizing?ex=1){target='blank'}
 
 ##### Case Study Reading
 * o [Chapter 3: R for Data Science - Data visualization](http://r4ds.had.co.nz/data-visualisation.html){target='blank'}
@@ -72,6 +75,7 @@ ul {
 
 ##### Case Study Reading
 * o [What do people do with new data](https://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/){target='blank'}
+* o [Effectively Communicating Numbers (pg 13-20)](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf){target='blank'}
 
 #### Week 4
 
@@ -79,6 +83,7 @@ ul {
 * o [Chapter 7: R for Data Science - Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html){target='blank'}
 * o [devtoools R Package](https://github.com/hadley/devtools){target='blank'}
 * o [Finding data to answer your question](https://www.dataquest.io/blog/free-datasets-for-projects/){target='blank'}
+* o [Find a post from the functional art](http://www.thefunctionalart.com){target='blank'}
 
 ##### Case Study Reading
 * o [Posting Issues on GitHub](https://guides.github.com/features/issues/){target='blank'}
@@ -162,6 +167,7 @@ ul {
 * o [Video 2 on spatial datums](https://www.youtube.com/watch?v=kXTHaMY3cVk){target='blank'}
 * o [Using `library(sf)` to read in spatial data](https://r-spatial.github.io/sf/articles/sf2.html){target='blank'}
 * o [Josh Wills on big data (tech data scientist)](https://www.youtube.com/watch?v=Ewd5PXgLXlU&feature=youtu.be){target='blank'}
+* o [Issues with Spatial Aggregation](https://www.youtube.com/watch?v=wn5larsRHro){target='blank'}
 
 ##### Case Study Reading
 * o [Tidy Spatial Data (Blog Post)](http://strimas.com/r/tidy-sf/){target='blank'}

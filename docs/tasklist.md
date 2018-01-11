@@ -63,9 +63,9 @@ Leadership in data science requires you to be prepared to answer the clients que
 * [ ] Complete LinkedIn, GitHub, Slack profiles that have been connected to our BYU-I data science community
 * [ ] A cover letter stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion
 * [ ] A resume that includes the skills you have learned during our projects
-* [ ] A semester task form that records your completed tasks during the semester
+* [ ] A semester task form that records your completed tasks during the semester (electronic or print)
 * [ ] Semester project submission on GitHub
-* [ ] Submit this material electronically and in person during our exit interview
+* [ ] Submit this material electronically schedule a visit with me
 
 ## Weekly Case Studies
 
@@ -80,7 +80,7 @@ Leadership in data science requires you to be prepared to answer the clients que
     * [ ] Write a one paragraph critique of each visualization
     * [ ] Add the R code below to your `.Rmd` file
     * [ ] Knit the file to `.html` and keep the `.md` file as well
-* [ ] Create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
+* [ ] Create an account on [slack](https://w18dwv.slack.com/signup){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
     * [ ] Upload your intermediary `.md` file to the general channel in our Slack group
 
 #### [Case Study 2](weekly_projects/cs02_details.html)
@@ -101,7 +101,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Case Study 3](weekly_projects/cs03_details.html)
 
-* [ ] Address at least one of the three questions in the background description (if you have time try to tackle all three)
+* [ ] Address at least two of the three questions in the background description (if you have time try to tackle all three)
 * [ ] Create one `.rmd` file that has your report
     * [ ] Have a section for each question
     * [ ] Make sure your code is in the report but defaults to hidden
@@ -233,9 +233,9 @@ Leadership in data science requires you to be prepared to answer the clients que
 * [ ] Complete LinkedIn, GitHub, Slack profiles that have been connected to our BYU-I data science community
 * [ ] A cover letter stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion
 * [ ] A resume that includes the skills you have learned during our projects
-* [ ] A semester task form that records your completed tasks during the semester
+* [ ] A semester task form that records your completed tasks during the semester (electronic or print)
 * [ ] Semester project submission on GitHub
-* [ ] Submit this material electronically and in person during our exit interview
+* [ ] Submit this material electronically schedule a visit with me
 
 ## Daily Class Tasks
 
@@ -244,6 +244,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 1](class_tasks/cs01_details.html)
 
+* [ ] Read the [course sylabus](https://byuistats.github.io/M335/syllabus.html) and make sure you understand our class routine and grading
 * [ ] Get R and R-Studio running on your computer
     * [ ] Install the swirl package `install.packages("swirl")`
     * [ ] Use `library(swirl)` and follow directions to get 'R Programming: The basics of programming in R' course loaded
@@ -260,7 +261,7 @@ Leadership in data science requires you to be prepared to answer the clients que
     * [ ] Follow sub-directions above.
 * [ ] Read a short article about the [data scientist Florence Nightengale](http://www.atlasobscura.com/articles/florence-nightingale-infographic){target="blank"} and write a two to three sentence paragraph critique of her coxcomb graphic based on your perceptions of quality graphics.
     * [ ] In class, be prepared to submit your write up electronically.
-* [ ] Create a [GitHub account](https://github.com/join?source=header-home){target="blank"} and post your github username on the google docs sheet in I-Learn
+* [ ] Create a [GitHub account](https://github.com/join?source=header-home){target="blank"} and post your github username on the [google docs sheet](https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514)
 
 #### [Class Task 3](class_tasks/task03_details.html)
 
@@ -271,7 +272,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 * [ ] Update your README.md in your repository (you will need to give me time to create your repo after you post your username)
     * [ ] Type one or two sentences that describe you
     * [ ] Make sure you pull and push
-* [ ] Check your folder structure in your git repo to match the format for our class - [see MCS 335 Folder Structure](https://byuistats.github.io/M335/tasklist.html)
+* [ ] Check your folder structure in your git repo to match the format for our class - [see MCS 335 Folder Structure](https://byuistats.github.io/M335/git_335.html)
 
 #### [Class Task 4](class_tasks/task04_details.html)
 
@@ -354,6 +355,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 * [ ] With the `randomletters_wnumbers.txt` file, find all the numbers hidden and convert those numbers to letters using the letters order in the alphabet to decipher the message
 * [ ] With the `randomletters.txt` file, remove all the spaces and periods from the string then find the longest sequence of vowels.
 * [ ] Save your `.R` script to your repository and be ready to share your code solution at the beginning of class
+* [ ] Schedule a mid-semester 15-minute interview to discuss your progress in the class.
 
 ### Tasks 13 -24
 

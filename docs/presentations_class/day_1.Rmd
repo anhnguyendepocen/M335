@@ -71,7 +71,7 @@ An almost scientist that can't quite program, often isn't the best statistician 
 
 ## The big picture of R & R-Studio
 
-> - [Socrative.com](https://socrative.com/) **Room ID: BYUI335**
+> - [Socrative.com](https://socrative.com/) **Room ID: BYUICLASS**
 
 ## Getting R-Studio under control
 

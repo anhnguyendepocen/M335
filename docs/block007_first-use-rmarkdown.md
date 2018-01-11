@@ -6,7 +6,9 @@ output:
     toc_depth: 4
 ---
 
-### Overview[^1]
+### Overview
+
+*I lifted this from <http://stat545.com/block007_first-use-rmarkdown.html>*
 
 This describes a hands-on activity where the goal is to author an R Markdown document and render it to HTML.
 
@@ -45,7 +47,7 @@ Do you really want HTML? Do you only want HTML? If so, you can skip this step!
 
 The magical process that turns your R Markdown to HTML is like so: `foo.Rmd --> foo.md --> foo.html`. Note the intermediate markdown, `foo.md`. By default RStudio discards this, but you might want to hold on to that markdown.
 
-Why? GitHub, which we will earn about soon, gives very special treatment to markdown files. They are rendered in an almost HTML-like way. This is great because it preserves all the charms of plain text but gives you a pseudo-webpage for free when you visit the file in the browser. In contrast, HTML is rendered as plain text on GitHub and you'll have to take special measures to see it the way you want.
+Why? GitHub, which we will learn about soon, gives very special treatment to markdown files. They are rendered in an almost HTML-like way. This is great because it preserves all the charms of plain text but gives you a pseudo-webpage for free when you visit the file in the browser. In contrast, HTML is rendered as plain text on GitHub and you'll have to take special measures to see it the way you want.
 
 **Output format** is one of the many things we can control in the YAML frontmatter -- the text at the top of your file between leading and trailing lines of `---`.
 
@@ -152,4 +154,3 @@ __Don't try to change working directory within an R Markdown document__. [Just d
 __Don't be in a hurry to create a complicated sub-directory structure.__ RStudio/`knitr`/`rmarkdown` (which bring you the "Knit HTML" button) are rather opinionated about the working directory being set to the `.Rmd` file's location and about all files living together in one big happy directory. This can all be worked around. But not today.
 
 
-[^1]: I lifted this from <http://stat545.com/block007_first-use-rmarkdown.html>

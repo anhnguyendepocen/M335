@@ -43,6 +43,8 @@ This reading will help you complete the tasks below.
 
 * o [Creating Questions for your project](https://www.mindtools.com/pages/article/newTMC_88.htm){target='blank'}
 * o [Chapter 5: R for Data Science - Data transformation](http://r4ds.had.co.nz/transform.html){target='blank'}
+* o [DataCamp:  Data Wrangling Chapter of Introduction to Tidyverse](https://campus.datacamp.com/courses/introduction-to-the-tidyverse/data-wrangling-1?ex=1){target='blank'}
+* o [DataCamp:  Data Transformation Chapter of Introduction to Tidyverse](https://campus.datacamp.com/courses/introduction-to-the-tidyverse/grouping-and-summarizing?ex=1){target='blank'}
 
 
 ### Tasks

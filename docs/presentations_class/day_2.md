@@ -1,10 +1,44 @@
-# R and MATH/CS 335
-J. Hathaway  
+---
+title: "R and MATH/CS 335"
+author: J. Hathaway
+output: 
+  revealjs::revealjs_presentation:
+      lib_dir: externals
+      keep_md: true
+      incremental: true
+      theme: black
+      highlight: espresso
+      center: true
+      code_folding: hide
+      reveal_options:
+        previewLinks: true
+        mouseWheel: true
+        slideNumber: true
+        maxScale: 3
+        margin: 0
+params:
+  day: 2
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
 
 
 
+# Becoming the Critic.
 
-# The skill of debugging
+
+```r
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+## {data-background-iframe="http://www.perceptualedge.com/example1.php"}
+
+[Visualization of the Day](http://www.perceptualedge.com/example1.php)
+
+# The skill of debugging?
 
 ## Fix the errors
 
@@ -46,12 +80,22 @@ filter(diamond, carat > 3)
 #> Error in filter(diamond, carat > 3) : object 'diamond' not found
 ```
 
-- Make sure you note what `Alt + Shift + K` does?
-
 ## Manuevering in R
 
+- Make sure you note what `Alt + Shift + K` does?
 - [Socrative Team Competition](https://socrative.com/){target="blank"}
-- **Note to Class:**  I am not assigning you stuff to create busy work.  There is a deep assumption that you are coming prepared to class.  **Don't get behind.**
+- **Note to Class:**  I am not assigning you stuff to create busy work.  There is a deep assumption that you are coming prepared to class.  
+- **Don't get behind.**
+
+## R-Lab and Stack Overflow Channel
+
+We will have and R-lab available this semester.
+
+> - TA Introduction (Dylan, McKay, Makayla)
+> - Friday R-Lab: STC 235 - 2:00 to 6:00 pm
+> - Online lab: Stack Overflow and Slack
+>     - <https://stackoverflow.com/c/byu/join>
+>     - <https://slack.com/signin>
 
 # Weekly Case Study
 
@@ -68,7 +112,7 @@ Questions?
 ## Task 3: Let's git going
 
 > - [Task 3](file:///C:/git/github/byuistats/M335/docs/class_tasks/task03_details.html)
-> - [Google Doc](https://byui.brightspace.com/d2l/home/323455)
+> - [Google Doc](https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514)
 
 # How does data change belief?
 
@@ -90,7 +134,5 @@ After she completed her report, Nightingale worked hard to turn its conclusions 
 - [What is the life cycle of a data science project?](https://www.youtube.com/embed/iQBat7e0MQs?rel=0&amp;start=375)
     - Demand for deep analytical talent in the U.S. projected to be 50-60% greater than supply by 2018, leading to a shortage of 140,000 to 190,000 people as well as 1.5 million managers and analysts.
 
-## {data-background-iframe="https://byuistats.github.io/M335/syllabus.html"}
 
-[MATH/CS 335 Syllabus](https://byuistats.github.io/M335/syllabus.html){target="blank"}
 

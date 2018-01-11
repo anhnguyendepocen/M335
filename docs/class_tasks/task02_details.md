@@ -55,5 +55,5 @@ This reading will help you complete the tasks below.
     * [ ] Follow sub-directions above.
 * [ ] Read a short article about the [data scientist Florence Nightengale](http://www.atlasobscura.com/articles/florence-nightingale-infographic){target="blank"} and write a two to three sentence paragraph critique of her coxcomb graphic based on your perceptions of quality graphics.
     * [ ] In class, be prepared to submit your write up electronically.
-* [ ] Create a [GitHub account](https://github.com/join?source=header-home){target="blank"} and post your github username on the google docs sheet in I-Learn
+* [ ] Create a [GitHub account](https://github.com/join?source=header-home){target="blank"} and post your github username on the [google docs sheet](https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514)
 

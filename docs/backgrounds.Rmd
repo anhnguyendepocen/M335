@@ -63,7 +63,7 @@ if (params$pbackground == TRUE) background.title <- "\n### Background"
 
 text <- 
 '
-This task is intended to get all of us on the same page in R.  You will use the `library(swirl)` package to learn how to use R.  We will be covering Lessons 1-7.  Even if you have used R before, this will be an excellent refresher. If you do not get the title of this task, watch [this](https://www.youtube.com/watch?v=SMCsXl9SGgY). 
+This task is intended to get all of us on the same page in R.  You will use the `library(swirl)` package to learn how to use R.  We will be covering Lessons 1-7.  Even if you have used R before, this will be an excellent refresher. If the sending of an email in the swirl practice does not work do not worry about it. If you do not get the title of this task, watch [this](https://www.youtube.com/watch?v=SMCsXl9SGgY). 
 
 '
 text <- paste(title.text, background.title, text, ifelse(params$dtype == "background", paste("* [Details](", file.path("class_tasks", fname), ")", sep = ""), 
@@ -712,11 +712,13 @@ if (params$ptitle == TRUE) title.text <- "## Case Study 1: Critiquing Visualizat
 if (params$pbackground == TRUE) background.title <- "\n### Background"
 
 
+
+
 text <- 
 '
-Your first weekly project requires you to **submit** a review of 2-3 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
+Your first weekly project requires you to **submit** a review of 4-5 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
 
-The **submit** word above will require you to create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  Our slack channel is `f17dwv`, and it requires that you create an account with your `@byui.edu` email account.
+The **submit** word above will require you to create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  Our slack channel is `f18dwv`, and it requires that you create an account with your `@byui.edu` email account.
 
 '
 
@@ -780,7 +782,7 @@ You just started your internship at a big firm in New York, and your manager gav
 Make sure to include one visualization that shows the complexity of the data.
 
 '
-text <- paste(title.text, background.title, text, ifelse(params$dtype == "background", paste("* [Details](", file.path("class_tasks", fname), ")", sep = ""), 
+text <- paste(title.text, background.title, text, ifelse(params$dtype == "background", paste("* [Details](", file.path("weekly_projects", fname), ")", sep = ""), 
                                  paste("* [Homework Schedule](", "../homework_schedule.html", ")", sep = "")))
 
 cat(text)

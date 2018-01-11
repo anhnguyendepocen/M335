@@ -17,9 +17,9 @@ params:
 
 ## Case Study 1: Critiquing Visualizations and Slack Setup 
 ### Background 
-Your first weekly project requires you to **submit** a review of 2-3 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
+Your first weekly project requires you to **submit** a review of 4-5 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
 
-The **submit** word above will require you to create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  Our slack channel is `f17dwv`, and it requires that you create an account with your `@byui.edu` email account.
+The **submit** word above will require you to create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  Our slack channel is `f18dwv`, and it requires that you create an account with your `@byui.edu` email account.
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -35,7 +35,7 @@ This reading will help you complete the tasks below.
 * o [Making your first R Markdown File](../rmarkdown_help.html){target='blank'}
 * o [Intro to R Markdown](http://rmarkdown.rstudio.com/articles_intro.html){target='blank'}
 * o [Chapter 27: R for Data Science - R Markdown](http://r4ds.had.co.nz/r-markdown.html){target='blank'}
-* o [Chapter 30: R for Data Science - R Markdwon workflow](http://r4ds.had.co.nz/r-markdown-workflow.html){target='blank'}
+* o [Chapter 30: R for Data Science - R Markdown workflow](http://r4ds.had.co.nz/r-markdown-workflow.html){target='blank'}
 
 
 ### Tasks

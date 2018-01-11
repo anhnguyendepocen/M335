@@ -1,0 +1,22 @@
+---
+title: "Slack & Stackoverflow Help"
+output:
+  html_document:
+    keep_md: yes
+    toc: false
+
+---
+
+
+
+
+
+## Slack
+
+- **[First use of Slack](https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members):** This page will guide you on creating an account.
+- **[Slack Help Page](https://get.slack.help/hc/en-us/categories/200111606-Using-Slack):** This page has links to the help files for Slack.
+
+## Stack Overflow
+
+- **[Stack Overflow Background and Tips](http://duncanlock.net/blog/2013/06/14/the-smart-guide-to-stack-overflow-zero-to-hero/):**  This is a great page to help you understand how Stack Overflow works. Please read the **Ask Good Questions** section.
+- **[Stack Overflow Channels and BYU-I](stack_byui.html):**

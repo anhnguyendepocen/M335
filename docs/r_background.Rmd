@@ -36,22 +36,6 @@ Below are some references from reputable online sources about the impact and use
 
 We will spend time during class all semester learning new syntax.  During the first two weeks we will spend a little more time learning the basics of R and how to use it (often the most challenging). [Daniel Kaplan's book](http://prep2013.mosaic-web.org/Resources/StartR-kindlepdf-version.pdf) also has a nice introduction.
 
-### Cheat Sheets
-* [Base R Language](http://www.rstudio.com/wp-content/uploads/2016/06/r-cheat-sheet.pdf){target="blank"}
-* [Advanced R Language](http://www.rstudio.com/wp-content/uploads/2016/02/advancedR.pdf){target="blank"}
-* [Advanced Data Visualization](http://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf){target="blank"}
-* [Data Handling and Programming](https://www.ualberta.ca/~ahamann/teaching/renr690/R_Cheat_Data.pdf){target="blank"}
-* [R Reference Card](https://cran.r-project.org/doc/contrib/Short-refcard.pdf){target="blank"}
-* [Others](https://www.rstudio.com/resources/cheatsheets/){target="blank"}
-
-## Installing and Introducing R and R-Studio
-
-* [Getting Software Installed](r_help.html)
-
-## R Help and Script Eval
-
-* [RDocumentation](https://www.rdocumentation.org/){target="blank"}
-
 
 [^1]:  http://prep2013.mosaic-web.org/Resources/StartR-kindlepdf-version.pdf
 [^2]: http://www.computerworld.com/article/2497143/business-intelligence/business-intelligence-beginner-s-guide-to-r-introduction.html

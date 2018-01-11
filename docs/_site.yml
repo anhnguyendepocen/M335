@@ -5,16 +5,20 @@ navbar:
     - text: "Syllabus"
       icon: fa-paperclip
       href: syllabus.html
-    - text: "R"
-      icon: fa-area-chart
-      menu: 
-        - text: "R Background"
-          href: r_background.html
-        - text: "First Use of R"
-          href: r_help.html
-        - text: "R Visualization"
-          href: r_visualization.html
-      href: python_examples.html
+    - text: "Tools"
+      icon: fa-briefcase
+      menu:
+        - text: "R/R-Studio Details"
+          href: rpages.html
+        - text: "----------------"
+        - text: "Git/GitHub Details"
+          href: gitpages.html
+        - text: "----------------"
+        - text: "Slack & Stackoverflow Details"
+          href: compages.html
+        - text: "----------------"
+        - text: "Python Details"
+          href: pypages.html
     - text: "Tasks"
       icon: fa-file-text
       menu:

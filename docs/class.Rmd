@@ -61,7 +61,7 @@ knitr::opts_chunk$set(echo = TRUE)
 * [Spatial Class](spatial_class.html)
 * [hathaway restaurant code](https://byuistats.github.io/M335/presentations_class/restaurants_idaho.html)
 * [temple data sealing activity](temple_sealings.html)
-* [Overview of Git and GitHub us in our course](git_335.html).  Please note the folder structure you need in your repository.
+* [Overview of Git and GitHub use in our course](git_335.html).  Please note the folder structure you need in your repository.
 * [ggplot2 intro](https://stats.idre.ucla.edu/r/seminars/ggplot2_intro/): It has a nice example for `stat_summary()`
 * [git command workflow](https://byuistats.github.io/M335/images/Git_workflow_diagram.png){target="blank"}
 * [Data is Beautiful](https://np.reddit.com/r/dataisbeautiful/){target="blank"}
