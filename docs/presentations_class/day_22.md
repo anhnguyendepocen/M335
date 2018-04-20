@@ -1,5 +1,17 @@
-# Big Data, Data Science, and Tools
-J. Hathaway  
+---
+title: "Big Data, Data Science, and Tools"
+author: J. Hathaway
+params:
+  day: 22
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+
+
+
+
 
 
 
@@ -15,6 +27,9 @@ J. Hathaway
 
 ## Task 22: Introduction to Big Data
 > - [Task 22](https://byuistats.github.io/M335/class_tasks/task22_details.html)
+
+
+
 
 
 

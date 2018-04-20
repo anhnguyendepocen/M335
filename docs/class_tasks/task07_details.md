@@ -46,6 +46,7 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Explore the world data on `financing_healthcare` and create an interesting graphic that highlights this dataset in relation to child mortality.
     * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `financing_healthcare`
     * [ ] Create a graphic that you could use in a final presentation to summarize world child mortatility (`child_mort` column)

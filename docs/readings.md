@@ -55,6 +55,7 @@ ul {
 * o [Chapter 8: R for Data Science - Projects](http://r4ds.had.co.nz/workflow-projects.html){target='blank'}
 * o [MCS 335, Git, and Github use](https://byuistats.github.io/M335/git_335.html){target='blank'}
 * o [R-Studio and the Git GUI](https://www.youtube.com/watch?v=E2d91v1Twcc){target='blank'}
+* o [Hans Rosling: The best stats you've ever seen](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target='blank'}
 * o [Creating Questions for your project](https://www.mindtools.com/pages/article/newTMC_88.htm){target='blank'}
 * o [Chapter 5: R for Data Science - Data transformation](http://r4ds.had.co.nz/transform.html){target='blank'}
 * o [DataCamp:  Data Wrangling Chapter of Introduction to Tidyverse](https://campus.datacamp.com/courses/introduction-to-the-tidyverse/data-wrangling-1?ex=1){target='blank'}
@@ -62,7 +63,7 @@ ul {
 
 ##### Case Study Reading
 * o [Chapter 3: R for Data Science - Data visualization](http://r4ds.had.co.nz/data-visualisation.html){target='blank'}
-* o [Hans Rosling: The best stats you've ever seen](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target='blank'}
+* o [Hans Rosling: The River of Myths](https://youtu.be/OwII-dwh-bk){target='blank'}
 
 #### Week 3
 
@@ -70,12 +71,14 @@ ul {
 * o [Graphical Perception: Theory, Experimentation, and Applications](https://www.jstor.org/stable/2288400?seq=1#page_scan_tab_contents){target='blank'}
 * o [Chapter 28: R for Data Science - Graphics for communication](http://r4ds.had.co.nz/graphics-for-communication.html){target='blank'}
 * o [Chapter 6: R for Data Science - Scripts](http://r4ds.had.co.nz/workflow-scripts.html){target='blank'}
-* o [Chapter 20: R for Data Science - Vectors](http://r4ds.had.co.nz/vectors.html){target='blank'}
-* o [Chapter 13: R for Data Science - Relational Data](http://r4ds.had.co.nz/relational-data.html){target='blank'}
+* o [Chapter 11: R for Data Science - Data Import](http://r4ds.had.co.nz/data-import.html){target='blank'}
 
 ##### Case Study Reading
 * o [What do people do with new data](https://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/){target='blank'}
-* o [Effectively Communicating Numbers (pg 13-20)](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf){target='blank'}
+* o [Posting Issues on GitHub](https://guides.github.com/features/issues/){target='blank'}
+* o [Being a good critiquer](https://sifterapp.com/blog/2012/08/tips-for-effectively-reporting-bugs-and-issues/){target='blank'}
+* o [Example of GitHub Issue conversation](https://github.com/STAT545-UBC/Discussion/issues/387){target='blank'}
+* o [reprex R Package](https://github.com/tidyverse/reprex#what-is-a-reprex){target='blank'}
 
 #### Week 4
 
@@ -84,12 +87,11 @@ ul {
 * o [devtoools R Package](https://github.com/hadley/devtools){target='blank'}
 * o [Finding data to answer your question](https://www.dataquest.io/blog/free-datasets-for-projects/){target='blank'}
 * o [Find a post from the functional art](http://www.thefunctionalart.com){target='blank'}
+* o [Chapter 20: R for Data Science - Vectors](http://r4ds.had.co.nz/vectors.html){target='blank'}
+* o [Chapter 18: R for Data Science - Pipes](http://r4ds.had.co.nz/pipes.html){target='blank'}
 
 ##### Case Study Reading
-* o [Posting Issues on GitHub](https://guides.github.com/features/issues/){target='blank'}
-* o [Being a good critiquer](https://sifterapp.com/blog/2012/08/tips-for-effectively-reporting-bugs-and-issues/){target='blank'}
-* o [Example of GitHub Issue conversation](https://github.com/STAT545-UBC/Discussion/issues/387){target='blank'}
-* o [reprex R Package](https://github.com/tidyverse/reprex#what-is-a-reprex){target='blank'}
+* o [Effectively Communicating Numbers (pg 13-20)](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf){target='blank'}
 
 #### Week 5
 
@@ -97,7 +99,6 @@ ul {
 * o [Chapter 11: R for Data Science - Data Import](http://r4ds.had.co.nz/data-import.html){target='blank'}
 * o [haven R Package](http://haven.tidyverse.org/){target='blank'}
 * o [readxl R Package](http://readxl.tidyverse.org/){target='blank'}
-* o [foreign R Package and `read.dbf()`](https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.dbf){target='blank'}
 * o [downloader R Package](https://github.com/wch/downloader){target='blank'}
 * o [Chapter 12: R for Data Science - Tidy Data](http://r4ds.had.co.nz/tidy-data.html){target='blank'}
 * o [tidy R Package functions](https://rpubs.com/bradleyboehmke/data_wrangling){target='blank'}
@@ -105,11 +106,12 @@ ul {
 
 ##### Case Study Reading
 * o [Hadley on Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf){target='blank'}
-* o [Chapter 18: R for Data Science - Pipes](http://r4ds.had.co.nz/pipes.html){target='blank'}
+* o [foreign R Package and `read.dbf()`](https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.dbf){target='blank'}
 
 #### Week 6
 
 ##### Class Tasks Reading
+* o [Chapter 13: R for Data Science - Relational Data](http://r4ds.had.co.nz/relational-data.html){target='blank'}
 * o [Chapter 4: The Truthful Art: Data, Charts, and Maps for Communication](http://ptgmedia.pearsoncmg.com/images/9780321934079/samplepages/9780321934079.pdf){target='blank'}
 * o [Chapter 14: R for Data Science - Strings](http://r4ds.had.co.nz/strings.html){target='blank'}
 * o [Five principles of effective data visualizations](https://www.thoughtworks.com/insights/blog/five-principles-effective-data-visualizations){target='blank'}
@@ -148,10 +150,10 @@ ul {
 
 ##### Class Tasks Reading
 * o [tidyquants R package](https://github.com/business-science/tidyquant){target='blank'}
+* o [John Rauser Talk (Review)](https://youtu.be/fSgEeI2Xpdc){target='blank'}
 * o [dygraphs for R](http://rstudio.github.io/dygraphs/index.html){target='blank'}
 * o [DT: An R interface to the Data Tables library](http://rstudio.github.io/DT/){target='blank'}
 * o [timekit R package](https://github.com/business-science/timekit){target='blank'}
-* o [John Rauser Talk (Review)](https://youtu.be/fSgEeI2Xpdc){target='blank'}
 * o [How William Cleveland Turned Data Visualization into a Science](https://priceonomics.com/how-william-cleveland-turned-data-visualization/){target='blank'}
 
 ##### Case Study Reading

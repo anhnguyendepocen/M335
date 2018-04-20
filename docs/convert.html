@@ -25,11 +25,22 @@
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -334,7 +345,7 @@ $(document).ready(function () {
 <p>This reading will help you complete the tasks below.</p>
 <ul>
 <li>o <a href="http://vita.had.co.nz/papers/tidy-data.pdf" target="blank">Hadley on Tidy Data</a></li>
-<li>o <a href="http://r4ds.had.co.nz/pipes.html" target="blank">Chapter 18: R for Data Science - Pipes</a></li>
+<li>o <a href="https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.dbf" target="blank">foreign R Package and <code>read.dbf()</code></a></li>
 </ul>
 </div>
 <div id="tasks" class="section level3">
@@ -369,28 +380,6 @@ ul {
 <li>[ ] Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
 <li>[ ] Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
 </ul>
-</div>
-<div id="code" class="section level3">
-<h3>Code</h3>
-<pre class="r"><code>not_restaurants &lt;- c(&quot;development&quot;,&quot;Food preperation center&quot;, &quot;Food Services center&quot;,&quot;bakery&quot;,&quot;Grocery&quot;,&quot;conceession&quot;,&quot;Cafeteria&quot;, &quot;lunchroom&quot;,&quot;school&quot;,&quot;facility&quot;,&quot; hall &quot;)
-standalone_retail &lt;- c(&quot;Wine&quot;,&quot;Spirits&quot;,&quot;Liquor&quot;,&quot;Convenience&quot;,&quot;drugstore&quot;,&quot;Flying J&quot;, &quot;Rite Aid &quot;,&quot;walgreens &quot;,&quot;Love&#39;s Travel &quot;)
-full_service_type &lt;- c(&quot;Ristorante&quot;,&quot;mexican&quot;,&quot;pizza &quot;,&quot;steakhouse&quot;,&quot; grill &quot;,&quot;buffet&quot;,&quot;tavern&quot;,&quot; bar &quot;,&quot;waffle&quot;,&quot;italian&quot;,&quot;steak house&quot;)
-quick_service_type &lt;- c(&quot;coffee&quot;,&quot; java &quot;,&quot; Donut &quot;,&quot;Doughnut&quot;,&quot; burger &quot;,&quot;Ice Cream &quot;,&quot;custard &quot;,&quot;sandwich &quot;,&quot;fast food &quot;,&quot; bagel &quot;)
-quick_service_names &lt;- restaurants$Restaurant[restaurants$Type %in% c(&quot;coffee&quot;,&quot;Ice Cream&quot;,&quot;Fast Food&quot;)]
-full_service_names &lt;- restaurants$Restaurant[restaurants$Type %in% c(&quot;Pizza&quot;,&quot;Casual Dining&quot;,&quot;Fast Casual&quot;)]
-## After the above assignments the below rules need to be implemented
-# Over 4,000 ADD and NEW construction get assigned to Sit Down Restaurants
-# Under 4,000 sqft NEW construction get assigned to Fast Food
-# all Type == &quot;Food/Beverage Service&quot; that don&#39;t get grouped based on the above are called &quot;Unknown&quot;
-
-# Example use case of case_when() function.  Make sure that your ProjectTitle variable has lower case words.
-# With older versions of dplyr .$ProjectTitle is needed in each str_detect.
-    mutate(build_type = case_when(
-      str_detect(ProjectTitle, &quot;alteration&quot;) ~ &quot;Alteration&quot;,
-      str_detect(ProjectTitle, &quot;addition&quot;) ~ &quot;Addition&quot;,
-      str_detect(ProjectTitle, &quot;renov&quot;) ~ &quot;Alteration&quot;,
-      !(str_detect(ProjectTitle, paste(c(&quot;alteration&quot;, &quot;addition&quot;), collapse = &quot;|&quot;))) ~ &quot;New&quot;
-    ))</code></pre>
 </div>
 </div>
 

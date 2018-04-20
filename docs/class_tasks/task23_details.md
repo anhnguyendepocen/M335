@@ -55,6 +55,7 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Repeat the [task 12 tasks](https://byuistats.github.io/M335/class_tasks/task12_details.html){target="blank"} using three functions that you built
 * [ ] Complete listed reading for class discussion
 

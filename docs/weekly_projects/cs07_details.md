@@ -13,7 +13,7 @@ params:
 
 
 
-
+![](cs07_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ## Case Study 7: Counting names in scripture 
 ### Background 
@@ -64,6 +64,28 @@ ul {
 
 
 
+
+
+
+### Code
+
+
+```r
+# To get the standard works data
+download("http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip", "docs/data/scriptures.zip", mode = "wb")
+unzip("docs/data/scriptures.zip", exdir = file.path(getwd(),"docs/data"))
+file.remove("docs/data/scriptures.zip")
+scriptures <- read_csv("docs/data/lds-scriptures.csv")
+
+# to get the Savior names
+bmnames <- read_rds(gzcon(url("https://byuistats.github.io/M335/data/BoM_SaviorNames.rds")))
+
+# my script needed the following functions 
+stringr::str_locate_all()
+stringr::str_replace_all()
+stringr::str_extract_all()
+stringi::stri_stats_latex()
+```
 
 
 

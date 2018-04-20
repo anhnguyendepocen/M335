@@ -49,8 +49,9 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Import the Dart_Expert_Dow_6month_anova data from GitHub (see details in previous task)
-* [ ] The `contestant_period` column is not "tidy" we want to create an `month_end` and `year_end` column from the information it contains
+* [ ] The `contestant_period` column is not "tidy" we want to create a `month_end` and `year_end` column from the information it contains
 * [ ] Save your "tidy" data as an `.rds` object
 * [ ] Create a plot that shows the six-month returns by the year in which the returns are collected
 * [ ] Create a table of the DJIA returns with months on the rows and years in the columns ("spread" the data)

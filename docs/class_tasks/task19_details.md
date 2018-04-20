@@ -52,6 +52,7 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
 * [ ] Create a `.png` image that closely matches my example
     * [ ] Note that `fill = NA` in `geom_sf()` will not fill the polygons with a grey color
     * [ ] Note that `library(USAboundaries)` has three useful functions - `us_cities()`, `us_states()`, and `us_counties()`

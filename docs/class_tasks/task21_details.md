@@ -53,6 +53,7 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
 * [ ] See tasks for [Task 19](https://byuistats.github.io/M335/class_tasks/task19_details.html) or [Task 20](https://byuistats.github.io/M335/class_tasks/task20_details.html)
 
 

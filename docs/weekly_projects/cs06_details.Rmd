@@ -14,27 +14,16 @@ params:
 
 ```
 
-### Code
-
-```{r codestuff, eval=FALSE, echo=TRUE}
-# To get the standard works data
-download("http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip", "docs/data/scriptures.zip", mode = "wb")
-unzip("docs/data/scriptures.zip", exdir = file.path(getwd(),"docs/data"))
-file.remove("docs/data/scriptures.zip")
-scriptures <- read_csv("docs/data/lds-scriptures.csv")
-
-# to get the Savior names
-bmnames <- read_rds(gzcon(url("https://byuistats.github.io/M335/data/BoM_SaviorNames.rds")))
-
-# my script needed the following functions 
-stringr::str_locate_all()
-stringr::str_replace_all()
-stringr::str_extract_all()
-stringi::stri_stats_latex()
-
-
+```{r, eval=FALSE, echo=TRUE}
+not_restaurants <- c("development","Food preperation center", "Food Services center","bakery","Grocery","conceession","Cafeteria", "lunchroom","school","facility"," hall ")
+standalone_retail <- c("Wine","Spirits","Liquor","Convenience","drugstore","Flying J", "Rite Aid ","walgreens ","Love's Travel ")
+full_service_type <- c("Ristorante","mexican","pizza ","steakhouse"," grill ","buffet","tavern"," bar ","waffle","italian","steak house")
+quick_service_type <- c("coffee"," java "," Donut ","Doughnut"," burger ","Ice Cream ","custard ","sandwich ","fast food "," bagel ")
+quick_service_names <- restaurants$Restaurant[restaurants$Type %in% c("coffee","Ice Cream","Fast Food")]
+full_service_names <- restaurants$Restaurant[restaurants$Type %in% c("Pizza","Casual Dining","Fast Casual")]
+## After the above assignments the below rules need to be implemented
+# Over 4,000 ADD and NEW construction get assigned to Sit Down Restaurants
+# Under 4,000 sqft NEW construction get assigned to Fast Food
+# all Type == "Food/Beverage Service" that don't get grouped based on the above are called "Unknown"
 ```
-
-
-
 

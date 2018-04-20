@@ -28,11 +28,22 @@
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -506,16 +517,84 @@ y</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <p>Not all functions have (or require) arguments:</p>
 <pre class="r"><code>date()</code></pre>
-<pre><code>## [1] &quot;Wed Jan 10 12:41:57 2018&quot;</code></pre>
+<pre><code>## [1] &quot;Fri Apr 20 13:07:34 2018&quot;</code></pre>
 <p>Now look at your workspace – in the upper right pane. The workspace is where user-defined objects accumulate. You can also get a listing of these objects with commands:</p>
 <pre class="r"><code>objects()</code></pre>
-<pre><code>## [1] &quot;jenny_rocks&quot;                &quot;this_is_a_really_long_name&quot;
-## [3] &quot;x&quot;                          &quot;y&quot;                         
-## [5] &quot;yo&quot;</code></pre>
+<pre><code>##  [1] &quot;a&quot;                          &quot;avg_x&quot;                     
+##  [3] &quot;b&quot;                          &quot;background.title&quot;          
+##  [5] &quot;best_in_class&quot;              &quot;bob&quot;                       
+##  [7] &quot;body_lines&quot;                 &quot;candidates&quot;                
+##  [9] &quot;case_studies&quot;               &quot;casename_new&quot;              
+## [11] &quot;casename_old&quot;               &quot;cases&quot;                     
+## [13] &quot;check_day&quot;                  &quot;class_tasks&quot;               
+## [15] &quot;csn&quot;                        &quot;cso&quot;                       
+## [17] &quot;d&quot;                          &quot;dates_all&quot;                 
+## [19] &quot;dates_class&quot;                &quot;dates_due&quot;                 
+## [21] &quot;day_map&quot;                    &quot;day_seq&quot;                   
+## [23] &quot;dayone_seq&quot;                 &quot;daytwo_seq&quot;                
+## [25] &quot;fday_name&quot;                  &quot;first_day&quot;                 
+## [27] &quot;first_week&quot;                 &quot;fname&quot;                     
+## [29] &quot;gg_base&quot;                    &quot;hdwd&quot;                      
+## [31] &quot;holidays&quot;                   &quot;i&quot;                         
+## [33] &quot;jenny_rocks&quot;                &quot;labels&quot;                    
+## [35] &quot;last_day&quot;                   &quot;last_day_finals&quot;           
+## [37] &quot;last_week&quot;                  &quot;lesson_links&quot;              
+## [39] &quot;link_new&quot;                   &quot;link_old&quot;                  
+## [41] &quot;link_task&quot;                  &quot;links&quot;                     
+## [43] &quot;md_bullet&quot;                  &quot;md_intro_format&quot;           
+## [45] &quot;md_link&quot;                    &quot;no_saturday&quot;               
+## [47] &quot;numbers&quot;                    &quot;page_image&quot;                
+## [49] &quot;pioneer&quot;                    &quot;pr&quot;                        
+## [51] &quot;presentations&quot;              &quot;readings&quot;                  
+## [53] &quot;saturday_seq&quot;               &quot;sig_sq&quot;                    
+## [55] &quot;task_due&quot;                   &quot;taskname&quot;                  
+## [57] &quot;tasks&quot;                      &quot;text&quot;                      
+## [59] &quot;thanksgiving&quot;               &quot;thanksgiving_a&quot;            
+## [61] &quot;thanksgiving_b&quot;             &quot;this_is_a_really_long_name&quot;
+## [63] &quot;title.text&quot;                 &quot;titlelink&quot;                 
+## [65] &quot;titles&quot;                     &quot;totals&quot;                    
+## [67] &quot;vals&quot;                       &quot;vday&quot;                      
+## [69] &quot;vlink&quot;                      &quot;weeks&quot;                     
+## [71] &quot;x&quot;                          &quot;y&quot;                         
+## [73] &quot;yo&quot;</code></pre>
 <pre class="r"><code>ls()</code></pre>
-<pre><code>## [1] &quot;jenny_rocks&quot;                &quot;this_is_a_really_long_name&quot;
-## [3] &quot;x&quot;                          &quot;y&quot;                         
-## [5] &quot;yo&quot;</code></pre>
+<pre><code>##  [1] &quot;a&quot;                          &quot;avg_x&quot;                     
+##  [3] &quot;b&quot;                          &quot;background.title&quot;          
+##  [5] &quot;best_in_class&quot;              &quot;bob&quot;                       
+##  [7] &quot;body_lines&quot;                 &quot;candidates&quot;                
+##  [9] &quot;case_studies&quot;               &quot;casename_new&quot;              
+## [11] &quot;casename_old&quot;               &quot;cases&quot;                     
+## [13] &quot;check_day&quot;                  &quot;class_tasks&quot;               
+## [15] &quot;csn&quot;                        &quot;cso&quot;                       
+## [17] &quot;d&quot;                          &quot;dates_all&quot;                 
+## [19] &quot;dates_class&quot;                &quot;dates_due&quot;                 
+## [21] &quot;day_map&quot;                    &quot;day_seq&quot;                   
+## [23] &quot;dayone_seq&quot;                 &quot;daytwo_seq&quot;                
+## [25] &quot;fday_name&quot;                  &quot;first_day&quot;                 
+## [27] &quot;first_week&quot;                 &quot;fname&quot;                     
+## [29] &quot;gg_base&quot;                    &quot;hdwd&quot;                      
+## [31] &quot;holidays&quot;                   &quot;i&quot;                         
+## [33] &quot;jenny_rocks&quot;                &quot;labels&quot;                    
+## [35] &quot;last_day&quot;                   &quot;last_day_finals&quot;           
+## [37] &quot;last_week&quot;                  &quot;lesson_links&quot;              
+## [39] &quot;link_new&quot;                   &quot;link_old&quot;                  
+## [41] &quot;link_task&quot;                  &quot;links&quot;                     
+## [43] &quot;md_bullet&quot;                  &quot;md_intro_format&quot;           
+## [45] &quot;md_link&quot;                    &quot;no_saturday&quot;               
+## [47] &quot;numbers&quot;                    &quot;page_image&quot;                
+## [49] &quot;pioneer&quot;                    &quot;pr&quot;                        
+## [51] &quot;presentations&quot;              &quot;readings&quot;                  
+## [53] &quot;saturday_seq&quot;               &quot;sig_sq&quot;                    
+## [55] &quot;task_due&quot;                   &quot;taskname&quot;                  
+## [57] &quot;tasks&quot;                      &quot;text&quot;                      
+## [59] &quot;thanksgiving&quot;               &quot;thanksgiving_a&quot;            
+## [61] &quot;thanksgiving_b&quot;             &quot;this_is_a_really_long_name&quot;
+## [63] &quot;title.text&quot;                 &quot;titlelink&quot;                 
+## [65] &quot;titles&quot;                     &quot;totals&quot;                    
+## [67] &quot;vals&quot;                       &quot;vday&quot;                      
+## [69] &quot;vlink&quot;                      &quot;weeks&quot;                     
+## [71] &quot;x&quot;                          &quot;y&quot;                         
+## [73] &quot;yo&quot;</code></pre>
 <p>If you want to remove the object named <code>y</code>, you can do this</p>
 <pre class="r"><code>rm(y)</code></pre>
 <p>To remove everything:</p>
@@ -580,14 +659,14 @@ sig_sq &lt;- 0.5
 x &lt;- runif(40)
 y &lt;- a + b * x + rnorm(40, sd = sqrt(sig_sq))
 (avg_x &lt;- mean(x))</code></pre>
-<pre><code>## [1] 0.4751741</code></pre>
+<pre><code>## [1] 0.4455774</code></pre>
 <pre class="r"><code>write(avg_x, &quot;avg_x.txt&quot;)
 plot(x, y)
 abline(a, b, col = &quot;purple&quot;)</code></pre>
 <p><img src="r_help_files/figure-html/toy-line-1.png" width="672" /></p>
 <pre class="r"><code>dev.print(pdf, &quot;toy_line_plot.pdf&quot;)</code></pre>
-<pre><code>## png 
-##   2</code></pre>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
 <p>Let’s say this is a good start of an analysis and your ready to start preserving the logic and code. Visit the History tab of the upper right pane. Select these commands. Click “To Source”. Now you have a new pane containing a nascent R script. Click on the floppy disk to save. Give it a name ending in <code>.R</code> or <code>.r</code>, I used <code>toy-line.r</code> and note that, by default, it will go in the directory associated with your project.</p>
 <p>Quit RStudio. Inspect the folder associated with your project if you wish. Maybe view the PDF in an external viewer.</p>
 <p>Restart RStudio. Notice that things, by default, restore to where we were earlier, e.g. objects in the workspace, the command history, which files are open for editing, where we are in the file system browser, the working directory for the R process, etc. These are all Good Things.</p>

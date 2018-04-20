@@ -51,6 +51,7 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Download the data from http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip
 * [ ] Read in the `.csv` file that was in the zip file and examine the structure of the data
 * [ ] Address questions 1 & 2 using R functions from `install.packages("stringr")` and `install.packages("stringi")`

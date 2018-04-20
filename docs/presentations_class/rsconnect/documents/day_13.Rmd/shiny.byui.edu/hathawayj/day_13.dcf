@@ -1,0 +1,12 @@
+name: day_13
+title: day_13
+username: hathawayj
+account: hathawayj
+server: shiny.byui.edu
+hostUrl: http://shiny.byui.edu:3939/__api__
+appId: 134
+bundleId: 240
+url: http://shiny.byui.edu:3939/content/134/
+when: 1518799543.93515
+asMultiple: FALSE
+asStatic: TRUE

@@ -1,21 +1,6 @@
 ---
 title: "Introduction to Math 335"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: black
-      highlight: espresso
-      center: true
-      code_folding: hide
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
-        maxScale: 3
-        margin: 0
 params:
   day: 1
   ptitle: true
@@ -33,8 +18,8 @@ params:
 
 ## When we say "blend" we can just as easily be saying the following.
 
-<span style="font-size:75px"><span style="color:gold">
-An almost scientist that can't quite program, often isn't the best statistician in the room and asks too many questions
+<span style="font-size:75px"><span style="color:darkorange">
+An almost scientist that can't quite program, often isn't the best statistician in the room and asks too many questions.
 </span></span>
 
 ## {data-background-iframe="http://www.byui.edu/mathematics/data-science"}
@@ -82,6 +67,11 @@ An almost scientist that can't quite program, often isn't the best statistician 
     - Understanding `yaml`
     - knitting vs console
     - keeping the `.md` file
+    
+## Coding in groups & R-lab
+
+> - https://doodle.com/create
+> - https://my.byui.edu/ICS/Faculty/
 
 # Is there an art to making visualizations?
 
@@ -104,7 +94,18 @@ An almost scientist that can't quite program, often isn't the best statistician 
 
 > - [notes](https://byuistats.github.io/M335/presentations_class/rauser_notes.html){target="blank"}
 
-# Weekly Case Study 
+# Weekly Process
+
+## Class Tasks
+
+*These tasks can be challenging but should be less time consuming than the weekly case studies. The first two weeks are not as consistent as the remaining weeks.*
+
+> - Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
+
+or
+
+> - Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
+
 
 ## Case Study Format
 
@@ -115,5 +116,10 @@ An almost scientist that can't quite program, often isn't the best statistician 
     2. Compile your `.md` and `.html` file into your git repository
     3. Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
     4. Address 1-2 of the issues posted on your project and push the updates to GitHub
+
+## Class workload
+
+![](day_1_files/figure-revealjs/unnamed-chunk-1-1.png)
+
 
 # Programming Time

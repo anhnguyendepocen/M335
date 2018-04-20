@@ -1,5 +1,17 @@
-# Getting Comfortable
-J. Hathaway  
+---
+title: "Getting Comfortable"
+author: J. Hathaway
+params:
+  day: 20
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+
+
+
+
 
 
 
@@ -19,26 +31,14 @@ J. Hathaway
 
 
 
-# Questions & Code
-
-## Joseph's Question
-
-Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence
 
 
-```r
-dams_path <- "https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip"
-df <- tempfile(); uf <- tempfile()
-download(dams_path, df, mode = "wb")
-unzip(df, exdir = uf)
-dams <- read_sf(uf)
-file.remove(df); file.remove(uf)
-```
+# Code in the tidyverse
+
 
 ## My old code
 
 Try to write out what this is doing?
-
 
 
 ```r
@@ -110,14 +110,24 @@ gcam_totals <- gcamtt %>%
 
 ## geofacet challenge
 
-Use the geofacet package to build a map that depicts the variables important more than the spatial area.
+**Use the geofacet package to build a map that depicts the important variables more than the spatial area.**
 
 > - Will need to aggregate your data the state level.
-> - Will need to use `install.packages("geofact")` and the `facet_geo()` function.
+> - Will need to use `install.packages("geofacet")` and the `facet_geo()` function.
 
-[data](../data/nytimes_presidential_elections_2016_results_county.csv")
+[data](../data/nytimes_presidential_elections_2016_results_county.csv)
 
 ## Checking out some results
 
 - Who has pushed their graphic?
 - [Check these out](http://www.businessinsider.com/2016-election-results-maps-population-adjusted-cartogram-2016-11/#heres-the-basic-electoral-college-map-with-states-that-hillary-clinton-won-in-blue-and-states-that-donald-trump-won-in-red-assuming-that-trumps-narrow-lead-in-michigan-continues-to-hold-1)
+
+## Semester Project Discussion
+
+Please make your own issue right now.
+
+> - Use my issue as a starting point - <https://github.com/BYUI335/hathaway/issues/16>.
+> - Create a new folder in your repository that is called `semester_project`.
+> - If you would like to alter the project, then post a comment to the semester project issue with your update.
+> - Call me out and ask me to review and approve changes.
+

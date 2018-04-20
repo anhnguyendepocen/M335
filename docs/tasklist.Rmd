@@ -56,31 +56,29 @@ This page is provided to give you a one-page view of your task completion throug
 
 The deliverables for your [semester project](project.html) are assigned in [case study 1](weekly_projects/cs01_details.html) and [case study 12](weekly_projects/cs12_details.html). However you should keep a steady workflow on this project throughout the semester.  
 
-#### [Leadership](leadership.html)
+#### [Leadership](teamlead.html)
 
-Leadership in data science requires you to be prepared to answer the clients questions when the team meeting is scheduled.  We are treating class like the team meeting and you need to be prepared to answer and ask questions about the driving objectives from the client.
+Leadership in data science requires you to be prepared to answer the clients questions when the team meeting is scheduled.  We are treating class like the team meeting and you need to be [prepared to answer](cheating.html) and ask questions about the driving objectives from the client.
 
 ##### Data Science Leader (A level)
 
-* [ ] Complete the class task by midnight of the due date at least 18 times.
-* [ ] Complete weekly case study by midnight of the due date at least 10 times.
-* [ ] Supporting other students that need help getting through the last difficulties they had with the task or case study of the previous week.
+* [ ] Be the [team lead](teamlead.html) of the Tuesday case study presentation at least 3 times.
+* [ ] Complete at least 18 class task [on time](cheating.html).
+* [ ] Complete at least 10 case studies [on time](cheating.html).
 
 ##### Data Science Supporter (B level)
 
-* [ ] Complete the class task by midnight of the due date at least 12 times.
-* [ ] Complete weekly case study by midnight of the due date at least 6 times.
-* [ ] Supporting other students that need help getting through the last difficulties they had with the task or case study of the previous week.
-
+* [ ] Be the [team lead](teamlead.html) of the Tuesday case study presentation at least 2 times.
+* [ ] Complete at least 12 class task on time.
+* [ ] Complete at least 6 case studies on time.
 
 ##### Data Science Wannabe (C level)
 
-* [ ] Complete the class task by midnight of the due date at least 8 times.
-* [ ] Complete weekly case study by midnight of the due date at least 4 times.
-* [ ] Supporting other students that need help getting through the last difficulties they had with the task or case study of the previous week.
+* [ ] Be the [team lead](teamlead.html) of the Tuesday case study presentation at least 1 time.
+* [ ] Complete at least 8 class task on time.
+* [ ] Complete at least 4 case studies on time.
 
-
-#### Portfolio
+#### [Portfolio](weekly_projects/cs13_details.html)
 
 [Case study 13](weekly_projects/cs13_details.html) provides the checklist items for your portfolio. This portfolio package will be the basis of your final grade. 
 
@@ -88,6 +86,13 @@ Leadership in data science requires you to be prepared to answer the clients que
 md_bullet(cases, group = list("Number" = 13))
 
 ```
+
+#### Coding Challenge
+
+On the last day of class each of you will have the 1.5 hours of class to complete a coding challenge.  You will not be able to work with others, but will be able to ask questions of the teacher in class. The coding challenge will use the techniques and programming developed from the course.
+
+1. **You must pass the challenge to keep grade earned from the [completed tasks](https://byuistats.github.io/M335/syllabus.html#competency_scale).**
+2. Failure to pass the challenge will lower your 1-2 steps.
 
 ## Weekly Case Studies
 

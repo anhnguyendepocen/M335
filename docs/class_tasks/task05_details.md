@@ -47,6 +47,7 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate but poorly built to communicate data.
 * [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate and optimizes data communication.
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your 2 graphics and the choices you made in the data presentation

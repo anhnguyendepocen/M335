@@ -1,172 +1,198 @@
-# Exploratory Data Analysis
-J. Hathaway  
+---
+title: "Using ggplot2"
+author: J. Hathaway
+params:
+  day: 5
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
 
 
 
-# Week 2 Review
+# Great Quotes
 
-## Task 5
+## Hans
 
-Please go to a white board and write down the necessary lines of code to read in the data from the website to the console and in your `.rmd` file.
+**It is only by measuring that we can cross the river of myths.**
 
-* What is the difference between `read.csv()` and `read_csv()`
-* Read [this link](https://csgillespie.github.io/efficientR/5-3-importing-data.html) and take some time to make a note in your repository about the benefits.
+> - [Hans Rosling](https://youtu.be/OwII-dwh-bk)
 
-## Case Study 2
+# Becoming the Critic.
 
-* [Reveiw Class Work](https://github.com/BYUI335/hathaway/issues)
 
-## Git, GitHub, and R-Studio
+```r
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
 
-How are we doing with files and folder structures - [Git reading](https://byuistats.github.io/M335/git_335.html)
+## {data-background-iframe="http://www.perceptualedge.com/example4.php"}
 
-* Take a few minutes to make sure we all have the same structure.
+[Visualization of the Day](http://www.perceptualedge.com/example4.php)
 
-## Slack, GitHub issues, and communication
 
-* Remember there is no `dumb` question.  
-    * However, always check to see if your question has already been answered.
+## My Attempt at a graphic
+
+![](day_5_files/figure-revealjs/fewfix-1.png)
+
+
+
+
+
+
+
+
+
+
+# Team Discussion
+
+
+
+## Case Study 2: Wealth and Life Expectancy (Gapminder)
+
+> - The [Google spreadsheet link](https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing)
+> - [Case Study 2](https://byuistats.github.io/M335/weekly_projects/cs02_details.html)
+> - [How did we do?](https://github.com/BYUI335/hathaway)
+
+
+
+
+## Case Study 3: Becoming a databender
+> - [Case Study 3](https://byuistats.github.io/M335/weekly_projects/cs03_details.html)
+
+
+
+
+## Task 5: Making bad graphics
+> - [Task 5](https://byuistats.github.io/M335/class_tasks/task05_details.html)
+
+
+
+
+
+
+
+
+
+## Github Activity
+
+> * [Watching Class Activity](https://github.com/BYUI335/M335_HathawayJ/issues/15)
+
+
+## Virtual Questions and Support
 
 * How is slack working?
     * Threaded conversations
     * Two channels for help?
 
-* GitHub issue vs Slack post
-    * [class_public](https://github.com/BYUI335/class_public/issues)
+* Stack Overflow vs Slack post
+    * [Stack Overflow BYUI](https://stackoverflow.com/c/byu/join)
     * [slack post](https://slack.com/)
 
 * Quick help vs detailed support
-* Questions vs Issues
 
+# The Graphic Tool Set
 
-# What is EDA?
+## The grammar of graphics
 
-## Exploratory Data Analysis
+> - [An overview of the grammar](https://www.youtube.com/embed/uiTc55clwuA?rel=0)
+> - [ggplot2 specifics](https://www.youtube.com/embed/PiY9hwOkL8U?rel=0)
 
-EDA is fundamentally a creative process. And like most creative processes, the key to asking quality questions is to generate a large quantity of questions.
- 
-> 1. What type of variation occurs within my variables?
+## Cleveland's Examples
 
-> 2. What type of covariation occurs between my variables?
+There were three democratic candidates.  We are going to use the following plots to help us understand the constituency that helped the winner in the primaries.
 
-# Exploring Old Faithful
+- [1984 Primaries](https://en.wikipedia.org/wiki/Democratic_Party_presidential_primaries,_1984)
+- [Mondale, Hart, Jackson Visualization](../images/Cleveland_1_ok.png){target="blank"}
+- [Better Mondale, Hart, Jackson Visualisation](../images/Cleveland_1_better.png){target="blank"}
+- How much time do you think it took Bill Cleveland in th 80's to make each graph?
 
-## Exploring Old Faithful goals
-
-> 1. **Make the [histogram shown in the book](http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png) with the black and white theme and an improved x-axis label.**
-
-## Exploring Old Faithful (1)
-
-
-```r
-faithful %>%
-  ggplot(aes(x = eruptions)) + 
-    geom_histogram(color = "white") +
-    theme_bw() +
-    labs(x = "Duration of eruption (minutes)", 
-         y = "Number of Observations")
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-1-1.png)
-
-## Exploring Old Faithful goals
-
-> 1. Make the [histogram shown in the book](http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png) with the black and white theme and an improved x-axis label.
-> 2. **Use the mutate function to modify our plot to fill the histogram for two groups of waiting times.**
-
-
-```r
-mutate(waiting_group = case_when(waiting < 67 ~ " < 67 min",
-                                   waiting >= 67 ~ " > 67 min"))
-```
-
-## Exploring Old Faithful (2)
+## Class Activity: Getting Started
 
 
 
-```r
-faithful %>%
-  mutate(waiting_group = case_when(waiting < 67 ~ " < 67 min",
-                                   waiting >= 67 ~ " > 67 min")) %>%
-  ggplot(aes(x = eruptions, fill = waiting_group)) + 
-    geom_histogram(color = "white") +
-    scale_fill_brewer(type = "qual") +
-    theme_bw() + theme(legend.position = "bottom") +
-    labs(x = "Duration of eruption (minutes)", 
-         fill = "Duration\nof Wait", y = "Number of Observations")
-```
+Get the above code working.  We will be tweaking it using ggplot for the next part.
 
-![](day_5_files/figure-revealjs/unnamed-chunk-3-1.png)
+## Labelling the outside
 
-## Exploring Old Faithful goals
+Complete the following - **Create clean labels for the x and y axes and zoom in on the y-axis from 50 to 100 minutes. Also have breaks every 15 minutes**
 
-> 1. Make the [histogram shown in the book](http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png) with the black and white theme and an improved x-axis label.
-> 2. Use the mutate function to modify our plot to fill the histogram for two groups of waiting times.
+> * labelling - Axes, Titles, and Legends
+
+> * xy Scales - `scale_x_`, `scale_y`, `coord_`
+>    * Setting breaks and changing labels
+>    * Transforming scale
 
 
-```r
-mutate(waiting_group = case_when(waiting < 67 ~ " < 67 min",
-                                   waiting >= 67 ~ " > 67 min"))
-```
-
-> 3. **Use the wating variable to make a hexbin plot of the relationship between waiting time and duration.**
 
 
-## Exploring Old Faithful (3)
+## Labelling the inside
+
+Complete the following - **1) Color the points of `fl_sc` by `origin` using the brewer scale. 2) Color the points of `fl_sc` by `arr_delay`**
+
+> * Annotations - Marking points
+> * color & fill scales
+>    * `scale_color_`
+>    * `scale_fill_`
+>    * `scale_gradient_`
 
 
-```r
-faithful %>%
-ggplot(aes(x = eruptions, y = waiting)) + 
-  geom_hex() + theme_bw() +
-  labs(x = "Duration of eruption (minutes)", 
-       y = "Time between eruptions (minutes)", 
-       fill = "Number of\nObservations")
-```
 
-![](day_5_files/figure-revealjs/unnamed-chunk-5-1.png)
 
-# Understanding terms
+## Putting the legend on the inside
 
-## Socrative Quiz
+Complete the following - **1) Color the points of `fl_sc` by `origin` using the brewer scale and use the directlabel package to move the labels into the plotting region.**
 
-> - [Socrative: Exploratory Analysis](https://socrative.com/)
+> * `library(directlabels)`
+>    * http://directlabels.r-forge.r-project.org/examples.html
+>    * `geom_dl()` and `direct.label()`
 
-# Displaying multiple distributions
+
+
+
+## Changing the feel
+
+Complete the following - **Use a `theme_() to create a different look for your graphic and change the orientiation of the x-axis test to 35 degrees**
+
+
+> * Themes (check out `library(ggthemes)`)
+> * `ggsave()`
+
+
+
+
+
+
+# Displaying distributions of multiple groups for decision making
 
 ## Clarity vs. Complication
 
-Data can get complicated very fast. How do we provide depth of variability understanding without overwhelming the visualization user?
+> - What do we know after looking at this plot?
+> **How do we provide depth of variability understanding without overwhelming the visualization user?**
+
+
+![](day_5_files/figure-revealjs/cc1-1.png)
+
+
+
+Remember, data can get complicated very fast. 
+
+
+## Distribution background
 
 * [violin plots](http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/)
 * [beeswarm plots](https://github.com/eclarke/ggbeeswarm)
-* [letter-value boxplots](https://github.com/hadley/lvplot)
+* [letter-value box-plots](https://github.com/hadley/lvplot)
 
 Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
-
-The remaining slides are draft.
 
 
 ## Histograms (1)
 
 What don't we like about this plot?
 
-
-```r
-library(nycflights13)
-library(tidyverse)
-library(magrittr)
-# plot code for histograms
-
-flights %>% 
-    ggplot(aes(x = dep_delay)) +
-    facet_wrap(~carrier) +
-    geom_histogram(bins = 150, color = "white") +
-    coord_cartesian(xlim = c(-50, 250)) +
-    theme_bw()
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-6-1.png)
+![](day_5_files/figure-revealjs/bbbb3-1.png)
 
 
 ## Histograms (2)
@@ -174,19 +200,7 @@ flights %>%
 * What changed in this histogram?
 * What don't we like about this plot?
 
-
-```r
-# plot code for histograms
-
-flights %>% 
-    ggplot(aes(x = dep_delay)) +
-    facet_wrap(~carrier, scales = "free_y") +
-    geom_histogram(bins = 150, color = "white") +
-    coord_cartesian(xlim = c(-50, 250)) +
-    theme_bw()
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-7-1.png)
+![](day_5_files/figure-revealjs/bbbbb5-1.png)
 
 
 ## Boxplots
@@ -194,18 +208,7 @@ flights %>%
 * What don't we like about this plot?
 * How hard is it to explain?
 
-
-```r
-gg_base <- flights %>%
-  ggplot(aes(x = carrier, y = dep_delay)) +
-    coord_cartesian(ylim = c(-50, 250)) +
-    theme_bw()
-# Now add varied distribution geoms
-
-gg_base + geom_boxplot() 
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-8-1.png)
+![](day_5_files/figure-revealjs/bbbbbb444-1.png)
 
 
 ## Violin plots
@@ -213,13 +216,7 @@ gg_base + geom_boxplot()
 * What don't we like about this plot?
 * How hard is it to explain?
 
-
-```r
-# Now add varied distribution geoms
-gg_base + geom_violin()
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-9-1.png)
+![](day_5_files/figure-revealjs/violin-1.png)
 
 
 ## Beeswarm plots (1)
@@ -227,72 +224,32 @@ gg_base + geom_violin()
 * What don't we like about this plot?
 * How hard is it to explain?
 
-
-```r
-# Now add varied distribution geoms
-library(ggbeeswarm)
-gg_base + geom_quasirandom(alpha = .6, size = .75)
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-10-1.png)
+![](day_5_files/figure-revealjs/beeswarm-1.png)
 
 ## Beeswarm plots (1)
 
 * What don't we like about this plot?
 * How hard is it to explain?
 
-
-```r
-# Now add varied distribution geoms
-library(ggbeeswarm)
-gg_base + geom_quasirandom(alpha = .6, size = .75) + 
-  coord_cartesian(ylim = c(-50, 500)) 
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-11-1.png)
+![](day_5_files/figure-revealjs/beeswarm2-1.png)
 
 ## Letter-Value boxplots (1)
 
 * What don't we like about this plot?
 * How hard is it to explain?
 
-
-```r
-# Now add varied distribution geoms
-library(lvplot)
-gg_base + geom_lv(aes(fill = ..LV..)) + scale_fill_lv()
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-12-1.png)
+![](day_5_files/figure-revealjs/lettervalue-1.png)
 
 ## Letter-Value boxplots (2)
 
 * What don't we like about this plot?
 * How hard is it to explain?
 
-
-```r
-# Now add varied distribution geoms
-library(lvplot)
-gg_base + geom_lv(aes(fill = ..LV..)) + 
-  scale_fill_lv() + 
-  coord_cartesian(ylim = c(-50, 500)) 
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-13-1.png)
+![](day_5_files/figure-revealjs/lettervalue2-1.png)
 
 ## Letter-Value boxplots (3)
 
 * What don't we like about this plot?
 * How hard is it to explain?
 
-
-```r
-# Now add varied distribution geoms
-library(lvplot)
-gg_base + geom_lv(aes(fill = ..LV..)) + 
-  scale_fill_lv() + 
-  coord_cartesian(ylim = c(-50, 1500)) 
-```
-
-![](day_5_files/figure-revealjs/unnamed-chunk-14-1.png)
+![](day_5_files/figure-revealjs/lv3-1.png)

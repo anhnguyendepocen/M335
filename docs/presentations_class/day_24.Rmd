@@ -1,21 +1,6 @@
 ---
 title: "Remembering the Art of Visualization"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: black
-      highlight: espresso
-      center: true
-      code_folding: hide
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
-        maxScale: 3
-        margin: 0
 params:
   day: 24
   ptitle: true
@@ -25,53 +10,46 @@ params:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-library(tidyverse)
-library(magrittr)
-library(ggrepel)
-library(knitr)
-library(stringr)
 
-invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
-read_chunk("temp")
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
-
-# case study completed
-cso <- ceiling(params$day/2) - 1
-csn <- ceiling(params$day/2) 
-
-casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
-casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
-
-link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
-link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
-
-# How did we do?
-hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
-
-# current task
-# 
-taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
-link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
 ```
 
-# Review
+```{r child=md_intro_format}
 
-```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
-# For case study due next Saturday
 ```
 
-`r title.text`
-`r link_new`
+
+# Discussing the Art
+
+## Tools
+
+Learning to properly use tools empowers us to make change.
+
+![tools](../images/tools_evolution.png)
+
+## The 8-fold path
+
+1. Simplify
+2. Explore
+3. Compare
+4. Attend
+5. View diversely
+6. Respond
+7. Be skeptical
+8. Ask why
+
+## Compare
+
+The primary question of analysis is "Compared to what?"
+
+- Tufte
+
+## Attend
+
+We need to make graphics that allow people to attend to the elements that matter
+
+http://viscoglab.psych.ubc.ca/videos/
 
 
-```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
-# For current task that is due
-```
-
-`r title.text`
-`r link_task`
-
-
-```{r stuff, echo=FALSE}
-unlink("temp")
-```

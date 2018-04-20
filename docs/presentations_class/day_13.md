@@ -1,111 +1,158 @@
-# Understanding Time
-J. Hathaway  
+---
+title: "Getting control of Factors"
+author: J. Hathaway
+params:
+  day: 13
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
 
 
 
 
-# Review
+# Becoming the Critic.
 
-## Case Study 6: Counting names in scripture
+
+```r
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+# Thought for the day
+
+## Greatness
+
+<iframe width="800" height="400" src="https://www.youtube.com/embed/XcbSCnUXOkk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+## The Power to Become
+
+<iframe src='https://players.brightcove.net/710874264001/default_default/index.html?directedMigration=true&videoId=5702222031001&' allowfullscreen frameborder=0 width = 800, height = 400></iframe>
+
+
+## Reboot
+
+Time for a reboot!  Please read the following updates to the course.  By the end of this discussion, I would like each of you to have a proposed a plan to complete the semester strong and what grade you would like based on your plan. 
+
+**Be creative, sincere, and committed.**
+   
+> * Please reread the [syllabus](https://byuistats.github.io/M335/syllabus.html) and address the following question in your repository readme.md. **Why have we built this class with the current grading structure and task format?**
+
+## Reboot Details
+
+**Please address this final question in your repository readme.**
+
+>    1. What are your goals for the remainder of the semester to get the grade you desire?
+>    2. How will you tackle these goals?
+
+
+
+
+
+
+
+
+
+
+# Team Discussion
+
+
+
+##  Case Study 6: The collapse of construction in Idaho
+
+> - The [Google spreadsheet link](https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing)
 > - [Case Study 6](https://byuistats.github.io/M335/weekly_projects/cs06_details.html)
 > - [How did we do?](https://github.com/BYUI335/hathaway)
 
 
 
 
-## Case Study 7: It's about time
+## Case Study 7: Counting names in scripture
 > - [Case Study 7](https://byuistats.github.io/M335/weekly_projects/cs07_details.html)
 
 
 
 
-## Task 13:  How is the weather?
+## Task 13: Controlling categorical variables (factors)
 > - [Task 13](https://byuistats.github.io/M335/class_tasks/task13_details.html)
 
 
 
 
 
-# It is about time
-
-## The March Visualization
-
-In his iconic flow map of Napoleon's catastrophic 1812 invasion of Russia, Charles Joseph Minard blends and bends temporal and spatial representations. The path and number of outward-bound soldiers is represented by an initially thick tan ribbon while the dwindling numbers of retreating survivors are represented by a narrowing black band. In this visualization, the time it took to march into Russia is not clear. The only time stamps shown are for the return trip and progressing from right to left. In a sense, time is "bent" to advance the impact of the visual narrative.
-
-> - [The Image](http://uxmag.com/sites/default/files/uploads/whitney-its-about-time/Minard.png)
-
-
-## The Walmart March Visualization
-
-> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
-> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
-
-## The wind march
-
-> - [Current Wind](http://hint.fm/wind/)
-
-## The movie march
-
-What do we like? dislike?
-
-> - [Movie Performance over Time](http://www.nytimes.com/interactive/2008/02/23/movies/20080223_REVENUE_GRAPHIC.html?_r=0)
-
-# Date and Times
-
-## Notes
-
-- Note that when you use date-times in a numeric context (like in a histogram), 1 means 1 second, so a binwidth of 86400 means one day. For dates, 1 means 1 day.
-
-- Hawaii does not observe Daylight Saving Time and neither does Arizona (although the Navajo Nation, in northeastern Arizona, does). For many years, most of Indiana did not observe Daylight Saving Time with the exception of 10 counties. Beginning in 2006, all of Indiana now observes Daylight Saving Time. 
-
-## The Creators
-
-> - ymd(), mdy(), dmy(), ydm()
-> - make_date(), make_datetime()
-
-**Open R-Studio and Convert the following strings to date objects.**
-
-> - "January 21st, 2017"
-> - "2012-01-01"
-> - "March 2016 - 23"
-
-## The Creators (part 2)
 
 
 
-```r
-library(tidyverse)
-date_cols <- tibble(month = c(1, 3, 7), 
-                    day = c(23, 18, 1), 
-                    year = c(2017, 2017, 2016))
+# Discussing Use Cases
 
-# Will this one work in make_date()?
-date_cols <- tibble(month = c("Jaunary", "March", "July"), 
-                    day = c(23, 18, 1), 
-                    year = c(2017, 2017, 2016))
-```
+## Call Center all
+
+Who can tell the story of the call center data visualizations?  
+
+> - [reading](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf){target="blank"}
+
+Of course, I was told the mean time to closure was some number of minutes, either 2 or 20 or 200 or something, I forget; it really doesn't matter for this discussion. They told me the mean, so naturally I asked for the raw, atomic-level data. 
+
+## The data dive
+
+- They gave me the data: a printout from an SQL routine that told me, accurate to twenty decimal places (I am not making this up!), the mean time to closure.
+    - No, I need the data that you used to get these means; do you have that data?
+
+- After several weeks, I was given a data set with hundreds of call durations.
+    - Do you have the start and stop times from which you calculated these durations, the actual times the calls came in and when the cases were opened and closed?
+
+- After several more weeks, I finally got the data: among other things, start and
+stop times for each of the calls. 
+
+## The call center data graphics
+
+> - [All Calls](callcenter_all.png){target="blank"}
+> - [Contractor Calls](callcenter_contract.png){target="blank"}
+> - [Full-Time Calls](callcenter_fulltime.png){target="blank"}
+
+#  Factoring in control
+
+## Using Factors to improve communication
+
+**Now that we have learned about factors let's take some time to fix our Case Study 6 work.**
+
+>  1. Let's correctly sort our x-axes and then include both bars when we are making bar plots.
+>  2. Let's fix our axis labels using legends.
+>  3. Is there something better we can do than bar-plots?
 
 
-## The Formaters
+## Your code or My code
 
-You can pull out individual parts of the date with the accessor functions; year(), month(), mday() (day of the month), yday() (day of the year), wday() (day of the week), hour(), minute(), and second().
+If your code from case study 6 has enough to address the questions you can use your own code.  If not let's use mine.
 
-**Challenge**
+> - [Hathaway Code for Case Study 6](https://byuistats.github.io/M335/presentations_class/restaurants_idaho.html)
 
-> - Tell me what weekday "March 23, 2016" falls on.
-> - What day of the year was it?
 
-## The Changers (1)
+## Sorting and including factor levels
 
-> - floor_date(), 
-> - round_date(), and 
-> - ceiling_date()
+**with tidyr and dplyr**
 
-## The Changers (2)
 
-**Tackle the Following**
 
-- Add one month to "January 31st".  `jan31 <- ymd("2013-01-31")`
-- Add 27 hours and 15 minutes to "January 31st, 2013 06:35:27" (Use Sys.timezone(location = TRUE) or OlsonNames() to see a list of timezones)
-- https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html
+**with ggplot2**
+
+
+
+
+
+## Fixing axes
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -53,10 +53,9 @@ This reading will help you complete the tasks below.
 
 
 * [ ] Use the `readr::read_lines()` function to read in each string - [randomletters.txt](https://byuistats.github.io/M335/data/randomletters.txt){target="blank"} and [randomletters_wnumbers.txt](https://byuistats.github.io/M335/data/randomletters_wnumbers.txt){target="blank"}
-* [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, <U+0085>) and find the quote that is hidden - the quote ends with a period
+* [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, …) and find the quote that is hidden - the quote ends with a period
 * [ ] With the `randomletters_wnumbers.txt` file, find all the numbers hidden and convert those numbers to letters using the letters order in the alphabet to decipher the message
 * [ ] With the `randomletters.txt` file, remove all the spaces and periods from the string then find the longest sequence of vowels.
 * [ ] Save your `.R` script to your repository and be ready to share your code solution at the beginning of class
-* [ ] Schedule a mid-semester 15-minute interview to discuss your progress in the class.
 
 

@@ -43,13 +43,13 @@ This reading will help you complete the tasks below.
 * o [Chapter 11: R for Data Science - Data Import](http://r4ds.had.co.nz/data-import.html){target='blank'}
 * o [haven R Package](http://haven.tidyverse.org/){target='blank'}
 * o [readxl R Package](http://readxl.tidyverse.org/){target='blank'}
-* o [foreign R Package and `read.dbf()`](https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.dbf){target='blank'}
 * o [downloader R Package](https://github.com/wch/downloader){target='blank'}
 
 
 ### Tasks
 
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Use the appropriate functions in `library(readr)`, `library(haven)`, `library(readxl)` to read in the five files found on [GitHub](https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova){target="blank"}
     * [ ] Use `read_rds(gzcon(url("WEBLOCATION.rds")))` to download and load the `.rds` file type
     * [ ] Use the `library(downloader)` R package and use the `download(mode = "wb")` function to download the xlsx data as `read_xlsx()` cannot read files from the web path
@@ -58,5 +58,6 @@ This reading will help you complete the tasks below.
 * [ ] Use one of the files to make a graphic showing the performance of the Dart, DJIA, and Pro stock selections
     * [ ] Include a boxplot, the jittered returns, and the average return in your graphic
 * [ ] Save your `.R` script and your image to your repository and be ready to share your code that built your graphic in class
+* [ ] Schedule a mid-semester [15-minute interview](https://byuistats.github.io/M335/visitme.html) to discuss your progress in the class.
 
 

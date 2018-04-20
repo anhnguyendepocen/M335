@@ -20,7 +20,7 @@ You will also be responsible for getting R and Rstudio installed and running.
 
 ## Task 2: Wax On, Wax off with Swirl 
 ### Background 
-This task is intended to get all of us on the same page in R.  You will use the `library(swirl)` package to learn how to use R.  We will be covering Lessons 1-7.  Even if you have used R before, this will be an excellent refresher. If you do not get the title of this task, watch [this](https://www.youtube.com/watch?v=SMCsXl9SGgY). 
+This task is intended to get all of us on the same page in R.  You will use the `library(swirl)` package to learn how to use R.  We will be covering Lessons 1-7.  Even if you have used R before, this will be an excellent refresher. If the sending of an email in the swirl practice does not work do not worry about it. If you do not get the title of this task, watch [this](https://www.youtube.com/watch?v=SMCsXl9SGgY). 
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -39,7 +39,7 @@ You have just been hired to a new data science team, and you need to collaborate
 
 ## Task 4:  Asking the right questions 
 ### Background 
-Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  This task supports your semester project.
+Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  This task supports your semester project. **Note that the reading on data transformation below is necessary for the case study for this week and may be the most important reading of the semester to fully understand**
 
 
  * [Homework Schedule](../homework_schedule.html)
@@ -81,7 +81,7 @@ The [Our World in Data](https://ourworldindata.org/){target="blank"} website has
 ## Task 8: Data to Answer Questions 
 ### Background 
 
-Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your project.  After you find good data sourses make sure to complete the remaining tasks.
+Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your project.  After you find good data sources make sure to complete the remaining tasks.
 
 
  * [Homework Schedule](../homework_schedule.html)
@@ -280,9 +280,9 @@ This week we will learn new coding techniques and visualization principles.  How
 
 ## Case Study 1: Critiquing Visualizations and Slack Setup 
 ### Background 
-Your first weekly project requires you to **submit** a review of 2-3 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
+Your first weekly project requires you to **submit** a review of 4-5 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
 
-The **submit** word above will require you to create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  Our slack channel is `f17dwv`, and it requires that you create an account with your `@byui.edu` email account.
+The **submit** word above will require you to create an account on [slack](https://join.slack.com/t/byuidwv/signup?x=x-339637048932-339197858336){target="blank"}.  Our slack channel is byuidwv.slack.com.  You must use your `@byui.edu` email to create an account.
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -437,6 +437,7 @@ This week we will learn new coding techniques and visualization principles.  How
 Your case study and weekly tasks will provide time to makes sure you have wrapped up the class and get set for a great future in data science. Make sure you have address all the end of semester items.
 
 Please write your cover letter to me about the class that [uses the syllabus](syllabus.html) to justify your grade. Your resume would be in the format you would provide to a job or internship.
+
  * [Homework Schedule](../homework_schedule.html)
 
 ----------------------------------------

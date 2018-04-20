@@ -51,6 +51,8 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
+* [ ] Watch the Josh Wills video on big data and be prepared for a disucssion in class.
 * [ ] Read in all four of the necessary shp file datasets (see description)
 * [ ] Filter all the data for the specific needs of Idaho
 * [ ] Create a `.png` image that plots the required information

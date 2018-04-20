@@ -13,11 +13,11 @@ This course pulls many of the diverse capabilities developed throughout the othe
 
 Upon completion of this course, you will be able to use data-driven programming in R for the handling, formatting, and visualization of messy and complex data.  You will implement data wrangling techniques and the grammar of graphics process in visualizing complex data. Specifically, as a successful learner, you will be able to
 
-1.	Convert data from varied formats or structures to a desirable format for analysis and visualization.
-2.	Clean, transform and merge data attributes/variables appropriately.
-3.	Effectively display and communicate meaning from spatial, temporal, and textual data.
-4.	Articulate the process, benefits, and challenges of Big Data manipulation.
-5.	Use current analysis, presentation, and collaboration tools in the data science field (R, Python, D3.js, GitHub).
+1.	[Convert data from varied formats or structures to a desirable format for analysis and visualization.](convert.html)
+2.	[Clean, transform and merge data attributes/variables appropriately.](clean.html)
+3.	[Effectively display and communicate meaning from spatial, temporal, and textual data.](display.html)
+4.	[Articulate the process, benefits, and challenges of Big Data manipulation.](bigdata.html)
+5.	[Use current analysis, presentation, and collaboration tools in the data science field (R, Python, D3.js, GitHub).](tools.html)
 
 The course follows these principles of teaching Data Science[^4]   
 
@@ -123,69 +123,80 @@ We have five concepts that guide our learning objectives.  Click on each to see 
 
 
 <table class="table table-striped table-bordered table-hover" style="width: auto !important; float: right; margin-left: 10px;">
-<thead><tr>
-<th style="text-align:center;font-weight: bold;color: white;background-color: black;"> Grade </th>
+ <thead>
+  <tr>
+   <th style="text-align:center;font-weight: bold;color: white;background-color: black;"> Grade </th>
    <th style="text-align:center;font-weight: bold;color: white;background-color: black;"> Class Tasks </th>
    <th style="text-align:center;font-weight: bold;color: white;background-color: black;"> Case Studies </th>
+   <th style="text-align:center;font-weight: bold;color: white;background-color: black;"> On Time </th>
    <th style="text-align:center;font-weight: bold;color: white;background-color: black;"> Semester Project </th>
-  </tr></thead>
+  </tr>
+ </thead>
 <tbody>
-<tr grouplength="2"><td colspan="4" style="border-bottom: 1px solid;"><strong>Leader</strong></td></tr>
+  <tr grouplength="2"><td colspan="5" style="border-bottom: 1px solid;"><strong>Leader</strong></td></tr>
 <tr>
-<td style="text-align:center; padding-left: 2em;" indentlevel="1"> A </td>
+   <td style="text-align:center; padding-left: 2em;" indentlevel="1"> A </td>
    <td style="text-align:center;"> 24 </td>
    <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> 3/18/10 </td>
    <td style="text-align:center;"> yes </td>
   </tr>
-<tr>
-<td style="text-align:center; padding-left: 2em;" indentlevel="1"> A- </td>
+  <tr>
+   <td style="text-align:center; padding-left: 2em;" indentlevel="1"> A- </td>
    <td style="text-align:center;"> 22 </td>
    <td style="text-align:center;"> 11 </td>
+   <td style="text-align:center;"> 3/18/10 </td>
    <td style="text-align:center;"> yes </td>
   </tr>
-<tr grouplength="3"><td colspan="4" style="border-bottom: 1px solid;"><strong>Supporter</strong></td></tr>
+  <tr grouplength="3"><td colspan="5" style="border-bottom: 1px solid;"><strong>Supporter</strong></td></tr>
 <tr>
-<td style="text-align:center; padding-left: 2em;" indentlevel="1"> B+ </td>
+   <td style="text-align:center; padding-left: 2em;" indentlevel="1"> B+ </td>
    <td style="text-align:center;"> 20 </td>
    <td style="text-align:center;"> 8 </td>
+   <td style="text-align:center;"> 2/12/6 </td>
    <td style="text-align:center;"> yes </td>
   </tr>
-<tr>
-<td style="text-align:center; padding-left: 2em;" indentlevel="1"> B </td>
+  <tr>
+   <td style="text-align:center; padding-left: 2em;" indentlevel="1"> B </td>
    <td style="text-align:center;"> 18 </td>
    <td style="text-align:center;"> 8 </td>
+   <td style="text-align:center;"> 2/12/6 </td>
    <td style="text-align:center;"> no </td>
   </tr>
-<tr>
-<td style="text-align:center; padding-left: 2em;" indentlevel="1"> B- </td>
+  <tr>
+   <td style="text-align:center; padding-left: 2em;" indentlevel="1"> B- </td>
    <td style="text-align:center;"> 18 </td>
    <td style="text-align:center;"> 6 </td>
+   <td style="text-align:center;"> 2/12/6 </td>
    <td style="text-align:center;"> no </td>
   </tr>
-<tr grouplength="2"><td colspan="4" style="border-bottom: 1px solid;"><strong>Wannabe</strong></td></tr>
+  <tr grouplength="2"><td colspan="5" style="border-bottom: 1px solid;"><strong>Wannabe</strong></td></tr>
 <tr>
-<td style="text-align:center; padding-left: 2em;" indentlevel="1"> C </td>
+   <td style="text-align:center; padding-left: 2em;" indentlevel="1"> C </td>
    <td style="text-align:center;"> 15 </td>
    <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 1/8/4 </td>
    <td style="text-align:center;"> no </td>
   </tr>
-<tr>
-<td style="text-align:center; padding-left: 2em;" indentlevel="1"> C- </td>
+  <tr>
+   <td style="text-align:center; padding-left: 2em;" indentlevel="1"> C- </td>
    <td style="text-align:center;"> 15 </td>
    <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 1/8/4 </td>
    <td style="text-align:center;"> no </td>
   </tr>
-<tr grouplength="1"><td colspan="4" style="border-bottom: 1px solid;"><strong>None</strong></td></tr>
+  <tr grouplength="1"><td colspan="5" style="border-bottom: 1px solid;"><strong>None</strong></td></tr>
 <tr>
-<td style="text-align:center; padding-left: 2em;" indentlevel="1"> D </td>
+   <td style="text-align:center; padding-left: 2em;" indentlevel="1"> D </td>
    <td style="text-align:center;"> 5 </td>
    <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 0/0/0 </td>
    <td style="text-align:center;"> no </td>
   </tr>
 </tbody>
 <tfoot>
 <tr>
-<td style = 'padding: 0; border:0;' colspan='100%'><sup>1</sup> See [the tasklist](tasklist.html) for a description work related to leader, supporter, wannabe</td>
+<td style = 'padding: 0; border:0;' colspan='100%'><sup>1</sup> See [the tasklist](tasklist.html) for a description of the 'On Time' column values</td>
 </tr>
 </tfoot>
 </table>

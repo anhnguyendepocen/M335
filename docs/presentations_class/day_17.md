@@ -1,106 +1,139 @@
-# Functions
-J. Hathaway  
+---
+title: "Moving Time Part I" 
+author: J. Hathaway
+params:
+  day: 17
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+
+
+# R-Studio Connect and Interaction
+
+## Setting up R-Studio
+
+Time to set up our R-Studio to share interactive documents.
+
+>- https://shiny.byui.edu in R-Studio
+
+Viewing on the website.
+
+>- view with shiny.byui.edu
+
+
+## Example: library(DT) - DataTables
+
+Make a new Rmd file that just has the following in it (including the default yaml). 
 
 
 
 
-# Review
+```r
+library(DT)
+datatable(iris)
+```
+
+Putting information in your file [My interactive](https://shiny.byui.edu/connect/#/apps/3/access)
 
 
 
-## Case Study 8: Interacting with time
+
+
+
+
+
+
+# Team Discussion
+
+
+
+## Case Study 8: It's about time
+
+> - The [Google spreadsheet link](https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing)
 > - [Case Study 8](https://byuistats.github.io/M335/weekly_projects/cs08_details.html)
 > - [How did we do?](https://github.com/BYUI335/hathaway)
 
 
 
 
-## Case Study 9: Get your project moving
+## Case Study 9: Interacting with time
 > - [Case Study 9](https://byuistats.github.io/M335/weekly_projects/cs09_details.html)
 
 
 
 
-## Task 17: Building Functions
+## Task 17: My investment is better than yours
 > - [Task 17](https://byuistats.github.io/M335/class_tasks/task17_details.html)
 
 
 
 
-# Visual Perception
-
-## Rauser on Cholera
-
-[Remembering the question: A cholera example](https://www.youtube.com/watch?v=-3dw09N5_Aw)
-
-  - 3:00 What are the good methods he uses to provide background on the domain science?
-  - 3:37 If we had to prove that cholera wasn't passed by the air what type of data would we need?
-  - 4:52 Do you think this is compelling? 
-  - 5:33 Can we do this experiment?
-  - 7:22 The data scientist has to find the data.
-  - 9:31 The data scientist has to give the data purpose.
-  - 11:00 Finding the unique features provide the experimentation value. 
-
-## Great Quotes
-
-- Correlation does not imply causation... The most popular defense of tiny minds in the face of uncomfortable evidence.
-- You are rewarded for finding answers to the "that's funny" statements.
-
-## What could we do to make this bar chart better?
-
-> - https://pix-media.priceonomics-media.com/blog/1103/image01a.png
-
-## Why is this a poor example of non-aligned scales?
-
-> - https://pix-media.priceonomics-media.com/blog/1103/image04b.png
-
-# Functions
-
-## Some Pointers (1)
-
-<section style="text-align: left;">
-<section style="font-size:30px">
-
-We want our functions to be correct. Not all functions are correct. The results from specific calls can be put into 4 categories:
-
-> 1. Correct.
-> 2. An error occurs that is clearly identified.
-> 3. An obscure error occurs.
-> 4. An incorrect value is returned.
-
-We like category 1. Category 2 is the right behavior if the inputs do not make sense, but not if the inputs are sensible. Category 3 is an unpleasant place for your users, and possibly for you if the users have access to you. Category 4 is by far the worst place to be-the user has no reason to believe that anything is wrong. Steer clear of category 4.
-
-</section></section>
-
-## Some Pointers (2)
-
-<p style="text-align: left;">
-Ideally each function performs a clearly specified task with easily understood inputs and return value. Very common novice behavior is to write one function that does everything. **Almost always a better approach is to write a number of
-smaller functions, and then a function that does everything by using the smaller functions.** Breaking the task into steps often has the benefit of making it more clear what really should be done. It is also much easier to debug when things go wrong. The small functions are much more likely to be of general use.
-</p>
-
-## Some Power Functions
-
-> - `do.call("sample", list(x=10, size=5))` The do.call function allows you to provide the arguments as an actual list
-> - `invisible()` means that the input df doesn't get printed out but is returned to an assigned object
-> - `return()` will specify the specific object to return from a function
-> - `...` dot-dot-dot is a magic tool that makes for powerful functions.
-
-# Function Coding Challenges
-
-## Task 10 and finding the longest streak
-
-Make a function that will find the longest streak of a character object you input. Try to use the following principles
-
-> - a while loop
-> - use comments and breaks to seperate elements in the function.
-> - Make a function that your larger function calls to simplify your code
-
-## Making your own theme function
-
-Make `theme_YOURNAME()` with your special settings to theme.
 
 
-## Using Functions and Packages to Manage Work
 
-https://support.rstudio.com/hc/en-us/articles/200532317-Writing-Package-Documentation
+
+
+# Time Series Data
+
+## Are we using timetk?
+
+Looks like the task doesn't require it.  I wanted you guys to see this package and understand the potential if you need it in the future - [Link](https://business-science.github.io/timetk/).
+
+> * [Fun Forecasting Example](https://business-science.github.io/timetk/articles/TK03_Forecasting_Using_Time_Series_Signature.html)
+
+## tibles, ts, xts, and zoos oh my!
+
+**Use the links on this page to try and describe what ts, xts, and zoo formats are in R?**
+
+We are not going to take the time to get into the weeds of xt, xts, zoo.  Here are two locations where you can read till your heart is content - [1](https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf), and [2](https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo).
+
+
+> - [What is the difference in zoo, xts, and ts objects?](https://stackoverflow.com/questions/33714660/what-is-the-difference-the-zoo-object-and-ts-object-in-r)
+> - [Why xts?](http://joshuaulrich.github.io/xts/xts_faq.html)
+
+
+## Really matrix formats
+
+**Q: Why is xts implemented as a matrix rather than a data frame?**
+
+xts uses a matrix rather than data.frame because: 1) xts is a subclass of zoo, and that's how zoo objects are structured; and 2) matrix objects have much better performance than data.frames.
+
+## Why xts?
+
+**Q: Why should I use xts rather than zoo or another time-series package?**
+
+The main benefit of xts is its seamless compatibility with other packages using different time-series classes (timeSeries, zoo, .). In addition, xts allows the user to add custom attributes to any object. See the main xts vignette for more information.
+
+
+## tidyquant: One package to use them all (1).
+
+Write out what this function is doing.
+
+
+
+- **Hint:** Read about `quantmod::periodReturn()`
+
+## tidyquant: One package to use them all (2).
+
+Write out what this function is doing.
+
+
+
+- **Hint:** Read about `PerformanceAnalytics::Return.portfolio()`
+
+## dygraphs: R connection to dygraphs JavaScript charting library
+
+Open the [dygraphs help webstie](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.
+
+
+# Settling In
+
+## Remember the Goal
+
+"The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka!' but 'That's funny...'" -Isaac Asimov
+
+> - [Remembering Good Principles](https://youtu.be/fSgEeI2Xpdc)
+> - [Rauser view on time and data](https://www.youtube.com/embed/coNDCIMH8bk?start=628) - 10:28 to 17:50
+

@@ -87,6 +87,8 @@ filter(diamond, carat > 3)
 - **Note to Class:**  I am not assigning you stuff to create busy work.  There is a deep assumption that you are coming prepared to class.  
 - **Don't get behind.**
 
+## {data-background-iframe="http://i0.kym-cdn.com/photos/images/newsfeed/001/297/214/908.jpg"}
+
 ## R-Lab and Stack Overflow Channel
 
 We will have and R-lab available this semester.
@@ -94,8 +96,9 @@ We will have and R-lab available this semester.
 > - TA Introduction (Dylan, McKay, Makayla)
 > - Friday R-Lab: STC 235 - 2:00 to 6:00 pm
 > - Online lab: Stack Overflow and Slack
+>     - <https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent&utm_source=stackoverflow.com&utm_medium=dev-story&utm_campaign=signup-redirect>
 >     - <https://stackoverflow.com/c/byu/join>
->     - <https://slack.com/signin>
+>     - <https://slack.com/signin> - w18dwv
 
 # Weekly Case Study
 

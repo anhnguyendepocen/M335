@@ -23,9 +23,28 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -34,10 +53,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -289,21 +310,27 @@ div.tocify {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-area-chart"></span>
+    <span class="fa fa-briefcase"></span>
      
-    R
+    Tools
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="r_background.html">R Background</a>
+      <a href="rpages.html">R/R-Studio Details</a>
     </li>
+    <li class="divider"></li>
     <li>
-      <a href="r_help.html">First Use of R</a>
+      <a href="gitpages.html">Git/GitHub Details</a>
     </li>
+    <li class="divider"></li>
     <li>
-      <a href="r_visualization.html">R Visualization</a>
+      <a href="compages.html">Slack &amp; Stackoverflow Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="pypages.html">Python Details</a>
     </li>
   </ul>
 </li>
@@ -319,7 +346,15 @@ div.tocify {
     <li>
       <a href="homework_schedule.html">Assignment Schedule</a>
     </li>
-    <li class="dropdown-header">Case and Task Backgrounds</li>
+    <li>
+      <a href="backgrounds.html">Task Backgrounds</a>
+    </li>
+    <li>
+      <a href="tasklist.html">Semester Task List</a>
+    </li>
+    <li>
+      <a href="readings.html">Weekly Reading List</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -349,8 +384,14 @@ div.tocify {
     <li>
       <a href="http://r4ds.had.co.nz/">R for Data Science</a>
     </li>
+    <li>
+      <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">Supplemental Material</li>
+    <li>
+      <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">Statistical Concepts in Presenting Data:</a>
+    </li>
     <li>
       <a href="http://adv-r.had.co.nz/">Advanced R</a>
     </li>
@@ -363,13 +404,14 @@ div.tocify {
     <li>
       <a href="http://datathink.io">DataThink.io</a>
     </li>
-    <li>
-      <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">Statistical Concepts in Presenting Data:</a>
-    </li>
-    <li>
-      <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
-    </li>
   </ul>
+</li>
+<li>
+  <a href="visitme.html">
+    <span class="fa fa-calendar"></span>
+     
+    Visit Me
+  </a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -442,24 +484,50 @@ y</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <p>Not all functions have (or require) arguments:</p>
 <pre class="r"><code>date()</code></pre>
-<pre><code>## [1] &quot;Mon Jul 17 15:04:29 2017&quot;</code></pre>
+<pre><code>## [1] &quot;Fri Apr 20 13:07:09 2018&quot;</code></pre>
 <p>Now look at your workspace – in the upper right pane. The workspace is where user-defined objects accumulate. You can also get a listing of these objects with commands:</p>
 <pre class="r"><code>objects()</code></pre>
-<pre><code>##  [1] &quot;background.title&quot;           &quot;fname&quot;                     
-##  [3] &quot;jenny_rocks&quot;                &quot;md_bullet&quot;                 
-##  [5] &quot;md_link&quot;                    &quot;readings&quot;                  
-##  [7] &quot;tasks&quot;                      &quot;text&quot;                      
-##  [9] &quot;this_is_a_really_long_name&quot; &quot;title.text&quot;                
-## [11] &quot;x&quot;                          &quot;y&quot;                         
-## [13] &quot;yo&quot;</code></pre>
+<pre><code>##  [1] &quot;background.title&quot;           &quot;best_in_class&quot;             
+##  [3] &quot;bob&quot;                        &quot;candidates&quot;                
+##  [5] &quot;case_studies&quot;               &quot;casename_new&quot;              
+##  [7] &quot;casename_old&quot;               &quot;cases&quot;                     
+##  [9] &quot;class_tasks&quot;                &quot;csn&quot;                       
+## [11] &quot;cso&quot;                        &quot;fname&quot;                     
+## [13] &quot;gg_base&quot;                    &quot;hdwd&quot;                      
+## [15] &quot;i&quot;                          &quot;jenny_rocks&quot;               
+## [17] &quot;labels&quot;                     &quot;link_new&quot;                  
+## [19] &quot;link_old&quot;                   &quot;link_task&quot;                 
+## [21] &quot;md_bullet&quot;                  &quot;md_intro_format&quot;           
+## [23] &quot;md_link&quot;                    &quot;page_image&quot;                
+## [25] &quot;presentations&quot;              &quot;readings&quot;                  
+## [27] &quot;taskname&quot;                   &quot;tasks&quot;                     
+## [29] &quot;text&quot;                       &quot;this_is_a_really_long_name&quot;
+## [31] &quot;title.text&quot;                 &quot;titlelink&quot;                 
+## [33] &quot;totals&quot;                     &quot;vday&quot;                      
+## [35] &quot;vlink&quot;                      &quot;weeks&quot;                     
+## [37] &quot;x&quot;                          &quot;y&quot;                         
+## [39] &quot;yo&quot;</code></pre>
 <pre class="r"><code>ls()</code></pre>
-<pre><code>##  [1] &quot;background.title&quot;           &quot;fname&quot;                     
-##  [3] &quot;jenny_rocks&quot;                &quot;md_bullet&quot;                 
-##  [5] &quot;md_link&quot;                    &quot;readings&quot;                  
-##  [7] &quot;tasks&quot;                      &quot;text&quot;                      
-##  [9] &quot;this_is_a_really_long_name&quot; &quot;title.text&quot;                
-## [11] &quot;x&quot;                          &quot;y&quot;                         
-## [13] &quot;yo&quot;</code></pre>
+<pre><code>##  [1] &quot;background.title&quot;           &quot;best_in_class&quot;             
+##  [3] &quot;bob&quot;                        &quot;candidates&quot;                
+##  [5] &quot;case_studies&quot;               &quot;casename_new&quot;              
+##  [7] &quot;casename_old&quot;               &quot;cases&quot;                     
+##  [9] &quot;class_tasks&quot;                &quot;csn&quot;                       
+## [11] &quot;cso&quot;                        &quot;fname&quot;                     
+## [13] &quot;gg_base&quot;                    &quot;hdwd&quot;                      
+## [15] &quot;i&quot;                          &quot;jenny_rocks&quot;               
+## [17] &quot;labels&quot;                     &quot;link_new&quot;                  
+## [19] &quot;link_old&quot;                   &quot;link_task&quot;                 
+## [21] &quot;md_bullet&quot;                  &quot;md_intro_format&quot;           
+## [23] &quot;md_link&quot;                    &quot;page_image&quot;                
+## [25] &quot;presentations&quot;              &quot;readings&quot;                  
+## [27] &quot;taskname&quot;                   &quot;tasks&quot;                     
+## [29] &quot;text&quot;                       &quot;this_is_a_really_long_name&quot;
+## [31] &quot;title.text&quot;                 &quot;titlelink&quot;                 
+## [33] &quot;totals&quot;                     &quot;vday&quot;                      
+## [35] &quot;vlink&quot;                      &quot;weeks&quot;                     
+## [37] &quot;x&quot;                          &quot;y&quot;                         
+## [39] &quot;yo&quot;</code></pre>
 <p>If you want to remove the object named <code>y</code>, you can do this</p>
 <pre class="r"><code>rm(y)</code></pre>
 <p>To remove everything:</p>
@@ -524,14 +592,14 @@ sig_sq &lt;- 0.5
 x &lt;- runif(40)
 y &lt;- a + b * x + rnorm(40, sd = sqrt(sig_sq))
 (avg_x &lt;- mean(x))</code></pre>
-<pre><code>## [1] 0.5332193</code></pre>
+<pre><code>## [1] 0.4315651</code></pre>
 <pre class="r"><code>write(avg_x, &quot;avg_x.txt&quot;)
 plot(x, y)
 abline(a, b, col = &quot;purple&quot;)</code></pre>
 <p><img src="block002_hello-r-workspace-wd-project_files/figure-html/toy-line-1.png" width="672" /></p>
 <pre class="r"><code>dev.print(pdf, &quot;toy_line_plot.pdf&quot;)</code></pre>
-<pre><code>## png 
-##   2</code></pre>
+<pre><code>## quartz_off_screen 
+##                 2</code></pre>
 <p>Let’s say this is a good start of an analysis and your ready to start preserving the logic and code. Visit the History tab of the upper right pane. Select these commands. Click “To Source”. Now you have a new pane containing a nascent R script. Click on the floppy disk to save. Give it a name ending in <code>.R</code> or <code>.r</code>, I used <code>toy-line.r</code> and note that, by default, it will go in the directory associated with your project.</p>
 <p>Quit RStudio. Inspect the folder associated with your project if you wish. Maybe view the PDF in an external viewer.</p>
 <p>Restart RStudio. Notice that things, by default, restore to where we were earlier, e.g. objects in the workspace, the command history, which files are open for editing, where we are in the file system browser, the working directory for the R process, etc. These are all Good Things.</p>

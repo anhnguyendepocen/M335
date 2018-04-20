@@ -1,14 +1,41 @@
-# Moving in Space
-J. Hathaway  
+---
+title: "Moving in Space"
+author: J. Hathaway
+params:
+  day: 19
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
 
 
 
 
-# Review
+# Becoming the Critic.
+
+
+```r
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
 
 
 
-## Case Study 9: Get your project moving
+
+
+
+
+
+
+
+# Team Discussion
+
+
+
+## Case Study 9: Interacting with time
+
+> - The [Google spreadsheet link](https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing)
 > - [Case Study 9](https://byuistats.github.io/M335/weekly_projects/cs09_details.html)
 > - [How did we do?](https://github.com/BYUI335/hathaway)
 
@@ -27,29 +54,13 @@ J. Hathaway
 
 
 
-## Posting Comments on Class Case Studies
 
-Why are we making comments on other's work?
 
-[My example](https://github.com/BYUI335/Pyeatt_A/issues/7) for discussion.
 
-## Semester Project Discussion
 
-Please make your own issue right now.
 
-> - Use my issue as a starting point - <https://github.com/BYUI335/hathaway/issues/16>.
-> - Create a new folder in your repository that is called `semester_project`.
-> - If you would like to alter the project, then post a comment to the semester project issue with your update.
-> - Call me out and ask me to review and approve changes.
-
-## Tracking Progress
-
-> - Don't forget to keep track of your tasks.
-> - Semester project should be moving along.
-> - Check out week 13 work and make sure you are working on this.
 
 # Geospatial Data
-
 
 ## What is GDAL?
 
@@ -73,17 +84,18 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 ## Which area is larger - The continental 48 states or the country of Brazil?
 
 - While a few basketbal players may think the earth is flat, is education feeding us stuff that isn't true?
+- [Boston has concerns about our map education](https://www.theguardian.com/education/2017/mar/19/boston-public-schools-world-map-mercator-peters-projection)
 
 ## What are projections?
 
 * **Which map is correct?**
 * **Which map shows area correctly?**
 
-![](..\images\mercator.jpg){ width=40% } ![](..\images\gall-peters.png){ width=45% } 
+![](../images/mercator.jpg){ width=40% } ![](../images/gall-peters.png){ width=45% } 
 
 ## When we make a map, what is our goal?
 
-* ![](..\images\cahill-keyes.jpg){ width=90% }
+* ![](../images/cahill-keyes.jpg){ width=90% }
 * The [cahill-keyes projection looks pretty good](https://xkcd.com/977/).
 
 ## Convert to another projection
@@ -95,3 +107,34 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 > * [Class activity](../spatial_class.html) 
 >     * http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html
 >     * http://spatialreference.org/ref/
+
+# Class Discussion
+
+## Task 20 Question
+
+Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence
+
+
+
+
+## Posting Comments on Class Case Studies
+
+Why are we making comments on other's work?
+
+[My example](https://github.com/BYUI335/Pyeatt_A/issues/7) for discussion.
+
+## Tracking Progress
+
+> - Don't forget to keep track of your tasks.
+> - Semester project should be moving along.
+> - Check out week 13 work and make sure you are working on this.
+
+## Semester Project Discussion
+
+Please make your own issue right now.
+
+> - Use my issue as a starting point - <https://github.com/BYUI335/hathaway/issues/16>.
+> - Create a new folder in your repository that is called `semester_project`.
+> - If you would like to alter the project, then post a comment to the semester project issue with your update.
+> - Call me out and ask me to review and approve changes.
+

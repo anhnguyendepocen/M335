@@ -1,21 +1,6 @@
 ---
 title: "Moving in Space"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: black
-      highlight: espresso
-      center: true
-      code_folding: hide
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
-        maxScale: 3
-        margin: 0
 params:
   day: 19
   ptitle: true
@@ -23,94 +8,31 @@ params:
   dtype: "none"
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-library(tidyverse)
-library(magrittr)
-library(ggrepel)
-library(knitr)
-library(stringr)
 
-invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
-read_chunk("temp")
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
+```
 
-# case study completed
-cso <- ceiling(params$day/2) - 1
-csn <- ceiling(params$day/2) 
+# Becoming the Critic.
 
-casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
-casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
-
-link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
-link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
-
-# How did we do?
-hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
-
-# current task
-# 
-taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
-link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
-
-# Review
+```{r nextone}
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 ```
 
 
-# Review
+```{r child=md_intro_format}
 
-```{r csold, ref.label=casename_old, echo=FALSE, include=FALSE }
-# For case study due last Saturday
 ```
 
-`r title.text`
-`r link_old`
-`r hdwd`
 
-
-```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
-# For case study due next Saturday
-```
-
-`r title.text`
-`r link_new`
-
-
-```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
-# For current task that is due
-```
-
-`r title.text`
-`r link_task`
-
-
-```{r stuff, echo=FALSE}
-unlink("temp")
-```
-
-## Posting Comments on Class Case Studies
-
-Why are we making comments on other's work?
-
-[My example](https://github.com/BYUI335/Pyeatt_A/issues/7) for discussion.
-
-## Semester Project Discussion
-
-Please make your own issue right now.
-
-> - Use my issue as a starting point - <https://github.com/BYUI335/hathaway/issues/16>.
-> - Create a new folder in your repository that is called `semester_project`.
-> - If you would like to alter the project, then post a comment to the semester project issue with your update.
-> - Call me out and ask me to review and approve changes.
-
-## Tracking Progress
-
-> - Don't forget to keep track of your tasks.
-> - Semester project should be moving along.
-> - Check out week 13 work and make sure you are working on this.
 
 # Geospatial Data
-
 
 ## What is GDAL?
 
@@ -134,17 +56,18 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 ## Which area is larger - The continental 48 states or the country of Brazil?
 
 - While a few basketbal players may think the earth is flat, is education feeding us stuff that isn't true?
+- [Boston has concerns about our map education](https://www.theguardian.com/education/2017/mar/19/boston-public-schools-world-map-mercator-peters-projection)
 
 ## What are projections?
 
 * **Which map is correct?**
 * **Which map shows area correctly?**
 
-![](..\images\mercator.jpg){ width=40% } ![](..\images\gall-peters.png){ width=45% } 
+![](../images/mercator.jpg){ width=40% } ![](../images/gall-peters.png){ width=45% } 
 
 ## When we make a map, what is our goal?
 
-* ![](..\images\cahill-keyes.jpg){ width=90% }
+* ![](../images/cahill-keyes.jpg){ width=90% }
 * The [cahill-keyes projection looks pretty good](https://xkcd.com/977/).
 
 ## Convert to another projection
@@ -156,3 +79,46 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 > * [Class activity](../spatial_class.html) 
 >     * http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html
 >     * http://spatialreference.org/ref/
+
+# Class Discussion
+
+## Task 20 Question
+
+Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence
+
+```{r p1, eval=FALSE}
+library(downloader)
+library(sf)
+library(fs)
+dams_path <- "https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip"
+df <- tempfile(); uf <- tempfile()
+download(dams_path, df, mode = "wb")
+unzip(df, exdir = uf)
+dams <- read_sf(uf)
+#file.remove(df); unlink(uf, recursive = TRUE)
+file_delete(df); dir_delete(uf)
+
+```
+
+
+## Posting Comments on Class Case Studies
+
+Why are we making comments on other's work?
+
+[My example](https://github.com/BYUI335/Pyeatt_A/issues/7) for discussion.
+
+## Tracking Progress
+
+> - Don't forget to keep track of your tasks.
+> - Semester project should be moving along.
+> - Check out week 13 work and make sure you are working on this.
+
+## Semester Project Discussion
+
+Please make your own issue right now.
+
+> - Use my issue as a starting point - <https://github.com/BYUI335/hathaway/issues/16>.
+> - Create a new folder in your repository that is called `semester_project`.
+> - If you would like to alter the project, then post a comment to the semester project issue with your update.
+> - Call me out and ask me to review and approve changes.
+

@@ -13,7 +13,7 @@
 
 <title>Schedule</title>
 
-<script src="site_libs/jquery-3.1.1/jquery-3.1.1.min.js"></script>
+<script src="site_libs/jquery-3.2.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -25,24 +25,31 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-0.9/htmlwidgets.js"></script>
-<script src="site_libs/d3-3.5.5/d3.min.js"></script>
-<link href="site_libs/cal-heatmap-3.5.2/./cal-heatmap.css" rel="stylesheet" />
-<script src="site_libs/cal-heatmap-3.5.2/./cal-heatmap.js"></script>
-<script src="site_libs/underscore-1.8.3/./underscore.js"></script>
-<script src="site_libs/calheatmapR-binding-0.1/calheatmapR.js"></script>
-<script src="site_libs/moment-2.17.1/moment.min.js"></script>
-<link href="site_libs/fullcalendar-3.2.0/fullcalendar.min.css" rel="stylesheet" />
-<script src="site_libs/fullcalendar-3.2.0/fullcalendar.min.js"></script>
+<script src="site_libs/htmlwidgets-1.0/htmlwidgets.js"></script>
+<script src="site_libs/moment-2.20.1/moment.min.js"></script>
+<script src="site_libs/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<link href="site_libs/fullcalendar-3.8.0/fullcalendar.min.css" rel="stylesheet" />
+<script src="site_libs/fullcalendar-3.8.0/fullcalendar.min.js"></script>
 <script src="site_libs/fullcalendar-binding-0.0.0.9000/fullcalendar.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -423,65 +430,65 @@ div.tocify {
 </div>
 
 
-<div id="calendar" class="section level3">
-<h3>Calendar</h3>
+<div id="calendar" class="section level1">
+<h1>Calendar</h1>
 <p>The yellow boxes are the days we have class this semester. The dark green boxes when work is due.</p>
-<div id="htmlwidget-812d3dd23e883c5c1b34" style="width:672px;height:300px;" class="calheatmapR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-812d3dd23e883c5c1b34">{"x":{"data":{"1515517200":1,"1515690000":1,"1516122000":1,"1516294800":1,"1516726800":1,"1516899600":1,"1517331600":1,"1517504400":1,"1517936400":1,"1518109200":1,"1518541200":1,"1518714000":1,"1519146000":1,"1519318800":1,"1519750800":1,"1519923600":1,"1520355600":1,"1520528400":1,"1520960400":1,"1521133200":1,"1521565200":1,"1521738000":1,"1522170000":1,"1522342800":1,"1522774800":1,"1522947600":1,"1523379600":1,"1515826800":50,"1516431600":50,"1517036400":50,"1517641200":50,"1518246000":50,"1518850800":50,"1519455600":50,"1520060400":50,"1520665200":50,"1521266400":50,"1521871200":50,"1522476000":50,"1523080800":50,"1515430800":50,"1515603600":50,"1516035600":50,"1516208400":50,"1516640400":50,"1516813200":50,"1517245200":50,"1517418000":50,"1517850000":50,"1518022800":50,"1518454800":50,"1518627600":50,"1519059600":50,"1519232400":50,"1519664400":50,"1519837200":50,"1520269200":50,"1520442000":50,"1520874000":50,"1521046800":50,"1521478800":50,"1521651600":50,"1522083600":50,"1522256400":50},"attrs":{"domain":"month","subDomain":"day","start":"2018-01-09T17:00:00Z","range":4,"cellSize":30,"cellPadding":4,"cellRadius":0,"domainGutter":15,"domainMargin":[0,0,0,0],"domainDynamicDimension":true,"verticalOrientation":false,"subDomainTextFormat":"%d","legend":[10,20,30,40],"displayLegend":false,"legendCellSize":10,"legendCellPadding":2,"legendMargin":[10,0,0,0],"legendVerticalPosition":"bottom","legendHorizontalPosition":"left","legendOrientation":"horizontal"}},"evals":[],"jsHooks":[]}</script>
-<div id="htmlwidget-c7f33994528f68641373" style="width:768px;height:480px;" class="fullcalendar html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c7f33994528f68641373">{"x":{"firstDay":1,"header":false,"height":500,"aspectRatio":1.75,"footer":{"right":"today prev,next"},"events":[{"title":"Task 1 Due","start":"2018-01-08","url":"https://byuistats.github.io/M335/class_tasks/task01_details.html","color":"darkgreen"},{"title":"Task 2 Due","start":"2018-01-10","url":"https://byuistats.github.io/M335/class_tasks/task02_details.html","color":"darkgreen"},{"title":"Task 3 Due","start":"2018-01-15","url":"https://byuistats.github.io/M335/class_tasks/task03_details.html","color":"darkgreen"},{"title":"Task 4 Due","start":"2018-01-17","url":"https://byuistats.github.io/M335/class_tasks/task04_details.html","color":"darkgreen"},{"title":"Task 5 Due","start":"2018-01-22","url":"https://byuistats.github.io/M335/class_tasks/task05_details.html","color":"darkgreen"},{"title":"Task 6 Due","start":"2018-01-24","url":"https://byuistats.github.io/M335/class_tasks/task06_details.html","color":"darkgreen"},{"title":"Task 7 Due","start":"2018-01-29","url":"https://byuistats.github.io/M335/class_tasks/task07_details.html","color":"darkgreen"},{"title":"Task 8 Due","start":"2018-01-31","url":"https://byuistats.github.io/M335/class_tasks/task08_details.html","color":"darkgreen"},{"title":"Task 9 Due","start":"2018-02-05","url":"https://byuistats.github.io/M335/class_tasks/task09_details.html","color":"darkgreen"},{"title":"Task 10 Due","start":"2018-02-07","url":"https://byuistats.github.io/M335/class_tasks/task10_details.html","color":"darkgreen"},{"title":"Task 11 Due","start":"2018-02-12","url":"https://byuistats.github.io/M335/class_tasks/task11_details.html","color":"darkgreen"},{"title":"Task 12 Due","start":"2018-02-14","url":"https://byuistats.github.io/M335/class_tasks/task12_details.html","color":"darkgreen"},{"title":"Task 13 Due","start":"2018-02-19","url":"https://byuistats.github.io/M335/class_tasks/task13_details.html","color":"darkgreen"},{"title":"Task 14 Due","start":"2018-02-21","url":"https://byuistats.github.io/M335/class_tasks/task14_details.html","color":"darkgreen"},{"title":"Task 15 Due","start":"2018-02-26","url":"https://byuistats.github.io/M335/class_tasks/task15_details.html","color":"darkgreen"},{"title":"Task 16 Due","start":"2018-02-28","url":"https://byuistats.github.io/M335/class_tasks/task16_details.html","color":"darkgreen"},{"title":"Task 17 Due","start":"2018-03-05","url":"https://byuistats.github.io/M335/class_tasks/task17_details.html","color":"darkgreen"},{"title":"Task 18 Due","start":"2018-03-07","url":"https://byuistats.github.io/M335/class_tasks/task18_details.html","color":"darkgreen"},{"title":"Task 19 Due","start":"2018-03-12","url":"https://byuistats.github.io/M335/class_tasks/task19_details.html","color":"darkgreen"},{"title":"Task 20 Due","start":"2018-03-14","url":"https://byuistats.github.io/M335/class_tasks/task20_details.html","color":"darkgreen"},{"title":"Task 21 Due","start":"2018-03-19","url":"https://byuistats.github.io/M335/class_tasks/task21_details.html","color":"darkgreen"},{"title":"Task 22 Due","start":"2018-03-21","url":"https://byuistats.github.io/M335/class_tasks/task22_details.html","color":"darkgreen"},{"title":"Task 23 Due","start":"2018-03-26","url":"https://byuistats.github.io/M335/class_tasks/task23_details.html","color":"darkgreen"},{"title":"Task 24 Due","start":"2018-03-28","url":"https://byuistats.github.io/M335/class_tasks/task24_details.html","color":"darkgreen"},{"title":"CS 1 Due","start":"2018-01-13","url":"https://byuistats.github.io/M335/weekly_projects/cs01_details.html","color":"darkgreen"},{"title":"CS 2 Due","start":"2018-01-20","url":"https://byuistats.github.io/M335/weekly_projects/cs02_details.html","color":"darkgreen"},{"title":"CS 3 Due","start":"2018-01-27","url":"https://byuistats.github.io/M335/weekly_projects/cs03_details.html","color":"darkgreen"},{"title":"CS 4 Due","start":"2018-02-03","url":"https://byuistats.github.io/M335/weekly_projects/cs04_details.html","color":"darkgreen"},{"title":"CS 5 Due","start":"2018-02-10","url":"https://byuistats.github.io/M335/weekly_projects/cs05_details.html","color":"darkgreen"},{"title":"CS 6 Due","start":"2018-02-17","url":"https://byuistats.github.io/M335/weekly_projects/cs06_details.html","color":"darkgreen"},{"title":"CS 7 Due","start":"2018-02-24","url":"https://byuistats.github.io/M335/weekly_projects/cs07_details.html","color":"darkgreen"},{"title":"CS 8 Due","start":"2018-03-03","url":"https://byuistats.github.io/M335/weekly_projects/cs08_details.html","color":"darkgreen"},{"title":"CS 9 Due","start":"2018-03-10","url":"https://byuistats.github.io/M335/weekly_projects/cs09_details.html","color":"darkgreen"},{"title":"CS 10 Due","start":"2018-03-17","url":"https://byuistats.github.io/M335/weekly_projects/cs10_details.html","color":"darkgreen"},{"title":"CS 11 Due","start":"2018-03-24","url":"https://byuistats.github.io/M335/weekly_projects/cs11_details.html","color":"darkgreen"},{"title":"CS 12 Due","start":"2018-03-31","url":"https://byuistats.github.io/M335/weekly_projects/cs12_details.html","color":"darkgreen"},{"title":"CS 13 Due","start":"2018-04-07","url":"https://byuistats.github.io/M335/weekly_projects/cs13_details.html","color":"darkgreen"},{"title":"Class","start":"2018-01-09","url":"https://byuistats.github.io/M335/presentations_class/day_1.html","color":"gold"},{"title":"Class","start":"2018-01-11","url":"https://byuistats.github.io/M335/presentations_class/day_2.html","color":"gold"},{"title":"Class","start":"2018-01-16","url":"https://byuistats.github.io/M335/presentations_class/day_3.html","color":"gold"},{"title":"Class","start":"2018-01-18","url":"https://byuistats.github.io/M335/presentations_class/day_4.html","color":"gold"},{"title":"Class","start":"2018-01-23","url":"https://byuistats.github.io/M335/presentations_class/day_5.html","color":"gold"},{"title":"Class","start":"2018-01-25","url":"https://byuistats.github.io/M335/presentations_class/day_6.html","color":"gold"},{"title":"Class","start":"2018-01-30","url":"https://byuistats.github.io/M335/presentations_class/day_7.html","color":"gold"},{"title":"Class","start":"2018-02-01","url":"https://byuistats.github.io/M335/presentations_class/day_8.html","color":"gold"},{"title":"Class","start":"2018-02-06","url":"https://byuistats.github.io/M335/presentations_class/day_9.html","color":"gold"},{"title":"Class","start":"2018-02-08","url":"https://byuistats.github.io/M335/presentations_class/day_10.html","color":"gold"},{"title":"Class","start":"2018-02-13","url":"https://byuistats.github.io/M335/presentations_class/day_11.html","color":"gold"},{"title":"Class","start":"2018-02-15","url":"https://byuistats.github.io/M335/presentations_class/day_12.html","color":"gold"},{"title":"Class","start":"2018-02-20","url":"https://byuistats.github.io/M335/presentations_class/day_13.html","color":"gold"},{"title":"Class","start":"2018-02-22","url":"https://byuistats.github.io/M335/presentations_class/day_14.html","color":"gold"},{"title":"Class","start":"2018-02-27","url":"https://byuistats.github.io/M335/presentations_class/day_15.html","color":"gold"},{"title":"Class","start":"2018-03-01","url":"https://byuistats.github.io/M335/presentations_class/day_16.html","color":"gold"},{"title":"Class","start":"2018-03-06","url":"https://byuistats.github.io/M335/presentations_class/day_17.html","color":"gold"},{"title":"Class","start":"2018-03-08","url":"https://byuistats.github.io/M335/presentations_class/day_18.html","color":"gold"},{"title":"Class","start":"2018-03-13","url":"https://byuistats.github.io/M335/presentations_class/day_19.html","color":"gold"},{"title":"Class","start":"2018-03-15","url":"https://byuistats.github.io/M335/presentations_class/day_20.html","color":"gold"},{"title":"Class","start":"2018-03-20","url":"https://byuistats.github.io/M335/presentations_class/day_21.html","color":"gold"},{"title":"Class","start":"2018-03-22","url":"https://byuistats.github.io/M335/presentations_class/day_22.html","color":"gold"},{"title":"Class","start":"2018-03-27","url":"https://byuistats.github.io/M335/presentations_class/day_23.html","color":"gold"},{"title":"Class","start":"2018-03-29","url":"https://byuistats.github.io/M335/presentations_class/day_24.html","color":"gold"},{"title":"Class","start":"2018-04-03","url":"https://byuistats.github.io/M335/presentations_class/day_25.html","color":"gold"},{"title":"Class","start":"2018-04-05","url":"https://byuistats.github.io/M335/presentations_class/day_26.html","color":"gold"},{"title":"Class","start":"2018-04-10","url":"https://byuistats.github.io/M335/presentations_class/day_27.html","color":"gold"}]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2ce1084f3448d369ec7b" style="width:768px;height:480px;" class="fullcalendar html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2ce1084f3448d369ec7b">{"x":{"firstDay":1,"header":false,"height":500,"aspectRatio":1.75,"footer":{"right":"today prev,next, title"},"titleFormat":" MM-YYYY","events":[{"title":"Task 1 Due","start":"2018-04-23","url":"https://byuistats.github.io/M335/class_tasks/task01_details.html","color":"darkgreen"},{"title":"Task 2 Due","start":"2018-04-25","url":"https://byuistats.github.io/M335/class_tasks/task02_details.html","color":"darkgreen"},{"title":"Task 3 Due","start":"2018-04-30","url":"https://byuistats.github.io/M335/class_tasks/task03_details.html","color":"darkgreen"},{"title":"Task 4 Due","start":"2018-05-02","url":"https://byuistats.github.io/M335/class_tasks/task04_details.html","color":"darkgreen"},{"title":"Task 5 Due","start":"2018-05-07","url":"https://byuistats.github.io/M335/class_tasks/task05_details.html","color":"darkgreen"},{"title":"Task 6 Due","start":"2018-05-09","url":"https://byuistats.github.io/M335/class_tasks/task06_details.html","color":"darkgreen"},{"title":"Task 7 Due","start":"2018-05-14","url":"https://byuistats.github.io/M335/class_tasks/task07_details.html","color":"darkgreen"},{"title":"Task 8 Due","start":"2018-05-16","url":"https://byuistats.github.io/M335/class_tasks/task08_details.html","color":"darkgreen"},{"title":"Task 9 Due","start":"2018-05-21","url":"https://byuistats.github.io/M335/class_tasks/task09_details.html","color":"darkgreen"},{"title":"Task 10 Due","start":"2018-05-23","url":"https://byuistats.github.io/M335/class_tasks/task10_details.html","color":"darkgreen"},{"title":"Task 11 Due","start":"2018-05-28","url":"https://byuistats.github.io/M335/class_tasks/task11_details.html","color":"darkgreen"},{"title":"Task 12 Due","start":"2018-05-30","url":"https://byuistats.github.io/M335/class_tasks/task12_details.html","color":"darkgreen"},{"title":"Task 13 Due","start":"2018-06-04","url":"https://byuistats.github.io/M335/class_tasks/task13_details.html","color":"darkgreen"},{"title":"Task 14 Due","start":"2018-06-06","url":"https://byuistats.github.io/M335/class_tasks/task14_details.html","color":"darkgreen"},{"title":"Task 15 Due","start":"2018-06-11","url":"https://byuistats.github.io/M335/class_tasks/task15_details.html","color":"darkgreen"},{"title":"Task 16 Due","start":"2018-06-13","url":"https://byuistats.github.io/M335/class_tasks/task16_details.html","color":"darkgreen"},{"title":"Task 17 Due","start":"2018-06-18","url":"https://byuistats.github.io/M335/class_tasks/task17_details.html","color":"darkgreen"},{"title":"Task 18 Due","start":"2018-06-20","url":"https://byuistats.github.io/M335/class_tasks/task18_details.html","color":"darkgreen"},{"title":"Task 19 Due","start":"2018-06-25","url":"https://byuistats.github.io/M335/class_tasks/task19_details.html","color":"darkgreen"},{"title":"Task 20 Due","start":"2018-06-27","url":"https://byuistats.github.io/M335/class_tasks/task20_details.html","color":"darkgreen"},{"title":"Task 21 Due","start":"2018-07-02","url":"https://byuistats.github.io/M335/class_tasks/task21_details.html","color":"darkgreen"},{"title":"Task 22 Due","start":"2018-07-04","url":"https://byuistats.github.io/M335/class_tasks/task22_details.html","color":"darkgreen"},{"title":"Task 23 Due","start":"2018-07-09","url":"https://byuistats.github.io/M335/class_tasks/task23_details.html","color":"darkgreen"},{"title":"Task 24 Due","start":"2018-07-11","url":"https://byuistats.github.io/M335/class_tasks/task24_details.html","color":"darkgreen"},{"title":"CS 1 Due","start":"2018-04-28","url":"https://byuistats.github.io/M335/weekly_projects/cs01_details.html","color":"darkgreen"},{"title":"CS 2 Due","start":"2018-05-05","url":"https://byuistats.github.io/M335/weekly_projects/cs02_details.html","color":"darkgreen"},{"title":"CS 3 Due","start":"2018-05-12","url":"https://byuistats.github.io/M335/weekly_projects/cs03_details.html","color":"darkgreen"},{"title":"CS 4 Due","start":"2018-05-19","url":"https://byuistats.github.io/M335/weekly_projects/cs04_details.html","color":"darkgreen"},{"title":"CS 5 Due","start":"2018-05-26","url":"https://byuistats.github.io/M335/weekly_projects/cs05_details.html","color":"darkgreen"},{"title":"CS 6 Due","start":"2018-06-02","url":"https://byuistats.github.io/M335/weekly_projects/cs06_details.html","color":"darkgreen"},{"title":"CS 7 Due","start":"2018-06-09","url":"https://byuistats.github.io/M335/weekly_projects/cs07_details.html","color":"darkgreen"},{"title":"CS 8 Due","start":"2018-06-16","url":"https://byuistats.github.io/M335/weekly_projects/cs08_details.html","color":"darkgreen"},{"title":"CS 9 Due","start":"2018-06-23","url":"https://byuistats.github.io/M335/weekly_projects/cs09_details.html","color":"darkgreen"},{"title":"CS 10 Due","start":"2018-06-30","url":"https://byuistats.github.io/M335/weekly_projects/cs10_details.html","color":"darkgreen"},{"title":"CS 11 Due","start":"2018-07-07","url":"https://byuistats.github.io/M335/weekly_projects/cs11_details.html","color":"darkgreen"},{"title":"CS 12 Due","start":"2018-07-14","url":"https://byuistats.github.io/M335/weekly_projects/cs12_details.html","color":"darkgreen"},{"title":"CS 13 Due","start":"2018-07-21","url":"https://byuistats.github.io/M335/weekly_projects/cs13_details.html","color":"darkgreen"},{"title":"Class","start":"2018-04-24","url":"https://byuistats.github.io/M335/presentations_class/day_1.html","color":"gold"},{"title":"Class","start":"2018-04-26","url":"https://byuistats.github.io/M335/presentations_class/day_2.html","color":"gold"},{"title":"Class","start":"2018-05-01","url":"https://byuistats.github.io/M335/presentations_class/day_3.html","color":"gold"},{"title":"Class","start":"2018-05-03","url":"https://byuistats.github.io/M335/presentations_class/day_4.html","color":"gold"},{"title":"Class","start":"2018-05-08","url":"https://byuistats.github.io/M335/presentations_class/day_5.html","color":"gold"},{"title":"Class","start":"2018-05-10","url":"https://byuistats.github.io/M335/presentations_class/day_6.html","color":"gold"},{"title":"Class","start":"2018-05-15","url":"https://byuistats.github.io/M335/presentations_class/day_7.html","color":"gold"},{"title":"Class","start":"2018-05-17","url":"https://byuistats.github.io/M335/presentations_class/day_8.html","color":"gold"},{"title":"Class","start":"2018-05-22","url":"https://byuistats.github.io/M335/presentations_class/day_9.html","color":"gold"},{"title":"Class","start":"2018-05-24","url":"https://byuistats.github.io/M335/presentations_class/day_10.html","color":"gold"},{"title":"Class","start":"2018-05-29","url":"https://byuistats.github.io/M335/presentations_class/day_11.html","color":"gold"},{"title":"Class","start":"2018-05-31","url":"https://byuistats.github.io/M335/presentations_class/day_12.html","color":"gold"},{"title":"Class","start":"2018-06-05","url":"https://byuistats.github.io/M335/presentations_class/day_13.html","color":"gold"},{"title":"Class","start":"2018-06-07","url":"https://byuistats.github.io/M335/presentations_class/day_14.html","color":"gold"},{"title":"Class","start":"2018-06-12","url":"https://byuistats.github.io/M335/presentations_class/day_15.html","color":"gold"},{"title":"Class","start":"2018-06-14","url":"https://byuistats.github.io/M335/presentations_class/day_16.html","color":"gold"},{"title":"Class","start":"2018-06-19","url":"https://byuistats.github.io/M335/presentations_class/day_17.html","color":"gold"},{"title":"Class","start":"2018-06-21","url":"https://byuistats.github.io/M335/presentations_class/day_18.html","color":"gold"},{"title":"Class","start":"2018-06-26","url":"https://byuistats.github.io/M335/presentations_class/day_19.html","color":"gold"},{"title":"Class","start":"2018-06-28","url":"https://byuistats.github.io/M335/presentations_class/day_20.html","color":"gold"},{"title":"Class","start":"2018-07-03","url":"https://byuistats.github.io/M335/presentations_class/day_21.html","color":"gold"},{"title":"Class","start":"2018-07-05","url":"https://byuistats.github.io/M335/presentations_class/day_22.html","color":"gold"},{"title":"Class","start":"2018-07-10","url":"https://byuistats.github.io/M335/presentations_class/day_23.html","color":"gold"},{"title":"Class","start":"2018-07-12","url":"https://byuistats.github.io/M335/presentations_class/day_24.html","color":"gold"},{"title":"Class","start":"2018-07-17","url":"https://byuistats.github.io/M335/presentations_class/day_25.html","color":"gold"},{"title":"Class","start":"2018-07-19","url":"https://byuistats.github.io/M335/presentations_class/day_26.html","color":"gold"}]},"evals":[],"jsHooks":[]}</script>
 <p><br></p>
 <hr />
 </div>
-<div id="case-study-1-due-113" class="section level3">
-<h3>Case Study 1 (Due 1/13)</h3>
+<div id="details" class="section level1">
+<h1>Details</h1>
+<div id="case-study-1-due-428" class="section level2">
+<h2>Case Study 1 (Due 4/28)</h2>
 <p>Your first weekly project requires you to <strong>submit</strong> a review of 4-5 different data visualizations used to answer specific questions. Some fun websites are <a href="https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262" target="blank">wonkblog</a>, <a href="https://fivethirtyeight.com/" target="blank">fivethiryeight</a>, and <a href="https://priceonomics.com/" target="blank">priceonomics</a> (but you can use any website, blog, or article with a good visualization).</p>
-<p>The <strong>submit</strong> word above will require you to create an account on <a href="https://f17dwv.slack.com/signup" target="blank">slack</a>. Our slack channel is <code>f18dwv</code>, and it requires that you create an account with your <code>@byui.edu</code> email account.</p>
+<p>The <strong>submit</strong> word above will require you to create an account on <a href="https://join.slack.com/t/byuidwv/signup?x=x-339637048932-339197858336" target="blank">slack</a>. Our slack channel is byuidwv.slack.com. You must use your <code>@byui.edu</code> email to create an account.</p>
 <ul>
 <li><a href="weekly_projects/cs01_details.html">Details</a></li>
 </ul>
-<div id="section" class="section level4">
-<h4>1/8 (1.1)</h4>
+<div id="section" class="section level3">
+<h3>4/23 (1.1)</h3>
 <p>To create graphics that clearly answer questions, you must understand the basics of how the human perceptual system works. <a href="https://youtu.be/fSgEeI2Xpdc" target="blank">This 40-minute talk by John Rauser</a>, a data scientist in the technology industry, will give you an overview. You can find the code for the majority of his graphics <a href="https://github.com/jrauser/writing/blob/master/how_humans_see_data/hhsd_notes.Rmd" target="blank">here</a>.</p>
 <p>You will also be responsible for getting R and Rstudio installed and running.</p>
 <ul>
 <li><a href="class_tasks/task01_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-1" class="section level4">
-<h4>1/10 (1.2)</h4>
-<p>This task is intended to get all of us on the same page in R. You will use the <code>library(swirl)</code> package to learn how to use R. We will be covering Lessons 1-7. Even if you have used R before, this will be an excellent refresher. If you do not get the title of this task, watch <a href="https://www.youtube.com/watch?v=SMCsXl9SGgY">this</a>.</p>
+<div id="section-1" class="section level3">
+<h3>4/25 (1.2)</h3>
+<p>This task is intended to get all of us on the same page in R. You will use the <code>library(swirl)</code> package to learn how to use R. We will be covering Lessons 1-7. Even if you have used R before, this will be an excellent refresher. If the sending of an email in the swirl practice does not work do not worry about it. If you do not get the title of this task, watch <a href="https://www.youtube.com/watch?v=SMCsXl9SGgY">this</a>.</p>
 <ul>
 <li><a href="class_tasks/task02_details.html">Details</a></li>
 </ul>
 <!-- Case Study 2 -->
 </div>
 </div>
-<div id="case-study-2-due-120" class="section level3">
-<h3>Case Study 2 (Due 1/20)</h3>
+<div id="case-study-2-due-55" class="section level2">
+<h2>Case Study 2 (Due 5/5)</h2>
 <!-- https://github.com/jennybc/gapminder -->
 <p><a href="http://www.gapminder.org/news/sad-to-announce-hans-rosling-passed-away-this-morning/" target="blank">Hans Rosling</a> is one of the most popular data scientists on the web. <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen" target="blank">His original TED talk</a> was very popular among my friends when it came out. We are going to create some graphics using his formatted data as our weekly case study. Note that we need to remove Kuwait from the data (<a href="https://github.com/jennybc/gapminder/issues/9" target="blank">discussion on this</a>)</p>
 <ul>
 <li><a href="weekly_projects/cs02_details.html">Details</a></li>
 </ul>
-<div id="section-2" class="section level4">
-<h4>1/15 (2.3)</h4>
+<div id="section-2" class="section level3">
+<h3>4/30 (2.3)</h3>
 <p>You have just been hired to a new data science team, and you need to collaborate on projects. The team lead told you to connect to your git repository on Github and edit the <code>README.md</code> in your repository. She wants you to describe who you are in a short paragraph.</p>
 <ul>
 <li><a href="class_tasks/task03_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-3" class="section level4">
-<h4>1/17 (2.4)</h4>
-<p>Learning how to ask interesting questions takes time. As data scientists we need to learn how to ask questions that data can answer. This task supports your semester project.</p>
+<div id="section-3" class="section level3">
+<h3>5/2 (2.4)</h3>
+<p>Learning how to ask interesting questions takes time. As data scientists we need to learn how to ask questions that data can answer. This task supports your semester project. <strong>Note that the reading on data transformation below is necessary for the case study for this week and may be the most important reading of the semester to fully understand</strong></p>
 <ul>
 <li><a href="class_tasks/task04_details.html">Details</a></li>
 </ul>
 <!-- Case Study 3 -->
 </div>
 </div>
-<div id="case-study-3-due-127" class="section level3">
-<h3>Case Study 3 (Due 1/27)</h3>
+<div id="case-study-3-due-512" class="section level2">
+<h2>Case Study 3 (Due 5/12)</h2>
 <p>You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (<code>install.packages(&quot;nycflights13&quot;)</code>, <code>library(nycflights13)</code>) your manager wants you to answer the following questions;</p>
 <ol style="list-style-type: decimal">
 <li>If I am leaving before noon, which two airlines do you recommend at each airport (JFK, LGA, EWR) that will have the lowest delay time at the 75th percentile?</li>
@@ -492,15 +499,15 @@ div.tocify {
 <ul>
 <li><a href="weekly_projects/cs03_details.html">Details</a></li>
 </ul>
-<div id="section-4" class="section level4">
-<h4>1/22 (3.5)</h4>
+<div id="section-4" class="section level3">
+<h3>5/7 (3.5)</h3>
 <p>In <code>library(ggplot2)</code> there is a <code>diamonds</code> dataset that shows features of diamonds. Your brother is about to go out and buy a diamond ring for his fiancee and needs some advice on what type of diamond to purchase. He knows that karat has a strong relationship with price. He wants to know what other elements of the diamond he could sacrifice to maximize the karat size for a budget around $2,000. Some interesting details on diamonds can be found <a href="https://www.americangemsociety.org/page/4cs" target="blank">here</a>.</p>
 <ul>
 <li><a href="class_tasks/task05_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-5" class="section level4">
-<h4>1/24 (3.6)</h4>
+<div id="section-5" class="section level3">
+<h3>5/9 (3.6)</h3>
 <p>The <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> website has world data. It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.</p>
 <ul>
 <li><a href="class_tasks/task06_details.html">Details</a></li>
@@ -508,31 +515,31 @@ div.tocify {
 <!-- Case Study 4 -->
 </div>
 </div>
-<div id="case-study-4-due-23" class="section level3">
-<h3>Case Study 4 (Due 2/3)</h3>
+<div id="case-study-4-due-519" class="section level2">
+<h2>Case Study 4 (Due 5/19)</h2>
 <p>The world is a dangerous place. During 2015 and 2016 there was a lot of discussion in the <a href="http://www.cbsnews.com/pictures/controversial-police-shootings/" target="blank">news about police shootings</a>. <a href="https://fivethirtyeight.com/" target="blank">FiveThirtyEight</a> reported on <a href="https://fivethirtyeight.com/features/gun-deaths/" target="blank">gun deaths in 2016</a>. As leaders in data journalism, they have posted a clean version of this data in their GitHub repo called <a href="https://github.com/fivethirtyeight/guns-data" target="blank">full_data.csv</a> for us to use.</p>
 <p>While their visualizations focused on yearly averages, our client wants to create commercials that help reduce the gun deaths in the US. They would like to target the commercials in different seasons of the year (think month variable) to audiences that could have the most impact in reducing gun deaths. Our challenge is to summarize and visualize seasonal trends accros the other variables in these data.</p>
 <ul>
 <li><a href="weekly_projects/cs04_details.html">Details</a></li>
 </ul>
-<div id="section-6" class="section level4">
-<h4>1/29 (4.7)</h4>
+<div id="section-6" class="section level3">
+<h3>5/14 (4.7)</h3>
 <p>The <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> website has world data. It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to recreate some of their visualizations in R and then make them better.</p>
 <ul>
 <li><a href="class_tasks/task07_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-7" class="section level4">
-<h4>1/31 (4.8)</h4>
-<p>Finding good data takes time, and can take longer than the time to tidy your data. This task could easily take 3-6 hours to find the data you need for your project. After you find good data sourses make sure to complete the remaining tasks.</p>
+<div id="section-7" class="section level3">
+<h3>5/16 (4.8)</h3>
+<p>Finding good data takes time, and can take longer than the time to tidy your data. This task could easily take 3-6 hours to find the data you need for your project. After you find good data sources make sure to complete the remaining tasks.</p>
 <ul>
 <li><a href="class_tasks/task08_details.html">Details</a></li>
 </ul>
 <!-- Case Study 5 -->
 </div>
 </div>
-<div id="case-study-5-due-210" class="section level3">
-<h3>Case Study 5 (Due 2/10)</h3>
+<div id="case-study-5-due-526" class="section level2">
+<h2>Case Study 5 (Due 5/26)</h2>
 <p>The <a href="https://www.scientificamerican.com/article/why-are-we-getting-taller/" target="blank">Scientific American argues</a> that humans have been getting taller over the years. As the data scientists that we are becoming, we would like to find data that validates this concept. Our challenge is to show different male heights across the centuries.</p>
 <p>This project is not as severe as the two quotes below, but it will give you a taste of pulling various data and file formats together into “tidy” data for visualization and analysis. You will not need to search for data as all the files are listed <a href="https://byuistats.github.io/M335/maleheight.html">here</a></p>
 <ol style="list-style-type: decimal">
@@ -542,15 +549,15 @@ div.tocify {
 <ul>
 <li><a href="weekly_projects/cs05_details.html">Details</a></li>
 </ul>
-<div id="section-8" class="section level4">
-<h4>2/5 (5.9)</h4>
+<div id="section-8" class="section level3">
+<h3>5/21 (5.9)</h3>
 <p>Data formats are varied and differ by domains and software. We could spend weeks on the different formats and file types that companies and governments use to store their data. We will practice with a few standard formats that are often used for storing data. In the future, you will most likely have to do some research to figure out other formats (but you can do it with R or Python). We have a challenge to read in the five formats of the <a href="https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova" target="blank">DOW data</a> and checking that they are all identical using <code>all.equal()</code>. One final note, your R script should do all the work. That is your script should download the files and/or read directly from the web location of the file.</p>
 <ul>
 <li><a href="class_tasks/task09_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-9" class="section level4">
-<h4>2/7 (5.10)</h4>
+<div id="section-9" class="section level3">
+<h3>5/23 (5.10)</h3>
 <p>With stock return data from the previous task, we need to tidy this data for the creation of a time series plot. We want to look at the returns for each six-month period of the year in which the returns were reported. Your plot should highlight the tighter spread of the DJIA as compared to the other two selection methods (DARTS and PROS). We need to display a table of the DJIA returns with months on the rows and years in the columns (i.e. “spread” the data).</p>
 <ul>
 <li><a href="class_tasks/task10_details.html">Details</a></li>
@@ -558,8 +565,8 @@ div.tocify {
 <!-- Case Study 6 -->
 </div>
 </div>
-<div id="case-study-6-due-217" class="section level3">
-<h3>Case Study 6 (Due 2/17)</h3>
+<div id="case-study-6-due-62" class="section level2">
+<h2>Case Study 6 (Due 6/2)</h2>
 <p>It is 2010, and you are working for the Idaho restaurant commission, and they need your help getting a clearer picture of how restaurant construction changed across Idaho from 2008 to 2009. They <a href="https://github.com/hathawayj/buildings" target="blank">provided you a dataset</a> of all commercial construction in Idaho for those two years. The data has a variable <code>Type</code> with a general category called <code>Food_Beverage_Service</code> that has other buildings besides restaurants in the category. You will need to use the restaurant names (see <code>restaurants</code> data object) and some additional key words to create the correct subgroupings. Your client expects to provide new data for 2010 and 2011 so your script needs to do the work. Make sure you do not use Excel to manipulate anything.</p>
 <ol style="list-style-type: decimal">
 <li>How did full-service restaurant construction compare to quick service restaurant construction across county and years?</li>
@@ -570,15 +577,15 @@ div.tocify {
 <ul>
 <li><a href="weekly_projects/cs06_details.html">Details</a></li>
 </ul>
-<div id="section-10" class="section level4">
-<h4>2/12 (6.11)</h4>
+<div id="section-10" class="section level3">
+<h3>5/28 (6.11)</h3>
 <p>Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success. As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The <code>library(Lahman)</code> package has a comprehensive set of baseball data. It is great for testing out our relational data skills. We will also need a function to inflation adjust the player salaries - <code>library(blscrapeR)</code>. See <a href="https://cran.r-project.org/web/packages/blscrapeR/vignettes/Inflation_and_Prices.html" target="blank">this guide for an example</a>.</p>
 <ul>
 <li><a href="class_tasks/task11_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-11" class="section level4">
-<h4>2/14 (6.12)</h4>
+<div id="section-11" class="section level3">
+<h3>5/30 (6.12)</h3>
 <p>Using global regular expression print (grep) and regular expressions (regex) to find character string patterns is a valuable tool in data analysis and is available with all operating systems and many different programming languages. It is a powerful tool once it is understood. The recently developed <code>library(stringr)</code> package makes these tools much easier to use. The three tasks below can be completed in many different ways. As a challenge, my code to complete this entire task less than 10 lines.</p>
 <ul>
 <li><a href="class_tasks/task12_details.html">Details</a></li>
@@ -586,21 +593,21 @@ div.tocify {
 <!-- Case Study 7 -->
 </div>
 </div>
-<div id="case-study-7-due-224" class="section level3">
-<h3>Case Study 7 (Due 2/24)</h3>
+<div id="case-study-7-due-69" class="section level2">
+<h2>Case Study 7 (Due 6/9)</h2>
 <p>In 1978 Susan Easton Black <a href="https://www.lds.org/ensign/1978/07/discovery?lang=eng" target="blank">penned an article</a> in the Ensign title <em>Even statistically, he is the dominant figure of the Book of Mormon.</em> which makes some statistical claims about the Book of Mormon. With our “string” skills we are going to check her result and build an improved statistic using using number of words between references.</p>
 <ul>
 <li><a href="weekly_projects/cs07_details.html">Details</a></li>
 </ul>
-<div id="section-12" class="section level4">
-<h4>2/19 (7.13)</h4>
+<div id="section-12" class="section level3">
+<h3>6/4 (7.13)</h3>
 <p>When we are visualizing data with categorical variables, we have to deal with character strings as groupings. The problem with summarizing categorical data in a table or a plot is how to order the groups. Using the concept of Factors allows us to dictate the order of these groupings for presentation. We will revisit the <a href="https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova" target="blank">stock data</a> from a previous task to create a table and a plot that has the months correctly labeled and ordered.</p>
 <ul>
 <li><a href="class_tasks/task13_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-13" class="section level4">
-<h4>2/21 (7.14)</h4>
+<div id="section-13" class="section level3">
+<h3>6/6 (7.14)</h3>
 <p>In 1978 Susan Easton Black <a href="https://www.lds.org/ensign/1978/07/discovery?lang=eng" target="blank">penned an article</a> in the Ensign title <em>Even statistically, he is the dominant figure of the Book of Mormon.</em> which makes some statistical claims about the Book of Mormon. We are going to use some of our “string” skills to count words and occurrences in the New Testament and in the Book of Mormon.</p>
 <ol style="list-style-type: decimal">
 <li>What is the average verse length (number of words) in the New Testament compared to the Book of Mormon?</li>
@@ -613,15 +620,15 @@ div.tocify {
 <!-- Case Study 8 -->
 </div>
 </div>
-<div id="case-study-8-due-33" class="section level3">
-<h3>Case Study 8 (Due 3/3)</h3>
+<div id="case-study-8-due-616" class="section level2">
+<h2>Case Study 8 (Due 6/16)</h2>
 <p>We have transaction data for a few businesses that have been in operation for three months. Each of these companies has come to your investment company for a loan to expand their business. Your boss has asked you to go through the transactions for each business and provide daily, weekly, and monthly gross revenue summaries and comparisons. Your boss would like a short write up with tables and visualizations that help with the decision of which company did the best over the three month period. You will also need to provide a short paragraph with your recommendation after building your analysis.</p>
 <p>In our course we are only looking at understanding and visualizing recorded time series data. If you would like to learn more about forecasting I would recommend <a href="https://www.otexts.org/fpp2/" target="blank">Forecasting: Principles and Practice</a> and for a quick introduction <a href="https://afit-r.github.io/ts_exploration" target="blank">see here</a></p>
 <ul>
 <li><a href="weekly_projects/cs08_details.html">Details</a></li>
 </ul>
-<div id="section-14" class="section level4">
-<h4>2/26 (8.15)</h4>
+<div id="section-14" class="section level3">
+<h3>6/11 (8.15)</h3>
 <p>Use the <code>library(riem)</code> package that is described <a href="https://github.com/ropensci/riem" target="blank">here</a> and get the month of June for 2015, 2016, and 2017. You would use <code>riem_measures(station = &quot;RXE&quot;, date_start = &quot;2015-06-01&quot;, date_end = &quot;2017-07-01&quot;)</code> for station <code>RXE</code>. Once you have downloaded and formated the data, make sure to save it to your analysis folder as it will take a minute or two to download each time. We have a few coding tasks to help us get used to using dates. Create a visualization for each question.</p>
 <ol style="list-style-type: decimal">
 <li>What day of the week had the highest temperature reading?</li>
@@ -631,8 +638,8 @@ div.tocify {
 <li><a href="class_tasks/task15_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-15" class="section level4">
-<h4>2/28 (8.16)</h4>
+<div id="section-15" class="section level3">
+<h3>6/13 (8.16)</h3>
 <p>A car wash business wants to see if the temperature hurts their bottom line. They have point of sale data for the months of April, May, June, and July. You will need to aggregate the data into hourly sales totals and merge the sales data together with the temperature data to provide insight into the relationship between temperature and car wash sales.</p>
 <ul>
 <li><a href="class_tasks/task16_details.html">Details</a></li>
@@ -640,23 +647,23 @@ div.tocify {
 <!-- Case Study 9 -->
 </div>
 </div>
-<div id="case-study-9-due-310" class="section level3">
-<h3>Case Study 9 (Due 3/10)</h3>
+<div id="case-study-9-due-623" class="section level2">
+<h2>Case Study 9 (Due 6/23)</h2>
 <p>Your data science income has ballooned, and you need to find somewhere to invest $25,000 that you have saved over the last year. You have a savvy investment friend that is kind enough to tell you ten stocks he has been watching during the last year. You will need to visualize the last five years performance to help in the in the conversation with your friend.</p>
 <p>Your friend is going to give you his tickers at the beginning of your half-hour meeting with him (he is a busy friend). You will need to build an <code>.Rmd</code> file that will build a suite of visualizations rapidly for your conversation. You will need a series of stock performance graphics using <code>library(dygraphs)</code> and <code>library(ggplot2)</code>. In real life, you might use one or the other, but this task is built to help you move from <code>ts</code> and <code>xts</code> to <code>tidy</code> objects for visualization.</p>
 <p>Specifically, in class the Tuesday following this case study you will get 5 - 10 ticker symbols and will need to build visualizations quickly that allows you to answer questions about the stocks in a few seconds.</p>
 <ul>
 <li><a href="weekly_projects/cs09_details.html">Details</a></li>
 </ul>
-<div id="section-16" class="section level4">
-<h4>3/5 (9.17)</h4>
+<div id="section-16" class="section level3">
+<h3>6/18 (9.17)</h3>
 <p>The stock market is overflowing with data. There are many packages in R that allow us to get quick access to information on publicly traded companies. Imagine that you and a friend each purchased about $1,000 of stock in three different stocks at the start of October last year, and you want to compare your performance up to this week. Use the stock shares purchased and share prices to demonstrate how each of you fared over the period you were competing (assuming that you did not change your allocations).</p>
 <ul>
 <li><a href="class_tasks/task17_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-17" class="section level4">
-<h4>3/7 (9.18)</h4>
+<div id="section-17" class="section level3">
+<h3>6/20 (9.18)</h3>
 <p>Interactive visualizations can often be powerful for data investigations. They let your team get at questions in real time. Use the Kroger (KR) stock price to build an interactive visualization of their performance over the last five years. Annotate the graphic with a note of the reason at two or more time points, or intervals, where the price had significant shifts.</p>
 <ul>
 <li><a href="class_tasks/task18_details.html">Details</a></li>
@@ -664,23 +671,23 @@ div.tocify {
 <!-- Case Study 10 -->
 </div>
 </div>
-<div id="case-study-10-due-317" class="section level3">
-<h3>Case Study 10 (Due 3/17)</h3>
+<div id="case-study-10-due-630" class="section level2">
+<h2>Case Study 10 (Due 6/30)</h2>
 <p>You have been asked to support a story for the local paper (that has a web presence) that looks back on the housing collapse and the early effects of residential construction. You have data on residential building permits from 1980 through 2010 for each county in the United States. Your colleague that is writing the article would like a few maps and graphics that highlight the single family building permit patterns across your state as well as the patterns in the US.</p>
 <p>Remember the big story is the collapse of new building permits at the initial stages of the <a href="https://en.wikipedia.org/wiki/Subprime_mortgage_crisis" target="blank">mortgage crisis</a>. Make sure your graphics highlight the collapse in a clear and honest manner.</p>
 <ul>
 <li><a href="weekly_projects/cs10_details.html">Details</a></li>
 </ul>
-<div id="section-18" class="section level4">
-<h4>3/12 (10.19)</h4>
+<div id="section-18" class="section level3">
+<h3>6/25 (10.19)</h3>
 <p>Up to this point, we have dealt with data that fits into the tidy format without much effort. Spatial data has many complicating factors that have made handling spatial data in R complicated. Big strides are being made to make spatial data tidy in R. However; we are in the middle of the transition.</p>
 <p>We will use <code>library(USAboundaries)</code>, <code>library(ggrepel)</code>, and <code>library(sf)</code> to make a map of the US and show the top 3 largest cities in each state. Specifically, you will use <code>library(ggplot2)</code> and the function <code>geom_sf()</code> to recreate the provided image.</p>
 <ul>
 <li><a href="class_tasks/task19_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-19" class="section level4">
-<h4>3/14 (10.20)</h4>
+<div id="section-19" class="section level3">
+<h3>6/27 (10.20)</h3>
 <p>We have been asked by the state of Idaho to visualize permitted well locations with a production of more than 5000 gallons and the spatial relationship of the large wells to the locations of large dams (surface area larger than 50 acres). They have provided a a <a href="https://byuistats.github.io/M335/data/shp.zip">shp file</a> for us and given us a web address for the <a href="https://research.idwr.idaho.gov/gis/Spatial/Wells/WellConstruction/wells.zip">well</a>, <a href="https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip">dam</a>, and <a href="https://research.idwr.idaho.gov/gis/Spatial/Hydrography/streams_lakes/c_250k/hyd250.zip">water</a> locations. They would like to have the <code>Snake River</code> and <code>Henrys Fork</code> rivers plotted.</p>
 <p>Their US map is projected to show the entire US. You will need to subset the data to Idaho and then reproject the map, so Idaho is not tilted.</p>
 <ul>
@@ -688,31 +695,31 @@ div.tocify {
 </ul>
 <!-- Thanksgiving Week -->
 <!-- Case Study 11 -->
-<!-- ### Case Study 11 (Due 3/24) -->
+<!-- ### Case Study 11 (Due 7/7) -->
 <!-- ```{r child="weekly_projects/cs11_background.Rmd"} -->
 <!-- ``` -->
-<!-- #### 3/19 -->
-<!-- #### 3/21 -->
+<!-- #### 7/2 -->
+<!-- #### 7/4 -->
 <!--  -->
 <!--  -->
 <!-- Case Study 11 or 12 -->
 </div>
 </div>
-<div id="case-study-11-due-324" class="section level3">
-<h3>Case Study 11 (Due 3/24)</h3>
+<div id="case-study-11-due-77" class="section level2">
+<h2>Case Study 11 (Due 7/7)</h2>
 <p>You can recreate <a href="https://byuistats.github.io/M335/weekly_projects/cs10_details.html" target="blank">CS 10</a> or find your own spatial data to display using <a href="http://rstudio.github.io/leaflet/" target="blank">leaflet</a>.</p>
 <ul>
 <li><a href="weekly_projects/cs11_details.html">Details</a></li>
 </ul>
-<div id="section-20" class="section level4">
-<h4>3/19 (11.21)</h4>
+<div id="section-20" class="section level3">
+<h3>7/2 (11.21)</h3>
 <p>Choose from <a href="https://byuistats.github.io/M335/class_tasks/task19_details.html">Task 19</a> or <a href="https://byuistats.github.io/M335/class_tasks/task20_details.html">Task 20</a> and recreate your plot using <a href="https://rstudio.github.io/leaflet/" target="blank">leaflet</a></p>
 <ul>
 <li><a href="class_tasks/task21_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-21" class="section level4">
-<h4>3/21 (11.22)</h4>
+<div id="section-21" class="section level3">
+<h3>7/4 (11.22)</h3>
 <p>This week we are going to get introduced to “big data” principles. We will discuss some of the issues and terminology but will not have any coding tasks associated with “big data”.</p>
 <ul>
 <li><a href="class_tasks/task22_details.html">Details</a></li>
@@ -720,14 +727,14 @@ div.tocify {
 <!-- Case Study 12 or 13 -->
 </div>
 </div>
-<div id="case-study-12-due-331" class="section level3">
-<h3>Case Study 12 (Due 3/31)</h3>
+<div id="case-study-12-due-714" class="section level2">
+<h2>Case Study 12 (Due 7/14)</h2>
 <p>This week we will learn new coding techniques and visualization principles. However, your case study will provide time to makes sure you have the <a href="https://byuistats.github.io/M335/project.html">semester project</a> completed.</p>
 <ul>
 <li><a href="weekly_projects/cs12_details.html">Details</a></li>
 </ul>
-<div id="section-22" class="section level4">
-<h4>3/26 (12.23)</h4>
+<div id="section-22" class="section level3">
+<h3>7/9 (12.23)</h3>
 <p>This week we will learn new coding techniques and visualization principles. Go back to task 12 and build your code into two or three <strong>functions</strong> that performs the same work for the tasks.</p>
 <ol style="list-style-type: decimal">
 <li>Your functions can allow the input of the spacing between characters or maybe a vector that picks of specific characters.</li>
@@ -739,8 +746,8 @@ div.tocify {
 <li><a href="class_tasks/task23_details.html">Details</a></li>
 </ul>
 </div>
-<div id="section-23" class="section level4">
-<h4>3/28 (12.24)</h4>
+<div id="section-23" class="section level3">
+<h3>7/11 (12.24)</h3>
 <p>This week we will learn new coding techniques and visualization principles. However, your case study and weekly tasks will provide time to makes sure you have for the last task of the <a href="https://byuistats.github.io/M335/project.html">semester project</a>. Please complete the required reading.</p>
 <ul>
 <li><a href="class_tasks/task24_details.html">Details</a></li>
@@ -748,13 +755,14 @@ div.tocify {
 <!-- Case Study 12 or 13 -->
 </div>
 </div>
-<div id="case-study-13-due-413" class="section level3">
-<h3>Case Study 13 (Due 4/13)</h3>
+<div id="case-study-13-due-723" class="section level2">
+<h2>Case Study 13 (Due 7/23)</h2>
 <p>Your case study and weekly tasks will provide time to makes sure you have wrapped up the class and get set for a great future in data science. Make sure you have address all the end of semester items.</p>
 <p>Please write your cover letter to me about the class that <a href="syllabus.html">uses the syllabus</a> to justify your grade. Your resume would be in the format you would provide to a job or internship.</p>
 <ul>
 <li><a href="weekly_projects/cs13_details.html">Details</a></li>
 </ul>
+</div>
 </div>
 
 

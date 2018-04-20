@@ -13,7 +13,7 @@ params:
 
 
 
-
+![](cs04_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ## Case Study 4: Reducing Gun Deaths (FiveThirtyEight) 
 ### Background 
@@ -34,10 +34,7 @@ While their visualizations focused on yearly averages, our client wants to creat
 
 This reading will help you complete the tasks below.
 
-* o [Posting Issues on GitHub](https://guides.github.com/features/issues/){target='blank'}
-* o [Being a good critiquer](https://sifterapp.com/blog/2012/08/tips-for-effectively-reporting-bugs-and-issues/){target='blank'}
-* o [Example of GitHub Issue conversation](https://github.com/STAT545-UBC/Discussion/issues/387){target='blank'}
-* o [reprex R Package](https://github.com/tidyverse/reprex#what-is-a-reprex){target='blank'}
+* o [Effectively Communicating Numbers (pg 13-20)](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf){target='blank'}
 
 
 ### Tasks
@@ -54,6 +51,7 @@ ul {
 </style>
 
 
+* [ ] Read "Effectively Communicating Numbers (pg. 13-20)" and add one paragraph to your `.Rmd` summarizing what you learned.
 * [ ] Provide a brief summary of the [FiveThirtyEight article](https://fivethirtyeight.com/features/gun-deaths/){target="blank"}
     * [ ] Create one plot that provides similar insight to their visualization in the article. It does not have to look like theirs.
     * [ ] Write a short paragraph summarizing their article
@@ -61,7 +59,6 @@ ul {
     * [ ] Provide plots that help them know the different potential groups (variables) they could address in different seasons (2-4 visualizations seem necessary)
     * [ ] Write a short paragraph describing each image
 * [ ] Compile your `.md` and `.html` file into your git repository
-* [ ] Complete the recommended reading on posting issues.
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 

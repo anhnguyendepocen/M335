@@ -1,21 +1,6 @@
 ---
 title: "Interactive Maps and Ending the Semester"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: black
-      highlight: espresso
-      center: true
-      code_folding: hide
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
-        maxScale: 3
-        margin: 0
 params:
   day: 21
   ptitle: true
@@ -25,68 +10,27 @@ params:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-library(tidyverse)
-library(magrittr)
-library(ggrepel)
-library(knitr)
-library(stringr)
 
-invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
-read_chunk("temp")
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
-
-# case study completed
-cso <- ceiling(params$day/2) - 1
-csn <- ceiling(params$day/2) 
-
-casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
-casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
-
-link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
-link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
-
-# How did we do?
-hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
-
-# current task
-# 
-taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
-link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
-
-# Review
 ```
 
+```{r child=md_intro_format}
 
-# Review
-
-```{r csold, ref.label=casename_old, echo=FALSE, include=FALSE }
-# For case study due last Saturday
 ```
 
-`r title.text`
-`r link_old`
-`r hdwd`
+## Latest Jobs Discussion
 
+https://careers.peopleclick.com/careerscp/client_nba/external/jobDetails.do?functionName=getJobDetail&jobPostId=7818&localeCode=en-us
 
-```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
-# For case study due next Saturday
+```{r projects, eval=TRUE, echo=FALSE}
+library(webshot)
+page_image <- "https://careers.peopleclick.com/careerscp/client_nba/external/jobDetails.do?functionName=getJobDetail&jobPostId=7818&localeCode=en-us"
+webshot(page_image, delay = 1, file = "NBA_webshot.png")
+
 ```
 
-`r title.text`
-`r link_new`
-
-
-```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
-# For current task that is due
-```
-
-`r title.text`
-`r link_task`
-
-
-```{r stuff, echo=FALSE}
-unlink("temp")
-```
 
 # Finishing the Semester
 
@@ -107,10 +51,21 @@ Weeks 12 and 13 are going to take some work and will be the most rewarding of th
 
 > - [Week 13](https://byuistats.github.io/M335/weekly_projects/cs13_details.html)
 
-## Using Leaflet
+# Maps
 
-Adding layers thoughtfully
+## Selecting the Display
+
+*A wise and noble Wizard, Albus Dumbledore once said,* **“It is our choices, Harry, that show what we truly are, far more than our abilities.”**
 
 > - [Here is my Task 21 and Case Study 11](https://shiny.byui.edu/connect/#/apps/106/access)
-> - [Spatial Data Often becomes big data](https://blogs.esri.com/esri/arcgis/2017/10/17/strategies-to-effectively-display-large-amounts-of-data-in-web-apps/)
->    - [Firefly Cartography](https://adventuresinmapping.com/2016/10/17/firefly-cartography/)
+> - [Firefly Cartography](https://adventuresinmapping.com/2016/10/17/firefly-cartography/)
+
+Read through the following article at your table and take notes in your README.md for today about the 4 stratagies for displaying map data.
+
+- [Spatial Data Often becomes big data](https://blogs.esri.com/esri/arcgis/2017/10/17/strategies-to-effectively-display-large-amounts-of-data-in-web-apps/)
+
+## Leaflet Extras
+
+Read through the [Leaflet guide](https://rstudio.github.io/leaflet/) and find 1-2 additional map features you could add to your last task.
+
+## Project Time

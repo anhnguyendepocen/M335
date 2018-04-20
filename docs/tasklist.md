@@ -32,31 +32,29 @@ This page is provided to give you a one-page view of your task completion throug
 
 The deliverables for your [semester project](project.html) are assigned in [case study 1](weekly_projects/cs01_details.html) and [case study 12](weekly_projects/cs12_details.html). However you should keep a steady workflow on this project throughout the semester.  
 
-#### [Leadership](leadership.html)
+#### [Leadership](teamlead.html)
 
-Leadership in data science requires you to be prepared to answer the clients questions when the team meeting is scheduled.  We are treating class like the team meeting and you need to be prepared to answer and ask questions about the driving objectives from the client.
+Leadership in data science requires you to be prepared to answer the clients questions when the team meeting is scheduled.  We are treating class like the team meeting and you need to be [prepared to answer](cheating.html) and ask questions about the driving objectives from the client.
 
 ##### Data Science Leader (A level)
 
-* [ ] Complete the class task by midnight of the due date at least 18 times.
-* [ ] Complete weekly case study by midnight of the due date at least 10 times.
-* [ ] Supporting other students that need help getting through the last difficulties they had with the task or case study of the previous week.
+* [ ] Be the [team lead](teamlead.html) of the Tuesday case study presentation at least 3 times.
+* [ ] Complete at least 18 class task [on time](cheating.html).
+* [ ] Complete at least 10 case studies [on time](cheating.html).
 
 ##### Data Science Supporter (B level)
 
-* [ ] Complete the class task by midnight of the due date at least 12 times.
-* [ ] Complete weekly case study by midnight of the due date at least 6 times.
-* [ ] Supporting other students that need help getting through the last difficulties they had with the task or case study of the previous week.
-
+* [ ] Be the [team lead](teamlead.html) of the Tuesday case study presentation at least 2 times.
+* [ ] Complete at least 12 class task on time.
+* [ ] Complete at least 6 case studies on time.
 
 ##### Data Science Wannabe (C level)
 
-* [ ] Complete the class task by midnight of the due date at least 8 times.
-* [ ] Complete weekly case study by midnight of the due date at least 4 times.
-* [ ] Supporting other students that need help getting through the last difficulties they had with the task or case study of the previous week.
+* [ ] Be the [team lead](teamlead.html) of the Tuesday case study presentation at least 1 time.
+* [ ] Complete at least 8 class task on time.
+* [ ] Complete at least 4 case studies on time.
 
-
-#### Portfolio
+#### [Portfolio](weekly_projects/cs13_details.html)
 
 [Case study 13](weekly_projects/cs13_details.html) provides the checklist items for your portfolio. This portfolio package will be the basis of your final grade. 
 
@@ -65,7 +63,14 @@ Leadership in data science requires you to be prepared to answer the clients que
 * [ ] A resume that includes the skills you have learned during our projects
 * [ ] A semester task form that records your completed tasks during the semester (electronic or print)
 * [ ] Semester project submission on GitHub
-* [ ] Submit this material electronically schedule a visit with me
+* [ ] Submit this material electronically [schedule a visit with me](https://byuistats.github.io/M335/visitme.html)
+
+#### Coding Challenge
+
+On the last day of class each of you will have the 1.5 hours of class to complete a coding challenge.  You will not be able to work with others, but will be able to ask questions of the teacher in class. The coding challenge will use the techniques and programming developed from the course.
+
+1. **You must pass the challenge to keep grade earned from the [completed tasks](https://byuistats.github.io/M335/syllabus.html#competency_scale).**
+2. Failure to pass the challenge will lower your 1-2 steps.
 
 ## Weekly Case Studies
 
@@ -80,7 +85,7 @@ Leadership in data science requires you to be prepared to answer the clients que
     * [ ] Write a one paragraph critique of each visualization
     * [ ] Add the R code below to your `.Rmd` file
     * [ ] Knit the file to `.html` and keep the `.md` file as well
-* [ ] Create an account on [slack](https://w18dwv.slack.com/signup){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
+* [ ] Create an account on [slack](https://join.slack.com/t/byuidwv/signup?x=x-339637048932-339197858336){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
     * [ ] Upload your intermediary `.md` file to the general channel in our Slack group
 
 #### [Case Study 2](weekly_projects/cs02_details.html)
@@ -89,7 +94,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 * [ ] Recreate the two graphics shown below using `gapminder` dataset from `library(gapminder)` (get them to match as closely as you can)
     * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the first plot
     * [ ] Use  `scale_y_continuous(trans = "sqrt")` to get the correct scale on the y-axis.
-    * [ ] Build weighted average data set using  `weighted.mean()` and GDP with  `mutate()` and `group_by()` that will be the black continent average line on the second plot
+    * [ ] Build weighted average data set using  `weighted.mean()` and GDP with  `summarise()` and `group_by()` that will be the black continent average line on the second plot
     * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the second plot. You will need to use the new data to make the black lines and dots showing the continent average.
     * [ ] Use `ggsave()` and save each plot as a `.png` with a width of 15 inches
 * [ ] Build an Rmd file that has the following features
@@ -109,9 +114,14 @@ Leadership in data science requires you to be prepared to answer the clients que
     * [ ] make a plot of the data to show the answer to the specific question
 * [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
 * [ ] Be prepared to discuss your analysis in the upcoming class
+* [ ] Review the "What do people do with new" data link above and write one quote that resonated with you in your `.Rmd` file.
+* [ ] Complete the recommended reading on posting issues.
+* [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
+* [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
 #### [Case Study 4](weekly_projects/cs04_details.html)
 
+* [ ] Read "Effectively Communicating Numbers (pg. 13-20)" and add one paragraph to your `.Rmd` summarizing what you learned.
 * [ ] Provide a brief summary of the [FiveThirtyEight article](https://fivethirtyeight.com/features/gun-deaths/){target="blank"}
     * [ ] Create one plot that provides similar insight to their visualization in the article. It does not have to look like theirs.
     * [ ] Write a short paragraph summarizing their article
@@ -119,7 +129,6 @@ Leadership in data science requires you to be prepared to answer the clients que
     * [ ] Provide plots that help them know the different potential groups (variables) they could address in different seasons (2-4 visualizations seem necessary)
     * [ ] Write a short paragraph describing each image
 * [ ] Compile your `.md` and `.html` file into your git repository
-* [ ] Complete the recommended reading on posting issues.
 * [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
@@ -146,8 +155,8 @@ Leadership in data science requires you to be prepared to answer the clients que
 * [ ] Load the R package from GitHub `devtools::install_github("hathawayj/buildings")` and find out what [data is in the package](https://github.com/hathawayj/buildings)
 * [ ] Construction value is related to population in the area.  Join the `climate_zone_fips` data to the `buildings0809` data using the two `FIPS` columns for state and county.
 * [ ] After filtering to `Food_Beverage_Service` group of buildings in the `Type` variable, use the `ProjectTitle` column to create new subgroups from the groupings in the code section below and the restaurant names in `restaurants`.
-    * [ ] Restaurants that are not assigned using the names and keywords that are over 4000 square feet should be grouped into `Full Service Restaurants` and be in `Quick Servie Restaurants` if they are under 4000 square feet
-* [ ] Make sure your text strings your ar matching on are as standardized as possible
+    * [ ] Restaurants that are not assigned using the names and keywords that are over 4000 square feet should be grouped into `Full Service Restaurants` and be in `Quick Service Restaurants` if they are under 4000 square feet
+* [ ] Make sure your text strings your are matching on are as standardized as possible
     * [ ] leverage functions like `str_to_lower()` and `str_trim()` to get all the words in a standardized form
     * [ ] you could use the `case_when()` function to create the subgroups.
 * [ ] Create an `.Rmd` file with 2-3 paragraphs summarizing your 3-4 graphics that inform the client questions
@@ -235,7 +244,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 * [ ] A resume that includes the skills you have learned during our projects
 * [ ] A semester task form that records your completed tasks during the semester (electronic or print)
 * [ ] Semester project submission on GitHub
-* [ ] Submit this material electronically schedule a visit with me
+* [ ] Submit this material electronically [schedule a visit with me](https://byuistats.github.io/M335/visitme.html)
 
 ## Daily Class Tasks
 
@@ -276,6 +285,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 4](class_tasks/task04_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Develop a few novel questions that data can answer
     * [ ] Get feedback from 5-10 people on their interest in your questions and summarize this feedback
     * [ ] Find other examples of people addressing your question
@@ -287,6 +297,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 5](class_tasks/task05_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate but poorly built to communicate data.
 * [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate and optimizes data communication.
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your 2 graphics and the choices you made in the data presentation
@@ -294,16 +305,18 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 6](class_tasks/task06_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Review the [Our World in Data](https://ourworldindata.org/){target="blank"} webpage and find a graphic that interests you.
     * [ ] Recreate that graphic in R after downloading the data from their website
 * [ ] Explore the world data on `child_mortality` and create an interesting graphic that highlights this dataset.
-    * [ ] Use `devtools::install_github("drsimonj/ourworldindata") to get a larger dataset on `child_mortality`.  This will require `install.packages("devtools")`.
+    * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `child_mortality`.  This will require `install.packages("devtools")`.
     * [ ] Create a graphic that you could use in a presentation to summarize world child mortatility
 * [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots
 * [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
 
 #### [Class Task 7](class_tasks/task07_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Explore the world data on `financing_healthcare` and create an interesting graphic that highlights this dataset in relation to child mortality.
     * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `financing_healthcare`
     * [ ] Create a graphic that you could use in a final presentation to summarize world child mortatility (`child_mort` column)
@@ -311,16 +324,18 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 8](class_tasks/task08_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Build an interactive document that has links to sources with a description of the quality of each
     * [ ] Find 3-5 potential data sources (that are free) and document some information about the source
     * [ ] Build an R script that reads in, formats, and visualizes the data using the principles of exploratory analysis
     * [ ] Write a short summary of the read in process and some coding secrets you learned
     * [ ] Include 2-3 quick visualizations that you used to check the quality of your data
     * [ ] Summarize the limitations of your final compiled data in addressing your original question
-* [ ] After formatting your date identify any follow on or alternate questions that you could use for your project
+* [ ] After formatting your data identify any follow on or alternate questions that you could use for your project
 
 #### [Class Task 9](class_tasks/task09_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Use the appropriate functions in `library(readr)`, `library(haven)`, `library(readxl)` to read in the five files found on [GitHub](https://github.com/byuistats/data/tree/master/Dart_Expert_Dow_6month_anova){target="blank"}
     * [ ] Use `read_rds(gzcon(url("WEBLOCATION.rds")))` to download and load the `.rds` file type
     * [ ] Use the `library(downloader)` R package and use the `download(mode = "wb")` function to download the xlsx data as `read_xlsx()` cannot read files from the web path
@@ -329,11 +344,13 @@ Leadership in data science requires you to be prepared to answer the clients que
 * [ ] Use one of the files to make a graphic showing the performance of the Dart, DJIA, and Pro stock selections
     * [ ] Include a boxplot, the jittered returns, and the average return in your graphic
 * [ ] Save your `.R` script and your image to your repository and be ready to share your code that built your graphic in class
+* [ ] Schedule a mid-semester [15-minute interview](https://byuistats.github.io/M335/visitme.html) to discuss your progress in the class.
 
 #### [Class Task 10](class_tasks/task10_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Import the Dart_Expert_Dow_6month_anova data from GitHub (see details in previous task)
-* [ ] The `contestant_period` column is not "tidy" we want to create an `month_end` and `year_end` column from the information it contains
+* [ ] The `contestant_period` column is not "tidy" we want to create a `month_end` and `year_end` column from the information it contains
 * [ ] Save your "tidy" data as an `.rds` object
 * [ ] Create a plot that shows the six-month returns by the year in which the returns are collected
 * [ ] Create a table of the DJIA returns with months on the rows and years in the columns ("spread" the data)
@@ -342,6 +359,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 11](class_tasks/task11_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Install the `library(Lahman)` and examine the available data sets available
     * [ ] Find the 4-5 different data sets that you will need to show full college and player names as well as their annual earnings
 * [ ] Install the `library(blscrapeR)` and use the `inflation_adjust(2017)` function to get all earnings in 2017 dollars
@@ -351,16 +369,16 @@ Leadership in data science requires you to be prepared to answer the clients que
 #### [Class Task 12](class_tasks/task12_details.html)
 
 * [ ] Use the `readr::read_lines()` function to read in each string - [randomletters.txt](https://byuistats.github.io/M335/data/randomletters.txt){target="blank"} and [randomletters_wnumbers.txt](https://byuistats.github.io/M335/data/randomletters_wnumbers.txt){target="blank"}
-* [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, <U+0085>) and find the quote that is hidden - the quote ends with a period
+* [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, …) and find the quote that is hidden - the quote ends with a period
 * [ ] With the `randomletters_wnumbers.txt` file, find all the numbers hidden and convert those numbers to letters using the letters order in the alphabet to decipher the message
 * [ ] With the `randomletters.txt` file, remove all the spaces and periods from the string then find the longest sequence of vowels.
 * [ ] Save your `.R` script to your repository and be ready to share your code solution at the beginning of class
-* [ ] Schedule a mid-semester 15-minute interview to discuss your progress in the class.
 
 ### Tasks 13 -24
 
 #### [Class Task 13](class_tasks/task13_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Load your "tidy" data from the previous task using the stock return data
 * [ ] Create a plot that shows the six-month returns by the month in which the returns are collected using the eight years of data
 * [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots. Make sure to display the `tidyr` code in your file
@@ -368,6 +386,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 14](class_tasks/task14_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Download the data from http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip
 * [ ] Read in the `.csv` file that was in the zip file and examine the structure of the data
 * [ ] Address questions 1 & 2 using R functions from `install.packages("stringr")` and `install.packages("stringi")`
@@ -378,6 +397,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 15](class_tasks/task15_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Create a `.png` image for each question
 * [ ] Save your script and `.png` files to GitHub
 * [ ] Be prepared to share your visualization and why your reasoning for how the visualization answers the question
@@ -395,6 +415,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 17](class_tasks/task17_details.html)
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
 * [ ] List the three stocks that your friend picks and the three that you pick
 * [ ] Pull the price performance data using `library(tidyquant)` or `library(quantmod)`
 * [ ] Build a visualization that shows who is winning each day of the competition
@@ -404,6 +425,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 18](class_tasks/task18_details.html)
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
 * [ ] Build the `library(dygraphs)` plot that shows the Kroger (KG) stock price performance
 * [ ] Add a few annotations to the plot that identify the historical context for the price change
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in the data presentation
@@ -411,6 +433,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 19](class_tasks/task19_details.html)
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
 * [ ] Create a `.png` image that closely matches my example
     * [ ] Note that `fill = NA` in `geom_sf()` will not fill the polygons with a grey color
     * [ ] Note that `library(USAboundaries)` has three useful functions - `us_cities()`, `us_states()`, and `us_counties()`
@@ -418,6 +441,8 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 20](class_tasks/task20_details.html)
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
+* [ ] Watch the Josh Wills video on big data and be prepared for a disucssion in class.
 * [ ] Read in all four of the necessary shp file datasets (see description)
 * [ ] Filter all the data for the specific needs of Idaho
 * [ ] Create a `.png` image that plots the required information
@@ -426,6 +451,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 21](class_tasks/task21_details.html)
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
 * [ ] See tasks for [Task 19](https://byuistats.github.io/M335/class_tasks/task19_details.html) or [Task 20](https://byuistats.github.io/M335/class_tasks/task20_details.html)
 
 #### [Class Task 22](class_tasks/task22_details.html)
@@ -437,6 +463,7 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 #### [Class Task 23](class_tasks/task23_details.html)
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Repeat the [task 12 tasks](https://byuistats.github.io/M335/class_tasks/task12_details.html){target="blank"} using three functions that you built
 * [ ] Complete listed reading for class discussion
 

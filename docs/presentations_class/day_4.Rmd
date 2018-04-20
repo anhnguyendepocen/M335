@@ -1,22 +1,14 @@
 ---
 title: "Getting into Data, dplyr and ggplot2"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: moon
-      highlight: espresso
-      center: true
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
+params:
+  day: 4
+  ptitle: true
+  pbackground: true
+  dtype: "none"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r notes, include=FALSE}
 #  revealjs::revealjs_presentation:
 #    self_contained: false
 #    reveal_plugins: ["chalkboard"]
@@ -25,6 +17,34 @@ knitr::opts_chunk$set(echo = TRUE)
 #        theme: whiteboard
 #        toggleNotesButton: false
 ```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
+
+```
+
+# Becoming the Critic.
+
+```{r nextone}
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+## `r titlelink`
+
+[Visualization of the Day](`r vlink`)
+
+
+```{r child=md_intro_format}
+
+```
+
+
 
 #  How do we know when we have given voice to data?
 
@@ -49,15 +69,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Wrangling Data
 
-## library(dplyr)
-
-> - `filter()`  - filter your data to a smaller set of important rows.
-> - `arrange()` - Organize the row order of my data
-> - `select()`  - select specific columns to keep or remove 
-> - `mutate()`  - add new mutated (changed) variables as columns to my data.
-> - `summarise()` - build summaries of the columns specified
-> - `group_by()`  - divide your data into groups. Often used with `summarise()`
-
 ## The pipe `%>%`
 
 You can read it as a series of imperative statements: group, then summarize, then filter. As suggested by this reading, a good way to pronounce %>% when reading code is **"then"**.
@@ -66,77 +77,43 @@ You can read it as a series of imperative statements: group, then summarize, the
 * You can use the pipe to rewrite multiple operations in a way that you can read left-to-right, top-to-bottom. 
 * We'll use piping frequently from now on because it considerably improves the readability of code.
 
-## Practice reading code
 
-<small>
-> - dat - is the data set of children from a longitudinal study over the first two years of life.
-> - bf.type.4 - The breastfeeding grouping based on the first four months of breastfeeding.
-> - wasting - is the grouping of children based on how underweight they are for their height.
-</small>
+## library(dplyr) Part 1
+
+> - `filter()`  - filter your data to a smaller set of important rows.
+> - `arrange()` - Organize the row order of my data
+> - `select()`  - select specific columns to keep or remove 
+> - `mutate()`  - add new mutated (changed) variables as columns to my data.
+
+## library(dplyr) Part 2
+
+> - `summarise()` - build summaries of the columns specified
+> - `group_by()`  - divide your data into groups. Often used with `summarise()`
+
+## Practice reading code
 
 With your table, write this code out in an English paragraph.
 
-```{r, eval=FALSE}
-#
-#
-#
-
-dat %>%
-  filter(!is.na(bf.type.4), bf.type.4 != "none", wasting != "no group", 
-         month_of_age %in% c(1:6,seq(8,24, by = 2)), 
-         !country %in% c("Brazil", "Peru", "South Africa", "Tanzania")) %>%
-  mutate(`BF Status 4 months` = 
-          factor(bf.type.4, levels = c("exclusive", "predominant", "partial")),
-         days = month_of_age*30.25) 
-#
-#
-#
+```{r weirdname, eval=FALSE, echo=TRUE}
+delays <- flights %>% 
+  group_by(dest) %>% 
+  summarise(
+    count = n(),
+    dist = mean(distance, na.rm = TRUE),
+    delay = mean(arr_delay, na.rm = TRUE)
+  ) %>% 
+  filter(count > 20, dest != "HNL")
 ```
 
-# Visualizing Data
+## Practice using dplyr
 
-## The grammar of graphics
+Use `filter()`, `arrange()`, `select()`, `mutate()`, `group_by()`, and `summarise()`. With `library(tidyverse)` tackle the following challenges.
 
-> - [An overview of the grammar](https://www.youtube.com/embed/uiTc55clwuA?rel=0)
-> - [ggplot2 specifics](https://www.youtube.com/embed/PiY9hwOkL8U?rel=0)
+> 1. Arrange the `iris` data by `Sepal.Length` and display the first six rows.
+> 2. Select the `Species` and `Petal.Width` columns and put them into a new data set called `testdat`.
+> 3. Create a new table that has the mean for each variable by Species.
+> 4. Read about the `summarise_all()` and get a new table with the means and standard deviations for each Species.
 
-## Cleveland's Examples
 
-There were three democratic candidates.  We are going to use the following plots to help us understand the constituency that helped the winner in the primaries.
 
-- [1984 Primaries](https://en.wikipedia.org/wiki/Democratic_Party_presidential_primaries,_1984)
-- [Mondale, Hart, Jackson Visualization](../images/Cleveland_1_ok.png){target="blank"}
-- [Better Mondale, Hart, Jackson Visualisation](../images/Cleveland_1_better.png){target="blank"}
-- How much time do you think it took Bill Cleveland in th 80's to make each graph?
-
-## Practice Reading Code
-
-With your table, write this code out in an English paragraph  (same first part but now write a senescence about the graphic portion).
-
-```{r, eval=FALSE}
-dat %>%
-  filter(!is.na(bf.type.4), bf.type.4 != "none", wasting != "no group", 
-         month_of_age %in% c(1:6,seq(8,24, by = 2)), 
-         !country %in% c("Brazil", "Peru", "South Africa", "Tanzania")) %>%
-  mutate(`BF Status 4 months` = 
-          factor(bf.type.4, levels = c("exclusive", "predominant", "partial")),
-         days = month_of_age*30.25) %>%
-    ggplot(aes(x = factor(month_of_age, levels = 1:24), y = whz)) +
-      geom_boxplot(outlier.color = NA) +
-      facet_grid(wasting~`BF Status 4 months` , labeller = "label_both") +
-      coord_cartesian(ylim = c(-4, 4)) +
-      theme_bw() +
-      labs(x = "Breastfeeding status at 4 months", 
-           y = "WHZ", color = "Country")
-```
-
-## Copy DataCamp Iris Example
-
-> - Let's copy their iris data example in the [ggplot2 specifics video](https://www.youtube.com/embed/PiY9hwOkL8U?start=141)
-
-# Case Study 2
-
-## Wealth and Life Expectancy
-
-[Case Study 2](https://byuistats.github.io/M335/weekly_projects/cs02_details.html)
 

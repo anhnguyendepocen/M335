@@ -63,6 +63,7 @@ navbar:
 output_dir: '.'
 output:
   html_document:
+    lib_dir: site_libs
     toc: true
     theme: readable
     highlight: textmate
@@ -72,6 +73,7 @@ output:
       collapsed: false
     includes:
       in_header: header.html
+
 
 
 

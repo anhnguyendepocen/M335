@@ -1,27 +1,17 @@
 ---
 title: "Remembering the Art of Visualization"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: black
-      highlight: espresso
-      center: true
-      code_folding: hide
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
-        maxScale: 3
-        margin: 0
 params:
   day: 24
   ptitle: true
   pbackground: true
   dtype: "none"
 ---
+
+
+
+
+
 
 
 
@@ -38,5 +28,41 @@ params:
 ## Task 24: A Few views on Visualization
 > - [Task 24](https://byuistats.github.io/M335/class_tasks/task24_details.html)
 
+
+
+
+
+
+
+# Discussing the Art
+
+## Tools
+
+Learning to properly use tools empowers us to make change.
+
+![tools](../images/tools_evolution.png)
+
+## The 8-fold path
+
+1. Simplify
+2. Explore
+3. Compare
+4. Attend
+5. View diversely
+6. Respond
+7. Be skeptical
+8. Ask why
+
+## Compare
+
+The primary question of analysis is "Compared to what?"
+
+- Tufte
+
+## Attend
+
+We need to make graphics that allow people to attend to the elements that matter
+
+http://viscoglab.psych.ubc.ca/videos/
 
 

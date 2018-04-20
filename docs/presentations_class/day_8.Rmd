@@ -1,121 +1,123 @@
 ---
-title: "Ode to Tidy"
+title: "Finding Data"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: black
-      highlight: espresso
-      center: true
-      code_folding: hide
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
-        maxScale: 3
-        margin: 0
+params:
+  day: 8
+  ptitle: true
+  pbackground: true
+  dtype: "none"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-library(tidyverse)
-library(magrittr)
-library(ggrepel)
+
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
+
+```
+
+# Becoming the Critic.
+
+```{r nextone}
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+## `r titlelink`
+
+[Visualization of the Day](`r vlink`)
+
+
+```{r child=md_intro_format}
+
 ```
 
 # Review
-
-## Class Review Concept
-
-> - Class Task 8: Create a table of the DJIA returns with months on the rows and years in the columns ("spread" the data)
-
-Can a few people write example code to get this done?  Can the others that got it done using `spread()` help those that haven't made it that far?
 
 ## Review Timelines and Course Deliverables
 
 > - [Semester Leadership and Project](https://byuistats.github.io/M335/tasklist.html)
 > - [Semester Competencies](https://byuistats.github.io/M335/syllabus.html#grading_scale)
 
-## Case Study 4:  Combining Data
 
-> - [I can clean your data](https://byuistats.github.io/M335/weekly_projects/cs04_details.html)
+# Vectors
 
-## Task 8: Why do people make messy columns?!?!
+## Quotes from the chapter
 
-> - [Task Summary](https://byuistats.github.io/M335/class_tasks/task08_details.html)
-> - [Who wants to show their work?](https://github.com/BYUI335)
+> - Vectors are particularly important as most of the functions you will write will work with vectors. It is possible to write functions that work with tibbles (like ggplot2, dplyr, and tidyr), but the tools you need to write such functions are currently idiosyncratic and immature.
 
-# Data Wild West
+> - There is an important variation of [ called [[. [[ only ever extracts a single element, and always drops names. It's a good idea to use it whenever you want to make it clear that you're extracting a single item, as in a for loop. The distinction between [ and [[ is most important for lists, as we'll see shortly.
 
-## "Happy families are all alike; every unhappy family is unhappy in its own way." 
+## Vectors 
 
-**-- Leo Tolstoy**
+<p style="text-align: left;">
+The chief difference between atomic vectors and lists is that atomic vectors are homogeneous, while lists can be heterogeneous. There's one other related object: NULL. NULL is often used to represent the absence of a vector (as opposed to NA which is used to represent the absence of a value in a vector). NULL typically behaves like a vector of length 0. 
+</p>
 
-## "Tidy datasets are all alike, but every messy dataset is messy in its own way." 
+## Checking Truths
 
-**-- Hadley Wickham**
+|                  | lgl | int | dbl | chr | list |
+|------------------|-----|-----|-----|-----|------|
+| `is_logical()`   |  x  |     |     |     |      |
+| `is_integer()`   |     |  x  |     |     |      |
+| `is_double()`    |     |     |  x  |     |      |
+| `is_numeric()`   |     |  x  |  x  |     |      |
+| `is_character()` |     |     |     |  x  |      |
+| `is_atomic()`    |  x  |  x  |  x  |  x  |      |
+| `is_list()`      |     |     |     |     |  x   |
+| `is_vector()`    |  x  |  x  |  x  |  x  |  x   |
 
-## "There is one glory of the sun, and another glory of the moon, and another glory of the stars: for one star differeth from another star in glory."
 
-**-- Paul (1 Corinthians 15:41)**
+## Scalars and recycling rules
 
-## Really. How bad can it get?
+Write out this line of code and then map the full process to get to the output
 
-> * [R for Data Science Case Study](http://r4ds.had.co.nz/tidy-data.html#case-study)
-> * [Wrangling Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+**Input**
 
-# Tidy Data and Analysis
+`1:10 + 1:2`
 
-## Tidy
+**Output**
 
-**There are three interrelated rules which make a dataset tidy:**
+`#>  [1]  2  4  4  6  6  8  8 10 10 12`
 
-1. Each variable must have its own column.
-2. Each observation must have its own row.
-3. Each value must have its own cell.
 
-## Data Challenge
+## Lists
 
-Read in this building utility data that is not very happy!
+While understanding and using functions is probably more important. Understanding how lists work and the power of lists is a very important key to becoming a master R programmer.  
 
-* You want to use 
-    * `col_datetime(format = "%m%.%d%.%Y %H:%M")` and 
-    * `col_date(format = "%m%.%d%.%Y")` 
-    when you use `read_csv()`.
-* https://byuistats.github.io/M335/data/building_utility_values.csv
+> - [Lists and condiments](http://r4ds.had.co.nz/vectors.html)
 
-```{r, eval=FALSE}
-util <- read_csv("https://byuistats.github.io/M335/data/building_utility_values.csv")
+```
+a <- list(a = 1:3, b = "a string", c = pi, d = list(-1, list(-5, "fish")))
+
 ```
 
-## First Challenge
+**What does this command do?**
 
-> * keep building variables, time variables and water variables
-> * Create a state variable  
-> * separate enddate into year, month, and day (three separate columns) and keep the enddate column
+`a[[c(4,2,2)]]`
 
-## Second Challenge
+## data.frame and tbl (1)
 
-Use `library(dplyr)`, `library(tidyr)`, and `library(ggplot2)` to address the following.
+**What is the difference between tibbles and data frames?**
 
-> * How many buildings do we have in each state?
-> * Create a graphic that compares the total potable gallons of water used by building over time to check the consistency of the data.
+* Never coerces inputs (i.e. strings stay as strings!).
+* Never adds row.names.
+* Never munges column names.
+* Only recycles length 1 inputs.
+* Evaluates its arguments lazily and in order.
+* Adds tbl_df class to output.
+* Automatically adds column names.
 
-## Third Challenge
+## data.frame and tbl (2)
 
-> * Find out how many total potable water measurements we have for each building by year?
-> * Match this table format below
+**What is the difference between tibbles and data frames?**
 
-|id_number |2004 |2005 |2006 |2007 |
-|:---------|:----|:----|:----|:----|
-|0000OB    |-    |0    |0    |0    |
-|0012ZZ    |-    |0    |9    |3    |
-|......    |...  |...  |..   |...  |
-|1923ZZ    |-    |12   |12   |3    |
+* When printed, the tibble diff reports the class of each variable. data.frame objects do not.
+* When printing a tibble diff to screen, only the first ten rows are displayed. The number of columns printed depends on the window size.
 
-## Fourth Challenge
+## tbl settings
 
-> * Use the `gather()` function so you can make a `facet_grid()` plot with the six different water variables shown for each building.  You will need a variable column with all six water columns gathered into it.
-> * What unique issue do you notice?
+> * Change the maximum and the minimum rows to print: `options(tibble.print_max = 20, tibble.print_min = 6)`
+> * Always show all rows: `options(tibble.print_max = Inf)`
+> * Always show all columns: `options(tibble.width = Inf)`

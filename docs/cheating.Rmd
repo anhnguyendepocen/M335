@@ -1,0 +1,20 @@
+---
+title: "Completing Assignments"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## On-time
+
+I don't have a forced rule for on-time.  In general, on-time means that you have come to class with the reading and tasks complete so that you can actively participate in the conversation. You have to define **prepared** for class.  You should note that the workload in this course does not allow you to fall behind.  If you blow off a week, it will be challenging to catch back up.
+
+## Code and Citations
+
+The primary goal of the course is to learn how to **program and think** as a data scientist concerning data wrangling and visualization.  I want you to use your time as efficiently as possible to meet this goal.  With this goal in mind here are some guiding principles.
+
+* You can see others code on [Github](https://github.com/BYUI335). Think of your classmate's code as a resource but not a crutch.  
+    * If you look at other's code to get help solving a problem, you need help with then that is ok.  Just put `# Got help for the next three lines of code from Jason's Task 12 script` where you copied code.
+    * If you copy and paste other's code to complete a task and can't recreate the script on your own or understand what it is doing you are cheating.

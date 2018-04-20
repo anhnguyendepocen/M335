@@ -1,5 +1,17 @@
-# Moving Time Part II
-J. Hathaway  
+---
+title: "Understanding Time"
+author: J. Hathaway
+params:
+  day: 16
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+
+
+
+
 
 
 
@@ -7,67 +19,84 @@ J. Hathaway
 
 
 
-## Case Study 8: Interacting with time
+## Case Study 8: It's about time
 > - [Case Study 8](https://byuistats.github.io/M335/weekly_projects/cs08_details.html)
 
 
 
 
-## Task 16: The US Grocer (KR)
+## Task 16: Does the weather hurt my bottom line?
 > - [Task 16](https://byuistats.github.io/M335/class_tasks/task16_details.html)
 
 
 
 
-# Remember and DataTables
-
-## Remember the Goal
-
-"The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka!' but 'That's funny...'" -Isaac Asimov
-
-> - [Remembering Good Principles](https://youtu.be/fSgEeI2Xpdc)
-> - [Rauser view on time and data](https://www.youtube.com/embed/coNDCIMH8bk?start=628) - 10:28 to 17:50
-> - [Statistical Tests](https://www.youtube.com/embed/5Dnw46eC-0o)
-
-
-## library(DT) - DataTables
-
-Look at the [DT: An R interface to the DataTables library](http://rstudio.github.io/DT/) website and find one or two modifications that you could make to your table output to move beyond the default.
-
-> * Work as a table and push one file to R-Studio connect.
-> * Make sure everyone at the table has the code saved on their computers.
 
 
 
 
-```r
-library(DT)
-datatable(iris)
-```
+# Class Activity
 
-# Time Series Data
+## The Changers (1)
 
-## Are we using timetk?
+> - floor_date(), 
+> - round_date(), and 
+> - ceiling_date()
+> - force_tz()
+> - with_tz()
+> - https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html
+>    - Use `Sys.timezone(location = TRUE)` or `OlsonNames()` to see a list of timezones
+> - [Nice reading on lubridate](https://blog.exploratory.io/5-most-practically-useful-operations-when-working-with-date-and-time-in-r-9f9eb8a17465)
 
-Looks like the task doesn't require it.  I wanted you guys to see this package and understand the potential if you need it in the future - [Link](https://business-science.github.io/timetk/).
 
-> * [Fun Forecasting Example](https://business-science.github.io/timetk/articles/TK03_Forecasting_Using_Time_Series_Signature.html)
+## Challenge
 
-## tibles, ts, xts, and zoos oh my!
+Use `round_date()`, `ceiling_date()`, `floor_date()`, `force_tz()`, and `with_tz()` to answer the following questions.
 
-We are not going to take the time to get into the weeds of xt, xts, zoo.  Here are two locations where you can read till your heart is content - [1](https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf), and [2](https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo).
+> 1. Tell me what quarter this value is in if we are reporting quarters by the starting month of the quarter. While the time is recorded in UTC it is a transaction that happened in the mountain time zone.
 
-> - [What is the difference in zoo, xts, and ts objects?](https://stackoverflow.com/questions/33714660/what-is-the-difference-the-zoo-object-and-ts-object-in-r)
-> - [Why xts?](http://joshuaulrich.github.io/xts/xts_faq.html)
-> - Why zoo?
+2. Now suppose that the time read into R as UTC but that you know those times are actually recorded in the mountian time zone.  Repeat item 1. 
 
-## Really matrix formats
 
-**Q: Why is xts implemented as a matrix rather than a data frame?**
 
-xts uses a matrix rather than data.frame because: 1) xts is a subclass of zoo, and that's how zoo objects are structured; and 2) matrix objects have much better performance than data.frames.
 
-**Q: Why should I use xts rather than zoo or another time-series package?**
+## The Walmart March Visualization
 
-The main benefit of xts is its seamless compatibility with other packages using different time-series classes (timeSeries, zoo, .). In addition, xts allows the user to add custom attributes to any object. See the main xts vignette for more information.
+> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
+> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
+
+## The Walmart Challenge
+
+> 1. **Recreate this graphic**
+> 2. **Propose a different graphic**
+
+> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
+> - [Walmart Openings csv](https://byuistats.github.io/M335/data/Walmart_store_openings.csv)
+> - `?state` to see the data to use to get the colors correct.
+
+# Making new R package friends
+
+## The challenge
+
+> 1. Pick one of the R packages on the following slide
+> 2. Read material on the R package
+> 3. Build a working script that demonstrates the use of the R package.
+> 4. Write up a short presentation on the package to show the class.
+
+## The packages
+
+> - [rio: The double click of data import](https://cran.r-project.org/web/packages/rio/vignettes/rio.html#data_import)
+> - [janitor: making the cleaning easy](https://github.com/sfirke/janitor)
+> - [tidytext: helps for text mining](https://github.com/juliasilge/tidytext)
+> - [fst: yes it is fast](http://www.fstpackage.org/)
+> - [glue: why should we paste](https://github.com/tidyverse/glue)
+> - [reinstallr: getting your packages back](https://github.com/calligross/reinstallr)
+> - [multidplyr: we need more than one dplyr?](http://www.business-science.io/code-tools/2016/12/18/multidplyr.html)
+> - [skimr: pipeable summary statistics](https://github.com/ropenscilabs/skimr)
+> - [fs: file system interface](https://github.com/r-lib/fs)
+
+
+
+
+
 

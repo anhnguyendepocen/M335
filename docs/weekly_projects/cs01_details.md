@@ -19,7 +19,7 @@ params:
 ### Background 
 Your first weekly project requires you to **submit** a review of 4-5 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
 
-The **submit** word above will require you to create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  Our slack channel is `f18dwv`, and it requires that you create an account with your `@byui.edu` email account.
+The **submit** word above will require you to create an account on [slack](https://join.slack.com/t/byuidwv/signup?x=x-339637048932-339197858336){target="blank"}.  Our slack channel is byuidwv.slack.com.  You must use your `@byui.edu` email to create an account.
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -61,7 +61,7 @@ ul {
     * [ ] Write a one paragraph critique of each visualization
     * [ ] Add the R code below to your `.Rmd` file
     * [ ] Knit the file to `.html` and keep the `.md` file as well
-* [ ] Create an account on [slack](https://w18dwv.slack.com/signup){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
+* [ ] Create an account on [slack](https://join.slack.com/t/byuidwv/signup?x=x-339637048932-339197858336){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
     * [ ] Upload your intermediary `.md` file to the general channel in our Slack group
 
 

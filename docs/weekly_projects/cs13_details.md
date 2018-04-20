@@ -13,7 +13,7 @@ params:
 
 
 
-
+![](cs13_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ## Case Study 13: Finish well 
 ### Background 
@@ -56,7 +56,7 @@ ul {
 * [ ] A resume that includes the skills you have learned during our projects
 * [ ] A semester task form that records your completed tasks during the semester (electronic or print)
 * [ ] Semester project submission on GitHub
-* [ ] Submit this material electronically schedule a visit with me
+* [ ] Submit this material electronically [schedule a visit with me](https://byuistats.github.io/M335/visitme.html)
 
 
 

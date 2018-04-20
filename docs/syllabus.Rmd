@@ -15,11 +15,11 @@ This course pulls many of the diverse capabilities developed throughout the othe
 
 Upon completion of this course, you will be able to use data-driven programming in R for the handling, formatting, and visualization of messy and complex data.  You will implement data wrangling techniques and the grammar of graphics process in visualizing complex data. Specifically, as a successful learner, you will be able to
 
-1.	Convert data from varied formats or structures to a desirable format for analysis and visualization.
-2.	Clean, transform and merge data attributes/variables appropriately.
-3.	Effectively display and communicate meaning from spatial, temporal, and textual data.
-4.	Articulate the process, benefits, and challenges of Big Data manipulation.
-5.	Use current analysis, presentation, and collaboration tools in the data science field (R, Python, D3.js, GitHub).
+1.	[Convert data from varied formats or structures to a desirable format for analysis and visualization.](convert.html)
+2.	[Clean, transform and merge data attributes/variables appropriately.](clean.html)
+3.	[Effectively display and communicate meaning from spatial, temporal, and textual data.](display.html)
+4.	[Articulate the process, benefits, and challenges of Big Data manipulation.](bigdata.html)
+5.	[Use current analysis, presentation, and collaboration tools in the data science field (R, Python, D3.js, GitHub).](tools.html)
 
 The course follows these principles of teaching Data Science[^4]   
 
@@ -128,22 +128,23 @@ We have five concepts that guide our learning objectives.  Click on each to see 
 library(tidyverse)
 library(kableExtra)
 # https://haozhu233.github.io/kableExtra/awesome_table_in_html.html#grouped_columns__rows
-glevel <- data.frame(Grade = c("A", "A-", "B+", "B", "B-", "C", "C-", "D"),
+glevel <- tibble(Grade = c("A", "A-", "B+", "B", "B-", "C", "C-", "D"),
        `Class Tasks` = c(24, 22, 20, 18, 18, 15, 15, 5),
        `Case Studies` = c(13, 11, 8, 8, 6, 5, 5, 5),
+       `On Time` = c("3/18/10", "3/18/10", "2/12/6", "2/12/6", "2/12/6", "1/8/4", "1/8/4", "0/0/0"),
        `Semester Project` = c("yes", "yes", "yes", "no", "no", "no", "no", "no"),
        Leadership = c("leader", "leader", "supporter", "supporter", "supporter", "wannabe", "wannabe", "-"), check.names = FALSE)
 
 glevel %>%
-  select(1:4) %>%
-  knitr::kable(align = rep("c", 5), format = "html" ) %>%
+  select(1:5) %>%
+  knitr::kable(align = rep("c", 6), format = "html" ) %>%
   kable_styling(bootstrap_options = c("striped", "bordered", "hover"), full_width = F, position = "float_right") %>%
   group_rows("Leader", 1, 2) %>%
   group_rows("Supporter", 3, 5) %>%
   group_rows("Wannabe", 6, 7) %>%
   group_rows("None", 8, 8) %>%
   row_spec(0, bold = TRUE, color = "white", background = "black") %>%
-  add_footnote(c("See [the tasklist](tasklist.html) for a description work related to leader, supporter, wannabe"), notation = "number")
+  add_footnote(c("See [the tasklist](tasklist.html) for a description of the 'On Time' column values"), notation = "number")
   
 
 ```

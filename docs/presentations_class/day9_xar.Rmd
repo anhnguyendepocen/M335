@@ -1,0 +1,279 @@
+---
+output:
+  xaringan::moon_reader:
+    css: default
+    lib_dir: externals
+    nature:
+      ratio: 16:9
+      highlightLanguage: r
+      highlightStyle: tomorrow-night-bright
+      highlightLines: true
+      countIncrementalSlides: false
+params:
+  day: 9
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+---
+class: center, middle, inverse
+
+# Data Import
+### J. Hathaway
+
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(magrittr)
+library(ggrepel)
+library(knitr)
+library(stringr)
+library(webshot)
+
+invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
+read_chunk("temp")
+
+
+# case study completed
+cso <- ceiling(params$day/2) - 1
+csn <- ceiling(params$day/2) 
+
+casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
+casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
+
+link_old <- paste0("[Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
+link_new <- paste0("[Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
+
+# How did we do?
+hdwd <- "[How did we do?](https://github.com/BYUI335/M335_HathawayJ/issues)"
+
+# current task
+# 
+taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
+link_task <- paste0("[Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
+```
+
+
+
+```{r nextone, include=FALSE, cache=TRUE}
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+vimage <- paste0("dayshot_", vday, ".png")
+webshot(vlink, paste0("docs/presentations_class/images/", vimage), cliprect = "viewport")
+
+titlelink <- paste0('background-image: url("images/', vimage, '")')
+
+```
+
+
+
+---
+`r titlelink`
+background-position: 50% 50%
+class: center, bottom
+
+
+# [Visualization of the Day](`r vlink`)
+
+
+---
+class: center, middle, inverse
+
+
+# Review
+
+
+---
+class: center, middle
+
+
+
+```{r csold, ref.label=casename_old, echo=FALSE, include=FALSE }
+# For case study due last Saturday
+```
+
+
+`r title.text`
+
+`r link_old`
+   
+   
+`r hdwd`
+
+--
+
+```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
+# For case study due next Saturday
+```
+
+`r title.text`
+`r link_new`
+
+--
+
+```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
+# For current task that is due
+```
+
+`r title.text`
+`r link_task`
+
+
+```{r stuff, echo=FALSE}
+unlink("temp")
+```
+
+---
+class: center, middle, inverse
+
+# Importing Data
+
+
+---
+class: middle
+
+
+# Class Board Concept
+
+## Write this chunk of code out in an English sentence to your grandma.
+
+```{r ddndnddd,eval=FALSE}
+read_rds(gzcon(url("https://github.com/.../Dart_Expert.RDS")))
+```
+
+---
+class: middle
+
+
+## Now write out the code in piped format
+
+--
+
+```{r dkdkdkjfkjdl333, echo=TRUE, eval=FALSE}
+"https://github.com/byuistats/.../Dart_Expert_Dow_6month_anova.RDS" %>%
+```
+
+--
+
+```{r dkdkdkjfkjdl333a, echo=TRUE, eval=FALSE}
+  url() %>%
+```
+
+--
+
+```{r dkdkdkjfkjdl333b, echo=TRUE, eval=FALSE}
+  gzcon() %>%
+```
+
+--
+
+
+```{r dkdkdkjfkjdl333c, echo=TRUE, eval=FALSE}  
+  read_rds()
+```
+
+
+
+
+
+---
+
+# What is `tempfile()` doing?
+
+--
+
+Run the following line and look at `bob`.  *What is it?*
+
+```{r bbb13, eval=FALSE}
+bob <- tempfile()
+
+```
+
+*Why would we want to use a `tempfile`?
+
+--
+
+```{r bbb13a, eval=FALSE}
+download("https://github.com/byuistats/.../Dart_Expert_Dow_6month_anova.xlsx", bob, mode = "wb")
+
+```
+
+--
+
+
+```{r bbb13b, eval=FALSE}
+dxlsx <- read_xlsx(bob)
+```
+
+--
+
+### Note that I am trying to save you from storing large data files in your Git repository.
+
+
+---
+
+The data import packages
+
+
+## haven package
+
+http://haven.tidyverse.org
+
+## readxl package
+
+http://readxl.tidyverse.org
+
+## downloader package
+
+[Just a wrapper around `download.file()`](https://github.com/wch/downloader/blob/master/R/download.r)
+
+---
+
+## Reading Files
+
+--
+
+### Describe in your task 9 readme what R is doing when you use a function like `read.csv()` or `read_csv()` without using the word `read`.  Try to be [succint](https://www.google.com/search?q=succint&oq=succint&aqs=chrome..69i57j0l5.2407j1j7&sourceid=chrome&ie=UTF-8).
+
+#### When you are done push your file to GitHub.
+
+--
+
+## What words did we use to describe the process?
+
+--
+
+## What does [parse](https://www.google.com/search?ei=8BFpWtz6ApC4jwOLsa2ABQ&q=define+parse&oq=define+parse&gs_l=psy-ab.3..0i67k1j0l3j0i10k1j0l5.5615.7641.0.7785.12.12.0.0.0.0.134.1376.2j10.12.0....0...1c.1.64.psy-ab..0.12.1374...35i39k1j0i131k1j0i131i67k1j0i131i20i264k1j0i20i264k1.0.jsMRPqAjg-Q) mean?
+
+
+
+---
+
+# Reading in ASCII data as text
+
+--
+
+## Using read_lines() from `library(readr)`
+
+--
+
+```{r fishface1, eval=FALSE}
+csvlines <- read_lines("https://github.com/byuistats/data/raw/master/Dart_Expert_Dow_6month_anova/Dart_Expert_Dow_6month_anova.csv")
+```
+
+--
+
+```{r fishface2, eval=FALSE}
+mdlines <- read_lines("https://byuistats.github.io/M335/class_tasks/task09_details.md")
+```
+
+
+---
+
+# Connecting to Databases
+
+[db.rstudio.com](http://db.rstudio.com)

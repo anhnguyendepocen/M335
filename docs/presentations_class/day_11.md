@@ -1,93 +1,214 @@
-# Getting control of Factors
-J. Hathaway  
+---
+title: "Moving/Merging & Good Studies"
+author: J. Hathaway
+params:
+  day: 11
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
 
 
 
 
-# Review
+# Becoming the Critic.
 
-##  Case Study 5: The collapse of construction in Idaho
+
+```r
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+
+
+
+
+
+
+
+
+
+# Team Discussion
+
+
+
+## Case Study 5: I can clean your data
+
+> - The [Google spreadsheet link](https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing)
 > - [Case Study 5](https://byuistats.github.io/M335/weekly_projects/cs05_details.html)
 > - [How did we do?](https://github.com/BYUI335/hathaway)
 
 
 
 
-## Case Study 6: Counting names in scripture
+##  Case Study 6: The collapse of construction in Idaho
 > - [Case Study 6](https://byuistats.github.io/M335/weekly_projects/cs06_details.html)
 
 
 
-## Task 11: Controlling categorical variables (factors)
+
+## Task 11: Take me out to the ball game
 > - [Task 11](https://byuistats.github.io/M335/class_tasks/task11_details.html)
 
-# Discussing Use Cases
-
-## Call Center all
-
-Who can tell the story of the call center data visualizations?  
-
-> - [reading](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf){target="blank"}
-
-Of course, I was told the mean time to closure was some number of minutes, either 2 or 20 or 200 or something, I forget; it really doesn't matter for this discussion. They told me the mean, so naturally I asked for the raw, atomic-level data. 
-
-## The data dive
-
-- They gave me the data: a printout from an SQL routine that told me, accurate to twenty decimal places (I am not making this up!), the mean time to closure.
-    - No, I need the data that you used to get these means; do you have that data?
-
-- After several weeks, I was given a data set with hundreds of call durations.
-    - Do you have the start and stop times from which you calculated these durations, the actual times the calls came in and when the cases were opened and closed?
-
-- After several more weeks, I finally got the data: among other things, start and
-stop times for each of the calls. 
-
-## The call center data graphics
-
-> - [All Calls](callcenter_all.png){target="blank"}
-> - [Contractor Calls](callcenter_contract.png){target="blank"}
-> - [Full-Time Calls](callcenter_fulltime.png){target="blank"}
-
-#  Factoring in control
-
-## Using Factors to improve communication
-
-**Now that we have learned about factors let's take some time to fix our Case Study 5 work.**
-
->  1. Let's correctly sort our x-axes and then include both bars when we are making bar plots.
->  2. Let's fix our axis labels using legends.
->  3. Is there something better we can do than bar-plots?
 
 
-## Your code or My code
-
-If your code from case study 5 has enough to address the questions you can use your own code.  If not let's use mine.
-
-> - [Hathaway Code for Case Study 5](https://byuistats.github.io/M335/presentations_class/restaurants_idaho.html)
 
 
-## Sorting and Including Factor Levels
-
-**with tidyr and dplyr**
-
-> - `complete(nesting(SUBTYPE, Year), County, fill = list(value = 0, pop = 0, n = 0))`
-
-**with ggplot2**
-
-> - `scale_x_discrete(drop = FALSE)`
-> - `scale_size_continuous(breaks = c(1, 3, 5, 8, 10), range = c(5, 8), guide = "none")`
 
 
-## Fixing axes
-
-> - `guides(color = guide_legend(override.aes = list(size = 5)))`
-> - ` theme(panel.grid.minor = element_blank(), axis.text.x = element_text(angle = 35, vjust = 1, hjust = 1), legend.position = "bottom")`
 
 
-## Moving beyond bar plots
 
-What is the problem with bar plots?
+## What did we learn about Male Heights (1)
 
+**Height variations within a population are largely genetic, but height variations between populations are mostly environmental, anthropometric history suggests.**
+
+> * If the average Norwegian is taller than the average Nigerian it's because Norwegians live healthier lives. That's why the United Nations now uses height to monitor nutrition in developing countries.
+
+[New Yorker 2004](https://www.newyorker.com/magazine/2004/04/05/the-height-gap)
+
+## What did we learn about Male Heights (2)
+
+> * Yet in Northern Europe over the past twelve hundred years human stature has followed a U-shaped curve: from a high around 800 A.D., to a low sometime in the seventeenth century, and back up again.
+
+[New Yorker 2004](https://www.newyorker.com/magazine/2004/04/05/the-height-gap)
+
+
+## Restaurant Construction in Idaho (Fixing text) 
+
+> - [I can clean your data](https://byuistats.github.io/M335/weekly_projects/cs06_details.html)
+> - Take 5 minutes and complete the following
+>    - read the tasks at your table and come up with a few clarifying questions you could ask.
+>    - get your initial R script started by reading in the data.
+
+
+# Relational Data and R
+
+## Defining Terms
+
+<style type="text/css">
+ span.bullet_code {
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    
+}
+</style>
+
+> - A <span class="bullet_code">**primary key**</span> uniquely identifies an observation in its own table. For example, <span class="bullet_code">planes$tailnum</span> is a primary key because it uniquely identifies each plane in the planes table.
+> - A <span class="bullet_code">**foreign key**</span> uniquely identifies an observation in another table. For example, the <span class="bullet_code">flights$tailnum</span> is a foreign key because it appears in the flights table where it matches each flight to a unique plane.
+> - A **Left Join** is a mutating join.
+
+## Managing Use Problems
+
+**Duplicate Keys**
+
+> - [One table w/ duplicates](http://r4ds.had.co.nz/diagrams/join-one-to-many.png)
+> - [Both tables w/ duplicates](http://r4ds.had.co.nz/diagrams/join-many-to-many.png)
+
+**Missing Keys**
+
+> - <span class="bullet_code">semi_join(x, y)</span> keeps all observations in x that have a match in y.
+> - <span class="bullet_code">anti_join(x, y)</span> drops all observations in x that have a match in y.
+> - [Filtering joins](http://r4ds.had.co.nz/relational-data.html#filtering-joins) can be used for other scenarios as well.
+
+## Other Cases (merge())
+
+`base::merge()` can perform all four types of joins:
+
+dplyr              | merge
+-------------------|-------------------------------------------
+inner_join(x, y) | merge(x, y)
+left_join(x, y)  | merge(x, y, all.x = TRUE)
+right_join(x, y) | merge(x, y, all.y = TRUE),
+full_join(x, y)  | merge(x, y, all.x = TRUE, all.y = TRUE)
+
+<>
+       
+> - specific dplyr verbs more clearly convey the intent of your code: they are concealed in the arguments of <span class="bullet_code">merge()</span>.
+> - **dplyr's joins are considerably faster and don't mess with the order of the rows.**
+
+## Other Cases (SQL)
+
+SQL is the inspiration for dplyr's conventions, so the translation is straightforward:
+
+dplyr                        | SQL
+-----------------------------|-------------------------------------------
+inner_join(x, y, by = "z") | SELECT * FROM x INNER JOIN y USING (z)
+left_join(x, y, by = "z")  | SELECT * FROM x LEFT OUTER JOIN y USING (z)
+right_join(x, y, by = "z") | SELECT * FROM x RIGHT OUTER JOIN y USING (z)
+full_join(x, y, by = "z")  | SELECT * FROM x FULL OUTER JOIN y USING (z)
+
+<>
+
+> - Note that "INNER" and "OUTER" are optional, and often omitted.
+> - SQL supports a wider  range of join types than dplyr
+
+## Class Coding Activity {data-background-iframe="http://ldschurchtemples.org/"}
+
+<big><big>
+**[temple data sealing activity](https://byuistats.github.io/M335/temple_sealings.html)**
+</big></big>
+
+
+# Data Ethics (The truthful Art by Alberto Cairo)
+
+## Data Ethics
+
+> We live in a world with a surfeit of information at our service. It is our choice whether we seek out data that reinforce our biases or choose to look at the world in a critical, rational manner, and allow reality to bend our preconceptions. In the long run, the truth will work better for us than our cherished fictions.
+
+**-Razib Khan, "The Abortion Stereotype,"**
+*The New York Times (January 2, 2015)*
+
+## Paul's Version
+
+3 For the time will come when people will not put up with sound doctrine. Instead, to suit their own desires, they will gather around them a great number of teachers to say what their itching ears want to hear. 4 They will turn their ears away from the truth and turn aside to myths.
+
+> - Paul (2 Timothy 4:3-4 **NIV**)
+
+## John A Widstoe's Version
+
+Intelligent people cannot long endure ... doubts.  It must be resolved ... We set about to remove doubt by gathering information and making tests concerning the subject in question...
+
+> - Evidences and Reconciliations, pp. 31
+
+# Scientific Discovery
+
+## Defining the terms
+
+1. conjecture
+2. hypothesis
+3. data/test
+4. conclusions
+
+## The process
+
+These steps may open researchers' eyes to new paths to explore, so they don't constitute a process with a beginning and an end point but a loop. ... 
+
+* **Good answers lead to more good questions.** 
+* The scientific stance will never take us all the way to an absolute, immutable truth. 
+* What it may do-and it does it well-is to move us further to the right in the truth continuum.
+
+## The Big Idea
+
+Data always vary randomly because the object of our inquiries, nature itself, is also random. We can analyze and predict events in nature with an increasing amount of precision and accuracy, thanks to improvements in our techniques and instruments, **but a certain amount of random variation, which gives rise to uncertainty, is inevitable.** 
+
+## The suspects (Intro)
+
+> * Always be suspicious of studies whose samples have not been randomly chosen
+> * Not all scientific research is based on random sampling, but analyzing a random sample of the population will yield more accurate results than a cherry-picked or self-selected sample.
+
+## The suspects (confounding)
+
+> * Some researchers distinguish between two kinds of extraneous variables. Sometimes we can identify an extraneous variable and incorporate it into our model, in which case we'd be dealing with a **confounding variable**. 
+>    * I know that it may affect my results, so I consider it for my inquiry to minimize its impact. 
+>    * For example, we could control for population change and for variation in number of motor vehicles when analyzing deaths in traffic accidents.
+
+## The suspects (lurking)
+
+> * There's a second, more insidious kind of extraneous variable. Imagine that I don't know that my friends are indeed geeky. If I were unaware of this, I'd be dealing with a **lurking variable**. 
+>    * A lurking variable is an extraneous variable that we don't include in our analysis for the simple reason that its existence is unknown to us, or because we can't explain its connection to the phenomenon we're studying. 
 
 
 

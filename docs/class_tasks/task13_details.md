@@ -48,6 +48,7 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Load your "tidy" data from the previous task using the stock return data
 * [ ] Create a plot that shows the six-month returns by the month in which the returns are collected using the eight years of data
 * [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots. Make sure to display the `tidyr` code in your file

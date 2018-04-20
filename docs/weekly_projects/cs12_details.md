@@ -13,7 +13,7 @@ params:
 
 
 
-
+![](cs12_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ## Case Study 12: Keep your project moving 
 ### Background 

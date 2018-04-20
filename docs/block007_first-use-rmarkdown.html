@@ -11,7 +11,7 @@
 
 
 
-<title>Test drive R Markdown</title>
+<title></title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,8 +23,27 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -33,10 +52,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -174,7 +195,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3,h4",
+      selectors: "h1,h2,h3,h4,h5",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
@@ -288,21 +309,27 @@ div.tocify {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-area-chart"></span>
+    <span class="fa fa-briefcase"></span>
      
-    R
+    Tools
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="r_background.html">R Background</a>
+      <a href="rpages.html">R/R-Studio Details</a>
     </li>
+    <li class="divider"></li>
     <li>
-      <a href="r_help.html">First Use of R</a>
+      <a href="gitpages.html">Git/GitHub Details</a>
     </li>
+    <li class="divider"></li>
     <li>
-      <a href="r_visualization.html">R Visualization</a>
+      <a href="compages.html">Slack &amp; Stackoverflow Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="pypages.html">Python Details</a>
     </li>
   </ul>
 </li>
@@ -318,7 +345,15 @@ div.tocify {
     <li>
       <a href="homework_schedule.html">Assignment Schedule</a>
     </li>
-    <li class="dropdown-header">Case and Task Backgrounds</li>
+    <li>
+      <a href="backgrounds.html">Task Backgrounds</a>
+    </li>
+    <li>
+      <a href="tasklist.html">Semester Task List</a>
+    </li>
+    <li>
+      <a href="readings.html">Weekly Reading List</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -348,8 +383,14 @@ div.tocify {
     <li>
       <a href="http://r4ds.had.co.nz/">R for Data Science</a>
     </li>
+    <li>
+      <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">Supplemental Material</li>
+    <li>
+      <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">Statistical Concepts in Presenting Data:</a>
+    </li>
     <li>
       <a href="http://adv-r.had.co.nz/">Advanced R</a>
     </li>
@@ -362,13 +403,14 @@ div.tocify {
     <li>
       <a href="http://datathink.io">DataThink.io</a>
     </li>
-    <li>
-      <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">Statistical Concepts in Presenting Data:</a>
-    </li>
-    <li>
-      <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
-    </li>
   </ul>
+</li>
+<li>
+  <a href="visitme.html">
+    <span class="fa fa-calendar"></span>
+     
+    Visit Me
+  </a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -382,13 +424,13 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Test drive R Markdown</h1>
 
 </div>
 
 
-<div id="overview1" class="section level3">
-<h3>Overview<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></h3>
+<div id="overview" class="section level3">
+<h3>Overview</h3>
+<p><em>I lifted this from <a href="http://stat545.com/block007_first-use-rmarkdown.html" class="uri">http://stat545.com/block007_first-use-rmarkdown.html</a></em></p>
 <p>This describes a hands-on activity where the goal is to author an R Markdown document and render it to HTML.</p>
 <p>Here is the official R Markdown documentation: <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a></p>
 </div>
@@ -421,7 +463,7 @@ div.tocify {
 <h3>Step 3: Take control of the output format</h3>
 <p>Do you really want HTML? Do you only want HTML? If so, you can skip this step!</p>
 <p>The magical process that turns your R Markdown to HTML is like so: <code>foo.Rmd --&gt; foo.md --&gt; foo.html</code>. Note the intermediate markdown, <code>foo.md</code>. By default RStudio discards this, but you might want to hold on to that markdown.</p>
-<p>Why? GitHub, which we will earn about soon, gives very special treatment to markdown files. They are rendered in an almost HTML-like way. This is great because it preserves all the charms of plain text but gives you a pseudo-webpage for free when you visit the file in the browser. In contrast, HTML is rendered as plain text on GitHub and you’ll have to take special measures to see it the way you want.</p>
+<p>Why? GitHub, which we will learn about soon, gives very special treatment to markdown files. They are rendered in an almost HTML-like way. This is great because it preserves all the charms of plain text but gives you a pseudo-webpage for free when you visit the file in the browser. In contrast, HTML is rendered as plain text on GitHub and you’ll have to take special measures to see it the way you want.</p>
 <p><strong>Output format</strong> is one of the many things we can control in the YAML frontmatter – the text at the top of your file between leading and trailing lines of <code>---</code>.</p>
 <p>You can make some changes via the RStudio IDE: click on the “gear” in the top bar of the source editor, near the “Knit HTML” button. Select “Output options” and go to the Advanced tab and check “Keep markdown source file.” Your YAML should now look more like this:</p>
 <pre class="yaml"><code>    ---  
@@ -442,12 +484,12 @@ div.tocify {
 <p>Select everything but the YAML frontmatter and … delete it!</p>
 <p>Write a single English sentence.</p>
 <p>Insert an empty R chunk, via the “Chunk” menu in upper right of source editor or with corresponding keyboard shortcut.</p>
-<pre><code>```{r}
-## insert your brilliant WORKING code here
-```</code></pre>
+<pre><code>?```{r}
+?## insert your brilliant WORKING code here
+?```</code></pre>
 <p>Insert 1 to 3 lines of functioning code that begin the task at hand. “Walk through” and run those lines using the “Run” button or the corresponding keyboard shortcut. You MUST make sure your code actually works!</p>
 <p>Satisfied? Save!</p>
-<p>Now render the whole document via “Knit HTML.” VoilÃ !</p>
+<p>Now render the whole document via “Knit HTML.” Voilà!</p>
 </div>
 <div id="step-5-develop-your-report" class="section level3">
 <h3>Step 5: Develop your report</h3>
@@ -462,19 +504,30 @@ div.tocify {
 <p>No matter what, technically you can publish this report merely by pushing a rendered version to GitHub. However, certain practices make this effort at publishing more satisfying for your audience.</p>
 <p>This is (sort of) another example of keeping things machine- and human-readable, which is bliss. By making <code>foo.Rmd</code> available, others can see and run your <strong>actual code</strong>. By sharing <code>foo.md</code> and/or <code>foo.html</code>, others can casually browse your end product and decide if they even want to bother.</p>
 </div>
+<div id="course-rmd-template" class="section level3">
+<h3>Course Rmd Template</h3>
+<p>We have built a template <code>.Rmd</code> file that you can use for our course. It requires that you install a package from a GitHub repository. Here are the steps.</p>
+<ol style="list-style-type: decimal">
+<li>Use <code>install.packages(&quot;devtools&quot;)</code> to be able to use <code>library(devtools)</code> in your R.</li>
+<li>Go to <a href="https://github.com/dylanjm/Rtemplates" class="uri">https://github.com/dylanjm/Rtemplates</a> and run the Rtemplates line related to stats.</li>
+<li>Now in R-Studio create a new <code>R Markdown ...</code> and then choose <code>From Template</code>.</li>
+<li>There should be an option that says <code>Math 335 Analysis</code>. Select it and click <code>OK</code>.</li>
+</ol>
+<p>It will build the <code>YAML</code> that we would prefer for this course.</p>
+</div>
 <div id="troubleshooting" class="section level3">
 <h3>Troubleshooting</h3>
 <p><strong>Make sure RStudio and the <code>rmarkdown</code> package (and its dependencies) are up-to-date.</strong> In case of catastrophic failure to render R Markdown, consider that your software may be too old. R Markdown has been developing rapidly (written 2015-09), so you need a very current version of RStudio and <code>rmarkdown</code> to enjoy all the goodies we describe in this course.</p>
 <p><strong>Get rid of your <code>.Rprofile</code></strong>, at least temporarily. I have found that a “mature” <code>.Rprofile</code> that has accumulated haphazardly over the years can cause trouble. Specifically, if you’ve got anything in there relating to <code>knitr</code>, <code>markdown</code>, <code>rmarkdown</code> and RStudio stuff, it may be preventing the installation or usage of the most recent goodies (see above). Comment the whole file out or rename it something else and relaunch or even re-install RStudio.</p>
 <p><strong>Insert a chunk in your <code>.Rmd</code> document so that it renders even when there are errors.</strong> Some errors are easier to diagnose if you can execute specific R statements during rendering and leave more evidence behind for forensic examination. Put this chunk:</p>
-<pre><code>```{r setup, include = FALSE, cache = FALSE}  
-knitr::opts_chunk$set(error = TRUE)  
-```</code></pre>
+<pre><code>?```{r setup, include = FALSE, cache = FALSE}  
+?knitr::opts_chunk$set(error = TRUE)  
+?```</code></pre>
 <p>near the top of your R Markdown document if you want to soldier on through errors, i.e. turn <code>foo.Rmd</code> into <code>foo.md</code> and/or <code>foo.html</code> no matter what. This is also helpful if you are writing a tutorial and want to demo code that throws an error. You might want to keep this as an <a href="https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets">RStudio snippet</a> for easy insertion.</p>
 <p><strong>Tolerate errors in one specific chunk.</strong> If it’s undesirable to globally accept errors, you can still do this for a specific chunk like so:</p>
-<pre><code>```{r wing-and-a-prayer, error = TRUE}  
-## your sketchy code goes here ;) 
-```</code></pre>
+<pre><code>?```{r wing-and-a-prayer, error = TRUE}  
+?## your sketchy code goes here ;) 
+?```</code></pre>
 <p><strong>Check your working directory.</strong> It’s going to break your heart as you learn how often your mistakes are really mundane and basic. Ask me how I know. When things go wrong consider:</p>
 <ul>
 <li>What is the working directory?</li>
@@ -485,14 +538,8 @@ knitr::opts_chunk$set(error = TRUE)
 <li><code>getwd()</code> will display working directory at <strong>run time</strong>. If you monkeyed around with working directory with, e.g., the mouse, maybe it’s set to one place for your interactive development and another when “Knit HTML” takes over?</li>
 <li><code>list.files()</code> will list the files in working directory. Is the file you want even there?</li>
 </ul>
-<p><strong>Don’t try to change working directory within an R Markdown document</strong>. <a href="https://github.com/yihui/knitr/blob/master/FAQ.md">Just don’t</a>. That is all.</p>
+<p><strong>Don’t try to change working directory within an R Markdown document</strong>. <a href="https://yihui.name/knitr/faq/">Just don’t</a>. That is all.</p>
 <p><strong>Don’t be in a hurry to create a complicated sub-directory structure.</strong> RStudio/<code>knitr</code>/<code>rmarkdown</code> (which bring you the “Knit HTML” button) are rather opinionated about the working directory being set to the <code>.Rmd</code> file’s location and about all files living together in one big happy directory. This can all be worked around. But not today.</p>
-</div>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="fn1"><p>I lifted this from <a href="http://stat545.com/block007_first-use-rmarkdown.html" class="uri">http://stat545.com/block007_first-use-rmarkdown.html</a><a href="#fnref1">↩</a></p></li>
-</ol>
 </div>
 
 

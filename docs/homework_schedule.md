@@ -15,20 +15,12 @@ output:
 
 
 
-### Calendar
+# Calendar
 
 The yellow boxes are the days we have class this semester.  The dark green boxes when work is due.
 
-
-<!--html_preserve--><div id="htmlwidget-812d3dd23e883c5c1b34" style="width:672px;height:300px;" class="calheatmapR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-812d3dd23e883c5c1b34">{"x":{"data":{"1515517200":1,"1515690000":1,"1516122000":1,"1516294800":1,"1516726800":1,"1516899600":1,"1517331600":1,"1517504400":1,"1517936400":1,"1518109200":1,"1518541200":1,"1518714000":1,"1519146000":1,"1519318800":1,"1519750800":1,"1519923600":1,"1520355600":1,"1520528400":1,"1520960400":1,"1521133200":1,"1521565200":1,"1521738000":1,"1522170000":1,"1522342800":1,"1522774800":1,"1522947600":1,"1523379600":1,"1515826800":50,"1516431600":50,"1517036400":50,"1517641200":50,"1518246000":50,"1518850800":50,"1519455600":50,"1520060400":50,"1520665200":50,"1521266400":50,"1521871200":50,"1522476000":50,"1523080800":50,"1515430800":50,"1515603600":50,"1516035600":50,"1516208400":50,"1516640400":50,"1516813200":50,"1517245200":50,"1517418000":50,"1517850000":50,"1518022800":50,"1518454800":50,"1518627600":50,"1519059600":50,"1519232400":50,"1519664400":50,"1519837200":50,"1520269200":50,"1520442000":50,"1520874000":50,"1521046800":50,"1521478800":50,"1521651600":50,"1522083600":50,"1522256400":50},"attrs":{"domain":"month","subDomain":"day","start":"2018-01-09T17:00:00Z","range":4,"cellSize":30,"cellPadding":4,"cellRadius":0,"domainGutter":15,"domainMargin":[0,0,0,0],"domainDynamicDimension":true,"verticalOrientation":false,"subDomainTextFormat":"%d","legend":[10,20,30,40],"displayLegend":false,"legendCellSize":10,"legendCellPadding":2,"legendMargin":[10,0,0,0],"legendVerticalPosition":"bottom","legendHorizontalPosition":"left","legendOrientation":"horizontal"}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
-
-
-
-
-
-<!--html_preserve--><div id="htmlwidget-c7f33994528f68641373" style="width:768px;height:480px;" class="fullcalendar html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c7f33994528f68641373">{"x":{"firstDay":1,"header":false,"height":500,"aspectRatio":1.75,"footer":{"right":"today prev,next"},"events":[{"title":"Task 1 Due","start":"2018-01-08","url":"https://byuistats.github.io/M335/class_tasks/task01_details.html","color":"darkgreen"},{"title":"Task 2 Due","start":"2018-01-10","url":"https://byuistats.github.io/M335/class_tasks/task02_details.html","color":"darkgreen"},{"title":"Task 3 Due","start":"2018-01-15","url":"https://byuistats.github.io/M335/class_tasks/task03_details.html","color":"darkgreen"},{"title":"Task 4 Due","start":"2018-01-17","url":"https://byuistats.github.io/M335/class_tasks/task04_details.html","color":"darkgreen"},{"title":"Task 5 Due","start":"2018-01-22","url":"https://byuistats.github.io/M335/class_tasks/task05_details.html","color":"darkgreen"},{"title":"Task 6 Due","start":"2018-01-24","url":"https://byuistats.github.io/M335/class_tasks/task06_details.html","color":"darkgreen"},{"title":"Task 7 Due","start":"2018-01-29","url":"https://byuistats.github.io/M335/class_tasks/task07_details.html","color":"darkgreen"},{"title":"Task 8 Due","start":"2018-01-31","url":"https://byuistats.github.io/M335/class_tasks/task08_details.html","color":"darkgreen"},{"title":"Task 9 Due","start":"2018-02-05","url":"https://byuistats.github.io/M335/class_tasks/task09_details.html","color":"darkgreen"},{"title":"Task 10 Due","start":"2018-02-07","url":"https://byuistats.github.io/M335/class_tasks/task10_details.html","color":"darkgreen"},{"title":"Task 11 Due","start":"2018-02-12","url":"https://byuistats.github.io/M335/class_tasks/task11_details.html","color":"darkgreen"},{"title":"Task 12 Due","start":"2018-02-14","url":"https://byuistats.github.io/M335/class_tasks/task12_details.html","color":"darkgreen"},{"title":"Task 13 Due","start":"2018-02-19","url":"https://byuistats.github.io/M335/class_tasks/task13_details.html","color":"darkgreen"},{"title":"Task 14 Due","start":"2018-02-21","url":"https://byuistats.github.io/M335/class_tasks/task14_details.html","color":"darkgreen"},{"title":"Task 15 Due","start":"2018-02-26","url":"https://byuistats.github.io/M335/class_tasks/task15_details.html","color":"darkgreen"},{"title":"Task 16 Due","start":"2018-02-28","url":"https://byuistats.github.io/M335/class_tasks/task16_details.html","color":"darkgreen"},{"title":"Task 17 Due","start":"2018-03-05","url":"https://byuistats.github.io/M335/class_tasks/task17_details.html","color":"darkgreen"},{"title":"Task 18 Due","start":"2018-03-07","url":"https://byuistats.github.io/M335/class_tasks/task18_details.html","color":"darkgreen"},{"title":"Task 19 Due","start":"2018-03-12","url":"https://byuistats.github.io/M335/class_tasks/task19_details.html","color":"darkgreen"},{"title":"Task 20 Due","start":"2018-03-14","url":"https://byuistats.github.io/M335/class_tasks/task20_details.html","color":"darkgreen"},{"title":"Task 21 Due","start":"2018-03-19","url":"https://byuistats.github.io/M335/class_tasks/task21_details.html","color":"darkgreen"},{"title":"Task 22 Due","start":"2018-03-21","url":"https://byuistats.github.io/M335/class_tasks/task22_details.html","color":"darkgreen"},{"title":"Task 23 Due","start":"2018-03-26","url":"https://byuistats.github.io/M335/class_tasks/task23_details.html","color":"darkgreen"},{"title":"Task 24 Due","start":"2018-03-28","url":"https://byuistats.github.io/M335/class_tasks/task24_details.html","color":"darkgreen"},{"title":"CS 1 Due","start":"2018-01-13","url":"https://byuistats.github.io/M335/weekly_projects/cs01_details.html","color":"darkgreen"},{"title":"CS 2 Due","start":"2018-01-20","url":"https://byuistats.github.io/M335/weekly_projects/cs02_details.html","color":"darkgreen"},{"title":"CS 3 Due","start":"2018-01-27","url":"https://byuistats.github.io/M335/weekly_projects/cs03_details.html","color":"darkgreen"},{"title":"CS 4 Due","start":"2018-02-03","url":"https://byuistats.github.io/M335/weekly_projects/cs04_details.html","color":"darkgreen"},{"title":"CS 5 Due","start":"2018-02-10","url":"https://byuistats.github.io/M335/weekly_projects/cs05_details.html","color":"darkgreen"},{"title":"CS 6 Due","start":"2018-02-17","url":"https://byuistats.github.io/M335/weekly_projects/cs06_details.html","color":"darkgreen"},{"title":"CS 7 Due","start":"2018-02-24","url":"https://byuistats.github.io/M335/weekly_projects/cs07_details.html","color":"darkgreen"},{"title":"CS 8 Due","start":"2018-03-03","url":"https://byuistats.github.io/M335/weekly_projects/cs08_details.html","color":"darkgreen"},{"title":"CS 9 Due","start":"2018-03-10","url":"https://byuistats.github.io/M335/weekly_projects/cs09_details.html","color":"darkgreen"},{"title":"CS 10 Due","start":"2018-03-17","url":"https://byuistats.github.io/M335/weekly_projects/cs10_details.html","color":"darkgreen"},{"title":"CS 11 Due","start":"2018-03-24","url":"https://byuistats.github.io/M335/weekly_projects/cs11_details.html","color":"darkgreen"},{"title":"CS 12 Due","start":"2018-03-31","url":"https://byuistats.github.io/M335/weekly_projects/cs12_details.html","color":"darkgreen"},{"title":"CS 13 Due","start":"2018-04-07","url":"https://byuistats.github.io/M335/weekly_projects/cs13_details.html","color":"darkgreen"},{"title":"Class","start":"2018-01-09","url":"https://byuistats.github.io/M335/presentations_class/day_1.html","color":"gold"},{"title":"Class","start":"2018-01-11","url":"https://byuistats.github.io/M335/presentations_class/day_2.html","color":"gold"},{"title":"Class","start":"2018-01-16","url":"https://byuistats.github.io/M335/presentations_class/day_3.html","color":"gold"},{"title":"Class","start":"2018-01-18","url":"https://byuistats.github.io/M335/presentations_class/day_4.html","color":"gold"},{"title":"Class","start":"2018-01-23","url":"https://byuistats.github.io/M335/presentations_class/day_5.html","color":"gold"},{"title":"Class","start":"2018-01-25","url":"https://byuistats.github.io/M335/presentations_class/day_6.html","color":"gold"},{"title":"Class","start":"2018-01-30","url":"https://byuistats.github.io/M335/presentations_class/day_7.html","color":"gold"},{"title":"Class","start":"2018-02-01","url":"https://byuistats.github.io/M335/presentations_class/day_8.html","color":"gold"},{"title":"Class","start":"2018-02-06","url":"https://byuistats.github.io/M335/presentations_class/day_9.html","color":"gold"},{"title":"Class","start":"2018-02-08","url":"https://byuistats.github.io/M335/presentations_class/day_10.html","color":"gold"},{"title":"Class","start":"2018-02-13","url":"https://byuistats.github.io/M335/presentations_class/day_11.html","color":"gold"},{"title":"Class","start":"2018-02-15","url":"https://byuistats.github.io/M335/presentations_class/day_12.html","color":"gold"},{"title":"Class","start":"2018-02-20","url":"https://byuistats.github.io/M335/presentations_class/day_13.html","color":"gold"},{"title":"Class","start":"2018-02-22","url":"https://byuistats.github.io/M335/presentations_class/day_14.html","color":"gold"},{"title":"Class","start":"2018-02-27","url":"https://byuistats.github.io/M335/presentations_class/day_15.html","color":"gold"},{"title":"Class","start":"2018-03-01","url":"https://byuistats.github.io/M335/presentations_class/day_16.html","color":"gold"},{"title":"Class","start":"2018-03-06","url":"https://byuistats.github.io/M335/presentations_class/day_17.html","color":"gold"},{"title":"Class","start":"2018-03-08","url":"https://byuistats.github.io/M335/presentations_class/day_18.html","color":"gold"},{"title":"Class","start":"2018-03-13","url":"https://byuistats.github.io/M335/presentations_class/day_19.html","color":"gold"},{"title":"Class","start":"2018-03-15","url":"https://byuistats.github.io/M335/presentations_class/day_20.html","color":"gold"},{"title":"Class","start":"2018-03-20","url":"https://byuistats.github.io/M335/presentations_class/day_21.html","color":"gold"},{"title":"Class","start":"2018-03-22","url":"https://byuistats.github.io/M335/presentations_class/day_22.html","color":"gold"},{"title":"Class","start":"2018-03-27","url":"https://byuistats.github.io/M335/presentations_class/day_23.html","color":"gold"},{"title":"Class","start":"2018-03-29","url":"https://byuistats.github.io/M335/presentations_class/day_24.html","color":"gold"},{"title":"Class","start":"2018-04-03","url":"https://byuistats.github.io/M335/presentations_class/day_25.html","color":"gold"},{"title":"Class","start":"2018-04-05","url":"https://byuistats.github.io/M335/presentations_class/day_26.html","color":"gold"},{"title":"Class","start":"2018-04-10","url":"https://byuistats.github.io/M335/presentations_class/day_27.html","color":"gold"}]},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-2ce1084f3448d369ec7b" style="width:768px;height:480px;" class="fullcalendar html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2ce1084f3448d369ec7b">{"x":{"firstDay":1,"header":false,"height":500,"aspectRatio":1.75,"footer":{"right":"today prev,next, title"},"titleFormat":" MM-YYYY","events":[{"title":"Task 1 Due","start":"2018-04-23","url":"https://byuistats.github.io/M335/class_tasks/task01_details.html","color":"darkgreen"},{"title":"Task 2 Due","start":"2018-04-25","url":"https://byuistats.github.io/M335/class_tasks/task02_details.html","color":"darkgreen"},{"title":"Task 3 Due","start":"2018-04-30","url":"https://byuistats.github.io/M335/class_tasks/task03_details.html","color":"darkgreen"},{"title":"Task 4 Due","start":"2018-05-02","url":"https://byuistats.github.io/M335/class_tasks/task04_details.html","color":"darkgreen"},{"title":"Task 5 Due","start":"2018-05-07","url":"https://byuistats.github.io/M335/class_tasks/task05_details.html","color":"darkgreen"},{"title":"Task 6 Due","start":"2018-05-09","url":"https://byuistats.github.io/M335/class_tasks/task06_details.html","color":"darkgreen"},{"title":"Task 7 Due","start":"2018-05-14","url":"https://byuistats.github.io/M335/class_tasks/task07_details.html","color":"darkgreen"},{"title":"Task 8 Due","start":"2018-05-16","url":"https://byuistats.github.io/M335/class_tasks/task08_details.html","color":"darkgreen"},{"title":"Task 9 Due","start":"2018-05-21","url":"https://byuistats.github.io/M335/class_tasks/task09_details.html","color":"darkgreen"},{"title":"Task 10 Due","start":"2018-05-23","url":"https://byuistats.github.io/M335/class_tasks/task10_details.html","color":"darkgreen"},{"title":"Task 11 Due","start":"2018-05-28","url":"https://byuistats.github.io/M335/class_tasks/task11_details.html","color":"darkgreen"},{"title":"Task 12 Due","start":"2018-05-30","url":"https://byuistats.github.io/M335/class_tasks/task12_details.html","color":"darkgreen"},{"title":"Task 13 Due","start":"2018-06-04","url":"https://byuistats.github.io/M335/class_tasks/task13_details.html","color":"darkgreen"},{"title":"Task 14 Due","start":"2018-06-06","url":"https://byuistats.github.io/M335/class_tasks/task14_details.html","color":"darkgreen"},{"title":"Task 15 Due","start":"2018-06-11","url":"https://byuistats.github.io/M335/class_tasks/task15_details.html","color":"darkgreen"},{"title":"Task 16 Due","start":"2018-06-13","url":"https://byuistats.github.io/M335/class_tasks/task16_details.html","color":"darkgreen"},{"title":"Task 17 Due","start":"2018-06-18","url":"https://byuistats.github.io/M335/class_tasks/task17_details.html","color":"darkgreen"},{"title":"Task 18 Due","start":"2018-06-20","url":"https://byuistats.github.io/M335/class_tasks/task18_details.html","color":"darkgreen"},{"title":"Task 19 Due","start":"2018-06-25","url":"https://byuistats.github.io/M335/class_tasks/task19_details.html","color":"darkgreen"},{"title":"Task 20 Due","start":"2018-06-27","url":"https://byuistats.github.io/M335/class_tasks/task20_details.html","color":"darkgreen"},{"title":"Task 21 Due","start":"2018-07-02","url":"https://byuistats.github.io/M335/class_tasks/task21_details.html","color":"darkgreen"},{"title":"Task 22 Due","start":"2018-07-04","url":"https://byuistats.github.io/M335/class_tasks/task22_details.html","color":"darkgreen"},{"title":"Task 23 Due","start":"2018-07-09","url":"https://byuistats.github.io/M335/class_tasks/task23_details.html","color":"darkgreen"},{"title":"Task 24 Due","start":"2018-07-11","url":"https://byuistats.github.io/M335/class_tasks/task24_details.html","color":"darkgreen"},{"title":"CS 1 Due","start":"2018-04-28","url":"https://byuistats.github.io/M335/weekly_projects/cs01_details.html","color":"darkgreen"},{"title":"CS 2 Due","start":"2018-05-05","url":"https://byuistats.github.io/M335/weekly_projects/cs02_details.html","color":"darkgreen"},{"title":"CS 3 Due","start":"2018-05-12","url":"https://byuistats.github.io/M335/weekly_projects/cs03_details.html","color":"darkgreen"},{"title":"CS 4 Due","start":"2018-05-19","url":"https://byuistats.github.io/M335/weekly_projects/cs04_details.html","color":"darkgreen"},{"title":"CS 5 Due","start":"2018-05-26","url":"https://byuistats.github.io/M335/weekly_projects/cs05_details.html","color":"darkgreen"},{"title":"CS 6 Due","start":"2018-06-02","url":"https://byuistats.github.io/M335/weekly_projects/cs06_details.html","color":"darkgreen"},{"title":"CS 7 Due","start":"2018-06-09","url":"https://byuistats.github.io/M335/weekly_projects/cs07_details.html","color":"darkgreen"},{"title":"CS 8 Due","start":"2018-06-16","url":"https://byuistats.github.io/M335/weekly_projects/cs08_details.html","color":"darkgreen"},{"title":"CS 9 Due","start":"2018-06-23","url":"https://byuistats.github.io/M335/weekly_projects/cs09_details.html","color":"darkgreen"},{"title":"CS 10 Due","start":"2018-06-30","url":"https://byuistats.github.io/M335/weekly_projects/cs10_details.html","color":"darkgreen"},{"title":"CS 11 Due","start":"2018-07-07","url":"https://byuistats.github.io/M335/weekly_projects/cs11_details.html","color":"darkgreen"},{"title":"CS 12 Due","start":"2018-07-14","url":"https://byuistats.github.io/M335/weekly_projects/cs12_details.html","color":"darkgreen"},{"title":"CS 13 Due","start":"2018-07-21","url":"https://byuistats.github.io/M335/weekly_projects/cs13_details.html","color":"darkgreen"},{"title":"Class","start":"2018-04-24","url":"https://byuistats.github.io/M335/presentations_class/day_1.html","color":"gold"},{"title":"Class","start":"2018-04-26","url":"https://byuistats.github.io/M335/presentations_class/day_2.html","color":"gold"},{"title":"Class","start":"2018-05-01","url":"https://byuistats.github.io/M335/presentations_class/day_3.html","color":"gold"},{"title":"Class","start":"2018-05-03","url":"https://byuistats.github.io/M335/presentations_class/day_4.html","color":"gold"},{"title":"Class","start":"2018-05-08","url":"https://byuistats.github.io/M335/presentations_class/day_5.html","color":"gold"},{"title":"Class","start":"2018-05-10","url":"https://byuistats.github.io/M335/presentations_class/day_6.html","color":"gold"},{"title":"Class","start":"2018-05-15","url":"https://byuistats.github.io/M335/presentations_class/day_7.html","color":"gold"},{"title":"Class","start":"2018-05-17","url":"https://byuistats.github.io/M335/presentations_class/day_8.html","color":"gold"},{"title":"Class","start":"2018-05-22","url":"https://byuistats.github.io/M335/presentations_class/day_9.html","color":"gold"},{"title":"Class","start":"2018-05-24","url":"https://byuistats.github.io/M335/presentations_class/day_10.html","color":"gold"},{"title":"Class","start":"2018-05-29","url":"https://byuistats.github.io/M335/presentations_class/day_11.html","color":"gold"},{"title":"Class","start":"2018-05-31","url":"https://byuistats.github.io/M335/presentations_class/day_12.html","color":"gold"},{"title":"Class","start":"2018-06-05","url":"https://byuistats.github.io/M335/presentations_class/day_13.html","color":"gold"},{"title":"Class","start":"2018-06-07","url":"https://byuistats.github.io/M335/presentations_class/day_14.html","color":"gold"},{"title":"Class","start":"2018-06-12","url":"https://byuistats.github.io/M335/presentations_class/day_15.html","color":"gold"},{"title":"Class","start":"2018-06-14","url":"https://byuistats.github.io/M335/presentations_class/day_16.html","color":"gold"},{"title":"Class","start":"2018-06-19","url":"https://byuistats.github.io/M335/presentations_class/day_17.html","color":"gold"},{"title":"Class","start":"2018-06-21","url":"https://byuistats.github.io/M335/presentations_class/day_18.html","color":"gold"},{"title":"Class","start":"2018-06-26","url":"https://byuistats.github.io/M335/presentations_class/day_19.html","color":"gold"},{"title":"Class","start":"2018-06-28","url":"https://byuistats.github.io/M335/presentations_class/day_20.html","color":"gold"},{"title":"Class","start":"2018-07-03","url":"https://byuistats.github.io/M335/presentations_class/day_21.html","color":"gold"},{"title":"Class","start":"2018-07-05","url":"https://byuistats.github.io/M335/presentations_class/day_22.html","color":"gold"},{"title":"Class","start":"2018-07-10","url":"https://byuistats.github.io/M335/presentations_class/day_23.html","color":"gold"},{"title":"Class","start":"2018-07-12","url":"https://byuistats.github.io/M335/presentations_class/day_24.html","color":"gold"},{"title":"Class","start":"2018-07-17","url":"https://byuistats.github.io/M335/presentations_class/day_25.html","color":"gold"},{"title":"Class","start":"2018-07-19","url":"https://byuistats.github.io/M335/presentations_class/day_26.html","color":"gold"}]},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 <br>
 
@@ -37,23 +29,18 @@ The yellow boxes are the days we have class this semester.  The dark green boxes
 
 
 
-   
-   
-   
-   
-   
+# Details
 
-
-### Case Study 1 (Due 1/13)
+## Case Study 1 (Due 4/28)
 
   
 Your first weekly project requires you to **submit** a review of 4-5 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
 
-The **submit** word above will require you to create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  Our slack channel is `f18dwv`, and it requires that you create an account with your `@byui.edu` email account.
+The **submit** word above will require you to create an account on [slack](https://join.slack.com/t/byuidwv/signup?x=x-339637048932-339197858336){target="blank"}.  Our slack channel is byuidwv.slack.com.  You must use your `@byui.edu` email to create an account.
 
  * [Details](weekly_projects/cs01_details.html)
 
-#### 1/8 (1.1) 
+### 4/23 (1.1) 
 
   
 To create graphics that clearly answer questions, you must understand the basics of how the human perceptual system works. [This 40-minute talk by John Rauser](https://youtu.be/fSgEeI2Xpdc){target="blank"}, a data scientist in the technology industry, will give you an overview. You can find the code for the majority of his graphics [here](https://github.com/jrauser/writing/blob/master/how_humans_see_data/hhsd_notes.Rmd){target="blank"}.
@@ -63,22 +50,17 @@ You will also be responsible for getting R and Rstudio installed and running.
 
  * [Details](class_tasks/task01_details.html)
 
-
-
-#### 1/10 (1.2)
+### 4/25 (1.2)
 
   
-This task is intended to get all of us on the same page in R.  You will use the `library(swirl)` package to learn how to use R.  We will be covering Lessons 1-7.  Even if you have used R before, this will be an excellent refresher. If you do not get the title of this task, watch [this](https://www.youtube.com/watch?v=SMCsXl9SGgY). 
+This task is intended to get all of us on the same page in R.  You will use the `library(swirl)` package to learn how to use R.  We will be covering Lessons 1-7.  Even if you have used R before, this will be an excellent refresher. If the sending of an email in the swirl practice does not work do not worry about it. If you do not get the title of this task, watch [this](https://www.youtube.com/watch?v=SMCsXl9SGgY). 
 
  * [Details](class_tasks/task02_details.html)
 
 
 
-
-
-
 <!-- Case Study 2 -->
-### Case Study 2 (Due 1/20)
+## Case Study 2 (Due 5/5)
 
   
 <!-- https://github.com/jennybc/gapminder -->
@@ -86,7 +68,7 @@ This task is intended to get all of us on the same page in R.  You will use the 
 
  * [Details](weekly_projects/cs02_details.html)
 
-#### 1/15 (2.3) 
+### 4/30 (2.3) 
 
   
 You have just been hired to a new data science team, and you need to collaborate on projects.  The team lead told you to connect to your git repository on Github and edit the `README.md` in your repository. She wants you to describe who you are in a short paragraph.
@@ -94,10 +76,10 @@ You have just been hired to a new data science team, and you need to collaborate
 
  * [Details](class_tasks/task03_details.html)
 
-#### 1/17 (2.4)
+### 5/2 (2.4)
 
   
-Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  This task supports your semester project.
+Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  This task supports your semester project. **Note that the reading on data transformation below is necessary for the case study for this week and may be the most important reading of the semester to fully understand**
 
 
  * [Details](class_tasks/task04_details.html)
@@ -106,7 +88,7 @@ Learning how to ask interesting questions takes time.  As data scientists we nee
 
 
 <!-- Case Study 3 -->
-### Case Study 3 (Due 1/27)
+## Case Study 3 (Due 5/12)
 
   
 You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (`install.packages("nycflights13")`, `library(nycflights13)`) your manager wants you to answer the following questions;
@@ -120,7 +102,7 @@ Make sure to include one visualization that shows the complexity of the data.
  * [Details](weekly_projects/cs03_details.html)
 
 
-#### 1/22 (3.5) 
+### 5/7 (3.5) 
 
   
 
@@ -128,7 +110,7 @@ In `library(ggplot2)` there is a `diamonds` dataset that shows features of diamo
 
  * [Details](class_tasks/task05_details.html)
 
-#### 1/24 (3.6)
+### 5/9 (3.6)
 
   
 
@@ -140,7 +122,7 @@ The [Our World in Data](https://ourworldindata.org/){target="blank"} website has
 
 
 <!-- Case Study 4 -->
-### Case Study 4 (Due 2/3)
+## Case Study 4 (Due 5/19)
 
   
 
@@ -153,18 +135,18 @@ While their visualizations focused on yearly averages, our client wants to creat
 
 
 
-#### 1/29 (4.7) 
+### 5/14 (4.7) 
 
   
 The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to recreate some of their visualizations in R and then make them better.
 
  * [Details](class_tasks/task07_details.html)
 
-#### 1/31 (4.8)
+### 5/16 (4.8)
 
   
 
-Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your project.  After you find good data sourses make sure to complete the remaining tasks.
+Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your project.  After you find good data sources make sure to complete the remaining tasks.
 
 
  * [Details](class_tasks/task08_details.html)
@@ -172,7 +154,7 @@ Finding good data takes time, and can take longer than the time to tidy your dat
 
 
 <!-- Case Study 5 -->
-### Case Study 5 (Due 2/10)
+## Case Study 5 (Due 5/26)
 
   
 
@@ -188,7 +170,7 @@ This project is not as severe as the two quotes below, but it will give you a ta
  * [Details](weekly_projects/cs05_details.html)
 
 
-#### 2/5 (5.9) 
+### 5/21 (5.9) 
 
   
 
@@ -196,7 +178,7 @@ Data formats are varied and differ by domains and software.  We could spend week
 
  * [Details](class_tasks/task09_details.html)
 
-#### 2/7 (5.10)
+### 5/23 (5.10)
 
   
 
@@ -211,7 +193,7 @@ With stock return data from the previous task, we need to tidy this data for the
 
 
 <!-- Case Study 6 -->
-### Case Study 6 (Due 2/17)
+## Case Study 6 (Due 6/2)
 
   
 
@@ -226,7 +208,7 @@ It is 2010, and you are working for the Idaho restaurant commission, and they ne
  * [Details](weekly_projects/cs06_details.html)
 
 
-#### 2/12 (6.11) 
+### 5/28 (6.11) 
 
   
 
@@ -234,7 +216,7 @@ Over the campfire, you and a friend get into a debate about which college in Uta
 
  * [Details](class_tasks/task11_details.html)
 
-#### 2/14 (6.12)
+### 5/30 (6.12)
 
   
 
@@ -246,7 +228,7 @@ Using global regular expression print (grep) and regular expressions (regex) to 
 
 
 <!-- Case Study 7 -->
-### Case Study 7 (Due 2/24)
+## Case Study 7 (Due 6/9)
 
   
 
@@ -255,7 +237,7 @@ In 1978 Susan Easton Black [penned an article](https://www.lds.org/ensign/1978/0
  * [Details](weekly_projects/cs07_details.html)
 
 
-#### 2/19 (7.13) 
+### 6/4 (7.13) 
 
   
 
@@ -263,7 +245,7 @@ When we are visualizing data with categorical variables, we have to deal with ch
 
  * [Details](class_tasks/task13_details.html)
 
-#### 2/21 (7.14)
+### 6/6 (7.14)
 
   
 
@@ -279,7 +261,7 @@ In 1978 Susan Easton Black [penned an article](https://www.lds.org/ensign/1978/0
 
 
 <!-- Case Study 8 -->
-### Case Study 8 (Due 3/3)
+## Case Study 8 (Due 6/16)
 
   
 
@@ -290,7 +272,7 @@ In our course we are only looking at understanding and visualizing recorded time
  * [Details](weekly_projects/cs08_details.html)
 
 
-#### 2/26 (8.15) 
+### 6/11 (8.15) 
 
   
 
@@ -301,7 +283,7 @@ Use the `library(riem)` package that is described [here](https://github.com/rope
 
  * [Details](class_tasks/task15_details.html)
 
-#### 2/28 (8.16)
+### 6/13 (8.16)
 
   
 
@@ -313,7 +295,7 @@ A car wash business wants to see if the temperature hurts their bottom line.  Th
 
 
 <!-- Case Study 9 -->
-### Case Study 9 (Due 3/10)
+## Case Study 9 (Due 6/23)
 
   
 
@@ -325,7 +307,7 @@ Specifically, in class the Tuesday following this case study you will get 5 - 10
 
  * [Details](weekly_projects/cs09_details.html)
 
-#### 3/5 (9.17) 
+### 6/18 (9.17) 
 
   
 
@@ -333,7 +315,7 @@ The stock market is overflowing with data.  There are many packages in R that al
 
  * [Details](class_tasks/task17_details.html)
 
-#### 3/7 (9.18)
+### 6/20 (9.18)
 
   
 
@@ -346,7 +328,7 @@ Interactive visualizations can often be powerful for data investigations.  They 
 
 
 <!-- Case Study 10 -->
-### Case Study 10 (Due 3/17)
+## Case Study 10 (Due 6/30)
 
   
 
@@ -358,7 +340,7 @@ Remember the big story is the collapse of new building permits at the initial st
  * [Details](weekly_projects/cs10_details.html)
 
 
-#### 3/12 (10.19) 
+### 6/25 (10.19) 
 
   
 
@@ -368,7 +350,7 @@ We will use `library(USAboundaries)`, `library(ggrepel)`, and `library(sf)` to m
 
  * [Details](class_tasks/task19_details.html)
 
-#### 3/14 (10.20)
+### 6/27 (10.20)
 
   
 
@@ -383,23 +365,23 @@ Their US map is projected to show the entire US.  You will need to subset the da
 
 <!-- Thanksgiving Week -->
 <!-- Case Study 11 -->
-<!-- ### Case Study 11 (Due 3/24) -->
+<!-- ### Case Study 11 (Due 7/7) -->
 
 <!-- ```{r child="weekly_projects/cs11_background.Rmd"} -->
 
 <!-- ``` -->
 
 
-<!-- #### 3/19 -->
+<!-- #### 7/2 -->
 
-<!-- #### 3/21 -->
+<!-- #### 7/4 -->
 
 <!--  -->
 <!--  -->
 
 
 <!-- Case Study 11 or 12 -->
-### Case Study 11 (Due 3/24)
+## Case Study 11 (Due 7/7)
 
   
 
@@ -408,7 +390,7 @@ You can recreate [CS 10](https://byuistats.github.io/M335/weekly_projects/cs10_d
 
  * [Details](weekly_projects/cs11_details.html)
 
-#### 3/19 (11.21) 
+### 7/2 (11.21) 
 
   
 
@@ -417,7 +399,7 @@ Choose from [Task 19](https://byuistats.github.io/M335/class_tasks/task19_detail
 
  * [Details](class_tasks/task21_details.html)
 
-#### 3/21 (11.22)
+### 7/4 (11.22)
 
   
 
@@ -430,7 +412,7 @@ This week we are going to get introduced to "big data" principles.  We will disc
 
 
 <!-- Case Study 12 or 13 -->
-### Case Study 12 (Due 3/31)
+## Case Study 12 (Due 7/14)
 
   
 
@@ -438,7 +420,7 @@ This week we will learn new coding techniques and visualization principles.  How
 
  * [Details](weekly_projects/cs12_details.html)
 
-#### 3/26 (12.23) 
+### 7/9 (12.23) 
 
   
 
@@ -454,7 +436,7 @@ Be prepared to present your functions in class.
  * [Details](class_tasks/task23_details.html)
 
 
-#### 3/28 (12.24)
+### 7/11 (12.24)
 
   
 This week we will learn new coding techniques and visualization principles.  However, your case study and weekly tasks will provide time to makes sure you have for the last task of the [semester project](https://byuistats.github.io/M335/project.html). Please complete the required reading.
@@ -465,7 +447,7 @@ This week we will learn new coding techniques and visualization principles.  How
 
 
 <!-- Case Study 12 or 13 -->
-### Case Study 13 (Due 4/13)
+## Case Study 13 (Due 7/23)
 
   
 

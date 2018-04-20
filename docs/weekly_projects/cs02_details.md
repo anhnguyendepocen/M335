@@ -13,7 +13,7 @@ params:
 
 
 
-
+![](cs02_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ## Case Study 2: Wealth and Life Expectancy (Gapminder) 
 ### Background 
@@ -32,7 +32,7 @@ params:
 This reading will help you complete the tasks below.
 
 * o [Chapter 3: R for Data Science - Data visualization](http://r4ds.had.co.nz/data-visualisation.html){target='blank'}
-* o [Hans Rosling: The best stats you've ever seen](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target='blank'}
+* o [Hans Rosling: The River of Myths](https://youtu.be/OwII-dwh-bk){target='blank'}
 
 
 ### Tasks
@@ -53,7 +53,7 @@ ul {
 * [ ] Recreate the two graphics shown below using `gapminder` dataset from `library(gapminder)` (get them to match as closely as you can)
     * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the first plot
     * [ ] Use  `scale_y_continuous(trans = "sqrt")` to get the correct scale on the y-axis.
-    * [ ] Build weighted average data set using  `weighted.mean()` and GDP with  `mutate()` and `group_by()` that will be the black continent average line on the second plot
+    * [ ] Build weighted average data set using  `weighted.mean()` and GDP with  `summarise()` and `group_by()` that will be the black continent average line on the second plot
     * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the second plot. You will need to use the new data to make the black lines and dots showing the continent average.
     * [ ] Use `ggsave()` and save each plot as a `.png` with a width of 15 inches
 * [ ] Build an Rmd file that has the following features

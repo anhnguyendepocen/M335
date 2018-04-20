@@ -7,14 +7,27 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Let's try to make a reprojection of our map so that is feels more honest or at least asthetically pleasing. 
+## Challenge
+
+Let's try to make a reprojection of our [task map we just created](https://byuistats.github.io/M335/class_tasks/task19_details.html) so that is feels more honest or at least asthetically pleasing. 
+
+## Tools Background
+
+- Here is a nice [list of some standard examples](http://www.radicalcartography.net/?projectionref) (<http://www.radicalcartography.net/?projectionref>).
+- We can see the [set of projection types](http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html) (<http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html>) 
+- Then we can look up the [projection type](http://spatialreference.org/ref/) (<http://spatialreference.org/ref/>) 
+    - to get [proj4string](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf). 
+    - The proj4 format information can be helpfull[^1][^2].  
+- There are many [online examples](https://earthdatascience.org/courses/earth-analytics/spatial-data-r/understand-epsg-wkt-and-other-crs-definition-file-types/)[^3] of using R for spatial as well.
+
+**Note the use of `+lat_0=45` and `+lon_0=-115` and what they do your map.**
+
+```{r, include=FALSE}
 
 
-Here is a nice [list of some standard examples](http://gothos.info/2011/04/common-map-projection-definitions/) -  <http://gothos.info/2011/04/common-map-projection-definitions/>.
 
-We can see the [set of projection types](http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html) (<http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html>) and then look up the [projection type](http://spatialreference.org/ref/) (<http://spatialreference.org/ref/>) to get [proj4string](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf). The proj4 format information can be helpfull[^1][^2].  There are many [online examples](https://earthdatascience.org/courses/earth-analytics/spatial-data-r/understand-epsg-wkt-and-other-crs-definition-file-types/)[^3] of using R for spatial as well.
+```
 
-Note the use of `+lat_0=45` and `+lon_0=-115` and what they do your map.
 
 
 ```{r, eval=FALSE}

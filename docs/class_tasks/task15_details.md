@@ -50,6 +50,7 @@ This reading will help you complete the tasks below.
 ### Tasks
 
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Create a `.png` image for each question
 * [ ] Save your script and `.png` files to GitHub
 * [ ] Be prepared to share your visualization and why your reasoning for how the visualization answers the question

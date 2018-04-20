@@ -15,145 +15,21 @@ output:
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
-```{r, include=FALSE}
-library(lubridate)
-library(calheatmapR)
-library(timeDate)
-library(stringr)
+```{r include=FALSE}
 library(fullcalendar)
-library(tidyverse)
 
-
-# first_day <- mdy_h("09/12/2017 10", tz = "America/Denver")
-# last_day <- mdy_h("12/12/2017 10", tz = "America/Denver")
-# last_day_finals <- mdy("12/15/2017", tz = "America/Denver")
-first_day <- mdy_h("01/09/2018 10", tz = "America/Denver") # should be a tuesday or thursday date.
-last_day <- mdy_h("04/11/2018 10", tz = "America/Denver")
-last_day_finals <- mdy("04/13/2018", tz = "America/Denver")
-
-dayone_seq <-  seq(first_day, last_day, by = "weeks")
-saturday_seq <- ceiling_date(dayone_seq, "week") - days(1)
-saturday_seq <- saturday_seq[saturday_seq < last_day]
-
-fday_name <- as.character(wday(first_day, label = TRUE))
-
-check_day <- first_day
-
-
-if (fday_name == "Tues") {
-  day(check_day) <- day(check_day) + 2  
-  daytwo_seq = seq( check_day, last_day, by = "weeks")
-} 
-if (fday_name == "Thurs") {
-  day(check_day) <- day(check_day) + 5  
-  daytwo_seq = seq(check_day , last_day, by = "weeks")
-}
-  
-
-day_seq = sort(c(dayone_seq,daytwo_seq))
-
-first_week <- week(first_day)
-last_week <-  week(last_day)
-
-# holidays
-
-if (month(first_day) != 1){
-  
-thanksgiving <- ymd(date(holiday(year = getRmetricsOptions("currentYear"), Holiday = "USThanksgivingDay")))
-
-thanksgiving_b <- thanksgiving
-thanksgiving_a <- thanksgiving
-day(thanksgiving_b) <- day(thanksgiving_b) - 1  
-day(thanksgiving_a) <- day(thanksgiving_a) + 1
-thanksgiving <-  c(thanksgiving_b, thanksgiving, thanksgiving_a)
-
-pioneer <- mdy(paste("7/24/", getRmetricsOption("currentYear"),sep = ""))
-
-
-holidays <- c(date(holiday(year = getRmetricsOptions("currentYear"), Holiday = "USMLKingsBirthday")),
-  date(holiday(year = getRmetricsOptions("currentYear"), Holiday = "USPresidentsDay")),
-  date(holiday(year = getRmetricsOptions("currentYear"), Holiday = "USMemorialDay")),
-  date(holiday(year = getRmetricsOptions("currentYear"), Holiday = "USIndependenceDay")),
-  pioneer,
-  date(holiday(year = getRmetricsOptions("currentYear"), Holiday = "USLaborDay")),
-  date(holiday(year = getRmetricsOptions("currentYear"), Holiday = "USColumbusDay")),
-  date(holiday(year = getRmetricsOptions("currentYear"), Holiday = "USVeteransDay")),
-  thanksgiving)
-  
-day_seq <- day_seq[!yday(day_seq) %in% yday(holidays)]
-
-} # end if to not run for winter semester
-
-no_saturday <- ceiling_date(day_seq[c(diff(wday(day_seq)),-2) == 0], "week") - days(1)
-
-saturday_seq <- saturday_seq[!saturday_seq %in% no_saturday]
-
-day_map <- day_seq
-
-day_seq <- day_seq[c(diff(wday(day_seq)),-2) != 0]
-
-task_due <- day_seq - days(1)
-task_due <- task_due[1:24]
-
-# day_seq has the class days
-# saturday_seq has the saturdays during the semester
-# task_due has the date that the task is due
-# 
-
-# finds the case study md file and pulls the task and title
-body_lines <-  read_lines("backgrounds.md")
-# title pulled
-titles <-  body_lines[str_detect(body_lines, "##")] %>% 
-  str_replace("## ", "") %>% 
-  str_replace("Case Study", "CS") %>%
-  str_trim()
-numbers <- str_split_fixed(titles, ":", 2)[,1] %>% paste0(" Due")
-links <- body_lines[str_detect(body_lines, " \\* \\[Details\\]")]  %>% 
-  str_replace(" \\* \\[Details\\]", "") %>%
-  str_replace("\\(", "") %>% str_replace("\\)", "") %>%
-  str_trim()
-lesson_links <- paste0("https://byuistats.github.io/M335/presentations_class/day_", 1:length(day_seq) , ".html")
-
-links <- paste0("https://byuistats.github.io/M335/", links)
-
-dates_due <- data.frame(title = numbers, start = paste(floor_date(c(task_due, saturday_seq), unit = "days")), 
-                          url = links, color = "darkgreen")
-dates_class <- data.frame(title = "Class", start = paste(floor_date(c(day_seq), unit = "days")), 
-                          url = lesson_links, color = "gold")
-
-dates_all <- bind_rows(dates_due, dates_class)
-pr <- 1
+source("../scripts/build_dates.R")
 
 ```
 
-### Calendar
+# Calendar
 
 The yellow boxes are the days we have class this semester.  The dark green boxes when work is due.
 
-
-```{r, shedulemap, echo=FALSE}
-
-date.list <-  as.list( c(rep(1, length(day_seq)), rep(50, length(saturday_seq)), rep(50, length(task_due))))
-names(date.list) <- c(as.numeric( ceiling_date(day_seq)), as.numeric(as.POSIXct(saturday_seq)), 
-                      as.numeric( ceiling_date(task_due)))
-
-
-calheatmapR(data = date.list, height = 300) %>%
-  chDomain(domain = "month", subDomain = "day", start = min(day_seq),
-           range = 4, cellSize = 30, cellPadding = 4, gutter = 15, subDomainTextFormat = "%d") %>%
-  chLegend(display = FALSE)
-
-
-
-```
-
-
-
-
-
 ```{r, echo=FALSE, fig.width=8}
-fullcalendar(dates_all, settings = list(firstDay = 1, header = FALSE, height = 500, aspectRatio = 1.75,
-                                        footer = list(right = "today prev,next")))
+fullcalendar(dates_all, settings = list(firstDay = 1, header = FALSE, 
+                                        height = 500, aspectRatio = 1.75,
+                                        footer = list(right = "today prev,next, title"), titleFormat = ' MM-YYYY'))
 ```
 
 <br>
@@ -168,47 +44,37 @@ read_chunk("temp")
 day_seq <- task_due
 ```
 
-   
-   
-   
-   
-   
+# Details
 
-
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs01, ref.label="cs-01", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task01, ref.label="task-01", results="asis", echo=FALSE}
 ```
 
-
-
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task02, ref.label="task-02", results="asis", echo=FALSE}
 ```
 
-
-
-
 `r pr <- pr +1`
 
 <!-- Case Study 2 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs02, ref.label="cs-02", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task03, ref.label="task-03", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task04, ref.label="task-04", results="asis", echo=FALSE}
 ```
@@ -217,18 +83,18 @@ day_seq <- task_due
 
 
 <!-- Case Study 3 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs03, ref.label="cs-03", results="asis", echo=FALSE}
 ```
 
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task05, ref.label="task-05", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task06, ref.label="task-06", results="asis", echo=FALSE}
 ```
@@ -236,19 +102,19 @@ day_seq <- task_due
 `r pr <- pr +1`
 
 <!-- Case Study 4 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs04, ref.label="cs-04", results="asis", echo=FALSE}
 ```
 
 
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".",pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".",pr*2 - 1, ")" )` 
 
 ```{r task07, ref.label="task-07", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task08, ref.label="task-08", results="asis", echo=FALSE}
 ```
@@ -256,18 +122,18 @@ day_seq <- task_due
 `r pr <- pr +1`
 
 <!-- Case Study 5 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs05, ref.label="cs-05", results="asis", echo=FALSE}
 ```
 
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task09, ref.label="task-09", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task10, ref.label="task-10", results="asis", echo=FALSE}
 ```
@@ -278,18 +144,18 @@ day_seq <- task_due
 
 
 <!-- Case Study 6 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs06, ref.label="cs-06", results="asis", echo=FALSE}
 ```
 
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task11, ref.label="task-11", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task12, ref.label="task-12", results="asis", echo=FALSE}
 ```
@@ -297,18 +163,18 @@ day_seq <- task_due
 `r pr <- pr +1`
 
 <!-- Case Study 7 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs07, ref.label="cs-07", results="asis", echo=FALSE}
 ```
 
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task13, ref.label="task-13", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task14, ref.label="task-14", results="asis", echo=FALSE}
 ```
@@ -317,18 +183,18 @@ day_seq <- task_due
 
 
 <!-- Case Study 8 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs08, ref.label="cs-08", results="asis", echo=FALSE}
 ```
 
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task15, ref.label="task-15", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task16, ref.label="task-16", results="asis", echo=FALSE}
 ```
@@ -337,17 +203,17 @@ day_seq <- task_due
 
 
 <!-- Case Study 9 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs09, ref.label="cs-09", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task17, ref.label="task-17", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task18, ref.label="task-18", results="asis", echo=FALSE}
 ```
@@ -356,18 +222,18 @@ day_seq <- task_due
 
 
 <!-- Case Study 10 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs10, ref.label="cs-10", results="asis", echo=FALSE}
 ```
 
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task19, ref.label="task-19", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task20, ref.label="task-20", results="asis", echo=FALSE}
 ```
@@ -392,17 +258,17 @@ day_seq <- task_due
 
 
 <!-- Case Study 11 or 12 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs11, ref.label="cs-11", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task21, ref.label="task-21", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task22, ref.label="task-22", results="asis", echo=FALSE}
 ```
@@ -412,18 +278,18 @@ day_seq <- task_due
 
 
 <!-- Case Study 12 or 13 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r d <- ceiling_date(day_seq[vals[1]], "weeks")- days(1); paste(month(d), mday(d), sep="/")`)
 
 ```{r cs12, ref.label="cs-12", results="asis", echo=FALSE}
 ```
 
-#### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
+### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task23, ref.label="task-23", results="asis", echo=FALSE}
 ```
 
 
-#### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
+### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 
 ```{r task24, ref.label="task-24", results="asis", echo=FALSE}
 ```
@@ -432,7 +298,7 @@ day_seq <- task_due
 `r pr <- pr +1`
 
 <!-- Case Study 12 or 13 -->
-### Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r paste(month(last_day_finals), mday(last_day_finals), sep="/")`)
+## Case Study `r vals = c(pr*2-1,pr*2); pr` (Due `r paste(month(last_day_finals), mday(last_day_finals), sep="/")`)
 
 ```{r cs13, ref.label="cs-13", results="asis", echo=FALSE}
 ```

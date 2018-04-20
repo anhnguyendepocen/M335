@@ -13,7 +13,7 @@ params:
 
 
 
-
+![](cs05_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ## Case Study 5: I can clean your data 
 ### Background 
@@ -39,7 +39,7 @@ This project is not as severe as the two quotes below, but it will give you a ta
 This reading will help you complete the tasks below.
 
 * o [Hadley on Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf){target='blank'}
-* o [Chapter 18: R for Data Science - Pipes](http://r4ds.had.co.nz/pipes.html){target='blank'}
+* o [foreign R Package and `read.dbf()`](https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.dbf){target='blank'}
 
 
 ### Tasks
@@ -73,34 +73,6 @@ ul {
 * [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
 
-
-
-
-
-### Code
-
-
-```r
-not_restaurants <- c("development","Food preperation center", "Food Services center","bakery","Grocery","conceession","Cafeteria", "lunchroom","school","facility"," hall ")
-standalone_retail <- c("Wine","Spirits","Liquor","Convenience","drugstore","Flying J", "Rite Aid ","walgreens ","Love's Travel ")
-full_service_type <- c("Ristorante","mexican","pizza ","steakhouse"," grill ","buffet","tavern"," bar ","waffle","italian","steak house")
-quick_service_type <- c("coffee"," java "," Donut ","Doughnut"," burger ","Ice Cream ","custard ","sandwich ","fast food "," bagel ")
-quick_service_names <- restaurants$Restaurant[restaurants$Type %in% c("coffee","Ice Cream","Fast Food")]
-full_service_names <- restaurants$Restaurant[restaurants$Type %in% c("Pizza","Casual Dining","Fast Casual")]
-## After the above assignments the below rules need to be implemented
-# Over 4,000 ADD and NEW construction get assigned to Sit Down Restaurants
-# Under 4,000 sqft NEW construction get assigned to Fast Food
-# all Type == "Food/Beverage Service" that don't get grouped based on the above are called "Unknown"
-
-# Example use case of case_when() function.  Make sure that your ProjectTitle variable has lower case words.
-# With older versions of dplyr .$ProjectTitle is needed in each str_detect.
-    mutate(build_type = case_when(
-      str_detect(ProjectTitle, "alteration") ~ "Alteration",
-      str_detect(ProjectTitle, "addition") ~ "Addition",
-      str_detect(ProjectTitle, "renov") ~ "Alteration",
-      !(str_detect(ProjectTitle, paste(c("alteration", "addition"), collapse = "|"))) ~ "New"
-    ))
-```
 
 
 

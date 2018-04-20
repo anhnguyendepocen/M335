@@ -75,7 +75,30 @@ dat <- dat %>%
 
 ## Typical bar plot
 
-```{r, echo=FALSE}
+```{r, echo=TRUE}
+
+
+dat %>% 
+  group_by(Type2, County, Year) %>% 
+  summarize(value = sum(Value1000), pop = min(Pop100), n = n()) %>%
+  ungroup() %>%
+  mutate(Type2 = fct_relevel(Type2, "Full Service Restaurant", "Quick Service Restaurant")) %>%
+  ggplot(aes(x = fct_reorder(str_replace(County, " ID", ""), value, sum), y = value, fill = Year)) + 
+    geom_bar(stat = "identity", position = "dodge", color = "white") + 
+    facet_wrap(~Type2, scales = "free_y", ncol = 2) + theme_bw() + 
+    theme(panel.grid.minor = element_blank(), panel.grid.major.x = element_blank(),
+          axis.text.x = element_text(angle = 35, vjust = 1, hjust = 1), legend.position = "bottom") +
+    geom_vline(xintercept = seq(.5, 15, by = 1), color = "lightgrey") +
+    geom_hline(yintercept = 0, color = "grey") +
+    scale_fill_grey() +
+    labs(x = "Idaho County", y = "Total Value of Commercial Construction ($1,000)" )
+
+
+
+```
+
+
+```{r, echo=TRUE}
 
 (ggp <- dat %>% 
   group_by(Type2, County, Year) %>% 
@@ -95,17 +118,15 @@ dat <- dat %>%
     labs(x = "Idaho County", y = "Total Value of Commercial Construction ($1,000)" ))
 
 
-
-ggp +  facet_wrap(~Type2, ncol = 2) 
-
 ggp +  facet_wrap(~Type2, ncol = 2) + 
   scale_y_continuous(trans = "sqrt", breaks = c(100, 250, 500, 1000, 2000, 3000, 4000, 6000))
 
 ```
 
+
 ## Moving beyond bars
 
-```{r, echo=FALSE, fig.width = 12, fig.height = 7}
+```{r, echo=TRUE, fig.width = 12, fig.height = 7}
 
 ## Without Bars
 
@@ -142,7 +163,7 @@ ggpoint +  facet_wrap(~Type2, ncol = 2) +
 
 ## Bar plot with individual jobs
 
-```{r, echo=FALSE}
+```{r, echo=TRUE}
 ### Now look at individual jobs ###
 ### 
 

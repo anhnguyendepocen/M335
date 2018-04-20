@@ -1,0 +1,61 @@
+---
+title: "Format File Even"
+---
+
+
+```{r buildinfo, echo=FALSE}
+library(tidyverse)
+library(magrittr)
+library(ggrepel)
+library(knitr)
+library(stringr)
+
+invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
+read_chunk("temp")
+
+
+# case study completed
+cso <- ceiling(params$day/2) - 1
+csn <- ceiling(params$day/2) 
+
+casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
+casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
+
+link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
+link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
+
+# How did we do?
+hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
+
+# current task
+# 
+taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
+link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
+
+```
+
+# Review
+
+```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
+# For case study due next Saturday
+```
+
+`r title.text`
+`r link_new`
+
+
+```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
+# For current task that is due
+```
+
+`r title.text`
+`r link_task`
+
+
+```{r stuff, echo=FALSE}
+unlink("temp")
+```
+
+```{r bigppdpdk, echo=TRUE}
+
+```

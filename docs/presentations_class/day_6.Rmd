@@ -1,80 +1,123 @@
 ---
-title: "Exploratory Data Analysis"
+title: "Data Import, Scripts, and the Critique"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: black
-      highlight: espresso
-      center: true
-      code_folding: hide
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
-        maxScale: 3
-        margin: 0
+params:
+  day: 6
+  ptitle: true
+  pbackground: true
+  dtype: "none"
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-library(tidyverse)
-library(magrittr)
-library(ggrepel)
+
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
+
 ```
 
-# Review
+# Becoming the Critic.
 
-## Class Board Concept
+```{r nextone}
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+## `r titlelink`
+
+[Visualization of the Day](`r vlink`)
+
+
+```{r child=md_intro_format}
+
+```
+
+
+
+# Providing Critiques and the Routine
+
+## A few critique examples
+
+* [Mckay's](https://github.com/BYUI335/Davis_M/issues/5):  Notice how he responds that he has addressed the issues.
+* [Aletha's Request](https://github.com/BYUI335/Pyeatt_A/issues/5):  Notice her request and the responses.
+* [Hathaway's Example Response](https://github.com/BYUI335/Pyeatt_A/issues/7): Notice the formatting and references.
+
+
+
+## Getting the Routine Down
+
+- **I am expecting pushes to happen at least three times a week**
+- [Leadership Task](https://byuistats.github.io/M335/tasklist.html)
+
+
+# New functions
+
+## Review the reading
 
 Write this chunk of code out in an English sentence to your grandma.
 
-```{r}
+```{r bob, evel=FALSE}
 best_in_class <- mpg %>%
   group_by(class) %>%
   filter(row_number(desc(hwy)) == 1)
 ```
 
-If this error was returned what does it mean?
+## Data formats
 
+If there is a data format that exists and is used, then there is a way to import that data into R. We will learn how to handle the basic tabular formats.  The packages `library(readr)`, `library(readxls)`, and `library(haven)` will provide most of the functionality we need.
+
+## Understanding file types
+
+* What is an [ASCII](https://www.webopedia.com/TERM/A/ASCII_file.html) file?
+* Which of the following file formats are not ASCII?
+    * `.csv`
+    * `.html`
+    * `.txt`
+    * `.R`
+    * `.xlsx`
+    * `.Rmd`
+    * `.doc`
+
+## Data Import (task 6)
+
+* What is the difference between `read.csv()` and `read_csv()`
+* Read [this link (5.3.1)](https://csgillespie.github.io/efficientR/5-3-importing-data.html) and take some time to make a note in your task 6 `README.md` in your repository about the benefits.
+* Push your updated `README.md` for me to read in class.
+
+
+## `parse_` commands
+
+Use this code - `money <- c("4,554,25", "$45", "8025.33cents", "288f45")`
+
+* Apply `as.numeric(money)` and talk with your table about the output.
+* Apply `parse_number(money)` and compare the results.
+
+## Using `read_csv()` with parsers
+
+
+> 1. Run this line of code below
+
+```{r vle3, eval=FALSE}
+challenge <- read_csv(readr_example("challenge.csv"))
 ```
-Error: unexpected '=' in:
-"  group_by(class) %>%
-  filter(row_number(desc(hwy)) ="
-```
 
-## Getting the Routine Down
+> 2. Look at the errors (`problems(challenge)`), the `head()`, and `tail()` of your `challenge` object.  What formats should they be?
 
-This Saturday submission finalizes the getting up to speed portion of the routine for this class. We also should be comfortable with the following
+> 3. Now review [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and fix the read in.
 
-> 1. Using Git and GitHub
-> 2. Using folder structure to manage projects
-> 3. Completing reading
 
-- **I am expecting pushes to happen at least three times a week**
-- [Leadership Task](https://byuistats.github.io/M335/tasklist.html)
 
-## Task 6
+## Scripts
 
-[World Child Mortatility](https://byuistats.github.io/M335/class_tasks/task06_details.html) visualizations.  **Who would like to highlight their work that they have pushed?**
+Here are a few questions.  Discuss each one with your table and decide which file type to use - `.md`, `.r` or `.rmd`.  Then discuss the reasons for that decision.
 
-> - [Our Classroom Group](https://github.com/BYUI335)
+1. I have a short memo to write for my boss that will not have any r code included.
+2. I am working out some example R code to make sure I understand what it is doing ([see this for a twist](https://deanattali.com/2015/03/24/knitrs-best-hidden-gem-spin/)).
+3. Brother Hathaway has some code snippets that he wants us to learn in class.
+4. I have a report that I need to write which will include some writing and analysis.
 
-## Case Study 3
-
-What questions do you all have for this case study?
-
-> - [Understanding Deaths in the US](https://byuistats.github.io/M335/weekly_projects/cs03_details.html)
-
-# Understanding terms
-
-## Socrative Quiz
-
-> - [Socrative: Exploratory Analysis](https://socrative.com/)
-
-# New functions
 
 ## Scales
 
@@ -94,19 +137,41 @@ Here is the [book's graphic](http://r4ds.had.co.nz/communicate-plots_files/figur
 
 ## Code and graphic (scales)
 
-Here is the [book's graphic](http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png) - Code is below.  
-Try to update their graphic to match mine.
+Here is the [book's graphic](http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png).  
+Use the [code from 28.3](http://r4ds.had.co.nz/graphics-for-communication.html) and update their graphic to match mine.
 
-```{r, eval=FALSE}
-best_in_class <- mpg %>% group_by(class) %>% filter(row_number(desc(hwy)) == 1)
-ggplot(mpg, aes(displ, hwy)) + geom_point(aes(colour = class)) + 
-  geom_point(size = 3, shape = 1, data = best_in_class) + 
-  ggrepel::geom_label_repel(aes(label = model), data = best_in_class)
-```
 
-```{r, fig.width=10, fig.height=3, echo=FALSE}
+```{r nnn2, fig.width=10, fig.height=4, echo=FALSE}
 library(ggrepel)
 library(viridis)
+
+best_in_class <- mpg %>% 
+  group_by(class) %>% 
+  filter(row_number(desc(hwy)) == 1)
+
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point(aes(colour = class), size = 3) +
+  geom_point(size = 1.5, data = best_in_class, color = "white") +
+  geom_text_repel(aes(label = model, colour = class), 
+                  data = best_in_class, show.legend = FALSE, 
+                  nudge_x = -1, nudge_y = -2) +
+  theme_bw() + 
+  theme(panel.grid.minor = element_blank()) +
+  scale_color_viridis(discrete = TRUE) + 
+  labs(x = "Engine displacement", y = "Miles per gallon (highway)", 
+       color = "Vehicle type")
+```
+
+## My Code Solution
+
+```{r newname_code, eval=FALSE}
+library(ggrepel)
+library(viridis)
+
+best_in_class <- mpg %>% 
+  group_by(class) %>% 
+  filter(row_number(desc(hwy)) == 1)
+
 ggplot(mpg, aes(displ, hwy)) +
   geom_point(aes(colour = class), size = 3) +
   geom_point(size = 1.5, data = best_in_class, color = "white") +
@@ -118,37 +183,6 @@ ggplot(mpg, aes(displ, hwy)) +
   labs(x = "Engine displacement", y = "Miles per gallon (highway)", 
        color = "Vehicle type")
 ```
-
-## Code and Graphic Solution (scales)
-
-
-```{r, fig.width=10, fig.height=3, eval=FALSE}
-library(ggrepel)
-ggplot(mpg, aes(displ, hwy)) +
-  geom_point(aes(colour = class), size = 3) +
-  geom_point(size = 1.5, data = best_in_class, color = "white") +
-  geom_text_repel(aes(label = model, colour = class), data = best_in_class, show.legend = FALSE, 
-                   nudge_x = -1, nudge_y = -2) +
-  theme_bw() + theme(panel.grid.minor = element_blank()) +
-  scale_color_viridis(discrete = TRUE) + 
-  labs(x = "Engine displacement", y = "Miles per gallon (highway)", color = "Vehicle type")
-```
-
-
-## Zooming (overview)
-
-There are three ways to control the plot limits:
-
-> 1. Adjusting what data are plotted
-> 2. Setting the limits in each scale - `scale_x_` then using the variable `limit = c(,)`
-> 3. Setting `xlim` and `ylim` in coord_cartesian() with `c(,)`
-
-## Zooming (challenge)
-
-Zoom in on the previous plot.  We only want to see vehicles that 
-
-* get less than 20 mpg on the highway and
-* are between 4 and 6 liters of engine displacement
 
 
 # Displaying multiple distributions

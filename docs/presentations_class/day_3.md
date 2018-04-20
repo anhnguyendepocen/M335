@@ -1,45 +1,27 @@
-# Github and Math/CS 335
-J. Hathaway  
+---
+title: "Github and Math/CS 335"
+author: J. Hathaway
+params:
+  day: 3
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
 
 
 
-#  Surveys, Slack, and Learning
+# Becoming the Critic.
 
-## Our survey
 
-Could we take a minute and fill out some surveys about the class.  I would like you guys to do this after you have completed each task (2 during the week and the Saturday case study).
+```r
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
 
-> - [Qualtrics Workload Survey](https://byui.brightspace.com/d2l/le/news/323455/158645/view)
-> - https://byui.brightspace.com/d2l/le/news/323455/158645/view
-> - Go to the `Survey Link` issue in your GitHub repository.
+## {data-background-iframe="http://www.perceptualedge.com/example2.php"}
 
-## {data-background-image="http://mediaassets.ktnv.com/photo/2016/09/08/rupaul_1473370557202_45993103_ver1.0_640_480.jpg"}
-
-<span style="font-size:45px; color:black">
-RuPaul on Learning
-</span>
-
-<mark>
-<span style="font-size:75px; color: black">
-Your fear of looking stupid is making you look stupid.
-</span>
-</mark>
-
-## Hillel the Elder
-
-> - [The pedant does not teach and the shy does not learn](https://torah.org/learning/maharal-p2m6part1/)
-> - [Maybe a teacher of Jesus](http://www.newworldencyclopedia.org/entry/Hillel_the_Elder)
-
-## Seriously!
-### How do you get people to percieve you are smart?
-
-## Slack and Learning
-
-This space is for us to build a team.  This is where we learn to ask questions correctly and learn to answer them correctly.
-
-> - [Slack For Learning](https://f17dwv.slack.com/messages/C3ES420BF/)
-> - Your fear of looking stupid is making you look stupid.
-> - [Time magazine on Looking Stupid Study](http://time.com/3158889/ask-for-advice-competent/)
+[Visualization of the Day](http://www.perceptualedge.com/example2.php)
 
 # GitHub and Git
 
@@ -47,8 +29,8 @@ This space is for us to build a team.  This is where we learn to ask questions c
 
 [2015 Wired Magazine Article](https://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/)
 
-- GitHub now boasts almost 9 million registered users. Each month, about 20 million others visit without registering. ... GitHub is now among the **top 100 most popular sites on earth**.
-- Now, pretty much everyone hosts their open source projects on GitHub, including Google, Facebook, Twitter, and even Microsoft. 
+- GitHub now boasts almost 9 million registered users. Each month, about 20 million others visit without registering. ... among the **top 100 most popular sites on earth**.
+- everyone hosts their open source projects on GitHub, including Google, Facebook, Twitter, and even Microsoft. 
 - the site as a kind of bazaar that offers just about any piece of code you might want-and so much of it free. "If you need something, you just go to GitHub," he says. "You will find it there."
 
 ##  Making sure we are all on the same page
@@ -89,17 +71,74 @@ git push
 
 - Open R-Studio and try the git process using the graphical user interface (GUI).
     - Clone repository
-    - Download my zip folder and population your folder structure - [Hathaway Repository](https://github.com/BYUI335/hathaway)
+    - Download my zip folder and populate your folder structure - [Hathaway Repository](https://github.com/BYUI335/hathaway)
     - Edit your README.md and push changes
 
+#  Learning, Slack, & Stack Overflow
 
-# Case Study 2
+## {data-background-image="http://mediaassets.ktnv.com/photo/2016/09/08/rupaul_1473370557202_45993103_ver1.0_640_480.jpg"}
 
-## Wealth and Life Expectancy
+<span style="font-size:45px; color:black">
+RuPaul on Learning
+</span>
+
+<mark>
+<span style="font-size:75px; color: black">
+Your fear of looking stupid is making you look stupid.
+</span>
+</mark>
+
+## Hillel the Elder
+
+> - [The pedant does not teach and the shy does not learn](https://torah.org/learning/maharal-p2m6part1/)
+> - [Maybe a teacher of Jesus](http://www.newworldencyclopedia.org/entry/Hillel_the_Elder)
+
+## Seriously!
+### How do you get people to percieve you are smart?
+
+> - [Time magazine on Looking Stupid Study](http://time.com/3158889/ask-for-advice-competent/)
+
+
+## Slack 
+
+This space is for us to build a team and support each other.  This is where we learn to ask questions and reach out for support and quick responses. 
+
+## Stack Overflow
+
+Stack Overflow 
+
+- **[Stack Overflow Background and Tips](http://duncanlock.net/blog/2013/06/14/the-smart-guide-to-stack-overflow-zero-to-hero/):**  This is a great page to help you understand how Stack Overflow works. Please read the **Ask Good Questions** section.
+- [Create a Stack Overflow Account](https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent&utm_source=stackoverflow.com&utm_medium=dev-story&utm_campaign=signup-redirect)
+- [Join our BYUI Channel](https://stackoverflow.com/c/byu/join)
+
+
+
+
+# Review
+
+## Class Details
 
 1. Ramping up (week 1)
 2. **Replicating (week 2)**
 3. Creating (weeks 3 - 12)
 
-[Case Study 2](https://byuistats.github.io/M335/weekly_projects/cs02_details.html)
+
+## Case Study 1: Critiquing Visualizations and Slack Setup
+> - [Case Study 1](https://byuistats.github.io/M335/weekly_projects/cs01_details.html)
+> - [How did we do?](https://github.com/BYUI335/hathaway)
+
+
+
+
+## Case Study 2: Wealth and Life Expectancy (Gapminder)
+> - [Case Study 2](https://byuistats.github.io/M335/weekly_projects/cs02_details.html)
+
+
+
+## Task 3:  Let's git going
+> - [Task 3](https://byuistats.github.io/M335/class_tasks/task03_details.html)
+
+
+
+
 

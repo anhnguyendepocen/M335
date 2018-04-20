@@ -40,12 +40,14 @@ ul {
 
 This reading will help you complete the tasks below.
 
+* o [Chapter 13: R for Data Science - Relational Data](http://r4ds.had.co.nz/relational-data.html){target='blank'}
 * o [Chapter 4: The Truthful Art: Data, Charts, and Maps for Communication](http://ptgmedia.pearsoncmg.com/images/9780321934079/samplepages/9780321934079.pdf){target='blank'}
 
 
 ### Tasks
 
 
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Install the `library(Lahman)` and examine the available data sets available
     * [ ] Find the 4-5 different data sets that you will need to show full college and player names as well as their annual earnings
 * [ ] Install the `library(blscrapeR)` and use the `inflation_adjust(2017)` function to get all earnings in 2017 dollars

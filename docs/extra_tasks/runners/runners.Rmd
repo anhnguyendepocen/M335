@@ -1,0 +1,13 @@
+---
+title: "Runners and Goals"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+http://faculty.chicagobooth.edu/george.wu/research/marathon/data.htm
+https://www.nytimes.com/2014/04/23/upshot/what-good-marathons-and-bad-investments-have-in-common.html?rref=upshot&_r=1
+http://tinlizzie.org/histograms/

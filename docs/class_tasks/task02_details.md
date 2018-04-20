@@ -17,7 +17,7 @@ output:
 
 ## Task 2: Wax On, Wax off with Swirl 
 ### Background 
-This task is intended to get all of us on the same page in R.  You will use the `library(swirl)` package to learn how to use R.  We will be covering Lessons 1-7.  Even if you have used R before, this will be an excellent refresher. If you do not get the title of this task, watch [this](https://www.youtube.com/watch?v=SMCsXl9SGgY). 
+This task is intended to get all of us on the same page in R.  You will use the `library(swirl)` package to learn how to use R.  We will be covering Lessons 1-7.  Even if you have used R before, this will be an excellent refresher. If the sending of an email in the swirl practice does not work do not worry about it. If you do not get the title of this task, watch [this](https://www.youtube.com/watch?v=SMCsXl9SGgY). 
 
  * [Homework Schedule](../homework_schedule.html)
 

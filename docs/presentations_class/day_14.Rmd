@@ -1,21 +1,6 @@
 ---
-title: "Understanding Time"
+title: "Finding names"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: black
-      highlight: espresso
-      center: true
-      code_folding: hide
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
-        maxScale: 3
-        margin: 0
 params:
   day: 14
   ptitle: true
@@ -25,73 +10,90 @@ params:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-library(tidyverse)
-library(magrittr)
-library(ggrepel)
-library(knitr)
+
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
+
+```
+
+```{r child=md_intro_format}
+
+```
+
+
+## Making A Plan
+
+```{r bobobob, out.width = "300px"}
+knitr::include_graphics("../images/programming_thought.png")
+```
+
+
+## Mapping out the coding challenge
+
+**In your tables:**
+
+> - Read the case study and write a one word statement of what you need to do
+> - Mock up what your final data may need to look like (what columns do you need to make a good visualization)
+> - Write pseudo code that would get you to an answer
+
+
+## Class Task 14 (data)
+
+```{r scripturedata, eval=FALSE, echo=TRUE}
+library(rio)
 library(stringr)
-
-invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
-read_chunk("temp")
-
-
-# case study completed
-cso <- ceiling(params$day/2) - 1
-csn <- ceiling(params$day/2) 
-
-casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
-casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
-
-link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
-link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
-
-# How did we do?
-hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
-
-# current task
-# 
-taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
-link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
+library(stringi)
+scriptures <- import("http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip")
+bm <- scriptures %>% filter(volume_short_title == "BoM")
 ```
 
-# Review
+## Class Task 14 (average)
 
-```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
-# For case study due next Saturday
+```{r, eval=FALSE, echo=TRUE}
+
+bm_counts <- bm %>% 
+  group_by(verse_title, chapter_id, book_id, chapter_number, verse_number, book_title) %>% 
+  summarise(word_count = stri_stats_latex(scripture_text)["Words"],
+            charsword = stri_stats_latex(scripture_text)["CharsWord"],
+            charswhite = stri_stats_latex(scripture_text)["CharsWhite"])
+
 ```
 
-`r title.text`
-`r link_new`
+## Class Task 14 (finding Jesus)
 
 
-```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
-# For current task that is due
+```{r, eval=FALSE, echo=TRUE}
+bm_locs <- bm$scripture_text %>% 
+            str_locate_all(c("Jesus")) %>% 
+            lapply(function(x) nrow(x)) %>%
+            unlist()
+sum(bm_locs)
 ```
 
-`r title.text`
-`r link_task`
+# Loops for what?
 
+## Making the loop (challenge)
 
-```{r stuff, echo=FALSE}
-unlink("temp")
+**The challenge:**  Use the savior names list and write out how you would use a for loop to find/break this one verse into chunks to get a word count between each.
+
+[2 Nephi 25:16](https://www.lds.org/scriptures/bofm/2-ne/25.16)
+
+## Making the loop (code)
+
+ * Now just use this verse to run your for loop
+
+```{r, eval=FALSE, echo=TRUE}
+verse <- read_lines("https://byuistats.github.io/M335/data/2nephi2516.txt")
+names <- import("https://byuistats.github.io/M335/data/BoM_SaviorNames.rds")
+
 ```
 
+## Case Study 7 Update
 
-# Class Activity
+This task is a challenge.  It has potential to bring the best of you to your knees.  After 3-hours of working on the challenge you can stop and then spend 1/2 hour writting up how you were going to tackle the task and what you learned.
 
+**The leadership presentation on next Tuesday can be on CS7 or CS4 or CS5.**
 
-## The Walmart March Visualization
-
-> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
-> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
-
-
-## The Walmart Challenge
-
-Ignoring the color.  Let's recreate this graphic.  
-
-> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
-> - [Walmart Openings csv](https://byuistats.github.io/M335/data/Walmart_store_openings.csv)
 
 # Making new R package friends
 
@@ -111,5 +113,9 @@ Ignoring the color.  Let's recreate this graphic.
 - [glue: why should we paste](https://github.com/tidyverse/glue)
 - [reinstallr: getting your packages back](https://github.com/calligross/reinstallr)
 - [multidplyr: we need more than one dplyr?](http://www.business-science.io/code-tools/2016/12/18/multidplyr.html)
+- [skimr: pipeable summary statistics](https://github.com/ropenscilabs/skimr)
+
+
+
 
 

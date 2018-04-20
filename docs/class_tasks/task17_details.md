@@ -41,11 +41,13 @@ ul {
 This reading will help you complete the tasks below.
 
 * o [tidyquants R package](https://github.com/business-science/tidyquant){target='blank'}
+* o [John Rauser Talk (Review)](https://youtu.be/fSgEeI2Xpdc){target='blank'}
 
 
 ### Tasks
 
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
 * [ ] List the three stocks that your friend picks and the three that you pick
 * [ ] Pull the price performance data using `library(tidyquant)` or `library(quantmod)`
 * [ ] Build a visualization that shows who is winning each day of the competition

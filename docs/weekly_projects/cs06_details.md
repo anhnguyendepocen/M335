@@ -13,7 +13,7 @@ params:
 
 
 
-
+![](cs06_details_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ##  Case Study 6: The collapse of construction in Idaho 
 ### Background 
@@ -57,8 +57,8 @@ ul {
 * [ ] Load the R package from GitHub `devtools::install_github("hathawayj/buildings")` and find out what [data is in the package](https://github.com/hathawayj/buildings)
 * [ ] Construction value is related to population in the area.  Join the `climate_zone_fips` data to the `buildings0809` data using the two `FIPS` columns for state and county.
 * [ ] After filtering to `Food_Beverage_Service` group of buildings in the `Type` variable, use the `ProjectTitle` column to create new subgroups from the groupings in the code section below and the restaurant names in `restaurants`.
-    * [ ] Restaurants that are not assigned using the names and keywords that are over 4000 square feet should be grouped into `Full Service Restaurants` and be in `Quick Servie Restaurants` if they are under 4000 square feet
-* [ ] Make sure your text strings your ar matching on are as standardized as possible
+    * [ ] Restaurants that are not assigned using the names and keywords that are over 4000 square feet should be grouped into `Full Service Restaurants` and be in `Quick Service Restaurants` if they are under 4000 square feet
+* [ ] Make sure your text strings your are matching on are as standardized as possible
     * [ ] leverage functions like `str_to_lower()` and `str_trim()` to get all the words in a standardized form
     * [ ] you could use the `case_when()` function to create the subgroups.
 * [ ] Create an `.Rmd` file with 2-3 paragraphs summarizing your 3-4 graphics that inform the client questions
@@ -70,26 +70,17 @@ ul {
 
 
 
-### Code
-
 
 ```r
-# To get the standard works data
-download("http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip", "docs/data/scriptures.zip", mode = "wb")
-unzip("docs/data/scriptures.zip", exdir = file.path(getwd(),"docs/data"))
-file.remove("docs/data/scriptures.zip")
-scriptures <- read_csv("docs/data/lds-scriptures.csv")
-
-# to get the Savior names
-bmnames <- read_rds(gzcon(url("https://byuistats.github.io/M335/data/BoM_SaviorNames.rds")))
-
-# my script needed the following functions 
-stringr::str_locate_all()
-stringr::str_replace_all()
-stringr::str_extract_all()
-stringi::stri_stats_latex()
+not_restaurants <- c("development","Food preperation center", "Food Services center","bakery","Grocery","conceession","Cafeteria", "lunchroom","school","facility"," hall ")
+standalone_retail <- c("Wine","Spirits","Liquor","Convenience","drugstore","Flying J", "Rite Aid ","walgreens ","Love's Travel ")
+full_service_type <- c("Ristorante","mexican","pizza ","steakhouse"," grill ","buffet","tavern"," bar ","waffle","italian","steak house")
+quick_service_type <- c("coffee"," java "," Donut ","Doughnut"," burger ","Ice Cream ","custard ","sandwich ","fast food "," bagel ")
+quick_service_names <- restaurants$Restaurant[restaurants$Type %in% c("coffee","Ice Cream","Fast Food")]
+full_service_names <- restaurants$Restaurant[restaurants$Type %in% c("Pizza","Casual Dining","Fast Casual")]
+## After the above assignments the below rules need to be implemented
+# Over 4,000 ADD and NEW construction get assigned to Sit Down Restaurants
+# Under 4,000 sqft NEW construction get assigned to Fast Food
+# all Type == "Food/Beverage Service" that don't get grouped based on the above are called "Unknown"
 ```
-
-
-
 

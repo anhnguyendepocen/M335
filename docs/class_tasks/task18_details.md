@@ -44,13 +44,13 @@ This reading will help you complete the tasks below.
 * o [dygraphs for R](http://rstudio.github.io/dygraphs/index.html){target='blank'}
 * o [DT: An R interface to the Data Tables library](http://rstudio.github.io/DT/){target='blank'}
 * o [timekit R package](https://github.com/business-science/timekit){target='blank'}
-* o [John Rauser Talk (Review)](https://youtu.be/fSgEeI2Xpdc){target='blank'}
 * o [How William Cleveland Turned Data Visualization into a Science](https://priceonomics.com/how-william-cleveland-turned-data-visualization/){target='blank'}
 
 
 ### Tasks
 
 
+* [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
 * [ ] Build the `library(dygraphs)` plot that shows the Kroger (KG) stock price performance
 * [ ] Add a few annotations to the plot that identify the historical context for the price change
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in the data presentation

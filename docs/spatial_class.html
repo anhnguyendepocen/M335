@@ -28,11 +28,22 @@
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -419,10 +430,24 @@ div.tocify {
 </div>
 
 
-<p>Let’s try to make a reprojection of our map so that is feels more honest or at least asthetically pleasing.</p>
-<p>Here is a nice <a href="http://gothos.info/2011/04/common-map-projection-definitions/">list of some standard examples</a> - <a href="http://gothos.info/2011/04/common-map-projection-definitions/" class="uri">http://gothos.info/2011/04/common-map-projection-definitions/</a>.</p>
-<p>We can see the <a href="http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html">set of projection types</a> (<a href="http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html" class="uri">http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html</a>) and then look up the <a href="http://spatialreference.org/ref/">projection type</a> (<a href="http://spatialreference.org/ref/" class="uri">http://spatialreference.org/ref/</a>) to get <a href="https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf">proj4string</a>. The proj4 format information can be helpfull<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. There are many <a href="https://earthdatascience.org/courses/earth-analytics/spatial-data-r/understand-epsg-wkt-and-other-crs-definition-file-types/">online examples</a><a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> of using R for spatial as well.</p>
-<p>Note the use of <code>+lat_0=45</code> and <code>+lon_0=-115</code> and what they do your map.</p>
+<div id="challenge" class="section level2">
+<h2>Challenge</h2>
+<p>Let’s try to make a reprojection of our <a href="https://byuistats.github.io/M335/class_tasks/task19_details.html">task map we just created</a> so that is feels more honest or at least asthetically pleasing.</p>
+</div>
+<div id="tools-background" class="section level2">
+<h2>Tools Background</h2>
+<ul>
+<li>Here is a nice <a href="http://www.radicalcartography.net/?projectionref">list of some standard examples</a> (<a href="http://www.radicalcartography.net/?projectionref" class="uri">http://www.radicalcartography.net/?projectionref</a>).</li>
+<li>We can see the <a href="http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html">set of projection types</a> (<a href="http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html" class="uri">http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html</a>)</li>
+<li>Then we can look up the <a href="http://spatialreference.org/ref/">projection type</a> (<a href="http://spatialreference.org/ref/" class="uri">http://spatialreference.org/ref/</a>)
+<ul>
+<li>to get <a href="https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf">proj4string</a>.</li>
+<li>The proj4 format information can be helpfull<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.<br />
+</li>
+</ul></li>
+<li>There are many <a href="https://earthdatascience.org/courses/earth-analytics/spatial-data-r/understand-epsg-wkt-and-other-crs-definition-file-types/">online examples</a><a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> of using R for spatial as well.</li>
+</ul>
+<p><strong>Note the use of <code>+lat_0=45</code> and <code>+lon_0=-115</code> and what they do your map.</strong></p>
 <pre class="r"><code>my_proj &lt;- &quot;+proj=robin +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs&quot;
 my_proj &lt;- &quot;+proj=moll +lat_0=45 +lon_0=-115 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs&quot;
 
@@ -432,6 +457,7 @@ idaho_tr &lt;- idaho %&gt;% st_transform( crs = my_proj)
 ggplot() +
   geom_sf(data = states_tr, inherit.aes = FALSE) +
   geom_sf(data = idaho_tr, inherit.aes = FALSE)</code></pre>
+</div>
 <div class="footnotes">
 <hr />
 <ol>

@@ -1,100 +1,91 @@
-# Finding names
-J. Hathaway  
+---
+title: "Pulling Strings"
+author: J. Hathaway
+params:
+  day: 12
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+
+
+# Becoming the Critic.
+
+
+```r
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
 
 
 
 
-## Case Study 6: Counting names in scripture
+
+
+
+# Review
+
+
+
+##  Case Study 6: The collapse of construction in Idaho
 > - [Case Study 6](https://byuistats.github.io/M335/weekly_projects/cs06_details.html)
 
-Let's talk about this case study and what is acheivable.
-
-* Altered task: complete the task items or spend 2 hours trying to make it work.
-    * Document the pseudo code you would use (it needs for loops and `str_` commands.
-    * Describe the visualization you would have made.
-
-## Mapping out the coding challenge
-
-**In your tables:**
-
-> - Read the task and write a one word statement of what you need to do
-> - Mock up what your final data may need to look like (what columns do you need to make a good visualization)
-> - Write pseudo code that would get you to an answer
 
 
 
-
-## Task 12: Counting Words and Occurrences
+## Task 12: Strings and grep
 > - [Task 12](https://byuistats.github.io/M335/class_tasks/task12_details.html)
 
-## Class Task 12 (data)
-
-
-```r
-library(rio)
-library(stringr)
-library(stringi)
-scriptures <- import("http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip")
-bm <- scriptures %>% filter(volume_short_title == "BoM")
-```
-
-## Class Task 12 (average)
-
-
-```r
-params <-
-structure(list(dtype = "background", ptitle = TRUE, pbackground = FALSE), .Names = c("dtype", 
-"ptitle", "pbackground"))
-```
-
-## Class Task 12 (finding Jesus)
 
 
 
-```r
-bm_locs <- bm$scripture_text %>% 
-            str_locate_all(c("Jesus")) %>% 
-            lapply(function(x) nrow(x)) %>%
-            unlist()
-sum(bm_locs)
-```
-
-# Loops for what?
-
-## Making the loop (challenge)
-
-**The challenge:**  Use the savior names list and write out how you would use a for loop to find/break this one verse into chunks to get an word count between each.
-
-[2 Nephi 25:16](https://www.lds.org/scriptures/bofm/2-ne/25.16)
-
-## Making the loop (code)
-
- * Now just use this verse to run your for loop
 
 
-```r
-verse <- read_lines("https://byuistats.github.io/M335/data/2nephi2516.txt")
-names <- import("https://byuistats.github.io/M335/data/BoM_SaviorNames.rds")
-```
 
+# Visualizing Impact
 
-# Making new R package friends
+## A visualization and the steps
 
-## The challenge
+> - [Gun Deaths](http://guns.periscopic.com/?year=2013)
 
-1. Pick one of the R packages on the following slide
-2. Read material on the R package
-3. Build a working script that demonstrates the use of the R package.
-4. Write up a short presentation on the package.
+> 1. Be open to discovering new insights
+> 2. Think big but start small
+> 3. Design for your user
+> 4. Prototype to identify needs (Sketch to code)
+> 5. Obtain feedback early and often
 
-## The packages
+"If I had asked my customers what they wanted they would have told me faster horses."
 
-- [rio: The double click of data import](https://cran.r-project.org/web/packages/rio/vignettes/rio.html#data_import)
-- [janitor: making the cleaning easy](https://github.com/sfirke/janitor)
-- [tidytext: helps for text mining](https://github.com/juliasilge/tidytext)
-- [fst: yes it is fast](http://www.fstpackage.org/)
-- [glue: why should we paste](https://github.com/tidyverse/glue)
-- [reinstallr: getting your packages back](https://github.com/calligross/reinstallr)
-- [multidplyr: we need more than one dplyr?](http://www.business-science.io/code-tools/2016/12/18/multidplyr.html)
+## Step 3. Design for your user
 
+We explored treemaps and pie charts as ways to visualize the potential cost savings by product category. Lots of discrete clusters made pie charts ineffective. When we tested the treemaps, users found it difficult to arrive at a clear decision when comparing across product categories. Users also grappled to understand more complex visualizations as they were mostly accustomed to excel type visualizations.
+
+## Conclusion
+
+Successful visualizations consider user needs, business needs and the technology platform. It's easy to create visualizations that are interesting but not effective for the users consuming the insights. 
+
+# Regular Expressions
+
+## Some Background on RegEx
+
+> - [History of RegEx](https://blog.staffannoteberg.com/2013/01/30/regular-expressions-a-brief-history/)
+
+**A few jokes**
+
+> - [Really](http://geek-and-poke.com/geekandpoke/2013/12/3/yesterdays-regex)
+> - [Superheros](https://www.explainxkcd.com/wiki/images/7/7b/regular_expressions.png)
+
+## Class Activity (RegEx)
+
+**[temple data sealing activity](https://byuistats.github.io/M335/temple_sealings.html)**
+
+> 1. Use regular expressions to fix the temple name key so they match in each data set and then join. 
+> 2. With your final data make the announcement date a date value
+> 3. Make a plot with announcement date on the x-axis and square footage on the y-axis
+
+> - [str_replace_all()](http://stringr.tidyverse.org/reference/str_replace.html)
+> - follow [link](https://www.rdocumentation.org/packages/stringi/versions/1.1.5/topics/stringi-search-regex) to regular expression information
+> - now remove the trailing characters after Temple - [regex101](https://regex101.com/) or [regexr](https://regexr.com)
 

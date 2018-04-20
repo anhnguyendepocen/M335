@@ -47,7 +47,7 @@ You have just been hired to a new data science team, and you need to collaborate
 
 
 ## Task 4:  Asking the right questions  
-Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  This task supports your semester project.
+Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  This task supports your semester project. **Note that the reading on data transformation below is necessary for the case study for this week and may be the most important reading of the semester to fully understand**
 
 
  * [Details](class_tasks/task04_details.html)
@@ -85,7 +85,7 @@ The [Our World in Data](https://ourworldindata.org/){target="blank"} website has
 
 ## Task 8: Data to Answer Questions  
 
-Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your project.  After you find good data sourses make sure to complete the remaining tasks.
+Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your project.  After you find good data sources make sure to complete the remaining tasks.
 
 
  * [Details](class_tasks/task08_details.html)
@@ -269,7 +269,7 @@ This week we will learn new coding techniques and visualization principles.  How
 ## Case Study 1: Critiquing Visualizations and Slack Setup  
 Your first weekly project requires you to **submit** a review of 4-5 different data visualizations used to answer specific questions.  Some fun websites are [wonkblog](https://www.washingtonpost.com/news/wonk/?utm_term=.c10a343a7262){target="blank"}, [fivethiryeight](https://fivethirtyeight.com/){target="blank"}, and [priceonomics](https://priceonomics.com/){target="blank"} (but you can use any website, blog, or article with a good visualization).
 
-The **submit** word above will require you to create an account on [slack](https://f17dwv.slack.com/signup){target="blank"}.  Our slack channel is `f18dwv`, and it requires that you create an account with your `@byui.edu` email account.
+The **submit** word above will require you to create an account on [slack](https://join.slack.com/t/byuidwv/signup?x=x-339637048932-339197858336){target="blank"}.  Our slack channel is byuidwv.slack.com.  You must use your `@byui.edu` email to create an account.
 
  * [Details](weekly_projects/cs01_details.html)
 

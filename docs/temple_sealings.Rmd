@@ -12,13 +12,11 @@ You can get the `.Rmd` file this [this link](temple_sealings.Rmd)
 # Loading my R packages
 
 ```{r, packages}
-#install.packages('htmltab')
-# https://cran.r-project.org/web/packages/htmltab/vignettes/htmltab.html
-library(htmltab)
-library(reshape2)
+# http://bradleyboehmke.github.io/2015/12/scraping-html-tables.html
+library(XML)
+library(RCurl)
 library(tidyverse)
 library(readr)
-library(purrr)
 library(lubridate)
 library(ggrepel)
 library(downloader)
@@ -36,13 +34,29 @@ bob <- tempfile()
 download("http://ldschurchtemples.org/maps/downloads/kml.php", bob)
 temple.locs <- kml_points(bob) %>% select(name, longitude, latitude)
 
-url_size <- "http://ldschurchtemples.org/statistics/dimensions/"
-url_time <- "http://ldschurchtemples.org/statistics/timelines/"
+url_size <- "https://ldschurchtemples.org/statistics/dimensions/"
+url_time <- "https://ldschurchtemples.org/statistics/timelines/"
 
-dimensions <- htmltab(doc = url_size, 2) %>% as.tibble() 
+dimensions <- url_size %>%
+  getURL() %>%
+  readHTMLTable() %>%
+  .[[1]] %>%
+  as.tibble()
 
-times_AnGrbr <- htmltab(doc = url_time, 3) %>% select(-Duration) %>% as.tibble() 
-times_GrbrDed <- htmltab(doc = url_time, 4) %>% select(-Duration) %>% as.tibble()
+times_AnGrbr <- url_time %>%
+  getURL() %>%
+  readHTMLTable() %>%
+  .[[2]] %>%
+  as.tibble() %>%
+  select(-Duration)
+
+times_GrbrDed <- url_time %>%
+  getURL() %>%
+  readHTMLTable() %>%
+  .[[3]] %>%
+  as.tibble() %>%
+  select(-Duration)
+
 ```
 
 The [ldschurchtemples.org](http://ldschurchtemples.org/) has some nice data on LDS temples.  We will be using the following webpages to get location, size and timelines.
@@ -53,7 +67,9 @@ The [ldschurchtemples.org](http://ldschurchtemples.org/) has some nice data on L
 
 # Your Goal
 
-Merge all four data sets into a table that looks like the table below.  **Note that this activity is teaching how to merge data sets and check for poor merges.**
+1. Merge all four data sets into a table that looks like the table below.  **Note that this activity is teaching how to merge data sets and check for poor merges.**
+
+2. Create a visualization that highlights our temple history.
 
 
 |Temple                    |  longitude|   latitude|OrdinanceRooms |SealingRooms | SquareFootage|Announced  |Ground.Broken |Dedicated  |
