@@ -13,7 +13,7 @@ params:
 
 
 
-![](cs02_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
 
 ## Case Study 2: Wealth and Life Expectancy (Gapminder) 
 ### Background 

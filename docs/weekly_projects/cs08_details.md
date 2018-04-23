@@ -13,7 +13,7 @@ params:
 
 
 
-![](cs08_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
 
 ## Case Study 8: It's about time 
 ### Background 

@@ -13,7 +13,7 @@ params:
 
 
 
-![](cs06_details_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+
 
 ##  Case Study 6: The collapse of construction in Idaho 
 ### Background 

@@ -13,7 +13,7 @@ params:
 
 
 
-![](cs07_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
 
 ## Case Study 7: Counting names in scripture 
 ### Background 

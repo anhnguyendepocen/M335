@@ -13,7 +13,7 @@ params:
 
 
 
-![](cs11_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
 
 ## Case Study 11: Interacting with space 
 ### Background 

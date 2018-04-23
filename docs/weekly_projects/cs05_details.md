@@ -13,7 +13,7 @@ params:
 
 
 
-![](cs05_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
 
 ## Case Study 5: I can clean your data 
 ### Background 

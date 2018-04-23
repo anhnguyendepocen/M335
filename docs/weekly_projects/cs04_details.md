@@ -13,7 +13,7 @@ params:
 
 
 
-![](cs04_details_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
 
 ## Case Study 4: Reducing Gun Deaths (FiveThirtyEight) 
 ### Background 
