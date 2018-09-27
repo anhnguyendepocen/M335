@@ -21,6 +21,9 @@ vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
 titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 ```
 
+## {data-background-iframe="http://www.perceptualedge.com/example9.php"}
+
+[Visualization of the Day](http://www.perceptualedge.com/example9.php)
 
 
 
@@ -106,16 +109,16 @@ Can a few people write example code to get this done?  Can the others that got i
 Read in this building utility data that is not very happy!
 
 > * You want to use 
->    * `col_datetime(format = "%m%.%d%.%Y %H:%M")` and 
->    * `col_date(format = "%m%.%d%.%Y")` 
-    when you use `read_csv()`.
+>    * `parse_datetime(format = "%m%.%d%.%Y %H:%M")` and 
+>    * `parse_date(format = "%m%.%d%.%Y")` 
+    after you use `read_csv()`.
 > * https://byuistats.github.io/M335/data/building_utility_values.csv
 
 
 
 ## First Challenge
 
-> * keep building variables, time variables and water variables
+> * keep key variables (id and time variables) and the water variables
 > * Create a state variable  
 > * separate enddate into year, month, and day (three separate columns) and keep the enddate column
 
@@ -125,6 +128,7 @@ Use `library(dplyr)`, `library(tidyr)`, and `library(ggplot2)` to address the fo
 
 > * How many buildings do we have in each state?
 > * Create a graphic that compares the total potable gallons of water used by building over time to check the consistency of the data.
+>     * What could you look for to see if potable water is recorded how you would expect?
 
 ## Third Challenge
 

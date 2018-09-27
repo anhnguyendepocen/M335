@@ -15,11 +15,16 @@ output:
 
 
 
-## Task 6: World Data Investigation 
+## Task 6: Developing a graphic 
 ### Background 
+Before we can start to answer business questions we need to become familiar with our data. Often, you will want to start with the [data dictionary](https://www.bridging-the-gap.com/data-dictionary/).  However, you can also just dive into the data and gain understanding based on the variable names and types.
 
-The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.
+Beyond the variable descriptions is how the variables relate to each other.  Can we create tables or visualizations that summarize how different variables relate to each other.  At this point we are deepeing our understanding as well as beginning our analysis.
 
+**Remember: Your job is to become the data expert not the domain expert.** You will build domain skills but you are not going to replace domain experts. People will depend on you to have a firm understanding of what data your company has available to answer domain specific questions.
+
+Use
+nycflights13::flights
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -41,20 +46,15 @@ ul {
 
 This reading will help you complete the tasks below.
 
-* o [Chapter 6: R for Data Science - Scripts](http://r4ds.had.co.nz/workflow-scripts.html){target='blank'}
-* o [Chapter 11: R for Data Science - Data Import](http://r4ds.had.co.nz/data-import.html){target='blank'}
+* o [Chapter 28: R for Data Science - Graphics for communication](http://r4ds.had.co.nz/graphics-for-communication.html){target='blank'}
 
 
 ### Tasks
 
 
-* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
-* [ ] Review the [Our World in Data](https://ourworldindata.org/){target="blank"} webpage and find a graphic that interests you.
-    * [ ] Recreate that graphic in R after downloading the data from their website
-* [ ] Explore the world data on `child_mortality` and create an interesting graphic that highlights this dataset.
-    * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `child_mortality`.  This will require `install.packages("devtools")`.
-    * [ ] Create a graphic that you could use in a presentation to summarize world child mortatility
-* [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots
-* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
+* [ ] Find an insightfull relationship between two of the variables (columns) and display that relationship in a table or graphic
+    * [ ] document the iterative script that built to your insightfull relationship
+* [ ] Create an `.R` script that has your data visualization development with 1-2 commented paragraphs summarizing your 2 finalized graphics and the choices you made in the data presentation
+* [ ] Save your `.png` images of each your final graphics and push all your work to your repository.
 
 

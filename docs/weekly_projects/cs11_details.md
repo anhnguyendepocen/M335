@@ -54,8 +54,6 @@ ul {
     * [ ] Find your own spatial data that interests you and build a visualization
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in your visualization
 * [ ] Compile your `.md` and `.html` file into your git repository
-* [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
-* [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
 
 

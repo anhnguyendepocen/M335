@@ -1,5 +1,5 @@
 ---
-title: "Github and Math/CS 335"
+title: "Getting into Data, dplyr and ggplot2"
 author: J. Hathaway
 params:
   day: 3
@@ -7,6 +7,9 @@ params:
   pbackground: true
   dtype: "none"
 ---
+
+
+
 
 
 
@@ -23,107 +26,22 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 [Visualization of the Day](http://www.perceptualedge.com/example2.php)
 
-# GitHub and Git
-
-## Really do I have to learn Git and GitHub
-
-[2015 Wired Magazine Article](https://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/)
-
-- GitHub now boasts almost 9 million registered users. Each month, about 20 million others visit without registering. ... among the **top 100 most popular sites on earth**.
-- everyone hosts their open source projects on GitHub, including Google, Facebook, Twitter, and even Microsoft. 
-- the site as a kind of bazaar that offers just about any piece of code you might want-and so much of it free. "If you need something, you just go to GitHub," he says. "You will find it there."
-
-##  Making sure we are all on the same page
-
-Let's take a few minutes to make sure everyone is up to date with the following tasks.
-
-[Class Task 3 Checklist](https://byuistats.github.io/M335/class_tasks/task03_details.html)
-
-> - Install git on your computer
-> - Create a GitHub account
-> - Work through readings on git and github
-
-## Free private repos
-
-> -  It would benefit you to use the free repos to manage all of your class work.
-> - https://education.github.com/discount_requests/new
-
-## The Github Mentality
-
-[The workflow](../images/Git_workflow_diagram.png)
-
-
-```r
-# Move to your git managed folder
-git pull
-git add *
-git commit -m "My great work"
-git push
-```
-
-## Github and R-Studio
-
-### Class Task Items
-
-- Get GitHub working properly
-    - Create an account
-    - Accept invitations to group and repository
-
-- Open R-Studio and try the git process using the graphical user interface (GUI).
-    - Clone repository
-    - Download my zip folder and populate your folder structure - [Hathaway Repository](https://github.com/BYUI335/hathaway)
-    - Edit your README.md and push changes
-
-#  Learning, Slack, & Stack Overflow
-
-## {data-background-image="http://mediaassets.ktnv.com/photo/2016/09/08/rupaul_1473370557202_45993103_ver1.0_640_480.jpg"}
-
-<span style="font-size:45px; color:black">
-RuPaul on Learning
-</span>
-
-<mark>
-<span style="font-size:75px; color: black">
-Your fear of looking stupid is making you look stupid.
-</span>
-</mark>
-
-## Hillel the Elder
-
-> - [The pedant does not teach and the shy does not learn](https://torah.org/learning/maharal-p2m6part1/)
-> - [Maybe a teacher of Jesus](http://www.newworldencyclopedia.org/entry/Hillel_the_Elder)
-
-## Seriously!
-### How do you get people to percieve you are smart?
-
-> - [Time magazine on Looking Stupid Study](http://time.com/3158889/ask-for-advice-competent/)
-
-
-## Slack 
-
-This space is for us to build a team and support each other.  This is where we learn to ask questions and reach out for support and quick responses. 
-
-## Stack Overflow
-
-Stack Overflow 
-
-- **[Stack Overflow Background and Tips](http://duncanlock.net/blog/2013/06/14/the-smart-guide-to-stack-overflow-zero-to-hero/):**  This is a great page to help you understand how Stack Overflow works. Please read the **Ask Good Questions** section.
-- [Create a Stack Overflow Account](https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent&utm_source=stackoverflow.com&utm_medium=dev-story&utm_campaign=signup-redirect)
-- [Join our BYUI Channel](https://stackoverflow.com/c/byu/join)
 
 
 
 
-# Review
 
-## Class Details
 
-1. Ramping up (week 1)
-2. **Replicating (week 2)**
-3. Creating (weeks 3 - 12)
+
+
+
+# Team Discussion
+
 
 
 ## Case Study 1: Critiquing Visualizations and Slack Setup
+
+> - The [Google spreadsheet link](https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing)
 > - [Case Study 1](https://byuistats.github.io/M335/weekly_projects/cs01_details.html)
 > - [How did we do?](https://github.com/BYUI335/hathaway)
 
@@ -135,10 +53,111 @@ Stack Overflow
 
 
 
-## Task 3:  Let's git going
+
+## Task 3:  Asking the right questions
 > - [Task 3](https://byuistats.github.io/M335/class_tasks/task03_details.html)
 
 
 
 
 
+
+
+
+## Task 3: Asking the right questions
+
+> - [Task 3](file:///C:/git/github/byuistats/M335/docs/class_tasks/task03_details.html)
+> - [Harness the power of questions & Clarify Terms](https://www.lynda.com/Business-Skills-tutorials/Harness-power-questions/477451/574315-4.html)
+
+
+#  How do we know when we have given voice to data?
+
+## "The simple graph has brought more information to the data analyst's mind than any other device."
+
+### John Tukey
+
+
+## "The greatest value of a picture is when it forces us to notice what we never expected to see." 
+
+### John Tukey
+
+## Hans Rosling and Data Interaction
+
+- I put them together, so that in each pair of country, one has twice the child mortality of the other. **And this means that it's much bigger a difference than the uncertainty of the data.**
+
+- [I have shown that Swedish top students know statistically significantly less about the world than the chimpanzees.](https://www.youtube.com/embed/usdJgEwMinM?rel=0&amp;start=80)
+
+- [It's a tremendous variation within Africa which we rarely often make -- that it's equal everything.](https://www.youtube.com/embed/usdJgEwMinM?rel=0&amp;start=570)
+
+- [Now, this is, more or less, if you look at the average data of the countries -- they are like this. Now that's dangerous, to use average data, because there is such a lot of difference within countries.](https://www.youtube.com/embed/usdJgEwMinM?rel=0&amp;start=823)
+
+## Boaz Super
+
+- Logical thinking requires one additional, vital component: a commitment to intellectual honesty. That means not allowing oneself to bend to one’s desire for a particular outcome.
+
+## Stephen Few
+
+-  This problem still exists today, but a more common problem and one that is much more insidious because it is so seldom recognized, is the unintended miscommunication of quantitative information that happens because people have never learned how to communicate it effectively. 
+
+
+# Wrangling Data
+
+## The pipe `%>%`
+
+You can read it as a series of imperative statements: group, then summarize, then filter. As suggested by this reading, a good way to pronounce %>% when reading code is **"then"**.
+
+* Behind the scenes, x %>% f(y) turns into f(x, y), and x %>% f(y) %>% g(z) turns into g(f(x, y), z) and so on. 
+* You can use the pipe to rewrite multiple operations in a way that you can read left-to-right, top-to-bottom. 
+* We'll use piping frequently from now on because it considerably improves the readability of code.
+
+
+## library(dplyr) Part 1
+
+> - `filter()`  - filter your data to a smaller set of important rows.
+> - `arrange()` - Organize the row order of my data
+> - `select()`  - select specific columns to keep or remove 
+> - `mutate()`  - add new mutated (changed) variables as columns to my data.
+
+## library(dplyr) Part 2
+
+> - `summarise()` - build summaries of the columns specified
+> - `group_by()`  - divide your data into groups. Often used with `summarise()`
+
+## Practice reading code
+
+With your table, write this code out in an English paragraph.
+
+
+```r
+delays <- flights %>% 
+  group_by(dest) %>% 
+  summarise(
+    count = n(),
+    dist = mean(distance, na.rm = TRUE),
+    delay = mean(arr_delay, na.rm = TRUE)
+  ) %>% 
+  filter(count > 20, dest != "HNL")
+```
+
+## Practice using dplyr
+
+Use `filter()`, `arrange()`, `select()`, `mutate()`, `group_by()`, and `summarise()`. With `library(tidyverse)` tackle the following challenges.
+
+> 1. Arrange the `iris` data by `Sepal.Length` and display the first six rows.
+> 2. Select the `Species` and `Petal.Width` columns and put them into a new data set called `testdat`.
+> 3. Create a new table that has the mean for each variable by Species.
+> 4. Read about the `summarise_all()` and get a new table with the means and standard deviations for each Species.
+
+# The Grammar of Graphics
+
+## Introduction to the Grammar
+
+<iframe width="760" height="445" src="https://www.youtube.com/embed/uiTc55clwuA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+## Introduction to ggplot2 
+
+<iframe width="760" height="445" src="https://www.youtube.com/embed/PiY9hwOkL8U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+## ggplot2 and iris data
+
+Use the `iris` data to show a faceted visualization with a `color`, `shape`, and `size` layer or geometry.

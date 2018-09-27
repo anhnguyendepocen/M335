@@ -41,7 +41,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 Write this chunk of code out in an English sentence to your grandma.
 
-```{r ddndnddd,eval=FALSE}
+```{r ddndnddd,eval=FALSE, echo=TRUE}
 read_rds(gzcon(url("https://github.com/.../Dart_Expert.RDS")))
 ```
 
@@ -67,13 +67,13 @@ bob <- tempfile()
 * Why would we want to use a `tempfile`?
 
 
-```{r bbb13a, eval=FALSE}
+```{r bbb13a, eval=FALSE, echo=TRUE}
 download("https://github.com/byuistats/.../Dart_Expert_Dow_6month_anova.xlsx", bob, mode = "wb")
 
 ```
 
 
-```{r bbb13b, eval=FALSE}
+```{r bbb13b, eval=FALSE, echo=TRUE}
 dxlsx <- read_xlsx(bob)
 ```
 
@@ -114,19 +114,22 @@ http://readxl.tidyverse.org
 ## Using read_lines() from `library(readr)`
 
 
-```{r fishface1, eval=FALSE}
+```{r fishface1, eval=FALSE, echo=TRUE}
 csvlines <- read_lines("https://github.com/byuistats/data/raw/master/Dart_Expert_Dow_6month_anova/Dart_Expert_Dow_6month_anova.csv")
 ```
 
-```{r fishface2, eval=FALSE}
+```{r fishface2, eval=FALSE, echo=TRUE}
 mdlines <- read_lines("https://byuistats.github.io/M335/class_tasks/task09_details.md")
 ```
-
 
 ## Connecting to Databases
 
 [db.rstudio.com](http://db.rstudio.com)
 
+## Excel with Excel
+
+> - http://altons.github.io/rstats/2015/02/13/quick-intro-to-xlconnect/
+> - https://github.com/miraisolutions/xlconnect
 
 # Semester Project & Class
 
@@ -134,6 +137,7 @@ mdlines <- read_lines("https://byuistats.github.io/M335/class_tasks/task09_detai
 
 Let's look at an example set of scripts that get at what I was trying to say in Task 8.
 
+* https://github.com/hathawayj/datasus
 * Why are we doing the semester project?
 * What parts of this class do you think will be relevant to your future jobs?
 * What could we do to improve the experience in the first five weeks?

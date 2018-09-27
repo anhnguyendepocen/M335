@@ -33,8 +33,7 @@ Please write your cover letter to me about the class that [uses the syllabus](sy
 
 This reading will help you complete the tasks below.
 
-* o [Medium:  Getting Data Science Jobs](https://medium.com/@datalab/how-to-break-into-the-data-science-market-f0e0b79b42f7){target='blank'}
-* o [Quora: Building Data Science Resume](https://www.quora.com/How-do-I-get-a-job-as-a-data-scientist-if-I-have-no-prior-experience-as-a-data-scientist){target='blank'}
+
 
 
 ### Tasks
@@ -51,12 +50,12 @@ ul {
 </style>
 
 
-* [ ] Complete LinkedIn, GitHub, Slack profiles that have been connected to our BYU-I data science community
-* [ ] A cover letter stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion
-* [ ] A resume that includes the skills you have learned during our projects
-* [ ] A semester task form that records your completed tasks during the semester (electronic or print)
+* [ ] Join the BYUI LinkedIn, GitHub, Slack groups and make sure your picture is placed in your profile.
+* [ ] A cover letter to me stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion
+* [ ] A current resume that includes the skills you have learned during our projects which you would submit to any future jobs
+* [ ] A semester task form that records your completed tasks during the semester (electronic)
 * [ ] Semester project submission on GitHub
-* [ ] Submit this material electronically [schedule a visit with me](https://byuistats.github.io/M335/visitme.html)
+* [ ] Submit this material electronically to your repository and [schedule a visit with me](https://byuistats.github.io/M335/visitme.html)
 
 
 

@@ -1,21 +1,6 @@
 ---
 title: "R and MATH/CS 335"
 author: J. Hathaway
-output: 
-  revealjs::revealjs_presentation:
-      lib_dir: externals
-      keep_md: true
-      incremental: true
-      theme: black
-      highlight: espresso
-      center: true
-      code_folding: hide
-      reveal_options:
-        previewLinks: true
-        mouseWheel: true
-        slideNumber: true
-        maxScale: 3
-        margin: 0
 params:
   day: 2
   ptitle: true
@@ -27,7 +12,7 @@ params:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Becoming the Critic.
+# Becoming the Critic. {data-background=#e8d725}
 
 ```{r}
 vday <- params$day - 1
@@ -39,7 +24,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 [Visualization of the Day](`r vlink`)
 
-# The skill of debugging?
+# The skill of debugging? {data-background=#e8d725}
 
 ## Fix the errors
 
@@ -53,6 +38,7 @@ ggplot(dota = mpg) +
 
 fliter(mpg, cyl = 8)
 filter(diamond, carat > 3)
+data.frame(1:10,10:1,)
 
 ```
 
@@ -78,27 +64,45 @@ filter(diamond, carat > 3)
 #> Error in filter(diamond, carat > 3) : object 'diamond' not found
 ```
 
+```{r, eval=FALSE}
+data.frame(1:10,10:1,)
+#> Error in data.frame(1:10, 10:1, ) : argument is missing, with no default
+```
+
+
+## Alan Perlis
+
+> There are two ways to write error-free programs; only the third one works.
+
+https://www.r-bloggers.com/common-r-programming-errors-faced-by-beginners/
+
 ## Manuevering in R
 
 - Make sure you note what `Alt + Shift + K` does?
 - [Socrative Team Competition](https://socrative.com/){target="blank"}
-- **Note to Class:**  I am not assigning you stuff to create busy work.  There is a deep assumption that you are coming prepared to class.  
-- **Don't get behind.**
 
-## {data-background-iframe="http://i0.kym-cdn.com/photos/images/newsfeed/001/297/214/908.jpg"}
+## Learning and Debugging in the wild
+
+> - Treating class like a team meeting
+> - The expense of training and experts in the real world
+
+![](http://i0.kym-cdn.com/photos/images/newsfeed/001/297/214/908.jpg)
 
 ## R-Lab and Stack Overflow Channel
 
-We will have and R-lab available this semester.
-
-> - TA Introduction (Dylan, McKay, Makayla)
-> - Friday R-Lab: STC 235 - 2:00 to 6:00 pm
+> - TA Introduction 
+> - R-Lab: STC 361 [https://byuistats.github.io/M335/lab.html]
 > - Online lab: Stack Overflow and Slack
->     - <https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent&utm_source=stackoverflow.com&utm_medium=dev-story&utm_campaign=signup-redirect>
->     - <https://stackoverflow.com/c/byu/join>
->     - <https://slack.com/signin> - w18dwv
+>     - <https://stackoverflow.com/c/byui/join>
 
-# Weekly Case Study
+## Slack Workspace
+
+> - <https://slack.com/signin> - byuidwv
+>    - Click *'create and account'* towards the bottom
+
+![](../images/slack_dwv.png)
+
+# Upcoming Work {data-background=#e8d725}
 
 ## Critiquing Visualizations and Slack Setup
 
@@ -110,24 +114,11 @@ Please read the case study that is due this Saturday with your group and make su
 Questions?
 </span>
 
-## Task 3: Let's git going
+## Task 2: Wax on, Wax off with Swirl
 
-> - [Task 3](file:///C:/git/github/byuistats/M335/docs/class_tasks/task03_details.html)
-> - [Google Doc](https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514)
+> - [Task 2](file:///C:/git/github/byuistats/M335/docs/class_tasks/task02_details.html)
+> - [Submit GitHub usernames](https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514)
 
-# How does data change belief?
-
-## To understand God's thoughts we must study statistics, for these are the measure of His purpose.
-
--Florence Nightingale ([Coxcomb graph](https://en.wikiquote.org/wiki/Florence_Nightingale#/media/File:Nightingale-mortality.jpg))
-
-<small>
-Her most famous graph, displayed at the top of this article, shows the number of soldier deaths per month from various causes. Each pie slice represents a different month, from April 1854 through March 1856, and each color stands for a different cause of death. It takes just a quick glance to achieve the two main takeaways: that disease, colored blue, killed far more soldiers than either "wounds" (red) or "other" (black), and that it was reduced greatly in 1855.
-</small>
-
-## What changed Britian's mind?
-
-After she completed her report, Nightingale worked hard to turn its conclusions into common knowledge, privately distributing it to influential people and writing several more reports, many of which included coxcombs. When she received push back from Army doctors, who thought sanitary measures a waste of money, she even leaked some of her charts to the press.
 
 ## Data Science Jobs
 

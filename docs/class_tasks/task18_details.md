@@ -44,7 +44,6 @@ This reading will help you complete the tasks below.
 * o [dygraphs for R](http://rstudio.github.io/dygraphs/index.html){target='blank'}
 * o [DT: An R interface to the Data Tables library](http://rstudio.github.io/DT/){target='blank'}
 * o [timekit R package](https://github.com/business-science/timekit){target='blank'}
-* o [How William Cleveland Turned Data Visualization into a Science](https://priceonomics.com/how-william-cleveland-turned-data-visualization/){target='blank'}
 
 
 ### Tasks

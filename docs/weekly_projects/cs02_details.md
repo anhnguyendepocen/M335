@@ -32,7 +32,6 @@ params:
 This reading will help you complete the tasks below.
 
 * o [Chapter 3: R for Data Science - Data visualization](http://r4ds.had.co.nz/data-visualisation.html){target='blank'}
-* o [Hans Rosling: The River of Myths](https://youtu.be/OwII-dwh-bk){target='blank'}
 
 
 ### Tasks
@@ -49,7 +48,6 @@ ul {
 </style>
 
 
-* [ ] Watch the [Hons Rosling video](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target="blank"}
 * [ ] Recreate the two graphics shown below using `gapminder` dataset from `library(gapminder)` (get them to match as closely as you can)
     * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the first plot
     * [ ] Use  `scale_y_continuous(trans = "sqrt")` to get the correct scale on the y-axis.

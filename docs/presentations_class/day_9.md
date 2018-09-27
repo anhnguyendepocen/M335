@@ -70,6 +70,9 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 Write this chunk of code out in an English sentence to your grandma.
 
 
+```r
+read_rds(gzcon(url("https://github.com/.../Dart_Expert.RDS")))
+```
 
 > - Now write out the code in piped format
 
@@ -86,9 +89,15 @@ Run the following line and look at `bob`.  *What is it?*
 
 
 
+```r
+download("https://github.com/byuistats/.../Dart_Expert_Dow_6month_anova.xlsx", bob, mode = "wb")
+```
 
 
 
+```r
+dxlsx <- read_xlsx(bob)
+```
 
 **Note that I am trying to save you from storing large data files in your Git repository.**
 
@@ -128,14 +137,23 @@ http://readxl.tidyverse.org
 
 
 
+```r
+csvlines <- read_lines("https://github.com/byuistats/data/raw/master/Dart_Expert_Dow_6month_anova/Dart_Expert_Dow_6month_anova.csv")
+```
 
 
-
+```r
+mdlines <- read_lines("https://byuistats.github.io/M335/class_tasks/task09_details.md")
+```
 
 ## Connecting to Databases
 
 [db.rstudio.com](http://db.rstudio.com)
 
+## Excel with Excel
+
+> - http://altons.github.io/rstats/2015/02/13/quick-intro-to-xlconnect/
+> - https://github.com/miraisolutions/xlconnect
 
 # Semester Project & Class
 
@@ -143,6 +161,7 @@ http://readxl.tidyverse.org
 
 Let's look at an example set of scripts that get at what I was trying to say in Task 8.
 
+* https://github.com/hathawayj/datasus
 * Why are we doing the semester project?
 * What parts of this class do you think will be relevant to your future jobs?
 * What could we do to improve the experience in the first five weeks?

@@ -41,7 +41,6 @@ ul {
 This reading will help you complete the tasks below.
 
 * o [lubridate Vignette](https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html){target='blank'}
-* o [Plotly: Time Series Blog Post](https://plotlyblog.tumblr.com/post/117105992082/time-series-graphs-eleven-stunning-ways-you-can){target='blank'}
 
 
 ### Tasks

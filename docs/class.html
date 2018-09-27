@@ -25,7 +25,9 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
 
 
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
@@ -112,6 +114,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -321,12 +326,27 @@ div.tocify {
       <a href="rpages.html">R/R-Studio Details</a>
     </li>
     <li class="divider"></li>
+    <li class="dropdown-header">Git/GitHub Helps</li>
     <li>
-      <a href="gitpages.html">Git/GitHub Details</a>
+      <a href="gitpages.html">Helps</a>
+    </li>
+    <li>
+      <a href="images/Git_workflow_diagram.png">One Image</a>
+    </li>
+    <li>
+      <a href="git_335.html">Process Details</a>
     </li>
     <li class="divider"></li>
     <li>
       <a href="compages.html">Slack &amp; Stackoverflow Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="lab.html">R Lab</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="rstudioconnect.html">RStudio Connect</a>
     </li>
     <li class="divider"></li>
     <li>
@@ -347,10 +367,14 @@ div.tocify {
       <a href="homework_schedule.html">Assignment Schedule</a>
     </li>
     <li>
-      <a href="backgrounds.html">Task Backgrounds</a>
+      <a href="tasklist.html">Semester Task List</a>
     </li>
     <li>
-      <a href="tasklist.html">Semester Task List</a>
+      <a href="teamlead.html">Team Lead Guidance</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="backgrounds.html">Task Backgrounds</a>
     </li>
     <li>
       <a href="readings.html">Weekly Reading List</a>
@@ -387,6 +411,12 @@ div.tocify {
     <li>
       <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
     </li>
+    <li>
+      <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a>
+    </li>
+    <li>
+      <a href="https://plotly-book.cpsievert.me/index.html">plotly for R</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">Supplemental Material</li>
     <li>
@@ -399,10 +429,10 @@ div.tocify {
       <a href="http://r-pkgs.had.co.nz/">R Packages</a>
     </li>
     <li>
-      <a href="https://cpsievert.github.io/plotly_book/">Plotly for R</a>
+      <a href="http://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a>
     </li>
     <li>
-      <a href="http://datathink.io">DataThink.io</a>
+      <a href="https://rstudio.github.io/crosstalk/index.html">Crosstalk: htmlwidgets add-on</a>
     </li>
   </ul>
 </li>
@@ -433,62 +463,62 @@ div.tocify {
 <div id="weeks-1-2-introduction-to-r-and-data-science" class="section level2">
 <h2>Weeks 1 &amp; 2: Introduction to R and Data Science</h2>
 <ul>
-<li><strong>4/24 (Day 1):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_1.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_1.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_1.Rmd">rmd</a></li>
-<li><strong>4/26 (Day 2):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_2.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_2.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_2.Rmd">rmd</a></li>
-<li><strong>5/1 (Day 3):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_3.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_3.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_3.Rmd">rmd</a></li>
-<li><strong>5/3 (Day 4):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_4.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_4.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_4.Rmd">rmd</a></li>
+<li><strong>9/18 (Day 1):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_1.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_1.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_1.Rmd">rmd</a></li>
+<li><strong>9/20 (Day 2):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_2.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_2.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_2.Rmd">rmd</a></li>
+<li><strong>9/25 (Day 3):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_3.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_3.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_3.Rmd">rmd</a></li>
+<li><strong>9/27 (Day 4):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_4.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_4.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_4.Rmd">rmd</a></li>
 </ul>
 </div>
 <div id="weeks-3-4-programming-in-the-tidyverse" class="section level2">
 <h2>Weeks 3 &amp; 4: Programming in the Tidyverse</h2>
 <ul>
-<li><strong>5/8 (Day 5):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_5.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_5.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_5.Rmd">rmd</a></li>
-<li><strong>5/10 (Day 6):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_6.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_6.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_6.Rmd">rmd</a></li>
-<li><strong>5/15 (Day 7):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_7.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_7.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_7.Rmd">rmd</a></li>
-<li><strong>5/17 (Day 8):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_8.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_8.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_8.Rmd">rmd</a></li>
+<li><strong>10/2 (Day 5):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_5.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_5.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_5.Rmd">rmd</a></li>
+<li><strong>10/4 (Day 6):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_6.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_6.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_6.Rmd">rmd</a></li>
+<li><strong>10/9 (Day 7):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_7.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_7.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_7.Rmd">rmd</a></li>
+<li><strong>10/11 (Day 8):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_8.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_8.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_8.Rmd">rmd</a></li>
 </ul>
 </div>
 <div id="week-5-handling-varied-data-types" class="section level2">
 <h2>Week 5: Handling Varied Data Types</h2>
 <ul>
-<li><strong>5/22 (Day 9):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_9.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_9.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_9.Rmd">rmd</a></li>
-<li><strong>5/24 (Day 10):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_10.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_10.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_10.Rmd">rmd</a></li>
+<li><strong>10/16 (Day 9):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_9.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_9.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_9.Rmd">rmd</a></li>
+<li><strong>10/18 (Day 10):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_10.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_10.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_10.Rmd">rmd</a></li>
 </ul>
 </div>
 <div id="week-6-7-characters-and-regex" class="section level2">
 <h2>Week 6 &amp; 7: Characters and RegEx</h2>
 <ul>
-<li><strong>5/29 (Day 11):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_11.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_11.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_11.Rmd">rmd</a></li>
-<li><strong>5/31 (Day 12):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_12.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_12.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_12.Rmd">rmd</a></li>
-<li><strong>6/5 (Day 13):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_13.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_13.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_13.Rmd">rmd</a></li>
-<li><strong>6/7 (Day 14):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_14.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_14.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_14.Rmd">rmd</a></li>
+<li><strong>10/23 (Day 11):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_11.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_11.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_11.Rmd">rmd</a></li>
+<li><strong>10/25 (Day 12):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_12.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_12.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_12.Rmd">rmd</a></li>
+<li><strong>10/30 (Day 13):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_13.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_13.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_13.Rmd">rmd</a></li>
+<li><strong>11/1 (Day 14):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_14.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_14.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_14.Rmd">rmd</a></li>
 </ul>
 </div>
 <div id="week-8-9-dates-and-time" class="section level2">
 <h2>Week 8 &amp; 9: Dates and Time</h2>
 <ul>
-<li><strong>6/12 (Day 15):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_15.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_15.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_15.Rmd">rmd</a></li>
-<li><strong>6/14 (Day 16):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_16.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_16.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_16.Rmd">rmd</a></li>
-<li><strong>6/19 (Day 17):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_17.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_17.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_17.Rmd">rmd</a></li>
-<li><strong>6/21 (Day 18):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_18.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_18.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_18.Rmd">rmd</a></li>
+<li><strong>11/6 (Day 15):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_15.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_15.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_15.Rmd">rmd</a></li>
+<li><strong>11/8 (Day 16):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_16.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_16.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_16.Rmd">rmd</a></li>
+<li><strong>11/13 (Day 17):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_17.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_17.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_17.Rmd">rmd</a></li>
+<li><strong>11/15 (Day 18):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_18.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_18.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_18.Rmd">rmd</a></li>
 </ul>
 </div>
 <div id="week-10-11-spatial" class="section level2">
 <h2>Week 10 &amp; 11: Spatial</h2>
 <ul>
-<li><strong>6/26 (Day 19):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_19.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_19.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_19.Rmd">rmd</a></li>
-<li><strong>6/28 (Day 20):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_20.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_20.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_20.Rmd">rmd</a></li>
-<li><strong>7/3 (Day 21):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_21.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_21.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_21.Rmd">rmd</a></li>
-<li><strong>7/5 (Day 22):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_22.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_22.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_22.Rmd">rmd</a></li>
+<li><strong>11/27 (Day 19):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_19.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_19.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_19.Rmd">rmd</a></li>
+<li><strong>11/29 (Day 20):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_20.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_20.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_20.Rmd">rmd</a></li>
+<li><strong>12/4 (Day 21):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_21.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_21.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_21.Rmd">rmd</a></li>
+<li><strong>12/6 (Day 22):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_22.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_22.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_22.Rmd">rmd</a></li>
 </ul>
 </div>
 <div id="week-12-13-finishing-project-and-semester-deliverables" class="section level2">
 <h2>Week 12 &amp; 13: Finishing (Project and Semester Deliverables)</h2>
 <ul>
-<li><strong>7/10 (Day 23):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_23.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_23.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_23.Rmd">rmd</a></li>
-<li><strong>7/12 (Day 24):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_24.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_24.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_24.Rmd">rmd</a></li>
-<li><strong>7/17 (Day 25):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_25.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_25.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_25.Rmd">rmd</a></li>
-<li><strong>7/19 (Day 26):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_26.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_26.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_26.Rmd">rmd</a></li>
+<li><strong>12/11 (Day 23):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_23.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_23.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_23.Rmd">rmd</a></li>
+<li><strong>12/13 (Day 24):</strong> <a href="https://byuistats.github.io/M335/presentations_class/day_24.html" target="blank">html</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_24.md">md</a> / <a href="https://byuistats.github.io/M335/presentations_class/day_24.Rmd">rmd</a></li>
+<li><strong>NA/NA (Day 25):</strong> <a href="NA" target="blank">html</a> / <a href="NA">md</a> / <a href="NA">rmd</a></li>
+<li><strong>NA/NA (Day 26):</strong> <a href="NA" target="blank">html</a> / <a href="NA">md</a> / <a href="NA">rmd</a></li>
 </ul>
 </div>
 <div id="random-stuff" class="section level2">

@@ -24,6 +24,10 @@ vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
 titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 ```
 
+## `r titlelink`
+
+[Visualization of the Day](`r vlink`)
+
 
 ```{r child=md_intro_format}
 
@@ -34,7 +38,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 ## A visualization and the steps
 
-> - [Gun Deaths](http://guns.periscopic.com/?year=2013)
+**Visualizing [Gun Deaths](http://guns.periscopic.com/?year=2013)**
 
 > 1. Be open to discovering new insights
 > 2. Think big but start small
@@ -63,15 +67,24 @@ Successful visualizations consider user needs, business needs and the technology
 > - [Really](http://geek-and-poke.com/geekandpoke/2013/12/3/yesterdays-regex)
 > - [Superheros](https://www.explainxkcd.com/wiki/images/7/7b/regular_expressions.png)
 
-## Class Activity (RegEx)
+# Class Activity (RegEx & Joining)
+
+## Visualizing Temples
 
 **[temple data sealing activity](https://byuistats.github.io/M335/temple_sealings.html)**
 
-> 1. Use regular expressions to fix the temple name key so they match in each data set and then join. 
-> 2. With your final data make the announcement date a date value
-> 3. Make a plot with announcement date on the x-axis and square footage on the y-axis
+**GOAL: Merge the data sets together to build a graphic about temples that incorporates time and size into the visualization.**
+
+> 1. You will need regular expressions to help you with the merge.
+> 2. With your final data parse the announcement date column to a data object
+> 3. Check your logic on your data aggregation.
 
 > - [str_replace_all()](http://stringr.tidyverse.org/reference/str_replace.html)
 > - follow [link](https://www.rdocumentation.org/packages/stringi/versions/1.1.5/topics/stringi-search-regex) to regular expression information
 > - now remove the trailing characters after Temple - [regex101](https://regex101.com/) or [regexr](https://regexr.com)
+
+```{r, include=FALSE, eval=FALSE}
+  mutate(Temple = gsub("Temple[â€¡]+", "Temple", Temple),
+         Temple = iconv(Temple, from="UTF-8", to="LATIN1"))
+```
 

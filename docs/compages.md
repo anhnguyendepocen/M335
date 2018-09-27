@@ -13,8 +13,9 @@ output:
 
 ## Slack
 
-- **[First use of Slack](https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-members):** This page will guide you on creating an account.
-- **[Slack Help Page](https://get.slack.help/hc/en-us/categories/200111606-Using-Slack):** This page has links to the help files for Slack.
+Currently, [Slack owns 88% market share](https://zapier.com/blog/slack-versus-hipchat/) in the team chat tools. It is the primary communication tools that we use in this class.  You can sign up [here.](https://byuidwv.slack.com/signup). If you would like some additional help on how to use Slack you can read [here.](https://get.slack.help/hc/en-us/articles/115004071768)
+
+<iframe width="760" height="515" src="https://www.youtube.com/embed/7sqVXngvWbI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Stack Overflow
 

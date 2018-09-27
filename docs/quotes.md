@@ -1,0 +1,19 @@
+---
+title: "Quotes"
+output: html_document
+---
+
+
+
+#### Albert Einstein
+
+The formulation of a problem is often more essential than its solution, which may be merely a matter of mathematical or experimental skill. [Found From this video](https://www.ted.com/talks/dan_meyer_math_curriculum_makeover?language=en#t-386115)
+
+#### Dan Meyer
+
+Ask yourselves, what problem have you solved, ever, that was worth solving, where you knew all of the given information in advance? Where you didn't have a surplus of information and have to filter it out, or you didn't have insufficient information and have to go find some? [Found From this video](https://www.ted.com/talks/dan_meyer_math_curriculum_makeover?language=en#t-386115)
+
+#### Rainer Maria Rilke
+
+.. try to love the questions themselves as if they were locked rooms or books written in a very foreign language. Don’t search for the answers, which could not be given to you now, because you would not be able to live them. And the point is, to live everything. Live the questions now. Perhaps then, someday far in the future, you will gradually, without even noticing it, live your way into the answer. [Found in this book](https://kbachuntitled.files.wordpress.com/2013/04/rainer-maria-rilke-letters-to-a-young-poet.pdf)
+

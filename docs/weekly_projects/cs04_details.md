@@ -34,7 +34,7 @@ While their visualizations focused on yearly averages, our client wants to creat
 
 This reading will help you complete the tasks below.
 
-* o [Effectively Communicating Numbers (pg 13-20)](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf){target='blank'}
+
 
 
 ### Tasks
@@ -51,7 +51,6 @@ ul {
 </style>
 
 
-* [ ] Read "Effectively Communicating Numbers (pg. 13-20)" and add one paragraph to your `.Rmd` summarizing what you learned.
 * [ ] Provide a brief summary of the [FiveThirtyEight article](https://fivethirtyeight.com/features/gun-deaths/){target="blank"}
     * [ ] Create one plot that provides similar insight to their visualization in the article. It does not have to look like theirs.
     * [ ] Write a short paragraph summarizing their article

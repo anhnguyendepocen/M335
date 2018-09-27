@@ -90,6 +90,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -125,13 +128,12 @@ $(document).ready(function () {
 <h2>Case Study 3: Becoming a databender</h2>
 <div id="background" class="section level3">
 <h3>Background</h3>
-<p>You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (<code>install.packages(&quot;nycflights13&quot;)</code>, <code>library(nycflights13)</code>) your manager wants you to answer the following questions;</p>
+<p>You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (<code>nycflights13::flights</code>), which you can obtain in R (<code>install.packages(&quot;nycflights13&quot;); library(nycflights13)</code>), your manager wants you to answer the following questions;</p>
 <ol style="list-style-type: decimal">
 <li>If I am leaving before noon, which two airlines do you recommend at each airport (JFK, LGA, EWR) that will have the lowest delay time at the 75th percentile?</li>
 <li>Which origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?</li>
 <li>Which destination airport is the worst (you decide on the metric for worst) airport for arrival time?</li>
 </ol>
-<p>Make sure to include one visualization that shows the complexity of the data.</p>
 <ul>
 <li><a href="../homework_schedule.html">Homework Schedule</a></li>
 </ul>
@@ -140,10 +142,8 @@ $(document).ready(function () {
 <h3>Reading</h3>
 <p>This reading will help you complete the tasks below.</p>
 <ul>
-<li>o <a href="https://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/" target="blank">What do people do with new data</a></li>
-<li>o <a href="https://guides.github.com/features/issues/" target="blank">Posting Issues on GitHub</a></li>
-<li>o <a href="https://sifterapp.com/blog/2012/08/tips-for-effectively-reporting-bugs-and-issues/" target="blank">Being a good critiquer</a></li>
 <li>o <a href="https://github.com/STAT545-UBC/Discussion/issues/387" target="blank">Example of GitHub Issue conversation</a></li>
+<li>o <a href="https://guides.github.com/features/issues/" target="blank">Posting Issues on GitHub</a></li>
 <li>o <a href="https://github.com/tidyverse/reprex#what-is-a-reprex" target="blank">reprex R Package</a></li>
 </ul>
 </div>
@@ -160,6 +160,7 @@ ul {
 </style>
 <ul>
 <li>[ ] Address at least two of the three questions in the background description (if you have time try to tackle all three)</li>
+<li>[ ] Make sure to include one or more visualization that shows the complexity of the data.</li>
 <li>[ ] Create one <code>.rmd</code> file that has your report
 <ul>
 <li>[ ] Have a section for each question</li>

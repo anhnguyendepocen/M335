@@ -25,7 +25,9 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
 
 
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
@@ -112,6 +114,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -321,12 +326,27 @@ div.tocify {
       <a href="rpages.html">R/R-Studio Details</a>
     </li>
     <li class="divider"></li>
+    <li class="dropdown-header">Git/GitHub Helps</li>
     <li>
-      <a href="gitpages.html">Git/GitHub Details</a>
+      <a href="gitpages.html">Helps</a>
+    </li>
+    <li>
+      <a href="images/Git_workflow_diagram.png">One Image</a>
+    </li>
+    <li>
+      <a href="git_335.html">Process Details</a>
     </li>
     <li class="divider"></li>
     <li>
       <a href="compages.html">Slack &amp; Stackoverflow Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="lab.html">R Lab</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="rstudioconnect.html">RStudio Connect</a>
     </li>
     <li class="divider"></li>
     <li>
@@ -347,10 +367,14 @@ div.tocify {
       <a href="homework_schedule.html">Assignment Schedule</a>
     </li>
     <li>
-      <a href="backgrounds.html">Task Backgrounds</a>
+      <a href="tasklist.html">Semester Task List</a>
     </li>
     <li>
-      <a href="tasklist.html">Semester Task List</a>
+      <a href="teamlead.html">Team Lead Guidance</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="backgrounds.html">Task Backgrounds</a>
     </li>
     <li>
       <a href="readings.html">Weekly Reading List</a>
@@ -387,6 +411,12 @@ div.tocify {
     <li>
       <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
     </li>
+    <li>
+      <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a>
+    </li>
+    <li>
+      <a href="https://plotly-book.cpsievert.me/index.html">plotly for R</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">Supplemental Material</li>
     <li>
@@ -399,10 +429,10 @@ div.tocify {
       <a href="http://r-pkgs.had.co.nz/">R Packages</a>
     </li>
     <li>
-      <a href="https://cpsievert.github.io/plotly_book/">Plotly for R</a>
+      <a href="http://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a>
     </li>
     <li>
-      <a href="http://datathink.io">DataThink.io</a>
+      <a href="https://rstudio.github.io/crosstalk/index.html">Crosstalk: htmlwidgets add-on</a>
     </li>
   </ul>
 </li>
@@ -484,50 +514,68 @@ y</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <p>Not all functions have (or require) arguments:</p>
 <pre class="r"><code>date()</code></pre>
-<pre><code>## [1] &quot;Fri Apr 20 13:07:09 2018&quot;</code></pre>
+<pre><code>## [1] &quot;Thu Sep 27 08:52:12 2018&quot;</code></pre>
 <p>Now look at your workspace – in the upper right pane. The workspace is where user-defined objects accumulate. You can also get a listing of these objects with commands:</p>
 <pre class="r"><code>objects()</code></pre>
-<pre><code>##  [1] &quot;background.title&quot;           &quot;best_in_class&quot;             
-##  [3] &quot;bob&quot;                        &quot;candidates&quot;                
-##  [5] &quot;case_studies&quot;               &quot;casename_new&quot;              
-##  [7] &quot;casename_old&quot;               &quot;cases&quot;                     
-##  [9] &quot;class_tasks&quot;                &quot;csn&quot;                       
-## [11] &quot;cso&quot;                        &quot;fname&quot;                     
-## [13] &quot;gg_base&quot;                    &quot;hdwd&quot;                      
-## [15] &quot;i&quot;                          &quot;jenny_rocks&quot;               
-## [17] &quot;labels&quot;                     &quot;link_new&quot;                  
-## [19] &quot;link_old&quot;                   &quot;link_task&quot;                 
-## [21] &quot;md_bullet&quot;                  &quot;md_intro_format&quot;           
-## [23] &quot;md_link&quot;                    &quot;page_image&quot;                
-## [25] &quot;presentations&quot;              &quot;readings&quot;                  
-## [27] &quot;taskname&quot;                   &quot;tasks&quot;                     
-## [29] &quot;text&quot;                       &quot;this_is_a_really_long_name&quot;
-## [31] &quot;title.text&quot;                 &quot;titlelink&quot;                 
-## [33] &quot;totals&quot;                     &quot;vday&quot;                      
-## [35] &quot;vlink&quot;                      &quot;weeks&quot;                     
-## [37] &quot;x&quot;                          &quot;y&quot;                         
-## [39] &quot;yo&quot;</code></pre>
+<pre><code>##  [1] &quot;a&quot;                          &quot;avg_x&quot;                     
+##  [3] &quot;b&quot;                          &quot;background.title&quot;          
+##  [5] &quot;body_lines&quot;                 &quot;case_studies&quot;              
+##  [7] &quot;cases&quot;                      &quot;check_day&quot;                 
+##  [9] &quot;dates_all&quot;                  &quot;dates_class&quot;               
+## [11] &quot;dates_due&quot;                  &quot;day_map&quot;                   
+## [13] &quot;day_seq&quot;                    &quot;day_seq_labels&quot;            
+## [15] &quot;dayone_seq&quot;                 &quot;daytwo_seq&quot;                
+## [17] &quot;fday_name&quot;                  &quot;first_day&quot;                 
+## [19] &quot;first_week&quot;                 &quot;fname&quot;                     
+## [21] &quot;gapminder&quot;                  &quot;gapminder.continent&quot;       
+## [23] &quot;holidays&quot;                   &quot;i&quot;                         
+## [25] &quot;jenny_rocks&quot;                &quot;last_day&quot;                  
+## [27] &quot;last_day_finals&quot;            &quot;last_week&quot;                 
+## [29] &quot;lesson_links&quot;               &quot;links&quot;                     
+## [31] &quot;md_bullet&quot;                  &quot;md_link&quot;                   
+## [33] &quot;monday_seq&quot;                 &quot;no_monday&quot;                 
+## [35] &quot;no_saturday&quot;                &quot;numbers&quot;                   
+## [37] &quot;params&quot;                     &quot;pioneer&quot;                   
+## [39] &quot;pr&quot;                         &quot;presentations&quot;             
+## [41] &quot;reading_links&quot;              &quot;reading_seq&quot;               
+## [43] &quot;readings&quot;                   &quot;readings_due&quot;              
+## [45] &quot;saturday_seq&quot;               &quot;sig_sq&quot;                    
+## [47] &quot;task_due&quot;                   &quot;tasks&quot;                     
+## [49] &quot;text&quot;                       &quot;thanksgiving&quot;              
+## [51] &quot;thanksgiving_a&quot;             &quot;thanksgiving_b&quot;            
+## [53] &quot;this_is_a_really_long_name&quot; &quot;title.text&quot;                
+## [55] &quot;titles&quot;                     &quot;x&quot;                         
+## [57] &quot;y&quot;                          &quot;yo&quot;</code></pre>
 <pre class="r"><code>ls()</code></pre>
-<pre><code>##  [1] &quot;background.title&quot;           &quot;best_in_class&quot;             
-##  [3] &quot;bob&quot;                        &quot;candidates&quot;                
-##  [5] &quot;case_studies&quot;               &quot;casename_new&quot;              
-##  [7] &quot;casename_old&quot;               &quot;cases&quot;                     
-##  [9] &quot;class_tasks&quot;                &quot;csn&quot;                       
-## [11] &quot;cso&quot;                        &quot;fname&quot;                     
-## [13] &quot;gg_base&quot;                    &quot;hdwd&quot;                      
-## [15] &quot;i&quot;                          &quot;jenny_rocks&quot;               
-## [17] &quot;labels&quot;                     &quot;link_new&quot;                  
-## [19] &quot;link_old&quot;                   &quot;link_task&quot;                 
-## [21] &quot;md_bullet&quot;                  &quot;md_intro_format&quot;           
-## [23] &quot;md_link&quot;                    &quot;page_image&quot;                
-## [25] &quot;presentations&quot;              &quot;readings&quot;                  
-## [27] &quot;taskname&quot;                   &quot;tasks&quot;                     
-## [29] &quot;text&quot;                       &quot;this_is_a_really_long_name&quot;
-## [31] &quot;title.text&quot;                 &quot;titlelink&quot;                 
-## [33] &quot;totals&quot;                     &quot;vday&quot;                      
-## [35] &quot;vlink&quot;                      &quot;weeks&quot;                     
-## [37] &quot;x&quot;                          &quot;y&quot;                         
-## [39] &quot;yo&quot;</code></pre>
+<pre><code>##  [1] &quot;a&quot;                          &quot;avg_x&quot;                     
+##  [3] &quot;b&quot;                          &quot;background.title&quot;          
+##  [5] &quot;body_lines&quot;                 &quot;case_studies&quot;              
+##  [7] &quot;cases&quot;                      &quot;check_day&quot;                 
+##  [9] &quot;dates_all&quot;                  &quot;dates_class&quot;               
+## [11] &quot;dates_due&quot;                  &quot;day_map&quot;                   
+## [13] &quot;day_seq&quot;                    &quot;day_seq_labels&quot;            
+## [15] &quot;dayone_seq&quot;                 &quot;daytwo_seq&quot;                
+## [17] &quot;fday_name&quot;                  &quot;first_day&quot;                 
+## [19] &quot;first_week&quot;                 &quot;fname&quot;                     
+## [21] &quot;gapminder&quot;                  &quot;gapminder.continent&quot;       
+## [23] &quot;holidays&quot;                   &quot;i&quot;                         
+## [25] &quot;jenny_rocks&quot;                &quot;last_day&quot;                  
+## [27] &quot;last_day_finals&quot;            &quot;last_week&quot;                 
+## [29] &quot;lesson_links&quot;               &quot;links&quot;                     
+## [31] &quot;md_bullet&quot;                  &quot;md_link&quot;                   
+## [33] &quot;monday_seq&quot;                 &quot;no_monday&quot;                 
+## [35] &quot;no_saturday&quot;                &quot;numbers&quot;                   
+## [37] &quot;params&quot;                     &quot;pioneer&quot;                   
+## [39] &quot;pr&quot;                         &quot;presentations&quot;             
+## [41] &quot;reading_links&quot;              &quot;reading_seq&quot;               
+## [43] &quot;readings&quot;                   &quot;readings_due&quot;              
+## [45] &quot;saturday_seq&quot;               &quot;sig_sq&quot;                    
+## [47] &quot;task_due&quot;                   &quot;tasks&quot;                     
+## [49] &quot;text&quot;                       &quot;thanksgiving&quot;              
+## [51] &quot;thanksgiving_a&quot;             &quot;thanksgiving_b&quot;            
+## [53] &quot;this_is_a_really_long_name&quot; &quot;title.text&quot;                
+## [55] &quot;titles&quot;                     &quot;x&quot;                         
+## [57] &quot;y&quot;                          &quot;yo&quot;</code></pre>
 <p>If you want to remove the object named <code>y</code>, you can do this</p>
 <pre class="r"><code>rm(y)</code></pre>
 <p>To remove everything:</p>
@@ -592,11 +640,11 @@ sig_sq &lt;- 0.5
 x &lt;- runif(40)
 y &lt;- a + b * x + rnorm(40, sd = sqrt(sig_sq))
 (avg_x &lt;- mean(x))</code></pre>
-<pre><code>## [1] 0.4315651</code></pre>
+<pre><code>## [1] 0.5306141</code></pre>
 <pre class="r"><code>write(avg_x, &quot;avg_x.txt&quot;)
 plot(x, y)
 abline(a, b, col = &quot;purple&quot;)</code></pre>
-<p><img src="block002_hello-r-workspace-wd-project_files/figure-html/toy-line-1.png" width="672" /></p>
+<p><img src="block002_hello-r-workspace-wd-project_files/figure-html/toy-line-1.png" /><!-- --></p>
 <pre class="r"><code>dev.print(pdf, &quot;toy_line_plot.pdf&quot;)</code></pre>
 <pre><code>## quartz_off_screen 
 ##                 2</code></pre>

@@ -42,16 +42,15 @@ ul {
 
 This reading will help you complete the tasks below.
 
+* o [John Rauser Talk](https://youtu.be/fSgEeI2Xpdc){target='blank'}
 * o [Chapter 1:  R for Data Scientists](http://r4ds.had.co.nz/index.html){target='blank'}
 * o [R and R-Studio Practice](https://byuistats.github.io/M335/r_help.html){target='blank'}
-* o [John Rauser Talk](https://youtu.be/fSgEeI2Xpdc){target='blank'}
-* o [Effectively Communicating Numbers (pg 1-13)](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf){target='blank'}
 
 
 ### Tasks
 
 
-* [ ] Read the [course sylabus](https://byuistats.github.io/M335/syllabus.html) and make sure you understand our class routine and grading
+* [ ] Read the [course syllabus](https://byuistats.github.io/M335/syllabus.html) and make sure you understand our class routine and grading
 * [ ] Get R and R-Studio running on your computer
     * [ ] Install the swirl package `install.packages("swirl")`
     * [ ] Use `library(swirl)` and follow directions to get 'R Programming: The basics of programming in R' course loaded

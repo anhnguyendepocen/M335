@@ -16,6 +16,8 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
 ```{r include=FALSE}
+#devtools::install_github("rasmusab/fullcalendar")
+
 library(fullcalendar)
 
 source("../scripts/build_dates.R")
@@ -51,6 +53,10 @@ day_seq <- task_due
 ```{r cs01, ref.label="cs-01", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
+
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task01, ref.label="task-01", results="asis", echo=FALSE}
@@ -68,6 +74,10 @@ day_seq <- task_due
 
 ```{r cs02, ref.label="cs-02", results="asis", echo=FALSE}
 ```
+
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
 
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
@@ -88,6 +98,10 @@ day_seq <- task_due
 ```{r cs03, ref.label="cs-03", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
+
 
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
@@ -107,6 +121,9 @@ day_seq <- task_due
 ```{r cs04, ref.label="cs-04", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
 
 
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".",pr*2 - 1, ")" )` 
@@ -127,6 +144,9 @@ day_seq <- task_due
 ```{r cs05, ref.label="cs-05", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
 
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
@@ -149,6 +169,9 @@ day_seq <- task_due
 ```{r cs06, ref.label="cs-06", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
 
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
@@ -168,6 +191,9 @@ day_seq <- task_due
 ```{r cs07, ref.label="cs-07", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
 
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
@@ -188,6 +214,9 @@ day_seq <- task_due
 ```{r cs08, ref.label="cs-08", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
 
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
@@ -208,6 +237,10 @@ day_seq <- task_due
 ```{r cs09, ref.label="cs-09", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
+
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task17, ref.label="task-17", results="asis", echo=FALSE}
@@ -227,6 +260,9 @@ day_seq <- task_due
 ```{r cs10, ref.label="cs-10", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
 
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
@@ -263,6 +299,10 @@ day_seq <- task_due
 ```{r cs11, ref.label="cs-11", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
+
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task21, ref.label="task-21", results="asis", echo=FALSE}
@@ -283,11 +323,14 @@ day_seq <- task_due
 ```{r cs12, ref.label="cs-12", results="asis", echo=FALSE}
 ```
 
+### `r paste(month(readings_due$start[pr]), mday(readings_due$start[pr]), sep = "/")` Weekly Readings
+
+Complete the 'being' and 'doing' [readings](`r paste("readings.html#week_", pr, "_(", readings_due$start[pr], "))", sep = "")`. Be prepared for a class discussion on the 'being' readings.
+
 ### `r paste0(month(day_seq[vals[1]]), "/", mday((day_seq[vals[1]])), " (",pr,".", pr*2 - 1, ")" )` 
 
 ```{r task23, ref.label="task-23", results="asis", echo=FALSE}
 ```
-
 
 ### `r paste0(month(day_seq[vals[2]]), "/", mday((day_seq[vals[2]])), " (", pr, ".", pr*2, ")")`
 

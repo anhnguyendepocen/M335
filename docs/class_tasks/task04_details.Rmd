@@ -15,11 +15,19 @@ output:
 
 ```
 
+-------
 
-------
+**Additional Links**
 
-**Additional Information**
-   
-* [Hadley dplyr motivation](http://datascience.la/hadley-wickham-presents-dplyr-at-user-2014/){target="blank"}   
-* [Hadley Introduces dplyr](http://datascience.la/hadley-wickhams-dplyr-tutorial-at-user-2014-part-1/){target="blank"}   
-* [Hadley dplyr part 2](https://www.youtube.com/watch?v=Ue08LVuk790&t=0s){target="blank"}   
+* o [Chapter 4: Happy Git and Github for the useR - Installation](http://happygitwithr.com/installation-pain.html){target="blank"}
+* o [Chapter 5: Happy Git and Github for the useR - GitHub](http://happygitwithr.com/github-acct.html){target="blank"}
+* o [Chapter 7: Happy Git and Github for the useR - Install Git](http://happygitwithr.com/install-git.html){target="blank"}
+* o [Chapter 8: Happy Git and Github for the useR - Using Git](http://happygitwithr.com/hello-git.html){target="blank"}
+* o [Chapter 10: Happy Git and Github for the useR - Version Control](http://happygitwithr.com/push-pull-github.html){target="blank"}
+* o [git](http://nyuccl.org/pages/GitTutorial/){target="blank"}
+* o [githug](https://github.com/jennybc/githug){target="blank"}
+* o [Git for R users](http://haven.tidyverse.org/){target="blank"}
+* o [Getting Ready](https://byui-cs.github.io/CS246/week-04/prepare.html){target="blank"}
+* o [Intro Tutorial](https://try.github.io/levels/1/challenges/1){target="blank"}
+* o [Advanced Tutorial](http://learngitbranching.js.org/){target="blank"}
+

@@ -11,6 +11,43 @@
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
 
@@ -60,7 +97,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -469,12 +505,40 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><a href="https://byuistats.github.io/M335/class_tasks/task08_details.html">Task 8</a></li>
 </ul>
 </section></section>
-<section><section id="review-1" class="titleslide slide level1"><h1>Review</h1></section><section id="review-timelines-and-course-deliverables" class="slide level2">
-<h2>Review Timelines and Course Deliverables</h2>
+<section><section id="class-coding-challenge" class="titleslide slide level1"><h1>Class Coding Challenge</h1></section><section id="art-class" class="slide level2">
+<h2>Art Class</h2>
 <ul>
-<li><a href="https://byuistats.github.io/M335/tasklist.html">Semester Leadership and Project</a></li>
-<li><a href="https://byuistats.github.io/M335/syllabus.html#grading_scale">Semester Competencies</a></li>
+<li><a href="images/sculpt.jpg" target="blank">What do you see?</a></li>
+<li><a href="images/sculpt_wide.jpg" target="blank">What about here?</a></li>
 </ul>
+</section><section id="the-wilderness-of-data" class="slide level2">
+<h2>The Wilderness of Data</h2>
+<iframe width="860" height="515" src="https://www.youtube.com/embed/fTgvdTftXfI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</section><section id="rules" class="slide level2">
+<h2>Rules</h2>
+<p>Today we are going to attempt a group <code>data art</code> project. Below is our data file. Each of you is going to work on making a piece of data art during class today.</p>
+<p><strong>Rules</strong></p>
+<ol type="1">
+<li class="fragment">Set the tables in a round circle.</li>
+<li class="fragment">Count off (1,2,1,2).
+<ol type="a">
+<li class="fragment">The ones will stay in their seats during the period.</li>
+<li class="fragment">The twos will rotate one position every 10 minutes.</li>
+</ol></li>
+<li class="fragment">You need to submit your piece of art in one hour (push it to your repository). <strong>Don’t push your data</strong></li>
+</ol>
+</section><section id="data" class="slide level2">
+<h2>Data</h2>
+<p>To mimic an art class we will all have the same data on which to build our art.</p>
+<p><strong>Data</strong></p>
+<p>This data has all the 2015 births in Brazil. We are trying to make data discovery art. We are in the exploratory stage and we need to get ready for a conversation with doctors from Brazil. They have hinted that they would like to know something about birth weights and variables that could describe changes in birth weights.</p>
+<ul>
+<li>Download the 2015 csv data from here - <a href="https://www.amazon.com/clouddrive/share/1zU837kCeynkoBiHUzEkKYaFS30McMQVTu5UZ5aYXy7" class="uri">https://www.amazon.com/clouddrive/share/1zU837kCeynkoBiHUzEkKYaFS30McMQVTu5UZ5aYXy7</a></li>
+<li>Download the 2011 rds data from here - <a href="https://www.amazon.com/clouddrive/share/GQNxrBVeJQETv7gMNaMxT3iLGkLng7QycSph710wunP" class="uri">https://www.amazon.com/clouddrive/share/GQNxrBVeJQETv7gMNaMxT3iLGkLng7QycSph710wunP</a></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dat15 &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://query.data.world/s/uw2hhwji6dwz3637unq3twp7z4chl5&quot;</span>)
+dat11 &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;https://query.data.world/s/4sbxrxxvn5fdf5xd7lmlcla2rmzfub&quot;</span>)</code></pre></div>
 </section></section>
 <section><section id="vectors" class="titleslide slide level1"><h1>Vectors</h1></section><section id="quotes-from-the-chapter" class="slide level2">
 <h2>Quotes from the chapter</h2>

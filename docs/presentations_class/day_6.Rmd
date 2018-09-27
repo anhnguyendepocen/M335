@@ -58,7 +58,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 Write this chunk of code out in an English sentence to your grandma.
 
-```{r bob, evel=FALSE}
+```{r bob, evel=FALSE, echo=TRUE}
 best_in_class <- mpg %>%
   group_by(class) %>%
   filter(row_number(desc(hwy)) == 1)
@@ -98,15 +98,12 @@ Use this code - `money <- c("4,554,25", "$45", "8025.33cents", "288f45")`
 
 
 > 1. Run this line of code below
-
-```{r vle3, eval=FALSE}
-challenge <- read_csv(readr_example("challenge.csv"))
-```
-
 > 2. Look at the errors (`problems(challenge)`), the `head()`, and `tail()` of your `challenge` object.  What formats should they be?
-
 > 3. Now review [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and fix the read in.
 
+```{r vle3, eval=FALSE, echo=TRUE}
+challenge <- read_csv(readr_example("challenge.csv"))
+```
 
 
 ## Scripts
@@ -164,7 +161,7 @@ ggplot(mpg, aes(displ, hwy)) +
 
 ## My Code Solution
 
-```{r newname_code, eval=FALSE}
+```{r newname_code, eval=FALSE, echo=TRUE}
 library(ggrepel)
 library(viridis)
 
@@ -197,4 +194,25 @@ Data can get complicated very fast. How do we provide depth of variability under
 
 Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
 
-> * [link to last presentation](presentations_class/day_5.html)
+> * [link to last presentation](day_5.html#/displaying-distributions-of-multiple-groups-for-decision-making)
+
+## Next Challenge
+
+```{r newname_code2, echo=FALSE}
+library(ggbeeswarm)
+library(lvplot)
+
+mpg %>%
+ggplot(aes(x = class, y = hwy)) +
+  geom_violin() +
+  labs(x = "Class", y = "Miles per gallon (highway)") +
+  theme_bw()
+
+mpg %>%
+ggplot(aes(x = class, y = hwy, color = factor(round(displ)))) +
+  geom_quasirandom() +
+  scale_color_viridis_d() +
+  labs(x = "Class", y = "Miles per gallon (highway)", color = "Displacement") +
+  theme_bw() + theme(legend.position = "bottom")
+
+```

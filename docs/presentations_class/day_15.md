@@ -94,14 +94,29 @@ In 2005, we want to know how much electricity is being consumed at 4:00 pm on Mo
 
 **Open R-Studio and Convert the following strings to date objects.**
 
+Try `ymd()`, `mdy()`, `dmy()`, `ydm()`
+
 > - "January 21st, 2017"
 > - "2012-01-01"
 > - "March 2016 - 23"
 
 ## The Creators (part 2)
 
+Try `make_date()` and `make_datetime()`.
 
 
+```r
+library(tidyverse)
+library(lubridate)
+date_cols <- tibble(month = c(1, 3, 7), 
+                    day = c(23, 18, 1), 
+                    year = c(2017, 2017, 2016))
+
+# Will this one work in make_date()?
+date_cols <- tibble(month = c("Jaunary", "March", "July"), 
+                    day = c(23, 18, 1), 
+                    year = c(2017, 2017, 2016))
+```
 
 
 ## The Formaters
@@ -122,12 +137,14 @@ You can pull out individual parts of the date with the accessor functions; year(
 ## The Changers (2)
 
 **Tackle the Following**
-   
+
+
+
+```r
+jan31 <- ymd("2013-01-31")
+```
+
 - Add one month to "January 31st".  
-   
-
-
-   
 - Add 27 hours and 15 minutes to "January 31st, 2013 06:35:27" 
 - https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html
     - Use `Sys.timezone(location = TRUE)` or `OlsonNames()` to see a list of timezones

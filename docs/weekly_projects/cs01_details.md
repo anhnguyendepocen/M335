@@ -61,7 +61,7 @@ ul {
     * [ ] Write a one paragraph critique of each visualization
     * [ ] Add the R code below to your `.Rmd` file
     * [ ] Knit the file to `.html` and keep the `.md` file as well
-* [ ] Create an account on [slack](https://join.slack.com/t/byuidwv/signup?x=x-339637048932-339197858336){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
+* [ ] Create an account on [slack](https://byuidwv.slack.com/signup){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
     * [ ] Upload your intermediary `.md` file to the general channel in our Slack group
 
 

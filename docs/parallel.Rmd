@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Loading the Library and Cores
 
-The `library(parallel)` package is the standard way to use all of your cores.  The package comes installed with your R. I used the predecessor packages called `library(snow)` and `library(snowfall)`.  They are still available and may be good options. In fact, I may go to them instead of `library(parallel)` even now.
+The `library(parallel)` package is the typical way to use all of your cores with R.  The package comes installed with your R. I used the predecessor packages called `library(snow)` and `library(snowfall)`.  They are still available and may be good options. In fact, I may go to them instead of `library(parallel)` even now. More recently, the `library(furrr)` package has really impressed me.  I have created a [parallel (no pun intended) example](parallel_furrr.html) using the `library(purrr)` package.
 
 ```{r, eval=FALSE}
 library(parallel)
@@ -53,14 +53,14 @@ ff <- function(x){
     i
   }
   
-  ggplot() + geom_point(x = x^3)
+  ggplot() + geom_point(x = permits[x, "value"])
   }
 
 clusterExport(cl, varlist = c("a", "ff", "permits"))
 
 ```
 
-Using the `clusterExport()` is important.  We want to push the things we need but we should be ?e to not push to many things as each process is taking memory.  The [Win-Vector Blog](http://www.win-vector.com/blog/2016/01/parallel-computing-in-r/) showed this video to depict what tends to happen.
+Using the `clusterExport()` is important.  We want to push the things we need but we should not push to many things as each process is taking memory.  The [Win-Vector Blog](http://www.win-vector.com/blog/2016/01/parallel-computing-in-r/) showed this video to depict what tends to happen.
 
 <iframe width="760" height="515" src="https://www.youtube.com/embed/7u4leYOhKIs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 

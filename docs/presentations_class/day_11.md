@@ -20,6 +20,9 @@ vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
 titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 ```
 
+## {data-background-iframe="http://www.perceptualedge.com/example10.php"}
+
+[Visualization of the Day](http://www.perceptualedge.com/example10.php)
 
 
 
@@ -144,13 +147,6 @@ full_join(x, y, by = "z")  | SELECT * FROM x FULL OUTER JOIN y USING (z)
 
 > - Note that "INNER" and "OUTER" are optional, and often omitted.
 > - SQL supports a wider  range of join types than dplyr
-
-## Class Coding Activity {data-background-iframe="http://ldschurchtemples.org/"}
-
-<big><big>
-**[temple data sealing activity](https://byuistats.github.io/M335/temple_sealings.html)**
-</big></big>
-
 
 # Data Ethics (The truthful Art by Alberto Cairo)
 

@@ -11,6 +11,43 @@
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
 
@@ -60,7 +97,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -486,6 +522,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section><section id="new-functions" class="titleslide slide level1"><h1>New functions</h1></section><section id="review-the-reading" class="slide level2">
 <h2>Review the reading</h2>
 <p>Write this chunk of code out in an English sentence to your grandma.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">best_in_class &lt;-<span class="st"> </span>mpg <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(class) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="kw">row_number</span>(<span class="kw">desc</span>(hwy)) <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)</code></pre></div>
 </section><section id="data-formats" class="slide level2">
 <h2>Data formats</h2>
 <p>If there is a data format that exists and is used, then there is a way to import that data into R. We will learn how to handle the basic tabular formats. The packages <code>library(readr)</code>, <code>library(readxls)</code>, and <code>library(haven)</code> will provide most of the functionality we need.</p>
@@ -522,13 +561,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2>Using <code>read_csv()</code> with parsers</h2>
 <ol type="1">
 <li>Run this line of code below</li>
-</ol>
-<ol start="2" type="1">
 <li>Look at the errors (<code>problems(challenge)</code>), the <code>head()</code>, and <code>tail()</code> of your <code>challenge</code> object. What formats should they be?</li>
-</ol>
-<ol start="3" type="1">
 <li>Now review <a href="http://r4ds.had.co.nz/data-import.html#problems">11.4.2 of our textbook</a> and fix the read in.</li>
 </ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">challenge &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">readr_example</span>(<span class="st">&quot;challenge.csv&quot;</span>))</code></pre></div>
 </section><section id="scripts" class="slide level2">
 <h2>Scripts</h2>
 <p>Here are a few questions. Discuss each one with your table and decide which file type to use - <code>.md</code>, <code>.r</code> or <code>.rmd</code>. Then discuss the reasons for that decision.</p>
@@ -562,6 +598,23 @@ Use the <a href="http://r4ds.had.co.nz/graphics-for-communication.html">code fro
 <p><img src="day_6_files/figure-revealjs/nnn2-1.png" /></p>
 </section><section id="my-code-solution" class="slide level2">
 <h2>My Code Solution</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggrepel)
+<span class="kw">library</span>(viridis)
+
+best_in_class &lt;-<span class="st"> </span>mpg <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(class) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="kw">row_number</span>(<span class="kw">desc</span>(hwy)) <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)
+
+<span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(displ, hwy)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">colour =</span> class), <span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">data =</span> best_in_class, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_text_repel</span>(<span class="kw">aes</span>(<span class="dt">label =</span> model, <span class="dt">colour =</span> class), 
+                  <span class="dt">data =</span> best_in_class, <span class="dt">show.legend =</span> <span class="ot">FALSE</span>, 
+                  <span class="dt">nudge_x =</span> <span class="op">-</span><span class="dv">1</span>, <span class="dt">nudge_y =</span> <span class="op">-</span><span class="dv">2</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">panel.grid.minor =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_color_viridis</span>(<span class="dt">discrete =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Engine displacement&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Miles per gallon (highway)&quot;</span>, 
+       <span class="dt">color =</span> <span class="st">&quot;Vehicle type&quot;</span>)</code></pre></div>
 </section></section>
 <section><section id="displaying-multiple-distributions" class="titleslide slide level1"><h1>Displaying multiple distributions</h1></section><section id="clarity-vs.complication" class="slide level2">
 <h2>Clarity vs. Complication</h2>
@@ -573,8 +626,11 @@ Use the <a href="http://r4ds.had.co.nz/graphics-for-communication.html">code fro
 </ul>
 <p>Another package that makes flipping the axes easier in ggplot – <a href="https://github.com/lionel-/ggstance">rotating axes</a></p>
 <ul>
-<li><a href="presentations_class/day_5.html">link to last presentation</a></li>
+<li><a href="day_5.html#/displaying-distributions-of-multiple-groups-for-decision-making">link to last presentation</a></li>
 </ul>
+</section><section id="next-challenge" class="slide level2">
+<h2>Next Challenge</h2>
+<p><img src="day_6_files/figure-revealjs/newname_code2-1.png" /><img src="day_6_files/figure-revealjs/newname_code2-2.png" /></p>
 </section></section>
     </div>
   </div>

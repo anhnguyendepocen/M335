@@ -11,6 +11,43 @@
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
 
@@ -60,7 +97,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -479,6 +515,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section><section id="importing-data" class="titleslide slide level1"><h1>Importing Data</h1></section><section id="board-activity" class="slide level2">
 <h2>Board Activity</h2>
 <p>Write this chunk of code out in an English sentence to your grandma.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read_rds</span>(<span class="kw">gzcon</span>(<span class="kw">url</span>(<span class="st">&quot;https://github.com/.../Dart_Expert.RDS&quot;</span>)))</code></pre></div>
 <ul>
 <li>Now write out the code in piped format</li>
 </ul>
@@ -488,6 +525,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li class="fragment">Why would we want to use a <code>tempfile</code>?</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">download</span>(<span class="st">&quot;https://github.com/byuistats/.../Dart_Expert_Dow_6month_anova.xlsx&quot;</span>, bob, <span class="dt">mode =</span> <span class="st">&quot;wb&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dxlsx &lt;-<span class="st"> </span><span class="kw">read_xlsx</span>(bob)</code></pre></div>
 <p><strong>Note that I am trying to save you from storing large data files in your Git repository.</strong></p>
 </section></section>
 <section><section id="the-data-import-packages" class="titleslide slide level1"><h1>The data import packages</h1></section><section id="haven-package" class="slide level2">
@@ -510,14 +549,23 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section></section>
 <section><section id="reading-in-ascii-data-as-text" class="titleslide slide level1"><h1>Reading in ASCII data as text</h1></section><section id="using-read_lines-from-libraryreadr" class="slide level2">
 <h2>Using read_lines() from <code>library(readr)</code></h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">csvlines &lt;-<span class="st"> </span><span class="kw">read_lines</span>(<span class="st">&quot;https://github.com/byuistats/data/raw/master/Dart_Expert_Dow_6month_anova/Dart_Expert_Dow_6month_anova.csv&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mdlines &lt;-<span class="st"> </span><span class="kw">read_lines</span>(<span class="st">&quot;https://byuistats.github.io/M335/class_tasks/task09_details.md&quot;</span>)</code></pre></div>
 </section><section id="connecting-to-databases" class="slide level2">
 <h2>Connecting to Databases</h2>
 <p><a href="http://db.rstudio.com">db.rstudio.com</a></p>
+</section><section id="excel-with-excel" class="slide level2">
+<h2>Excel with Excel</h2>
+<ul>
+<li><a href="http://altons.github.io/rstats/2015/02/13/quick-intro-to-xlconnect/" class="uri">http://altons.github.io/rstats/2015/02/13/quick-intro-to-xlconnect/</a></li>
+<li><a href="https://github.com/miraisolutions/xlconnect" class="uri">https://github.com/miraisolutions/xlconnect</a></li>
+</ul>
 </section></section>
 <section><section id="semester-project-class" class="titleslide slide level1"><h1>Semester Project &amp; Class</h1></section><section id="discuss-example-code" class="slide level2">
 <h2>Discuss Example Code</h2>
 <p>Let’s look at an example set of scripts that get at what I was trying to say in Task 8.</p>
 <ul>
+<li class="fragment"><a href="https://github.com/hathawayj/datasus" class="uri">https://github.com/hathawayj/datasus</a></li>
 <li class="fragment">Why are we doing the semester project?</li>
 <li class="fragment">What parts of this class do you think will be relevant to your future jobs?</li>
 <li class="fragment">What could we do to improve the experience in the first five weeks?</li>

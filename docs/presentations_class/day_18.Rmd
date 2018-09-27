@@ -20,6 +20,8 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
 ```
 
+
+ 
 # Visual Perception
 
 ## Rauser on Cholera
@@ -36,23 +38,23 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
 ## Great Quotes
 
-- Correlation does not imply causation... The most popular defense of tiny minds in the face of uncomfortable evidence.
-- You are rewarded for finding answers to the "that's funny" statements.
+> Correlation does not imply causation... The most popular defense of tiny minds in the face of uncomfortable evidence.
+
+> You are rewarded for finding answers to the "that's funny" statements.
+
+> The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka!' but 'That's funny...'
+> -Isaac Asimov
+
 
 ## Why is this a poor example of non-aligned scales?
 
 > - https://pix-media.priceonomics-media.com/blog/1103/image04b.png
 
-# Remember and DataTables
+## Visualizing statistical tests 
 
-## Remember the Goal
-
-"The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka!' but 'That's funny...'" -Isaac Asimov
-
-> - [Remembering Good Principles](https://youtu.be/fSgEeI2Xpdc)
-> - [Rauser view on time and data](https://www.youtube.com/embed/coNDCIMH8bk?start=628) - 10:28 to 17:50
 > - [Statistical Tests](https://www.youtube.com/embed/5Dnw46eC-0o)
 
+# Coding Activity (DataTables)
 
 ## library(DT) - DataTables
 
@@ -61,11 +63,11 @@ Look at the [DT: An R interface to the DataTables library](http://rstudio.github
 > * Work as a table and push one file to R-Studio connect.
 > * Make sure everyone at the table has the code saved on their computers.
 
-```{r bob, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-```{r bob2, eval=FALSE}
+```{r bob2, eval=FALSE, echo=TRUE}
 library(DT)
 datatable(iris)
 ```
+
+
+## Project and Case Study Time

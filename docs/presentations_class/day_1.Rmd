@@ -34,16 +34,23 @@ An almost scientist that can't quite program, often isn't the best statistician 
 
 [Father Sarduci](https://www.youtube.com/embed/kO8x8eoU3L4?rel=0&amp;start=0){target="blank"}
 
+## On Education
+
+Anthropologists have reported that the hunter-gatherer groups they studied did not distinguish between work and play--essentially all of life was understood as play.
+
+With the rise of schooling, people began to think of learning as children's work. The same power-assertive methods that had been used to make children work in fields and factories were quite naturally transferred to the classroom.
+
+If children learn nothing else in school, they learn the difference between work and play and that learning is work, not play.
+
+> - [Peter Gray](https://www.psychologytoday.com/us/blog/freedom-learn/200808/brief-history-education)
+
 ## Syllabus
 
 ### [MATH/CS 335 Syllabus](https://byuistats.github.io/M335/syllabus.html){target="blank"}
 
-
 > * Preparation: **What are the class expectations on preparation?**
 > * Performance: **How will assignments be "graded"?**
 > * Semester Grade:  **How will you know what grade you earn?**
-
-
 
 ## MATH/CS 335 Philosophy
 
@@ -70,8 +77,7 @@ An almost scientist that can't quite program, often isn't the best statistician 
     
 ## Coding in groups & R-lab
 
-> - https://doodle.com/create
-> - https://my.byui.edu/ICS/Faculty/
+> -https://byuistats.github.io/M335/lab.html
 
 # Is there an art to making visualizations?
 

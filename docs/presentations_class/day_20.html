@@ -11,43 +11,6 @@
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
-td.sourceCode { padding-left: 5px; }
-pre, code { color: #bdae9d; background-color: #2a211c; }
-code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
-code > span.dt { text-decoration: underline; } /* DataType */
-code > span.dv { color: #44aa43; } /* DecVal */
-code > span.bn { color: #44aa43; } /* BaseN */
-code > span.fl { color: #44aa43; } /* Float */
-code > span.ch { color: #049b0a; } /* Char */
-code > span.st { color: #049b0a; } /* String */
-code > span.co { color: #0066ff; font-style: italic; } /* Comment */
-code > span.al { color: #ffff00; } /* Alert */
-code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
-code > span.er { color: #ffff00; font-weight: bold; } /* Error */
-code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
-code > span.cn { } /* Constant */
-code > span.sc { color: #049b0a; } /* SpecialChar */
-code > span.vs { color: #049b0a; } /* VerbatimString */
-code > span.ss { color: #049b0a; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { } /* Variable */
-code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
-code > span.op { } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { font-weight: bold; } /* Preprocessor */
-code > span.at { } /* Attribute */
-code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
-code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
-code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
 
@@ -97,7 +60,6 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -502,42 +464,6 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><a href="https://byuistats.github.io/M335/class_tasks/task20_details.html">Task 20</a></li>
 </ul>
 </section></section>
-<section><section id="code-in-the-tidyverse" class="titleslide slide level1"><h1>Code in the tidyverse</h1></section><section id="my-old-code" class="slide level2">
-<h2>My old code</h2>
-<p>Try to write out what this is doing?</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#library(reshape) # this is needed for old code</span>
-gcam &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;instructor/facetus_pnnl/USTrellis_Example/CASCaDE_A2_Full.csv&quot;</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)
-agcam &lt;-<span class="st"> </span><span class="kw">subset</span>(gcam[,<span class="kw">c</span>(<span class="st">&quot;scenario&quot;</span>,<span class="st">&quot;region&quot;</span>,<span class="st">&quot;input&quot;</span>,<span class="st">&quot;sector&quot;</span>,<span class="kw">paste</span>(<span class="st">&quot;X&quot;</span>,<span class="kw">seq</span>(<span class="dv">2005</span>,<span class="dv">2095</span>,<span class="dt">by=</span><span class="dv">5</span>),<span class="dt">sep=</span><span class="st">&quot;&quot;</span>))],scenario<span class="op">==</span><span class="st">&quot;GFDL_A2_RGCAM_medium,date=2012-26-11T18:22:24-05:00&quot;</span>)
-agcam &lt;-<span class="st"> </span><span class="kw">subset</span>(agcam,sector<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;resid cooling&quot;</span>,<span class="st">&quot;resid heating&quot;</span>,<span class="st">&quot;comm cooling&quot;</span>,<span class="st">&quot;comm heating&quot;</span>))
-agcam.m &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="dt">data=</span>agcam[,<span class="op">-</span><span class="dv">1</span>],<span class="dt">id.var=</span><span class="kw">c</span>(<span class="st">&quot;region&quot;</span>,<span class="st">&quot;input&quot;</span>,<span class="st">&quot;sector&quot;</span>))
-agcam.m<span class="op">$</span>heat.cool &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;resid &quot;</span>,<span class="st">&quot;&quot;</span>,<span class="kw">gsub</span>(<span class="st">&quot;comm &quot;</span>,<span class="st">&quot;&quot;</span>,agcam.m<span class="op">$</span>sector))
-agcam.c.split &lt;-<span class="st"> </span><span class="kw">cast</span>(<span class="dt">data=</span>agcam.m,region<span class="op">+</span>heat.cool<span class="op">~</span>variable,<span class="dt">fun.aggregate=</span>sum,<span class="dt">value=</span><span class="st">&quot;value&quot;</span>)
-agcam.cooling &lt;-<span class="st"> </span><span class="kw">subset</span>(agcam.c.split,heat.cool<span class="op">==</span><span class="st">&quot;cooling&quot;</span>)[,<span class="op">-</span><span class="dv">2</span>]
-agcam.heating &lt;-<span class="st"> </span><span class="kw">subset</span>(agcam.c.split,heat.cool<span class="op">==</span><span class="st">&quot;heating&quot;</span>)[,<span class="op">-</span><span class="dv">2</span>]
-agcam.split &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">heating=</span>agcam.heating,<span class="dt">cooling=</span>agcam.cooling)
-agcam.c &lt;-<span class="st"> </span><span class="kw">cast</span>(<span class="dt">data=</span>agcam.m,region<span class="op">~</span>variable,<span class="dt">fun.aggregate=</span>sum,<span class="dt">value=</span><span class="st">&quot;value&quot;</span>)
-tgcam &lt;-<span class="st"> </span><span class="kw">subset</span>(gcam[,<span class="kw">c</span>(<span class="st">&quot;scenario&quot;</span>,<span class="st">&quot;region&quot;</span>,<span class="st">&quot;input&quot;</span>,<span class="st">&quot;sector&quot;</span>,<span class="st">&quot;X2005&quot;</span>)],scenario<span class="op">==</span><span class="st">&quot;GFDL_A2_RGCAM_medium,date=2012-26-11T18:22:24-05:00&quot;</span>)
-tgcam &lt;-<span class="st"> </span><span class="kw">subset</span>(tgcam,sector<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;resid cooling&quot;</span>,<span class="st">&quot;resid heating&quot;</span>,<span class="st">&quot;comm cooling&quot;</span>,<span class="st">&quot;comm heating&quot;</span>))
-mtgcam &lt;-<span class="st"> </span><span class="kw">cast</span>(<span class="dt">data=</span>tgcam,region<span class="op">~</span>sector,<span class="dt">value=</span><span class="st">&quot;X2005&quot;</span>,<span class="dt">fun.aggregate=</span>sum)</code></pre></div>
-</section><section id="my-new-code" class="slide level2">
-<h2>My new code</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
-
-gcamt &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;instructor/facetus_pnnl/USTrellis_Example/CASCaDE_A2_Full.csv&quot;</span>)
-
-gcamtt &lt;-<span class="st"> </span>gcamt <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(scenario<span class="op">==</span><span class="st">&quot;GFDL_A2_RGCAM_medium,date=2012-26-11T18:22:24-05:00&quot;</span>, 
-         sector <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;resid cooling&quot;</span>,<span class="st">&quot;resid heating&quot;</span>,<span class="st">&quot;comm cooling&quot;</span>,<span class="st">&quot;comm heating&quot;</span>)) <span class="op">%&gt;%</span>
-<span class="st"> </span><span class="co"># dplyr::mutate(skey = paste(region, input, sector, sep = &quot;_&quot;)) %&gt;%</span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>scenario, <span class="op">-</span><span class="st"> </span>Units) <span class="op">%&gt;%</span>
-<span class="st">  </span>tidyr<span class="op">::</span><span class="kw">gather</span>(<span class="dt">key =</span> year, <span class="dt">value =</span> energy,<span class="st">`</span><span class="dt">1990</span><span class="st">`</span><span class="op">:</span><span class="st">`</span><span class="dt">2095</span><span class="st">`</span>, <span class="op">-</span>region, <span class="op">-</span><span class="st"> </span>input, <span class="op">-</span>sector) <span class="op">%&gt;%</span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">heat.cool =</span> <span class="kw">gsub</span>(<span class="st">&quot;resid &quot;</span>,<span class="st">&quot;&quot;</span>,<span class="kw">gsub</span>(<span class="st">&quot;comm &quot;</span>,<span class="st">&quot;&quot;</span>,sector)))
-
-gcam_totals &lt;-<span class="st"> </span>gcamtt <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_by</span>(region, year, heat.cool, sector) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">energy =</span> <span class="kw">sum</span>(energy)) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">ungroup</span>()</code></pre></div>
-</section></section>
 <section><section id="big-data" class="titleslide slide level1"><h1>“Big” Data</h1></section><section id="scientists-vs.-analysts" class="slide level2">
 <h2>Scientists Vs. Analysts</h2>
 <ul>
@@ -576,15 +502,6 @@ gcam_totals &lt;-<span class="st"> </span>gcamtt <span class="op">%&gt;%</span>
 <ul>
 <li class="fragment">Who has pushed their graphic?</li>
 <li class="fragment"><a href="http://www.businessinsider.com/2016-election-results-maps-population-adjusted-cartogram-2016-11/#heres-the-basic-electoral-college-map-with-states-that-hillary-clinton-won-in-blue-and-states-that-donald-trump-won-in-red-assuming-that-trumps-narrow-lead-in-michigan-continues-to-hold-1">Check these out</a></li>
-</ul>
-</section><section id="semester-project-discussion" class="slide level2">
-<h2>Semester Project Discussion</h2>
-<p>Please make your own issue right now.</p>
-<ul>
-<li>Use my issue as a starting point - <a href="https://github.com/BYUI335/hathaway/issues/16" class="uri">https://github.com/BYUI335/hathaway/issues/16</a>.</li>
-<li>Create a new folder in your repository that is called <code>semester_project</code>.</li>
-<li>If you would like to alter the project, then post a comment to the semester project issue with your update.</li>
-<li>Call me out and ask me to review and approve changes.</li>
 </ul>
 </section></section>
     </div>

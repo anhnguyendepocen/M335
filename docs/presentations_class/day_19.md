@@ -115,13 +115,17 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence
 
 
-
-
-## Posting Comments on Class Case Studies
-
-Why are we making comments on other's work?
-
-[My example](https://github.com/BYUI335/Pyeatt_A/issues/7) for discussion.
+```r
+library(downloader)
+library(sf)
+library(fs)
+dams_path <- "https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip"
+df <- tempfile(); uf <- tempfile()
+download(dams_path, df, mode = "wb")
+unzip(df, exdir = uf)
+dams <- read_sf(uf)
+file_delete(df); dir_delete(uf)
+```
 
 ## Tracking Progress
 

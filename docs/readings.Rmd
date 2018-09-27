@@ -21,14 +21,13 @@ library(stringr)
 
 readings <- read_excel(path = "../tasks_reading.xlsx", sheet = "Reading")
 #md_link(readings, type = list("Type" = "case"), group = list("Number" = params$number))
+dnumber <- 1 # Week starting number
 
-number = 1 # case study starting number
-dnumber = 1
+source("../scripts/build_dates.R")
 
-fname = paste("cs", str_pad(number, 2, "left", "0" ) , "_details.html", sep = "")
-text <- paste("#### [Case Study ", number, "](", file.path("weekly_projects", fname), ")\n\n", sep = "")
 
-text_c <- paste("#### Week ", dnumber, "\n\n", sep = "")
+
+text_c <- paste("#### Week ", dnumber, " (", readings_due$start[dnumber], ") " ,"\n\n", sep = "")
 
 
 
@@ -55,21 +54,20 @@ ul {
 class_reading <- expression({
   # write current task header and link then list tasks
   cat(text_c)
-  cat("##### Class Tasks Reading\n")
-  md_link(readings, group = list("Number" = dnumber*2-1), type = list("Type" = "task"))
+  cat("##### Being Readings\n")
   cat("\n")
-  md_link(readings, group = list("Number" = dnumber*2), type = list("Type" = "task"))
+  md_link(readings, group = list("Week" = dnumber), type = list("Reading" = "being"))
   cat("\n")
-  cat("\n##### Case Study Reading\n")
-
-  md_link(readings, group = list("Number" = dnumber), type = list("Type" = "case"))
+  cat("\n##### Doing Readings\n")
+  cat("\n")
+  md_link(readings, group = list("Week" = dnumber), type = list("Reading" = "doing"))
   
     cat("\n\n")
 
   # Step to the next task and header creation
   dnumber <- dnumber + 1
   
-  text_c <- paste("#### Week ", dnumber, "\n\n", sep = "")
+  text_c <- paste("#### Week ", dnumber, " (", readings_due$start[dnumber], ") " , "\n\n", sep = "")
   
 })
 

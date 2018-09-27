@@ -17,13 +17,11 @@ params:
 
 ## Case Study 3: Becoming a databender 
 ### Background 
-You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (`install.packages("nycflights13")`, `library(nycflights13)`) your manager wants you to answer the following questions;
+You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (`nycflights13::flights`), which you can obtain in R (`install.packages("nycflights13"); library(nycflights13)`), your manager wants you to answer the following questions;
 
 1. If I am leaving before noon, which two airlines do you recommend at each airport (JFK, LGA, EWR) that will have the lowest delay time at the 75th percentile?
 2. Which origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?
 3. Which destination airport is the worst (you decide on the metric for worst) airport for arrival time?
-
-Make sure to include one visualization that shows the complexity of the data.
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -36,10 +34,8 @@ Make sure to include one visualization that shows the complexity of the data.
 
 This reading will help you complete the tasks below.
 
-* o [What do people do with new data](https://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/){target='blank'}
-* o [Posting Issues on GitHub](https://guides.github.com/features/issues/){target='blank'}
-* o [Being a good critiquer](https://sifterapp.com/blog/2012/08/tips-for-effectively-reporting-bugs-and-issues/){target='blank'}
 * o [Example of GitHub Issue conversation](https://github.com/STAT545-UBC/Discussion/issues/387){target='blank'}
+* o [Posting Issues on GitHub](https://guides.github.com/features/issues/){target='blank'}
 * o [reprex R Package](https://github.com/tidyverse/reprex#what-is-a-reprex){target='blank'}
 
 
@@ -58,6 +54,7 @@ ul {
 
 
 * [ ] Address at least two of the three questions in the background description (if you have time try to tackle all three)
+* [ ] Make sure to include one or more visualization that shows the complexity of the data.
 * [ ] Create one `.rmd` file that has your report
     * [ ] Have a section for each question
     * [ ] Make sure your code is in the report but defaults to hidden

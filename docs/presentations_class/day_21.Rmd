@@ -20,18 +20,6 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
 ```
 
-## Latest Jobs Discussion
-
-https://careers.peopleclick.com/careerscp/client_nba/external/jobDetails.do?functionName=getJobDetail&jobPostId=7818&localeCode=en-us
-
-```{r projects, eval=TRUE, echo=FALSE}
-library(webshot)
-page_image <- "https://careers.peopleclick.com/careerscp/client_nba/external/jobDetails.do?functionName=getJobDetail&jobPostId=7818&localeCode=en-us"
-webshot(page_image, delay = 1, file = "NBA_webshot.png")
-
-```
-
-
 # Finishing the Semester
 
 ## Semester Project Discussion

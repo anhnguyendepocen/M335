@@ -83,7 +83,7 @@ faithful %>%
 
 `case_when()` is particularly useful inside mutate when you want to create a new variable that relies on a complex combination of existing variables. **Write a short sentence that says what this code is doing?**
 
-```{r starwars, eval=FALSE}
+```{r starwars, eval=FALSE, echo=TRUE}
 
 starwars %>%
   select(name:mass, gender, species) %>%

@@ -15,10 +15,11 @@ output:
 
 
 
-## Task 5: Making bad graphics 
+## Task 5: World Data Investigation 
 ### Background 
 
-In `library(ggplot2)` there is a `diamonds` dataset that shows features of diamonds.  Your brother is about to go out and buy a diamond ring for his fiancee and needs some advice on what type of diamond to purchase. He knows that karat has a strong relationship with price.  He wants to know what other elements of the diamond he could sacrifice to maximize the karat size for a budget around $2,000. Some interesting details on diamonds can be found [here](https://www.americangemsociety.org/page/4cs){target="blank"}.
+The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.
+
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -40,17 +41,21 @@ ul {
 
 This reading will help you complete the tasks below.
 
-* o [Graphical Perception: Theory, Experimentation, and Applications](https://www.jstor.org/stable/2288400?seq=1#page_scan_tab_contents){target='blank'}
 * o [Chapter 28: R for Data Science - Graphics for communication](http://r4ds.had.co.nz/graphics-for-communication.html){target='blank'}
+* o [Chapter 6: R for Data Science - Scripts](http://r4ds.had.co.nz/workflow-scripts.html){target='blank'}
+* o [Chapter 11: R for Data Science - Data Import](http://r4ds.had.co.nz/data-import.html){target='blank'}
 
 
 ### Tasks
 
 
 * [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
-* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate but poorly built to communicate data.
-* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate and optimizes data communication.
-* [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your 2 graphics and the choices you made in the data presentation
-* [ ] Compile your `.md` and `.html` file into your git repository
+* [ ] Review the [Our World in Data](https://ourworldindata.org/){target="blank"} webpage and find a graphic that interests you.
+    * [ ] Recreate that graphic in R after downloading the data from their website
+* [ ] Explore the world data on `child_mortality` and create an interesting graphic that highlights this dataset.
+    * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `child_mortality`.  This will require `install.packages("devtools")`.
+    * [ ] Create a graphic that you could use in a presentation to summarize world child mortality
+* [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots
+* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
 
 

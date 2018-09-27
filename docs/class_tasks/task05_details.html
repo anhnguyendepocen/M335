@@ -90,6 +90,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -121,11 +124,11 @@ $(document).ready(function () {
 </div>
 
 
-<div id="task-5-making-bad-graphics" class="section level2">
-<h2>Task 5: Making bad graphics</h2>
+<div id="task-5-world-data-investigation" class="section level2">
+<h2>Task 5: World Data Investigation</h2>
 <div id="background" class="section level3">
 <h3>Background</h3>
-<p>In <code>library(ggplot2)</code> there is a <code>diamonds</code> dataset that shows features of diamonds. Your brother is about to go out and buy a diamond ring for his fiancee and needs some advice on what type of diamond to purchase. He knows that karat has a strong relationship with price. He wants to know what other elements of the diamond he could sacrifice to maximize the karat size for a budget around $2,000. Some interesting details on diamonds can be found <a href="https://www.americangemsociety.org/page/4cs" target="blank">here</a>.</p>
+<p>The <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> website has world data. It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.</p>
 <ul>
 <li><a href="../homework_schedule.html">Homework Schedule</a></li>
 </ul>
@@ -143,18 +146,26 @@ ul {
 <h3>Reading</h3>
 <p>This reading will help you complete the tasks below.</p>
 <ul>
-<li>o <a href="https://www.jstor.org/stable/2288400?seq=1#page_scan_tab_contents" target="blank">Graphical Perception: Theory, Experimentation, and Applications</a></li>
 <li>o <a href="http://r4ds.had.co.nz/graphics-for-communication.html" target="blank">Chapter 28: R for Data Science - Graphics for communication</a></li>
+<li>o <a href="http://r4ds.had.co.nz/workflow-scripts.html" target="blank">Chapter 6: R for Data Science - Scripts</a></li>
+<li>o <a href="http://r4ds.had.co.nz/data-import.html" target="blank">Chapter 11: R for Data Science - Data Import</a></li>
 </ul>
 </div>
 <div id="tasks" class="section level3">
 <h3>Tasks</h3>
 <ul>
 <li>[ ] Take notes on your reading of the specified ‘R for Data Science’ chapter in the README.md or in a ‘.R’ script in the class task folder</li>
-<li>[ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate but poorly built to communicate data.</li>
-<li>[ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate and optimizes data communication.</li>
-<li>[ ] Create an <code>.Rmd</code> file with 1-2 paragraphs summarizing your 2 graphics and the choices you made in the data presentation</li>
-<li>[ ] Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li>[ ] Review the <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> webpage and find a graphic that interests you.
+<ul>
+<li>[ ] Recreate that graphic in R after downloading the data from their website</li>
+</ul></li>
+<li>[ ] Explore the world data on <code>child_mortality</code> and create an interesting graphic that highlights this dataset.
+<ul>
+<li>[ ] Use <code>devtools::install_github(&quot;drsimonj/ourworldindata&quot;)</code> to get a larger dataset on <code>child_mortality</code>. This will require <code>install.packages(&quot;devtools&quot;)</code>.</li>
+<li>[ ] Create a graphic that you could use in a presentation to summarize world child mortality</li>
+</ul></li>
+<li>[ ] Include your plots in an <code>.Rmd</code> file with short paragraph describing your plots</li>
+<li>[ ] Push your <code>.Rmd</code>, <code>.md</code>, and <code>.html</code> to your GitHub repo</li>
 </ul>
 </div>
 </div>

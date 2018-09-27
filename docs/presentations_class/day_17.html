@@ -97,7 +97,6 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -551,18 +550,23 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section><section id="tidyquant-one-package-to-use-them-all-1." class="slide level2">
 <h2>tidyquant: One package to use them all (1).</h2>
 <p>Write out what this function is doing.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tq_transmute</span>(<span class="dt">select =</span> adjusted,
+               <span class="dt">mutate_fun =</span> periodReturn, 
+               <span class="dt">period =</span> <span class="st">&quot;daily&quot;</span>,
+               <span class="dt">type =</span> <span class="st">&quot;log&quot;</span>)</code></pre></div>
 <ul>
 <li class="fragment"><strong>Hint:</strong> Read about <code>quantmod::periodReturn()</code></li>
 </ul>
 </section><section id="tidyquant-one-package-to-use-them-all-2." class="slide level2">
 <h2>tidyquant: One package to use them all (2).</h2>
 <p>Write out what this function is doing.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  <span class="kw">tq_portfolio</span>(<span class="dt">assets_col=</span>symbol,
+               <span class="dt">returns_col=</span>daily.returns, 
+               <span class="dt">weights =</span> <span class="kw">tibble</span>(<span class="dt">asset.names =</span> friend, <span class="dt">weight =</span> <span class="kw">c</span>(<span class="fl">0.259</span>,.<span class="dv">534</span>,.<span class="dv">207</span>)),
+               <span class="dt">wealth.index =</span> T)</code></pre></div>
 <ul>
 <li class="fragment"><strong>Hint:</strong> Read about <code>PerformanceAnalytics::Return.portfolio()</code></li>
 </ul>
-</section><section id="dygraphs-r-connection-to-dygraphs-javascript-charting-library" class="slide level2">
-<h2>dygraphs: R connection to dygraphs JavaScript charting library</h2>
-<p>Open the <a href="http://rstudio.github.io/dygraphs/index.html">dygraphs help webstie</a> and implement one of their examples in your local R session.</p>
 </section></section>
 <section><section id="settling-in" class="titleslide slide level1"><h1>Settling In</h1></section><section id="remember-the-goal" class="slide level2">
 <h2>Remember the Goal</h2>
@@ -571,6 +575,21 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><a href="https://youtu.be/fSgEeI2Xpdc">Remembering Good Principles</a></li>
 <li><a href="https://www.youtube.com/embed/coNDCIMH8bk?start=628">Rauser view on time and data</a> - 10:28 to 17:50</li>
 </ul>
+</section><section id="edward-tufte" class="slide level2">
+<h2>Edward Tufte</h2>
+<blockquote>
+<p>Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space</p>
+</blockquote>
+<blockquote>
+<p>Edward Tufte</p>
+</blockquote>
+</section></section>
+<section><section id="next-class" class="titleslide slide level1"><h1>Next Class</h1></section><section id="dygraphs-r-connection-to-dygraphs-javascript-charting-library" class="slide level2">
+<h2>dygraphs: R connection to dygraphs JavaScript charting library</h2>
+<p>Open the <a href="http://rstudio.github.io/dygraphs/index.html">dygraphs help webstie</a> and implement one of their examples in your local R session.</p>
+</section><section id="book-group-conversation" class="slide level2">
+<h2>Book Group Conversation</h2>
+<p>Please be prepared with notes about <a href="https://priceonomics.com/how-william-cleveland-turned-data-visualization/">this</a> reading in <a href="https://byuistats.github.io/M335/class_tasks/task18_details.html">Task 18</a></p>
 </section></section>
     </div>
   </div>

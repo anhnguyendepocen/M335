@@ -47,13 +47,6 @@ params:
 
 
 
-## Latest Jobs Discussion
-
-https://careers.peopleclick.com/careerscp/client_nba/external/jobDetails.do?functionName=getJobDetail&jobPostId=7818&localeCode=en-us
-
-![](day_21_files/figure-revealjs/projects-1.png)
-
-
 # Finishing the Semester
 
 ## Semester Project Discussion

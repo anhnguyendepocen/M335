@@ -43,6 +43,12 @@ link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M33
 `r title.text`
 `r link_new`
 
+*Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?*
+
+> - What mutations or summaries will you need to do?
+> - What difficulties do you expect?
+> - Do each of the task items make sense?
+
 
 ```{r task, ref.label=taskname, echo=FALSE, include=FALSE }
 # For current task that is due

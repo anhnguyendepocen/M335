@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="J. Hathaway" />
-  <title>Github and Math/CS 335</title>
+  <title>Getting into Data, dplyr and ggplot2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -97,7 +97,6 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -487,7 +486,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title">Github and Math/CS 335</h1>
+    <h1 class="title">Getting into Data, dplyr and ggplot2</h1>
     <h2 class="author">J. Hathaway</h2>
 </section>
 
@@ -495,92 +494,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h2></h2>
 <p><a href="http://www.perceptualedge.com/example2.php">Visualization of the Day</a></p>
 </section></section>
-<section><section id="github-and-git" class="titleslide slide level1"><h1>GitHub and Git</h1></section><section id="really-do-i-have-to-learn-git-and-github" class="slide level2">
-<h2>Really do I have to learn Git and GitHub</h2>
-<p><a href="https://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/">2015 Wired Magazine Article</a></p>
-<ul>
-<li class="fragment">GitHub now boasts almost 9 million registered users. Each month, about 20 million others visit without registering. … among the <strong>top 100 most popular sites on earth</strong>.</li>
-<li class="fragment">everyone hosts their open source projects on GitHub, including Google, Facebook, Twitter, and even Microsoft.</li>
-<li class="fragment">the site as a kind of bazaar that offers just about any piece of code you might want-and so much of it free. “If you need something, you just go to GitHub,” he says. “You will find it there.”</li>
-</ul>
-</section><section id="making-sure-we-are-all-on-the-same-page" class="slide level2">
-<h2>Making sure we are all on the same page</h2>
-<p>Let’s take a few minutes to make sure everyone is up to date with the following tasks.</p>
-<p><a href="https://byuistats.github.io/M335/class_tasks/task03_details.html">Class Task 3 Checklist</a></p>
-<ul>
-<li>Install git on your computer</li>
-<li>Create a GitHub account</li>
-<li>Work through readings on git and github</li>
-</ul>
-</section><section id="free-private-repos" class="slide level2">
-<h2>Free private repos</h2>
-<ul>
-<li>It would benefit you to use the free repos to manage all of your class work.</li>
-<li><a href="https://education.github.com/discount_requests/new" class="uri">https://education.github.com/discount_requests/new</a></li>
-</ul>
-</section><section id="the-github-mentality" class="slide level2">
-<h2>The Github Mentality</h2>
-<p><a href="../images/Git_workflow_diagram.png">The workflow</a></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Move to your git managed folder</span>
-git pull
-git add <span class="op">*</span>
-git commit <span class="op">-</span>m <span class="st">&quot;My great work&quot;</span>
-git push</code></pre></div>
-</section><section id="github-and-r-studio" class="slide level2">
-<h2>Github and R-Studio</h2>
-<h3 id="class-task-items">Class Task Items</h3>
-<ul>
-<li class="fragment">Get GitHub working properly
-<ul>
-<li class="fragment">Create an account</li>
-<li class="fragment">Accept invitations to group and repository</li>
-</ul></li>
-<li class="fragment">Open R-Studio and try the git process using the graphical user interface (GUI).
-<ul>
-<li class="fragment">Clone repository</li>
-<li class="fragment">Download my zip folder and populate your folder structure - <a href="https://github.com/BYUI335/hathaway">Hathaway Repository</a></li>
-<li class="fragment">Edit your README.md and push changes</li>
-</ul></li>
-</ul>
-</section></section>
-<section><section id="learning-slack-stack-overflow" class="titleslide slide level1"><h1>Learning, Slack, &amp; Stack Overflow</h1></section><section id="section-1" class="slide level2" data-background-image="http://mediaassets.ktnv.com/photo/2016/09/08/rupaul_1473370557202_45993103_ver1.0_640_480.jpg">
-<h2></h2>
-<p><span style="font-size:45px; color:black"> RuPaul on Learning </span></p>
-<p><mark> <span style="font-size:75px; color: black"> Your fear of looking stupid is making you look stupid. </span> </mark></p>
-</section><section id="hillel-the-elder" class="slide level2">
-<h2>Hillel the Elder</h2>
-<ul>
-<li><a href="https://torah.org/learning/maharal-p2m6part1/">The pedant does not teach and the shy does not learn</a></li>
-<li><a href="http://www.newworldencyclopedia.org/entry/Hillel_the_Elder">Maybe a teacher of Jesus</a></li>
-</ul>
-</section><section id="seriously" class="slide level2">
-<h2>Seriously!</h2>
-<h3 id="how-do-you-get-people-to-percieve-you-are-smart">How do you get people to percieve you are smart?</h3>
-<ul>
-<li><a href="http://time.com/3158889/ask-for-advice-competent/">Time magazine on Looking Stupid Study</a></li>
-</ul>
-</section><section id="slack" class="slide level2">
-<h2>Slack</h2>
-<p>This space is for us to build a team and support each other. This is where we learn to ask questions and reach out for support and quick responses.</p>
-</section><section id="stack-overflow" class="slide level2">
-<h2>Stack Overflow</h2>
-<p>Stack Overflow</p>
-<ul>
-<li class="fragment"><strong><a href="http://duncanlock.net/blog/2013/06/14/the-smart-guide-to-stack-overflow-zero-to-hero/">Stack Overflow Background and Tips</a>:</strong> This is a great page to help you understand how Stack Overflow works. Please read the <strong>Ask Good Questions</strong> section.</li>
-<li class="fragment"><a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect">Create a Stack Overflow Account</a></li>
-<li class="fragment"><a href="https://stackoverflow.com/c/byu/join">Join our BYUI Channel</a></li>
-</ul>
-</section></section>
-<section><section id="review" class="titleslide slide level1"><h1>Review</h1></section><section id="class-details" class="slide level2">
-<h2>Class Details</h2>
-<ol type="1">
-<li class="fragment">Ramping up (week 1)</li>
-<li class="fragment"><strong>Replicating (week 2)</strong></li>
-<li class="fragment">Creating (weeks 3 - 12)</li>
-</ol>
-</section><section id="case-study-1-critiquing-visualizations-and-slack-setup" class="slide level2">
+<section><section id="team-discussion" class="titleslide slide level1"><h1>Team Discussion</h1></section><section id="case-study-1-critiquing-visualizations-and-slack-setup" class="slide level2">
 <h2>Case Study 1: Critiquing Visualizations and Slack Setup</h2>
 <ul>
+<li>The <a href="https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing">Google spreadsheet link</a></li>
 <li><a href="https://byuistats.github.io/M335/weekly_projects/cs01_details.html">Case Study 1</a></li>
 <li><a href="https://github.com/BYUI335/hathaway">How did we do?</a></li>
 </ul>
@@ -589,11 +506,97 @@ git push</code></pre></div>
 <ul>
 <li><a href="https://byuistats.github.io/M335/weekly_projects/cs02_details.html">Case Study 2</a></li>
 </ul>
-</section><section id="task-3-lets-git-going" class="slide level2">
-<h2>Task 3: Let’s git going</h2>
+</section><section id="task-3-asking-the-right-questions" class="slide level2">
+<h2>Task 3: Asking the right questions</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/class_tasks/task03_details.html">Task 3</a></li>
 </ul>
+</section><section id="task-3-asking-the-right-questions-1" class="slide level2">
+<h2>Task 3: Asking the right questions</h2>
+<ul>
+<li><a href="file:///C:/git/github/byuistats/M335/docs/class_tasks/task03_details.html">Task 3</a></li>
+<li><a href="https://www.lynda.com/Business-Skills-tutorials/Harness-power-questions/477451/574315-4.html">Harness the power of questions &amp; Clarify Terms</a></li>
+</ul>
+</section></section>
+<section><section id="how-do-we-know-when-we-have-given-voice-to-data" class="titleslide slide level1"><h1>How do we know when we have given voice to data?</h1></section><section id="the-simple-graph-has-brought-more-information-to-the-data-analysts-mind-than-any-other-device." class="slide level2">
+<h2>“The simple graph has brought more information to the data analyst’s mind than any other device.”</h2>
+<h3 id="john-tukey">John Tukey</h3>
+</section><section id="the-greatest-value-of-a-picture-is-when-it-forces-us-to-notice-what-we-never-expected-to-see." class="slide level2">
+<h2>“The greatest value of a picture is when it forces us to notice what we never expected to see.”</h2>
+<h3 id="john-tukey-1">John Tukey</h3>
+</section><section id="hans-rosling-and-data-interaction" class="slide level2">
+<h2>Hans Rosling and Data Interaction</h2>
+<ul>
+<li class="fragment"><p>I put them together, so that in each pair of country, one has twice the child mortality of the other. <strong>And this means that it’s much bigger a difference than the uncertainty of the data.</strong></p></li>
+<li class="fragment"><p><a href="https://www.youtube.com/embed/usdJgEwMinM?rel=0&amp;start=80">I have shown that Swedish top students know statistically significantly less about the world than the chimpanzees.</a></p></li>
+<li class="fragment"><p><a href="https://www.youtube.com/embed/usdJgEwMinM?rel=0&amp;start=570">It’s a tremendous variation within Africa which we rarely often make – that it’s equal everything.</a></p></li>
+<li class="fragment"><p><a href="https://www.youtube.com/embed/usdJgEwMinM?rel=0&amp;start=823">Now, this is, more or less, if you look at the average data of the countries – they are like this. Now that’s dangerous, to use average data, because there is such a lot of difference within countries.</a></p></li>
+</ul>
+</section><section id="boaz-super" class="slide level2">
+<h2>Boaz Super</h2>
+<ul>
+<li class="fragment">Logical thinking requires one additional, vital component: a commitment to intellectual honesty. That means not allowing oneself to bend to one’s desire for a particular outcome.</li>
+</ul>
+</section><section id="stephen-few" class="slide level2">
+<h2>Stephen Few</h2>
+<ul>
+<li class="fragment">This problem still exists today, but a more common problem and one that is much more insidious because it is so seldom recognized, is the unintended miscommunication of quantitative information that happens because people have never learned how to communicate it effectively.</li>
+</ul>
+</section></section>
+<section><section id="wrangling-data" class="titleslide slide level1"><h1>Wrangling Data</h1></section><section id="the-pipe" class="slide level2">
+<h2>The pipe <code>%&gt;%</code></h2>
+<p>You can read it as a series of imperative statements: group, then summarize, then filter. As suggested by this reading, a good way to pronounce %&gt;% when reading code is <strong>“then”</strong>.</p>
+<ul>
+<li class="fragment">Behind the scenes, x %&gt;% f(y) turns into f(x, y), and x %&gt;% f(y) %&gt;% g(z) turns into g(f(x, y), z) and so on.</li>
+<li class="fragment">You can use the pipe to rewrite multiple operations in a way that you can read left-to-right, top-to-bottom.</li>
+<li class="fragment">We’ll use piping frequently from now on because it considerably improves the readability of code.</li>
+</ul>
+</section><section id="librarydplyr-part-1" class="slide level2">
+<h2>library(dplyr) Part 1</h2>
+<ul>
+<li><code>filter()</code> - filter your data to a smaller set of important rows.</li>
+<li><code>arrange()</code> - Organize the row order of my data</li>
+<li><code>select()</code> - select specific columns to keep or remove</li>
+<li><code>mutate()</code> - add new mutated (changed) variables as columns to my data.</li>
+</ul>
+</section><section id="librarydplyr-part-2" class="slide level2">
+<h2>library(dplyr) Part 2</h2>
+<ul>
+<li><code>summarise()</code> - build summaries of the columns specified</li>
+<li><code>group_by()</code> - divide your data into groups. Often used with <code>summarise()</code></li>
+</ul>
+</section><section id="practice-reading-code" class="slide level2">
+<h2>Practice reading code</h2>
+<p>With your table, write this code out in an English paragraph.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">delays &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(dest) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">summarise</span>(
+    <span class="dt">count =</span> <span class="kw">n</span>(),
+    <span class="dt">dist =</span> <span class="kw">mean</span>(distance, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),
+    <span class="dt">delay =</span> <span class="kw">mean</span>(arr_delay, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)
+  ) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(count <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>, dest <span class="op">!=</span><span class="st"> &quot;HNL&quot;</span>)</code></pre></div>
+</section><section id="practice-using-dplyr" class="slide level2">
+<h2>Practice using dplyr</h2>
+<p>Use <code>filter()</code>, <code>arrange()</code>, <code>select()</code>, <code>mutate()</code>, <code>group_by()</code>, and <code>summarise()</code>. With <code>library(tidyverse)</code> tackle the following challenges.</p>
+<ol type="1">
+<li>Arrange the <code>iris</code> data by <code>Sepal.Length</code> and display the first six rows.</li>
+<li>Select the <code>Species</code> and <code>Petal.Width</code> columns and put them into a new data set called <code>testdat</code>.</li>
+<li>Create a new table that has the mean for each variable by Species.</li>
+<li>Read about the <code>summarise_all()</code> and get a new table with the means and standard deviations for each Species.</li>
+</ol>
+</section></section>
+<section><section id="the-grammar-of-graphics" class="titleslide slide level1"><h1>The Grammar of Graphics</h1></section><section id="introduction-to-the-grammar" class="slide level2">
+<h2>Introduction to the Grammar</h2>
+<iframe width="760" height="445" src="https://www.youtube.com/embed/uiTc55clwuA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</section><section id="introduction-to-ggplot2" class="slide level2">
+<h2>Introduction to ggplot2</h2>
+<iframe width="760" height="445" src="https://www.youtube.com/embed/PiY9hwOkL8U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</section><section id="ggplot2-and-iris-data" class="slide level2">
+<h2>ggplot2 and iris data</h2>
+<p>Use the <code>iris</code> data to show a faceted visualization with a <code>color</code>, <code>shape</code>, and <code>size</code> layer or geometry.</p>
 </section></section>
     </div>
   </div>

@@ -15,9 +15,9 @@ output:
 
 
 
-## Task 3:  Let's git going 
+## Task 3:  Asking the right questions 
 ### Background 
-You have just been hired to a new data science team, and you need to collaborate on projects.  The team lead told you to connect to your git repository on Github and edit the `README.md` in your repository. She wants you to describe who you are in a short paragraph.
+Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  [This task supports your semester project](https://byuistats.github.io/M335/project.html). **Note that the reading on data transformation below is necessary for the case study for this week and may be the most important reading of the semester to fully understand**
 
 
  * [Homework Schedule](../homework_schedule.html)
@@ -40,41 +40,31 @@ ul {
 
 This reading will help you complete the tasks below.
 
-* o [Chapter 4: Happy Git and Github for the useR - Installation](http://happygitwithr.com/installation-pain.html){target='blank'}
-* o [Chapter 5: Happy Git and Github for the useR - GitHub](http://happygitwithr.com/github-acct.html){target='blank'}
-* o [Chapter 7: Happy Git and Github for the useR - Install Git](http://happygitwithr.com/install-git.html){target='blank'}
-* o [Chapter 8: Happy Git and Github for the useR - Using Git](http://happygitwithr.com/hello-git.html){target='blank'}
-* o [Using the R-Studio GUI by R-Studio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN){target='blank'}
-* o [Chapter 8: R for Data Science - Projects](http://r4ds.had.co.nz/workflow-projects.html){target='blank'}
-* o [MCS 335, Git, and Github use](https://byuistats.github.io/M335/git_335.html){target='blank'}
-* o [R-Studio and the Git GUI](https://www.youtube.com/watch?v=E2d91v1Twcc){target='blank'}
+* o [Creating Questions for your project](https://www.lynda.com/Business-Skills-tutorials/Harness-power-questions/477451/574315-4.html){target='blank'}
+* o [Chapter 5: R for Data Science - Data transformation](http://r4ds.had.co.nz/transform.html){target='blank'}
+* o [DataCamp:  Data Wrangling Chapter of Introduction to Tidyverse](https://campus.datacamp.com/courses/introduction-to-the-tidyverse/data-wrangling-1?ex=1){target='blank'}
+* o [DataCamp:  Data Transformation Chapter of Introduction to Tidyverse](https://campus.datacamp.com/courses/introduction-to-the-tidyverse/grouping-and-summarizing?ex=1){target='blank'}
 
 
 ### Tasks
 
 
-* [ ] Install git on your computer
-* [ ] Make sure your GitHub account is registered
-* [ ] Work through readings on git and github
-* [ ] Make sure git works in R-Studio
-* [ ] Update your README.md in your repository (you will need to give me time to create your repo after you post your username)
-    * [ ] Type one or two sentences that describe you
-    * [ ] Make sure you pull and push
-* [ ] Check your folder structure in your git repo to match the format for our class - [see MCS 335 Folder Structure](https://byuistats.github.io/M335/git_335.html)
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
+* [ ] Develop a few novel questions that data can answer
+    * [ ] Get feedback from 5-10 people on their interest in your questions and summarize this feedback
+    * [ ] Find other examples of people addressing your question
+    * [ ] Present your question to a data scientist to get feedback on the quality of the question and if it can be addressed in 2-months.
+* [ ] Create one `.rmd` file that has your report
+    * [ ] Have a section for each question
+* [ ] Be prepared to discuss your results in the upcoming class
 
 
--------
+------
 
-**Additional Links**
-
-* o [Chapter 10: Happy Git and Github for the useR - Version Control](http://happygitwithr.com/push-pull-github.html)
-* o [git](http://nyuccl.org/pages/GitTutorial/){target="blank"}
-* o [githug](https://github.com/jennybc/githug){target="blank"}
-* o [Git for R users](http://haven.tidyverse.org/){target="blank"}
-* o [Getting Ready](https://byui-cs.github.io/CS246/week-04/prepare.html){target="blank"}
-* o [Intro Tutorial](https://try.github.io/levels/1/challenges/1){target="blank"}
-* o [Advanced Tutorial](http://learngitbranching.js.org/){target="blank"}
-
-
+**Additional Information**
+   
+* [Hadley dplyr motivation](http://datascience.la/hadley-wickham-presents-dplyr-at-user-2014/){target="blank"}   
+* [Hadley Introduces dplyr](http://datascience.la/hadley-wickhams-dplyr-tutorial-at-user-2014-part-1/){target="blank"}   
+* [Hadley dplyr part 2](https://www.youtube.com/watch?v=Ue08LVuk790&t=0s){target="blank"}   
 
 

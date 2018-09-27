@@ -25,7 +25,9 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
 
 
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
@@ -112,6 +114,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -315,12 +320,27 @@ div.tocify {
       <a href="rpages.html">R/R-Studio Details</a>
     </li>
     <li class="divider"></li>
+    <li class="dropdown-header">Git/GitHub Helps</li>
     <li>
-      <a href="gitpages.html">Git/GitHub Details</a>
+      <a href="gitpages.html">Helps</a>
+    </li>
+    <li>
+      <a href="images/Git_workflow_diagram.png">One Image</a>
+    </li>
+    <li>
+      <a href="git_335.html">Process Details</a>
     </li>
     <li class="divider"></li>
     <li>
       <a href="compages.html">Slack &amp; Stackoverflow Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="lab.html">R Lab</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="rstudioconnect.html">RStudio Connect</a>
     </li>
     <li class="divider"></li>
     <li>
@@ -341,10 +361,14 @@ div.tocify {
       <a href="homework_schedule.html">Assignment Schedule</a>
     </li>
     <li>
-      <a href="backgrounds.html">Task Backgrounds</a>
+      <a href="tasklist.html">Semester Task List</a>
     </li>
     <li>
-      <a href="tasklist.html">Semester Task List</a>
+      <a href="teamlead.html">Team Lead Guidance</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="backgrounds.html">Task Backgrounds</a>
     </li>
     <li>
       <a href="readings.html">Weekly Reading List</a>
@@ -381,6 +405,12 @@ div.tocify {
     <li>
       <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
     </li>
+    <li>
+      <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a>
+    </li>
+    <li>
+      <a href="https://plotly-book.cpsievert.me/index.html">plotly for R</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">Supplemental Material</li>
     <li>
@@ -393,10 +423,10 @@ div.tocify {
       <a href="http://r-pkgs.had.co.nz/">R Packages</a>
     </li>
     <li>
-      <a href="https://cpsievert.github.io/plotly_book/">Plotly for R</a>
+      <a href="http://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a>
     </li>
     <li>
-      <a href="http://datathink.io">DataThink.io</a>
+      <a href="https://rstudio.github.io/crosstalk/index.html">Crosstalk: htmlwidgets add-on</a>
     </li>
   </ul>
 </li>
@@ -433,84 +463,90 @@ ul {
 }
 
 </style>
-<div id="week-1" class="section level4">
-<h4>Week 1</h4>
-<div id="class-tasks-reading" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="week-1-2018-09-17" class="section level4">
+<h4>Week 1 (2018-09-17)</h4>
+<div id="being-readings" class="section level5">
+<h5>Being Readings</h5>
 <ul>
-<li>o <a href="http://r4ds.had.co.nz/index.html" target="blank">Chapter 1: R for Data Scientists</a></li>
-<li>o <a href="https://byuistats.github.io/M335/r_help.html" target="blank">R and R-Studio Practice</a></li>
 <li>o <a href="https://youtu.be/fSgEeI2Xpdc" target="blank">John Rauser Talk</a></li>
-<li>o <a href="http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf" target="blank">Effectively Communicating Numbers (pg 1-13)</a></li>
-<li>o <a href="http://r4ds.had.co.nz/workflow-basics.html" target="blank">Chapter 4: R for Data Scientists - Workflow Basics</a></li>
-<li>o <a href="http://www.atlasobscura.com/articles/florence-nightingale-infographic" target="blank">Data Scientist Florence Nightengale</a></li>
-<li>o <a href="https://www.forbes.com/sites/drewhansen/2016/10/21/become-data-scientist/#3e8a4f4c87d3" target="blank">Forbes: Data science demand</a></li>
 </ul>
 </div>
-<div id="case-study-reading" class="section level5">
-<h5>Case Study Reading</h5>
+<div id="doing-readings" class="section level5">
+<h5>Doing Readings</h5>
 <ul>
 <li>o <a href="../rmarkdown_help.html" target="blank">Making your first R Markdown File</a></li>
 <li>o <a href="http://rmarkdown.rstudio.com/articles_intro.html" target="blank">Intro to R Markdown</a></li>
 <li>o <a href="http://r4ds.had.co.nz/r-markdown.html" target="blank">Chapter 27: R for Data Science - R Markdown</a></li>
 <li>o <a href="http://r4ds.had.co.nz/r-markdown-workflow.html" target="blank">Chapter 30: R for Data Science - R Markdown workflow</a></li>
+<li>o <a href="http://r4ds.had.co.nz/index.html" target="blank">Chapter 1: R for Data Scientists</a></li>
+<li>o <a href="https://byuistats.github.io/M335/r_help.html" target="blank">R and R-Studio Practice</a></li>
+<li>o <a href="http://r4ds.had.co.nz/workflow-basics.html" target="blank">Chapter 4: R for Data Scientists - Workflow Basics</a></li>
 </ul>
 </div>
 </div>
-<div id="week-2" class="section level4">
-<h4>Week 2</h4>
-<div id="class-tasks-reading-1" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="week-2-2018-09-24" class="section level4">
+<h4>Week 2 (2018-09-24)</h4>
+<div id="being-readings-1" class="section level5">
+<h5>Being Readings</h5>
 <ul>
-<li>o <a href="http://happygitwithr.com/installation-pain.html" target="blank">Chapter 4: Happy Git and Github for the useR - Installation</a></li>
-<li>o <a href="http://happygitwithr.com/github-acct.html" target="blank">Chapter 5: Happy Git and Github for the useR - GitHub</a></li>
-<li>o <a href="http://happygitwithr.com/install-git.html" target="blank">Chapter 7: Happy Git and Github for the useR - Install Git</a></li>
-<li>o <a href="http://happygitwithr.com/hello-git.html" target="blank">Chapter 8: Happy Git and Github for the useR - Using Git</a></li>
+<li>o <a href="http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf" target="blank">Effectively Communicating Numbers (pg 1-13)</a></li>
+<li>o <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen" target="blank">Hans Rosling: The best stats you’ve ever seen</a></li>
+<li>o <a href="https://medium.com/@boazsuper1/hiring-the-best-data-scientists-fba389a5b3c1" target="blank">Questions and data science</a></li>
+</ul>
+</div>
+<div id="doing-readings-1" class="section level5">
+<h5>Doing Readings</h5>
+<ul>
+<li>o <a href="http://r4ds.had.co.nz/data-visualisation.html" target="blank">Chapter 3: R for Data Science - Data visualization</a></li>
+<li>o <a href="https://resources.github.com/articles/github-and-rstudio/" target="blank">GitHub and Rstudio by Github (stop after the ‘Commit local changes with Git’)</a></li>
+<li>o <a href="https://resources.github.com/webcasts/GitHub-for-data-scientists/" target="blank">GitHub for Data Scientists</a></li>
 <li>o <a href="https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN" target="blank">Using the R-Studio GUI by R-Studio</a></li>
 <li>o <a href="http://r4ds.had.co.nz/workflow-projects.html" target="blank">Chapter 8: R for Data Science - Projects</a></li>
 <li>o <a href="https://byuistats.github.io/M335/git_335.html" target="blank">MCS 335, Git, and Github use</a></li>
 <li>o <a href="https://www.youtube.com/watch?v=E2d91v1Twcc" target="blank">R-Studio and the Git GUI</a></li>
-<li>o <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen" target="blank">Hans Rosling: The best stats you’ve ever seen</a></li>
-<li>o <a href="https://www.mindtools.com/pages/article/newTMC_88.htm" target="blank">Creating Questions for your project</a></li>
+<li>o <a href="https://www.lynda.com/Business-Skills-tutorials/Harness-power-questions/477451/574315-4.html" target="blank">Creating Questions for your project</a></li>
 <li>o <a href="http://r4ds.had.co.nz/transform.html" target="blank">Chapter 5: R for Data Science - Data transformation</a></li>
 <li>o <a href="https://campus.datacamp.com/courses/introduction-to-the-tidyverse/data-wrangling-1?ex=1" target="blank">DataCamp: Data Wrangling Chapter of Introduction to Tidyverse</a></li>
 <li>o <a href="https://campus.datacamp.com/courses/introduction-to-the-tidyverse/grouping-and-summarizing?ex=1" target="blank">DataCamp: Data Transformation Chapter of Introduction to Tidyverse</a></li>
 </ul>
 </div>
-<div id="case-study-reading-1" class="section level5">
-<h5>Case Study Reading</h5>
+</div>
+<div id="week-3-2018-10-01" class="section level4">
+<h4>Week 3 (2018-10-01)</h4>
+<div id="being-readings-2" class="section level5">
+<h5>Being Readings</h5>
 <ul>
-<li>o <a href="http://r4ds.had.co.nz/data-visualisation.html" target="blank">Chapter 3: R for Data Science - Data visualization</a></li>
 <li>o <a href="https://youtu.be/OwII-dwh-bk" target="blank">Hans Rosling: The River of Myths</a></li>
+<li>o <a href="http://www.atlasobscura.com/articles/florence-nightingale-infographic" target="blank">Data Scientist Florence Nightengale</a></li>
+<li>o <a href="https://elitedatascience.com/become-a-data-scientist" target="blank">How to Become a Data Scientist, The Self-Starter Way</a></li>
+<li>o <a href="https://www.forbes.com/sites/quora/2017/01/20/whats-the-best-path-to-becoming-a-data-scientist/#4327e73937d2" target="blank">What’s The Best Path To Becoming A Data Scientist?</a></li>
 </ul>
 </div>
-</div>
-<div id="week-3" class="section level4">
-<h4>Week 3</h4>
-<div id="class-tasks-reading-2" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="doing-readings-2" class="section level5">
+<h5>Doing Readings</h5>
 <ul>
-<li>o <a href="https://www.jstor.org/stable/2288400?seq=1#page_scan_tab_contents" target="blank">Graphical Perception: Theory, Experimentation, and Applications</a></li>
+<li>o <a href="https://github.com/STAT545-UBC/Discussion/issues/387" target="blank">Example of GitHub Issue conversation</a></li>
+<li>o <a href="https://guides.github.com/features/issues/" target="blank">Posting Issues on GitHub</a></li>
+<li>o <a href="https://github.com/tidyverse/reprex#what-is-a-reprex" target="blank">reprex R Package</a></li>
 <li>o <a href="http://r4ds.had.co.nz/graphics-for-communication.html" target="blank">Chapter 28: R for Data Science - Graphics for communication</a></li>
 <li>o <a href="http://r4ds.had.co.nz/workflow-scripts.html" target="blank">Chapter 6: R for Data Science - Scripts</a></li>
 <li>o <a href="http://r4ds.had.co.nz/data-import.html" target="blank">Chapter 11: R for Data Science - Data Import</a></li>
+<li>o <a href="http://r4ds.had.co.nz/graphics-for-communication.html" target="blank">Chapter 28: R for Data Science - Graphics for communication</a></li>
 </ul>
 </div>
-<div id="case-study-reading-2" class="section level5">
-<h5>Case Study Reading</h5>
+</div>
+<div id="week-4-2018-10-08" class="section level4">
+<h4>Week 4 (2018-10-08)</h4>
+<div id="being-readings-3" class="section level5">
+<h5>Being Readings</h5>
 <ul>
+<li>o <a href="https://www.jstor.org/stable/2288400?seq=1#page_scan_tab_contents" target="blank">Graphical Perception: Theory, Experimentation, and Applications</a></li>
 <li>o <a href="https://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/" target="blank">What do people do with new data</a></li>
-<li>o <a href="https://guides.github.com/features/issues/" target="blank">Posting Issues on GitHub</a></li>
 <li>o <a href="https://sifterapp.com/blog/2012/08/tips-for-effectively-reporting-bugs-and-issues/" target="blank">Being a good critiquer</a></li>
-<li>o <a href="https://github.com/STAT545-UBC/Discussion/issues/387" target="blank">Example of GitHub Issue conversation</a></li>
-<li>o <a href="https://github.com/tidyverse/reprex#what-is-a-reprex" target="blank">reprex R Package</a></li>
 </ul>
 </div>
-</div>
-<div id="week-4" class="section level4">
-<h4>Week 4</h4>
-<div id="class-tasks-reading-3" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="doing-readings-3" class="section level5">
+<h5>Doing Readings</h5>
 <ul>
 <li>o <a href="http://r4ds.had.co.nz/exploratory-data-analysis.html" target="blank">Chapter 7: R for Data Science - Exploratory Data Analysis</a></li>
 <li>o <a href="https://github.com/hadley/devtools" target="blank">devtoools R Package</a></li>
@@ -520,18 +556,19 @@ ul {
 <li>o <a href="http://r4ds.had.co.nz/pipes.html" target="blank">Chapter 18: R for Data Science - Pipes</a></li>
 </ul>
 </div>
-<div id="case-study-reading-3" class="section level5">
-<h5>Case Study Reading</h5>
+</div>
+<div id="week-5-2018-10-15" class="section level4">
+<h4>Week 5 (2018-10-15)</h4>
+<div id="being-readings-4" class="section level5">
+<h5>Being Readings</h5>
 <ul>
-<li>o <a href="http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf" target="blank">Effectively Communicating Numbers (pg 13-20)</a></li>
+<li>o <a href="http://vita.had.co.nz/papers/tidy-data.pdf" target="blank">Hadley on Tidy Data</a></li>
 </ul>
 </div>
-</div>
-<div id="week-5" class="section level4">
-<h4>Week 5</h4>
-<div id="class-tasks-reading-4" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="doing-readings-4" class="section level5">
+<h5>Doing Readings</h5>
 <ul>
+<li>o <a href="https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.dbf" target="blank">foreign R Package and <code>read.dbf()</code></a></li>
 <li>o <a href="http://r4ds.had.co.nz/data-import.html" target="blank">Chapter 11: R for Data Science - Data Import</a></li>
 <li>o <a href="http://haven.tidyverse.org/" target="blank">haven R Package</a></li>
 <li>o <a href="http://readxl.tidyverse.org/" target="blank">readxl R Package</a></li>
@@ -541,122 +578,128 @@ ul {
 <li>o <a href="https://github.com/awalker89/openxlsx" target="blank">openxlsx R package</a></li>
 </ul>
 </div>
-<div id="case-study-reading-4" class="section level5">
-<h5>Case Study Reading</h5>
+</div>
+<div id="week-6-2018-10-22" class="section level4">
+<h4>Week 6 (2018-10-22)</h4>
+<div id="being-readings-5" class="section level5">
+<h5>Being Readings</h5>
 <ul>
-<li>o <a href="http://vita.had.co.nz/papers/tidy-data.pdf" target="blank">Hadley on Tidy Data</a></li>
-<li>o <a href="https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.dbf" target="blank">foreign R Package and <code>read.dbf()</code></a></li>
+<li>o <a href="http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf" target="blank">Effectively Communicating Numbers (pg 13-20)</a></li>
 </ul>
 </div>
-</div>
-<div id="week-6" class="section level4">
-<h4>Week 6</h4>
-<div id="class-tasks-reading-5" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="doing-readings-5" class="section level5">
+<h5>Doing Readings</h5>
 <ul>
+<li>o <a href="http://www.regular-expressions.info/rlanguage.html" target="blank">Regular Expressions in R</a></li>
 <li>o <a href="http://r4ds.had.co.nz/relational-data.html" target="blank">Chapter 13: R for Data Science - Relational Data</a></li>
-<li>o <a href="http://ptgmedia.pearsoncmg.com/images/9780321934079/samplepages/9780321934079.pdf" target="blank">Chapter 4: The Truthful Art: Data, Charts, and Maps for Communication</a></li>
 <li>o <a href="http://r4ds.had.co.nz/strings.html" target="blank">Chapter 14: R for Data Science - Strings</a></li>
-<li>o <a href="https://www.thoughtworks.com/insights/blog/five-principles-effective-data-visualizations" target="blank">Five principles of effective data visualizations</a></li>
 <li>o <a href="http://regexr.com/" target="blank">regexr.com (optional)</a></li>
 <li>o <a href="https://qntm.org/files/re/re.html" target="blank">Regular Expression examples (optional)</a></li>
 <li>o <a href="https://regex101.com/" target="blank">Regular Expression support applet (optional)</a></li>
 <li>o <a href="http://stat545.com/block022_regular-expression.html" target="blank">Regular Expression for R (optional)</a></li>
 </ul>
 </div>
-<div id="case-study-reading-5" class="section level5">
-<h5>Case Study Reading</h5>
+</div>
+<div id="week-7-2018-10-29" class="section level4">
+<h4>Week 7 (2018-10-29)</h4>
+<div id="being-readings-6" class="section level5">
+<h5>Being Readings</h5>
 <ul>
-<li>o <a href="http://www.regular-expressions.info/rlanguage.html" target="blank">Regular Expressions in R</a></li>
+<li>o <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf" target="blank">Statistical Concepts in Presenting Data (pgs 72 - 85)</a></li>
 </ul>
 </div>
-</div>
-<div id="week-7" class="section level4">
-<h4>Week 7</h4>
-<div id="class-tasks-reading-6" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="doing-readings-6" class="section level5">
+<h5>Doing Readings</h5>
 <ul>
+<li>o <a href="https://www.lds.org/scriptures/bofm?lang=eng" target="blank">The Book of Mormon</a></li>
 <li>o <a href="http://r4ds.had.co.nz/factors.html" target="blank">Chapter 15: R for Data Science - Factors</a></li>
-<li>o <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf" target="blank">Statistical Concepts in Presenting Data (pgs 72 - 85)</a></li>
 <li>o <a href="http://stat545.com/block029_factors.html" target="blank">forcats R package</a></li>
 <li>o <a href="http://r4ds.had.co.nz/iteration.html" target="blank">Chapter 21: Iteration (21.1-21.5 is all you will need)</a></li>
 <li>o <a href="https://rdrr.io/rforge/stringi/man/stri_stats_latex.html" target="blank">stringi R package and the <code>stri_stats_latex()</code> function</a></li>
 </ul>
 </div>
-<div id="case-study-reading-6" class="section level5">
-<h5>Case Study Reading</h5>
-<ul>
-<li>o <a href="https://www.lds.org/scriptures/bofm?lang=eng" target="blank">The Book of Mormon</a></li>
-</ul>
 </div>
-</div>
-<div id="week-8" class="section level4">
-<h4>Week 8</h4>
-<div id="class-tasks-reading-7" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="week-8-2018-11-05" class="section level4">
+<h4>Week 8 (2018-11-05)</h4>
+<div id="being-readings-7" class="section level5">
+<h5>Being Readings</h5>
 <ul>
-<li>o <a href="http://r4ds.had.co.nz/dates-and-times.html" target="blank">Chapter 16: R for Data Science - Dates and Times</a></li>
-<li>o <a href="https://vcg.informatik.uni-rostock.de/~ct/timeviz/timeviz.html" target="blank">Time Series Visualization Gallery</a></li>
-<li>o <a href="https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html" target="blank">lubridate Vignette</a></li>
+<li>o <a href="https://medium.com/@Elijah_Meeks/what-charts-say-6e31cbba2047" target="blank">What charts say</a></li>
+<li>o <a href="http://ptgmedia.pearsoncmg.com/images/9780321934079/samplepages/9780321934079.pdf" target="blank">Chapter 4: The Truthful Art: Data, Charts, and Maps for Communication</a></li>
 <li>o <a href="https://plotlyblog.tumblr.com/post/117105992082/time-series-graphs-eleven-stunning-ways-you-can" target="blank">Plotly: Time Series Blog Post</a></li>
 </ul>
 </div>
-<div id="case-study-reading-7" class="section level5">
-<h5>Case Study Reading</h5>
+<div id="doing-readings-7" class="section level5">
+<h5>Doing Readings</h5>
 <ul>
 <li>o <a href="http://lubridate.tidyverse.org/" target="blank">lubridate R package</a></li>
+<li>o <a href="http://r4ds.had.co.nz/dates-and-times.html" target="blank">Chapter 16: R for Data Science - Dates and Times</a></li>
+<li>o <a href="https://vcg.informatik.uni-rostock.de/~ct/timeviz/timeviz.html" target="blank">Time Series Visualization Gallery</a></li>
+<li>o <a href="https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html" target="blank">lubridate Vignette</a></li>
 </ul>
 </div>
 </div>
-<div id="week-9" class="section level4">
-<h4>Week 9</h4>
-<div id="class-tasks-reading-8" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="week-9-2018-11-12" class="section level4">
+<h4>Week 9 (2018-11-12)</h4>
+<div id="being-readings-8" class="section level5">
+<h5>Being Readings</h5>
 <ul>
-<li>o <a href="https://github.com/business-science/tidyquant" target="blank">tidyquants R package</a></li>
+<li>o <a href="https://www.thoughtworks.com/insights/blog/five-principles-effective-data-visualizations" target="blank">Five principles of effective data visualizations</a></li>
+<li>o <a href="https://medium.com/@Elijah_Meeks/what-charts-do-48ed96f70a74" target="blank">What charts do</a></li>
 <li>o <a href="https://youtu.be/fSgEeI2Xpdc" target="blank">John Rauser Talk (Review)</a></li>
+</ul>
+</div>
+<div id="doing-readings-8" class="section level5">
+<h5>Doing Readings</h5>
+<ul>
+<li>o <a href="https://byuistats.github.io/M335/class_tasks/task16_details.html" target="blank">See task 16</a></li>
+<li>o <a href="https://github.com/business-science/tidyquant" target="blank">tidyquants R package</a></li>
 <li>o <a href="http://rstudio.github.io/dygraphs/index.html" target="blank">dygraphs for R</a></li>
 <li>o <a href="http://rstudio.github.io/DT/" target="blank">DT: An R interface to the Data Tables library</a></li>
 <li>o <a href="https://github.com/business-science/timekit" target="blank">timekit R package</a></li>
+</ul>
+</div>
+</div>
+<div id="week-10-2018-11-26" class="section level4">
+<h4>Week 10 (2018-11-26)</h4>
+<div id="being-readings-9" class="section level5">
+<h5>Being Readings</h5>
+<ul>
 <li>o <a href="https://priceonomics.com/how-william-cleveland-turned-data-visualization/" target="blank">How William Cleveland Turned Data Visualization into a Science</a></li>
+<li>o <a href="https://www.youtube.com/watch?v=Ewd5PXgLXlU&amp;feature=youtu.be" target="blank">Josh Wills on big data (tech data scientist)</a></li>
+<li>o <a href="https://www.youtube.com/watch?v=wn5larsRHro" target="blank">Issues with Spatial Aggregation</a></li>
 </ul>
 </div>
-<div id="case-study-reading-8" class="section level5">
-<h5>Case Study Reading</h5>
+<div id="doing-readings-9" class="section level5">
+<h5>Doing Readings</h5>
 <ul>
-<li>o <a href="https://byuistats.github.io/M335/class_tasks/task16_details.html" target="blank">See task 16</a></li>
-</ul>
-</div>
-</div>
-<div id="week-10" class="section level4">
-<h4>Week 10</h4>
-<div id="class-tasks-reading-9" class="section level5">
-<h5>Class Tasks Reading</h5>
-<ul>
+<li>o <a href="http://strimas.com/r/tidy-sf/" target="blank">Tidy Spatial Data (Blog Post)</a></li>
+<li>o <a href="https://github.com/ropenscilabs/rnaturalearth" target="blank">rnaturalearth R Package</a></li>
+<li>o <a href="https://hafen.github.io/geofacet/" target="blank">geofacet for ggplot2 in R</a></li>
 <li>o <a href="https://byuistats.github.io/M335/spatial_reading.html" target="blank">Using SF package with tidyverse</a></li>
 <li>o <a href="https://r-spatial.github.io/sf/" target="blank">SF R package</a></li>
 <li>o <a href="https://github.com/ropensci/USAboundaries" target="blank">USAboundaries R Package</a></li>
 <li>o <a href="https://www.youtube.com/watch?v=xKGlMp__jog" target="blank">Video on spatial datums</a></li>
 <li>o <a href="https://www.youtube.com/watch?v=kXTHaMY3cVk" target="blank">Video 2 on spatial datums</a></li>
 <li>o <a href="https://r-spatial.github.io/sf/articles/sf2.html" target="blank">Using <code>library(sf)</code> to read in spatial data</a></li>
-<li>o <a href="https://www.youtube.com/watch?v=Ewd5PXgLXlU&amp;feature=youtu.be" target="blank">Josh Wills on big data (tech data scientist)</a></li>
-<li>o <a href="https://www.youtube.com/watch?v=wn5larsRHro" target="blank">Issues with Spatial Aggregation</a></li>
-</ul>
-</div>
-<div id="case-study-reading-9" class="section level5">
-<h5>Case Study Reading</h5>
-<ul>
-<li>o <a href="http://strimas.com/r/tidy-sf/" target="blank">Tidy Spatial Data (Blog Post)</a></li>
-<li>o <a href="https://github.com/ropenscilabs/rnaturalearth" target="blank">rnaturalearth R Package</a></li>
-<li>o <a href="https://hafen.github.io/geofacet/" target="blank">geofacet for ggplot2 in R</a></li>
 </ul>
 </div>
 </div>
-<div id="week-11" class="section level4">
-<h4>Week 11</h4>
-<div id="class-tasks-reading-10" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="week-11-2018-12-03" class="section level4">
+<h4>Week 11 (2018-12-03)</h4>
+<div id="being-readings-10" class="section level5">
+<h5>Being Readings</h5>
 <ul>
+<li>o <a href="https://mapr.com/blog/spark-101-what-it-what-it-does-and-why-it-matters/" target="blank">What is Spark?</a></li>
+<li>o <a href="https://www.youtube.com/watch?v=4DgTLaFNQq0&amp;feature=youtu.be" target="blank">What is Hadoop?</a></li>
+<li>o <a href="http://onlinelibrary.wiley.com/doi/10.1002/sam.11242/epdf" target="blank">Divide and Recombine (plus a history of data science)</a></li>
+<li>o <a href="https://onlinelibrary.wiley.com/toc/19321872/2014/7/6" target="blank">Background reading for D&amp;R article (optional)</a></li>
+</ul>
+</div>
+<div id="doing-readings-10" class="section level5">
+<h5>Doing Readings</h5>
+<ul>
+<li>o <a href="http://rstudio.github.io/leaflet/" target="blank">Leaflet for R: Introduction</a></li>
 <li>o <a href="http://rstudio.github.io/leaflet/" target="blank">Leaflet for R: Introduction</a></li>
 <li>o <a href="http://rstudio.github.io/leaflet/map_widget.html" target="blank">Leaflet for R: The Map Widget</a></li>
 <li>o <a href="http://rstudio.github.io/leaflet/basemaps.html" target="blank">Leaflet for R: Basemaps</a></li>
@@ -664,34 +707,23 @@ ul {
 <li>o <a href="http://rstudio.github.io/leaflet/popups.html" target="blank">Leaflet for R: Popups and Labels</a></li>
 <li>o <a href="http://rstudio.github.io/leaflet/shapes.html" target="blank">Leaflet for R: Lines and Shapes</a></li>
 <li>o <a href="http://rstudio.github.io/leaflet/colors.html" target="blank">Leaflet for R: Colors</a></li>
-<li>o <a href="https://mapr.com/blog/spark-101-what-it-what-it-does-and-why-it-matters/" target="blank">What is Spark?</a></li>
-<li>o <a href="https://www.youtube.com/watch?v=4DgTLaFNQq0&amp;feature=youtu.be" target="blank">What is Hadoop?</a></li>
-<li>o <a href="http://onlinelibrary.wiley.com/doi/10.1002/sam.11242/epdf" target="blank">Divide and Recombine (plus a history of data science)</a></li>
-</ul>
-</div>
-<div id="case-study-reading-10" class="section level5">
-<h5>Case Study Reading</h5>
-<ul>
-<li>o <a href="http://rstudio.github.io/leaflet/" target="blank">Leaflet for R: Introduction</a></li>
 </ul>
 </div>
 </div>
-<div id="week-12" class="section level4">
-<h4>Week 12</h4>
-<div id="class-tasks-reading-11" class="section level5">
-<h5>Class Tasks Reading</h5>
+<div id="week-12-2018-12-10" class="section level4">
+<h4>Week 12 (2018-12-10)</h4>
+<div id="being-readings-11" class="section level5">
+<h5>Being Readings</h5>
 <ul>
-<li>o <a href="http://r4ds.had.co.nz/r-markdown-formats.html" target="blank">Chapter 29: R for Data Science - R Markdown format</a></li>
 <li>o <a href="http://www.slate.com/articles/technology/future_tense/2016/02/how_to_bring_better_ethics_to_data_science.html" target="blank">Ethics of a Data Scientist</a></li>
-<li>o <a href="http://r4ds.had.co.nz/functions.html" target="blank">Chapter 19: R for Data Science - Functions</a></li>
-<li>o <a href="https://www.tableau.com/blog/stephen-few-data-visualization" target="blank">Perceptual Zen: Learning to See (Overview)</a></li>
-<li>o <a href="http://conference.tableausoftware.com/2009/keynotes/stephen-few/Perceptual%20Zen%20Presentation%20-%20Print%20Version.pdf" target="blank">Perceptual Zen: Learning to See (Presentation)</a></li>
 </ul>
 </div>
-<div id="case-study-reading-11" class="section level5">
-<h5>Case Study Reading</h5>
+<div id="doing-readings-11" class="section level5">
+<h5>Doing Readings</h5>
 <ul>
 <li>o <a href="https://byuistats.github.io/M335/project.html" target="blank">Semester Project</a></li>
+<li>o <a href="http://r4ds.had.co.nz/r-markdown-formats.html" target="blank">Chapter 29: R for Data Science - R Markdown format</a></li>
+<li>o <a href="http://r4ds.had.co.nz/functions.html" target="blank">Chapter 19: R for Data Science - Functions</a></li>
 </ul>
 </div>
 </div>

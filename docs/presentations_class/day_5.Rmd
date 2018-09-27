@@ -16,14 +16,6 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
 ```
 
-# Great Quotes
-
-## Hans
-
-**It is only by measuring that we can cross the river of myths.**
-
-> - [Hans Rosling](https://youtu.be/OwII-dwh-bk)
-
 # Becoming the Critic.
 
 ```{r nextone}
@@ -72,14 +64,34 @@ candidates %>%
 ```
 
 
+
+# Being Readings
+
+# How does data change belief?
+
+## To understand God's thoughts we must study statistics, for these are the measure of His purpose.
+
+-Florence Nightingale ([Coxcomb graph](https://en.wikiquote.org/wiki/Florence_Nightingale#/media/File:Nightingale-mortality.jpg))
+
+<small>
+Her most famous graph, displayed at the top of this article, shows the number of soldier deaths per month from various causes. Each pie slice represents a different month, from April 1854 through March 1856, and each color stands for a different cause of death. It takes just a quick glance to achieve the two main takeaways: that disease, colored blue, killed far more soldiers than either "wounds" (red) or "other" (black), and that it was reduced greatly in 1855.
+</small>
+
+## What changed Britian's mind?
+
+After she completed her report, Nightingale worked hard to turn its conclusions into common knowledge, privately distributing it to influential people and writing several more reports, many of which included coxcombs. When she received push back from Army doctors, who thought sanitary measures a waste of money, she even leaked some of her charts to the press.
+
+## Hans
+
+**It is only by measuring that we can cross the river of myths.**
+
+> - [Hans Rosling](https://youtu.be/OwII-dwh-bk)
+
+
+
 ```{r child=md_intro_format}
 
 ```
-
-
-## Github Activity
-
-> * [Watching Class Activity](https://github.com/BYUI335/M335_HathawayJ/issues/15)
 
 
 ## Virtual Questions and Support
@@ -112,7 +124,7 @@ There were three democratic candidates.  We are going to use the following plots
 
 ## Class Activity: Getting Started
 
-```{r gettingstarted, eval=FALSE}
+```{r gettingstarted, eval=FALSE, echo=TRUE}
 
 #install.packages("nycflights13")
 library(nycflights13)
@@ -133,12 +145,9 @@ Get the above code working.  We will be tweaking it using ggplot for the next pa
 ## Labelling the outside
 
 Complete the following - **Create clean labels for the x and y axes and zoom in on the y-axis from 50 to 100 minutes. Also have breaks every 15 minutes**
-
-> * labelling - Axes, Titles, and Legends
-
-> * xy Scales - `scale_x_`, `scale_y`, `coord_`
->    * Setting breaks and changing labels
->    * Transforming scale
+   
+> - labelling - Axes, Titles, and Legends
+> - xy Scales - `scale_x_`, `scale_y`, `coord_` - Setting breaks and changing labels *or* Transforming scale
 
 ```{r labelzoom, eval=FALSE, echo=FALSE}
 # be careful with limits in scale_
@@ -150,13 +159,15 @@ fl_bp + geom_boxplot() + coord_cartesian(ylim = c(-50, 100))
 
 ## Labelling the inside
 
-Complete the following - **1) Color the points of `fl_sc` by `origin` using the brewer scale. 2) Color the points of `fl_sc` by `arr_delay`**
+Complete the following - 
 
-> * Annotations - Marking points
-> * color & fill scales
->    * `scale_color_`
->    * `scale_fill_`
->    * `scale_gradient_`
+> 1. Color the points of `fl_sc` by `origin` using the brewer scale. 
+> 2. Color the points of `fl_sc` by `arr_delay`**
+
+> - color & fill scales   
+>     - `scale_color_`
+>     - `scale_fill_`
+>     - `scale_gradient_`
 
 ```{r colorinside, echo=FALSE, eval=FALSE}
 fl_sc + geom_point(aes(color = origin), size = 3) +
@@ -187,8 +198,7 @@ direct.label(bob)
 
 ## Changing the feel
 
-Complete the following - **Use a `theme_() to create a different look for your graphic and change the orientiation of the x-axis test to 35 degrees**
-
+Complete the following - **Use a `theme_()` to create a different look for your graphic and change the orientiation of the x-axis test to 35 degrees**
 
 > * Themes (check out `library(ggthemes)`)
 > * `ggsave()`
@@ -203,9 +213,6 @@ fl_bp +
     theme(axis.text.x = element_text(angle = 35))
 
 ```
-
-
-
 
 # Displaying distributions of multiple groups for decision making
 
@@ -240,15 +247,14 @@ Remember, data can get complicated very fast.
 * [violin plots](http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/)
 * [beeswarm plots](https://github.com/eclarke/ggbeeswarm)
 * [letter-value box-plots](https://github.com/hadley/lvplot)
-
-Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
+* Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
 
 
 ## Histograms (1)
 
 What don't we like about this plot?
 
-```{r bbbb3, fig.height=3}
+```{r bbbb3, fig.height=4, fig.width=8, cache=TRUE}
 # plot code for histograms
 
 flights %>% 
@@ -266,7 +272,7 @@ flights %>%
 * What changed in this histogram?
 * What don't we like about this plot?
 
-```{r bbbbb5, fig.height=3}
+```{r bbbbb5, fig.height=4, fig.width=8, cache=TRUE}
 # plot code for histograms
 
 flights %>% 
@@ -278,13 +284,12 @@ flights %>%
 
 ```
 
-
 ## Boxplots
 
 * What don't we like about this plot?
 * How hard is it to explain?
 
-```{r bbbbbb444, fig.height=3}
+```{r bbbbbb444, fig.height=4, fig.width=8, cache=TRUE}
 
 gg_base <- flights %>%
   ggplot(aes(x = carrier, y = dep_delay)) +
@@ -301,7 +306,7 @@ gg_base + geom_boxplot()
 * What don't we like about this plot?
 * How hard is it to explain?
 
-```{r violin, fig.height=3}
+```{r violin, fig.height=4, fig.width=8, cache=TRUE}
 
 # Now add varied distribution geoms
 gg_base + geom_violin()
@@ -314,7 +319,7 @@ gg_base + geom_violin()
 * What don't we like about this plot?
 * How hard is it to explain?
 
-```{r beeswarm, fig.height=3}
+```{r beeswarm, fig.height=4, fig.width=8, cache=TRUE}
 # Now add varied distribution geoms
 library(ggbeeswarm)
 gg_base + geom_quasirandom(alpha = .6, size = .75)
@@ -326,7 +331,7 @@ gg_base + geom_quasirandom(alpha = .6, size = .75)
 * What don't we like about this plot?
 * How hard is it to explain?
 
-```{r beeswarm2, fig.height=3}
+```{r beeswarm2, fig.height=4, fig.width=8, cache=TRUE}
 # Now add varied distribution geoms
 library(ggbeeswarm)
 gg_base + geom_quasirandom(alpha = .6, size = .75) + 
@@ -339,7 +344,7 @@ gg_base + geom_quasirandom(alpha = .6, size = .75) +
 * What don't we like about this plot?
 * How hard is it to explain?
 
-```{r lettervalue, fig.height=3}
+```{r lettervalue, fig.height=4, fig.width=8, cache=TRUE}
 # Now add varied distribution geoms
 library(lvplot)
 gg_base + geom_lv(aes(fill = ..LV..)) + scale_fill_lv()
@@ -351,7 +356,7 @@ gg_base + geom_lv(aes(fill = ..LV..)) + scale_fill_lv()
 * What don't we like about this plot?
 * How hard is it to explain?
 
-```{r lettervalue2, fig.height=3}
+```{r lettervalue2, fig.height=4, fig.width=8, cache=TRUE}
 # Now add varied distribution geoms
 library(lvplot)
 gg_base + geom_lv(aes(fill = ..LV..)) + 
@@ -365,7 +370,7 @@ gg_base + geom_lv(aes(fill = ..LV..)) +
 * What don't we like about this plot?
 * How hard is it to explain?
 
-```{r lv3, fig.height=3}
+```{r lv3, fig.height=4, fig.width=8, cache=TRUE}
 # Now add varied distribution geoms
 library(lvplot)
 gg_base + geom_lv(aes(fill = ..LV..)) + 

@@ -112,6 +112,12 @@ The main benefit of xts is its seamless compatibility with other packages using 
 Write out what this function is doing.
 
 
+```r
+tq_transmute(select = adjusted,
+               mutate_fun = periodReturn, 
+               period = "daily",
+               type = "log")
+```
 
 - **Hint:** Read about `quantmod::periodReturn()`
 
@@ -120,13 +126,14 @@ Write out what this function is doing.
 Write out what this function is doing.
 
 
+```r
+  tq_portfolio(assets_col=symbol,
+               returns_col=daily.returns, 
+               weights = tibble(asset.names = friend, weight = c(0.259,.534,.207)),
+               wealth.index = T)
+```
 
 - **Hint:** Read about `PerformanceAnalytics::Return.portfolio()`
-
-## dygraphs: R connection to dygraphs JavaScript charting library
-
-Open the [dygraphs help webstie](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.
-
 
 # Settling In
 
@@ -137,3 +144,18 @@ Open the [dygraphs help webstie](http://rstudio.github.io/dygraphs/index.html) a
 > - [Remembering Good Principles](https://youtu.be/fSgEeI2Xpdc)
 > - [Rauser view on time and data](https://www.youtube.com/embed/coNDCIMH8bk?start=628) - 10:28 to 17:50
 
+## Edward Tufte
+
+> Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space
+
+> Edward Tufte
+
+# Next Class
+
+## dygraphs: R connection to dygraphs JavaScript charting library
+
+Open the [dygraphs help webstie](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.
+
+## Book Group Conversation
+
+Please be prepared with notes about [this](https://priceonomics.com/how-william-cleveland-turned-data-visualization/)  reading in [Task 18](https://byuistats.github.io/M335/class_tasks/task18_details.html) 

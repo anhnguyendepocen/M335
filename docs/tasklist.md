@@ -26,6 +26,8 @@ ul {
 
 This page is provided to give you a one-page view of your task completion throughout the semester.  You can edit the `.md` file in your repository from `* [ ] blah blah blah` to `* [x] blah blah blah` to show the task as completed. You can see a [one-page view of all task backgrounds](backgrounds.html){target="blank"} as well.
 
+**The mapping of tasks to a final grade is listed in [Syllabus::Competency Scale](syllabus.html#competency_scale)**
+
 ## Semester Deliverables
 
 #### [Semester Project](project.html)
@@ -58,19 +60,19 @@ Leadership in data science requires you to be prepared to answer the clients que
 
 [Case study 13](weekly_projects/cs13_details.html) provides the checklist items for your portfolio. This portfolio package will be the basis of your final grade. 
 
-* [ ] Complete LinkedIn, GitHub, Slack profiles that have been connected to our BYU-I data science community
-* [ ] A cover letter stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion
-* [ ] A resume that includes the skills you have learned during our projects
-* [ ] A semester task form that records your completed tasks during the semester (electronic or print)
+* [ ] Join the BYUI LinkedIn, GitHub, Slack groups and make sure your picture is placed in your profile.
+* [ ] A cover letter to me stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion
+* [ ] A current resume that includes the skills you have learned during our projects which you would submit to any future jobs
+* [ ] A semester task form that records your completed tasks during the semester (electronic)
 * [ ] Semester project submission on GitHub
-* [ ] Submit this material electronically [schedule a visit with me](https://byuistats.github.io/M335/visitme.html)
+* [ ] Submit this material electronically to your repository and [schedule a visit with me](https://byuistats.github.io/M335/visitme.html)
 
 #### Coding Challenge
 
 On the last day of class each of you will have the 1.5 hours of class to complete a coding challenge.  You will not be able to work with others, but will be able to ask questions of the teacher in class. The coding challenge will use the techniques and programming developed from the course.
 
 1. **You must pass the challenge to keep grade earned from the [completed tasks](https://byuistats.github.io/M335/syllabus.html#competency_scale).**
-2. Failure to pass the challenge will lower your 1-2 steps.
+2. Failure to pass the challenge will lower your grade 1-2 steps.
 
 ## Weekly Case Studies
 
@@ -85,12 +87,11 @@ On the last day of class each of you will have the 1.5 hours of class to complet
     * [ ] Write a one paragraph critique of each visualization
     * [ ] Add the R code below to your `.Rmd` file
     * [ ] Knit the file to `.html` and keep the `.md` file as well
-* [ ] Create an account on [slack](https://join.slack.com/t/byuidwv/signup?x=x-339637048932-339197858336){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
+* [ ] Create an account on [slack](https://byuidwv.slack.com/signup){target="blank"}.  You might create a catchy username that matches your other social media usernames and that can follow you for your career. Mine is `hathawayj`.
     * [ ] Upload your intermediary `.md` file to the general channel in our Slack group
 
 #### [Case Study 2](weekly_projects/cs02_details.html)
 
-* [ ] Watch the [Hons Rosling video](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target="blank"}
 * [ ] Recreate the two graphics shown below using `gapminder` dataset from `library(gapminder)` (get them to match as closely as you can)
     * [ ] Use `library(ggplot2)` and the `theme_bw()` to duplicate the first plot
     * [ ] Use  `scale_y_continuous(trans = "sqrt")` to get the correct scale on the y-axis.
@@ -107,6 +108,7 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 #### [Case Study 3](weekly_projects/cs03_details.html)
 
 * [ ] Address at least two of the three questions in the background description (if you have time try to tackle all three)
+* [ ] Make sure to include one or more visualization that shows the complexity of the data.
 * [ ] Create one `.rmd` file that has your report
     * [ ] Have a section for each question
     * [ ] Make sure your code is in the report but defaults to hidden
@@ -121,7 +123,6 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 
 #### [Case Study 4](weekly_projects/cs04_details.html)
 
-* [ ] Read "Effectively Communicating Numbers (pg. 13-20)" and add one paragraph to your `.Rmd` summarizing what you learned.
 * [ ] Provide a brief summary of the [FiveThirtyEight article](https://fivethirtyeight.com/features/gun-deaths/){target="blank"}
     * [ ] Create one plot that provides similar insight to their visualization in the article. It does not have to look like theirs.
     * [ ] Write a short paragraph summarizing their article
@@ -141,7 +142,7 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 * [ ] Import the other five datasets into R and combine them into one tidy dataset.
     * [ ] This dataset should have the following columns - birth_year, height.cm, height.in, and study_id
     * [ ] The BLS wage data does not have birth information.  Let's assume it is mid-twentieth century and use 1950.
-    * [ ] See the reading of [Task 7](https://byuistats.github.io/M335/class_tasks/task07_details.html) for how to read in dbf files.
+    * [ ] See the reading of [Task 8](https://byuistats.github.io/M335/class_tasks/task08_details.html) for how to read in dbf files.
 * [ ] Save the two tidy datasets to your repository - The world country estimates and the row-combined individual measurements.
 * [ ] Make a plot with decade on the x-axis and height in inches on the y-axis with the points from Germany highlighted based on the data from the `.xlsx` file.
 * [ ] Make a small-multiples plot of the five studies to examine the question of height distribution across centuries
@@ -223,8 +224,6 @@ On the last day of class each of you will have the 1.5 hours of class to complet
     * [ ] Find your own spatial data that interests you and build a visualization
 * [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your graphics and the choices you made in your visualization
 * [ ] Compile your `.md` and `.html` file into your git repository
-* [ ] Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
-* [ ] Address 1-2 of the issues posted on your project and push the updates to GitHub
 
 #### [Case Study 12](weekly_projects/cs12_details.html)
 
@@ -239,12 +238,12 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 
 #### [Case Study 13](weekly_projects/cs13_details.html)
 
-* [ ] Complete LinkedIn, GitHub, Slack profiles that have been connected to our BYU-I data science community
-* [ ] A cover letter stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion
-* [ ] A resume that includes the skills you have learned during our projects
-* [ ] A semester task form that records your completed tasks during the semester (electronic or print)
+* [ ] Join the BYUI LinkedIn, GitHub, Slack groups and make sure your picture is placed in your profile.
+* [ ] A cover letter to me stating the key concepts and techniques that you learned during our projects and your goals to continue learning in this area - include a grade request that represents your knowledge and task completion
+* [ ] A current resume that includes the skills you have learned during our projects which you would submit to any future jobs
+* [ ] A semester task form that records your completed tasks during the semester (electronic)
 * [ ] Semester project submission on GitHub
-* [ ] Submit this material electronically [schedule a visit with me](https://byuistats.github.io/M335/visitme.html)
+* [ ] Submit this material electronically to your repository and [schedule a visit with me](https://byuistats.github.io/M335/visitme.html)
 
 ## Daily Class Tasks
 
@@ -253,7 +252,7 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 
 #### [Class Task 1](class_tasks/cs01_details.html)
 
-* [ ] Read the [course sylabus](https://byuistats.github.io/M335/syllabus.html) and make sure you understand our class routine and grading
+* [ ] Read the [course syllabus](https://byuistats.github.io/M335/syllabus.html) and make sure you understand our class routine and grading
 * [ ] Get R and R-Studio running on your computer
     * [ ] Install the swirl package `install.packages("swirl")`
     * [ ] Use `library(swirl)` and follow directions to get 'R Programming: The basics of programming in R' course loaded
@@ -268,22 +267,10 @@ On the last day of class each of you will have the 1.5 hours of class to complet
     * [ ] Ignore the token submission step
 * [ ] Complete Lessons 5-7 in the `library(swirl)` package of the course `install_course("R Programming E")`
     * [ ] Follow sub-directions above.
-* [ ] Read a short article about the [data scientist Florence Nightengale](http://www.atlasobscura.com/articles/florence-nightingale-infographic){target="blank"} and write a two to three sentence paragraph critique of her coxcomb graphic based on your perceptions of quality graphics.
-    * [ ] In class, be prepared to submit your write up electronically.
 * [ ] Create a [GitHub account](https://github.com/join?source=header-home){target="blank"} and post your github username on the [google docs sheet](https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514)
+* [ ] Get a professional picture taken for your Github, LinkedIn, and Slack icons.  Go to the [LinkedIn Photobooth](http://www.byui.edu/alumni/alumni-linkedin-photo-booth) if you don't already have one.
 
 #### [Class Task 3](class_tasks/task03_details.html)
-
-* [ ] Install git on your computer
-* [ ] Make sure your GitHub account is registered
-* [ ] Work through readings on git and github
-* [ ] Make sure git works in R-Studio
-* [ ] Update your README.md in your repository (you will need to give me time to create your repo after you post your username)
-    * [ ] Type one or two sentences that describe you
-    * [ ] Make sure you pull and push
-* [ ] Check your folder structure in your git repo to match the format for our class - [see MCS 335 Folder Structure](https://byuistats.github.io/M335/git_335.html)
-
-#### [Class Task 4](class_tasks/task04_details.html)
 
 * [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Develop a few novel questions that data can answer
@@ -292,37 +279,38 @@ On the last day of class each of you will have the 1.5 hours of class to complet
     * [ ] Present your question to a data scientist to get feedback on the quality of the question and if it can be addressed in 2-months.
 * [ ] Create one `.rmd` file that has your report
     * [ ] Have a section for each question
-* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
 * [ ] Be prepared to discuss your results in the upcoming class
 
+#### [Class Task 4](class_tasks/task04_details.html)
+
+* [ ] Install git on your computer
+* [ ] Make sure your GitHub account is registered
+* [ ] Work through readings on git and github
+* [ ] Make sure git works in R-Studio
+* [ ] Update your README.md in your repository (you will need to give me time to create your repo after you post your username)
+    * [ ] Type one or two sentences that describe you
+    * [ ] Make sure you pull and push
+* [ ] Get your previous class tasks and case studies into the appropriate folders and add, commit, push with git
+
 #### [Class Task 5](class_tasks/task05_details.html)
-
-* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
-* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate but poorly built to communicate data.
-* [ ] Use the graphical perception rules you learned in your reading to make a graph that is accurate and optimizes data communication.
-* [ ] Create an `.Rmd` file with 1-2 paragraphs summarizing your 2 graphics and the choices you made in the data presentation
-* [ ] Compile your `.md` and `.html` file into your git repository
-
-#### [Class Task 6](class_tasks/task06_details.html)
 
 * [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Review the [Our World in Data](https://ourworldindata.org/){target="blank"} webpage and find a graphic that interests you.
     * [ ] Recreate that graphic in R after downloading the data from their website
 * [ ] Explore the world data on `child_mortality` and create an interesting graphic that highlights this dataset.
     * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `child_mortality`.  This will require `install.packages("devtools")`.
-    * [ ] Create a graphic that you could use in a presentation to summarize world child mortatility
+    * [ ] Create a graphic that you could use in a presentation to summarize world child mortality
 * [ ] Include your plots in an `.Rmd` file with short paragraph describing your plots
 * [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
 
+#### [Class Task 6](class_tasks/task06_details.html)
+
+* [ ] Find an insightfull relationship between two of the variables (columns) and display that relationship in a table or graphic
+    * [ ] document the iterative script that built to your insightfull relationship
+* [ ] Create an `.R` script that has your data visualization development with 1-2 commented paragraphs summarizing your 2 finalized graphics and the choices you made in the data presentation
+* [ ] Save your `.png` images of each your final graphics and push all your work to your repository.
+
 #### [Class Task 7](class_tasks/task07_details.html)
-
-* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
-* [ ] Explore the world data on `financing_healthcare` and create an interesting graphic that highlights this dataset in relation to child mortality.
-    * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `financing_healthcare`
-    * [ ] Create a graphic that you could use in a final presentation to summarize world child mortatility (`child_mort` column)
-* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
-
-#### [Class Task 8](class_tasks/task08_details.html)
 
 * [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Build an interactive document that has links to sources with a description of the quality of each
@@ -332,6 +320,16 @@ On the last day of class each of you will have the 1.5 hours of class to complet
     * [ ] Include 2-3 quick visualizations that you used to check the quality of your data
     * [ ] Summarize the limitations of your final compiled data in addressing your original question
 * [ ] After formatting your data identify any follow on or alternate questions that you could use for your project
+
+#### [Class Task 8](class_tasks/task08_details.html)
+
+* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
+* [ ] Provide a distributional summary of the relevant variable in `nycflights13::flights`
+* [ ] Build bivariate summaries of the relevant variables
+* [ ] Explore the world data on `financing_healthcare` and create an interesting graphic that highlights this dataset in relation to child mortality.
+    * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `financing_healthcare`
+    * [ ] Create a graphic that you could use in a final presentation to summarize world child mortality (`child_mort` column)
+* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
 
 #### [Class Task 9](class_tasks/task09_details.html)
 
@@ -359,20 +357,20 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 
 #### [Class Task 11](class_tasks/task11_details.html)
 
+* [ ] Use the `readr::read_lines()` function to read in each string - [randomletters.txt](https://byuistats.github.io/M335/data/randomletters.txt){target="blank"} and [randomletters_wnumbers.txt](https://byuistats.github.io/M335/data/randomletters_wnumbers.txt){target="blank"}
+* [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, …) and find the quote that is hidden - the quote ends with a period
+* [ ] With the `randomletters_wnumbers.txt` file, find all the numbers hidden and convert those numbers to letters using the letters order in the alphabet to decipher the message
+* [ ] With the `randomletters.txt` file, remove all the spaces and periods from the string then find the longest sequence of vowels.
+* [ ] Save your `.R` script to your repository and be ready to share your code solution at the beginning of class
+
+#### [Class Task 12](class_tasks/task12_details.html)
+
 * [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Install the `library(Lahman)` and examine the available data sets available
     * [ ] Find the 4-5 different data sets that you will need to show full college and player names as well as their annual earnings
 * [ ] Install the `library(blscrapeR)` and use the `inflation_adjust(2017)` function to get all earnings in 2017 dollars
 * [ ] Make a plot showing how professional baseball player earnings that played baseball at BYU compared to the players from other Utah schools
 * [ ] Save your `.R` script and image to your repository and be ready to share your code and image at the beginning of class
-
-#### [Class Task 12](class_tasks/task12_details.html)
-
-* [ ] Use the `readr::read_lines()` function to read in each string - [randomletters.txt](https://byuistats.github.io/M335/data/randomletters.txt){target="blank"} and [randomletters_wnumbers.txt](https://byuistats.github.io/M335/data/randomletters_wnumbers.txt){target="blank"}
-* [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, …) and find the quote that is hidden - the quote ends with a period
-* [ ] With the `randomletters_wnumbers.txt` file, find all the numbers hidden and convert those numbers to letters using the letters order in the alphabet to decipher the message
-* [ ] With the `randomletters.txt` file, remove all the spaces and periods from the string then find the longest sequence of vowels.
-* [ ] Save your `.R` script to your repository and be ready to share your code solution at the beginning of class
 
 ### Tasks 13 -24
 
@@ -442,7 +440,6 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 #### [Class Task 20](class_tasks/task20_details.html)
 
 * [ ] Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
-* [ ] Watch the Josh Wills video on big data and be prepared for a disucssion in class.
 * [ ] Read in all four of the necessary shp file datasets (see description)
 * [ ] Filter all the data for the specific needs of Idaho
 * [ ] Create a `.png` image that plots the required information
@@ -465,8 +462,5 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 
 * [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
 * [ ] Repeat the [task 12 tasks](https://byuistats.github.io/M335/class_tasks/task12_details.html){target="blank"} using three functions that you built
-* [ ] Complete listed reading for class discussion
 
 #### [Class Task 24](class_tasks/task24_details.html)
-
-* [ ] Complete listed reading for class discussion

@@ -73,6 +73,11 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 Write this chunk of code out in an English sentence to your grandma.
 
 
+```r
+best_in_class <- mpg %>%
+  group_by(class) %>%
+  filter(row_number(desc(hwy)) == 1)
+```
 
 ## Data formats
 
@@ -108,13 +113,13 @@ Use this code - `money <- c("4,554,25", "$45", "8025.33cents", "288f45")`
 
 
 > 1. Run this line of code below
-
-
-
 > 2. Look at the errors (`problems(challenge)`), the `head()`, and `tail()` of your `challenge` object.  What formats should they be?
-
 > 3. Now review [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and fix the read in.
 
+
+```r
+challenge <- read_csv(readr_example("challenge.csv"))
+```
 
 
 ## Scripts
@@ -154,6 +159,25 @@ Use the [code from 28.3](http://r4ds.had.co.nz/graphics-for-communication.html) 
 ## My Code Solution
 
 
+```r
+library(ggrepel)
+library(viridis)
+
+best_in_class <- mpg %>% 
+  group_by(class) %>% 
+  filter(row_number(desc(hwy)) == 1)
+
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point(aes(colour = class), size = 3) +
+  geom_point(size = 1.5, data = best_in_class, color = "white") +
+  geom_text_repel(aes(label = model, colour = class), 
+                  data = best_in_class, show.legend = FALSE, 
+                  nudge_x = -1, nudge_y = -2) +
+  theme_bw() + theme(panel.grid.minor = element_blank()) +
+  scale_color_viridis(discrete = TRUE) + 
+  labs(x = "Engine displacement", y = "Miles per gallon (highway)", 
+       color = "Vehicle type")
+```
 
 
 # Displaying multiple distributions
@@ -168,4 +192,8 @@ Data can get complicated very fast. How do we provide depth of variability under
 
 Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
 
-> * [link to last presentation](presentations_class/day_5.html)
+> * [link to last presentation](day_5.html#/displaying-distributions-of-multiple-groups-for-decision-making)
+
+## Next Challenge
+
+![](day_6_files/figure-revealjs/newname_code2-1.png)![](day_6_files/figure-revealjs/newname_code2-2.png)
