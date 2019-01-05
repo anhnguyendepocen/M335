@@ -7,6 +7,9 @@ output:
 
 
 
+
+
+
 <style type="text/css">
 
 <style type="text/css">
@@ -19,7 +22,7 @@ h2 { /* Normal  */
 
 
 <h2>
-For Fall 2018 we will have R Lab in **STC 361** at the following times
+For Winter 2019 we will have R Lab in **STC 361** at the following times
 </h2>
 
 |Monday   |Tuesday   |Wednesday |Thursday |Friday |

@@ -23,14 +23,6 @@ params:
 > - [Case Study 11](https://byuistats.github.io/M335/weekly_projects/cs11_details.html)
 
 *Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?*
-<<<<<<< HEAD
-=======
-
-> - What mutations or summaries will you need to do?
-> - What difficulties do you expect?
-> - Do each of the task items make sense?
-
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 > - What mutations or summaries will you need to do?
 > - What difficulties do you expect?

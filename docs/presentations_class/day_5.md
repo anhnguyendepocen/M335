@@ -10,11 +10,7 @@ params:
 
 
 
-<<<<<<< HEAD
 # Becoming the Critic. {data-background=#e8d725}
-=======
-# Becoming the Critic.
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 ```r
@@ -35,37 +31,9 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 ## Virtual Questions and Support
 
-<<<<<<< HEAD
 * How is slack working?
     * Threaded conversations
     * Two channels for help?
-=======
-# Being Readings
-
-# How does data change belief?
-
-## To understand God's thoughts we must study statistics, for these are the measure of His purpose.
-
--Florence Nightingale ([Coxcomb graph](https://en.wikiquote.org/wiki/Florence_Nightingale#/media/File:Nightingale-mortality.jpg))
-
-<small>
-Her most famous graph, displayed at the top of this article, shows the number of soldier deaths per month from various causes. Each pie slice represents a different month, from April 1854 through March 1856, and each color stands for a different cause of death. It takes just a quick glance to achieve the two main takeaways: that disease, colored blue, killed far more soldiers than either "wounds" (red) or "other" (black), and that it was reduced greatly in 1855.
-</small>
-
-## What changed Britian's mind?
-
-After she completed her report, Nightingale worked hard to turn its conclusions into common knowledge, privately distributing it to influential people and writing several more reports, many of which included coxcombs. When she received push back from Army doctors, who thought sanitary measures a waste of money, she even leaked some of her charts to the press.
-
-## Hans
-
-**It is only by measuring that we can cross the river of myths.**
-
-> - [Hans Rosling](https://youtu.be/OwII-dwh-bk)
-
-
-
-
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 * Stack Overflow vs Slack post
     * [Stack Overflow BYUI](https://stackoverflow.com/c/byu/join)
@@ -109,12 +77,7 @@ After she completed her report, Nightingale worked hard to turn its conclusions 
 
 ## Hans
 
-<<<<<<< HEAD
 **It is only by measuring that we can cross the river of myths.**
-=======
-## Task 5: World Data Investigation
-> - [Task 5](https://byuistats.github.io/M335/class_tasks/task05_details.html)
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 > - [Hans Rosling](https://youtu.be/OwII-dwh-bk)
 
@@ -125,14 +88,10 @@ After she completed her report, Nightingale worked hard to turn its conclusions 
 
 
 
-<<<<<<< HEAD
 
 
 
 # Team Discussion {data-background=#e8d725}
-=======
-## Virtual Questions and Support
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 
@@ -151,56 +110,21 @@ After she completed her report, Nightingale worked hard to turn its conclusions 
 
 
 
-<<<<<<< HEAD
 ## Task 5: World Data Investigation
 > - [Task 5](https://byuistats.github.io/M335/class_tasks/task05_details.html)
-=======
-```r
-#install.packages("nycflights13")
-library(nycflights13)
-
-fl_bp <- flights %>%
-  ggplot(aes(x = carrier, y = dep_delay))
-fl_sc <- flights %>%
-  filter(dep_time > 800, dep_time < 900) %>%
-  ggplot(aes(x = dep_time, y = dep_delay))
-
-fl_bp + geom_boxplot()
-fl_sc + geom_point()
-```
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 
-<<<<<<< HEAD
 
 
-=======
-Complete the following - **Create clean labels for the x and y axes and zoom in on the y-axis from 50 to 100 minutes. Also have breaks every 15 minutes**
-   
-> - labelling - Axes, Titles, and Legends
-> - xy Scales - `scale_x_`, `scale_y`, `coord_` - Setting breaks and changing labels *or* Transforming scale
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 
 
 # Data Ingestion {data-background=#e8d725}
 
-<<<<<<< HEAD
 
 ## Data formats
-=======
-Complete the following - 
-
-> 1. Color the points of `fl_sc` by `origin` using the brewer scale. 
-> 2. Color the points of `fl_sc` by `arr_delay`**
-
-> - color & fill scales   
->     - `scale_color_`
->     - `scale_fill_`
->     - `scale_gradient_`
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 If there is a data format that exists and is used, then there is a way to import that data into R. We will learn how to handle the basic tabular formats.  The packages `library(readr)`, `library(readxls)`, and `library(haven)` will provide most of the functionality we need.
 
@@ -232,14 +156,10 @@ Use this code - `money <- c('4,554,25', '$45', '8025.33cents', '288f45')`
 
 ## Using `read_csv()` with parsers
 
-<<<<<<< HEAD
 
 > 1. Run this line of code below
 > 2. Look at the errors (`problems(challenge)`), the `head()`, and `tail()` of your `challenge` object.  What formats should they be?
 > 3. Now review [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and fix the read in.
-=======
-Complete the following - **Use a `theme_()` to create a different look for your graphic and change the orientiation of the x-axis test to 35 degrees**
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 ```r
@@ -265,7 +185,6 @@ Here are a few questions.  Discuss each one with your table and decide which fil
 > - [An overview of the grammar](https://www.youtube.com/embed/uiTc55clwuA?rel=0)
 > - [ggplot2 specifics](https://www.youtube.com/embed/PiY9hwOkL8U?rel=0)
 
-<<<<<<< HEAD
 ## Cleveland's Examples
 
 There were three democratic candidates.  We are going to use the following plots to help us understand the constituency that helped the winner in the primaries.
@@ -276,9 +195,6 @@ There were three democratic candidates.  We are going to use the following plots
 - How much time do you think it took Bill Cleveland in th 80's to make each graph?
 
 ## Class Activity: Getting Started
-=======
-# Displaying distributions of multiple groups for decision making
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 ```r
@@ -306,15 +222,8 @@ Complete the following - **Create clean labels for the x and y axes and zoom in 
 
 
 
-<<<<<<< HEAD
 
 ## Labelling the inside
-=======
-* [violin plots](http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/)
-* [beeswarm plots](https://github.com/eclarke/ggbeeswarm)
-* [letter-value box-plots](https://github.com/hadley/lvplot)
-* Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 Complete the following - 
 
@@ -333,14 +242,10 @@ Complete the following -
 
 Complete the following - **1) Color the points of `fl_sc` by `origin` using the brewer scale and use the directlabel package to move the labels into the plotting region.**
 
-<<<<<<< HEAD
 > * `library(directlabels)`
 >    * http://directlabels.r-forge.r-project.org/examples.html
 >    * `geom_dl()` and `direct.label()`
 
-=======
-## Boxplots
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 

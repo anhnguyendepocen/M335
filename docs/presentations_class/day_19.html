@@ -11,43 +11,6 @@
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
-td.sourceCode { padding-left: 5px; }
-pre, code { color: #bdae9d; background-color: #2a211c; }
-code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
-code > span.dt { text-decoration: underline; } /* DataType */
-code > span.dv { color: #44aa43; } /* DecVal */
-code > span.bn { color: #44aa43; } /* BaseN */
-code > span.fl { color: #44aa43; } /* Float */
-code > span.ch { color: #049b0a; } /* Char */
-code > span.st { color: #049b0a; } /* String */
-code > span.co { color: #0066ff; font-style: italic; } /* Comment */
-code > span.al { color: #ffff00; } /* Alert */
-code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
-code > span.er { color: #ffff00; font-weight: bold; } /* Error */
-code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
-code > span.cn { } /* Constant */
-code > span.sc { color: #049b0a; } /* SpecialChar */
-code > span.vs { color: #049b0a; } /* VerbatimString */
-code > span.ss { color: #049b0a; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { } /* Variable */
-code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
-code > span.op { } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { font-weight: bold; } /* Preprocessor */
-code > span.at { } /* Attribute */
-code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
-code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
-code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
 
@@ -599,27 +562,9 @@ Uh oh: Draymond is a Flat Earth/Kyrie Truther. <a href="https://t.co/icJThyG7hx"
 <li class="fragment"><a href="https://en.wikipedia.org/wiki/Cartogram">Cartograms</a></li>
 <li class="fragment"><a href="https://hafen.github.io/geofacet/">geofacets</a></li>
 </ul>
-<<<<<<< HEAD
 </section><section id="geofacet-challenge" class="slide level2">
 <h2>geofacet challenge</h2>
 <p><strong>Use the geofacet package to build a map that depicts the important variables more than the spatial area.</strong></p>
-=======
-</section></section>
-<section><section id="class-discussion" class="titleslide slide level1"><h1>Class Discussion</h1></section><section id="task-20-question" class="slide level2">
-<h2>Task 20 Question</h2>
-<p>Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(downloader)
-<span class="kw">library</span>(sf)
-<span class="kw">library</span>(fs)
-dams_path &lt;-<span class="st"> &quot;https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip&quot;</span>
-df &lt;-<span class="st"> </span><span class="kw">tempfile</span>(); uf &lt;-<span class="st"> </span><span class="kw">tempfile</span>()
-<span class="kw">download</span>(dams_path, df, <span class="dt">mode =</span> <span class="st">&quot;wb&quot;</span>)
-<span class="kw">unzip</span>(df, <span class="dt">exdir =</span> uf)
-dams &lt;-<span class="st"> </span><span class="kw">read_sf</span>(uf)
-<span class="kw">file_delete</span>(df); <span class="kw">dir_delete</span>(uf)</code></pre></div>
-</section><section id="tracking-progress" class="slide level2">
-<h2>Tracking Progress</h2>
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 <ul>
 <li>Will need to aggregate your data to the state level.</li>
 <li>Will need to use <code>install.packages(&quot;geofacet&quot;)</code> and the <code>facet_geo()</code> function.</li>

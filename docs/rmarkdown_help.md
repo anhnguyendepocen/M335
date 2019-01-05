@@ -57,11 +57,7 @@ You can make some changes via the RStudio IDE: click on the "gear" in the top ba
     ---  
     title: "Something fascinating"  
     author: "Jenny Bryan"  
-<<<<<<< HEAD
     date: "2019-01-04"
-=======
-    date: "2018-09-27"
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
     output:  
       html_document:  
         keep_md: true  

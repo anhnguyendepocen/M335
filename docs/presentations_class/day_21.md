@@ -47,11 +47,7 @@ params:
 
 
 
-<<<<<<< HEAD
 # Finishing the Semester {data-background=#e8d725}
-=======
-# Finishing the Semester
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ## Semester Project Discussion
 

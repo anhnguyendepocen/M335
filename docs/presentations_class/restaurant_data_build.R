@@ -38,24 +38,16 @@ dat <- dat %>%
            str_detect(ProjectTitle, "alteration") ~ "Alteration",
            str_detect(ProjectTitle, "addition") ~ "Addition",
            str_detect(ProjectTitle, "renov") ~ "Alteration",
-<<<<<<< HEAD
            TRUE ~ "New")
   ) %>%
   mutate(Type2 = case_when(
     !is.na(Type2) ~ Type2, #put back into type2 everything that has allready been assigned
-=======
-           !(str_detect(ProjectTitle, paste(c("alteration", "addition"), collapse = "|"))) ~ "New")
-  ) %>%
-  mutate(Type2 = case_when(
-    !is.na(Type2) ~ Type2,
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
     is.na(Type2) & SqFt >= 4000 ~ "Full Service Restaurant",
     is.na(Type2) & SqFt < 4000 & build_type == "New" ~ "Quick Service Restaurant",
     is.na(Type2) ~ "unknown"))
 # Over 4,000 ADD and NEW gets assigned to Sit Down Restaurants
 # Under 4,000 sqft NEW gets assigned to Fast Food
 # all Type == "Food/Beverage Service" that don't get grouped based on the above are called "Unknown"
-<<<<<<< HEAD
 
 
 dat %>%
@@ -70,5 +62,3 @@ dat %>%
   coord_cartesian() +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust = 1))
-=======
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06

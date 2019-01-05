@@ -84,11 +84,6 @@ Another package that makes flipping the axes easier in ggplot -- [rotating axes]
 > - What do we know after looking at this plot?
 > **How do we provide depth of variability understanding without overwhelming the visualization user?**
 
-```r
-best_in_class <- mpg %>%
-  group_by(class) %>%
-  filter(row_number(desc(hwy)) == 1)
-```
 
 ![](day_6_files/figure-revealjs/cc1-1.png)
 
@@ -110,7 +105,6 @@ Remember, data can get complicated very fast.
 
 ## Histograms (1)
 
-<<<<<<< HEAD
 What don't we like about this plot?
 
 ![](day_6_files/figure-revealjs/bbbb3-1.png)
@@ -120,22 +114,10 @@ What don't we like about this plot?
 
 * What changed in this histogram?
 * What don't we like about this plot?
-=======
-> 1. Run this line of code below
-> 2. Look at the errors (`problems(challenge)`), the `head()`, and `tail()` of your `challenge` object.  What formats should they be?
-> 3. Now review [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and fix the read in.
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ![](day_6_files/figure-revealjs/bbbbb5-1.png)
 
-<<<<<<< HEAD
 ## Boxplots
-=======
-```r
-challenge <- read_csv(readr_example("challenge.csv"))
-```
-
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 * What don't we like about this plot?
 * How hard is it to explain?
@@ -175,29 +157,7 @@ challenge <- read_csv(readr_example("challenge.csv"))
 * What don't we like about this plot?
 * How hard is it to explain?
 
-<<<<<<< HEAD
 ![](day_6_files/figure-revealjs/lettervalue2-1.png)
-=======
-```r
-library(ggrepel)
-library(viridis)
-
-best_in_class <- mpg %>% 
-  group_by(class) %>% 
-  filter(row_number(desc(hwy)) == 1)
-
-ggplot(mpg, aes(displ, hwy)) +
-  geom_point(aes(colour = class), size = 3) +
-  geom_point(size = 1.5, data = best_in_class, color = "white") +
-  geom_text_repel(aes(label = model, colour = class), 
-                  data = best_in_class, show.legend = FALSE, 
-                  nudge_x = -1, nudge_y = -2) +
-  theme_bw() + theme(panel.grid.minor = element_blank()) +
-  scale_color_viridis(discrete = TRUE) + 
-  labs(x = "Engine displacement", y = "Miles per gallon (highway)", 
-       color = "Vehicle type")
-```
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ## Letter-Value boxplots (3)
 
@@ -227,13 +187,5 @@ ggplot(mpg, aes(displ, hwy)) +
 
 ## Thursday Task in class
 
-<<<<<<< HEAD
 > - I (or Cody) will work on this task with you in class for a large majority of the period.
 > - 
-=======
-> * [link to last presentation](day_5.html#/displaying-distributions-of-multiple-groups-for-decision-making)
-
-## Next Challenge
-
-![](day_6_files/figure-revealjs/newname_code2-1.png)![](day_6_files/figure-revealjs/newname_code2-2.png)
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06

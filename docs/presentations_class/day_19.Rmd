@@ -107,7 +107,6 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 
 [Trump Map Tweet](../images/trump_map_tweet.png)
 
-<<<<<<< HEAD
 ## How could we spatially depict the variable of interest?
 
 - [Chloropleth Map](https://en.wikipedia.org/wiki/Choropleth_map)
@@ -122,24 +121,6 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 > - Will need to use `install.packages("geofacet")` and the `facet_geo()` function.
 
 [data](../data/nytimes_presidential_elections_2016_results_county.csv)
-=======
-Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence
-
-```{r p1, eval=FALSE, echo=TRUE}
-library(downloader)
-library(sf)
-library(fs)
-dams_path <- "https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip"
-df <- tempfile(); uf <- tempfile()
-download(dams_path, df, mode = "wb")
-unzip(df, exdir = uf)
-dams <- read_sf(uf)
-file_delete(df); dir_delete(uf)
-
-```
-
-## Tracking Progress
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ## Checking out some results
 

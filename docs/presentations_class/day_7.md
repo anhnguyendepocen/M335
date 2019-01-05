@@ -110,29 +110,7 @@ The chief difference between atomic vectors and lists is that atomic vectors are
 
 ## Scalars and recycling rules
 
-<<<<<<< HEAD
 Write out this line of code and then map the full process to get to the output
-=======
-```r
-starwars %>%
-  select(name:mass, gender, species) %>%
-  mutate(
-    type = case_when(
-      height > 200 | mass > 200 ~ "large",
-      species == "Droid"        ~ "robot",
-      TRUE                      ~  "other"
-    )
-  )
-
-#> # A tibble: 87 x 6
-#>                  name height  mass gender species  type
-#>                 <chr>  <int> <dbl>  <chr>   <chr> <chr>
-#>  1     Luke Skywalker    172    77   male   Human other
-#>  2              C-3PO    167    75   <NA>   Droid robot
-#>  3              R2-D2     96    32   <NA>   Droid robot
-#>  4        Darth Vader    202   136   male   Human large
-```
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 **Input**
 

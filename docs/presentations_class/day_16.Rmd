@@ -50,27 +50,7 @@ x <- ymd_hms("2009-07-01 2:01:59.23")
 ```
 
 
-<<<<<<< HEAD
 # Making new R package friends {data-background=#e8d725}
-=======
-## The Walmart March Visualization
-
-> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
-> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
-
-## The Walmart Challenge
-
-> 1. **Recreate this graphic**
-> 2. **Propose a different graphic**
-
-**The second link has the data**
-
-> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
-> - [Walmart Openings csv](https://byuistats.github.io/M335/data/Walmart_store_openings.csv)
-> - `?state` to see the data to use to get the colors correct.
-
-# Making new R package friends
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ## The challenge
 

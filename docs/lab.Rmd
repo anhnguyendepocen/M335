@@ -9,6 +9,28 @@ output:
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
+```{r, echo=FALSE}
+library(lubridate)
+semester <- function(x){
+  semester <- "Missing"
+  if(month(x) >= 7 & month(x) < 12 ) semester <- "Fall"
+  if(month(x) %in% c(12, 1, 2, 3))  semester <- "Winter"
+  if(month(x) >= 4 & month(x) < 7)   semester <-  "spring"
+  semester
+}
+
+current <- Sys.Date()
+year_print <-  year(current)
+semester_print <- semester(current)
+if (month(current) == 12){
+  year_print <- year_print + 1
+  semester_print <- semester(current + ddays(45))
+} 
+
+
+```
+
+
 <style type="text/css">
 
 <style type="text/css">
@@ -21,7 +43,7 @@ h2 { /* Normal  */
 
 
 <h2>
-For Fall 2018 we will have R Lab in **STC 361** at the following times
+For `r semester_print` `r year_print` we will have R Lab in **STC 361** at the following times
 </h2>
 
 |Monday   |Tuesday   |Wednesday |Thursday |Friday |

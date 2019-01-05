@@ -22,10 +22,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 ## {data-background-iframe="http://www.perceptualedge.com/example10.php"}
 
 [Visualization of the Day](http://www.perceptualedge.com/example10.php)
-<<<<<<< HEAD
 
-=======
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 
@@ -110,7 +107,6 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 **A few jokes**
 
-<<<<<<< HEAD
 > - [Really](http://geek-and-poke.com/geekandpoke/2013/12/3/yesterdays-regex)
 > - [Superheros](https://www.explainxkcd.com/wiki/images/7/7b/regular_expressions.png)
 
@@ -120,9 +116,6 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 > - To include a literal single or double quote in a string you can use \ to “escape” it:
 > - That means if you want to include a literal backslash, you’ll need to double it up: "\\".
 > - Beware that the printed representation of a string is not the same as string itself, because the printed representation shows the escapes. To see the raw contents of the string, use writeLines():
-=======
-# Data Ethics (The truthful Art by Alberto Cairo)
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 ```r

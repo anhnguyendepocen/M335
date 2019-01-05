@@ -20,7 +20,6 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
 ```
 
-<<<<<<< HEAD
 
 # Class Discussion {data-background=#e8d725}
 
@@ -31,30 +30,6 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 > - Check out week 13 work and make sure you are working on this.
 
 ## Semester Project Discussion
-=======
-# "Big" Data
-
-## Scientists Vs. Analysts
-
-> - Best way to differentiate a data scientist from a data analyst. 
->    - **Data Analyst:** If my tools and data can't answer a question, then the question doesn't get answered.
->    - **Data Scientist:** If my tools and data can't answer a question, then I go get better tools and data.
-
-## Leaving your little computer
-
-> - [The science is the idea and data moving](https://www.youtube.com/embed/Ewd5PXgLXlU?start=488)
-> - [Big is different in many ways](https://www.youtube.com/embed/Ewd5PXgLXlU?start=690)
-
-# Maps Vs. Variables
-
-## What is wrong?
-
-"Here, you can take that, that's the final map of the numbers," Trump said, according to Reuters.  "It's pretty good, right? The red is obviously us." [1](http://www.businessinsider.com/trump-2016-electoral-map-reuters-interview-xi-jinping-china-2017-4)
-
-[Trump Map Tweet](../images/trump_map_tweet.png)
-
-## How could we spatially depict the variable of interest?
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 Please make your own issue right now.
 
@@ -81,7 +56,6 @@ file_delete(df); dir_delete(uf)
 
 ```
 
-<<<<<<< HEAD
 ## Convert to another projection
 
 > * Take a minute and look up projections that you like and get your Task 19 graphic into that projection - http://proj4.org/projections/index.html
@@ -91,7 +65,5 @@ file_delete(df); dir_delete(uf)
 > * [Class activity](https://byuistats.github.io/M335/spatial_class.html) 
 >     * http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html
 >     * http://spatialreference.org/ref/
-=======
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 

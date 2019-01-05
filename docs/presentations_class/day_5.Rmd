@@ -16,11 +16,7 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
 ```
 
-<<<<<<< HEAD
 # Becoming the Critic. {data-background=#e8d725}
-=======
-# Becoming the Critic.
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ```{r nextone}
 vday <- params$day - 1
@@ -68,39 +64,6 @@ candidates %>%
 ```
 
 
-<<<<<<< HEAD
-=======
-
-# Being Readings
-
-# How does data change belief?
-
-## To understand God's thoughts we must study statistics, for these are the measure of His purpose.
-
--Florence Nightingale ([Coxcomb graph](https://en.wikiquote.org/wiki/Florence_Nightingale#/media/File:Nightingale-mortality.jpg))
-
-<small>
-Her most famous graph, displayed at the top of this article, shows the number of soldier deaths per month from various causes. Each pie slice represents a different month, from April 1854 through March 1856, and each color stands for a different cause of death. It takes just a quick glance to achieve the two main takeaways: that disease, colored blue, killed far more soldiers than either "wounds" (red) or "other" (black), and that it was reduced greatly in 1855.
-</small>
-
-## What changed Britian's mind?
-
-After she completed her report, Nightingale worked hard to turn its conclusions into common knowledge, privately distributing it to influential people and writing several more reports, many of which included coxcombs. When she received push back from Army doctors, who thought sanitary measures a waste of money, she even leaked some of her charts to the press.
-
-## Hans
-
-**It is only by measuring that we can cross the river of myths.**
-
-> - [Hans Rosling](https://youtu.be/OwII-dwh-bk)
-
-
-
-```{r child=md_intro_format}
-
-```
-
-
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 ## Virtual Questions and Support
 
 * How is slack working?
@@ -269,17 +232,10 @@ fl_bp + geom_boxplot() + coord_cartesian(ylim = c(-50, 100))
 ## Labelling the inside
 
 Complete the following - 
-<<<<<<< HEAD
 
 > 1. Color the points of `fl_sc` by `origin` using the brewer scale. 
 > 2. Color the points of `fl_sc` by `arr_delay`**
 
-=======
-
-> 1. Color the points of `fl_sc` by `origin` using the brewer scale. 
-> 2. Color the points of `fl_sc` by `arr_delay`**
-
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 > - color & fill scales   
 >     - `scale_color_`
 >     - `scale_fill_`
@@ -330,7 +286,6 @@ fl_bp +
 
 ```
 
-<<<<<<< HEAD
 
 ## Scales
 
@@ -340,55 +295,13 @@ Each of the aesthetics has a paired scale function - x, y, size, color, fill, li
 > - `scale_fill_` & `scale_color_` are the next most often used.
 >     - manual()
 >     - gradientn()
-=======
-# Displaying distributions of multiple groups for decision making
-
-## Clarity vs. Complication
-
-> - What do we know after looking at this plot?
-> **How do we provide depth of variability understanding without overwhelming the visualization user?**
-
-
-```{r cc1, echo=FALSE, fig.height= 3}
-library(nycflights13)
-library(tidyverse)
-library(magrittr)
-library(forcats)
-
-flights %>% 
-  group_by(carrier) %>% 
-  summarise(dep_delay = mean(dep_delay, na.rm = TRUE)) %>%
-  ggplot(aes(x = fct_reorder(carrier, dep_delay), y = dep_delay)) +
-  geom_col() +
-  labs(x = "Airline Carrier Short Name", y = "Average Departure Delay", title = "Typical Delay of Flights by Airport") + theme_bw()
-
-```
-
-
-
-Remember, data can get complicated very fast. 
-
-
-## Distribution background
-
-* [violin plots](http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/)
-* [beeswarm plots](https://github.com/eclarke/ggbeeswarm)
-* [letter-value box-plots](https://github.com/hadley/lvplot)
-* Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
-
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ## Labelling Elements inside the graphic
 
 The `library(ggrepel)` package is a must for our work. `library(directlabels)` can also be helpful. 
 Here is the [book's graphic](http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png). 
 
-<<<<<<< HEAD
 > - What are some concerns you have with this graphic?
-=======
-```{r bbbb3, fig.height=4, fig.width=8, cache=TRUE}
-# plot code for histograms
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ## Code and graphic (scales)
 
@@ -400,21 +313,9 @@ Use the [code from 28.3](http://r4ds.had.co.nz/graphics-for-communication.html) 
 library(ggrepel)
 library(viridis)
 
-<<<<<<< HEAD
 best_in_class <- mpg %>% 
   group_by(class) %>% 
   filter(row_number(desc(hwy)) == 1)
-=======
-```{r bbbbb5, fig.height=4, fig.width=8, cache=TRUE}
-# plot code for histograms
-
-flights %>% 
-    ggplot(aes(x = dep_delay)) +
-    facet_wrap(~carrier, scales = "free_y") +
-    geom_histogram(bins = 150, color = "white") +
-    coord_cartesian(xlim = c(-50, 250)) +
-    theme_bw()
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ggplot(mpg, aes(displ, hwy)) +
   geom_point(aes(colour = class), size = 3) +
@@ -429,7 +330,6 @@ ggplot(mpg, aes(displ, hwy)) +
        color = "Vehicle type")
 ```
 
-<<<<<<< HEAD
 ## My Code Solution
 
 ```{r newname_code, eval=FALSE, echo=TRUE}
@@ -452,99 +352,3 @@ ggplot(mpg, aes(displ, hwy)) +
        color = "Vehicle type")
 ```
 
-=======
-## Boxplots
-
-* What don't we like about this plot?
-* How hard is it to explain?
-
-```{r bbbbbb444, fig.height=4, fig.width=8, cache=TRUE}
-
-gg_base <- flights %>%
-  ggplot(aes(x = carrier, y = dep_delay)) +
-    coord_cartesian(ylim = c(-50, 250)) +
-    theme_bw()
-# Now add varied distribution geoms
-
-gg_base + geom_boxplot() 
-```
-
-
-## Violin plots
-
-* What don't we like about this plot?
-* How hard is it to explain?
-
-```{r violin, fig.height=4, fig.width=8, cache=TRUE}
-
-# Now add varied distribution geoms
-gg_base + geom_violin()
-
-```
-
-
-## Beeswarm plots (1)
-
-* What don't we like about this plot?
-* How hard is it to explain?
-
-```{r beeswarm, fig.height=4, fig.width=8, cache=TRUE}
-# Now add varied distribution geoms
-library(ggbeeswarm)
-gg_base + geom_quasirandom(alpha = .6, size = .75)
-
-```
-
-## Beeswarm plots (1)
-
-* What don't we like about this plot?
-* How hard is it to explain?
-
-```{r beeswarm2, fig.height=4, fig.width=8, cache=TRUE}
-# Now add varied distribution geoms
-library(ggbeeswarm)
-gg_base + geom_quasirandom(alpha = .6, size = .75) + 
-  coord_cartesian(ylim = c(-50, 500)) 
-
-```
-
-## Letter-Value boxplots (1)
-
-* What don't we like about this plot?
-* How hard is it to explain?
-
-```{r lettervalue, fig.height=4, fig.width=8, cache=TRUE}
-# Now add varied distribution geoms
-library(lvplot)
-gg_base + geom_lv(aes(fill = ..LV..)) + scale_fill_lv()
-
-```
-
-## Letter-Value boxplots (2)
-
-* What don't we like about this plot?
-* How hard is it to explain?
-
-```{r lettervalue2, fig.height=4, fig.width=8, cache=TRUE}
-# Now add varied distribution geoms
-library(lvplot)
-gg_base + geom_lv(aes(fill = ..LV..)) + 
-  scale_fill_lv() + 
-  coord_cartesian(ylim = c(-50, 500)) 
-
-```
-
-## Letter-Value boxplots (3)
-
-* What don't we like about this plot?
-* How hard is it to explain?
-
-```{r lv3, fig.height=4, fig.width=8, cache=TRUE}
-# Now add varied distribution geoms
-library(lvplot)
-gg_base + geom_lv(aes(fill = ..LV..)) + 
-  scale_fill_lv() + 
-  coord_cartesian(ylim = c(-50, 1500)) 
-
-```
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06

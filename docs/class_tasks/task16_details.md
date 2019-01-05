@@ -40,12 +40,8 @@ ul {
 
 This reading will help you complete the tasks below.
 
-<<<<<<< HEAD
 * o [Tips for timed tests](https://atinursingblog.com/test-anxiety-timed-test-tips/){target='blank'}
 * o [Completing timed work](https://www.unigo.com/admissions-advice/what-are-great-ways-to-manage-time-effectively-while-taking-standardized-tests/361/1){target='blank'}
-=======
-* o [lubridate Vignette](https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html){target='blank'}
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 ### Tasks

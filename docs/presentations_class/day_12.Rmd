@@ -28,10 +28,6 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 ## `r titlelink`
 
 [Visualization of the Day](`r vlink`)
-<<<<<<< HEAD
-=======
-
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ```{r child=md_intro_format}
 
@@ -62,11 +58,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 > - A <span class="bullet_code">**foreign key**</span> uniquely identifies an observation in another table. For example, the <span class="bullet_code">flights$tailnum</span> is a foreign key because it appears in the flights table where it matches each flight to a unique plane.
 > - A **Left Join** is a mutating join.
 
-<<<<<<< HEAD
 ## Managing Use Problems
-=======
-**Visualizing [Gun Deaths](http://guns.periscopic.com/?year=2013)**
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 **Duplicate Keys**
 
@@ -106,29 +98,10 @@ left_join(x, y, by = "z")  | SELECT * FROM x LEFT OUTER JOIN y USING (z)
 right_join(x, y, by = "z") | SELECT * FROM x RIGHT OUTER JOIN y USING (z)
 full_join(x, y, by = "z")  | SELECT * FROM x FULL OUTER JOIN y USING (z)
 
-<<<<<<< HEAD
 <>
-=======
-# Class Activity (RegEx & Joining)
-
-## Visualizing Temples
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 > - Note that "INNER" and "OUTER" are optional, and often omitted.
 > - SQL supports a wider  range of join types than dplyr
 
-<<<<<<< HEAD
-=======
-**GOAL: Merge the data sets together to build a graphic about temples that incorporates time and size into the visualization.**
 
-> 1. You will need regular expressions to help you with the merge.
-> 2. With your final data parse the announcement date column to a data object
-> 3. Check your logic on your data aggregation.
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
-
-
-```{r, include=FALSE, eval=FALSE}
-  mutate(Temple = gsub("Temple[â€¡]+", "Temple", Temple),
-         Temple = iconv(Temple, from="UTF-8", to="LATIN1"))
-```
 

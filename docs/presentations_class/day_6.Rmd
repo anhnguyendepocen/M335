@@ -78,13 +78,6 @@ flights %>%
   geom_col() +
   labs(x = "Airline Carrier Short Name", y = "Average Departure Delay", title = "Typical Delay of Flights by Airport") + theme_bw()
 
-<<<<<<< HEAD
-=======
-```{r bob, evel=FALSE, echo=TRUE}
-best_in_class <- mpg %>%
-  group_by(class) %>%
-  filter(row_number(desc(hwy)) == 1)
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 ```
 
 
@@ -113,7 +106,6 @@ What don't we like about this plot?
 ```{r bbbb3, fig.height=4, fig.width=8, cache=TRUE}
 # plot code for histograms
 
-<<<<<<< HEAD
 flights %>% 
     ggplot(aes(x = dep_delay)) +
     facet_wrap(~carrier) +
@@ -128,15 +120,6 @@ flights %>%
 
 * What changed in this histogram?
 * What don't we like about this plot?
-=======
-> 1. Run this line of code below
-> 2. Look at the errors (`problems(challenge)`), the `head()`, and `tail()` of your `challenge` object.  What formats should they be?
-> 3. Now review [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and fix the read in.
-
-```{r vle3, eval=FALSE, echo=TRUE}
-challenge <- read_csv(readr_example("challenge.csv"))
-```
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ```{r bbbbb5, fig.height=4, fig.width=8, cache=TRUE}
 # plot code for histograms
@@ -190,7 +173,6 @@ gg_base + geom_quasirandom(alpha = .6, size = .75)
 
 ```
 
-<<<<<<< HEAD
 ## Beeswarm plots (1)
 
 * What don't we like about this plot?
@@ -202,28 +184,6 @@ library(ggbeeswarm)
 gg_base + geom_quasirandom(alpha = .6, size = .75) + 
   coord_cartesian(ylim = c(-50, 500)) 
 
-=======
-## My Code Solution
-
-```{r newname_code, eval=FALSE, echo=TRUE}
-library(ggrepel)
-library(viridis)
-
-best_in_class <- mpg %>% 
-  group_by(class) %>% 
-  filter(row_number(desc(hwy)) == 1)
-
-ggplot(mpg, aes(displ, hwy)) +
-  geom_point(aes(colour = class), size = 3) +
-  geom_point(size = 1.5, data = best_in_class, color = "white") +
-  geom_text_repel(aes(label = model, colour = class), 
-                  data = best_in_class, show.legend = FALSE, 
-                  nudge_x = -1, nudge_y = -2) +
-  theme_bw() + theme(panel.grid.minor = element_blank()) +
-  scale_color_viridis(discrete = TRUE) + 
-  labs(x = "Engine displacement", y = "Miles per gallon (highway)", 
-       color = "Vehicle type")
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 ```
 
 ## Letter-Value boxplots (1)
@@ -304,30 +264,5 @@ ggplot(aes(x = class, y = hwy, color = factor(round(displ)))) +
 
 ## Thursday Task in class
 
-<<<<<<< HEAD
 > - I (or Cody) will work on this task with you in class for a large majority of the period.
 > - 
-=======
-> * [link to last presentation](day_5.html#/displaying-distributions-of-multiple-groups-for-decision-making)
-
-## Next Challenge
-
-```{r newname_code2, echo=FALSE}
-library(ggbeeswarm)
-library(lvplot)
-
-mpg %>%
-ggplot(aes(x = class, y = hwy)) +
-  geom_violin() +
-  labs(x = "Class", y = "Miles per gallon (highway)") +
-  theme_bw()
-
-mpg %>%
-ggplot(aes(x = class, y = hwy, color = factor(round(displ)))) +
-  geom_quasirandom() +
-  scale_color_viridis_d() +
-  labs(x = "Class", y = "Miles per gallon (highway)", color = "Displacement") +
-  theme_bw() + theme(legend.position = "bottom")
-
-```
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06

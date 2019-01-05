@@ -34,11 +34,7 @@ Configure push-button publication from RStudio IDE to RStudio Connect.
 4. Select Publishing in the sidebar.
 5. Click the Connect… button (It may ask you to install additional R packages).
 6. Choose RStudio Connect.
-<<<<<<< HEAD
 7. For the public URL of the RStudio Connect server, enter https://shiny.byui.edu.
-=======
-7. For the public URL of the RStudio Connect server, enter http://34.218.129.70.
->>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 8. A window will pop up asking for authentication. Enter your credentials and log in.
 9. A second window will appear that says ‘Connect to R’.  Click the blue ‘Connect’ button.
 10. After your account is successfully verified, you will be brought back to the RStudio IDE ‘Connect Account’ dialogue. Click the Connect Account button in the bottom right.
