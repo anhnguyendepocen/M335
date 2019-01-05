@@ -68,11 +68,20 @@ The [Our World in Data](https://ourworldindata.org/){target="blank"} website has
 ## Task 6: Developing a graphic  
 Before we can start to answer business questions we need to become familiar with our data. Often, you will want to start with the [data dictionary](https://www.bridging-the-gap.com/data-dictionary/).  However, you can also just dive into the data and gain understanding based on the variable names and types.
 
+<<<<<<< HEAD
 Beyond the variable descriptions is how the variables relate to each other. We can create tables or visualizations that summarize how different variables relate to each other. At this point we are deepeing our understanding as well as beginning our analysis.
 
 **Remember: Your job is to become the data expert not the domain expert.** You will build domain skills but you are not going to replace domain experts. People will depend on you to have a firm understanding of what data your company has available to answer domain specific questions.
 
 Use `nycflights13::flights` to practice your data summary and data investigation through visualization skills.
+=======
+Beyond the variable descriptions is how the variables relate to each other.  Can we create tables or visualizations that summarize how different variables relate to each other.  At this point we are deepeing our understanding as well as beginning our analysis.
+
+**Remember: Your job is to become the data expert not the domain expert.** You will build domain skills but you are not going to replace domain experts. People will depend on you to have a firm understanding of what data your company has available to answer domain specific questions.
+
+Use
+nycflights13::flights
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
  * [Details](class_tasks/task06_details.html)
 
@@ -90,7 +99,11 @@ Finding good data takes time, and can take longer than the time to tidy your dat
 
 
 ## Task 8: World Data Investigations - Part 2  
+<<<<<<< HEAD
 The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to build visualizations in R using their data.
+=======
+The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to recreate some of their visualizations in R and then make them better.
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
  * [Details](class_tasks/task08_details.html)
 
@@ -129,7 +142,11 @@ Using global regular expression print (grep) and regular expressions (regex) to 
 
 ## Task 12: Take me out to the ball game  
 
+<<<<<<< HEAD
 Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success.  As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The `library(Lahman)` package has a comprehensive set of baseball data.  It is great for testing out our relational data skills.  We will also need a function to inflation adjust the player salaries - `library(blscrapeR)`. See [this guide for an example](https://github.com/cran/blscrapeR/blob/master/inst/doc/Inflation_and_Prices.Rmd){target="blank"}.
+=======
+Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success.  As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The `library(Lahman)` package has a comprehensive set of baseball data.  It is great for testing out our relational data skills.  We will also need a function to inflation adjust the player salaries - `library(blscrapeR)`. See [this guide for an example](https://cran.r-project.org/web/packages/blscrapeR/vignettes/Inflation_and_Prices.html){target="blank"}.
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
  * [Details](class_tasks/task12_details.html)
 
@@ -255,9 +272,14 @@ Be prepared to present your functions in class.
 ----------------------------------------
 
 
+<<<<<<< HEAD
 ## Task 24: Coding Challenge  
 
 We do not have a task due outside of class for today. During class, we will do a 1-hour coding challenge to give you practice for the coding challenge on the last day of class.
+=======
+## Task 24: A Few views on Visualization  
+This week we will learn new coding techniques and visualization principles.  However, your case study and weekly tasks will provide time to makes sure you have for the last task of the [semester project](https://byuistats.github.io/M335/project.html). 
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
  * [Details](class_tasks/task24_details.html)
 

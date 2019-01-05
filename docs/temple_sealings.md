@@ -89,6 +89,7 @@ times_GrbrDed <- url_time %>%
 
 
 
+<<<<<<< HEAD
 
 <!-- # Class Activity (RegEx & Joining) -->
 
@@ -112,3 +113,5 @@ times_GrbrDed <- url_time %>%
 <!-- ``` -->
 
 
+=======
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06

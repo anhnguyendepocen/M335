@@ -307,8 +307,11 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 #### [Class Task 6](class_tasks/task06_details.html)
 
 * [ ] Find an insightfull relationship between two of the variables (columns) and display that relationship in a table or graphic
+<<<<<<< HEAD
     * [ ] Provide a distributional summary of the relevant variable in `nycflights13::flights`
     * [ ] Build bivariate summaries of the relevant variables
+=======
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
     * [ ] document the iterative script that built to your insightfull relationship
 * [ ] Create an `.R` script that has your data visualization development with 1-2 commented paragraphs summarizing your 2 finalized graphics and the choices you made in the data presentation
 * [ ] Save your `.png` images of each your final graphics and push all your work to your repository.
@@ -327,6 +330,11 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 #### [Class Task 8](class_tasks/task08_details.html)
 
 * [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
+<<<<<<< HEAD
+=======
+* [ ] Provide a distributional summary of the relevant variable in `nycflights13::flights`
+* [ ] Build bivariate summaries of the relevant variables
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * [ ] Explore the world data on `financing_healthcare` and create an interesting graphic that highlights this dataset in relation to child mortality.
     * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `financing_healthcare`
     * [ ] Create a graphic that you could use in a final presentation to summarize world child mortality (`child_mort` column)
@@ -359,7 +367,11 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 #### [Class Task 11](class_tasks/task11_details.html)
 
 * [ ] Use the `readr::read_lines()` function to read in each string - [randomletters.txt](https://byuistats.github.io/M335/data/randomletters.txt){target="blank"} and [randomletters_wnumbers.txt](https://byuistats.github.io/M335/data/randomletters_wnumbers.txt){target="blank"}
+<<<<<<< HEAD
 * [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, …) and find the quote that is hidden - the quote ends with a period
+=======
+* [ ] With the `randomletters.txt` file, pull out every 1700 letter (e.g. 1, 1700, 3400, â€¦) and find the quote that is hidden - the quote ends with a period
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * [ ] With the `randomletters_wnumbers.txt` file, find all the numbers hidden and convert those numbers to letters using the letters order in the alphabet to decipher the message
 * [ ] With the `randomletters.txt` file, remove all the spaces and periods from the string then find the longest sequence of vowels.
 * [ ] Save your `.R` script to your repository and be ready to share your code solution at the beginning of class
@@ -463,5 +475,8 @@ On the last day of class each of you will have the 1.5 hours of class to complet
 * [ ] Repeat the [task 12 tasks](https://byuistats.github.io/M335/class_tasks/task12_details.html){target="blank"} using three functions that you built
 
 #### [Class Task 24](class_tasks/task24_details.html)
+<<<<<<< HEAD
 
 * [ ] Finish the in class coding challenge
+=======
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06

@@ -61,9 +61,54 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
+<<<<<<< HEAD
 
 
 ## Socrative Hours Quiz
+=======
+# Class Coding Challenge
+
+## Art Class
+
+> - [What do you see?](images/sculpt.jpg){target="blank"}
+> - [What about here?](images/sculpt_wide.jpg){target="blank"}
+
+## The Wilderness of Data
+
+<iframe width="860" height="515" src="https://www.youtube.com/embed/fTgvdTftXfI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+## Rules
+
+Today we are going to attempt a group `data art` project.  Below is our data file.  Each of you is going to work on making a piece of data art during class today.
+
+**Rules**
+
+1. Set the tables in a round circle.
+2. Count off (1,2,1,2).
+    a. The ones will stay in their seats during the period.
+    b. The twos will rotate one position every 10 minutes.
+3. You need to submit your piece of art in one hour (push it to your repository). **Don't push your data**
+
+## Data 
+
+To mimic an art class we will all have the same data on which to build our art.
+
+**Data**
+
+This data has all the 2015 births in Brazil.  We are trying to make data discovery art. We are in the exploratory stage and we need to get ready for a conversation with doctors from Brazil.  They have hinted that they would like to know something about birth weights and variables that could describe changes in birth weights.  
+
+> * Download the 2015 csv data from here - https://www.amazon.com/clouddrive/share/1zU837kCeynkoBiHUzEkKYaFS30McMQVTu5UZ5aYXy7
+> * Download the 2011 rds data from here - https://www.amazon.com/clouddrive/share/GQNxrBVeJQETv7gMNaMxT3iLGkLng7QycSph710wunP
+
+
+```r
+dat15 <- read_csv("https://query.data.world/s/uw2hhwji6dwz3637unq3twp7z4chl5")
+dat11 <- read_csv("https://query.data.world/s/4sbxrxxvn5fdf5xd7lmlcla2rmzfub")
+```
+
+
+
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 [socrative.com](https://socrative.com)
 

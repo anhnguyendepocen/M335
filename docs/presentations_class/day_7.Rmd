@@ -80,7 +80,11 @@ The chief difference between atomic vectors and lists is that atomic vectors are
 | `is_vector()`    |  x  |  x  |  x  |  x  |  x   |
 
 
+<<<<<<< HEAD
 ## Scalars and recycling rules
+=======
+```{r starwars, eval=FALSE, echo=TRUE}
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 Write out this line of code and then map the full process to get to the output
 

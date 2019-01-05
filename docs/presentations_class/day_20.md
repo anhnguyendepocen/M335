@@ -29,11 +29,23 @@ params:
 > - Do each of the task items make sense?
 
 
+<<<<<<< HEAD
 
 
 ## Task 20: Getting in SHP
 > - [Task 20](https://byuistats.github.io/M335/class_tasks/task20_details.html)
 
+=======
+## Task 20: Getting in SHP
+> - [Task 20](https://byuistats.github.io/M335/class_tasks/task20_details.html)
+
+
+
+
+
+
+# "Big" Data
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 
@@ -75,6 +87,7 @@ dams <- read_sf(uf)
 file_delete(df); dir_delete(uf)
 ```
 
+<<<<<<< HEAD
 ## Convert to another projection
 
 > * Take a minute and look up projections that you like and get your Task 19 graphic into that projection - http://proj4.org/projections/index.html
@@ -84,5 +97,7 @@ file_delete(df); dir_delete(uf)
 > * [Class activity](https://byuistats.github.io/M335/spatial_class.html) 
 >     * http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html
 >     * http://spatialreference.org/ref/
+=======
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 

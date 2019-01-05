@@ -72,12 +72,17 @@ navbar:
           href: http://r-pkgs.had.co.nz/
         - text: "Fundamentals of Data Visualization"
           href: http://serialmentor.com/dataviz/
+<<<<<<< HEAD
         - text: "Geocomputation with R"
           href: https://geocompr.robinlovelace.net/
         - text: "Crosstalk: htmlwidgets add-on"
           href: https://rstudio.github.io/crosstalk/index.html
         - text: Data Science on Lynda.com
           href: lynda.html
+=======
+        - text: "Crosstalk: htmlwidgets add-on"
+          href: https://rstudio.github.io/crosstalk/index.html
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
     - text: "Visit Me"
       icon: fa-calendar
       href: visitme.html

@@ -162,8 +162,11 @@ mdlines <- read_lines("https://byuistats.github.io/M335/class_tasks/task09_detai
 Let's look at an example set of scripts that get at what I was trying to say in Task 8.
 
 * https://github.com/hathawayj/datasus
+<<<<<<< HEAD
     * https://github.com/hathawayj/datasus/blob/master/sinasc_hospital_artifacts.R
     * https://github.com/hathawayj/datasus/blob/master/sinasc_hospital_explore.R
+=======
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * Why are we doing the semester project?
 * What parts of this class do you think will be relevant to your future jobs?
 * What could we do to improve the experience in the first five weeks?

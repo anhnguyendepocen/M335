@@ -149,7 +149,11 @@ date()
 ```
 
 ```
+<<<<<<< HEAD
 ## [1] "Fri Jan 04 16:34:40 2019"
+=======
+## [1] "Thu Sep 27 08:52:12 2018"
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 ```
 
 Now look at your workspace -- in the upper right pane. The workspace is where user-defined objects accumulate. You can also get a listing of these objects with commands:
@@ -162,6 +166,7 @@ objects()
 ```
 ##  [1] "a"                          "avg_x"                     
 ##  [3] "b"                          "background.title"          
+<<<<<<< HEAD
 ##  [5] "best_in_class"              "bob"                       
 ##  [7] "body_lines"                 "candidates"                
 ##  [9] "case_studies"               "casename_new"              
@@ -209,6 +214,35 @@ objects()
 ## [93] "vlink"                      "weeks"                     
 ## [95] "x"                          "y"                         
 ## [97] "yo"
+=======
+##  [5] "body_lines"                 "case_studies"              
+##  [7] "cases"                      "check_day"                 
+##  [9] "dates_all"                  "dates_class"               
+## [11] "dates_due"                  "day_map"                   
+## [13] "day_seq"                    "day_seq_labels"            
+## [15] "dayone_seq"                 "daytwo_seq"                
+## [17] "fday_name"                  "first_day"                 
+## [19] "first_week"                 "fname"                     
+## [21] "gapminder"                  "gapminder.continent"       
+## [23] "holidays"                   "i"                         
+## [25] "jenny_rocks"                "last_day"                  
+## [27] "last_day_finals"            "last_week"                 
+## [29] "lesson_links"               "links"                     
+## [31] "md_bullet"                  "md_link"                   
+## [33] "monday_seq"                 "no_monday"                 
+## [35] "no_saturday"                "numbers"                   
+## [37] "params"                     "pioneer"                   
+## [39] "pr"                         "presentations"             
+## [41] "reading_links"              "reading_seq"               
+## [43] "readings"                   "readings_due"              
+## [45] "saturday_seq"               "sig_sq"                    
+## [47] "task_due"                   "tasks"                     
+## [49] "text"                       "thanksgiving"              
+## [51] "thanksgiving_a"             "thanksgiving_b"            
+## [53] "this_is_a_really_long_name" "title.text"                
+## [55] "titles"                     "x"                         
+## [57] "y"                          "yo"
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 ```
 
 ```r
@@ -218,6 +252,7 @@ ls()
 ```
 ##  [1] "a"                          "avg_x"                     
 ##  [3] "b"                          "background.title"          
+<<<<<<< HEAD
 ##  [5] "best_in_class"              "bob"                       
 ##  [7] "body_lines"                 "candidates"                
 ##  [9] "case_studies"               "casename_new"              
@@ -265,6 +300,35 @@ ls()
 ## [93] "vlink"                      "weeks"                     
 ## [95] "x"                          "y"                         
 ## [97] "yo"
+=======
+##  [5] "body_lines"                 "case_studies"              
+##  [7] "cases"                      "check_day"                 
+##  [9] "dates_all"                  "dates_class"               
+## [11] "dates_due"                  "day_map"                   
+## [13] "day_seq"                    "day_seq_labels"            
+## [15] "dayone_seq"                 "daytwo_seq"                
+## [17] "fday_name"                  "first_day"                 
+## [19] "first_week"                 "fname"                     
+## [21] "gapminder"                  "gapminder.continent"       
+## [23] "holidays"                   "i"                         
+## [25] "jenny_rocks"                "last_day"                  
+## [27] "last_day_finals"            "last_week"                 
+## [29] "lesson_links"               "links"                     
+## [31] "md_bullet"                  "md_link"                   
+## [33] "monday_seq"                 "no_monday"                 
+## [35] "no_saturday"                "numbers"                   
+## [37] "params"                     "pioneer"                   
+## [39] "pr"                         "presentations"             
+## [41] "reading_links"              "reading_seq"               
+## [43] "readings"                   "readings_due"              
+## [45] "saturday_seq"               "sig_sq"                    
+## [47] "task_due"                   "tasks"                     
+## [49] "text"                       "thanksgiving"              
+## [51] "thanksgiving_a"             "thanksgiving_b"            
+## [53] "this_is_a_really_long_name" "title.text"                
+## [55] "titles"                     "x"                         
+## [57] "y"                          "yo"
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 ```
 
 If you want to remove the object named `y`, you can do this
@@ -391,7 +455,11 @@ y <- a + b * x + rnorm(40, sd = sqrt(sig_sq))
 ```
 
 ```
+<<<<<<< HEAD
 ## [1] 0.4272954
+=======
+## [1] 0.5306141
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 ```
 
 ```r
@@ -407,8 +475,13 @@ dev.print(pdf, "toy_line_plot.pdf")
 ```
 
 ```
+<<<<<<< HEAD
 ## png 
 ##   2
+=======
+## quartz_off_screen 
+##                 2
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 ```
 
 Let's say this is a good start of an analysis and your ready to start preserving the logic and code. Visit the History tab of the upper right pane. Select these commands. Click "To Source". Now you have a new pane containing a nascent R script. Click on the floppy disk to save. Give it a name ending in `.R` or `.r`, I used `toy-line.r` and note that, by default, it will go in the directory associated with your project.

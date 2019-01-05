@@ -11,6 +11,7 @@ params:
 
 
 
+<<<<<<< HEAD
 # Thought for the day {data-background=#e8d725}
 
 ## What I see: Greatness
@@ -26,6 +27,18 @@ params:
 
 
 
+=======
+# Thought for the day
+
+## What I see: Greatness
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/XcbSCnUXOkk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+## What you may think is happening.
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/-KSryJXDpZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 
@@ -103,6 +116,11 @@ stop times for each of the calls.
 If your code from case study 6 has enough to address the questions you can use your own code.  If not let's use mine.
 
 [Hathaway code](restaurant_data_build.R){target="blank"}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ## Sorting and including factor levels
 
@@ -112,9 +130,12 @@ If your code from case study 6 has enough to address the questions you can use y
 ```r
 complete()
 ```
+<<<<<<< HEAD
 
 <!-- #  complete(County,Type2, Year,  fill = list(n = 0)) %>% -->
 <!-- #  mutate(County = fct_reorder(County,n), Type2 = fct_reorder2(Type2, County, n), .desc = TRUE) %>% -->
+=======
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 **with ggplot2**
 
@@ -156,6 +177,10 @@ theme(panel.grid.minor = element_blank(), axis.text.x =
 - [dbplyr: databases with dplyr](https://db.rstudio.com/dplyr/)
 - [skimr: pipeable summary statistics](https://github.com/ropenscilabs/skimr)
 
+```r
+guides(color = guide_legend(override.aes = list(size = 5)))
+theme(panel.grid.minor = element_blank(), axis.text.x = element_text(angle = 35, vjust = 1, hjust = 1), legend.position = "bottom")
+```
 
 
 

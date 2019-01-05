@@ -43,7 +43,10 @@ ul {
 This reading will help you complete the tasks below.
 
 * o [John Rauser Talk](https://youtu.be/fSgEeI2Xpdc){target='blank'}
+<<<<<<< HEAD
 * o [Being a better online reader](https://www.newyorker.com/science/maria-konnikova/being-a-better-online-reader){target='blank'}
+=======
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * o [Chapter 1:  R for Data Scientists](http://r4ds.had.co.nz/index.html){target='blank'}
 * o [R and R-Studio Practice](https://byuistats.github.io/M335/r_help.html){target='blank'}
 

@@ -118,7 +118,11 @@ Write out what this function is doing.
 
 - **Hint:** Read about `PerformanceAnalytics::Return.portfolio()`
 
+<<<<<<< HEAD
 # Settling In {data-background=#e8d725}
+=======
+# Settling In
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ## Remember the Goal
 
@@ -133,8 +137,19 @@ Write out what this function is doing.
 
 > Edward Tufte
 
+<<<<<<< HEAD
 # Next Class {data-background=#e8d725}
+=======
+# Next Class
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ## dygraphs: R connection to dygraphs JavaScript charting library
 
 Open the [dygraphs help webstie](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.
+<<<<<<< HEAD
+=======
+
+## Book Group Conversation
+
+Please be prepared with notes about [this](https://priceonomics.com/how-william-cleveland-turned-data-visualization/)  reading in [Task 18](https://byuistats.github.io/M335/class_tasks/task18_details.html) 
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06

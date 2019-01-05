@@ -11,6 +11,43 @@
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
 
@@ -495,6 +532,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Cleveland’s impact.</li>
 </ul>
 </section></section>
+<<<<<<< HEAD
 <section><section id="vectors" class="titleslide slide level1" data-background="#e8d725"><h1>Vectors</h1></section><section id="quotes-from-the-chapter" class="slide level2">
 <h2>Quotes from the chapter</h2>
 <ul>
@@ -626,6 +664,67 @@ The chief difference between atomic vectors and lists is that atomic vectors are
 </ul>
 </section><section id="tbl-settings" class="slide level2">
 <h2>tbl settings</h2>
+=======
+<section><section id="what-is-eda" class="titleslide slide level1"><h1>What is EDA?</h1></section><section id="exploratory-data-analysis" class="slide level2">
+<h2>Exploratory Data Analysis</h2>
+<p>EDA is fundamentally a creative process. And like most creative processes, the key to asking quality questions is to generate a large quantity of questions.</p>
+<ol type="1">
+<li>What type of variation occurs within my variables?</li>
+</ol>
+<ol start="2" type="1">
+<li>What type of covariation occurs between my variables?</li>
+</ol>
+</section><section id="exploring-old-faithful-goals" class="slide level2">
+<h2>Exploring Old Faithful goals</h2>
+<ol type="1">
+<li><strong>Make the <a href="http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png">histogram shown in the book</a> with the black and white theme and an improved x-axis label.</strong></li>
+</ol>
+</section><section id="exploring-old-faithful-1" class="slide level2">
+<h2>Exploring Old Faithful (1)</h2>
+<p><img src="day_7_files/figure-revealjs/example2-1.png" /></p>
+</section><section id="understanding-case_when" class="slide level2">
+<h2>Understanding <code>case_when()</code></h2>
+<p><code>case_when()</code> is particularly useful inside mutate when you want to create a new variable that relies on a complex combination of existing variables. <strong>Write a short sentence that says what this code is doing?</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">starwars <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">select</span>(name<span class="op">:</span>mass, gender, species) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(
+    <span class="dt">type =</span> <span class="kw">case_when</span>(
+      height <span class="op">&gt;</span><span class="st"> </span><span class="dv">200</span> <span class="op">|</span><span class="st"> </span>mass <span class="op">&gt;</span><span class="st"> </span><span class="dv">200</span> <span class="op">~</span><span class="st"> &quot;large&quot;</span>,
+      species <span class="op">==</span><span class="st"> &quot;Droid&quot;</span>        <span class="op">~</span><span class="st"> &quot;robot&quot;</span>,
+      <span class="ot">TRUE</span>                      <span class="op">~</span><span class="st">  &quot;other&quot;</span>
+    )
+  )
+
+<span class="co">#&gt; # A tibble: 87 x 6</span>
+<span class="co">#&gt;                  name height  mass gender species  type</span>
+<span class="co">#&gt;                 &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt;  &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;</span>
+<span class="co">#&gt;  1     Luke Skywalker    172    77   male   Human other</span>
+<span class="co">#&gt;  2              C-3PO    167    75   &lt;NA&gt;   Droid robot</span>
+<span class="co">#&gt;  3              R2-D2     96    32   &lt;NA&gt;   Droid robot</span>
+<span class="co">#&gt;  4        Darth Vader    202   136   male   Human large</span></code></pre></div>
+</section><section id="exploring-old-faithful-goals-1" class="slide level2">
+<h2>Exploring Old Faithful goals</h2>
+<ol type="1">
+<li>Make the <a href="http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png">histogram shown in the book</a> with the black and white theme and an improved x-axis label.</li>
+<li><strong>Use the mutate function to modify our plot to fill the histogram for two groups of waiting times.</strong></li>
+</ol>
+</section><section id="exploring-old-faithful-2" class="slide level2">
+<h2>Exploring Old Faithful (2)</h2>
+<p><img src="day_7_files/figure-revealjs/thestuf33-1.png" /></p>
+</section><section id="exploring-old-faithful-goals-2" class="slide level2">
+<h2>Exploring Old Faithful goals</h2>
+<ol type="1">
+<li>Make the <a href="http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png">histogram shown in the book</a> with the black and white theme and an improved x-axis label.</li>
+<li>Use the mutate function to modify our plot to fill the histogram for two groups of waiting times.</li>
+<li><strong>Use the waiting variable to make a hexbin plot of the relationship between waiting time and duration.</strong></li>
+</ol>
+</section><section id="exploring-old-faithful-3" class="slide level2">
+<h2>Exploring Old Faithful (3)</h2>
+<p><img src="day_7_files/figure-revealjs/realldkdjf-1.png" /></p>
+</section></section>
+<section><section id="understanding-terms" class="titleslide slide level1"><h1>Understanding terms</h1></section><section id="socrative-quiz" class="slide level2">
+<h2>Socrative Quiz</h2>
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 <ul>
 <li>Change the maximum and the minimum rows to print: <code>options(tibble.print_max = 20, tibble.print_min = 6)</code></li>
 <li>Always show all rows: <code>options(tibble.print_max = Inf)</code></li>

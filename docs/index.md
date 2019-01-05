@@ -3,12 +3,15 @@ title: "Welcome"
 output: html_document
 ---
 
+<<<<<<< HEAD
 ## Student Endorsements
 
 > In writing about your data wrangling class, I'm am impressed with how easy it was to think of things it allowed me to do/experience even almost a year later. I feel like it was done in such a way that learning about telling a story with data and producing high quality work was easy. There were lots of opportunities to learn from each other and help each other succeed. Then, at the end of it all, I was able to "publish" my final report to LinkedIn, which made me work hard to make it be something professional and worth looking at. The class translated easily into things to add to my professional portfolio. - [Colton Kopsa](https://www.linkedin.com/in/coltonkopsa/) -
 
 ## Introduction
 
+=======
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 Current trends among industries ranging from Insurance to Manufacturing (as well as many other professions) are pushing the need for data literacy. *MATH/CS 335 - Data Wrangling and Visualization* provides learners with the technical skills needed to competently work with and visualize data.  More specifically MATH/CS 335 will allow learners to use data-driven programming in R for the handling, formatting, and visualization of messy and complex data.  Learners will implement data wrangling techniques and the grammar of graphics process in visualizing complex data.
 
 The course is designed to be accessible to all majors as much as possible (introductory programming and statistics are prerequisites). The concepts in this course nicely complement the skills in many other disciplines on campus, such as business and communication, social sciences, and hard sciences. This course is the primary course that pulls many of the varied courses in the [data science degree](http://www.byui.edu/mathematics/data-science){target="blank"} into the cohesive tool set that data scientists will use in industry.  

@@ -134,6 +134,7 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 
 [Trump Map Tweet](../images/trump_map_tweet.png)
 
+<<<<<<< HEAD
 ## How could we spatially depict the variable of interest?
 
 - [Chloropleth Map](https://en.wikipedia.org/wiki/Choropleth_map)
@@ -146,6 +147,19 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 
 > - Will need to aggregate your data to the state level.
 > - Will need to use `install.packages("geofacet")` and the `facet_geo()` function.
+=======
+```r
+library(downloader)
+library(sf)
+library(fs)
+dams_path <- "https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip"
+df <- tempfile(); uf <- tempfile()
+download(dams_path, df, mode = "wb")
+unzip(df, exdir = uf)
+dams <- read_sf(uf)
+file_delete(df); dir_delete(uf)
+```
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 [data](../data/nytimes_presidential_elections_2016_results_county.csv)
 

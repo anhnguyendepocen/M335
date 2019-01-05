@@ -18,7 +18,11 @@ output:
 ## Task 12: Take me out to the ball game 
 ### Background 
 
+<<<<<<< HEAD
 Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success.  As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The `library(Lahman)` package has a comprehensive set of baseball data.  It is great for testing out our relational data skills.  We will also need a function to inflation adjust the player salaries - `library(blscrapeR)`. See [this guide for an example](https://github.com/cran/blscrapeR/blob/master/inst/doc/Inflation_and_Prices.Rmd){target="blank"}.
+=======
+Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success.  As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The `library(Lahman)` package has a comprehensive set of baseball data.  It is great for testing out our relational data skills.  We will also need a function to inflation adjust the player salaries - `library(blscrapeR)`. See [this guide for an example](https://cran.r-project.org/web/packages/blscrapeR/vignettes/Inflation_and_Prices.html){target="blank"}.
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
  * [Homework Schedule](../homework_schedule.html)
 

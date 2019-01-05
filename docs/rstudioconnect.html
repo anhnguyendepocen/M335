@@ -25,7 +25,13 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<<<<<<< HEAD
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+=======
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
@@ -113,6 +119,12 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+<<<<<<< HEAD
+=======
+.html-widget {
+  margin-bottom: 20px;
+}
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -427,6 +439,7 @@ div.tocify {
       <a href="http://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a>
     </li>
     <li>
+<<<<<<< HEAD
       <a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>
     </li>
     <li>
@@ -435,6 +448,10 @@ div.tocify {
     <li>
       <a href="lynda.html">Data Science on Lynda.com</a>
     </li>
+=======
+      <a href="https://rstudio.github.io/crosstalk/index.html">Crosstalk: htmlwidgets add-on</a>
+    </li>
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
   </ul>
 </li>
 <li>
@@ -462,7 +479,11 @@ div.tocify {
 
 
 <p>BYUI has set up an RStudio Connect server to make it easy for data scientists to publish and share static and dynamic analysis artifacts. RStudio Connect supports publication of R Markdown documents, Shiny Apps, plots, Plumber APIs, and TensorFlow Model APIs. Note that Plumber APIs and TensorFlow Model APIs can only be published using the R console configuration.</p>
+<<<<<<< HEAD
 <p>This page provides a set of one-time setup instructions as well a publication guide. While this documentation has some information specific to our BYUI server, you can find more information about setup and publication at RStudioâ€™s site - <a href="http://docs.rstudio.com/connect" class="uri">http://docs.rstudio.com/connect</a>.</p>
+=======
+<p>This page provides a set of one-time setup instructions as well a publication guide. While this documentation has some information specific to our BYUI server, you can find more information about setup and publication at RStudio’s site - <a href="http://docs.rstudio.com/connect" class="uri">http://docs.rstudio.com/connect</a>.</p>
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 <div id="setup" class="section level2">
 <h2>Setup</h2>
 <p>You will need to create an account at <a href="https://shiny.byui.edu/connect/" class="uri">https://shiny.byui.edu/connect/</a> and then configure your local tools for publishing. We have documented the account creation and setup for the RStudio IDE as well as using the R console.</p>
@@ -484,6 +505,7 @@ div.tocify {
 <h2>RStudio IDE Configuration</h2>
 <p>Configure push-button publication from RStudio IDE to RStudio Connect.</p>
 <ol style="list-style-type: decimal">
+<<<<<<< HEAD
 <li>Open up the RStudio IDE (if you donâ€™t have it, download here).</li>
 <li>Make sure RStudio is up to date (in the menu bar, navigate to Help -&gt; Check for Updates).</li>
 <li>In the RStudio IDE menu bar, navigate to Tools -&gt; Global Optionsâ€¦</li>
@@ -494,11 +516,24 @@ div.tocify {
 <li>A window will pop up asking for authentication. Enter your credentials and log in.</li>
 <li>A second window will appear that says â€˜Connect to Râ€™. Click the blue â€˜Connectâ€™ button.</li>
 <li>After your account is successfully verified, you will be brought back to the RStudio IDE â€˜Connect Accountâ€™ dialogue. Click the Connect Account button in the bottom right.</li>
+=======
+<li>Open up the RStudio IDE (if you don’t have it, download here).</li>
+<li>Make sure RStudio is up to date (in the menu bar, navigate to Help -&gt; Check for Updates).</li>
+<li>In the RStudio IDE menu bar, navigate to Tools -&gt; Global Options…</li>
+<li>Select Publishing in the sidebar.</li>
+<li>Click the Connect… button (It may ask you to install additional R packages).</li>
+<li>Choose RStudio Connect.</li>
+<li>For the public URL of the RStudio Connect server, enter <a href="http://34.218.129.70" class="uri">http://34.218.129.70</a>.</li>
+<li>A window will pop up asking for authentication. Enter your credentials and log in.</li>
+<li>A second window will appear that says ‘Connect to R’. Click the blue ‘Connect’ button.</li>
+<li>After your account is successfully verified, you will be brought back to the RStudio IDE ‘Connect Account’ dialogue. Click the Connect Account button in the bottom right.</li>
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 </ol>
 <p><strong>Publishing from the RStudio IDE.</strong> RStudio has made it very easy to publish from the RStudio IDE with the push of a button. You just need to watch for the publish icon:</p>
 <p>This icon can be located in the following locations for each of the following content types:</p>
 <ul>
 <li><em>R Markdown Files:</em> The upper right of the file editor or the document viewer when viewing a document</li>
+<<<<<<< HEAD
 <li><em>Shiny Apps:</em> The embedded viewer when running a Shiny application â€¢ <em>Plots:</em> The plots pane</li>
 </ul>
 <p>After you click the publish button, you may be asked where to publish to (select â€œRStudio Connectâ€) and you may be asked additional information such as which account to publish from (if you have multiple endpoints to publish to, e.g. shinyapps.io â€“ select the appropriate server), a title, etc.</p>
@@ -509,6 +544,18 @@ div.tocify {
 <ol style="list-style-type: decimal">
 <li>Enter an R terminal.</li>
 <li>Install the â€œrsconnectâ€ R package: <code>install.packages(&quot;rsconnect&quot;)</code></li>
+=======
+<li><em>Shiny Apps:</em> The embedded viewer when running a Shiny application • <em>Plots:</em> The plots pane</li>
+</ul>
+<p>After you click the publish button, you may be asked where to publish to (select “RStudio Connect”) and you may be asked additional information such as which account to publish from (if you have multiple endpoints to publish to, e.g. shinyapps.io – select the appropriate server), a title, etc.</p>
+</div>
+<div id="r-console-configuration" class="section level2">
+<h2>R Console Configuration</h2>
+<p>If you don’t use RStudio or want to programmatically push content to RStudio Connect as part of an R script, you can configure the capability to publish through R commands.</p>
+<ol style="list-style-type: decimal">
+<li>Enter an R terminal.</li>
+<li>Install the “rsconnect” R package: <code>install.packages(&quot;rsconnect&quot;)</code></li>
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 <li>Register the RStudio Connect server: <code>rsconnect::addConnectServer(&quot;https://shiny.byui.edu&quot;)</code></li>
 <li>Register your user: <code>rsconnect::connectUser(account = &quot;byuiusername&quot;)</code>.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></li>
 <li>You can now programmatically publish content with rsconnect commands including deployAPI(), deployApp(), deployDoc(), deploySite(), deployTFModel().</li>
@@ -532,8 +579,13 @@ rsconnect::deployDoc(tf,
 <h2>Managing Published Content</h2>
 <p>After you have published, a browser window will open and allow you to manage the content (or you can edit the content later on by selecting and viewing it in the RStudio Connect browser). The most important things you can set here are the following:</p>
 <ul>
+<<<<<<< HEAD
 <li>Specify who can view the content: When in doubt, set this to â€œAll logged-in usersâ€.</li>
 <li>Specify tags: We are setting up a tag schema that will allow you to add multiple classifications to your content (e.g. research area, geography, etc.) that will help categorize and make your content discoverable by others. Click the â€œtagsâ€ icon and check as many boxes as appropriate.</li>
+=======
+<li>Specify who can view the content: When in doubt, set this to “All logged-in users”.</li>
+<li>Specify tags: We are setting up a tag schema that will allow you to add multiple classifications to your content (e.g. research area, geography, etc.) that will help categorize and make your content discoverable by others. Click the “tags” icon and check as many boxes as appropriate.</li>
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 </ul>
 </div>
 <div class="footnotes">

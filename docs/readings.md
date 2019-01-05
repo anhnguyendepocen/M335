@@ -27,15 +27,25 @@ ul {
 
 
 
+<<<<<<< HEAD
 #### Week 1 (2019-01-07) 
+=======
+#### Week 1 (2018-09-17) 
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ##### Being Readings
 
 * o [John Rauser Talk](https://youtu.be/fSgEeI2Xpdc){target='blank'}
+<<<<<<< HEAD
 * o [Being a better online reader](https://www.newyorker.com/science/maria-konnikova/being-a-better-online-reader){target='blank'}
 
 ##### Doing Readings
 
+=======
+
+##### Doing Readings
+
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * o [Making your first R Markdown File](../rmarkdown_help.html){target='blank'}
 * o [Intro to R Markdown](http://rmarkdown.rstudio.com/articles_intro.html){target='blank'}
 * o [Chapter 27: R for Data Science - R Markdown](http://r4ds.had.co.nz/r-markdown.html){target='blank'}
@@ -43,6 +53,7 @@ ul {
 * o [Chapter 1:  R for Data Scientists](http://r4ds.had.co.nz/index.html){target='blank'}
 * o [R and R-Studio Practice](https://byuistats.github.io/M335/r_help.html){target='blank'}
 * o [Chapter 4: R for Data Scientists - Workflow Basics](http://r4ds.had.co.nz/workflow-basics.html){target='blank'}
+<<<<<<< HEAD
 
 #### Week 2 (2019-01-14) 
 
@@ -55,6 +66,26 @@ ul {
 ##### Doing Readings
 
 * o [Chapter 3: R for Data Science - Data visualization](http://r4ds.had.co.nz/data-visualisation.html){target='blank'}
+=======
+
+#### Week 2 (2018-09-24) 
+
+##### Being Readings
+
+* o [Effectively Communicating Numbers (pg 1-13)](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf){target='blank'}
+* o [Hans Rosling: The best stats you've ever seen](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen){target='blank'}
+* o [Questions and data science](https://medium.com/@boazsuper1/hiring-the-best-data-scientists-fba389a5b3c1){target='blank'}
+
+##### Doing Readings
+
+* o [Chapter 3: R for Data Science - Data visualization](http://r4ds.had.co.nz/data-visualisation.html){target='blank'}
+* o [GitHub and Rstudio by Github (stop after the 'Commit local changes with Git')](https://resources.github.com/articles/github-and-rstudio/){target='blank'}
+* o [GitHub for Data Scientists](https://resources.github.com/webcasts/GitHub-for-data-scientists/){target='blank'}
+* o [Using the R-Studio GUI by R-Studio](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN){target='blank'}
+* o [Chapter 8: R for Data Science - Projects](http://r4ds.had.co.nz/workflow-projects.html){target='blank'}
+* o [MCS 335, Git, and Github use](https://byuistats.github.io/M335/git_335.html){target='blank'}
+* o [R-Studio and the Git GUI](https://www.youtube.com/watch?v=E2d91v1Twcc){target='blank'}
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * o [Creating Questions for your project](https://www.lynda.com/Business-Skills-tutorials/Harness-power-questions/477451/574315-4.html){target='blank'}
 * o [Chapter 5: R for Data Science - Data transformation](http://r4ds.had.co.nz/transform.html){target='blank'}
 * o [DataCamp:  Data Wrangling Chapter of Introduction to Tidyverse](https://campus.datacamp.com/courses/introduction-to-the-tidyverse/data-wrangling-1?ex=1){target='blank'}
@@ -70,6 +101,13 @@ ul {
 
 ##### Being Readings
 
+<<<<<<< HEAD
+=======
+#### Week 3 (2018-10-01) 
+
+##### Being Readings
+
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * o [Hans Rosling: The River of Myths](https://youtu.be/OwII-dwh-bk){target='blank'}
 * o [Data Scientist Florence Nightengale](http://www.atlasobscura.com/articles/florence-nightingale-infographic){target='blank'}
 * o [How to Become a Data Scientist, The Self-Starter Way](https://elitedatascience.com/become-a-data-scientist){target='blank'}
@@ -85,16 +123,29 @@ ul {
 * o [Chapter 11: R for Data Science - Data Import](http://r4ds.had.co.nz/data-import.html){target='blank'}
 * o [Chapter 28: R for Data Science - Graphics for communication](http://r4ds.had.co.nz/graphics-for-communication.html){target='blank'}
 
+<<<<<<< HEAD
 #### Week 4 (2019-01-28) 
 
 ##### Being Readings
 
 * o [Graphical Perception: Theory, Experimentation, and Applications](https://byuidwv.slack.com/archives/CA0LMKWT0/p1538685238000100){target='blank'}
+=======
+#### Week 4 (2018-10-08) 
+
+##### Being Readings
+
+* o [Graphical Perception: Theory, Experimentation, and Applications](https://www.jstor.org/stable/2288400?seq=1#page_scan_tab_contents){target='blank'}
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * o [What do people do with new data](https://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/){target='blank'}
 * o [Being a good critiquer](https://sifterapp.com/blog/2012/08/tips-for-effectively-reporting-bugs-and-issues/){target='blank'}
 
 ##### Doing Readings
 
+<<<<<<< HEAD
+=======
+* o [Chapter 7: R for Data Science - Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html){target='blank'}
+* o [devtoools R Package](https://github.com/hadley/devtools){target='blank'}
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * o [Finding data to answer your question](https://www.dataquest.io/blog/free-datasets-for-projects/){target='blank'}
 * o [Find a post from the functional art](http://www.thefunctionalart.com){target='blank'}
 * o [Chapter 20: R for Data Science - Vectors](http://r4ds.had.co.nz/vectors.html){target='blank'}
@@ -102,6 +153,7 @@ ul {
 * o [Chapter 7: R for Data Science - Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html){target='blank'}
 * o [devtoools R Package](https://github.com/hadley/devtools){target='blank'}
 
+<<<<<<< HEAD
 #### Week 5 (2019-02-04) 
 
 ##### Being Readings
@@ -112,6 +164,16 @@ ul {
 
 ##### Doing Readings
 
+=======
+#### Week 5 (2018-10-15) 
+
+##### Being Readings
+
+* o [Hadley on Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf){target='blank'}
+
+##### Doing Readings
+
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * o [foreign R Package and `read.dbf()`](https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.dbf){target='blank'}
 * o [Chapter 11: R for Data Science - Data Import](http://r4ds.had.co.nz/data-import.html){target='blank'}
 * o [haven R Package](http://haven.tidyverse.org/){target='blank'}
@@ -121,6 +183,7 @@ ul {
 * o [tidy R Package functions](https://rpubs.com/bradleyboehmke/data_wrangling){target='blank'}
 * o [openxlsx R package](https://github.com/awalker89/openxlsx){target='blank'}
 
+<<<<<<< HEAD
 #### Week 6 (2019-02-11) 
 
 ##### Being Readings
@@ -130,6 +193,18 @@ ul {
 ##### Doing Readings
 
 * o [Regular Expressions in R](http://www.regular-expressions.info/rlanguage.html){target='blank'}
+=======
+#### Week 6 (2018-10-22) 
+
+##### Being Readings
+
+* o [Effectively Communicating Numbers (pg 13-20)](http://perceptualedge.com/articles/Whitepapers/Communicating_Numbers.pdf){target='blank'}
+
+##### Doing Readings
+
+* o [Regular Expressions in R](http://www.regular-expressions.info/rlanguage.html){target='blank'}
+* o [Chapter 13: R for Data Science - Relational Data](http://r4ds.had.co.nz/relational-data.html){target='blank'}
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * o [Chapter 14: R for Data Science - Strings](http://r4ds.had.co.nz/strings.html){target='blank'}
 * o [regexr.com (optional)](http://regexr.com/){target='blank'}
 * o [Regular Expression examples (optional)](https://qntm.org/files/re/re.html){target='blank'}
@@ -137,7 +212,11 @@ ul {
 * o [Regular Expression for R (optional)](http://stat545.com/block022_regular-expression.html){target='blank'}
 * o [Chapter 13: R for Data Science - Relational Data](http://r4ds.had.co.nz/relational-data.html){target='blank'}
 
+<<<<<<< HEAD
 #### Week 7 (2019-02-18) 
+=======
+#### Week 7 (2018-10-29) 
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ##### Being Readings
 
@@ -151,7 +230,11 @@ ul {
 * o [Chapter 21: Iteration (21.1-21.5 is all you will need)](http://r4ds.had.co.nz/iteration.html){target='blank'}
 * o [stringi R package and the `stri_stats_latex()` function](https://rdrr.io/rforge/stringi/man/stri_stats_latex.html){target='blank'}
 
+<<<<<<< HEAD
 #### Week 8 (2019-02-25) 
+=======
+#### Week 8 (2018-11-05) 
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ##### Being Readings
 
@@ -165,10 +248,15 @@ ul {
 * o [Chapter 16: R for Data Science - Dates and Times](http://r4ds.had.co.nz/dates-and-times.html){target='blank'}
 * o [Time Series Visualization Gallery](https://vcg.informatik.uni-rostock.de/~ct/timeviz/timeviz.html){target='blank'}
 * o [lubridate Vignette](https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html){target='blank'}
+<<<<<<< HEAD
 * o [Tips for timed tests](https://atinursingblog.com/test-anxiety-timed-test-tips/){target='blank'}
 * o [Completing timed work](https://www.unigo.com/admissions-advice/what-are-great-ways-to-manage-time-effectively-while-taking-standardized-tests/361/1){target='blank'}
 
 #### Week 9 (2019-03-04) 
+=======
+
+#### Week 9 (2018-11-12) 
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ##### Being Readings
 
@@ -184,6 +272,7 @@ ul {
 * o [DT: An R interface to the Data Tables library](http://rstudio.github.io/DT/){target='blank'}
 * o [timekit R package](https://github.com/business-science/timekit){target='blank'}
 
+<<<<<<< HEAD
 #### Week 10 (2019-03-11) 
 
 ##### Being Readings
@@ -193,6 +282,18 @@ ul {
 
 ##### Doing Readings
 
+=======
+#### Week 10 (2018-11-26) 
+
+##### Being Readings
+
+* o [How William Cleveland Turned Data Visualization into a Science](https://priceonomics.com/how-william-cleveland-turned-data-visualization/){target='blank'}
+* o [Josh Wills on big data (tech data scientist)](https://www.youtube.com/watch?v=Ewd5PXgLXlU&feature=youtu.be){target='blank'}
+* o [Issues with Spatial Aggregation](https://www.youtube.com/watch?v=wn5larsRHro){target='blank'}
+
+##### Doing Readings
+
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 * o [Tidy Spatial Data (Blog Post)](http://strimas.com/r/tidy-sf/){target='blank'}
 * o [rnaturalearth R Package](https://github.com/ropenscilabs/rnaturalearth){target='blank'}
 * o [geofacet for ggplot2 in R](https://hafen.github.io/geofacet/){target='blank'}
@@ -203,6 +304,7 @@ ul {
 * o [Video 2 on spatial datums](https://www.youtube.com/watch?v=kXTHaMY3cVk){target='blank'}
 * o [Using `library(sf)` to read in spatial data](https://r-spatial.github.io/sf/articles/sf2.html){target='blank'}
 
+<<<<<<< HEAD
 #### Week 11 (2019-03-18) 
 
 ##### Being Readings
@@ -212,6 +314,17 @@ ul {
 * o [Divide and Recombine (plus a history of data science)](http://onlinelibrary.wiley.com/doi/10.1002/sam.11242/epdf){target='blank'}
 * o [Background reading for D&R article (optional)](https://onlinelibrary.wiley.com/toc/19321872/2014/7/6){target='blank'}
 
+=======
+#### Week 11 (2018-12-03) 
+
+##### Being Readings
+
+* o [What is Spark?](https://mapr.com/blog/spark-101-what-it-what-it-does-and-why-it-matters/){target='blank'}
+* o [What is Hadoop?](https://www.youtube.com/watch?v=4DgTLaFNQq0&feature=youtu.be){target='blank'}
+* o [Divide and Recombine (plus a history of data science)](http://onlinelibrary.wiley.com/doi/10.1002/sam.11242/epdf){target='blank'}
+* o [Background reading for D&R article (optional)](https://onlinelibrary.wiley.com/toc/19321872/2014/7/6){target='blank'}
+
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 ##### Doing Readings
 
 * o [Leaflet for R: Introduction](http://rstudio.github.io/leaflet/){target='blank'}
@@ -223,7 +336,11 @@ ul {
 * o [Leaflet for R: Lines and Shapes](http://rstudio.github.io/leaflet/shapes.html){target='blank'}
 * o [Leaflet for R: Colors](http://rstudio.github.io/leaflet/colors.html){target='blank'}
 
+<<<<<<< HEAD
 #### Week 12 (2019-03-25) 
+=======
+#### Week 12 (2018-12-10) 
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
 
 ##### Being Readings
 
@@ -234,5 +351,8 @@ ul {
 * o [Semester Project](https://byuistats.github.io/M335/project.html){target='blank'}
 * o [Chapter 29: R for Data Science - R Markdown format](http://r4ds.had.co.nz/r-markdown-formats.html){target='blank'}
 * o [Chapter 19: R for Data Science - Functions](http://r4ds.had.co.nz/functions.html){target='blank'}
+<<<<<<< HEAD
 * o [Tips for timed tests](https://atinursingblog.com/test-anxiety-timed-test-tips/){target='blank'}
 * o [Completing timed work](https://www.unigo.com/admissions-advice/what-are-great-ways-to-manage-time-effectively-while-taking-standardized-tests/361/1){target='blank'}
+=======
+>>>>>>> 3555fbbcd42e43308a527a106f7c819389108e06
