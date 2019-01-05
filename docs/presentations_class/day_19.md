@@ -1,5 +1,5 @@
 ---
-title: "Moving in Space"
+title: "Moving in Space and Gestalt"
 author: J. Hathaway
 params:
   day: 19
@@ -11,14 +11,7 @@ params:
 
 
 
-# Becoming the Critic.
-
-
-```r
-vday <- params$day - 1
-vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
-titlelink <- paste0('{data-background-iframe="', vlink, '"}')
-```
+# gestalt: an orginized whole that is percieved as more than the sum of its parts. {data-background=#e8d725}
 
 
 
@@ -29,7 +22,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
-# Team Discussion
+# Team Discussion {data-background=#e8d725}
 
 
 
@@ -58,9 +51,20 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
+# "Big" Data (Josh Wills) {data-background=#e8d725}
 
+## Scientists Vs. Analysts (Josh Wills)
 
-# Geospatial Data
+> - Best way to differentiate a data scientist from a data analyst. 
+>    - **Data Analyst:** If my tools and data can't answer a question, then the question doesn't get answered.
+>    - **Data Scientist:** If my tools and data can't answer a question, then I go get better tools and data.
+
+## Leaving your little computer (Josh Wills)
+
+> - [The science is the idea and then data moving to answer](https://www.youtube.com/embed/Ewd5PXgLXlU?start=488)
+> - [Big is different in many ways](https://www.youtube.com/embed/Ewd5PXgLXlU?start=690)
+
+# Geospatial Data {data-background=#e8d725}
 
 ## What is GDAL?
 
@@ -68,6 +72,30 @@ The Geospatial Data Abstraction Library (GDAL) is a C/C++ geospatial data format
 
 https://en.wikipedia.org/wiki/GDAL
 http://www.gdal.org
+
+## McNamara on Mapping
+
+> - Minute 2:45 - [Gelman on maps and variables](http://www.stat.columbia.edu/~gelman/research/published/allmaps.pdf)
+> - Minute 11:15 - [Modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem)
+> - **Minute 12:15** - [Histogram example](https://tinlizzie.org/histograms/)
+> - **Minute 14:20** - [John Oliver on Gerrymandering](https://www.youtube.com/watch?v=A-4dIImaodQ) has some crude language after 6 minutes.
+> - Minute 14:20 - [Washinton Post on Gerrymandering](https://www.washingtonpost.com/news/wonk/wp/2015/03/01/this-is-the-best-explanation-of-gerrymandering-you-will-ever-see/?utm_term=.21dbb215a861)
+> - Minute 17:00 - [The redistring game](http://www.redistrictinggame.org/)
+> - Minute 18:00 - [Talismanic Redistricting](http://cho.pol.illinois.edu/wendy/papers/talismanic.pdf)
+> - Minute 20:00 - [Dasymetric Maps](https://www.e-education.psu.edu/geog486/node/1866)
+> - **Minute 21:20** - [Mapping upscaling interactive example](https://tinlizzie.org/spatial/)
+> - Minute 22:25 - [Side Scaling: Nested Polygons and redrawing the states](https://kevinhayeswilson.com/redraw/)
+> - Minute 23:20 - [Misaligned Polygons and Flint](http://theconversation.com/how-zip-codes-nearly-masked-the-lead-problem-in-flint-65626).  Zipcodes are problematic.
+> - Minute 26:19 - [Tobler's First Law](https://gisgeography.com/tobler-first-law-of-geography/)
+> - Minute 26:30 - [Pycno Package](https://cran.r-project.org/web/packages/pycno/pycno.pdf)
+
+## [Gelman's Conclusion]((http://www.stat.columbia.edu/~gelman/research/published/allmaps.pdf))
+
+Mapping raw data can lead to spurious spatial features. For example, regions can appear highly variable because of small sample sizes in spatial sub-units (as in the radon example) or small populations (as in the cancer example), and these apparently variable regions contain a disproportionate number of very high (or low) observed parameter values
+
+Furthermore, maps really do make convenient look-up tables (what is the cancer rate, or mean radon level, in my county?). Unfortunately, even maps that are intended to be used only as look-up tables are almost sure to be used for identifying spatial features – we find it very hard to suppress this instinct ourselves
+
+# How have we dealt with maps? {data-background=#e8d725}
 
 ## Is the earth flat?
 
@@ -95,46 +123,36 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 
 ## When we make a map, what is our goal?
 
-* ![](../images/cahill-keyes.jpg){ width=90% }
-* The [cahill-keyes projection looks pretty good](https://xkcd.com/977/).
+* ![](../images/cahill-keyes.jpg){ width=80% }
+* The [cahill-keyes projection looks pretty good](https://xkcd.com/977/) or [check this out](https://www.youtube.com/watch?v=sD7ED12XGFo).
 
-## Convert to another projection
+# Maps Vs. Variables {data-background=#e8d725}
 
-> * Take a minute and look up projections that you like and get your Task 19 graphic into that projection - http://proj4.org/projections/index.html
-> * http://proj4.org/parameters.html
->     * +lon_0     Central meridian
->     * +lat_0     Latitude of origin
-> * [Class activity](../spatial_class.html) 
->     * http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html
->     * http://spatialreference.org/ref/
+## What is wrong?
 
-# Class Discussion
+"Here, you can take that, that's the final map of the numbers," Trump said, according to Reuters.  "It's pretty good, right? The red is obviously us." [1](http://www.businessinsider.com/trump-2016-electoral-map-reuters-interview-xi-jinping-china-2017-4)
 
-## Task 20 Question
+[Trump Map Tweet](../images/trump_map_tweet.png)
 
-Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence
+## How could we spatially depict the variable of interest?
+
+- [Chloropleth Map](https://en.wikipedia.org/wiki/Choropleth_map)
+- [Cartograms](https://en.wikipedia.org/wiki/Cartogram)
+- [geofacets](https://hafen.github.io/geofacet/)
+
+## geofacet challenge
+
+**Use the geofacet package to build a map that depicts the important variables more than the spatial area.**
+
+> - Will need to aggregate your data to the state level.
+> - Will need to use `install.packages("geofacet")` and the `facet_geo()` function.
+
+[data](../data/nytimes_presidential_elections_2016_results_county.csv)
+
+## Checking out some results
+
+- Who has pushed their graphic?
+- [Check these out](http://www.businessinsider.com/2016-election-results-maps-population-adjusted-cartogram-2016-11/#heres-the-basic-electoral-college-map-with-states-that-hillary-clinton-won-in-blue-and-states-that-donald-trump-won-in-red-assuming-that-trumps-narrow-lead-in-michigan-continues-to-hold-1)
 
 
-
-
-## Posting Comments on Class Case Studies
-
-Why are we making comments on other's work?
-
-[My example](https://github.com/BYUI335/Pyeatt_A/issues/7) for discussion.
-
-## Tracking Progress
-
-> - Don't forget to keep track of your tasks.
-> - Semester project should be moving along.
-> - Check out week 13 work and make sure you are working on this.
-
-## Semester Project Discussion
-
-Please make your own issue right now.
-
-> - Use my issue as a starting point - <https://github.com/BYUI335/hathaway/issues/16>.
-> - Create a new folder in your repository that is called `semester_project`.
-> - If you would like to alter the project, then post a comment to the semester project issue with your update.
-> - Call me out and ask me to review and approve changes.
 

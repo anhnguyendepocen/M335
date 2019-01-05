@@ -1,5 +1,5 @@
 ---
-title: "Big Data, Data Science, and Tools"
+title: "Trelliscope and Project Time"
 author: J. Hathaway
 params:
   day: 22
@@ -15,12 +15,18 @@ params:
 
 
 
-# Review
+# Review {data-background=#e8d725}
 
 
 
 ## Case Study 11: Interacting with space
 > - [Case Study 11](https://byuistats.github.io/M335/weekly_projects/cs11_details.html)
+
+*Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?*
+
+> - What mutations or summaries will you need to do?
+> - What difficulties do you expect?
+> - Do each of the task items make sense?
 
 
 
@@ -35,19 +41,7 @@ params:
 
 
 
-# Big Data Readings
-
-## The Material
-
-> - Questions about [Hadoop](https://www.youtube.com/watch?v=4DgTLaFNQq0&feature=youtu.be)?
-> - Questions about [Spark](https://mapr.com/blog/spark-101-what-it-what-it-does-and-why-it-matters/)?
-> - [Cleveland & Hafen Paper](http://onlinelibrary.wiley.com/doi/10.1002/sam.11242/epdf)
-
-## Cleveland & Hafen Discussion
-
-Let's move the tables around and have this conversation "book group" style.
-
-# Using TrelliscopeJS
+# Using TrelliscopeJS {data-background=#e8d725}
 
 ## Looking at an Example
 
@@ -103,13 +97,5 @@ by_stco %>%
               path = my_display, thumb = TRUE, width = 500)
 ```
 
-# Spark and Big Data
 
-## Using R with Spark
-
-> - [Try out Sparklyr: R interface to Apache Spark](https://spark.rstudio.com)
->    - [Nice Rstudio blog post](https://blog.rstudio.com/2016/09/27/sparklyr-r-interface-for-apache-spark/)
->    - [Another example from H20](https://github.com/trestletech/user2016-sparklyr)
->    - [Build Histogram from Distributed data](https://github.com/rstudio/sparkDemos/blob/master/prod/presentations/cloudera/sqlvis_histogram.R)
-
-
+# Project Time {data-background=#e8d725}

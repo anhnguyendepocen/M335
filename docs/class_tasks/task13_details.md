@@ -41,7 +41,6 @@ ul {
 This reading will help you complete the tasks below.
 
 * o [Chapter 15: R for Data Science - Factors](http://r4ds.had.co.nz/factors.html){target='blank'}
-* o [Statistical Concepts in Presenting Data (pgs 72 - 85)](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf){target='blank'}
 * o [forcats R package](http://stat545.com/block029_factors.html){target='blank'}
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Understanding Time"
+title: "Understanding Time (Applications)"
 author: J. Hathaway
 params:
   day: 16
@@ -22,7 +22,7 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
 
 
-# Class Activity
+# Class Activity {data-background=#e8d725}
 
 ## The Changers (1)
 
@@ -44,27 +44,13 @@ Use `round_date()`, `ceiling_date()`, `floor_date()`, `force_tz()`, and `with_tz
 
 2. Now suppose that the time read into R as UTC but that you know those times are actually recorded in the mountian time zone.  Repeat item 1. 
 
-```{r fishface22, eval=FALSE}
+```{r fishface22, eval=FALSE, echo=TRUE}
 library(lubridate)
 x <- ymd_hms("2009-07-01 2:01:59.23")
 ```
 
 
-## The Walmart March Visualization
-
-> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
-> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
-
-## The Walmart Challenge
-
-> 1. **Recreate this graphic**
-> 2. **Propose a different graphic**
-
-> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
-> - [Walmart Openings csv](https://byuistats.github.io/M335/data/Walmart_store_openings.csv)
-> - `?state` to see the data to use to get the colors correct.
-
-# Making new R package friends
+# Making new R package friends {data-background=#e8d725}
 
 ## The challenge
 

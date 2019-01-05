@@ -121,11 +121,14 @@ $(document).ready(function () {
 </div>
 
 
-<div id="task-6-world-data-investigation" class="section level2">
-<h2>Task 6: World Data Investigation</h2>
+<div id="task-6-developing-a-graphic" class="section level2">
+<h2>Task 6: Developing a graphic</h2>
 <div id="background" class="section level3">
 <h3>Background</h3>
-<p>The <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> website has world data. It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.</p>
+<p>Before we can start to answer business questions we need to become familiar with our data. Often, you will want to start with the <a href="https://www.bridging-the-gap.com/data-dictionary/">data dictionary</a>. However, you can also just dive into the data and gain understanding based on the variable names and types.</p>
+<p>Beyond the variable descriptions is how the variables relate to each other. We can create tables or visualizations that summarize how different variables relate to each other. At this point we are deepeing our understanding as well as beginning our analysis.</p>
+<p><strong>Remember: Your job is to become the data expert not the domain expert.</strong> You will build domain skills but you are not going to replace domain experts. People will depend on you to have a firm understanding of what data your company has available to answer domain specific questions.</p>
+<p>Use <code>nycflights13::flights</code> to practice your data summary and data investigation through visualization skills.</p>
 <ul>
 <li><a href="../homework_schedule.html">Homework Schedule</a></li>
 </ul>
@@ -143,25 +146,20 @@ ul {
 <h3>Reading</h3>
 <p>This reading will help you complete the tasks below.</p>
 <ul>
-<li>o <a href="http://r4ds.had.co.nz/workflow-scripts.html" target="blank">Chapter 6: R for Data Science - Scripts</a></li>
-<li>o <a href="http://r4ds.had.co.nz/data-import.html" target="blank">Chapter 11: R for Data Science - Data Import</a></li>
+<li>o <a href="http://r4ds.had.co.nz/graphics-for-communication.html" target="blank">Chapter 28: R for Data Science - Graphics for communication</a></li>
 </ul>
 </div>
 <div id="tasks" class="section level3">
 <h3>Tasks</h3>
 <ul>
-<li>[ ] Take notes on your reading of the specified ‘R for Data Science’ chapter in the README.md or in a ‘.R’ script in the class task folder</li>
-<li>[ ] Review the <a href="https://ourworldindata.org/" target="blank">Our World in Data</a> webpage and find a graphic that interests you.
+<li>[ ] Find an insightfull relationship between two of the variables (columns) and display that relationship in a table or graphic
 <ul>
-<li>[ ] Recreate that graphic in R after downloading the data from their website</li>
+<li>[ ] Provide a distributional summary of the relevant variable in <code>nycflights13::flights</code></li>
+<li>[ ] Build bivariate summaries of the relevant variables</li>
+<li>[ ] document the iterative script that built to your insightfull relationship</li>
 </ul></li>
-<li>[ ] Explore the world data on <code>child_mortality</code> and create an interesting graphic that highlights this dataset.
-<ul>
-<li>[ ] Use <code>devtools::install_github(&quot;drsimonj/ourworldindata&quot;)</code> to get a larger dataset on <code>child_mortality</code>. This will require <code>install.packages(&quot;devtools&quot;)</code>.</li>
-<li>[ ] Create a graphic that you could use in a presentation to summarize world child mortatility</li>
-</ul></li>
-<li>[ ] Include your plots in an <code>.Rmd</code> file with short paragraph describing your plots</li>
-<li>[ ] Push your <code>.Rmd</code>, <code>.md</code>, and <code>.html</code> to your GitHub repo</li>
+<li>[ ] Create an <code>.R</code> script that has your data visualization development with 1-2 commented paragraphs summarizing your 2 finalized graphics and the choices you made in the data presentation</li>
+<li>[ ] Save your <code>.png</code> images of each your final graphics and push all your work to your repository.</li>
 </ul>
 </div>
 </div>

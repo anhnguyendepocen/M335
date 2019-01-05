@@ -1,0 +1,156 @@
+---
+title: "R Markdown Guide"
+output: html_document
+---
+
+
+
+
+### Overview
+
+*I lifted this from <http://stat545.com/block007_first-use-rmarkdown.html>*
+
+This describes a hands-on activity where the goal is to author an R Markdown document and render it to HTML.
+
+Here is the official R Markdown documentation: <http://rmarkdown.rstudio.com>
+
+### Step 0: Software installation and configuration
+
+We assume the following
+
+  * You've already [installed R and RStudio](block000_r-rstudio-install.html).
+
+### Step 1: Get ready to work
+
+Launch RStudio, probably in the Project that corresponds to the repository where you are keeping all our coursework. Make sure the workspace is clean and you've launched a fresh R process. Make sure the working directory is sensible.
+
+### Step 2: Practice with RStudio's boilerplate R Markdown document
+
+I am modelling "walk before you run" here. It is best, especially for novices, to increase complexity in small increments. We will test our system's ability to render the ["hello world"](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program) of R Markdown documents before we muddy the waters with our own, probably buggy, documents.
+
+Do this: *File > New File > R Markdown ...*
+
+  - Give it an informative title. This will appear in the document but does not necessarily have anything to do with the file's name. But the title and filename should be similar! The title is for human eyeballs, so it can contain spaces and punctuation. The filename is for humans and computers, so it should have similar words in it but no spaces and no punctuation.
+  - Accept the default Author or edit if you wish.
+  - Accept the default output format of HTML.
+  - Click OK.
+  
+Save this document to a reasonable filename and location. The filename should end in `.Rmd` or `.rmd`. I **highly recommend** saving in the top-level of the directory that is also an RStudio project and that is also current working directory. Trust me on this.
+
+Click on "Knit HTML" or do *File > Knit Document*. RStudio should display a preview of the resulting HTML. Also look at the file browser (which should be pointed at the directory where you saved the `.Rmd` file). You should see the R Markdown document, i.e. `foo.Rmd` AND the resulting HTML `foo.html`.
+
+Congratulations, you've just made your first reproducible report with R Markdown.
+
+### Step 3: Take control of the output format
+
+Do you really want HTML? Do you only want HTML? If so, you can skip this step!
+
+The magical process that turns your R Markdown to HTML is like so: `foo.Rmd --> foo.md --> foo.html`. Note the intermediate markdown, `foo.md`. By default RStudio discards this, but you might want to hold on to that markdown.
+
+Why? GitHub, which we will learn about soon, gives very special treatment to markdown files. They are rendered in an almost HTML-like way. This is great because it preserves all the charms of plain text but gives you a pseudo-webpage for free when you visit the file in the browser. In contrast, HTML is rendered as plain text on GitHub and you'll have to take special measures to see it the way you want.
+
+**Output format** is one of the many things we can control in the YAML frontmatter -- the text at the top of your file between leading and trailing lines of `---`.
+
+You can make some changes via the RStudio IDE: click on the "gear" in the top bar of the source editor, near the "Knit HTML" button. Select "Output options" and go to the Advanced tab and check "Keep markdown source file." Your YAML should now look more like this:
+  
+``` yaml
+    ---  
+    title: "Something fascinating"  
+    author: "Jenny Bryan"  
+    date: "2019-01-04"
+    output:  
+      html_document:  
+        keep_md: true  
+    ---  
+```
+
+You should have gained the line `keep_md: true`. You can also simply edit the file yourself to achieve this.
+
+Save!
+
+Render via "Knit HTML" button.
+
+Now revisit the file browser. In addition to `foo.Rmd`, you should now see `foo.md`. If there are R chunks that make figures, the usage of markdown output formats will also cause those figure files to be left behind in a sensibly named sub-directory, `foo_files`.
+
+### Step 4: Swap out the "guts" of the document
+
+Select everything but the YAML frontmatter and ... delete it!
+
+Write a single English sentence.
+
+Insert an empty R chunk, via the "Chunk" menu in upper right of source editor or with corresponding keyboard shortcut.
+
+    ?```{r}
+    ?## insert your brilliant WORKING code here
+    ?```
+
+Insert 1 to 3 lines of functioning code that begin the task at hand. "Walk through" and run those lines using the "Run" button or the corresponding keyboard shortcut. You MUST make sure your code actually works!
+
+Satisfied? Save!
+
+Now render the whole document via "Knit HTML." Voilà!
+
+### Step 5: Develop your report
+
+In this incremental manner, develop your report. Add code to this chunk. Refine it. Add new chunks. Go crazy! But keep running the code "manually" to make sure it works.
+
+If it doesn't work with you babysitting it, I can guarantee you it will fail, in a more spectacular and cryptic way, when run at arms-length via "Knit HTML" or `rmarkdown::render()`.
+
+Clean out your workspace and restart R and re-run everything periodically, if things get weird. There are lots of chunk menu items and keyboard shortcuts to accelerate this workflow. Render the whole document often to catch errors when they're easy to pinpoint and fix. Save often and commit every time you reach a point that you'd like as a "fall back" position.
+
+You'll develop your own mojo soon, but this should give you your first successful R Markdown experience.
+
+### Step 6: Publish your report
+
+If you've been making HTML, you can put that up on the web somewhere, email to your collaborator, whatever.
+
+No matter what, technically you can publish this report merely by pushing a rendered version to GitHub. However, certain practices make this effort at publishing more satisfying for your audience.
+
+This is (sort of) another example of keeping things machine- and human-readable, which is bliss. By making `foo.Rmd` available, others can see and run your __actual code__. By sharing `foo.md` and/or `foo.html`, others can casually browse your end product and decide if they even want to bother.
+
+### Course Rmd Template
+
+We have built a template `.Rmd` file that you can use for our course.  It requires that you install a package from a GitHub repository.  Here are the steps.
+
+1. Use `install.packages("devtools")` to be able to use `library(devtools)` in your R.
+2. Go to https://github.com/dylanjm/Rtemplates and run the Rtemplates line related to stats.
+3. Now in R-Studio create a new `R Markdown ...` and then choose `From Template`.
+4. There should be an option that says `Math 335 Analysis`.  Select it and click `OK`.
+
+It will build the `YAML` that we would prefer for this course.
+
+### Troubleshooting
+
+__Make sure RStudio and the `rmarkdown` package (and its dependencies) are up-to-date.__ In case of catastrophic failure to render R Markdown, consider that your software may be too old. R Markdown has been developing rapidly (written 2015-09), so you need a very current version of RStudio and `rmarkdown` to enjoy all the goodies we describe in this course.
+
+__Get rid of your `.Rprofile`__, at least temporarily. I have found that a "mature" `.Rprofile` that has accumulated haphazardly over the years can cause trouble. Specifically, if you've got anything in there relating to `knitr`, `markdown`, `rmarkdown` and RStudio stuff, it may be preventing the installation or usage of the most recent goodies (see above). Comment the whole file out or rename it something else and relaunch or even re-install RStudio.
+
+__Insert a chunk in your `.Rmd` document so that it renders even when there are errors.__ Some errors are easier to diagnose if you can execute specific R statements during rendering and leave more evidence behind for forensic examination. Put this chunk:
+
+    ?```{r setup, include = FALSE, cache = FALSE}  
+    ?knitr::opts_chunk$set(error = TRUE)  
+    ?```
+    
+near the top of your R Markdown document if you want to soldier on through errors, i.e. turn `foo.Rmd` into `foo.md` and/or `foo.html` no matter what. This is also helpful if you are writing a tutorial and want to demo code that throws an error. You might want to keep this as an [RStudio snippet](https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets) for easy insertion.
+
+__Tolerate errors in one specific chunk.__ If it's undesirable to globally accept errors, you can still do this for a specific chunk like so:
+
+    ?```{r wing-and-a-prayer, error = TRUE}  
+    ?## your sketchy code goes here ;) 
+    ?```
+
+__Check your working directory.__ It's going to break your heart as you learn how often your mistakes are really mundane and basic. Ask me how I know. When things go wrong consider:
+
+  * What is the working directory?
+  * Is that file I want to read/write actually where I think it is?
+  
+Drop these commands into R chunks to check the above:
+
+  * `getwd()` will display working directory at __run time__. If you monkeyed around with working directory with, e.g., the mouse, maybe it's set to one place for your interactive development and another when "Knit HTML" takes over?
+  * `list.files()` will list the files in working directory. Is the file you want even there?
+
+__Don't try to change working directory within an R Markdown document__. [Just don't](https://yihui.name/knitr/faq/). That is all.
+
+__Don't be in a hurry to create a complicated sub-directory structure.__ RStudio/`knitr`/`rmarkdown` (which bring you the "Knit HTML" button) are rather opinionated about the working directory being set to the `.Rmd` file's location and about all files living together in one big happy directory. This can all be worked around. But not today.
+
+

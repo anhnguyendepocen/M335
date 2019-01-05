@@ -19,6 +19,8 @@ Here is the [class example](../parallel.html) that we will run through today.  Y
 >     - http://www.business-science.io/code-tools/2016/12/18/multidplyr.html
 > - [parallel: r default multicore package](http://stat.ethz.ch/R-manual/R-devel/library/parallel/doc/parallel.pdf)
 >     - http://www.win-vector.com/blog/2016/01/parallel-computing-in-r/
+> - [furrr: parrallel processing built on the purrr package](https://davisvaughan.github.io/furrr/)
+>     - [The future package](https://github.com/HenrikBengtsson/future) mixed with [the purrr package](https://github.com/tidyverse/purrr)
 
 
 

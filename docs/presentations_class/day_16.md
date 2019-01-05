@@ -1,5 +1,5 @@
 ---
-title: "Understanding Time"
+title: "Understanding Time (Applications)"
 author: J. Hathaway
 params:
   day: 16
@@ -15,17 +15,23 @@ params:
 
 
 
-# Review
+# Review {data-background=#e8d725}
 
 
 
 ## Case Study 8: It's about time
 > - [Case Study 8](https://byuistats.github.io/M335/weekly_projects/cs08_details.html)
 
+*Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?*
+
+> - What mutations or summaries will you need to do?
+> - What difficulties do you expect?
+> - Do each of the task items make sense?
 
 
 
-## Task 16: Does the weather hurt my bottom line?
+
+## Task 16:  Coding Challenge
 > - [Task 16](https://byuistats.github.io/M335/class_tasks/task16_details.html)
 
 
@@ -35,7 +41,7 @@ params:
 
 
 
-# Class Activity
+# Class Activity {data-background=#e8d725}
 
 ## The Changers (1)
 
@@ -58,23 +64,13 @@ Use `round_date()`, `ceiling_date()`, `floor_date()`, `force_tz()`, and `with_tz
 2. Now suppose that the time read into R as UTC but that you know those times are actually recorded in the mountian time zone.  Repeat item 1. 
 
 
+```r
+library(lubridate)
+x <- ymd_hms("2009-07-01 2:01:59.23")
+```
 
 
-## The Walmart March Visualization
-
-> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
-> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
-
-## The Walmart Challenge
-
-> 1. **Recreate this graphic**
-> 2. **Propose a different graphic**
-
-> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
-> - [Walmart Openings csv](https://byuistats.github.io/M335/data/Walmart_store_openings.csv)
-> - `?state` to see the data to use to get the colors correct.
-
-# Making new R package friends
+# Making new R package friends {data-background=#e8d725}
 
 ## The challenge
 

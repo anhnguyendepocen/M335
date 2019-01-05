@@ -27,40 +27,28 @@ This task is intended to get all of us on the same page in R.  You will use the 
 ----------------------------------------
 
 
-## Task 3:  Let's git going 
+## Task 3:  Asking the right questions 
+### Background 
+Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  [This task supports your semester project](https://byuistats.github.io/M335/project.html). **Note that the reading on data transformation below is necessary for the case study for this week and may be the most important reading of the semester to fully understand**
+
+
+ * [Homework Schedule](../homework_schedule.html)
+
+----------------------------------------
+
+
+## Task 4:  Let's git going 
 ### Background 
 You have just been hired to a new data science team, and you need to collaborate on projects.  The team lead told you to connect to your git repository on Github and edit the `README.md` in your repository. She wants you to describe who you are in a short paragraph.
 
 
  * [Homework Schedule](../homework_schedule.html)
 
-----------------------------------------
-
-
-## Task 4:  Asking the right questions 
-### Background 
-Learning how to ask interesting questions takes time.  As data scientists we need to learn how to ask questions that data can answer.  This task supports your semester project. **Note that the reading on data transformation below is necessary for the case study for this week and may be the most important reading of the semester to fully understand**
-
-
- * [Homework Schedule](../homework_schedule.html)
-
 
 ----------------------------------------
 
-## Task 5: Making bad graphics 
-### Background 
 
-In `library(ggplot2)` there is a `diamonds` dataset that shows features of diamonds.  Your brother is about to go out and buy a diamond ring for his fiancee and needs some advice on what type of diamond to purchase. He knows that karat has a strong relationship with price.  He wants to know what other elements of the diamond he could sacrifice to maximize the karat size for a budget around $2,000. Some interesting details on diamonds can be found [here](https://www.americangemsociety.org/page/4cs){target="blank"}.
-
- * [Homework Schedule](../homework_schedule.html)
-
-
-
-
------------------------------
-
-
-## Task 6: World Data Investigation 
+## Task 5: World Data Investigation 
 ### Background 
 
 The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. We are going to recreate some of their visualizations in R and then make them better.
@@ -70,22 +58,41 @@ The [Our World in Data](https://ourworldindata.org/){target="blank"} website has
 
 ----------------------------
 
-## Task 7: World Data Investigations - Part 2 
+## Task 6: Developing a graphic 
 ### Background 
-The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to recreate some of their visualizations in R and then make them better.
+Before we can start to answer business questions we need to become familiar with our data. Often, you will want to start with the [data dictionary](https://www.bridging-the-gap.com/data-dictionary/).  However, you can also just dive into the data and gain understanding based on the variable names and types.
+
+Beyond the variable descriptions is how the variables relate to each other. We can create tables or visualizations that summarize how different variables relate to each other. At this point we are deepeing our understanding as well as beginning our analysis.
+
+**Remember: Your job is to become the data expert not the domain expert.** You will build domain skills but you are not going to replace domain experts. People will depend on you to have a firm understanding of what data your company has available to answer domain specific questions.
+
+Use `nycflights13::flights` to practice your data summary and data investigation through visualization skills.
+
+ * [Homework Schedule](../homework_schedule.html)
+
+
+-----------------------------
+
+## Task 7: Data to Answer Questions 
+### Background 
+
+Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your [semester project](https://byuistats.github.io/M335/project.html).  After you find good data sources make sure to complete the remaining tasks.
+
+
+ * [Homework Schedule](../homework_schedule.html)
+
+----------------------------------------
+
+
+## Task 8: World Data Investigations - Part 2 
+### Background 
+The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to build visualizations in R using their data.
 
  * [Homework Schedule](../homework_schedule.html)
 
 ----------------------------
 
-## Task 8: Data to Answer Questions 
-### Background 
 
-Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your project.  After you find good data sources make sure to complete the remaining tasks.
-
-
- * [Homework Schedule](../homework_schedule.html)
-----------------------------------------
 
 
 ## Task 9: Same Data Different Format 
@@ -109,18 +116,7 @@ With stock return data from the previous task, we need to tidy this data for the
 
 ----------------------------------------
 
-
-## Task 11: Take me out to the ball game 
-### Background 
-
-Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success.  As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The `library(Lahman)` package has a comprehensive set of baseball data.  It is great for testing out our relational data skills.  We will also need a function to inflation adjust the player salaries - `library(blscrapeR)`. See [this guide for an example](https://cran.r-project.org/web/packages/blscrapeR/vignettes/Inflation_and_Prices.html){target="blank"}.
-
- * [Homework Schedule](../homework_schedule.html)
-
-----------------------------------------
-
-
-## Task 12: Strings and grep 
+## Task 11: Strings and grep 
 ### Background 
 
 Using global regular expression print (grep) and regular expressions (regex) to find character string patterns is a valuable tool in data analysis and is available with all operating systems and many different programming languages.  It is a powerful tool once it is understood.  The recently developed `library(stringr)` package makes these tools much easier to use. The three tasks below can be completed in many different ways.  As a challenge, my code to complete this entire task less than 10 lines.
@@ -130,6 +126,16 @@ Using global regular expression print (grep) and regular expressions (regex) to 
 
 ----------------------------------------
 
+## Task 12: Take me out to the ball game 
+### Background 
+
+Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success.  As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The `library(Lahman)` package has a comprehensive set of baseball data.  It is great for testing out our relational data skills.  We will also need a function to inflation adjust the player salaries - `library(blscrapeR)`. See [this guide for an example](https://github.com/cran/blscrapeR/blob/master/inst/doc/Inflation_and_Prices.Rmd){target="blank"}.
+
+ * [Homework Schedule](../homework_schedule.html)
+
+----------------------------------------
+
+# Tasks 13-24
 
 ## Task 13: Controlling categorical variables (factors) 
 ### Background 
@@ -154,28 +160,23 @@ In 1978 Susan Easton Black [penned an article](https://www.lds.org/ensign/1978/0
 
 ----------------------------------------
 
-# Tasks 13-24
 
-## Task 15:  How is the weather? 
-### Background 
-
-Use the `library(riem)` package that is described [here](https://github.com/ropensci/riem){target="blank"} and get the month of June for 2015, 2016, and 2017. You would use `riem_measures(station = "RXE", date_start = "2015-06-01", date_end = "2017-07-01")` for station `RXE`.  Once you have downloaded and formated the data, make sure to save it to your analysis folder as it will take a minute or two to download each time.   We have a few coding tasks to help us get used to using dates. Create a visualization for each question.
-
-1. What day of the week had the highest temperature reading?
-2. What day of the week had the lowest temperature at 2 pm?
-
- * [Homework Schedule](../homework_schedule.html)
-
-----------------------------------------
-
-
-## Task 16: Does the weather hurt my bottom line? 
+## Task 15: Does the weather hurt my bottom line? 
 ### Background 
 
 A car wash business wants to see if the temperature hurts their bottom line.  They have point of sale data for the months of April, May, June, and July.  You will need to aggregate the data into hourly sales totals and merge the sales data together with the temperature data to provide insight into the relationship between temperature and car wash sales. 
 
  * [Homework Schedule](../homework_schedule.html)
 
+
+----------------------------------------
+
+## Task 16:  Coding Challenge 
+### Background 
+
+We do not have a task due outside of class for today. During class, we will do a 1-hour coding challenge to give you practice for the coding challenge on the last day of class.
+
+ * [Homework Schedule](../homework_schedule.html)
 
 ----------------------------------------
 
@@ -193,7 +194,7 @@ The stock market is overflowing with data.  There are many packages in R that al
 ## Task 18: The US Grocer (KR) 
 ### Background 
 
-Interactive visualizations can often be powerful for data investigations.  They let your team get at questions in real time.  Use the Kroger (KR) stock price to build an interactive visualization of their performance over the last five years.  Annotate the graphic with a note of the reason at two or more time points, or intervals, where the price had significant shifts. 
+Interactive visualizations can often be powerful for data investigations.  They let your team get at questions in real time.  Use the Kroger (KR) stock price to build an interactive visualization of their performance over the last five years. Take some time to build a couple of different visualizations that show Krogers performance.  See the task items below for a description.
 
 
  * [Homework Schedule](../homework_schedule.html)
@@ -215,7 +216,7 @@ We will use `library(USAboundaries)`, `library(ggrepel)`, and `library(sf)` to m
 ## Task 20: Getting in SHP 
 ### Background 
 
-We have been asked by the state of Idaho to visualize permitted well locations with a production of more than 5000 gallons and the spatial relationship of the large wells to the locations of large dams (surface area larger than 50 acres).  They have provided a a [shp file](https://byuistats.github.io/M335/data/shp.zip) for us and given us a web address for the [well](https://research.idwr.idaho.gov/gis/Spatial/Wells/WellConstruction/wells.zip), [dam](https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip), and [water](https://research.idwr.idaho.gov/gis/Spatial/Hydrography/streams_lakes/c_250k/hyd250.zip) locations. They would like to have the `Snake River` and `Henrys Fork` rivers plotted.
+We have been asked by the state of Idaho to visualize permitted well locations with a production of more than 5000 gallons and the spatial relationship of the large wells to the locations of large dams (surface area larger than 50 acres).  They have provided a a [shp file](https://byuistats.github.io/M335/data/shp.zip) for us and given us a web address for the [well](https://data-idwr.opendata.arcgis.com/datasets/1abb666937894ae4a87afe9655d2ff83_1), [dam](https://data-idwr.opendata.arcgis.com/datasets/e163d7da3b84410ab94700a92b7735ce_0), and [water](https://research.idwr.idaho.gov/gis/Spatial/Hydrography/streams_lakes/c_250k/hyd250.zip) locations. They would like to have the `Snake River` and `Henrys Fork` rivers plotted.
 
 Their US map is projected to show the entire US.  You will need to subset the data to Idaho and then reproject the map, so Idaho is not tilted.
 
@@ -251,7 +252,7 @@ This week we are going to get introduced to "big data" principles.  We will disc
 ## Task 23: Should we do it? 
 ### Background 
 
-This week we will learn new coding techniques and visualization principles. Go back to task 12 and build your code into two or three **functions** that performs the same work for the tasks.  
+This week we will learn new coding techniques and visualization principles. Go back to task 11 and build your code into two or three **functions** that performs the same work for the tasks.  
 
 1. Your functions can allow the input of the spacing between characters or maybe a vector that picks of specific characters.
 2. Your functions could remove letters after periods and put the sentence into one string.
@@ -265,9 +266,10 @@ Be prepared to present your functions in class.
 ----------------------------------------
 
 
-## Task 24: A Few views on Visualization 
+## Task 24: Coding Challenge 
 ### Background 
-This week we will learn new coding techniques and visualization principles.  However, your case study and weekly tasks will provide time to makes sure you have for the last task of the [semester project](https://byuistats.github.io/M335/project.html). Please complete the required reading.
+
+We do not have a task due outside of class for today. During class, we will do a 1-hour coding challenge to give you practice for the coding challenge on the last day of class.
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -302,13 +304,11 @@ The **submit** word above will require you to create an account on [slack](https
 
 ## Case Study 3: Becoming a databender 
 ### Background 
-You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (`install.packages("nycflights13")`, `library(nycflights13)`) your manager wants you to answer the following questions;
+You just started your internship at a big firm in New York, and your manager gave you an extensive file of flights that departed JFK, LGA, or EWR in 2013. From this data (`nycflights13::flights`), which you can obtain in R (`install.packages("nycflights13"); library(nycflights13)`), your manager wants you to answer the following questions;
 
 1. If I am leaving before noon, which two airlines do you recommend at each airport (JFK, LGA, EWR) that will have the lowest delay time at the 75th percentile?
 2. Which origin airport is best to minimize my chances of a late arrival when I am using Delta Airlines?
 3. Which destination airport is the worst (you decide on the metric for worst) airport for arrival time?
-
-Make sure to include one visualization that shows the complexity of the data.
 
  * [Homework Schedule](../homework_schedule.html)
 

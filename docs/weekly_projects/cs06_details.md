@@ -57,7 +57,7 @@ ul {
 * [ ] Load the R package from GitHub `devtools::install_github("hathawayj/buildings")` and find out what [data is in the package](https://github.com/hathawayj/buildings)
 * [ ] Construction value is related to population in the area.  Join the `climate_zone_fips` data to the `buildings0809` data using the two `FIPS` columns for state and county.
 * [ ] After filtering to `Food_Beverage_Service` group of buildings in the `Type` variable, use the `ProjectTitle` column to create new subgroups from the groupings in the code section below and the restaurant names in `restaurants`.
-    * [ ] Restaurants that are not assigned using the names and keywords that are over 4000 square feet should be grouped into `Full Service Restaurants` and be in `Quick Service Restaurants` if they are under 4000 square feet
+    * [ ] Restaurants that are not assigned using the names and keywords that are over 4000 square feet should be grouped into `Full Service Restaurants` and be in `Quick Service Restaurants` if they are under 4000 square feet and new construction.
 * [ ] Make sure your text strings your are matching on are as standardized as possible
     * [ ] leverage functions like `str_to_lower()` and `str_trim()` to get all the words in a standardized form
     * [ ] you could use the `case_when()` function to create the subgroups.

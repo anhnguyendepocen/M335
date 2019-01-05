@@ -97,7 +97,6 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -491,52 +490,45 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="review" class="titleslide slide level1"><h1>Review</h1></section><section id="case-study-7-counting-names-in-scripture" class="slide level2">
+<section><section id="review" class="titleslide slide level1" data-background="#e8d725"><h1>Review</h1></section><section id="case-study-7-counting-names-in-scripture" class="slide level2">
 <h2>Case Study 7: Counting names in scripture</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/weekly_projects/cs07_details.html">Case Study 7</a></li>
+</ul>
+<p><em>Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?</em></p>
+<ul>
+<li>What mutations or summaries will you need to do?</li>
+<li>What difficulties do you expect?</li>
+<li>Do each of the task items make sense?</li>
 </ul>
 </section><section id="task-14-counting-words-and-occurrences" class="slide level2">
 <h2>Task 14: Counting Words and Occurrences</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/class_tasks/task14_details.html">Task 14</a></li>
 </ul>
-</section><section id="making-a-plan" class="slide level2">
+</section></section>
+<section><section id="planning-case-study-7" class="titleslide slide level1" data-background="#e8d725"><h1>Planning Case Study 7</h1></section><section id="making-a-plan" class="slide level2">
 <h2>Making A Plan</h2>
 <p><img src="../images/programming_thought.png" width="300px" /></p>
 </section><section id="mapping-out-the-coding-challenge" class="slide level2">
 <h2>Mapping out the coding challenge</h2>
 <p><strong>In your tables:</strong></p>
 <ul>
-<li>Read the case study and write a one word statement of what you need to do</li>
-<li>Mock up what your final data may need to look like (what columns do you need to make a good visualization)</li>
+<li>Read the case study and write a one word statement of what you would like to do</li>
+<li>Think up two or three ideas of things you would like to do to go above and beyond</li>
+<li>Mock up what your final data may need to look like</li>
+<li>What columns do you need to make a good visualization?</li>
+<li>What will an observation be in your new data?</li>
 <li>Write pseudo code that would get you to an answer</li>
 </ul>
-</section><section id="class-task-14-data" class="slide level2">
-<h2>Class Task 14 (data)</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(rio)
-<span class="kw">library</span>(stringr)
-<span class="kw">library</span>(stringi)
-scriptures &lt;-<span class="st"> </span><span class="kw">import</span>(<span class="st">&quot;http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip&quot;</span>)
-bm &lt;-<span class="st"> </span>scriptures <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(volume_short_title <span class="op">==</span><span class="st"> &quot;BoM&quot;</span>)</code></pre></div>
-</section><section id="class-task-14-average" class="slide level2">
-<h2>Class Task 14 (average)</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bm_counts &lt;-<span class="st"> </span>bm <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">group_by</span>(verse_title, chapter_id, book_id, chapter_number, verse_number, book_title) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">word_count =</span> <span class="kw">stri_stats_latex</span>(scripture_text)[<span class="st">&quot;Words&quot;</span>],
-            <span class="dt">charsword =</span> <span class="kw">stri_stats_latex</span>(scripture_text)[<span class="st">&quot;CharsWord&quot;</span>],
-            <span class="dt">charswhite =</span> <span class="kw">stri_stats_latex</span>(scripture_text)[<span class="st">&quot;CharsWhite&quot;</span>])</code></pre></div>
-</section><section id="class-task-14-finding-jesus" class="slide level2">
-<h2>Class Task 14 (finding Jesus)</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bm_locs &lt;-<span class="st"> </span>bm<span class="op">$</span>scripture_text <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">            </span><span class="kw">str_locate_all</span>(<span class="kw">c</span>(<span class="st">&quot;Jesus&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">            </span><span class="kw">lapply</span>(<span class="cf">function</span>(x) <span class="kw">nrow</span>(x)) <span class="op">%&gt;%</span>
-<span class="st">            </span><span class="kw">unlist</span>()
-<span class="kw">sum</span>(bm_locs)</code></pre></div>
 </section></section>
-<section><section id="loops-for-what" class="titleslide slide level1"><h1>Loops for what?</h1></section><section id="making-the-loop-challenge" class="slide level2">
+<section><section id="loops-for-what" class="titleslide slide level1" data-background="#e8d725"><h1>Loops for what?</h1></section><section id="making-the-loop-challenge" class="slide level2">
 <h2>Making the loop (challenge)</h2>
-<p><strong>The challenge:</strong> Use the savior names list and write out how you would use a for loop to find/break this one verse into chunks to get a word count between each.</p>
+<p><strong>The challenge:</strong></p>
+<ol type="1">
+<li>Use the savior names list and write out how you would use a for loop to find/break this one verse into chunks to get a word count between each chunk.</li>
+<li>How would you do it to get the savior name that was at the end of each chunk as well?</li>
+</ol>
 <p><a href="https://www.lds.org/scriptures/bofm/2-ne/25.16">2 Nephi 25:16</a></p>
 </section><section id="making-the-loop-code" class="slide level2">
 <h2>Making the loop (code)</h2>
@@ -545,31 +537,10 @@ bm &lt;-<span class="st"> </span>scriptures <span class="op">%&gt;%</span><span 
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">verse &lt;-<span class="st"> </span><span class="kw">read_lines</span>(<span class="st">&quot;https://byuistats.github.io/M335/data/2nephi2516.txt&quot;</span>)
 names &lt;-<span class="st"> </span><span class="kw">import</span>(<span class="st">&quot;https://byuistats.github.io/M335/data/BoM_SaviorNames.rds&quot;</span>)</code></pre></div>
-</section><section id="case-study-7-update" class="slide level2">
-<h2>Case Study 7 Update</h2>
-<p>This task is a challenge. It has potential to bring the best of you to your knees. After 3-hours of working on the challenge you can stop and then spend 1/2 hour writting up how you were going to tackle the task and what you learned.</p>
-<p><strong>The leadership presentation on next Tuesday can be on CS7 or CS4 or CS5.</strong></p>
 </section></section>
-<section><section id="making-new-r-package-friends" class="titleslide slide level1"><h1>Making new R package friends</h1></section><section id="the-challenge" class="slide level2">
-<h2>The challenge</h2>
-<ol type="1">
-<li class="fragment">Pick one of the R packages on the following slide</li>
-<li class="fragment">Read material on the R package</li>
-<li class="fragment">Build a working script that demonstrates the use of the R package.</li>
-<li class="fragment">Write up a short presentation on the package.</li>
-</ol>
-</section><section id="the-packages" class="slide level2">
-<h2>The packages</h2>
-<ul>
-<li class="fragment"><a href="https://cran.r-project.org/web/packages/rio/vignettes/rio.html#data_import">rio: The double click of data import</a></li>
-<li class="fragment"><a href="https://github.com/sfirke/janitor">janitor: making the cleaning easy</a></li>
-<li class="fragment"><a href="https://github.com/juliasilge/tidytext">tidytext: helps for text mining</a></li>
-<li class="fragment"><a href="http://www.fstpackage.org/">fst: yes it is fast</a></li>
-<li class="fragment"><a href="https://github.com/tidyverse/glue">glue: why should we paste</a></li>
-<li class="fragment"><a href="https://github.com/calligross/reinstallr">reinstallr: getting your packages back</a></li>
-<li class="fragment"><a href="http://www.business-science.io/code-tools/2016/12/18/multidplyr.html">multidplyr: we need more than one dplyr?</a></li>
-<li class="fragment"><a href="https://github.com/ropenscilabs/skimr">skimr: pipeable summary statistics</a></li>
-</ul>
+<section><section id="case-study-7" class="titleslide slide level1" data-background="#e8d725"><h1>Case Study 7</h1></section><section id="deliverable-update" class="slide level2">
+<h2>Deliverable Update</h2>
+<p>This task is a challenge. It has potential to bring the some of you to your knees. After 4-hours of working on the challenge you can stop and then spend 1/2 hour writting up how you were going to tackle the task and what you learned.</p>
 </section></section>
     </div>
   </div>

@@ -121,15 +121,11 @@ $(document).ready(function () {
 </div>
 
 
-<div id="task-15-how-is-the-weather" class="section level2">
-<h2>Task 15: How is the weather?</h2>
+<div id="task-15-does-the-weather-hurt-my-bottom-line" class="section level2">
+<h2>Task 15: Does the weather hurt my bottom line?</h2>
 <div id="background" class="section level3">
 <h3>Background</h3>
-<p>Use the <code>library(riem)</code> package that is described <a href="https://github.com/ropensci/riem" target="blank">here</a> and get the month of June for 2015, 2016, and 2017. You would use <code>riem_measures(station = &quot;RXE&quot;, date_start = &quot;2015-06-01&quot;, date_end = &quot;2017-07-01&quot;)</code> for station <code>RXE</code>. Once you have downloaded and formated the data, make sure to save it to your analysis folder as it will take a minute or two to download each time. We have a few coding tasks to help us get used to using dates. Create a visualization for each question.</p>
-<ol style="list-style-type: decimal">
-<li>What day of the week had the highest temperature reading?</li>
-<li>What day of the week had the lowest temperature at 2 pm?</li>
-</ol>
+<p>A car wash business wants to see if the temperature hurts their bottom line. They have point of sale data for the months of April, May, June, and July. You will need to aggregate the data into hourly sales totals and merge the sales data together with the temperature data to provide insight into the relationship between temperature and car wash sales.</p>
 <ul>
 <li><a href="../homework_schedule.html">Homework Schedule</a></li>
 </ul>
@@ -149,15 +145,24 @@ ul {
 <ul>
 <li>o <a href="http://r4ds.had.co.nz/dates-and-times.html" target="blank">Chapter 16: R for Data Science - Dates and Times</a></li>
 <li>o <a href="https://vcg.informatik.uni-rostock.de/~ct/timeviz/timeviz.html" target="blank">Time Series Visualization Gallery</a></li>
+<li>o <a href="https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html" target="blank">lubridate Vignette</a></li>
 </ul>
 </div>
 <div id="tasks" class="section level3">
 <h3>Tasks</h3>
 <ul>
-<li>[ ] Take notes on your reading of the specified ‘R for Data Science’ chapter in the README.md or in a ‘.R’ script in the class task folder</li>
-<li>[ ] Create a <code>.png</code> image for each question</li>
-<li>[ ] Save your script and <code>.png</code> files to GitHub</li>
-<li>[ ] Be prepared to share your visualization and why your reasoning for how the visualization answers the question</li>
+<li>[ ] Read in the car wash data <code>https://byuistats.github.io/M335/data/carwash.csv</code> and format it for the needs of this task
+<ul>
+<li>[ ] Convert the times from UTC time to mountain standard time using the right function out of <code>library(lubridate)</code>.</li>
+<li>[ ] Create a new hourly grouping variable using <code>ceiling_date()</code> from <code>library(lubridate)</code></li>
+<li>[ ] Aggregate the point of sale data into hour sales totals</li>
+</ul></li>
+<li>[ ] Use <code>riem_measures(station = &quot;RXE&quot;,  date_start  = ,  date_end  =  )</code> for station <code>RXE</code> from <code>library(riem)</code> to get the matching temperatures
+<ul>
+<li>[ ] Create a new hourly variable that matches your car wash hourly variable</li>
+</ul></li>
+<li>[ ] Merge the two datasets together</li>
+<li>[ ] Create a visualization that provides insight into the relationship between sales and temperature by hour of the day</li>
 </ul>
 </div>
 </div>

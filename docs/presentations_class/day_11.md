@@ -1,5 +1,5 @@
 ---
-title: "Moving/Merging & Good Studies"
+title: "Pulling Strings"
 author: J. Hathaway
 params:
   day: 11
@@ -10,8 +10,7 @@ params:
 
 
 
-
-# Becoming the Critic.
+# Becoming the Critic {data-background=#e8d725}
 
 
 ```r
@@ -20,6 +19,9 @@ vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
 titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 ```
 
+## {data-background-iframe="http://www.perceptualedge.com/example10.php"}
+
+[Visualization of the Day](http://www.perceptualedge.com/example10.php)
 
 
 
@@ -29,7 +31,8 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
-# Team Discussion
+
+# Team Discussion {data-background=#e8d725}
 
 
 
@@ -48,9 +51,8 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
-## Task 11: Take me out to the ball game
+## Task 11: Strings and grep
 > - [Task 11](https://byuistats.github.io/M335/class_tasks/task11_details.html)
-
 
 
 
@@ -75,140 +77,78 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 [New Yorker 2004](https://www.newyorker.com/magazine/2004/04/05/the-height-gap)
 
 
-## Restaurant Construction in Idaho (Fixing text) 
+# Visualizing Impact {data-background=#e8d725}
 
-> - [I can clean your data](https://byuistats.github.io/M335/weekly_projects/cs06_details.html)
-> - Take 5 minutes and complete the following
->    - read the tasks at your table and come up with a few clarifying questions you could ask.
->    - get your initial R script started by reading in the data.
+## A visualization and the steps
 
+**Visualizing [Gun Deaths](http://guns.periscopic.com/?year=2013)**
 
-# Relational Data and R
+> 1. Be open to discovering new insights
+> 2. Think big but start small
+> 3. Design for your user
+> 4. Prototype to identify needs (Sketch to code)
+> 5. Obtain feedback early and often
 
-## Defining Terms
+"If I had asked my customers what they wanted they would have told me faster horses."
 
-<style type="text/css">
- span.bullet_code {
-    color: black;
-    font-weight: bold;
-    background-color: white;
-    
-}
-</style>
+<!-- ## Step 3. Design for your user -->
 
-> - A <span class="bullet_code">**primary key**</span> uniquely identifies an observation in its own table. For example, <span class="bullet_code">planes$tailnum</span> is a primary key because it uniquely identifies each plane in the planes table.
-> - A <span class="bullet_code">**foreign key**</span> uniquely identifies an observation in another table. For example, the <span class="bullet_code">flights$tailnum</span> is a foreign key because it appears in the flights table where it matches each flight to a unique plane.
-> - A **Left Join** is a mutating join.
+<!-- We explored treemaps and pie charts as ways to visualize the potential cost savings by product category. Lots of discrete clusters made pie charts ineffective. When we tested the treemaps, users found it difficult to arrive at a clear decision when comparing across product categories. Users also grappled to understand more complex visualizations as they were mostly accustomed to excel type visualizations. -->
 
-## Managing Use Problems
+<!-- ## Conclusion -->
 
-**Duplicate Keys**
+<!-- Successful visualizations consider user needs, business needs and the technology platform. It's easy to create visualizations that are interesting but not effective for the users consuming the insights.  -->
 
-> - [One table w/ duplicates](http://r4ds.had.co.nz/diagrams/join-one-to-many.png)
-> - [Both tables w/ duplicates](http://r4ds.had.co.nz/diagrams/join-many-to-many.png)
+# Regular Expressions {data-background=#e8d725}
 
-**Missing Keys**
+## Some Background on RegEx
 
-> - <span class="bullet_code">semi_join(x, y)</span> keeps all observations in x that have a match in y.
-> - <span class="bullet_code">anti_join(x, y)</span> drops all observations in x that have a match in y.
-> - [Filtering joins](http://r4ds.had.co.nz/relational-data.html#filtering-joins) can be used for other scenarios as well.
+> - [History of RegEx](https://blog.staffannoteberg.com/2013/01/30/regular-expressions-a-brief-history/)
 
-## Other Cases (merge())
+**A few jokes**
 
-`base::merge()` can perform all four types of joins:
-
-dplyr              | merge
--------------------|-------------------------------------------
-inner_join(x, y) | merge(x, y)
-left_join(x, y)  | merge(x, y, all.x = TRUE)
-right_join(x, y) | merge(x, y, all.y = TRUE),
-full_join(x, y)  | merge(x, y, all.x = TRUE, all.y = TRUE)
-
-<>
-       
-> - specific dplyr verbs more clearly convey the intent of your code: they are concealed in the arguments of <span class="bullet_code">merge()</span>.
-> - **dplyr's joins are considerably faster and don't mess with the order of the rows.**
-
-## Other Cases (SQL)
-
-SQL is the inspiration for dplyr's conventions, so the translation is straightforward:
-
-dplyr                        | SQL
------------------------------|-------------------------------------------
-inner_join(x, y, by = "z") | SELECT * FROM x INNER JOIN y USING (z)
-left_join(x, y, by = "z")  | SELECT * FROM x LEFT OUTER JOIN y USING (z)
-right_join(x, y, by = "z") | SELECT * FROM x RIGHT OUTER JOIN y USING (z)
-full_join(x, y, by = "z")  | SELECT * FROM x FULL OUTER JOIN y USING (z)
-
-<>
-
-> - Note that "INNER" and "OUTER" are optional, and often omitted.
-> - SQL supports a wider  range of join types than dplyr
-
-## Class Coding Activity {data-background-iframe="http://ldschurchtemples.org/"}
-
-<big><big>
-**[temple data sealing activity](https://byuistats.github.io/M335/temple_sealings.html)**
-</big></big>
+> - [Really](http://geek-and-poke.com/geekandpoke/2013/12/3/yesterdays-regex)
+> - [Superheros](https://www.explainxkcd.com/wiki/images/7/7b/regular_expressions.png)
 
 
-# Data Ethics (The truthful Art by Alberto Cairo)
+## Special Characters
 
-## Data Ethics
+> - To include a literal single or double quote in a string you can use \ to “escape” it:
+> - That means if you want to include a literal backslash, you’ll need to double it up: "\\".
+> - Beware that the printed representation of a string is not the same as string itself, because the printed representation shows the escapes. To see the raw contents of the string, use writeLines():
 
-> We live in a world with a surfeit of information at our service. It is our choice whether we seek out data that reinforce our biases or choose to look at the world in a critical, rational manner, and allow reality to bend our preconceptions. In the long run, the truth will work better for us than our cherished fictions.
 
-**-Razib Khan, "The Abortion Stereotype,"**
-*The New York Times (January 2, 2015)*
+```r
+x <- c("\"", "\\")
+x
+writeLines(x)
+```
 
-## Paul's Version
 
-3 For the time will come when people will not put up with sound doctrine. Instead, to suit their own desires, they will gather around them a great number of teachers to say what their itching ears want to hear. 4 They will turn their ears away from the truth and turn aside to myths.
+## Special Characters (2)
 
-> - Paul (2 Timothy 4:3-4 **NIV**)
+There are a handful of other special characters. The most common are 
 
-## John A Widstoe's Version
+> - "\n", newline, 
+> - "\t", tab, 
+> - you can see the complete list by requesting help on ": ?'"', or ?"'". 
+> - You’ll also sometimes see strings like "\u00b5", this is a way of writing non-English characters that works on all platforms:
 
-Intelligent people cannot long endure ... doubts.  It must be resolved ... We set about to remove doubt by gathering information and making tests concerning the subject in question...
+## Using Regex
 
-> - Evidences and Reconciliations, pp. 31
+Don’t forget that you’re in a programming language and you have other tools at your disposal. Instead of creating one complex regular expression, it’s often easier to write a series of simpler regexps. If you get stuck trying to create a single regexp that solves your problem, take a step back and think if you could break the problem down into smaller pieces, solving each challenge before moving onto the next one.
 
-# Scientific Discovery
 
-## Defining the terms
+## The Game
 
-1. conjecture
-2. hypothesis
-3. data/test
-4. conclusions
+**Use <https://byuistats.github.io/M335/data/randomletters.txt> from Task 11**
 
-## The process
+1. Remove all the 'e' and 'a' letters and then tell me how long the string is.
+2. How many times is the name 'jim' in the string? Can you find any other names?
+3. Show all the sequences with 5 of the same letter in a row.
+4. Tell me which character locations have three "a"'s in a row. 
+5. Split the characters so each letter is an individual item in a vector.
 
-These steps may open researchers' eyes to new paths to explore, so they don't constitute a process with a beginning and an end point but a loop. ... 
-
-* **Good answers lead to more good questions.** 
-* The scientific stance will never take us all the way to an absolute, immutable truth. 
-* What it may do-and it does it well-is to move us further to the right in the truth continuum.
-
-## The Big Idea
-
-Data always vary randomly because the object of our inquiries, nature itself, is also random. We can analyze and predict events in nature with an increasing amount of precision and accuracy, thanks to improvements in our techniques and instruments, **but a certain amount of random variation, which gives rise to uncertainty, is inevitable.** 
-
-## The suspects (Intro)
-
-> * Always be suspicious of studies whose samples have not been randomly chosen
-> * Not all scientific research is based on random sampling, but analyzing a random sample of the population will yield more accurate results than a cherry-picked or self-selected sample.
-
-## The suspects (confounding)
-
-> * Some researchers distinguish between two kinds of extraneous variables. Sometimes we can identify an extraneous variable and incorporate it into our model, in which case we'd be dealing with a **confounding variable**. 
->    * I know that it may affect my results, so I consider it for my inquiry to minimize its impact. 
->    * For example, we could control for population change and for variation in number of motor vehicles when analyzing deaths in traffic accidents.
-
-## The suspects (lurking)
-
-> * There's a second, more insidious kind of extraneous variable. Imagine that I don't know that my friends are indeed geeky. If I were unaware of this, I'd be dealing with a **lurking variable**. 
->    * A lurking variable is an extraneous variable that we don't include in our analysis for the simple reason that its existence is unknown to us, or because we can't explain its connection to the phenomenon we're studying. 
 
 
 

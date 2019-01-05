@@ -7,7 +7,6 @@ output:
       highlight: espresso
       center: true
       code_folding: hide
-      css: reveal.css
       reveal_plugins: ["search", "zoom"]
       self_contained: false
       reveal_options:

@@ -1,0 +1,20 @@
+---
+title: "Final Coding Challenge"
+author: J. Hathaway
+params:
+  day: 27
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
+
+```
+
+
+# Looking forward to a fun day of programming.

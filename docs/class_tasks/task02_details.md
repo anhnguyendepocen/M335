@@ -40,8 +40,6 @@ ul {
 This reading will help you complete the tasks below.
 
 * o [Chapter 4: R for Data Scientists - Workflow Basics](http://r4ds.had.co.nz/workflow-basics.html){target='blank'}
-* o [Data Scientist Florence Nightengale](http://www.atlasobscura.com/articles/florence-nightingale-infographic){target='blank'}
-* o [Forbes:  Data science demand](https://www.forbes.com/sites/drewhansen/2016/10/21/become-data-scientist/#3e8a4f4c87d3){target='blank'}
 
 
 ### Tasks
@@ -53,7 +51,6 @@ This reading will help you complete the tasks below.
     * [ ] Ignore the token submission step
 * [ ] Complete Lessons 5-7 in the `library(swirl)` package of the course `install_course("R Programming E")`
     * [ ] Follow sub-directions above.
-* [ ] Read a short article about the [data scientist Florence Nightengale](http://www.atlasobscura.com/articles/florence-nightingale-infographic){target="blank"} and write a two to three sentence paragraph critique of her coxcomb graphic based on your perceptions of quality graphics.
-    * [ ] In class, be prepared to submit your write up electronically.
 * [ ] Create a [GitHub account](https://github.com/join?source=header-home){target="blank"} and post your github username on the [google docs sheet](https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514)
+* [ ] Get a professional picture taken for your Github, LinkedIn, and Slack icons.  Go to the [LinkedIn Photobooth](http://www.byui.edu/alumni/alumni-linkedin-photo-booth) if you don't already have one.
 

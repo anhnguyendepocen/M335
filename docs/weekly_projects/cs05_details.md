@@ -38,7 +38,6 @@ This project is not as severe as the two quotes below, but it will give you a ta
 
 This reading will help you complete the tasks below.
 
-* o [Hadley on Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf){target='blank'}
 * o [foreign R Package and `read.dbf()`](https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.dbf){target='blank'}
 
 
@@ -63,7 +62,7 @@ ul {
 * [ ] Import the other five datasets into R and combine them into one tidy dataset.
     * [ ] This dataset should have the following columns - birth_year, height.cm, height.in, and study_id
     * [ ] The BLS wage data does not have birth information.  Let's assume it is mid-twentieth century and use 1950.
-    * [ ] See the reading of [Task 7](https://byuistats.github.io/M335/class_tasks/task07_details.html) for how to read in dbf files.
+    * [ ] See the reading of [Task 8](https://byuistats.github.io/M335/class_tasks/task08_details.html) for how to read in dbf files.
 * [ ] Save the two tidy datasets to your repository - The world country estimates and the row-combined individual measurements.
 * [ ] Make a plot with decade on the x-axis and height in inches on the y-axis with the points from Germany highlighted based on the data from the `.xlsx` file.
 * [ ] Make a small-multiples plot of the five studies to examine the question of height distribution across centuries

@@ -97,7 +97,6 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -491,7 +490,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="r-studio-connect-and-interaction" class="titleslide slide level1"><h1>R-Studio Connect and Interaction</h1></section><section id="setting-up-r-studio" class="slide level2">
+<section><section id="r-studio-connect-and-interaction" class="titleslide slide level1" data-background="#e8d725"><h1>R-Studio Connect and Interaction</h1></section><section id="setting-up-r-studio" class="slide level2">
 <h2>Setting up R-Studio</h2>
 <p>Time to set up our R-Studio to share interactive documents.</p>
 <ul>
@@ -508,7 +507,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <span class="kw">datatable</span>(iris)</code></pre></div>
 <p>Putting information in your file <a href="https://shiny.byui.edu/connect/#/apps/3/access">My interactive</a></p>
 </section></section>
-<section><section id="team-discussion" class="titleslide slide level1"><h1>Team Discussion</h1></section><section id="case-study-8-its-about-time" class="slide level2">
+<section><section id="team-discussion" class="titleslide slide level1" data-background="#e8d725"><h1>Team Discussion</h1></section><section id="case-study-8-its-about-time" class="slide level2">
 <h2>Case Study 8: It’s about time</h2>
 <ul>
 <li>The <a href="https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing">Google spreadsheet link</a></li>
@@ -526,7 +525,17 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><a href="https://byuistats.github.io/M335/class_tasks/task17_details.html">Task 17</a></li>
 </ul>
 </section></section>
-<section><section id="time-series-data" class="titleslide slide level1"><h1>Time Series Data</h1></section><section id="are-we-using-timetk" class="slide level2">
+<section><section id="being-readings" class="titleslide slide level1" data-background="#e8d725"><h1>Being Readings</h1></section><section id="the-development-diagram" class="slide level2">
+<h2>The development diagram</h2>
+<p><img src="../images/visualization_diagram.png" /></p>
+</section><section id="improving-literacy" class="slide level2">
+<h2>Improving literacy</h2>
+<ul>
+<li>How do we improve literacy?</li>
+<li>Show the graphic narrative example.</li>
+</ul>
+</section></section>
+<section><section id="time-series-data" class="titleslide slide level1" data-background="#e8d725"><h1>Time Series Data</h1></section><section id="are-we-using-timetk" class="slide level2">
 <h2>Are we using timetk?</h2>
 <p>Looks like the task doesn’t require it. I wanted you guys to see this package and understand the potential if you need it in the future - <a href="https://business-science.github.io/timetk/">Link</a>.</p>
 <ul>
@@ -551,26 +560,43 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section><section id="tidyquant-one-package-to-use-them-all-1." class="slide level2">
 <h2>tidyquant: One package to use them all (1).</h2>
 <p>Write out what this function is doing.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tq_transmute</span>(<span class="dt">select =</span> adjusted,
+               <span class="dt">mutate_fun =</span> periodReturn, 
+               <span class="dt">period =</span> <span class="st">&quot;daily&quot;</span>,
+               <span class="dt">type =</span> <span class="st">&quot;log&quot;</span>)</code></pre></div>
 <ul>
 <li class="fragment"><strong>Hint:</strong> Read about <code>quantmod::periodReturn()</code></li>
 </ul>
 </section><section id="tidyquant-one-package-to-use-them-all-2." class="slide level2">
 <h2>tidyquant: One package to use them all (2).</h2>
 <p>Write out what this function is doing.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  <span class="kw">tq_portfolio</span>(<span class="dt">assets_col=</span>symbol,
+               <span class="dt">returns_col=</span>daily.returns, 
+               <span class="dt">weights =</span> <span class="kw">tibble</span>(<span class="dt">asset.names =</span> friend, <span class="dt">weight =</span> <span class="kw">c</span>(<span class="fl">0.259</span>,.<span class="dv">534</span>,.<span class="dv">207</span>)),
+               <span class="dt">wealth.index =</span> T)</code></pre></div>
 <ul>
 <li class="fragment"><strong>Hint:</strong> Read about <code>PerformanceAnalytics::Return.portfolio()</code></li>
 </ul>
-</section><section id="dygraphs-r-connection-to-dygraphs-javascript-charting-library" class="slide level2">
-<h2>dygraphs: R connection to dygraphs JavaScript charting library</h2>
-<p>Open the <a href="http://rstudio.github.io/dygraphs/index.html">dygraphs help webstie</a> and implement one of their examples in your local R session.</p>
 </section></section>
-<section><section id="settling-in" class="titleslide slide level1"><h1>Settling In</h1></section><section id="remember-the-goal" class="slide level2">
+<section><section id="settling-in" class="titleslide slide level1" data-background="#e8d725"><h1>Settling In</h1></section><section id="remember-the-goal" class="slide level2">
 <h2>Remember the Goal</h2>
 <p>“The most exciting phrase to hear in science, the one that heralds new discoveries, is not ‘Eureka!’ but ‘That’s funny…’” -Isaac Asimov</p>
 <ul>
 <li><a href="https://youtu.be/fSgEeI2Xpdc">Remembering Good Principles</a></li>
 <li><a href="https://www.youtube.com/embed/coNDCIMH8bk?start=628">Rauser view on time and data</a> - 10:28 to 17:50</li>
 </ul>
+</section><section id="edward-tufte" class="slide level2">
+<h2>Edward Tufte</h2>
+<blockquote>
+<p>Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space</p>
+</blockquote>
+<blockquote>
+<p>Edward Tufte</p>
+</blockquote>
+</section></section>
+<section><section id="next-class" class="titleslide slide level1" data-background="#e8d725"><h1>Next Class</h1></section><section id="dygraphs-r-connection-to-dygraphs-javascript-charting-library" class="slide level2">
+<h2>dygraphs: R connection to dygraphs JavaScript charting library</h2>
+<p>Open the <a href="http://rstudio.github.io/dygraphs/index.html">dygraphs help webstie</a> and implement one of their examples in your local R session.</p>
 </section></section>
     </div>
   </div>

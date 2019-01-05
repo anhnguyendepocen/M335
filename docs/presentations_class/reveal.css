@@ -9,19 +9,23 @@ Date: 3/10/2018
 
 .reveal code {
 	background-color: #f5f5f5;	/* code bg color*/
+	overflow: scroll; /* scroll code */
+	overflow-y: scroll;
 	font-style: bold;
   color: #000000
 }
 
 .reveal p code {
 	background-color: #f5f5f5;	/* code bg color*/
+	overflow: scroll; /* scroll code */
+	overflow-y: scroll;
 	font-style: bold;
   color: #000000
 }
 
 .reveal pre code { /* code boxes */
-	word-wrap: normal; /* wrap code */
-	overflow: visible; /* wrap code */
+	  word-wrap: normal; /* wrap code */
+	  overflow: scroll; /* scroll code */
   	white-space: pre-line; /* wrap code */
   	background-color: #FEFCFF;	/* code output bg color*/
   	width: 1250px; /* larger box*/
@@ -32,6 +36,7 @@ Date: 3/10/2018
 
 .reveal pre code.sourceCode { /* R input code */
   	background-color: #f5f5f5;	/* code bg color*/
+  	overflow: scroll; /* scroll code */
   	color: #000000;
   }
 
@@ -40,12 +45,14 @@ Date: 3/10/2018
 	width: 1450px; /* larger box*/
 	font-size: 100%;
 	background-color: #f5f5f5; /* I don't think this matters */
+	overflow: scroll; /* scroll code */
 	font-style: bold;
 	color: #000000;
 }
 
 .reveal pre.text code {  /* code section when highlight=FALSE*/
 	white-space: pre-line; /* wrapping, although it overflows*/
+	overflow: scroll; /* scroll code */
 	font-style: bold;
   color: #000000  
 }

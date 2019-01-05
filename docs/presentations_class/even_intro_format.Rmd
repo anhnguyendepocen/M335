@@ -34,7 +34,7 @@ link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M33
 
 ```
 
-# Review
+# Review {data-background=#e8d725}
 
 ```{r csnew, ref.label=casename_new, echo=FALSE, include=FALSE }
 # For case study due next Saturday
@@ -42,6 +42,12 @@ link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M33
 
 `r title.text`
 `r link_new`
+
+*Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?*
+
+> - What mutations or summaries will you need to do?
+> - What difficulties do you expect?
+> - Do each of the task items make sense?
 
 
 ```{r task, ref.label=taskname, echo=FALSE, include=FALSE }

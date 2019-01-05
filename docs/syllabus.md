@@ -117,7 +117,8 @@ We have five concepts that guide our learning objectives.  Click on each to see 
 3. A resume that includes the skills you have learned during our projects
 4. [A semester task form](tasklist.html) that records your completed tasks during the semester
 5. [Semester project](project.html) submission on GitHub
-6. Submit this material electronically and in person during our exit interview
+6. Submit this material electronically.
+7. Bring a printed copy of your cover letter and resumedand to our exit interview
 
 #### Competency Scale
 
@@ -218,6 +219,13 @@ In all grade levels above a C-, case study 13 must be completed.
 
 - The definitive word is "complete".  Starting them or getting them almost done is not completing.  
 - Those that are data science majors must complete a semester project to get anything higher than a B-.
+
+#### Coding Challenge
+
+We will have three in-class coding challenges (Task 16, Task 24, & last day of class) that you will need to complete.  The coding challenge on the last day of the course is the one that can affect the grade earned above.
+
+I may drop your grade up to three steps (e.g., from an A- to a B-) from your requested grade depending on your performance.   I will report the grade quality of your first two challenges in I-learn.  Generally, students sought grades are in line with the caliber of their coding challenge performance, and no change is made to their final grade.
+
 
 ### Goals
 

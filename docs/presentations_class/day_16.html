@@ -4,13 +4,50 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="J. Hathaway" />
-  <title>Understanding Time</title>
+  <title>Understanding Time (Applications)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
 
@@ -60,7 +97,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -450,22 +486,28 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title">Understanding Time</h1>
+    <h1 class="title">Understanding Time (Applications)</h1>
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="review" class="titleslide slide level1"><h1>Review</h1></section><section id="case-study-8-its-about-time" class="slide level2">
+<section><section id="review" class="titleslide slide level1" data-background="#e8d725"><h1>Review</h1></section><section id="case-study-8-its-about-time" class="slide level2">
 <h2>Case Study 8: It’s about time</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/weekly_projects/cs08_details.html">Case Study 8</a></li>
 </ul>
-</section><section id="task-16-does-the-weather-hurt-my-bottom-line" class="slide level2">
-<h2>Task 16: Does the weather hurt my bottom line?</h2>
+<p><em>Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?</em></p>
+<ul>
+<li>What mutations or summaries will you need to do?</li>
+<li>What difficulties do you expect?</li>
+<li>Do each of the task items make sense?</li>
+</ul>
+</section><section id="task-16-coding-challenge" class="slide level2">
+<h2>Task 16: Coding Challenge</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/class_tasks/task16_details.html">Task 16</a></li>
 </ul>
 </section></section>
-<section><section id="class-activity" class="titleslide slide level1"><h1>Class Activity</h1></section><section id="the-changers-1" class="slide level2">
+<section><section id="class-activity" class="titleslide slide level1" data-background="#e8d725"><h1>Class Activity</h1></section><section id="the-changers-1" class="slide level2">
 <h2>The Changers (1)</h2>
 <ul>
 <li>floor_date(),</li>
@@ -486,25 +528,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ol start="2" type="1">
 <li class="fragment">Now suppose that the time read into R as UTC but that you know those times are actually recorded in the mountian time zone. Repeat item 1.</li>
 </ol>
-</section><section id="the-walmart-march-visualization" class="slide level2">
-<h2>The Walmart March Visualization</h2>
-<ul>
-<li><a href="http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png">Small multiples and time</a></li>
-<li><a href="http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png">Without spatial</a></li>
-</ul>
-</section><section id="the-walmart-challenge" class="slide level2">
-<h2>The Walmart Challenge</h2>
-<ol type="1">
-<li><strong>Recreate this graphic</strong></li>
-<li><strong>Propose a different graphic</strong></li>
-</ol>
-<ul>
-<li><a href="http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png">Without spatial</a></li>
-<li><a href="https://byuistats.github.io/M335/data/Walmart_store_openings.csv">Walmart Openings csv</a></li>
-<li><code>?state</code> to see the data to use to get the colors correct.</li>
-</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lubridate)
+x &lt;-<span class="st"> </span><span class="kw">ymd_hms</span>(<span class="st">&quot;2009-07-01 2:01:59.23&quot;</span>)</code></pre></div>
 </section></section>
-<section><section id="making-new-r-package-friends" class="titleslide slide level1"><h1>Making new R package friends</h1></section><section id="the-challenge" class="slide level2">
+<section><section id="making-new-r-package-friends" class="titleslide slide level1" data-background="#e8d725"><h1>Making new R package friends</h1></section><section id="the-challenge" class="slide level2">
 <h2>The challenge</h2>
 <ol type="1">
 <li>Pick one of the R packages on the following slide</li>

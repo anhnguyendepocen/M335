@@ -49,13 +49,8 @@ code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
 
-<style type="text/css">
-.reveal section img {
-  background: rgba(255, 255, 255, 0.85);
-}
-</style>
 
   <!-- some tweaks to reveal css -->
   <style type="text/css">
@@ -102,7 +97,6 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -496,11 +490,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="becoming-the-critic." class="titleslide slide level1"><h1>Becoming the Critic.</h1></section><section id="section" class="slide level2" data-background-iframe="http://www.perceptualedge.com/example1.php">
+<section><section id="becoming-the-critic." class="titleslide slide level1" data-background="#e8d725"><h1>Becoming the Critic.</h1></section><section id="section" class="slide level2" data-background-iframe="http://www.perceptualedge.com/example1.php">
 <h2></h2>
 <p><a href="http://www.perceptualedge.com/example1.php">Visualization of the Day</a></p>
 </section></section>
-<section><section id="the-skill-of-debugging" class="titleslide slide level1"><h1>The skill of debugging?</h1></section><section id="fix-the-errors" class="slide level2">
+<section><section id="the-skill-of-debugging" class="titleslide slide level1" data-background="#e8d725"><h1>The skill of debugging?</h1></section><section id="fix-the-errors" class="slide level2">
 <h2>Fix the errors</h2>
 <p>At your tables note the errors in the following code and then write the fix on the board.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
@@ -509,7 +503,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy))
 
 <span class="kw">fliter</span>(mpg, <span class="dt">cyl =</span> <span class="dv">8</span>)
-<span class="kw">filter</span>(diamond, carat <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>)</code></pre></div>
+<span class="kw">filter</span>(diamond, carat <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>)
+<span class="kw">data.frame</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,<span class="dv">10</span><span class="op">:</span><span class="dv">1</span>,)</code></pre></div>
 </section><section id="interpret-these-error-statements" class="slide level2">
 <h2>Interpret these error statements</h2>
 <p>Take some time at your table to work out what the error statement is saying <code>good and bad</code> about your code. Write a sentence for each of these.</p>
@@ -522,52 +517,58 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <span class="co">#&gt; Error in fliter(mpg, cyl = 8) : could not find function &quot;fliter&quot;</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">filter</span>(diamond, carat <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>)
 <span class="co">#&gt; Error in filter(diamond, carat &gt; 3) : object &#39;diamond&#39; not found</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data.frame</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,<span class="dv">10</span><span class="op">:</span><span class="dv">1</span>,)
+<span class="co">#&gt; Error in data.frame(1:10, 10:1, ) : argument is missing, with no default</span></code></pre></div>
+</section><section id="alan-perlis" class="slide level2">
+<h2>Alan Perlis</h2>
+<blockquote>
+<p>There are two ways to write error-free programs; only the third one works.</p>
+</blockquote>
+<p><a href="https://www.r-bloggers.com/common-r-programming-errors-faced-by-beginners/" class="uri">https://www.r-bloggers.com/common-r-programming-errors-faced-by-beginners/</a></p>
 </section><section id="manuevering-in-r" class="slide level2">
 <h2>Manuevering in R</h2>
 <ul>
 <li class="fragment">Make sure you note what <code>Alt + Shift + K</code> does?</li>
 <li class="fragment"><a href="https://socrative.com/" target="blank">Socrative Team Competition</a></li>
-<li class="fragment"><strong>Note to Class:</strong> I am not assigning you stuff to create busy work. There is a deep assumption that you are coming prepared to class.<br />
-</li>
-<li class="fragment"><strong>Don’t get behind.</strong></li>
 </ul>
-</section><section id="section-1" class="slide level2" data-background-iframe="http://i0.kym-cdn.com/photos/images/newsfeed/001/297/214/908.jpg">
-<h2></h2>
+</section><section id="learning-and-debugging-in-the-wild" class="slide level2">
+<h2>Learning and Debugging in the wild</h2>
+<ul>
+<li>Treating class like a team meeting</li>
+<li>The expense of training and experts in the real world</li>
+</ul>
+<p><img src="http://i0.kym-cdn.com/photos/images/newsfeed/001/297/214/908.jpg" /></p>
 </section><section id="r-lab-and-stack-overflow-channel" class="slide level2">
 <h2>R-Lab and Stack Overflow Channel</h2>
-<p>We will have and R-lab available this semester.</p>
 <ul>
-<li>TA Introduction (Dylan, McKay, Makayla)</li>
-<li>Friday R-Lab: STC 235 - 2:00 to 6:00 pm</li>
+<li>TA Introduction</li>
+<li>R-Lab: STC 361 [<a href="https://byuistats.github.io/M335/lab.html" class="uri">https://byuistats.github.io/M335/lab.html</a>]</li>
 <li>Online lab: Stack Overflow and Slack
 <ul>
-<li><a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect">https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect</a></li>
-<li><a href="https://stackoverflow.com/c/byu/join" class="uri">https://stackoverflow.com/c/byu/join</a></li>
-<li><a href="https://slack.com/signin" class="uri">https://slack.com/signin</a> - w18dwv</li>
+<li><a href="https://stackoverflow.com/c/byui/join" class="uri">https://stackoverflow.com/c/byui/join</a></li>
 </ul></li>
 </ul>
+</section><section id="slack-workspace" class="slide level2">
+<h2>Slack Workspace</h2>
+<ul>
+<li><a href="https://slack.com/signin" class="uri">https://slack.com/signin</a> - byuidwv</li>
+<li>Click <em>‘create and account’</em> towards the bottom</li>
+</ul>
+<p><img src="../images/slack_dwv.png" /></p>
 </section></section>
-<section><section id="weekly-case-study" class="titleslide slide level1"><h1>Weekly Case Study</h1></section><section id="critiquing-visualizations-and-slack-setup" class="slide level2">
+<section><section id="upcoming-work" class="titleslide slide level1" data-background="#e8d725"><h1>Upcoming Work</h1></section><section id="critiquing-visualizations-and-slack-setup" class="slide level2">
 <h2>Critiquing Visualizations and Slack Setup</h2>
 <p>Please read the case study that is due this Saturday with your group and make sure your table understands the deliverables and has a good picture of how to complete them.</p>
 <ul>
 <li><a href="https://byuistats.github.io/M335/weekly_projects/cs01_details.html">Case Study 1</a></li>
 </ul>
 <p><span style="font-size:75px"> Questions? </span></p>
-</section><section id="task-3-lets-git-going" class="slide level2">
-<h2>Task 3: Let’s git going</h2>
+</section><section id="task-2-wax-on-wax-off-with-swirl" class="slide level2">
+<h2>Task 2: Wax on, Wax off with Swirl</h2>
 <ul>
-<li><a href="file:///C:/git/github/byuistats/M335/docs/class_tasks/task03_details.html">Task 3</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514">Google Doc</a></li>
+<li><a href="file:///C:/git/github/byuistats/M335/docs/class_tasks/task02_details.html">Task 2</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514">Submit GitHub usernames</a></li>
 </ul>
-</section></section>
-<section><section id="how-does-data-change-belief" class="titleslide slide level1"><h1>How does data change belief?</h1></section><section id="to-understand-gods-thoughts-we-must-study-statistics-for-these-are-the-measure-of-his-purpose." class="slide level2">
-<h2>To understand God’s thoughts we must study statistics, for these are the measure of His purpose.</h2>
-<p>-Florence Nightingale (<a href="https://en.wikiquote.org/wiki/Florence_Nightingale#/media/File:Nightingale-mortality.jpg">Coxcomb graph</a>)</p>
-<p><small> Her most famous graph, displayed at the top of this article, shows the number of soldier deaths per month from various causes. Each pie slice represents a different month, from April 1854 through March 1856, and each color stands for a different cause of death. It takes just a quick glance to achieve the two main takeaways: that disease, colored blue, killed far more soldiers than either “wounds” (red) or “other” (black), and that it was reduced greatly in 1855. </small></p>
-</section><section id="what-changed-britians-mind" class="slide level2">
-<h2>What changed Britian’s mind?</h2>
-<p>After she completed her report, Nightingale worked hard to turn its conclusions into common knowledge, privately distributing it to influential people and writing several more reports, many of which included coxcombs. When she received push back from Army doctors, who thought sanitary measures a waste of money, she even leaked some of her charts to the press.</p>
 </section><section id="data-science-jobs" class="slide level2">
 <h2>Data Science Jobs</h2>
 <ul>
@@ -609,7 +610,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
         width: '100%',
         height: '100%',
         // Factor of the display size that should remain empty around the content
-        margin: 0,
+        margin: 0.1,
         // Bounds for smallest/largest possible scale to apply to content
         minScale: 1,
         maxScale: 3,

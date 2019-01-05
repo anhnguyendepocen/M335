@@ -121,11 +121,11 @@ $(document).ready(function () {
 </div>
 
 
-<div id="task-12-strings-and-grep" class="section level2">
-<h2>Task 12: Strings and grep</h2>
+<div id="task-12-take-me-out-to-the-ball-game" class="section level2">
+<h2>Task 12: Take me out to the ball game</h2>
 <div id="background" class="section level3">
 <h3>Background</h3>
-<p>Using global regular expression print (grep) and regular expressions (regex) to find character string patterns is a valuable tool in data analysis and is available with all operating systems and many different programming languages. It is a powerful tool once it is understood. The recently developed <code>library(stringr)</code> package makes these tools much easier to use. The three tasks below can be completed in many different ways. As a challenge, my code to complete this entire task less than 10 lines.</p>
+<p>Over the campfire, you and a friend get into a debate about which college in Utah has had the best MLB success. As an avid BYU fan, you want to prove your point, and you go to data to settle the debate. You need a clear visualization that depicts the performance of BYU players compared to other Utah college players that have played in the major leagues. The <code>library(Lahman)</code> package has a comprehensive set of baseball data. It is great for testing out our relational data skills. We will also need a function to inflation adjust the player salaries - <code>library(blscrapeR)</code>. See <a href="https://github.com/cran/blscrapeR/blob/master/inst/doc/Inflation_and_Prices.Rmd" target="blank">this guide for an example</a>.</p>
 <ul>
 <li><a href="../homework_schedule.html">Homework Schedule</a></li>
 </ul>
@@ -143,22 +143,20 @@ ul {
 <h3>Reading</h3>
 <p>This reading will help you complete the tasks below.</p>
 <ul>
-<li>o <a href="http://r4ds.had.co.nz/strings.html" target="blank">Chapter 14: R for Data Science - Strings</a></li>
-<li>o <a href="https://www.thoughtworks.com/insights/blog/five-principles-effective-data-visualizations" target="blank">Five principles of effective data visualizations</a></li>
-<li>o <a href="http://regexr.com/" target="blank">regexr.com (optional)</a></li>
-<li>o <a href="https://qntm.org/files/re/re.html" target="blank">Regular Expression examples (optional)</a></li>
-<li>o <a href="https://regex101.com/" target="blank">Regular Expression support applet (optional)</a></li>
-<li>o <a href="http://stat545.com/block022_regular-expression.html" target="blank">Regular Expression for R (optional)</a></li>
+<li>o <a href="http://r4ds.had.co.nz/relational-data.html" target="blank">Chapter 13: R for Data Science - Relational Data</a></li>
 </ul>
 </div>
 <div id="tasks" class="section level3">
 <h3>Tasks</h3>
 <ul>
-<li>[ ] Use the <code>readr::read_lines()</code> function to read in each string - <a href="https://byuistats.github.io/M335/data/randomletters.txt" target="blank">randomletters.txt</a> and <a href="https://byuistats.github.io/M335/data/randomletters_wnumbers.txt" target="blank">randomletters_wnumbers.txt</a></li>
-<li>[ ] With the <code>randomletters.txt</code> file, pull out every 1700 letter (e.g. 1, 1700, 3400, …) and find the quote that is hidden - the quote ends with a period</li>
-<li>[ ] With the <code>randomletters_wnumbers.txt</code> file, find all the numbers hidden and convert those numbers to letters using the letters order in the alphabet to decipher the message</li>
-<li>[ ] With the <code>randomletters.txt</code> file, remove all the spaces and periods from the string then find the longest sequence of vowels.</li>
-<li>[ ] Save your <code>.R</code> script to your repository and be ready to share your code solution at the beginning of class</li>
+<li>[ ] Take notes on your reading of the specified ‘R for Data Science’ chapter in the README.md or in a ‘.R’ script in the class task folder</li>
+<li>[ ] Install the <code>library(Lahman)</code> and examine the available data sets available
+<ul>
+<li>[ ] Find the 4-5 different data sets that you will need to show full college and player names as well as their annual earnings</li>
+</ul></li>
+<li>[ ] Install the <code>library(blscrapeR)</code> and use the <code>inflation_adjust(2017)</code> function to get all earnings in 2017 dollars</li>
+<li>[ ] Make a plot showing how professional baseball player earnings that played baseball at BYU compared to the players from other Utah schools</li>
+<li>[ ] Save your <code>.R</code> script and image to your repository and be ready to share your code and image at the beginning of class</li>
 </ul>
 </div>
 </div>

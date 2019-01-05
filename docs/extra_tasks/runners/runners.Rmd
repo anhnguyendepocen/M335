@@ -7,7 +7,40 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Background
 
-http://faculty.chicagobooth.edu/george.wu/research/marathon/data.htm
-https://www.nytimes.com/2014/04/23/upshot/what-good-marathons-and-bad-investments-have-in-common.html?rref=upshot&_r=1
-http://tinlizzie.org/histograms/
+The New York Times published an [article](https://www.nytimes.com/2014/04/23/upshot/what-good-marathons-and-bad-investments-have-in-common.html?rref=upshot&_r=1) on some weird facts about issues that we have with setting goals.  They built a great graphic showing interesting characteristics in the distribution of running times. The data can be found [here](http://faculty.chicagobooth.edu/george.wu/research/marathon/data.htm). I have provided a [direct download link](https://www.dropbox.com/s/wq9e3wqzow500uo/master_marathon.csv?dl=1) to the full data as well. You might want to use the smaller randomly sampled data set of [1 million observations](https://www.dropbox.com/s/dp80lkd1n89gzma/master_marathon_1m.csv?dl=1) or [100k observations](https://byuistats.github.io/M335/data/runners_100k.csv).
+
+## Your Challenge
+
+We have a few challenges before us today. Use the full 1.5 hours to build the cleanest code and clearest presentation of your results. 
+
+1. Recreate their graphic as close as you can using the skills you have developed this semester.  
+2. Create a graphic that shows the relationship between times and the ages of the runners.
+3. Examine the variables and create a novel graphic of your own.
+
+```{r, eval=FALSE}
+pacman::p_load(tidyverse, ggthemes)
+dat <- read_csv("https://www.dropbox.com/s/wq9e3wqzow500uo/master_marathon.csv?dl=1")
+# If you can't handle the full data set then use the following.
+dat <- read_csv("https://www.dropbox.com/s/dp80lkd1n89gzma/master_marathon_1m.csv?dl=1")
+#or
+dat <- read_csv("https://byuistats.github.io/M335/data/runners_100k.csv")
+
+```
+
+```{r, include=FALSE,eval=FALSE}
+dat %>%
+  sample_n(1000000) %>%
+  write_csv("master_marathon_1m.csv")
+
+```
+
+
+## Hints
+
+Make sure to demonstrate quality and your skill set by using the three objectives. Don't worry about getting everything done perfectly. Remember, I am evaluating your profficency to use the coding tools taught in this class and your ability to create clean visualizations.
+
+<!-- http://faculty.chicagobooth.edu/george.wu/research/marathon/data.htm -->
+<!-- https://www.nytimes.com/2014/04/23/upshot/what-good-marathons-and-bad-investments-have-in-common.html?rref=upshot&_r=1 -->
+<!-- http://tinlizzie.org/histograms/ -->

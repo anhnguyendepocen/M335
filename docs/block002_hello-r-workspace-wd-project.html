@@ -321,12 +321,27 @@ div.tocify {
       <a href="rpages.html">R/R-Studio Details</a>
     </li>
     <li class="divider"></li>
+    <li class="dropdown-header">Git/GitHub Helps</li>
     <li>
-      <a href="gitpages.html">Git/GitHub Details</a>
+      <a href="gitpages.html">Helps</a>
+    </li>
+    <li>
+      <a href="images/Git_workflow_diagram.png">One Image</a>
+    </li>
+    <li>
+      <a href="git_335.html">Process Details</a>
     </li>
     <li class="divider"></li>
     <li>
       <a href="compages.html">Slack &amp; Stackoverflow Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="lab.html">R Lab</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="rstudioconnect.html">RStudio Connect</a>
     </li>
     <li class="divider"></li>
     <li>
@@ -347,10 +362,14 @@ div.tocify {
       <a href="homework_schedule.html">Assignment Schedule</a>
     </li>
     <li>
-      <a href="backgrounds.html">Task Backgrounds</a>
+      <a href="tasklist.html">Semester Task List</a>
     </li>
     <li>
-      <a href="tasklist.html">Semester Task List</a>
+      <a href="teamlead.html">Team Lead Guidance</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="backgrounds.html">Task Backgrounds</a>
     </li>
     <li>
       <a href="readings.html">Weekly Reading List</a>
@@ -387,6 +406,12 @@ div.tocify {
     <li>
       <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
     </li>
+    <li>
+      <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a>
+    </li>
+    <li>
+      <a href="https://plotly-book.cpsievert.me/index.html">plotly for R</a>
+    </li>
     <li class="divider"></li>
     <li class="dropdown-header">Supplemental Material</li>
     <li>
@@ -399,10 +424,16 @@ div.tocify {
       <a href="http://r-pkgs.had.co.nz/">R Packages</a>
     </li>
     <li>
-      <a href="https://cpsievert.github.io/plotly_book/">Plotly for R</a>
+      <a href="http://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a>
     </li>
     <li>
-      <a href="http://datathink.io">DataThink.io</a>
+      <a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>
+    </li>
+    <li>
+      <a href="https://rstudio.github.io/crosstalk/index.html">Crosstalk: htmlwidgets add-on</a>
+    </li>
+    <li>
+      <a href="lynda.html">Data Science on Lynda.com</a>
     </li>
   </ul>
 </li>
@@ -484,50 +515,108 @@ y</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <p>Not all functions have (or require) arguments:</p>
 <pre class="r"><code>date()</code></pre>
-<pre><code>## [1] &quot;Fri Apr 20 13:07:09 2018&quot;</code></pre>
+<pre><code>## [1] &quot;Fri Jan 04 16:34:40 2019&quot;</code></pre>
 <p>Now look at your workspace – in the upper right pane. The workspace is where user-defined objects accumulate. You can also get a listing of these objects with commands:</p>
 <pre class="r"><code>objects()</code></pre>
-<pre><code>##  [1] &quot;background.title&quot;           &quot;best_in_class&quot;             
-##  [3] &quot;bob&quot;                        &quot;candidates&quot;                
-##  [5] &quot;case_studies&quot;               &quot;casename_new&quot;              
-##  [7] &quot;casename_old&quot;               &quot;cases&quot;                     
-##  [9] &quot;class_tasks&quot;                &quot;csn&quot;                       
-## [11] &quot;cso&quot;                        &quot;fname&quot;                     
-## [13] &quot;gg_base&quot;                    &quot;hdwd&quot;                      
-## [15] &quot;i&quot;                          &quot;jenny_rocks&quot;               
-## [17] &quot;labels&quot;                     &quot;link_new&quot;                  
-## [19] &quot;link_old&quot;                   &quot;link_task&quot;                 
-## [21] &quot;md_bullet&quot;                  &quot;md_intro_format&quot;           
-## [23] &quot;md_link&quot;                    &quot;page_image&quot;                
-## [25] &quot;presentations&quot;              &quot;readings&quot;                  
-## [27] &quot;taskname&quot;                   &quot;tasks&quot;                     
-## [29] &quot;text&quot;                       &quot;this_is_a_really_long_name&quot;
-## [31] &quot;title.text&quot;                 &quot;titlelink&quot;                 
-## [33] &quot;totals&quot;                     &quot;vday&quot;                      
-## [35] &quot;vlink&quot;                      &quot;weeks&quot;                     
-## [37] &quot;x&quot;                          &quot;y&quot;                         
-## [39] &quot;yo&quot;</code></pre>
+<pre><code>##  [1] &quot;a&quot;                          &quot;avg_x&quot;                     
+##  [3] &quot;b&quot;                          &quot;background.title&quot;          
+##  [5] &quot;best_in_class&quot;              &quot;bob&quot;                       
+##  [7] &quot;body_lines&quot;                 &quot;candidates&quot;                
+##  [9] &quot;case_studies&quot;               &quot;casename_new&quot;              
+## [11] &quot;casename_old&quot;               &quot;cases&quot;                     
+## [13] &quot;check_day&quot;                  &quot;class_cs&quot;                  
+## [15] &quot;class_reading&quot;              &quot;class_task&quot;                
+## [17] &quot;class_tasks&quot;                &quot;csn&quot;                       
+## [19] &quot;cso&quot;                        &quot;d&quot;                         
+## [21] &quot;dat&quot;                        &quot;dates_all&quot;                 
+## [23] &quot;dates_class&quot;                &quot;dates_due&quot;                 
+## [25] &quot;day_map&quot;                    &quot;day_seq&quot;                   
+## [27] &quot;day_seq_labels&quot;             &quot;dayone_seq&quot;                
+## [29] &quot;daytwo_seq&quot;                 &quot;dnumber&quot;                   
+## [31] &quot;fday_name&quot;                  &quot;ff&quot;                        
+## [33] &quot;first_day&quot;                  &quot;first_week&quot;                
+## [35] &quot;fname&quot;                      &quot;fname_c&quot;                   
+## [37] &quot;full_service_names&quot;         &quot;full_service_type&quot;         
+## [39] &quot;gapminder&quot;                  &quot;gapminder.continent&quot;       
+## [41] &quot;gg_base&quot;                    &quot;ggp&quot;                       
+## [43] &quot;ggpoint&quot;                    &quot;glevel&quot;                    
+## [45] &quot;hdwd&quot;                       &quot;i&quot;                         
+## [47] &quot;jenny_rocks&quot;                &quot;labels&quot;                    
+## [49] &quot;last_day&quot;                   &quot;last_day_finals&quot;           
+## [51] &quot;last_week&quot;                  &quot;lesson_links&quot;              
+## [53] &quot;link_new&quot;                   &quot;link_old&quot;                  
+## [55] &quot;link_task&quot;                  &quot;links&quot;                     
+## [57] &quot;list_object&quot;                &quot;md_bullet&quot;                 
+## [59] &quot;md_intro_format&quot;            &quot;md_link&quot;                   
+## [61] &quot;monday_seq&quot;                 &quot;no_cores&quot;                  
+## [63] &quot;no_monday&quot;                  &quot;no_saturday&quot;               
+## [65] &quot;not_restaurants&quot;            &quot;number&quot;                    
+## [67] &quot;numbers&quot;                    &quot;pr&quot;                        
+## [69] &quot;presentations&quot;              &quot;quick_service_names&quot;       
+## [71] &quot;quick_service_type&quot;         &quot;reading_links&quot;             
+## [73] &quot;reading_seq&quot;                &quot;readings&quot;                  
+## [75] &quot;readings_due&quot;               &quot;saturday_seq&quot;              
+## [77] &quot;sig_sq&quot;                     &quot;standalone_retail&quot;         
+## [79] &quot;task_due&quot;                   &quot;taskname&quot;                  
+## [81] &quot;tasks&quot;                      &quot;text&quot;                      
+## [83] &quot;text_c&quot;                     &quot;this_is_a_really_long_name&quot;
+## [85] &quot;title.text&quot;                 &quot;titlelink&quot;                 
+## [87] &quot;titles&quot;                     &quot;totals&quot;                    
+## [89] &quot;url_size&quot;                   &quot;url_time&quot;                  
+## [91] &quot;vals&quot;                       &quot;vday&quot;                      
+## [93] &quot;vlink&quot;                      &quot;weeks&quot;                     
+## [95] &quot;x&quot;                          &quot;y&quot;                         
+## [97] &quot;yo&quot;</code></pre>
 <pre class="r"><code>ls()</code></pre>
-<pre><code>##  [1] &quot;background.title&quot;           &quot;best_in_class&quot;             
-##  [3] &quot;bob&quot;                        &quot;candidates&quot;                
-##  [5] &quot;case_studies&quot;               &quot;casename_new&quot;              
-##  [7] &quot;casename_old&quot;               &quot;cases&quot;                     
-##  [9] &quot;class_tasks&quot;                &quot;csn&quot;                       
-## [11] &quot;cso&quot;                        &quot;fname&quot;                     
-## [13] &quot;gg_base&quot;                    &quot;hdwd&quot;                      
-## [15] &quot;i&quot;                          &quot;jenny_rocks&quot;               
-## [17] &quot;labels&quot;                     &quot;link_new&quot;                  
-## [19] &quot;link_old&quot;                   &quot;link_task&quot;                 
-## [21] &quot;md_bullet&quot;                  &quot;md_intro_format&quot;           
-## [23] &quot;md_link&quot;                    &quot;page_image&quot;                
-## [25] &quot;presentations&quot;              &quot;readings&quot;                  
-## [27] &quot;taskname&quot;                   &quot;tasks&quot;                     
-## [29] &quot;text&quot;                       &quot;this_is_a_really_long_name&quot;
-## [31] &quot;title.text&quot;                 &quot;titlelink&quot;                 
-## [33] &quot;totals&quot;                     &quot;vday&quot;                      
-## [35] &quot;vlink&quot;                      &quot;weeks&quot;                     
-## [37] &quot;x&quot;                          &quot;y&quot;                         
-## [39] &quot;yo&quot;</code></pre>
+<pre><code>##  [1] &quot;a&quot;                          &quot;avg_x&quot;                     
+##  [3] &quot;b&quot;                          &quot;background.title&quot;          
+##  [5] &quot;best_in_class&quot;              &quot;bob&quot;                       
+##  [7] &quot;body_lines&quot;                 &quot;candidates&quot;                
+##  [9] &quot;case_studies&quot;               &quot;casename_new&quot;              
+## [11] &quot;casename_old&quot;               &quot;cases&quot;                     
+## [13] &quot;check_day&quot;                  &quot;class_cs&quot;                  
+## [15] &quot;class_reading&quot;              &quot;class_task&quot;                
+## [17] &quot;class_tasks&quot;                &quot;csn&quot;                       
+## [19] &quot;cso&quot;                        &quot;d&quot;                         
+## [21] &quot;dat&quot;                        &quot;dates_all&quot;                 
+## [23] &quot;dates_class&quot;                &quot;dates_due&quot;                 
+## [25] &quot;day_map&quot;                    &quot;day_seq&quot;                   
+## [27] &quot;day_seq_labels&quot;             &quot;dayone_seq&quot;                
+## [29] &quot;daytwo_seq&quot;                 &quot;dnumber&quot;                   
+## [31] &quot;fday_name&quot;                  &quot;ff&quot;                        
+## [33] &quot;first_day&quot;                  &quot;first_week&quot;                
+## [35] &quot;fname&quot;                      &quot;fname_c&quot;                   
+## [37] &quot;full_service_names&quot;         &quot;full_service_type&quot;         
+## [39] &quot;gapminder&quot;                  &quot;gapminder.continent&quot;       
+## [41] &quot;gg_base&quot;                    &quot;ggp&quot;                       
+## [43] &quot;ggpoint&quot;                    &quot;glevel&quot;                    
+## [45] &quot;hdwd&quot;                       &quot;i&quot;                         
+## [47] &quot;jenny_rocks&quot;                &quot;labels&quot;                    
+## [49] &quot;last_day&quot;                   &quot;last_day_finals&quot;           
+## [51] &quot;last_week&quot;                  &quot;lesson_links&quot;              
+## [53] &quot;link_new&quot;                   &quot;link_old&quot;                  
+## [55] &quot;link_task&quot;                  &quot;links&quot;                     
+## [57] &quot;list_object&quot;                &quot;md_bullet&quot;                 
+## [59] &quot;md_intro_format&quot;            &quot;md_link&quot;                   
+## [61] &quot;monday_seq&quot;                 &quot;no_cores&quot;                  
+## [63] &quot;no_monday&quot;                  &quot;no_saturday&quot;               
+## [65] &quot;not_restaurants&quot;            &quot;number&quot;                    
+## [67] &quot;numbers&quot;                    &quot;pr&quot;                        
+## [69] &quot;presentations&quot;              &quot;quick_service_names&quot;       
+## [71] &quot;quick_service_type&quot;         &quot;reading_links&quot;             
+## [73] &quot;reading_seq&quot;                &quot;readings&quot;                  
+## [75] &quot;readings_due&quot;               &quot;saturday_seq&quot;              
+## [77] &quot;sig_sq&quot;                     &quot;standalone_retail&quot;         
+## [79] &quot;task_due&quot;                   &quot;taskname&quot;                  
+## [81] &quot;tasks&quot;                      &quot;text&quot;                      
+## [83] &quot;text_c&quot;                     &quot;this_is_a_really_long_name&quot;
+## [85] &quot;title.text&quot;                 &quot;titlelink&quot;                 
+## [87] &quot;titles&quot;                     &quot;totals&quot;                    
+## [89] &quot;url_size&quot;                   &quot;url_time&quot;                  
+## [91] &quot;vals&quot;                       &quot;vday&quot;                      
+## [93] &quot;vlink&quot;                      &quot;weeks&quot;                     
+## [95] &quot;x&quot;                          &quot;y&quot;                         
+## [97] &quot;yo&quot;</code></pre>
 <p>If you want to remove the object named <code>y</code>, you can do this</p>
 <pre class="r"><code>rm(y)</code></pre>
 <p>To remove everything:</p>
@@ -592,14 +681,14 @@ sig_sq &lt;- 0.5
 x &lt;- runif(40)
 y &lt;- a + b * x + rnorm(40, sd = sqrt(sig_sq))
 (avg_x &lt;- mean(x))</code></pre>
-<pre><code>## [1] 0.4315651</code></pre>
+<pre><code>## [1] 0.4272954</code></pre>
 <pre class="r"><code>write(avg_x, &quot;avg_x.txt&quot;)
 plot(x, y)
 abline(a, b, col = &quot;purple&quot;)</code></pre>
-<p><img src="block002_hello-r-workspace-wd-project_files/figure-html/toy-line-1.png" width="672" /></p>
+<p><img src="block002_hello-r-workspace-wd-project_files/figure-html/toy-line-1.png" /><!-- --></p>
 <pre class="r"><code>dev.print(pdf, &quot;toy_line_plot.pdf&quot;)</code></pre>
-<pre><code>## quartz_off_screen 
-##                 2</code></pre>
+<pre><code>## png 
+##   2</code></pre>
 <p>Let’s say this is a good start of an analysis and your ready to start preserving the logic and code. Visit the History tab of the upper right pane. Select these commands. Click “To Source”. Now you have a new pane containing a nascent R script. Click on the floppy disk to save. Give it a name ending in <code>.R</code> or <code>.r</code>, I used <code>toy-line.r</code> and note that, by default, it will go in the directory associated with your project.</p>
 <p>Quit RStudio. Inspect the folder associated with your project if you wish. Maybe view the PDF in an external viewer.</p>
 <p>Restart RStudio. Notice that things, by default, restore to where we were earlier, e.g. objects in the workspace, the command history, which files are open for editing, where we are in the file system browser, the working directory for the R process, etc. These are all Good Things.</p>

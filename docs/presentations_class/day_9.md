@@ -10,7 +10,7 @@ params:
 
 
 
-# Becoming the Critic.
+# Becoming the Critic. {data-background=#e8d725}
 
 
 ```r
@@ -32,7 +32,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
-# Team Discussion
+# Team Discussion {data-background=#e8d725}
 
 
 
@@ -63,13 +63,16 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
-# Importing Data
+# Importing Data {data-background=#e8d725}
 
 ## Board Activity
 
 Write this chunk of code out in an English sentence to your grandma.
 
 
+```r
+read_rds(gzcon(url("https://github.com/.../Dart_Expert.RDS")))
+```
 
 > - Now write out the code in piped format
 
@@ -86,14 +89,20 @@ Run the following line and look at `bob`.  *What is it?*
 
 
 
+```r
+download("https://github.com/byuistats/.../Dart_Expert_Dow_6month_anova.xlsx", bob, mode = "wb")
+```
 
 
 
+```r
+dxlsx <- read_xlsx(bob)
+```
 
 **Note that I am trying to save you from storing large data files in your Git repository.**
 
 
-# The data import packages
+# The data import packages {data-background=#e8d725}
 
 
 ## haven package
@@ -122,27 +131,39 @@ http://readxl.tidyverse.org
 ## What does [parse](https://www.google.com/search?ei=8BFpWtz6ApC4jwOLsa2ABQ&q=define+parse&oq=define+parse&gs_l=psy-ab.3..0i67k1j0l3j0i10k1j0l5.5615.7641.0.7785.12.12.0.0.0.0.134.1376.2j10.12.0....0...1c.1.64.psy-ab..0.12.1374...35i39k1j0i131k1j0i131i67k1j0i131i20i264k1j0i20i264k1.0.jsMRPqAjg-Q) mean?
 
 
-# Reading in ASCII data as text
+# Reading in ASCII data as text {data-background=#e8d725}
 
 ## Using read_lines() from `library(readr)`
 
 
 
+```r
+csvlines <- read_lines("https://github.com/byuistats/data/raw/master/Dart_Expert_Dow_6month_anova/Dart_Expert_Dow_6month_anova.csv")
+```
 
 
-
+```r
+mdlines <- read_lines("https://byuistats.github.io/M335/class_tasks/task09_details.md")
+```
 
 ## Connecting to Databases
 
 [db.rstudio.com](http://db.rstudio.com)
 
+## Excel with Excel
 
-# Semester Project & Class
+> - http://altons.github.io/rstats/2015/02/13/quick-intro-to-xlconnect/
+> - https://github.com/miraisolutions/xlconnect
+
+# Semester Project & Class {data-background=#e8d725}
 
 ## Discuss Example Code
 
 Let's look at an example set of scripts that get at what I was trying to say in Task 8.
 
+* https://github.com/hathawayj/datasus
+    * https://github.com/hathawayj/datasus/blob/master/sinasc_hospital_artifacts.R
+    * https://github.com/hathawayj/datasus/blob/master/sinasc_hospital_explore.R
 * Why are we doing the semester project?
 * What parts of this class do you think will be relevant to your future jobs?
 * What could we do to improve the experience in the first five weeks?

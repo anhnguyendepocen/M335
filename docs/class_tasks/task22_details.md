@@ -40,9 +40,7 @@ ul {
 
 This reading will help you complete the tasks below.
 
-* o [What is Spark?](https://mapr.com/blog/spark-101-what-it-what-it-does-and-why-it-matters/){target='blank'}
-* o [What is Hadoop?](https://www.youtube.com/watch?v=4DgTLaFNQq0&feature=youtu.be){target='blank'}
-* o [Divide and Recombine (plus a history of data science)](http://onlinelibrary.wiley.com/doi/10.1002/sam.11242/epdf){target='blank'}
+
 
 
 ### Tasks

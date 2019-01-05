@@ -77,3 +77,4 @@ source("../scripts/build_dates.R")
 * [ggplot2 intro](https://stats.idre.ucla.edu/r/seminars/ggplot2_intro/): It has a nice example for `stat_summary()`
 * [git command workflow](https://byuistats.github.io/M335/images/Git_workflow_diagram.png){target="blank"}
 * [Data is Beautiful](https://np.reddit.com/r/dataisbeautiful/){target="blank"}
+* [Zipcode Shape Files](https://www.census.gov/geo/maps-data/data/cbf/cbf_zcta.html)

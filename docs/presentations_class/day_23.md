@@ -10,7 +10,7 @@ params:
 
 
 
-# Clarifications on Mathematics
+# Clarifications on Mathematics {data-background=#e8d725}
 
 ## Hathaway's Quote
 
@@ -21,7 +21,6 @@ Mathematics classes are ____________.
 Statement from Fisher's first boss.
 
 when I first saw him in 1919 he was out of a job. Before deciding anything I wrote to his tutor at Caius college . . . about his mathematical ability. The answer was that **he could have been a first class mathematician had he "stuck to the ropes" but he would not.** *That looked like the type of man we wanted...* I had only <code>£</code>200 and suggested he should stay as long as he thought that should suffice... He reported to me weekly at tea at my house... **It took me a very short time to realize that he was more than a man of great ability, he was in fact a genius.**
-
 
 ## The Fathers of Statistics (Box 1)
 
@@ -70,7 +69,7 @@ The most important maxim for data analysis to heed, and one which many statistic
 
 
 
-# Team Discussion
+# Team Discussion {data-background=#e8d725}
 
 
 
@@ -99,7 +98,13 @@ The most important maxim for data analysis to heed, and one which many statistic
 
 
 
-# Functions
+# Ethics Discussion {data-background=#e8d725}
+
+## The Ethical Data Scientist
+
+Group Discussion
+
+# Functions {data-background=#e8d725}
 
 ## Some Pointers (1)
 
@@ -131,8 +136,7 @@ smaller functions, and then a function that does everything by using the smaller
 > - `return()` will specify the specific object to return from a function
 > - `...` dot-dot-dot is a magic tool that makes for powerful functions.
 
-# Function Coding Challenges
-
+# Function Coding Challenges {data-background=#e8d725}
 
 ## Change the zipfile download code into a useful function
 
@@ -147,20 +151,8 @@ file_delete(df)
 dir_delete(uf)
 ```
 
-## Task 10 and finding the longest streak
-
-Make a function that will find the longest streak of a character object you input. Try to use the following principles
-
-> - a while loop
-> - use comments and breaks to separate elements in the function.
-> - Make a function that your larger function calls to simplify your code
 
 ## Using Functions and Packages to Manage Work
 
 https://support.rstudio.com/hc/en-us/articles/200532317-Writing-Package-Documentation
 
-# Ethics Discussion
-
-## The Ethical Data Scientist
-
-Group Discussion

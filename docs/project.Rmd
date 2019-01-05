@@ -68,7 +68,7 @@ ul {
 md_bullet(cases, group = list("Number" = 1), lines.keep = 1:3)
 cat("\n\n")
 cat("--------\n\n")
-md_bullet(tasks, group = list("Number" = 4), lines.keep = 1:4)
+md_bullet(tasks, group = list("Number" = 3), lines.keep = 2:5)
 
 cat("\n")
 
@@ -81,7 +81,7 @@ cat("\n")
 ```{r, results="asis", echo=FALSE}
 
 cat("\n\n")
-md_bullet(tasks, group = list("Number" = 8), lines.keep = 1:3)
+md_bullet(tasks, group = list("Number" = 7), lines.keep = 2:8)
 cat("\n\n")
 cat("--------\n")
 md_bullet(cases, group = list("Number" = 12), lines.keep = 1:8)

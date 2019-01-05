@@ -1,5 +1,5 @@
 ---
-title: "Data Import, Scripts, and the Critique"
+title: " and the Critique"
 author: J. Hathaway
 params:
   day: 6
@@ -11,7 +11,7 @@ params:
 
 
 
-# Becoming the Critic.
+# Becoming the Critic. {data-background=#e8d725}
 
 
 ```r
@@ -30,17 +30,23 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
-# Review
+# Review {data-background=#e8d725}
 
 
 
 ## Case Study 3: Becoming a databender
 > - [Case Study 3](https://byuistats.github.io/M335/weekly_projects/cs03_details.html)
 
+*Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?*
+
+> - What mutations or summaries will you need to do?
+> - What difficulties do you expect?
+> - Do each of the task items make sense?
 
 
 
-## Task 6: World Data Investigation
+
+## Task 6: Developing a graphic
 > - [Task 6](https://byuistats.github.io/M335/class_tasks/task06_details.html)
 
 
@@ -50,7 +56,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
-# Providing Critiques and the Routine
+# Providing Critiques and the Routine {data-background=#e8d725}
 
 ## A few critique examples
 
@@ -59,104 +65,7 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 * [Hathaway's Example Response](https://github.com/BYUI335/Pyeatt_A/issues/7): Notice the formatting and references.
 
 
-
-## Getting the Routine Down
-
-- **I am expecting pushes to happen at least three times a week**
-- [Leadership Task](https://byuistats.github.io/M335/tasklist.html)
-
-
-# New functions
-
-## Review the reading
-
-Write this chunk of code out in an English sentence to your grandma.
-
-
-
-## Data formats
-
-If there is a data format that exists and is used, then there is a way to import that data into R. We will learn how to handle the basic tabular formats.  The packages `library(readr)`, `library(readxls)`, and `library(haven)` will provide most of the functionality we need.
-
-## Understanding file types
-
-* What is an [ASCII](https://www.webopedia.com/TERM/A/ASCII_file.html) file?
-* Which of the following file formats are not ASCII?
-    * `.csv`
-    * `.html`
-    * `.txt`
-    * `.R`
-    * `.xlsx`
-    * `.Rmd`
-    * `.doc`
-
-## Data Import (task 6)
-
-* What is the difference between `read.csv()` and `read_csv()`
-* Read [this link (5.3.1)](https://csgillespie.github.io/efficientR/5-3-importing-data.html) and take some time to make a note in your task 6 `README.md` in your repository about the benefits.
-* Push your updated `README.md` for me to read in class.
-
-
-## `parse_` commands
-
-Use this code - `money <- c("4,554,25", "$45", "8025.33cents", "288f45")`
-
-* Apply `as.numeric(money)` and talk with your table about the output.
-* Apply `parse_number(money)` and compare the results.
-
-## Using `read_csv()` with parsers
-
-
-> 1. Run this line of code below
-
-
-
-> 2. Look at the errors (`problems(challenge)`), the `head()`, and `tail()` of your `challenge` object.  What formats should they be?
-
-> 3. Now review [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and fix the read in.
-
-
-
-## Scripts
-
-Here are a few questions.  Discuss each one with your table and decide which file type to use - `.md`, `.r` or `.rmd`.  Then discuss the reasons for that decision.
-
-1. I have a short memo to write for my boss that will not have any r code included.
-2. I am working out some example R code to make sure I understand what it is doing ([see this for a twist](https://deanattali.com/2015/03/24/knitrs-best-hidden-gem-spin/)).
-3. Brother Hathaway has some code snippets that he wants us to learn in class.
-4. I have a report that I need to write which will include some writing and analysis.
-
-
-## Scales
-
-Each of the aesthetics has a paired scale function - x, y, size, color, fill, linetype, shape, alpha.  All of the scales start with `scale_` and then the respective aesthetic. All the aesthetic scales have an `_continuous`, `_discrete`, and `_manual`.  
-
-> - `scale_x_` & `scale_y_` are the two scales I most often use
-> - `scale_fill_` & `scale_color_` are the next most often used.
->     - manual()
->     - gradientn()
-
-## Labelling Elements inside the graphic
-
-The `library(ggrepel)` package is a must for our work. `library(directlabels)` can also be helpful. 
-Here is the [book's graphic](http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png). 
-
-> - What are some concerns you have with this graphic?
-
-## Code and graphic (scales)
-
-Here is the [book's graphic](http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png).  
-Use the [code from 28.3](http://r4ds.had.co.nz/graphics-for-communication.html) and update their graphic to match mine.
-
-
-![](day_6_files/figure-revealjs/nnn2-1.png)
-
-## My Code Solution
-
-
-
-
-# Displaying multiple distributions
+# Displaying multiple distributions {data-background=#e8d725}
 
 ## Clarity vs. Complication
 
@@ -168,4 +77,115 @@ Data can get complicated very fast. How do we provide depth of variability under
 
 Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
 
-> * [link to last presentation](presentations_class/day_5.html)
+> * [link to last presentation](day_5.html#/displaying-distributions-of-multiple-groups-for-decision-making)
+
+## Clarity vs. Complication (2)
+
+> - What do we know after looking at this plot?
+> **How do we provide depth of variability understanding without overwhelming the visualization user?**
+
+
+![](day_6_files/figure-revealjs/cc1-1.png)
+
+
+
+Remember, data can get complicated very fast. 
+
+
+
+
+
+## Distribution background
+
+* [violin plots](http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/)
+* [beeswarm plots](https://github.com/eclarke/ggbeeswarm)
+* [letter-value box-plots](https://github.com/hadley/lvplot)
+* Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
+
+
+## Histograms (1)
+
+What don't we like about this plot?
+
+![](day_6_files/figure-revealjs/bbbb3-1.png)
+
+
+## Histograms (2)
+
+* What changed in this histogram?
+* What don't we like about this plot?
+
+![](day_6_files/figure-revealjs/bbbbb5-1.png)
+
+## Boxplots
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+![](day_6_files/figure-revealjs/bbbbbb444-1.png)
+
+## Violin plots
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+![](day_6_files/figure-revealjs/violin-1.png)
+
+## Beeswarm plots (1)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+![](day_6_files/figure-revealjs/beeswarm-1.png)
+
+## Beeswarm plots (1)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+![](day_6_files/figure-revealjs/beeswarm2-1.png)
+
+## Letter-Value boxplots (1)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+![](day_6_files/figure-revealjs/lettervalue-1.png)
+
+## Letter-Value boxplots (2)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+![](day_6_files/figure-revealjs/lettervalue2-1.png)
+
+## Letter-Value boxplots (3)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+![](day_6_files/figure-revealjs/lv3-1.png)
+
+# Thursday Classes {data-background=#e8d725}
+
+
+## Art Class
+
+> - [What do you see?](images/sculpt.jpg){target="blank"}
+> - [What about here?](images/sculpt_wide.jpg){target="blank"}
+
+## The Wilderness of Data
+
+<iframe width="860" height="515" src="https://www.youtube.com/embed/fTgvdTftXfI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+## Small Challenge
+
+> - Use `geom_violin()` and `geom_quasirandom()` with the `ggplot2::mpg` data to show the mpg distribution by vehicle class.
+
+
+
+## Thursday Task in class
+
+> - I (or Cody) will work on this task with you in class for a large majority of the period.
+> - 

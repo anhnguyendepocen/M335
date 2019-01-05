@@ -1,5 +1,5 @@
 ---
-title: "Finding Data"
+title: "Exploratory Data Analysis"
 author: J. Hathaway
 params:
   day: 8
@@ -9,8 +9,7 @@ params:
 ---
 
 
-
-# Becoming the Critic.
+# Becoming the Critic. {data-background=#e8d725}
 
 
 ```r
@@ -23,23 +22,38 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 [Visualization of the Day](http://www.perceptualedge.com/example7.php)
 
+## Great Quotes
+
+> “There are no routine statistical questions, only questionable statistical routines.” 
+
+— Sir David Cox
+
+> “Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.” 
+
+— John Tukey
 
 
 
 
 
 
-# Review
+# Review {data-background=#e8d725}
 
 
 
 ## Case Study 4: Reducing Gun Deaths (FiveThirtyEight)
 > - [Case Study 4](https://byuistats.github.io/M335/weekly_projects/cs04_details.html)
 
+*Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?*
+
+> - What mutations or summaries will you need to do?
+> - What difficulties do you expect?
+> - Do each of the task items make sense?
 
 
 
-## Task 8: Data to Answer Questions
+
+## Task 8: World Data Investigations - Part 2
 > - [Task 8](https://byuistats.github.io/M335/class_tasks/task08_details.html)
 
 
@@ -47,91 +61,115 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
-# Review
-
-## Review Timelines and Course Deliverables
-
-> - [Semester Leadership and Project](https://byuistats.github.io/M335/tasklist.html)
-> - [Semester Competencies](https://byuistats.github.io/M335/syllabus.html#grading_scale)
 
 
-# Vectors
+## Socrative Hours Quiz
 
-## Quotes from the chapter
+[socrative.com](https://socrative.com)
 
-> - Vectors are particularly important as most of the functions you will write will work with vectors. It is possible to write functions that work with tibbles (like ggplot2, dplyr, and tidyr), but the tools you need to write such functions are currently idiosyncratic and immature.
+## Your research questions
 
-> - There is an important variation of [ called [[. [[ only ever extracts a single element, and always drops names. It's a good idea to use it whenever you want to make it clear that you're extracting a single item, as in a for loop. The distinction between [ and [[ is most important for lists, as we'll see shortly.
+**[Task 3:](https://byuistats.github.io/M335/class_tasks/task03_details.html)**
 
-## Vectors 
+> - Share your research question with your neighbor and explain why finding an answer to the question with data would be exciting.
+> - Then we can discuss a few as a class.
 
-<p style="text-align: left;">
-The chief difference between atomic vectors and lists is that atomic vectors are homogeneous, while lists can be heterogeneous. There's one other related object: NULL. NULL is often used to represent the absence of a vector (as opposed to NA which is used to represent the absence of a value in a vector). NULL typically behaves like a vector of length 0. 
-</p>
+# What is EDA? {data-background=#e8d725}
 
-## Checking Truths
+## Exploratory Data Analysis
 
-|                  | lgl | int | dbl | chr | list |
-|------------------|-----|-----|-----|-----|------|
-| `is_logical()`   |  x  |     |     |     |      |
-| `is_integer()`   |     |  x  |     |     |      |
-| `is_double()`    |     |     |  x  |     |      |
-| `is_numeric()`   |     |  x  |  x  |     |      |
-| `is_character()` |     |     |     |  x  |      |
-| `is_atomic()`    |  x  |  x  |  x  |  x  |      |
-| `is_list()`      |     |     |     |     |  x   |
-| `is_vector()`    |  x  |  x  |  x  |  x  |  x   |
+EDA is fundamentally a creative process. And like most creative processes, the key to asking quality questions is to generate a large quantity of questions.
+ 
+> 1. What type of variation occurs within my variables?
 
+> 2. What type of covariation occurs between my variables?
 
-## Scalars and recycling rules
+## Exploring Old Faithful goals
 
-Write out this line of code and then map the full process to get to the output
+> 1. **Make the [histogram shown in the book](http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png) with the black and white theme and an improved x-axis label.**
 
-**Input**
+## Exploring Old Faithful (1)
 
-`1:10 + 1:2`
+![](day_8_files/figure-revealjs/example2-1.png)
 
-**Output**
+## Understanding `case_when()`
 
-`#>  [1]  2  4  4  6  6  8  8 10 10 12`
+`case_when()` is particularly useful inside mutate when you want to create a new variable that relies on a complex combination of existing variables. **Write a short sentence that says what this code is doing?**
 
 
-## Lists
+```r
+starwars %>%
+  select(name:mass, gender, species) %>%
+  mutate(
+    type = case_when(
+      height > 200 | mass > 200 ~ "large",
+      species == "Droid"        ~ "robot",
+      TRUE                      ~  "other"
+    )
+  )
 
-While understanding and using functions is probably more important. Understanding how lists work and the power of lists is a very important key to becoming a master R programmer.  
-
-> - [Lists and condiments](http://r4ds.had.co.nz/vectors.html)
-
-```
-a <- list(a = 1:3, b = "a string", c = pi, d = list(-1, list(-5, "fish")))
-
+#> # A tibble: 87 x 6
+#>                  name height  mass gender species  type
+#>                 <chr>  <int> <dbl>  <chr>   <chr> <chr>
+#>  1     Luke Skywalker    172    77   male   Human other
+#>  2              C-3PO    167    75   <NA>   Droid robot
+#>  3              R2-D2     96    32   <NA>   Droid robot
+#>  4        Darth Vader    202   136   male   Human large
 ```
 
-**What does this command do?**
 
-`a[[c(4,2,2)]]`
 
-## data.frame and tbl (1)
 
-**What is the difference between tibbles and data frames?**
+## Exploring Old Faithful goals
 
-* Never coerces inputs (i.e. strings stay as strings!).
-* Never adds row.names.
-* Never munges column names.
-* Only recycles length 1 inputs.
-* Evaluates its arguments lazily and in order.
-* Adds tbl_df class to output.
-* Automatically adds column names.
+> 1. Make the [histogram shown in the book](http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png) with the black and white theme and an improved x-axis label.
+> 2. **Use the mutate function to modify our plot to fill the histogram for two groups of waiting times.**
 
-## data.frame and tbl (2)
 
-**What is the difference between tibbles and data frames?**
 
-* When printed, the tibble diff reports the class of each variable. data.frame objects do not.
-* When printing a tibble diff to screen, only the first ten rows are displayed. The number of columns printed depends on the window size.
+## Exploring Old Faithful (2)
 
-## tbl settings
 
-> * Change the maximum and the minimum rows to print: `options(tibble.print_max = 20, tibble.print_min = 6)`
-> * Always show all rows: `options(tibble.print_max = Inf)`
-> * Always show all columns: `options(tibble.width = Inf)`
+![](day_8_files/figure-revealjs/thestuf33-1.png)
+
+## Exploring Old Faithful goals
+
+> 1. Make the [histogram shown in the book](http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png) with the black and white theme and an improved x-axis label.
+> 2. Use the mutate function to modify our plot to fill the histogram for two groups of waiting times.
+> 3. **Use the waiting variable to make a hexbin plot of the relationship between waiting time and duration.**
+
+
+## Exploring Old Faithful (3)
+
+![](day_8_files/figure-revealjs/realldkdjf-1.png)
+
+# Understanding terms {data-background=#e8d725}
+
+## Socrative Quiz
+
+> - [Socrative: Exploratory Analysis](https://socrative.com/)
+
+# Class Coding Challenge {data-background=#e8d725}
+
+## Data 
+
+To mimic an art class we will all have the same data on which to build our art.
+
+**Data**
+
+This data has all the 2015 births in Brazil.  We are trying to make data discovery art. We are in the exploratory stage and we need to get ready for a conversation with doctors from Brazil.  They have hinted that they would like to know something about birth weights and variables that could describe changes in birth weights.  
+
+
+```r
+dat15 <- read_csv("https://query.data.world/s/uw2hhwji6dwz3637unq3twp7z4chl5")
+#dat11 <- read_csv("https://query.data.world/s/4sbxrxxvn5fdf5xd7lmlcla2rmzfub")
+```
+
+> * Download the 2015 csv data from here - https://www.amazon.com/clouddrive/share/1zU837kCeynkoBiHUzEkKYaFS30McMQVTu5UZ5aYXy7
+> * Download the 2011 rds data from here - https://www.amazon.com/clouddrive/share/GQNxrBVeJQETv7gMNaMxT3iLGkLng7QycSph710wunP
+
+
+
+
+
+

@@ -22,7 +22,7 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 ```
 
 
-# It is about time
+# It is about time {data-background=#e8d725}
 
 ## The March Visualization
 
@@ -46,7 +46,68 @@ What do we like? dislike?
 
 > - [Movie Performance over Time](http://www.nytimes.com/interactive/2008/02/23/movies/20080223_REVENUE_GRAPHIC.html?_r=0)
 
-# Date and Times
+
+# Data Ethics (The truthful Art by Alberto Cairo) {data-background=#e8d725}
+
+## Data Ethics
+
+> We live in a world with a surfeit of information at our service. It is our choice whether we seek out data that reinforce our biases or choose to look at the world in a critical, rational manner, and allow reality to bend our preconceptions. In the long run, the truth will work better for us than our cherished fictions.
+
+**-Razib Khan, "The Abortion Stereotype,"**
+*The New York Times (January 2, 2015)*
+
+## Paul's Version
+
+3 For the time will come when people will not put up with sound doctrine. Instead, to suit their own desires, they will gather around them a great number of teachers to say what their itching ears want to hear. 4 They will turn their ears away from the truth and turn aside to myths.
+
+> - Paul (2 Timothy 4:3-4 **NIV**)
+
+## John A Widstoe's Version
+
+Intelligent people cannot long endure ... doubts.  It must be resolved ... We set about to remove doubt by gathering information and making tests concerning the subject in question...
+
+> - Evidences and Reconciliations, pp. 31
+
+# Scientific Discovery {data-background=#e8d725}
+
+## Defining the terms
+
+1. conjecture
+2. hypothesis
+3. data/test
+4. conclusions
+
+## The process
+
+These steps may open researchers' eyes to new paths to explore, so they don't constitute a process with a beginning and an end point but a loop. ...
+
+* **Good answers lead to more good questions.**
+* The scientific stance will never take us all the way to an absolute, immutable truth.
+* What it may do-and it does it well-is to move us further to the right in the truth continuum.
+
+## The Big Idea
+
+Data always vary randomly because the object of our inquiries, nature itself, is also random. We can analyze and predict events in nature with an increasing amount of precision and accuracy, thanks to improvements in our techniques and instruments, **but a certain amount of random variation, which gives rise to uncertainty, is inevitable.**
+
+## The suspects (Intro)
+
+> * Always be suspicious of studies whose samples have not been randomly chosen
+> * Not all scientific research is based on random sampling, but analyzing a random sample of the population will yield more accurate results than a cherry-picked or self-selected sample.
+
+## The suspects (confounding)
+
+> * Some researchers distinguish between two kinds of extraneous variables. Sometimes we can identify an extraneous variable and incorporate it into our model, in which case we'd be dealing with a **confounding variable**.
+>    * I know that it may affect my results, so I consider it for my inquiry to minimize its impact.
+>    * For example, we could control for population change and for variation in number of motor vehicles when analyzing deaths in traffic accidents.
+
+## The suspects (lurking)
+
+> * There's a second, more insidious kind of extraneous variable. Imagine that I don't know that my friends are indeed geeky. If I were unaware of this, I'd be dealing with a **lurking variable**.
+>    * A lurking variable is an extraneous variable that we don't include in our analysis for the simple reason that its existence is unknown to us, or because we can't explain its connection to the phenomenon we're studying.
+
+
+
+# Date and Times {data-background=#e8d725}
 
 ## Notes
 
@@ -67,14 +128,17 @@ In 2005, we want to know how much electricity is being consumed at 4:00 pm on Mo
 
 **Open R-Studio and Convert the following strings to date objects.**
 
+Try `ymd()`, `mdy()`, `dmy()`, `ydm()`
+
 > - "January 21st, 2017"
 > - "2012-01-01"
 > - "March 2016 - 23"
 
 ## The Creators (part 2)
 
+Try `make_date()` and `make_datetime()`.
 
-```{r datecode, eval=FALSE}
+```{r datecode, eval=FALSE, echo=TRUE}
 library(tidyverse)
 library(lubridate)
 date_cols <- tibble(month = c(1, 3, 7), 
@@ -107,14 +171,13 @@ You can pull out individual parts of the date with the accessor functions; year(
 ## The Changers (2)
 
 **Tackle the Following**
-   
-- Add one month to "January 31st".  
-   
 
-```{r bobobob23, eval=FALSE}
+
+```{r bobobob23, eval=FALSE, echo=TRUE}
 jan31 <- ymd("2013-01-31")
 ```
-   
+
+- Add one month to "January 31st".  
 - Add 27 hours and 15 minutes to "January 31st, 2013 06:35:27" 
 - https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html
     - Use `Sys.timezone(location = TRUE)` or `OlsonNames()` to see a list of timezones

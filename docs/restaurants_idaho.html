@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Restaurants Idaho</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4,h5",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 335</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="syllabus.html">
+    <span class="fa fa-paperclip"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-briefcase"></span>
+     
+    Tools
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="rpages.html">R/R-Studio Details</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Git/GitHub Helps</li>
+    <li>
+      <a href="gitpages.html">Helps</a>
+    </li>
+    <li>
+      <a href="images/Git_workflow_diagram.png">One Image</a>
+    </li>
+    <li>
+      <a href="git_335.html">Process Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="compages.html">Slack &amp; Stackoverflow Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="lab.html">R Lab</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="rstudioconnect.html">RStudio Connect</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="pypages.html">Python Details</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-file-text"></span>
+     
+    Tasks
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="homework_schedule.html">Assignment Schedule</a>
+    </li>
+    <li>
+      <a href="tasklist.html">Semester Task List</a>
+    </li>
+    <li>
+      <a href="teamlead.html">Team Lead Guidance</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="backgrounds.html">Task Backgrounds</a>
+    </li>
+    <li>
+      <a href="readings.html">Weekly Reading List</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="class.html">
+    <span class="fa fa-university"></span>
+     
+    Class Meeting
+  </a>
+</li>
+<li>
+  <a href="project.html">
+    <span class="fa fa-tachometer"></span>
+     
+    Project
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-book"></span>
+     
+    Book
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Course Textbook</li>
+    <li>
+      <a href="http://r4ds.had.co.nz/">R for Data Science</a>
+    </li>
+    <li>
+      <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
+    </li>
+    <li>
+      <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a>
+    </li>
+    <li>
+      <a href="https://plotly-book.cpsievert.me/index.html">plotly for R</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Supplemental Material</li>
+    <li>
+      <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">Statistical Concepts in Presenting Data:</a>
+    </li>
+    <li>
+      <a href="http://adv-r.had.co.nz/">Advanced R</a>
+    </li>
+    <li>
+      <a href="http://r-pkgs.had.co.nz/">R Packages</a>
+    </li>
+    <li>
+      <a href="http://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a>
+    </li>
+    <li>
+      <a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>
+    </li>
+    <li>
+      <a href="https://rstudio.github.io/crosstalk/index.html">Crosstalk: htmlwidgets add-on</a>
+    </li>
+    <li>
+      <a href="lynda.html">Data Science on Lynda.com</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="visitme.html">
+    <span class="fa fa-calendar"></span>
+     
+    Visit Me
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Restaurants Idaho</h1>
+
+</div>
+
+
+<div id="building-the-data" class="section level2">
+<h2>Building the data</h2>
+<pre class="r"><code>library(pacman)
+#p_load_gh(&quot;hathawayj/buildings&quot;)
+p_load(buildings, tidyverse, stringr)
+#forcats and stringr used from library(tidyverse)
+
+
+# Code from description
+not_restaurants &lt;- c(&quot;development&quot;,&quot;Food preperation center&quot;, &quot;Food Services center&quot;,&quot;bakery&quot;,&quot;Grocery&quot;,&quot;conceession&quot;,&quot;Cafeteria&quot;, &quot;lunchroom&quot;,&quot;school&quot;,&quot;facility&quot;,&quot; hall &quot;)
+standalone_retail &lt;- c(&quot;Wine&quot;,&quot;Spirits&quot;,&quot;Liquor&quot;,&quot;Convenience&quot;,&quot;drugstore&quot;,&quot;Flying J&quot;, &quot;Rite Aid &quot;,&quot;walgreens &quot;,&quot;Love&#39;s Travel &quot;)
+full_service_type &lt;- c(&quot;Ristorante&quot;,&quot;mexican&quot;,&quot;pizza &quot;,&quot;steakhouse&quot;,&quot; grill &quot;,&quot;buffet&quot;,&quot;tavern&quot;,&quot; bar &quot;,&quot;waffle&quot;,&quot;italian&quot;,&quot;steak house&quot;)
+quick_service_type &lt;- c(&quot;coffee&quot;,&quot; java &quot;,&quot; Donut &quot;,&quot;Doughnut&quot;,&quot; burger &quot;,&quot;Ice Cream &quot;,&quot;custard &quot;,&quot;sandwich &quot;,&quot;fast food &quot;,&quot; bagel &quot;)
+quick_service_names &lt;- restaurants$Restaurant[restaurants$Type %in% c(&quot;coffee&quot;,&quot;Ice Cream&quot;,&quot;Fast Food&quot;)]
+full_service_names &lt;- restaurants$Restaurant[restaurants$Type %in% c(&quot;Pizza&quot;,&quot;Casual Dining&quot;,&quot;Fast Casual&quot;)]
+
+
+# Clean up word formatting
+not_restaurants &lt;- str_to_lower(not_restaurants)
+standalone_retail &lt;- str_to_lower(standalone_retail)
+full_service_type &lt;- str_to_lower(full_service_type)
+quick_service_type &lt;- str_to_lower(quick_service_type)
+quick_service_names &lt;- str_to_lower(quick_service_names)
+full_service_names &lt;- str_to_lower(full_service_names)
+
+
+# create visualization data
+dat &lt;- buildings::buildings0809 %&gt;% 
+  select(-County) %&gt;%
+  as.tibble() %&gt;%
+  left_join(climate_zone_fips, by=c(&quot;FIPS.state&quot;, &quot;FIPS.county&quot;))
+
+dat &lt;- dat %&gt;% 
+  filter(Type == &quot;Food_Beverage_Service&quot;) %&gt;% 
+  mutate(ProjectTitle = str_to_lower(ProjectTitle),
+    Type2 = case_when(
+    str_detect(ProjectTitle, paste(not_restaurants, collapse = &quot;|&quot;)) ~ &quot;Non Standard Food Service&quot;,
+    str_detect(ProjectTitle, paste(standalone_retail, collapse = &quot;|&quot;)) ~ &quot;Stand-alone Retail&quot;,
+    str_detect(ProjectTitle, paste(c(full_service_type, full_service_names), collapse = &quot;|&quot;)) ~ &quot;Full Service Restaurant&quot;,
+    str_detect(ProjectTitle, paste(c(quick_service_type, quick_service_names), collapse = &quot;|&quot;)) ~ &quot;Quick Service Restaurant&quot;),
+    build_type = case_when(
+      str_detect(ProjectTitle, &quot;alteration&quot;) ~ &quot;Alteration&quot;,
+      str_detect(ProjectTitle, &quot;addition&quot;) ~ &quot;Addition&quot;,
+      str_detect(ProjectTitle, &quot;renov&quot;) ~ &quot;Alteration&quot;,
+      !(str_detect(ProjectTitle, paste(c(&quot;alteration&quot;, &quot;addition&quot;), collapse = &quot;|&quot;))) ~ &quot;New&quot;)
+  ) %&gt;%
+  mutate(Type2 = case_when(
+    !is.na(Type2) ~ Type2,
+    is.na(Type2) &amp; SqFt &gt;= 4000 ~ &quot;Full Service Restaurant&quot;,
+    is.na(Type2) &amp; SqFt &lt; 4000 &amp; build_type == &quot;New&quot; ~ &quot;Quick Service Restaurant&quot;,
+    is.na(Type2) ~ &quot;unknown&quot;))
+# Over 4,000 ADD and NEW gets assigned to Sit Down Restaurants
+# Under 4,000 sqft NEW gets assigned to Fast Food
+# all Type == &quot;Food/Beverage Service&quot; that don&#39;t get grouped based on the above are called &quot;Unknown&quot;</code></pre>
+</div>
+<div id="typical-bar-plot" class="section level2">
+<h2>Typical bar plot</h2>
+<pre class="r"><code>dat %&gt;% 
+  group_by(Type2, County, Year) %&gt;% 
+  summarize(value = sum(Value1000), pop = min(Pop100), n = n()) %&gt;%
+  ungroup() %&gt;%
+  mutate(Type2 = fct_relevel(Type2, &quot;Full Service Restaurant&quot;, &quot;Quick Service Restaurant&quot;)) %&gt;%
+  ggplot(aes(x = fct_reorder(str_replace(County, &quot; ID&quot;, &quot;&quot;), value, sum), y = value, fill = Year)) + 
+    geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;, color = &quot;white&quot;) + 
+    facet_wrap(~Type2, scales = &quot;free_y&quot;, ncol = 2) + theme_bw() + 
+    theme(panel.grid.minor = element_blank(), panel.grid.major.x = element_blank(),
+          axis.text.x = element_text(angle = 35, vjust = 1, hjust = 1), legend.position = &quot;bottom&quot;) +
+    geom_vline(xintercept = seq(.5, 15, by = 1), color = &quot;lightgrey&quot;) +
+    geom_hline(yintercept = 0, color = &quot;grey&quot;) +
+    scale_fill_grey() +
+    labs(x = &quot;Idaho County&quot;, y = &quot;Total Value of Commercial Construction ($1,000)&quot; )</code></pre>
+<p><img src="restaurants_idaho_files/figure-html/unnamed-chunk-2-1.png" /><!-- --></p>
+<pre class="r"><code>(ggp &lt;- dat %&gt;% 
+  group_by(Type2, County, Year) %&gt;% 
+  summarize(value = sum(Value1000), pop = min(Pop100), n = n()) %&gt;%
+  ungroup() %&gt;%
+  mutate(Type2 = fct_relevel(Type2, &quot;Full Service Restaurant&quot;, &quot;Quick Service Restaurant&quot;),
+         Year = parse_number(Year)) %&gt;%
+ complete(Year = full_seq(Year, period = 1), Type2, County, fill = list(value = 0, pop = 0, n = 0)) %&gt;% 
+  ggplot(aes(x = fct_reorder(str_replace(County, &quot; ID&quot;, &quot;&quot;), value, sum), y = value, fill = factor(Year))) + 
+    geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;, color = &quot;white&quot;) + 
+    facet_wrap(~Type2, scales = &quot;free_y&quot;, ncol = 2) + theme_bw() + 
+    theme(panel.grid.minor = element_blank(), panel.grid.major.x = element_blank(),
+          axis.text.x = element_text(angle = 35, vjust = 1, hjust = 1)) +
+    geom_vline(xintercept = seq(.5, 15, by = 1), color = &quot;lightgrey&quot;) +
+    geom_hline(yintercept = 0, color = &quot;grey&quot;) +
+    scale_fill_grey() +
+    labs(x = &quot;Idaho County&quot;, y = &quot;Total Value of Commercial Construction ($1,000)&quot;, fill = &quot;Year&quot; ))</code></pre>
+<p><img src="restaurants_idaho_files/figure-html/unnamed-chunk-3-1.png" /><!-- --></p>
+<pre class="r"><code>ggp +  facet_wrap(~Type2, ncol = 2) + 
+  scale_y_continuous(trans = &quot;sqrt&quot;, breaks = c(100, 250, 500, 1000, 2000, 3000, 4000, 6000))</code></pre>
+<p><img src="restaurants_idaho_files/figure-html/unnamed-chunk-3-2.png" /><!-- --></p>
+</div>
+<div id="moving-beyond-bars" class="section level2">
+<h2>Moving beyond bars</h2>
+<pre class="r"><code>## Without Bars
+
+
+(ggpoint &lt;- dat %&gt;% 
+    group_by(Type2, County, Year) %&gt;% 
+    summarize(value = sum(Value1000), pop = min(Pop100), n = n()) %&gt;%
+    ungroup() %&gt;%
+    mutate(Type2 = fct_relevel(Type2, &quot;Full Service Restaurant&quot;, &quot;Quick Service Restaurant&quot;),
+           County = fct_reorder(str_replace(County, &quot; ID&quot;, &quot;&quot;), value, sum)) %&gt;%
+    #complete(nesting(Type2, Year), County, fill = list(value = 0, pop = 0, n = 0)) %&gt;%
+    # filter(County == &quot;Bonneville ID&quot;)
+    ggplot(aes(x = County, y = value, color = Year)) + 
+    geom_point(aes(size = n)) + 
+    geom_text(aes(label = n), color = &quot;white&quot;) +
+    facet_wrap(~Type2, scales = &quot;free_y&quot;, ncol = 2) + theme_bw() + 
+    theme(panel.grid.minor = element_blank(), axis.text.x = element_text(angle = 35, vjust = 1, hjust = 1), legend.position = &quot;bottom&quot;) +
+    scale_color_manual(values = c(&quot;darkorange&quot;, &quot;purple&quot; )) +
+    scale_x_discrete(drop = FALSE) +
+    scale_size_continuous(breaks = c(1, 3, 5, 8, 10), range = c(5, 8), guide = &quot;none&quot;) +
+    labs(x = &quot;Idaho County&quot;, y = &quot;Total Value of Commercial Construction ($1,000)&quot; )) +
+    guides(color = guide_legend(override.aes = list(size = 5)))</code></pre>
+<p><img src="restaurants_idaho_files/figure-html/unnamed-chunk-4-1.png" /><!-- --></p>
+<pre class="r"><code>ggpoint +  facet_wrap(~Type2, ncol = 2) + guides(color = guide_legend(override.aes = list(size = 5)))</code></pre>
+<p><img src="restaurants_idaho_files/figure-html/unnamed-chunk-4-2.png" /><!-- --></p>
+<pre class="r"><code>ggpoint +  facet_wrap(~Type2, ncol = 2) + 
+  scale_y_continuous(trans = &quot;sqrt&quot;, breaks = c(100, 250, 500, 1000, 2000, 3000, 4000, 6000)) + coord_flip() + theme_bw() + guides(color = guide_legend(override.aes = list(size = 5))) + theme(legend.position = &quot;bottom&quot;)</code></pre>
+<p><img src="restaurants_idaho_files/figure-html/unnamed-chunk-4-3.png" /><!-- --></p>
+</div>
+<div id="bar-plot-with-individual-jobs" class="section level2">
+<h2>Bar plot with individual jobs</h2>
+<pre class="r"><code>### Now look at individual jobs ###
+### 
+
+dat %&gt;% 
+  mutate(County = fct_reorder(County, Value1000, sum)) %&gt;%
+  filter(Type2 %in% c(&quot;Full Service Restaurant&quot;, &quot;Quick Service Restaurant&quot;)) %&gt;%
+  ggplot(aes(x = Year, y = Value1000)) + 
+  geom_bar(stat = &quot;identity&quot;, aes(group = fct_reorder(ProjectTitle, Value1000, .desc = FALSE)), 
+           color = &quot;lightgrey&quot;, show.legend = FALSE) + theme_bw() +
+  facet_wrap(~County, nrow = 1) +
+  labs(x = &quot;Year&quot;, y = &quot;Total Value of Commercial Construction ($1,000)&quot;, title = &quot;Total cost of restaurant construction&quot;) </code></pre>
+<p><img src="restaurants_idaho_files/figure-html/unnamed-chunk-5-1.png" /><!-- --></p>
+<pre class="r"><code>dat %&gt;% 
+  mutate(County = fct_reorder(County, Value1000, sum)) %&gt;%
+  filter(Type2 %in% c(&quot;Quick Service Restaurant&quot;)) %&gt;%
+  ggplot(aes(x = Year, y = Value1000)) + 
+  geom_bar(stat = &quot;identity&quot;, aes(group = fct_reorder(ProjectTitle, Value1000, .desc = FALSE)), 
+           color = &quot;lightgrey&quot;, show.legend = FALSE) + theme_bw() +
+  facet_wrap(~County, nrow = 1) +
+  labs(x = &quot;Year&quot;, y = &quot;Total Value of Commercial Construction ($1,000)&quot;, title = &quot;Total cost of fast-food restaurant construction&quot;)</code></pre>
+<p><img src="restaurants_idaho_files/figure-html/unnamed-chunk-5-2.png" /><!-- --></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>

@@ -15,13 +15,10 @@ output:
 
 
 
-## Task 15:  How is the weather? 
+## Task 15: Does the weather hurt my bottom line? 
 ### Background 
 
-Use the `library(riem)` package that is described [here](https://github.com/ropensci/riem){target="blank"} and get the month of June for 2015, 2016, and 2017. You would use `riem_measures(station = "RXE", date_start = "2015-06-01", date_end = "2017-07-01")` for station `RXE`.  Once you have downloaded and formated the data, make sure to save it to your analysis folder as it will take a minute or two to download each time.   We have a few coding tasks to help us get used to using dates. Create a visualization for each question.
-
-1. What day of the week had the highest temperature reading?
-2. What day of the week had the lowest temperature at 2 pm?
+A car wash business wants to see if the temperature hurts their bottom line.  They have point of sale data for the months of April, May, June, and July.  You will need to aggregate the data into hourly sales totals and merge the sales data together with the temperature data to provide insight into the relationship between temperature and car wash sales. 
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -45,14 +42,19 @@ This reading will help you complete the tasks below.
 
 * o [Chapter 16: R for Data Science - Dates and Times](http://r4ds.had.co.nz/dates-and-times.html){target='blank'}
 * o [Time Series Visualization Gallery](https://vcg.informatik.uni-rostock.de/~ct/timeviz/timeviz.html){target='blank'}
+* o [lubridate Vignette](https://cran.r-project.org/web/packages/lubridate/vignettes/lubridate.html){target='blank'}
 
 
 ### Tasks
 
 
-* [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
-* [ ] Create a `.png` image for each question
-* [ ] Save your script and `.png` files to GitHub
-* [ ] Be prepared to share your visualization and why your reasoning for how the visualization answers the question
+* [ ] Read in the car wash data `https://byuistats.github.io/M335/data/carwash.csv` and format it for the needs of this task
+    * [ ] Convert the times from UTC time to mountain standard time using the right function out of `library(lubridate)`.
+    * [ ] Create a new hourly grouping variable using `ceiling_date()` from `library(lubridate)`
+    * [ ] Aggregate the point of sale data into hour sales totals
+* [ ] Use `riem_measures(station = "RXE",  date_start  = ,  date_end  =  )` for station `RXE` from `library(riem)` to get the matching temperatures
+    * [ ] Create a new hourly variable that matches your car wash hourly variable
+* [ ] Merge the two datasets together
+* [ ] Create a visualization that provides insight into the relationship between sales and temperature by hour of the day
 
 

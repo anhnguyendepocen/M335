@@ -10,7 +10,7 @@ params:
 
 
 
-# R-Studio Connect and Interaction
+# R-Studio Connect and Interaction {data-background=#e8d725}
 
 ## Setting up R-Studio
 
@@ -45,7 +45,7 @@ Putting information in your file [My interactive](https://shiny.byui.edu/connect
 
 
 
-# Team Discussion
+# Team Discussion {data-background=#e8d725}
 
 
 
@@ -75,7 +75,18 @@ Putting information in your file [My interactive](https://shiny.byui.edu/connect
 
 
 
-# Time Series Data
+# Being Readings {data-background=#e8d725}
+
+## The development diagram
+
+![](../images/visualization_diagram.png)
+
+## Improving literacy
+
+> - How do we improve literacy?
+> - Show the graphic narrative example.
+
+# Time Series Data {data-background=#e8d725}
 
 ## Are we using timetk?
 
@@ -112,6 +123,12 @@ The main benefit of xts is its seamless compatibility with other packages using 
 Write out what this function is doing.
 
 
+```r
+tq_transmute(select = adjusted,
+               mutate_fun = periodReturn, 
+               period = "daily",
+               type = "log")
+```
 
 - **Hint:** Read about `quantmod::periodReturn()`
 
@@ -120,15 +137,16 @@ Write out what this function is doing.
 Write out what this function is doing.
 
 
+```r
+  tq_portfolio(assets_col=symbol,
+               returns_col=daily.returns, 
+               weights = tibble(asset.names = friend, weight = c(0.259,.534,.207)),
+               wealth.index = T)
+```
 
 - **Hint:** Read about `PerformanceAnalytics::Return.portfolio()`
 
-## dygraphs: R connection to dygraphs JavaScript charting library
-
-Open the [dygraphs help webstie](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.
-
-
-# Settling In
+# Settling In {data-background=#e8d725}
 
 ## Remember the Goal
 
@@ -137,3 +155,14 @@ Open the [dygraphs help webstie](http://rstudio.github.io/dygraphs/index.html) a
 > - [Remembering Good Principles](https://youtu.be/fSgEeI2Xpdc)
 > - [Rauser view on time and data](https://www.youtube.com/embed/coNDCIMH8bk?start=628) - 10:28 to 17:50
 
+## Edward Tufte
+
+> Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space
+
+> Edward Tufte
+
+# Next Class {data-background=#e8d725}
+
+## dygraphs: R connection to dygraphs JavaScript charting library
+
+Open the [dygraphs help webstie](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.

@@ -171,10 +171,7 @@ ul {
 <div id="code" class="section level3">
 <h3>Code</h3>
 <pre class="r"><code># To get the standard works data
-download(&quot;http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip&quot;, &quot;docs/data/scriptures.zip&quot;, mode = &quot;wb&quot;)
-unzip(&quot;docs/data/scriptures.zip&quot;, exdir = file.path(getwd(),&quot;docs/data&quot;))
-file.remove(&quot;docs/data/scriptures.zip&quot;)
-scriptures &lt;- read_csv(&quot;docs/data/lds-scriptures.csv&quot;)
+scriptures &lt;- rio::import(&quot;http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip&quot;)
 
 # to get the Savior names
 bmnames &lt;- read_rds(gzcon(url(&quot;https://byuistats.github.io/M335/data/BoM_SaviorNames.rds&quot;)))

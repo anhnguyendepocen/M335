@@ -11,11 +11,22 @@ navbar:
         - text: "R/R-Studio Details"
           href: rpages.html
         - text: "----------------"
-        - text: "Git/GitHub Details"
+        - text: "Git/GitHub Helps"
+        - text: "Helps"
           href: gitpages.html
+        - text: "One Image"
+          href: images/Git_workflow_diagram.png
+        - text: "Process Details"
+          href: git_335.html
         - text: "----------------"
         - text: "Slack & Stackoverflow Details"
           href: compages.html
+        - text: "----------------"
+        - text: "R Lab"
+          href: lab.html
+        - text: "----------------"
+        - text: "RStudio Connect"
+          href: rstudioconnect.html
         - text: "----------------"
         - text: "Python Details"
           href: pypages.html
@@ -24,10 +35,13 @@ navbar:
       menu:
         - text: "Assignment Schedule"
           href: homework_schedule.html
-        - text: "Task Backgrounds"
-          href: backgrounds.html
         - text: "Semester Task List"
           href: tasklist.html
+        - text: "Team Lead Guidance"
+          href: teamlead.html
+        - text: "----------------"
+        - text: "Task Backgrounds"
+          href: backgrounds.html
         - text: "Weekly Reading List"
           href: readings.html
     - text: "Class Meeting"
@@ -44,6 +58,10 @@ navbar:
           href: http://r4ds.had.co.nz/
         - text: "Happy Git and Github for the useR"
           href: http://happygitwithr.com/
+        - text: "R Markdown: The Definitive Guide"
+          href: https://bookdown.org/yihui/rmarkdown/
+        - text: "plotly for R"
+          href: https://plotly-book.cpsievert.me/index.html
         - text: "---------------"
         - text: "Supplemental Material"
         - text: "Statistical Concepts in Presenting Data:"
@@ -52,10 +70,14 @@ navbar:
           href: http://adv-r.had.co.nz/
         - text: "R Packages"
           href: http://r-pkgs.had.co.nz/
-        - text: "Plotly for R"
-          href: https://cpsievert.github.io/plotly_book/
-        - text: "DataThink.io"
-          href: http://datathink.io
+        - text: "Fundamentals of Data Visualization"
+          href: http://serialmentor.com/dataviz/
+        - text: "Geocomputation with R"
+          href: https://geocompr.robinlovelace.net/
+        - text: "Crosstalk: htmlwidgets add-on"
+          href: https://rstudio.github.io/crosstalk/index.html
+        - text: Data Science on Lynda.com
+          href: lynda.html
     - text: "Visit Me"
       icon: fa-calendar
       href: visitme.html
@@ -64,6 +86,7 @@ output_dir: '.'
 output:
   html_document:
     lib_dir: site_libs
+    keep_md: true
     toc: true
     theme: readable
     highlight: textmate

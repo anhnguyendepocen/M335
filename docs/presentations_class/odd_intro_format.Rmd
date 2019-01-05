@@ -14,7 +14,7 @@ invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
 read_chunk("temp")
 
 
-# case study completed
+# case study completed {data-background=#e8d725}
 cso <- ceiling(params$day/2) - 1
 csn <- ceiling(params$day/2) 
 
@@ -24,7 +24,7 @@ casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
 link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
 link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
 
-# How did we do?
+# How did we do? {data-background=#e8d725}
 hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
 
 # current task
@@ -36,7 +36,7 @@ link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M33
 
 
 
-# Team Discussion
+# Team Discussion {data-background=#e8d725}
 
 ```{r csold, ref.label=casename_old, echo=FALSE, include=FALSE }
 # For case study due last Saturday

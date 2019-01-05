@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Parallel Processing with Future and Purrr</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4,h5",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 335</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="syllabus.html">
+    <span class="fa fa-paperclip"></span>
+     
+    Syllabus
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-briefcase"></span>
+     
+    Tools
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="rpages.html">R/R-Studio Details</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Git/GitHub Helps</li>
+    <li>
+      <a href="gitpages.html">Helps</a>
+    </li>
+    <li>
+      <a href="images/Git_workflow_diagram.png">One Image</a>
+    </li>
+    <li>
+      <a href="git_335.html">Process Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="compages.html">Slack &amp; Stackoverflow Details</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="lab.html">R Lab</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="rstudioconnect.html">RStudio Connect</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="pypages.html">Python Details</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-file-text"></span>
+     
+    Tasks
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="homework_schedule.html">Assignment Schedule</a>
+    </li>
+    <li>
+      <a href="tasklist.html">Semester Task List</a>
+    </li>
+    <li>
+      <a href="teamlead.html">Team Lead Guidance</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="backgrounds.html">Task Backgrounds</a>
+    </li>
+    <li>
+      <a href="readings.html">Weekly Reading List</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="class.html">
+    <span class="fa fa-university"></span>
+     
+    Class Meeting
+  </a>
+</li>
+<li>
+  <a href="project.html">
+    <span class="fa fa-tachometer"></span>
+     
+    Project
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-book"></span>
+     
+    Book
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Course Textbook</li>
+    <li>
+      <a href="http://r4ds.had.co.nz/">R for Data Science</a>
+    </li>
+    <li>
+      <a href="http://happygitwithr.com/">Happy Git and Github for the useR</a>
+    </li>
+    <li>
+      <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a>
+    </li>
+    <li>
+      <a href="https://plotly-book.cpsievert.me/index.html">plotly for R</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Supplemental Material</li>
+    <li>
+      <a href="http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf">Statistical Concepts in Presenting Data:</a>
+    </li>
+    <li>
+      <a href="http://adv-r.had.co.nz/">Advanced R</a>
+    </li>
+    <li>
+      <a href="http://r-pkgs.had.co.nz/">R Packages</a>
+    </li>
+    <li>
+      <a href="http://serialmentor.com/dataviz/">Fundamentals of Data Visualization</a>
+    </li>
+    <li>
+      <a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a>
+    </li>
+    <li>
+      <a href="https://rstudio.github.io/crosstalk/index.html">Crosstalk: htmlwidgets add-on</a>
+    </li>
+    <li>
+      <a href="lynda.html">Data Science on Lynda.com</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="visitme.html">
+    <span class="fa fa-calendar"></span>
+     
+    Visit Me
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Parallel Processing with Future and Purrr</h1>
+
+</div>
+
+
+<div id="loading-the-libraries-and-cores" class="section level2">
+<h2>Loading the Libraries and Cores</h2>
+<p>This guide provides a quick example of using <code>library(furrr)</code> that is in line with the <a href="parallel.html">simple parallel example I have provided</a>. First, we need to load the <code>library(furrr)</code> and <code>library(purrr)</code> packages. For good measure, I have installed <code>library(tidyverse)</code> and a function timing package <code>library(tictoc)</code>. Finally, I have started using the <code>library(pacman)</code> packaged to handle library installation and loading.</p>
+<pre class="r"><code>pacman::p_load(furrr, purrr, tidyverse, tictoc)</code></pre>
+<p>The <code>plan()</code> function is how you set the processing type of the <code>future_()</code> functions. The default is for the processing strategy to be ‘sequential’ which results in <code>library(furrr)</code> working identically to <code>library(purrr)</code>. All we need to do is change our <code>plan()</code> depending on our compute architecture. If you are only going to use this tool on your local computer then <code>plan(multiprocess)</code> is the command you should use.</p>
+<ol style="list-style-type: decimal">
+<li>First, we want to get our multiprocess working with one less core than we have. It is always a good rule to leave an available processor for the other software on your computer to use.</li>
+<li>Then we initiate the ‘plan’.</li>
+</ol>
+<pre class="r"><code>no_cores &lt;- availableCores() - 1
+plan(multicore, workers = no_cores)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Now open your task manager (Windows) or Activity Monitor (Mac) and check the processes. Unlike <code>library(parallel)</code>, as described <a href="parallel.html">here</a>, the new R processes only present themselves when a task is running. This happens differently because <code>library(furrr)</code> is using the <code>library(future)</code> package which handles evaluations differently. You can read more about <a href="https://github.com/HenrikBengtsson/future">future</a> if you like.</li>
+</ol>
+</div>
+<div id="setting-up-the-cores" class="section level2">
+<h2>Setting up the Cores</h2>
+<p>With <code>library(furrr)</code> we don’t have to worry about sending our special functions, packages, and data to each process before start our multiprocess code. <strong>This is one of my favorite features!</strong> No longer do we have to <a href="https://www.youtube.com/watch?v=7u4leYOhKIs">feel like the jerk</a>.</p>
+<pre class="r"><code># load libraries
+#devtools::install_github(&quot;hathawayj/buildings&quot;)
+library(buildings) # remember that the &#39;permits&#39; data object is created when the library is loaded.
+a &lt;- 4
+ff &lt;- function(x){
+  for (i in 1:1000){
+    i
+  }
+  
+  ggplot() + geom_point(x = permits[x, &quot;value&quot;])
+}
+list_object &lt;- as.list(1:7500)</code></pre>
+</div>
+<div id="understanding-map-and-future_map" class="section level2">
+<h2>Understanding map() and future_map()</h2>
+<p>Now the magic works best when we think with list objects. List objects are a great way to use multiple processes in a <a href="http://ml.stat.purdue.edu/hafen/preprints/Cleveland_SADM_2014.pdf">divide/recombine fashion</a>.</p>
+<p>If you need help with the map functions, then <a href="https://jennybc.github.io/purrr-tutorial/">this reading</a> will be useful.</p>
+<pre class="r"><code>tic()
+temp1 &lt;- map(list_object, ff)
+toc()</code></pre>
+<pre class="r"><code>tic()
+temp1 &lt;- future_map(list_object, ff)
+toc()</code></pre>
+<p>As <code>library(future)</code> only starts processes when needed we don’t have to worry about stopping the cluster.</p>
+</div>
+<div id="additional-example" class="section level2">
+<h2>Additional Example</h2>
+<p>The <code>future_map()</code> functions work the same as the <code>map()</code> functions if you set <code>plan(sequential)</code>. See the example below.</p>
+<pre class="r"><code>second_sequence &lt;- rep(5, 8)
+
+tic()
+nothingness &lt;- map(second_sequence, ~Sys.sleep(.x))
+toc()
+
+plan(sequential)
+tic()
+nothingness &lt;- future_map(second_sequence, ~Sys.sleep(.x))
+toc()
+
+plan(multiprocess)
+tic()
+nothingness &lt;- future_map(second_sequence, ~Sys.sleep(.x))
+toc()</code></pre>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+
+</body>
+</html>

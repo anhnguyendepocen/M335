@@ -50,6 +50,8 @@ ul {
 
 This page is provided to give you a one-page view of your task completion throughout the semester.  You can edit the `.md` file in your repository from `* [ ] blah blah blah` to `* [x] blah blah blah` to show the task as completed. You can see a [one-page view of all task backgrounds](backgrounds.html){target="blank"} as well.
 
+**The mapping of tasks to a final grade is listed in [Syllabus::Competency Scale](syllabus.html#competency_scale)**
+
 ## Semester Deliverables
 
 #### [Semester Project](project.html)
@@ -92,7 +94,7 @@ md_bullet(cases, group = list("Number" = 13))
 On the last day of class each of you will have the 1.5 hours of class to complete a coding challenge.  You will not be able to work with others, but will be able to ask questions of the teacher in class. The coding challenge will use the techniques and programming developed from the course.
 
 1. **You must pass the challenge to keep grade earned from the [completed tasks](https://byuistats.github.io/M335/syllabus.html#competency_scale).**
-2. Failure to pass the challenge will lower your 1-2 steps.
+2. Failure to pass the challenge will lower your grade 1-2 steps.
 
 ## Weekly Case Studies
 

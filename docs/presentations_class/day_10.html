@@ -60,7 +60,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -454,23 +453,26 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="becoming-the-critic." class="titleslide slide level1"><h1>Becoming the Critic.</h1></section></section>
-<section><section id="review" class="titleslide slide level1"><h1>Review</h1></section><section id="case-study-5-i-can-clean-your-data" class="slide level2">
+<section><section id="becoming-the-critic" class="titleslide slide level1" data-background="#e8d725"><h1>Becoming the Critic</h1></section><section id="section" class="slide level2" data-background-iframe="http://www.perceptualedge.com/example9.php">
+<h2></h2>
+<p><a href="http://www.perceptualedge.com/example9.php">Visualization of the Day</a></p>
+</section></section>
+<section><section id="review" class="titleslide slide level1" data-background="#e8d725"><h1>Review</h1></section><section id="case-study-5-i-can-clean-your-data" class="slide level2">
 <h2>Case Study 5: I can clean your data</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/weekly_projects/cs05_details.html">Case Study 5</a></li>
+</ul>
+<p><em>Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?</em></p>
+<ul>
+<li>What mutations or summaries will you need to do?</li>
+<li>What difficulties do you expect?</li>
+<li>Do each of the task items make sense?</li>
 </ul>
 </section><section id="task-10-clean-and-reformat-aka-tidy" class="slide level2">
 <h2>Task 10: Clean and Reformat (aka tidy)</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/class_tasks/task10_details.html">Task 10</a></li>
 </ul>
-</section><section id="class-review-concept" class="slide level2">
-<h2>Class Review Concept</h2>
-<ul>
-<li>Class Task 10: Create a table of the DJIA returns with months on the rows and years in the columns (“spread” the data)</li>
-</ul>
-<p>Can a few people write example code to get this done? Can the others that got it done using <code>spread()</code> help those that haven’t made it that far?</p>
 </section><section id="case-study-final-data-example" class="slide level2" data-transition="slide-in fade-out">
 <h2>Case Study Final Data Example</h2>
 <ul>
@@ -527,7 +529,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </tbody>
 </table>
 </section></section>
-<section><section id="data-wild-west" class="titleslide slide level1" data-background="#0000ff"><h1>Data Wild West</h1></section><section id="happy-families-are-all-alike-every-unhappy-family-is-unhappy-in-its-own-way." class="slide level2">
+<section><section id="data-wild-west" class="titleslide slide level1" data-background="#e8d725"><h1>Data Wild West</h1></section><section id="happy-families-are-all-alike-every-unhappy-family-is-unhappy-in-its-own-way." class="slide level2">
 <h2>“Happy families are all alike; every unhappy family is unhappy in its own way.”</h2>
 <p><strong>– Leo Tolstoy</strong></p>
 </section><section id="tidy-datasets-are-all-alike-but-every-messy-dataset-is-messy-in-its-own-way." class="slide level2">
@@ -541,9 +543,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li><a href="http://r4ds.had.co.nz/tidy-data.html#case-study">R for Data Science Case Study</a></li>
 <li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf">Wrangling Cheat Sheet</a></li>
+<li><a href="data/messy_data.xlsx">From a data request</a></li>
 </ul>
 </section></section>
-<section><section id="tidy-data-and-analysis" class="titleslide slide level1" data-background="#0000ff"><h1>Tidy Data and Analysis</h1></section><section id="tidy" class="slide level2">
+<section><section id="tidy-data-and-analysis" class="titleslide slide level1" data-background="#e8d725"><h1>Tidy Data and Analysis</h1></section><section id="tidy" class="slide level2">
 <h2>Tidy</h2>
 <p><strong>There are three interrelated rules which make a dataset tidy:</strong></p>
 <ol type="1">
@@ -556,14 +559,14 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p>Read in this building utility data that is not very happy!</p>
 <ul>
 <li>You want to use</li>
-<li><code>col_datetime(format = &quot;%m%.%d%.%Y %H:%M&quot;)</code> and</li>
-<li><code>col_date(format = &quot;%m%.%d%.%Y&quot;)</code> when you use <code>read_csv()</code>.</li>
+<li><code>parse_datetime(format = &quot;%m%.%d%.%Y %H:%M&quot;)</code> and</li>
+<li><code>parse_date(format = &quot;%m%.%d%.%Y&quot;)</code> after you use <code>read_csv()</code>.</li>
 <li><a href="https://byuistats.github.io/M335/data/building_utility_values.csv" class="uri">https://byuistats.github.io/M335/data/building_utility_values.csv</a></li>
 </ul>
 </section><section id="first-challenge" class="slide level2">
 <h2>First Challenge</h2>
 <ul>
-<li>keep building variables, time variables and water variables</li>
+<li>keep key variables (id and time variables) and the water variables</li>
 <li>Create a state variable<br />
 </li>
 <li>separate enddate into year, month, and day (three separate columns) and keep the enddate column</li>
@@ -573,7 +576,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p>Use <code>library(dplyr)</code>, <code>library(tidyr)</code>, and <code>library(ggplot2)</code> to address the following.</p>
 <ul>
 <li>How many buildings do we have in each state?</li>
-<li>Create a graphic that compares the total potable gallons of water used by building over time to check the consistency of the data.</li>
+<li>Create a graphic that compares the total potable gallons of water used by building over time to check the consistency of the data.
+<ul>
+<li>What could you look for to see if potable water is recorded how you would expect?</li>
+</ul></li>
 </ul>
 </section><section id="third-challenge" class="slide level2">
 <h2>Third Challenge</h2>

@@ -1,5 +1,5 @@
 ---
-title: "Interactive Maps and Ending the Semester"
+title: "Interactive Maps, Ending the Semester, & Big Data Tools"
 author: J. Hathaway
 params:
   day: 21
@@ -20,19 +20,7 @@ if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
 
 ```
 
-## Latest Jobs Discussion
-
-https://careers.peopleclick.com/careerscp/client_nba/external/jobDetails.do?functionName=getJobDetail&jobPostId=7818&localeCode=en-us
-
-```{r projects, eval=TRUE, echo=FALSE}
-library(webshot)
-page_image <- "https://careers.peopleclick.com/careerscp/client_nba/external/jobDetails.do?functionName=getJobDetail&jobPostId=7818&localeCode=en-us"
-webshot(page_image, delay = 1, file = "NBA_webshot.png")
-
-```
-
-
-# Finishing the Semester
+# Finishing the Semester {data-background=#e8d725}
 
 ## Semester Project Discussion
 
@@ -51,7 +39,19 @@ Weeks 12 and 13 are going to take some work and will be the most rewarding of th
 
 > - [Week 13](https://byuistats.github.io/M335/weekly_projects/cs13_details.html)
 
-# Maps
+# Big Data Readings {data-background=#e8d725}
+
+## The Material
+
+> - Questions about [Hadoop](https://www.youtube.com/watch?v=4DgTLaFNQq0&feature=youtu.be)?
+> - Questions about [Spark](https://mapr.com/blog/spark-101-what-it-what-it-does-and-why-it-matters/)?
+> - [Cleveland & Hafen Paper](http://onlinelibrary.wiley.com/doi/10.1002/sam.11242/epdf)
+
+## Cleveland & Hafen Discussion
+
+Let's move the tables around and have this conversation "book group" style.
+
+# Maps {data-background=#e8d725}
 
 ## Selecting the Display
 
@@ -66,6 +66,14 @@ Read through the following article at your table and take notes in your README.m
 
 ## Leaflet Extras
 
-Read through the [Leaflet guide](https://rstudio.github.io/leaflet/) and find 1-2 additional map features you could add to your last task.
+Read through the [Leaflet guide](https://rstudio.github.io/leaflet/) and find 1-2 additional map features you could add to your task.
 
-## Project Time
+# Spark and Big Data {data-background=#e8d725}
+
+## Using R with Spark
+
+> - [Try out Sparklyr: R interface to Apache Spark](https://spark.rstudio.com)
+>    - [Nice Rstudio blog post](https://blog.rstudio.com/2016/09/27/sparklyr-r-interface-for-apache-spark/)
+>    - [Another example from H20](https://github.com/trestletech/user2016-sparklyr)
+>    - [Build Histogram from Distributed data](https://github.com/rstudio/sparkDemos/blob/master/prod/presentations/cloudera/sqlvis_histogram.R)
+

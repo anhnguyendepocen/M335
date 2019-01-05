@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="J. Hathaway" />
-  <title>Data Import, Scripts, and the Critique</title>
+  <title>and the Critique</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -60,7 +60,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -450,120 +449,40 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title">Data Import, Scripts, and the Critique</h1>
+    <h1 class="title">and the Critique</h1>
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="becoming-the-critic." class="titleslide slide level1"><h1>Becoming the Critic.</h1></section><section id="section" class="slide level2" data-background-iframe="http://www.perceptualedge.com/example5.php">
+<section><section id="becoming-the-critic." class="titleslide slide level1" data-background="#e8d725"><h1>Becoming the Critic.</h1></section><section id="section" class="slide level2" data-background-iframe="http://www.perceptualedge.com/example5.php">
 <h2></h2>
 <p><a href="http://www.perceptualedge.com/example5.php">Visualization of the Day</a></p>
 </section></section>
-<section><section id="review" class="titleslide slide level1"><h1>Review</h1></section><section id="case-study-3-becoming-a-databender" class="slide level2">
+<section><section id="review" class="titleslide slide level1" data-background="#e8d725"><h1>Review</h1></section><section id="case-study-3-becoming-a-databender" class="slide level2">
 <h2>Case Study 3: Becoming a databender</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/weekly_projects/cs03_details.html">Case Study 3</a></li>
 </ul>
-</section><section id="task-6-world-data-investigation" class="slide level2">
-<h2>Task 6: World Data Investigation</h2>
+<p><em>Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?</em></p>
+<ul>
+<li>What mutations or summaries will you need to do?</li>
+<li>What difficulties do you expect?</li>
+<li>Do each of the task items make sense?</li>
+</ul>
+</section><section id="task-6-developing-a-graphic" class="slide level2">
+<h2>Task 6: Developing a graphic</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/class_tasks/task06_details.html">Task 6</a></li>
 </ul>
 </section></section>
-<section><section id="providing-critiques-and-the-routine" class="titleslide slide level1"><h1>Providing Critiques and the Routine</h1></section><section id="a-few-critique-examples" class="slide level2">
+<section><section id="providing-critiques-and-the-routine" class="titleslide slide level1" data-background="#e8d725"><h1>Providing Critiques and the Routine</h1></section><section id="a-few-critique-examples" class="slide level2">
 <h2>A few critique examples</h2>
 <ul>
 <li class="fragment"><a href="https://github.com/BYUI335/Davis_M/issues/5">Mckay’s</a>: Notice how he responds that he has addressed the issues.</li>
 <li class="fragment"><a href="https://github.com/BYUI335/Pyeatt_A/issues/5">Aletha’s Request</a>: Notice her request and the responses.</li>
 <li class="fragment"><a href="https://github.com/BYUI335/Pyeatt_A/issues/7">Hathaway’s Example Response</a>: Notice the formatting and references.</li>
 </ul>
-</section><section id="getting-the-routine-down" class="slide level2">
-<h2>Getting the Routine Down</h2>
-<ul>
-<li class="fragment"><strong>I am expecting pushes to happen at least three times a week</strong></li>
-<li class="fragment"><a href="https://byuistats.github.io/M335/tasklist.html">Leadership Task</a></li>
-</ul>
 </section></section>
-<section><section id="new-functions" class="titleslide slide level1"><h1>New functions</h1></section><section id="review-the-reading" class="slide level2">
-<h2>Review the reading</h2>
-<p>Write this chunk of code out in an English sentence to your grandma.</p>
-</section><section id="data-formats" class="slide level2">
-<h2>Data formats</h2>
-<p>If there is a data format that exists and is used, then there is a way to import that data into R. We will learn how to handle the basic tabular formats. The packages <code>library(readr)</code>, <code>library(readxls)</code>, and <code>library(haven)</code> will provide most of the functionality we need.</p>
-</section><section id="understanding-file-types" class="slide level2">
-<h2>Understanding file types</h2>
-<ul>
-<li class="fragment">What is an <a href="https://www.webopedia.com/TERM/A/ASCII_file.html">ASCII</a> file?</li>
-<li class="fragment">Which of the following file formats are not ASCII?
-<ul>
-<li class="fragment"><code>.csv</code></li>
-<li class="fragment"><code>.html</code></li>
-<li class="fragment"><code>.txt</code></li>
-<li class="fragment"><code>.R</code></li>
-<li class="fragment"><code>.xlsx</code></li>
-<li class="fragment"><code>.Rmd</code></li>
-<li class="fragment"><code>.doc</code></li>
-</ul></li>
-</ul>
-</section><section id="data-import-task-6" class="slide level2">
-<h2>Data Import (task 6)</h2>
-<ul>
-<li class="fragment">What is the difference between <code>read.csv()</code> and <code>read_csv()</code></li>
-<li class="fragment">Read <a href="https://csgillespie.github.io/efficientR/5-3-importing-data.html">this link (5.3.1)</a> and take some time to make a note in your task 6 <code>README.md</code> in your repository about the benefits.</li>
-<li class="fragment">Push your updated <code>README.md</code> for me to read in class.</li>
-</ul>
-</section><section id="parse_-commands" class="slide level2">
-<h2><code>parse_</code> commands</h2>
-<p>Use this code - <code>money &lt;- c(&quot;4,554,25&quot;, &quot;$45&quot;, &quot;8025.33cents&quot;, &quot;288f45&quot;)</code></p>
-<ul>
-<li class="fragment">Apply <code>as.numeric(money)</code> and talk with your table about the output.</li>
-<li class="fragment">Apply <code>parse_number(money)</code> and compare the results.</li>
-</ul>
-</section><section id="using-read_csv-with-parsers" class="slide level2">
-<h2>Using <code>read_csv()</code> with parsers</h2>
-<ol type="1">
-<li>Run this line of code below</li>
-</ol>
-<ol start="2" type="1">
-<li>Look at the errors (<code>problems(challenge)</code>), the <code>head()</code>, and <code>tail()</code> of your <code>challenge</code> object. What formats should they be?</li>
-</ol>
-<ol start="3" type="1">
-<li>Now review <a href="http://r4ds.had.co.nz/data-import.html#problems">11.4.2 of our textbook</a> and fix the read in.</li>
-</ol>
-</section><section id="scripts" class="slide level2">
-<h2>Scripts</h2>
-<p>Here are a few questions. Discuss each one with your table and decide which file type to use - <code>.md</code>, <code>.r</code> or <code>.rmd</code>. Then discuss the reasons for that decision.</p>
-<ol type="1">
-<li class="fragment">I have a short memo to write for my boss that will not have any r code included.</li>
-<li class="fragment">I am working out some example R code to make sure I understand what it is doing (<a href="https://deanattali.com/2015/03/24/knitrs-best-hidden-gem-spin/">see this for a twist</a>).</li>
-<li class="fragment">Brother Hathaway has some code snippets that he wants us to learn in class.</li>
-<li class="fragment">I have a report that I need to write which will include some writing and analysis.</li>
-</ol>
-</section><section id="scales" class="slide level2">
-<h2>Scales</h2>
-<p>Each of the aesthetics has a paired scale function - x, y, size, color, fill, linetype, shape, alpha. All of the scales start with <code>scale_</code> and then the respective aesthetic. All the aesthetic scales have an <code>_continuous</code>, <code>_discrete</code>, and <code>_manual</code>.</p>
-<ul>
-<li><code>scale_x_</code> &amp; <code>scale_y_</code> are the two scales I most often use</li>
-<li><code>scale_fill_</code> &amp; <code>scale_color_</code> are the next most often used.
-<ul>
-<li>manual()</li>
-<li>gradientn()</li>
-</ul></li>
-</ul>
-</section><section id="labelling-elements-inside-the-graphic" class="slide level2">
-<h2>Labelling Elements inside the graphic</h2>
-<p>The <code>library(ggrepel)</code> package is a must for our work. <code>library(directlabels)</code> can also be helpful. Here is the <a href="http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png">book’s graphic</a>.</p>
-<ul>
-<li>What are some concerns you have with this graphic?</li>
-</ul>
-</section><section id="code-and-graphic-scales" class="slide level2">
-<h2>Code and graphic (scales)</h2>
-<p>Here is the <a href="http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png">book’s graphic</a>.<br />
-Use the <a href="http://r4ds.had.co.nz/graphics-for-communication.html">code from 28.3</a> and update their graphic to match mine.</p>
-<p><img src="day_6_files/figure-revealjs/nnn2-1.png" /></p>
-</section><section id="my-code-solution" class="slide level2">
-<h2>My Code Solution</h2>
-</section></section>
-<section><section id="displaying-multiple-distributions" class="titleslide slide level1"><h1>Displaying multiple distributions</h1></section><section id="clarity-vs.complication" class="slide level2">
+<section><section id="displaying-multiple-distributions" class="titleslide slide level1" data-background="#e8d725"><h1>Displaying multiple distributions</h1></section><section id="clarity-vs.complication" class="slide level2">
 <h2>Clarity vs. Complication</h2>
 <p>Data can get complicated very fast. How do we provide depth of variability understanding without overwhelming the visualization user?</p>
 <ul>
@@ -573,7 +492,104 @@ Use the <a href="http://r4ds.had.co.nz/graphics-for-communication.html">code fro
 </ul>
 <p>Another package that makes flipping the axes easier in ggplot – <a href="https://github.com/lionel-/ggstance">rotating axes</a></p>
 <ul>
-<li><a href="presentations_class/day_5.html">link to last presentation</a></li>
+<li><a href="day_5.html#/displaying-distributions-of-multiple-groups-for-decision-making">link to last presentation</a></li>
+</ul>
+</section><section id="clarity-vs.complication-2" class="slide level2">
+<h2>Clarity vs. Complication (2)</h2>
+<ul>
+<li>What do we know after looking at this plot? <strong>How do we provide depth of variability understanding without overwhelming the visualization user?</strong></li>
+</ul>
+<p><img src="day_6_files/figure-revealjs/cc1-1.png" /></p>
+<p>Remember, data can get complicated very fast.</p>
+</section><section id="distribution-background" class="slide level2">
+<h2>Distribution background</h2>
+<ul>
+<li class="fragment"><a href="http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/">violin plots</a></li>
+<li class="fragment"><a href="https://github.com/eclarke/ggbeeswarm">beeswarm plots</a></li>
+<li class="fragment"><a href="https://github.com/hadley/lvplot">letter-value box-plots</a></li>
+<li class="fragment">Another package that makes flipping the axes easier in ggplot – <a href="https://github.com/lionel-/ggstance">rotating axes</a></li>
+</ul>
+</section><section id="histograms-1" class="slide level2">
+<h2>Histograms (1)</h2>
+<p>What don’t we like about this plot?</p>
+<p><img src="day_6_files/figure-revealjs/bbbb3-1.png" /></p>
+</section><section id="histograms-2" class="slide level2">
+<h2>Histograms (2)</h2>
+<ul>
+<li class="fragment">What changed in this histogram?</li>
+<li class="fragment">What don’t we like about this plot?</li>
+</ul>
+<p><img src="day_6_files/figure-revealjs/bbbbb5-1.png" /></p>
+</section><section id="boxplots" class="slide level2">
+<h2>Boxplots</h2>
+<ul>
+<li class="fragment">What don’t we like about this plot?</li>
+<li class="fragment">How hard is it to explain?</li>
+</ul>
+<p><img src="day_6_files/figure-revealjs/bbbbbb444-1.png" /></p>
+</section><section id="violin-plots" class="slide level2">
+<h2>Violin plots</h2>
+<ul>
+<li class="fragment">What don’t we like about this plot?</li>
+<li class="fragment">How hard is it to explain?</li>
+</ul>
+<p><img src="day_6_files/figure-revealjs/violin-1.png" /></p>
+</section><section id="beeswarm-plots-1" class="slide level2">
+<h2>Beeswarm plots (1)</h2>
+<ul>
+<li class="fragment">What don’t we like about this plot?</li>
+<li class="fragment">How hard is it to explain?</li>
+</ul>
+<p><img src="day_6_files/figure-revealjs/beeswarm-1.png" /></p>
+</section><section id="beeswarm-plots-1-1" class="slide level2">
+<h2>Beeswarm plots (1)</h2>
+<ul>
+<li class="fragment">What don’t we like about this plot?</li>
+<li class="fragment">How hard is it to explain?</li>
+</ul>
+<p><img src="day_6_files/figure-revealjs/beeswarm2-1.png" /></p>
+</section><section id="letter-value-boxplots-1" class="slide level2">
+<h2>Letter-Value boxplots (1)</h2>
+<ul>
+<li class="fragment">What don’t we like about this plot?</li>
+<li class="fragment">How hard is it to explain?</li>
+</ul>
+<p><img src="day_6_files/figure-revealjs/lettervalue-1.png" /></p>
+</section><section id="letter-value-boxplots-2" class="slide level2">
+<h2>Letter-Value boxplots (2)</h2>
+<ul>
+<li class="fragment">What don’t we like about this plot?</li>
+<li class="fragment">How hard is it to explain?</li>
+</ul>
+<p><img src="day_6_files/figure-revealjs/lettervalue2-1.png" /></p>
+</section><section id="letter-value-boxplots-3" class="slide level2">
+<h2>Letter-Value boxplots (3)</h2>
+<ul>
+<li class="fragment">What don’t we like about this plot?</li>
+<li class="fragment">How hard is it to explain?</li>
+</ul>
+<p><img src="day_6_files/figure-revealjs/lv3-1.png" /></p>
+</section></section>
+<section><section id="thursday-classes" class="titleslide slide level1" data-background="#e8d725"><h1>Thursday Classes</h1></section><section id="art-class" class="slide level2">
+<h2>Art Class</h2>
+<ul>
+<li><a href="images/sculpt.jpg" target="blank">What do you see?</a></li>
+<li><a href="images/sculpt_wide.jpg" target="blank">What about here?</a></li>
+</ul>
+</section><section id="the-wilderness-of-data" class="slide level2">
+<h2>The Wilderness of Data</h2>
+<iframe width="860" height="515" src="https://www.youtube.com/embed/fTgvdTftXfI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</section><section id="small-challenge" class="slide level2">
+<h2>Small Challenge</h2>
+<ul>
+<li>Use <code>geom_violin()</code> and <code>geom_quasirandom()</code> with the <code>ggplot2::mpg</code> data to show the mpg distribution by vehicle class.</li>
+</ul>
+</section><section id="thursday-task-in-class" class="slide level2">
+<h2>Thursday Task in class</h2>
+<ul>
+<li>I (or Cody) will work on this task with you in class for a large majority of the period.</li>
+<li></li>
 </ul>
 </section></section>
     </div>

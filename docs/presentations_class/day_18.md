@@ -15,12 +15,18 @@ params:
 
 
 
-# Review
+# Review {data-background=#e8d725}
 
 
 
 ## Case Study 9: Interacting with time
 > - [Case Study 9](https://byuistats.github.io/M335/weekly_projects/cs09_details.html)
+
+*Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?*
+
+> - What mutations or summaries will you need to do?
+> - What difficulties do you expect?
+> - Do each of the task items make sense?
 
 
 
@@ -33,6 +39,8 @@ params:
 
 
 
+
+ 
 # Visual Perception
 
 ## Rauser on Cholera
@@ -49,23 +57,23 @@ params:
 
 ## Great Quotes
 
-- Correlation does not imply causation... The most popular defense of tiny minds in the face of uncomfortable evidence.
-- You are rewarded for finding answers to the "that's funny" statements.
+> Correlation does not imply causation... The most popular defense of tiny minds in the face of uncomfortable evidence.
+
+> You are rewarded for finding answers to the "that's funny" statements.
+
+> The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka!' but 'That's funny...'
+> -Isaac Asimov
+
 
 ## Why is this a poor example of non-aligned scales?
 
 > - https://pix-media.priceonomics-media.com/blog/1103/image04b.png
 
-# Remember and DataTables
+## Visualizing statistical tests 
 
-## Remember the Goal
-
-"The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka!' but 'That's funny...'" -Isaac Asimov
-
-> - [Remembering Good Principles](https://youtu.be/fSgEeI2Xpdc)
-> - [Rauser view on time and data](https://www.youtube.com/embed/coNDCIMH8bk?start=628) - 10:28 to 17:50
 > - [Statistical Tests](https://www.youtube.com/embed/5Dnw46eC-0o)
 
+# Coding Activity (DataTables)
 
 ## library(DT) - DataTables
 
@@ -76,8 +84,10 @@ Look at the [DT: An R interface to the DataTables library](http://rstudio.github
 
 
 
-
 ```r
 library(DT)
 datatable(iris)
 ```
+
+
+## Project and Case Study Time

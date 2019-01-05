@@ -97,7 +97,6 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -491,13 +490,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="clarifications-on-mathematics" class="titleslide slide level1"><h1>Clarifications on Mathematics</h1></section><section id="hathaways-quote" class="slide level2">
+<section><section id="clarifications-on-mathematics" class="titleslide slide level1" data-background="#e8d725"><h1>Clarifications on Mathematics</h1></section><section id="hathaways-quote" class="slide level2">
 <h2>Hathaway’s Quote</h2>
 <p>Mathematics classes are ____________.</p>
 </section><section id="the-fathers-of-statistics-fisher" class="slide level2">
 <h2>The Fathers of Statistics (Fisher)</h2>
 <p>Statement from Fisher’s first boss.</p>
-<p>when I first saw him in 1919 he was out of a job. Before deciding anything I wrote to his tutor at Caius college . . . about his mathematical ability. The answer was that <strong>he could have been a first class mathematician had he “stuck to the ropes” but he would not.</strong> <em>That looked like the type of man we wanted…</em> I had only <code>£</code>200 and suggested he should stay as long as he thought that should suffice… He reported to me weekly at tea at my house… <strong>It took me a very short time to realize that he was more than a man of great ability, he was in fact a genius.</strong></p>
+<p>when I first saw him in 1919 he was out of a job. Before deciding anything I wrote to his tutor at Caius college . . . about his mathematical ability. The answer was that <strong>he could have been a first class mathematician had he “stuck to the ropes” but he would not.</strong> <em>That looked like the type of man we wanted…</em> I had only <code>Â£</code>200 and suggested he should stay as long as he thought that should suffice… He reported to me weekly at tea at my house… <strong>It took me a very short time to realize that he was more than a man of great ability, he was in fact a genius.</strong></p>
 </section><section id="the-fathers-of-statistics-box-1" class="slide level2">
 <h2>The Fathers of Statistics (Box 1)</h2>
 <p><strong>The investigator who hopes to revolutionize decision theory should observe and take part in the making of important decisions.</strong></p>
@@ -529,7 +528,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p><strong>Finally, we need to give up the vain hope that data analysis can be founded upon a logico-deductive system like Euclidean plane geometry (or some form of the propositional calculus) and to face up to the fact that data analysis is intrinsically an empirical science.</strong></p>
 <p><a href="http://stat-graphics.org/movies/prim9.html">Fun Video from Tukey on visualization</a></p>
 </section></section>
-<section><section id="team-discussion" class="titleslide slide level1"><h1>Team Discussion</h1></section><section id="case-study-11-interacting-with-space" class="slide level2">
+<section><section id="team-discussion" class="titleslide slide level1" data-background="#e8d725"><h1>Team Discussion</h1></section><section id="case-study-11-interacting-with-space" class="slide level2">
 <h2>Case Study 11: Interacting with space</h2>
 <ul>
 <li>The <a href="https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing">Google spreadsheet link</a></li>
@@ -547,7 +546,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><a href="https://byuistats.github.io/M335/class_tasks/task23_details.html">Task 23</a></li>
 </ul>
 </section></section>
-<section><section id="functions" class="titleslide slide level1"><h1>Functions</h1></section><section id="some-pointers-1" class="slide level2">
+<section><section id="ethics-discussion" class="titleslide slide level1" data-background="#e8d725"><h1>Ethics Discussion</h1></section><section id="the-ethical-data-scientist" class="slide level2">
+<h2>The Ethical Data Scientist</h2>
+<p>Group Discussion</p>
+</section></section>
+<section><section id="functions" class="titleslide slide level1" data-background="#e8d725"><h1>Functions</h1></section><section id="some-pointers-1" class="slide level2">
 <h2>Some Pointers (1)</h2>
 <section style="text-align: left;">
 <section style="font-size:30px">
@@ -575,7 +578,7 @@ Ideally each function performs a clearly specified task with easily understood i
 <li><code>...</code> dot-dot-dot is a magic tool that makes for powerful functions.</li>
 </ul>
 </section></section>
-<section><section id="function-coding-challenges" class="titleslide slide level1"><h1>Function Coding Challenges</h1></section><section id="change-the-zipfile-download-code-into-a-useful-function" class="slide level2">
+<section><section id="function-coding-challenges" class="titleslide slide level1" data-background="#e8d725"><h1>Function Coding Challenges</h1></section><section id="change-the-zipfile-download-code-into-a-useful-function" class="slide level2">
 <h2>Change the zipfile download code into a useful function</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">file_temp</span>()
 uf &lt;-<span class="st"> </span><span class="kw">path_temp</span>(<span class="st">&quot;zip&quot;</span>)
@@ -584,21 +587,9 @@ uf &lt;-<span class="st"> </span><span class="kw">path_temp</span>(<span class="
 wells &lt;-<span class="st"> </span><span class="kw">read_sf</span>(uf)
 <span class="kw">file_delete</span>(df)
 <span class="kw">dir_delete</span>(uf)</code></pre></div>
-</section><section id="task-10-and-finding-the-longest-streak" class="slide level2">
-<h2>Task 10 and finding the longest streak</h2>
-<p>Make a function that will find the longest streak of a character object you input. Try to use the following principles</p>
-<ul>
-<li>a while loop</li>
-<li>use comments and breaks to separate elements in the function.</li>
-<li>Make a function that your larger function calls to simplify your code</li>
-</ul>
 </section><section id="using-functions-and-packages-to-manage-work" class="slide level2">
 <h2>Using Functions and Packages to Manage Work</h2>
 <p><a href="https://support.rstudio.com/hc/en-us/articles/200532317-Writing-Package-Documentation" class="uri">https://support.rstudio.com/hc/en-us/articles/200532317-Writing-Package-Documentation</a></p>
-</section></section>
-<section><section id="ethics-discussion" class="titleslide slide level1"><h1>Ethics Discussion</h1></section><section id="the-ethical-data-scientist" class="slide level2">
-<h2>The Ethical Data Scientist</h2>
-<p>Group Discussion</p>
 </section></section>
     </div>
   </div>

@@ -4,13 +4,50 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="J. Hathaway" />
-  <title>Using ggplot2</title>
+  <title>Using ggplot2, Data Import, &amp; Scripts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/sky.css" id="theme">
 
@@ -60,7 +97,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -450,46 +486,16 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title">Using ggplot2</h1>
+    <h1 class="title">Using ggplot2, Data Import, &amp; Scripts</h1>
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="great-quotes" class="titleslide slide level1"><h1>Great Quotes</h1></section><section id="hans" class="slide level2">
-<h2>Hans</h2>
-<p><strong>It is only by measuring that we can cross the river of myths.</strong></p>
-<ul>
-<li><a href="https://youtu.be/OwII-dwh-bk">Hans Rosling</a></li>
-</ul>
-</section></section>
-<section><section id="becoming-the-critic." class="titleslide slide level1"><h1>Becoming the Critic.</h1></section><section id="section" class="slide level2" data-background-iframe="http://www.perceptualedge.com/example4.php">
+<section><section id="becoming-the-critic." class="titleslide slide level1" data-background="#e8d725"><h1>Becoming the Critic.</h1></section><section id="section" class="slide level2" data-background-iframe="http://www.perceptualedge.com/example4.php">
 <h2></h2>
 <p><a href="http://www.perceptualedge.com/example4.php">Visualization of the Day</a></p>
 </section><section id="my-attempt-at-a-graphic" class="slide level2">
 <h2>My Attempt at a graphic</h2>
 <p><img src="day_5_files/figure-revealjs/fewfix-1.png" /></p>
-</section></section>
-<section><section id="team-discussion" class="titleslide slide level1"><h1>Team Discussion</h1></section><section id="case-study-2-wealth-and-life-expectancy-gapminder" class="slide level2">
-<h2>Case Study 2: Wealth and Life Expectancy (Gapminder)</h2>
-<ul>
-<li>The <a href="https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing">Google spreadsheet link</a></li>
-<li><a href="https://byuistats.github.io/M335/weekly_projects/cs02_details.html">Case Study 2</a></li>
-<li><a href="https://github.com/BYUI335/hathaway">How did we do?</a></li>
-</ul>
-</section><section id="case-study-3-becoming-a-databender" class="slide level2">
-<h2>Case Study 3: Becoming a databender</h2>
-<ul>
-<li><a href="https://byuistats.github.io/M335/weekly_projects/cs03_details.html">Case Study 3</a></li>
-</ul>
-</section><section id="task-5-making-bad-graphics" class="slide level2">
-<h2>Task 5: Making bad graphics</h2>
-<ul>
-<li><a href="https://byuistats.github.io/M335/class_tasks/task05_details.html">Task 5</a></li>
-</ul>
-</section><section id="github-activity" class="slide level2">
-<h2>Github Activity</h2>
-<ul>
-<li><a href="https://github.com/BYUI335/M335_HathawayJ/issues/15">Watching Class Activity</a></li>
-</ul>
 </section><section id="virtual-questions-and-support" class="slide level2">
 <h2>Virtual Questions and Support</h2>
 <ul>
@@ -505,8 +511,104 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul></li>
 <li class="fragment">Quick help vs detailed support</li>
 </ul>
+</section><section id="getting-the-routine-down" class="slide level2">
+<h2>Getting the Routine Down</h2>
+<ul>
+<li class="fragment"><strong>I am expecting pushes to happen at least three times a week</strong></li>
+<li class="fragment"><a href="https://byuistats.github.io/M335/tasklist.html">Leadership Task</a></li>
+</ul>
+</section><section id="review-the-reading" class="slide level2">
+<h2>Review the reading</h2>
+<p>Write this chunk of code out in an English sentence to your grandma.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">best_in_class &lt;-<span class="st"> </span>mpg <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(class) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="kw">row_number</span>(<span class="kw">desc</span>(hwy)) <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)</code></pre></div>
 </section></section>
-<section><section id="the-graphic-tool-set" class="titleslide slide level1"><h1>The Graphic Tool Set</h1></section><section id="the-grammar-of-graphics" class="slide level2">
+<section><section id="being-readings" class="titleslide slide level1" data-background="#e8d725"><h1>Being Readings</h1></section><section id="how-does-data-change-belief" class="slide level2">
+<h2>How does data change belief?</h2>
+</section><section id="to-understand-gods-thoughts-we-must-study-statistics-for-these-are-the-measure-of-his-purpose." class="slide level2">
+<h2>To understand God’s thoughts we must study statistics, for these are the measure of His purpose.</h2>
+<p>-Florence Nightingale (<a href="https://en.wikiquote.org/wiki/Florence_Nightingale#/media/File:Nightingale-mortality.jpg">Coxcomb graph</a>)</p>
+<p><small> Her most famous graph, displayed at the top of this article, shows the number of soldier deaths per month from various causes. Each pie slice represents a different month, from April 1854 through March 1856, and each color stands for a different cause of death. It takes just a quick glance to achieve the two main takeaways: that disease, colored blue, killed far more soldiers than either “wounds” (red) or “other” (black), and that it was reduced greatly in 1855. </small></p>
+</section><section id="what-changed-britians-mind" class="slide level2">
+<h2>What changed Britian’s mind?</h2>
+<p>After she completed her report, Nightingale worked hard to turn its conclusions into common knowledge, privately distributing it to influential people and writing several more reports, many of which included coxcombs. When she received push back from Army doctors, who thought sanitary measures a waste of money, she even leaked some of her charts to the press.</p>
+</section><section id="hans" class="slide level2">
+<h2>Hans</h2>
+<p><strong>It is only by measuring that we can cross the river of myths.</strong></p>
+<ul>
+<li><a href="https://youtu.be/OwII-dwh-bk">Hans Rosling</a></li>
+</ul>
+</section></section>
+<section><section id="team-discussion" class="titleslide slide level1" data-background="#e8d725"><h1>Team Discussion</h1></section><section id="case-study-2-wealth-and-life-expectancy-gapminder" class="slide level2">
+<h2>Case Study 2: Wealth and Life Expectancy (Gapminder)</h2>
+<ul>
+<li>The <a href="https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing">Google spreadsheet link</a></li>
+<li><a href="https://byuistats.github.io/M335/weekly_projects/cs02_details.html">Case Study 2</a></li>
+<li><a href="https://github.com/BYUI335/hathaway">How did we do?</a></li>
+</ul>
+</section><section id="case-study-3-becoming-a-databender" class="slide level2">
+<h2>Case Study 3: Becoming a databender</h2>
+<ul>
+<li><a href="https://byuistats.github.io/M335/weekly_projects/cs03_details.html">Case Study 3</a></li>
+</ul>
+</section><section id="task-5-world-data-investigation" class="slide level2">
+<h2>Task 5: World Data Investigation</h2>
+<ul>
+<li><a href="https://byuistats.github.io/M335/class_tasks/task05_details.html">Task 5</a></li>
+</ul>
+</section></section>
+<section><section id="data-ingestion" class="titleslide slide level1" data-background="#e8d725"><h1>Data Ingestion</h1></section><section id="data-formats" class="slide level2">
+<h2>Data formats</h2>
+<p>If there is a data format that exists and is used, then there is a way to import that data into R. We will learn how to handle the basic tabular formats. The packages <code>library(readr)</code>, <code>library(readxls)</code>, and <code>library(haven)</code> will provide most of the functionality we need.</p>
+</section><section id="understanding-file-types" class="slide level2">
+<h2>Understanding file types</h2>
+<ul>
+<li class="fragment">What is an <a href="https://www.webopedia.com/TERM/A/ASCII_file.html">ASCII</a> file?</li>
+<li class="fragment">Which of the following file formats are not ASCII?
+<ul>
+<li class="fragment"><code>.csv</code></li>
+<li class="fragment"><code>.html</code></li>
+<li class="fragment"><code>.txt</code></li>
+<li class="fragment"><code>.R</code></li>
+<li class="fragment"><code>.xlsx</code></li>
+<li class="fragment"><code>.Rmd</code></li>
+<li class="fragment"><code>.doc</code></li>
+</ul></li>
+</ul>
+</section><section id="data-import-task-5" class="slide level2">
+<h2>Data Import (task 5)</h2>
+<ul>
+<li class="fragment">What is the difference between <code>read.csv()</code> and <code>read_csv()</code></li>
+<li class="fragment">Read <a href="https://csgillespie.github.io/efficientR/5-3-importing-data.html">this link (5.3.1)</a> and take some time to make a note in your task 5 <code>README.md</code> in your repository about the benefits.</li>
+<li class="fragment">Push your updated <code>README.md</code> for me to read in class.</li>
+</ul>
+</section><section id="parse_-commands" class="slide level2">
+<h2><code>parse_</code> commands</h2>
+<p>Use this code - <code>money &lt;- c('4,554,25', '$45', '8025.33cents', '288f45')</code></p>
+<ul>
+<li class="fragment">Apply <code>as.numeric(money)</code> and talk with your table about the output.</li>
+<li class="fragment">Apply <code>parse_number(money)</code> and compare the results.</li>
+</ul>
+</section><section id="using-read_csv-with-parsers" class="slide level2">
+<h2>Using <code>read_csv()</code> with parsers</h2>
+<ol type="1">
+<li>Run this line of code below</li>
+<li>Look at the errors (<code>problems(challenge)</code>), the <code>head()</code>, and <code>tail()</code> of your <code>challenge</code> object. What formats should they be?</li>
+<li>Now review <a href="http://r4ds.had.co.nz/data-import.html#problems">11.4.2 of our textbook</a> and fix the read in.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">challenge &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">readr_example</span>(<span class="st">&quot;challenge.csv&quot;</span>))</code></pre></div>
+</section><section id="scripts" class="slide level2">
+<h2>Scripts</h2>
+<p>Here are a few questions. Discuss each one with your table and decide which file type to use - <code>.md</code>, <code>.r</code> or <code>.rmd</code>. Then discuss the reasons for that decision.</p>
+<ol type="1">
+<li class="fragment">I have a short memo to write for my boss that will not have any r code included.</li>
+<li class="fragment">I am working out some example R code to make sure I understand what it is doing (<a href="https://deanattali.com/2015/03/24/knitrs-best-hidden-gem-spin/">see this for a twist</a>).</li>
+<li class="fragment">Brother Hathaway has some code snippets that he wants us to learn in class.</li>
+<li class="fragment">I have a report that I need to write which will include some writing and analysis.</li>
+</ol>
+</section></section>
+<section><section id="the-graphic-tool-set" class="titleslide slide level1" data-background="#e8d725"><h1>The Graphic Tool Set</h1></section><section id="the-grammar-of-graphics" class="slide level2">
 <h2>The grammar of graphics</h2>
 <ul>
 <li><a href="https://www.youtube.com/embed/uiTc55clwuA?rel=0">An overview of the grammar</a></li>
@@ -523,27 +625,39 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul>
 </section><section id="class-activity-getting-started" class="slide level2">
 <h2>Class Activity: Getting Started</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#install.packages(&quot;nycflights13&quot;)</span>
+<span class="kw">library</span>(nycflights13)
+
+fl_bp &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">y =</span> dep_delay))
+fl_sc &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(dep_time <span class="op">&gt;</span><span class="st"> </span><span class="dv">800</span>, dep_time <span class="op">&lt;</span><span class="st"> </span><span class="dv">900</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> dep_time, <span class="dt">y =</span> dep_delay))
+
+fl_bp <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()
+fl_sc <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</code></pre></div>
 <p>Get the above code working. We will be tweaking it using ggplot for the next part.</p>
 </section><section id="labelling-the-outside" class="slide level2">
 <h2>Labelling the outside</h2>
 <p>Complete the following - <strong>Create clean labels for the x and y axes and zoom in on the y-axis from 50 to 100 minutes. Also have breaks every 15 minutes</strong></p>
 <ul>
 <li>labelling - Axes, Titles, and Legends</li>
-</ul>
-<ul>
-<li>xy Scales - <code>scale_x_</code>, <code>scale_y</code>, <code>coord_</code></li>
-<li>Setting breaks and changing labels</li>
-<li>Transforming scale</li>
+<li>xy Scales - <code>scale_x_</code>, <code>scale_y</code>, <code>coord_</code> - Setting breaks and changing labels <em>or</em> Transforming scale</li>
 </ul>
 </section><section id="labelling-the-inside" class="slide level2">
 <h2>Labelling the inside</h2>
-<p>Complete the following - <strong>1) Color the points of <code>fl_sc</code> by <code>origin</code> using the brewer scale. 2) Color the points of <code>fl_sc</code> by <code>arr_delay</code></strong></p>
+<p>Complete the following -</p>
+<ol type="1">
+<li>Color the points of <code>fl_sc</code> by <code>origin</code> using the brewer scale.</li>
+<li>Color the points of <code>fl_sc</code> by <code>arr_delay</code>**</li>
+</ol>
 <ul>
-<li>Annotations - Marking points</li>
-<li>color &amp; fill scales</li>
+<li>color &amp; fill scales
+<ul>
 <li><code>scale_color_</code></li>
 <li><code>scale_fill_</code></li>
 <li><code>scale_gradient_</code></li>
+</ul></li>
 </ul>
 </section><section id="putting-the-legend-on-the-inside" class="slide level2">
 <h2>Putting the legend on the inside</h2>
@@ -555,87 +669,52 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul>
 </section><section id="changing-the-feel" class="slide level2">
 <h2>Changing the feel</h2>
-<p>Complete the following - <strong>Use a `theme_() to create a different look for your graphic and change the orientiation of the x-axis test to 35 degrees</strong></p>
+<p>Complete the following - <strong>Use a <code>theme_()</code> to create a different look for your graphic and change the orientiation of the x-axis test to 35 degrees</strong></p>
 <ul>
 <li>Themes (check out <code>library(ggthemes)</code>)</li>
 <li><code>ggsave()</code></li>
 </ul>
-</section></section>
-<section><section id="displaying-distributions-of-multiple-groups-for-decision-making" class="titleslide slide level1"><h1>Displaying distributions of multiple groups for decision making</h1></section><section id="clarity-vs.complication" class="slide level2">
-<h2>Clarity vs. Complication</h2>
+</section><section id="scales" class="slide level2">
+<h2>Scales</h2>
+<p>Each of the aesthetics has a paired scale function - x, y, size, color, fill, linetype, shape, alpha. All of the scales start with <code>scale_</code> and then the respective aesthetic. All the aesthetic scales have an <code>_continuous</code>, <code>_discrete</code>, and <code>_manual</code>.</p>
 <ul>
-<li>What do we know after looking at this plot? <strong>How do we provide depth of variability understanding without overwhelming the visualization user?</strong></li>
-</ul>
-<p><img src="day_5_files/figure-revealjs/cc1-1.png" /></p>
-<p>Remember, data can get complicated very fast.</p>
-</section><section id="distribution-background" class="slide level2">
-<h2>Distribution background</h2>
+<li><code>scale_x_</code> &amp; <code>scale_y_</code> are the two scales I most often use</li>
+<li><code>scale_fill_</code> &amp; <code>scale_color_</code> are the next most often used.
 <ul>
-<li class="fragment"><a href="http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/">violin plots</a></li>
-<li class="fragment"><a href="https://github.com/eclarke/ggbeeswarm">beeswarm plots</a></li>
-<li class="fragment"><a href="https://github.com/hadley/lvplot">letter-value box-plots</a></li>
+<li>manual()</li>
+<li>gradientn()</li>
+</ul></li>
 </ul>
-<p>Another package that makes flipping the axes easier in ggplot – <a href="https://github.com/lionel-/ggstance">rotating axes</a></p>
-</section><section id="histograms-1" class="slide level2">
-<h2>Histograms (1)</h2>
-<p>What don’t we like about this plot?</p>
-<p><img src="day_5_files/figure-revealjs/bbbb3-1.png" /></p>
-</section><section id="histograms-2" class="slide level2">
-<h2>Histograms (2)</h2>
+</section><section id="labelling-elements-inside-the-graphic" class="slide level2">
+<h2>Labelling Elements inside the graphic</h2>
+<p>The <code>library(ggrepel)</code> package is a must for our work. <code>library(directlabels)</code> can also be helpful. Here is the <a href="http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png">book’s graphic</a>.</p>
 <ul>
-<li class="fragment">What changed in this histogram?</li>
-<li class="fragment">What don’t we like about this plot?</li>
+<li>What are some concerns you have with this graphic?</li>
 </ul>
-<p><img src="day_5_files/figure-revealjs/bbbbb5-1.png" /></p>
-</section><section id="boxplots" class="slide level2">
-<h2>Boxplots</h2>
-<ul>
-<li class="fragment">What don’t we like about this plot?</li>
-<li class="fragment">How hard is it to explain?</li>
-</ul>
-<p><img src="day_5_files/figure-revealjs/bbbbbb444-1.png" /></p>
-</section><section id="violin-plots" class="slide level2">
-<h2>Violin plots</h2>
-<ul>
-<li class="fragment">What don’t we like about this plot?</li>
-<li class="fragment">How hard is it to explain?</li>
-</ul>
-<p><img src="day_5_files/figure-revealjs/violin-1.png" /></p>
-</section><section id="beeswarm-plots-1" class="slide level2">
-<h2>Beeswarm plots (1)</h2>
-<ul>
-<li class="fragment">What don’t we like about this plot?</li>
-<li class="fragment">How hard is it to explain?</li>
-</ul>
-<p><img src="day_5_files/figure-revealjs/beeswarm-1.png" /></p>
-</section><section id="beeswarm-plots-1-1" class="slide level2">
-<h2>Beeswarm plots (1)</h2>
-<ul>
-<li class="fragment">What don’t we like about this plot?</li>
-<li class="fragment">How hard is it to explain?</li>
-</ul>
-<p><img src="day_5_files/figure-revealjs/beeswarm2-1.png" /></p>
-</section><section id="letter-value-boxplots-1" class="slide level2">
-<h2>Letter-Value boxplots (1)</h2>
-<ul>
-<li class="fragment">What don’t we like about this plot?</li>
-<li class="fragment">How hard is it to explain?</li>
-</ul>
-<p><img src="day_5_files/figure-revealjs/lettervalue-1.png" /></p>
-</section><section id="letter-value-boxplots-2" class="slide level2">
-<h2>Letter-Value boxplots (2)</h2>
-<ul>
-<li class="fragment">What don’t we like about this plot?</li>
-<li class="fragment">How hard is it to explain?</li>
-</ul>
-<p><img src="day_5_files/figure-revealjs/lettervalue2-1.png" /></p>
-</section><section id="letter-value-boxplots-3" class="slide level2">
-<h2>Letter-Value boxplots (3)</h2>
-<ul>
-<li class="fragment">What don’t we like about this plot?</li>
-<li class="fragment">How hard is it to explain?</li>
-</ul>
-<p><img src="day_5_files/figure-revealjs/lv3-1.png" /></p>
+</section><section id="code-and-graphic-scales" class="slide level2">
+<h2>Code and graphic (scales)</h2>
+<p>Here is the <a href="http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png">book’s graphic</a>.<br />
+Use the <a href="http://r4ds.had.co.nz/graphics-for-communication.html">code from 28.3</a> and update their graphic to match mine.</p>
+<p><img src="day_5_files/figure-revealjs/nnn2-1.png" /></p>
+</section><section id="my-code-solution" class="slide level2">
+<h2>My Code Solution</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggrepel)
+<span class="kw">library</span>(viridis)
+
+best_in_class &lt;-<span class="st"> </span>mpg <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(class) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="kw">row_number</span>(<span class="kw">desc</span>(hwy)) <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)
+
+<span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(displ, hwy)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">colour =</span> class), <span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="fl">1.5</span>, <span class="dt">data =</span> best_in_class, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_text_repel</span>(<span class="kw">aes</span>(<span class="dt">label =</span> model, <span class="dt">colour =</span> class), 
+                  <span class="dt">data =</span> best_in_class, <span class="dt">show.legend =</span> <span class="ot">FALSE</span>, 
+                  <span class="dt">nudge_x =</span> <span class="op">-</span><span class="dv">1</span>, <span class="dt">nudge_y =</span> <span class="op">-</span><span class="dv">2</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">panel.grid.minor =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
+<span class="st">  </span><span class="kw">scale_color_viridis</span>(<span class="dt">discrete =</span> <span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Engine displacement&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Miles per gallon (highway)&quot;</span>, 
+       <span class="dt">color =</span> <span class="st">&quot;Vehicle type&quot;</span>)</code></pre></div>
 </section></section>
     </div>
   </div>

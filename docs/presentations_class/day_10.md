@@ -10,9 +10,7 @@ params:
 
 
 
-
-
-# Becoming the Critic.
+# Becoming the Critic {data-background=#e8d725}
 
 
 ```r
@@ -21,18 +19,27 @@ vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
 titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 ```
 
+## {data-background-iframe="http://www.perceptualedge.com/example9.php"}
+
+[Visualization of the Day](http://www.perceptualedge.com/example9.php)
 
 
 
 
 
 
-# Review
+# Review {data-background=#e8d725}
 
 
 
 ## Case Study 5: I can clean your data
 > - [Case Study 5](https://byuistats.github.io/M335/weekly_projects/cs05_details.html)
+
+*Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?*
+
+> - What mutations or summaries will you need to do?
+> - What difficulties do you expect?
+> - Do each of the task items make sense?
 
 
 
@@ -44,13 +51,6 @@ titlelink <- paste0('{data-background-iframe="', vlink, '"}')
 
 
 
-
-
-## Class Review Concept
-
-> - Class Task 10: Create a table of the DJIA returns with months on the rows and years in the columns ("spread" the data)
-
-Can a few people write example code to get this done?  Can the others that got it done using `spread()` help those that haven't made it that far?
 
 ## Case Study Final Data Example {data-transition="slide-in fade-out"}
 
@@ -72,7 +72,7 @@ Can a few people write example code to get this done?  Can the others that got i
 
 
 
-# Data Wild West {data-background=#0000ff}
+# Data Wild West {data-background=#e8d725}
 
 ## "Happy families are all alike; every unhappy family is unhappy in its own way." 
 
@@ -90,8 +90,9 @@ Can a few people write example code to get this done?  Can the others that got i
 
 > * [R for Data Science Case Study](http://r4ds.had.co.nz/tidy-data.html#case-study)
 > * [Wrangling Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+> * [From a data request](data/messy_data.xlsx)
 
-# Tidy Data and Analysis {data-background=#0000ff}
+# Tidy Data and Analysis {data-background=#e8d725}
 
 ## Tidy
 
@@ -106,16 +107,16 @@ Can a few people write example code to get this done?  Can the others that got i
 Read in this building utility data that is not very happy!
 
 > * You want to use 
->    * `col_datetime(format = "%m%.%d%.%Y %H:%M")` and 
->    * `col_date(format = "%m%.%d%.%Y")` 
-    when you use `read_csv()`.
+>    * `parse_datetime(format = "%m%.%d%.%Y %H:%M")` and 
+>    * `parse_date(format = "%m%.%d%.%Y")` 
+    after you use `read_csv()`.
 > * https://byuistats.github.io/M335/data/building_utility_values.csv
 
 
 
 ## First Challenge
 
-> * keep building variables, time variables and water variables
+> * keep key variables (id and time variables) and the water variables
 > * Create a state variable  
 > * separate enddate into year, month, and day (three separate columns) and keep the enddate column
 
@@ -125,6 +126,7 @@ Use `library(dplyr)`, `library(tidyr)`, and `library(ggplot2)` to address the fo
 
 > * How many buildings do we have in each state?
 > * Create a graphic that compares the total potable gallons of water used by building over time to check the consistency of the data.
+>     * What could you look for to see if potable water is recorded how you would expect?
 
 ## Third Challenge
 

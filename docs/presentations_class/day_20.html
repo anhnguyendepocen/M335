@@ -97,7 +97,6 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -491,10 +490,16 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="review" class="titleslide slide level1"><h1>Review</h1></section><section id="case-study-10-building-the-past" class="slide level2">
+<section><section id="review" class="titleslide slide level1" data-background="#e8d725"><h1>Review</h1></section><section id="case-study-10-building-the-past" class="slide level2">
 <h2>Case Study 10: Building the past</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/weekly_projects/cs10_details.html">Case Study 10</a></li>
+</ul>
+<p><em>Take 10 minutes to brainstorm with your table what the data inputs are and what visualizations you would like to create?</em></p>
+<ul>
+<li>What mutations or summaries will you need to do?</li>
+<li>What difficulties do you expect?</li>
+<li>Do each of the task items make sense?</li>
 </ul>
 </section><section id="task-20-getting-in-shp" class="slide level2">
 <h2>Task 20: Getting in SHP</h2>
@@ -502,80 +507,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><a href="https://byuistats.github.io/M335/class_tasks/task20_details.html">Task 20</a></li>
 </ul>
 </section></section>
-<section><section id="code-in-the-tidyverse" class="titleslide slide level1"><h1>Code in the tidyverse</h1></section><section id="my-old-code" class="slide level2">
-<h2>My old code</h2>
-<p>Try to write out what this is doing?</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#library(reshape) # this is needed for old code</span>
-gcam &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;instructor/facetus_pnnl/USTrellis_Example/CASCaDE_A2_Full.csv&quot;</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)
-agcam &lt;-<span class="st"> </span><span class="kw">subset</span>(gcam[,<span class="kw">c</span>(<span class="st">&quot;scenario&quot;</span>,<span class="st">&quot;region&quot;</span>,<span class="st">&quot;input&quot;</span>,<span class="st">&quot;sector&quot;</span>,<span class="kw">paste</span>(<span class="st">&quot;X&quot;</span>,<span class="kw">seq</span>(<span class="dv">2005</span>,<span class="dv">2095</span>,<span class="dt">by=</span><span class="dv">5</span>),<span class="dt">sep=</span><span class="st">&quot;&quot;</span>))],scenario<span class="op">==</span><span class="st">&quot;GFDL_A2_RGCAM_medium,date=2012-26-11T18:22:24-05:00&quot;</span>)
-agcam &lt;-<span class="st"> </span><span class="kw">subset</span>(agcam,sector<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;resid cooling&quot;</span>,<span class="st">&quot;resid heating&quot;</span>,<span class="st">&quot;comm cooling&quot;</span>,<span class="st">&quot;comm heating&quot;</span>))
-agcam.m &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="dt">data=</span>agcam[,<span class="op">-</span><span class="dv">1</span>],<span class="dt">id.var=</span><span class="kw">c</span>(<span class="st">&quot;region&quot;</span>,<span class="st">&quot;input&quot;</span>,<span class="st">&quot;sector&quot;</span>))
-agcam.m<span class="op">$</span>heat.cool &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;resid &quot;</span>,<span class="st">&quot;&quot;</span>,<span class="kw">gsub</span>(<span class="st">&quot;comm &quot;</span>,<span class="st">&quot;&quot;</span>,agcam.m<span class="op">$</span>sector))
-agcam.c.split &lt;-<span class="st"> </span><span class="kw">cast</span>(<span class="dt">data=</span>agcam.m,region<span class="op">+</span>heat.cool<span class="op">~</span>variable,<span class="dt">fun.aggregate=</span>sum,<span class="dt">value=</span><span class="st">&quot;value&quot;</span>)
-agcam.cooling &lt;-<span class="st"> </span><span class="kw">subset</span>(agcam.c.split,heat.cool<span class="op">==</span><span class="st">&quot;cooling&quot;</span>)[,<span class="op">-</span><span class="dv">2</span>]
-agcam.heating &lt;-<span class="st"> </span><span class="kw">subset</span>(agcam.c.split,heat.cool<span class="op">==</span><span class="st">&quot;heating&quot;</span>)[,<span class="op">-</span><span class="dv">2</span>]
-agcam.split &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">heating=</span>agcam.heating,<span class="dt">cooling=</span>agcam.cooling)
-agcam.c &lt;-<span class="st"> </span><span class="kw">cast</span>(<span class="dt">data=</span>agcam.m,region<span class="op">~</span>variable,<span class="dt">fun.aggregate=</span>sum,<span class="dt">value=</span><span class="st">&quot;value&quot;</span>)
-tgcam &lt;-<span class="st"> </span><span class="kw">subset</span>(gcam[,<span class="kw">c</span>(<span class="st">&quot;scenario&quot;</span>,<span class="st">&quot;region&quot;</span>,<span class="st">&quot;input&quot;</span>,<span class="st">&quot;sector&quot;</span>,<span class="st">&quot;X2005&quot;</span>)],scenario<span class="op">==</span><span class="st">&quot;GFDL_A2_RGCAM_medium,date=2012-26-11T18:22:24-05:00&quot;</span>)
-tgcam &lt;-<span class="st"> </span><span class="kw">subset</span>(tgcam,sector<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;resid cooling&quot;</span>,<span class="st">&quot;resid heating&quot;</span>,<span class="st">&quot;comm cooling&quot;</span>,<span class="st">&quot;comm heating&quot;</span>))
-mtgcam &lt;-<span class="st"> </span><span class="kw">cast</span>(<span class="dt">data=</span>tgcam,region<span class="op">~</span>sector,<span class="dt">value=</span><span class="st">&quot;X2005&quot;</span>,<span class="dt">fun.aggregate=</span>sum)</code></pre></div>
-</section><section id="my-new-code" class="slide level2">
-<h2>My new code</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
-
-gcamt &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;instructor/facetus_pnnl/USTrellis_Example/CASCaDE_A2_Full.csv&quot;</span>)
-
-gcamtt &lt;-<span class="st"> </span>gcamt <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(scenario<span class="op">==</span><span class="st">&quot;GFDL_A2_RGCAM_medium,date=2012-26-11T18:22:24-05:00&quot;</span>, 
-         sector <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;resid cooling&quot;</span>,<span class="st">&quot;resid heating&quot;</span>,<span class="st">&quot;comm cooling&quot;</span>,<span class="st">&quot;comm heating&quot;</span>)) <span class="op">%&gt;%</span>
-<span class="st"> </span><span class="co"># dplyr::mutate(skey = paste(region, input, sector, sep = &quot;_&quot;)) %&gt;%</span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(<span class="op">-</span>scenario, <span class="op">-</span><span class="st"> </span>Units) <span class="op">%&gt;%</span>
-<span class="st">  </span>tidyr<span class="op">::</span><span class="kw">gather</span>(<span class="dt">key =</span> year, <span class="dt">value =</span> energy,<span class="st">`</span><span class="dt">1990</span><span class="st">`</span><span class="op">:</span><span class="st">`</span><span class="dt">2095</span><span class="st">`</span>, <span class="op">-</span>region, <span class="op">-</span><span class="st"> </span>input, <span class="op">-</span>sector) <span class="op">%&gt;%</span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">heat.cool =</span> <span class="kw">gsub</span>(<span class="st">&quot;resid &quot;</span>,<span class="st">&quot;&quot;</span>,<span class="kw">gsub</span>(<span class="st">&quot;comm &quot;</span>,<span class="st">&quot;&quot;</span>,sector)))
-
-gcam_totals &lt;-<span class="st"> </span>gcamtt <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_by</span>(region, year, heat.cool, sector) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">energy =</span> <span class="kw">sum</span>(energy)) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">ungroup</span>()</code></pre></div>
-</section></section>
-<section><section id="big-data" class="titleslide slide level1"><h1>“Big” Data</h1></section><section id="scientists-vs.-analysts" class="slide level2">
-<h2>Scientists Vs. Analysts</h2>
+<section><section id="class-discussion" class="titleslide slide level1" data-background="#e8d725"><h1>Class Discussion</h1></section><section id="tracking-progress" class="slide level2">
+<h2>Tracking Progress</h2>
 <ul>
-<li>Best way to differentiate a data scientist from a data analyst.</li>
-<li><strong>Data Analyst:</strong> If my tools and data can’t answer a question, then the question doesn’t get answered.</li>
-<li><strong>Data Scientist:</strong> If my tools and data can’t answer a question, then I go get better tools and data.</li>
-</ul>
-</section><section id="leaving-your-little-computer" class="slide level2">
-<h2>Leaving your little computer</h2>
-<ul>
-<li><a href="https://www.youtube.com/embed/Ewd5PXgLXlU?start=488">The science is the idea and data moving</a></li>
-<li><a href="https://www.youtube.com/embed/Ewd5PXgLXlU?start=690">Big is different in many ways</a></li>
-</ul>
-</section></section>
-<section><section id="maps-vs.-variables" class="titleslide slide level1"><h1>Maps Vs. Variables</h1></section><section id="what-is-wrong" class="slide level2">
-<h2>What is wrong?</h2>
-<p>“Here, you can take that, that’s the final map of the numbers,” Trump said, according to Reuters. “It’s pretty good, right? The red is obviously us.” <a href="http://www.businessinsider.com/trump-2016-electoral-map-reuters-interview-xi-jinping-china-2017-4">1</a></p>
-<p><a href="../images/trump_map_tweet.png">Trump Map Tweet</a></p>
-</section><section id="how-could-we-spatially-depict-the-variable-of-interest" class="slide level2">
-<h2>How could we spatially depict the variable of interest?</h2>
-<ul>
-<li class="fragment"><a href="https://en.wikipedia.org/wiki/Choropleth_map">Chloropleth Map</a></li>
-<li class="fragment"><a href="https://en.wikipedia.org/wiki/Cartogram">Cartograms</a></li>
-<li class="fragment"><a href="https://hafen.github.io/geofacet/">geofacets</a></li>
-</ul>
-</section><section id="geofacet-challenge" class="slide level2">
-<h2>geofacet challenge</h2>
-<p><strong>Use the geofacet package to build a map that depicts the important variables more than the spatial area.</strong></p>
-<ul>
-<li>Will need to aggregate your data the state level.</li>
-<li>Will need to use <code>install.packages(&quot;geofacet&quot;)</code> and the <code>facet_geo()</code> function.</li>
-</ul>
-<p><a href="../data/nytimes_presidential_elections_2016_results_county.csv">data</a></p>
-</section><section id="checking-out-some-results" class="slide level2">
-<h2>Checking out some results</h2>
-<ul>
-<li class="fragment">Who has pushed their graphic?</li>
-<li class="fragment"><a href="http://www.businessinsider.com/2016-election-results-maps-population-adjusted-cartogram-2016-11/#heres-the-basic-electoral-college-map-with-states-that-hillary-clinton-won-in-blue-and-states-that-donald-trump-won-in-red-assuming-that-trumps-narrow-lead-in-michigan-continues-to-hold-1">Check these out</a></li>
+<li>Don’t forget to keep track of your tasks.</li>
+<li>Semester project should be moving along.</li>
+<li>Check out week 13 work and make sure you are working on this.</li>
 </ul>
 </section><section id="semester-project-discussion" class="slide level2">
 <h2>Semester Project Discussion</h2>
@@ -585,6 +522,33 @@ gcam_totals &lt;-<span class="st"> </span>gcamtt <span class="op">%&gt;%</span>
 <li>Create a new folder in your repository that is called <code>semester_project</code>.</li>
 <li>If you would like to alter the project, then post a comment to the semester project issue with your update.</li>
 <li>Call me out and ask me to review and approve changes.</li>
+</ul>
+</section><section id="task-20-question" class="slide level2">
+<h2>Task 20 Question</h2>
+<p>Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(downloader)
+<span class="kw">library</span>(sf)
+<span class="kw">library</span>(fs)
+dams_path &lt;-<span class="st"> &quot;https://research.idwr.idaho.gov/gis/Spatial/DamSafety/dam.zip&quot;</span>
+df &lt;-<span class="st"> </span><span class="kw">tempfile</span>(); uf &lt;-<span class="st"> </span><span class="kw">tempfile</span>()
+<span class="kw">download</span>(dams_path, df, <span class="dt">mode =</span> <span class="st">&quot;wb&quot;</span>)
+<span class="kw">unzip</span>(df, <span class="dt">exdir =</span> uf)
+dams &lt;-<span class="st"> </span><span class="kw">read_sf</span>(uf)
+<span class="kw">file_delete</span>(df); <span class="kw">dir_delete</span>(uf)</code></pre></div>
+</section><section id="convert-to-another-projection" class="slide level2">
+<h2>Convert to another projection</h2>
+<ul>
+<li>Take a minute and look up projections that you like and get your Task 19 graphic into that projection - <a href="http://proj4.org/projections/index.html" class="uri">http://proj4.org/projections/index.html</a></li>
+<li><a href="http://proj4.org/parameters.html" class="uri">http://proj4.org/parameters.html</a>
+<ul>
+<li>+lon_0 Central meridian</li>
+<li>+lat_0 Latitude of origin</li>
+</ul></li>
+<li><a href="https://byuistats.github.io/M335/spatial_class.html">Class activity</a>
+<ul>
+<li><a href="http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html" class="uri">http://www.progonos.com/furuti/MapProj/Normal/ProjTbl/projTbl.html</a></li>
+<li><a href="http://spatialreference.org/ref/" class="uri">http://spatialreference.org/ref/</a></li>
+</ul></li>
 </ul>
 </section></section>
     </div>

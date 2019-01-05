@@ -72,10 +72,7 @@ ul {
 
 ```r
 # To get the standard works data
-download("http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip", "docs/data/scriptures.zip", mode = "wb")
-unzip("docs/data/scriptures.zip", exdir = file.path(getwd(),"docs/data"))
-file.remove("docs/data/scriptures.zip")
-scriptures <- read_csv("docs/data/lds-scriptures.csv")
+scriptures <- rio::import("http://scriptures.nephi.org/downloads/lds-scriptures.csv.zip")
 
 # to get the Savior names
 bmnames <- read_rds(gzcon(url("https://byuistats.github.io/M335/data/BoM_SaviorNames.rds")))

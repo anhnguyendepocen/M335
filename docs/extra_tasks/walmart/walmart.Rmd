@@ -1,0 +1,36 @@
+---
+title: "The Growth of Walmart"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The Walmart Growth Visualization
+
+Walmart's growth is astounding.  It may be the last giant in the "brick and mortar" business[^1] story ever. Our friends at [excelcharts.com](https://excelcharts.com/) have made some [nice graphics showing the spatial and temporal patterns of Walmart's growth](https://excelcharts.com/animation-small-multiples-growth-walmart-excel-edition/). We can't let Excel build such amazing graphics without a challenge from R!
+
+We have a [Walmart_store_openings.csv](https://byuistats.github.io/M335/data/Walmart_store_openings.csv) file that we can use to build our visualizations.  You could use the `?state` object to see the data to use to get the colors correct and maybe could use `maps::us.cities` to get populations for cities.
+
+## Your Challenge
+
+We have a few challenges before us today. Use the full hour to build the cleanest code and most lucid presentation of your results. 
+
+1. Recreate one of their graphics as close as you can using the skills you have developed this semester.  
+2. After recreating their graphic, add a new feature or element to make it "better."
+3. Examine the variables and create an original graphic of your own.
+
+
+```{r, eval=FALSE}
+pacman::p_load(tidyverse, ggthemes)
+dat <- read_csv("https://byuistats.github.io/M335/data/Walmart_store_openings.csv")
+
+
+```
+
+## Hints
+
+Make sure to demonstrate quality and your skill set by using the three objectives. Don't worry about getting everything done perfectly. Remember, I am evaluating your proficiency to use the coding tools taught in this class and your ability to create clear visualizations.
+
+[^1]: It now has a significant online presence as well.  Amazon is pushing Walmart more than any other business has been able to challenge in the past.

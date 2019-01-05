@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="J. Hathaway" />
-  <title>Exploratory Data Analysis</title>
+  <title>Finding Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -60,7 +60,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="reveal.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -450,25 +449,15 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 <section>
-    <h1 class="title">Exploratory Data Analysis</h1>
+    <h1 class="title">Finding Data</h1>
     <h2 class="author">J. Hathaway</h2>
 </section>
 
-<section><section id="becoming-the-critic." class="titleslide slide level1"><h1>Becoming the Critic.</h1></section><section id="section" class="slide level2" data-background-iframe="http://www.perceptualedge.com/example6.php">
+<section><section id="becoming-the-critic." class="titleslide slide level1" data-background="#e8d725"><h1>Becoming the Critic.</h1></section><section id="section" class="slide level2" data-background-iframe="http://www.perceptualedge.com/example6.php">
 <h2></h2>
 <p><a href="http://www.perceptualedge.com/example6.php">Visualization of the Day</a></p>
-</section><section id="great-quotes" class="slide level2">
-<h2>Great Quotes</h2>
-<blockquote>
-<p>“There are no routine statistical questions, only questionable statistical routines.”</p>
-</blockquote>
-<p>— Sir David Cox</p>
-<blockquote>
-<p>“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.”</p>
-</blockquote>
-<p>— John Tukey</p>
 </section></section>
-<section><section id="team-discussion" class="titleslide slide level1"><h1>Team Discussion</h1></section><section id="case-study-3-becoming-a-databender" class="slide level2">
+<section><section id="team-discussion" class="titleslide slide level1" data-background="#e8d725"><h1>Team Discussion</h1></section><section id="case-study-3-becoming-a-databender" class="slide level2">
 <h2>Case Study 3: Becoming a databender</h2>
 <ul>
 <li>The <a href="https://docs.google.com/spreadsheets/d/1MQtkBWuxla9wITp0BzUTCjbmlvi9j9EiDLIXw7K3UBE/edit?usp=sharing">Google spreadsheet link</a></li>
@@ -480,66 +469,167 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li><a href="https://byuistats.github.io/M335/weekly_projects/cs04_details.html">Case Study 4</a></li>
 </ul>
-</section><section id="task-7-world-data-investigations---part-2" class="slide level2">
-<h2>Task 7: World Data Investigations - Part 2</h2>
+</section><section id="task-7-data-to-answer-questions" class="slide level2">
+<h2>Task 7: Data to Answer Questions</h2>
 <ul>
 <li><a href="https://byuistats.github.io/M335/class_tasks/task07_details.html">Task 7</a></li>
 </ul>
-</section><section id="socrative-hours-quiz" class="slide level2">
-<h2>Socrative Hours Quiz</h2>
-<p><a href="https://socrative.com">socrative.com</a></p>
-</section><section id="your-research-questions" class="slide level2">
-<h2>Your research questions</h2>
-<p><strong><a href="https://byuistats.github.io/M335/class_tasks/task04_details.html">Task 4:</a></strong></p>
+</section></section>
+<section><section id="being-readings" class="titleslide slide level1" data-background="#e8d725"><h1>Being Readings</h1></section><section id="being-a-good-critiquer" class="slide level2">
+<h2>Being a good critiquer</h2>
 <ul>
-<li>Share your research question with your neighbor and explain why finding an answer to the question with data would be exciting.</li>
-<li>Then we can discuss a few as a class.</li>
+<li>What did we like?</li>
+<li>How can this “bug” reporting guide relate to our reviewer feedback?</li>
+</ul>
+</section><section id="what-do-people-do-with-new-data" class="slide level2">
+<h2>What do people do with new data?</h2>
+<ul>
+<li>If you had to summarize this page in one sentence what would you say?</li>
+<li>What did you not like or disagree with?</li>
+<li>Questions on their proposed ideas?</li>
+</ul>
+</section><section id="cleveland-graphical-perception" class="slide level2">
+<h2>Cleveland: Graphical Perception</h2>
+<ul>
+<li><a href="https://gizmodo.com/these-250-year-old-charts-and-graphs-were-the-very-firs-1445388576">Playfiar’s charts</a></li>
+<li>Cleveland’s impact.</li>
 </ul>
 </section></section>
-<section><section id="what-is-eda" class="titleslide slide level1"><h1>What is EDA?</h1></section><section id="exploratory-data-analysis" class="slide level2">
-<h2>Exploratory Data Analysis</h2>
-<p>EDA is fundamentally a creative process. And like most creative processes, the key to asking quality questions is to generate a large quantity of questions.</p>
-<ol type="1">
-<li>What type of variation occurs within my variables?</li>
-</ol>
-<ol start="2" type="1">
-<li>What type of covariation occurs between my variables?</li>
-</ol>
-</section><section id="exploring-old-faithful-goals" class="slide level2">
-<h2>Exploring Old Faithful goals</h2>
-<ol type="1">
-<li><strong>Make the <a href="http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png">histogram shown in the book</a> with the black and white theme and an improved x-axis label.</strong></li>
-</ol>
-</section><section id="exploring-old-faithful-1" class="slide level2">
-<h2>Exploring Old Faithful (1)</h2>
-<p><img src="day_7_files/figure-revealjs/example2-1.png" /></p>
-</section><section id="understanding-case_when" class="slide level2">
-<h2>Understanding <code>case_when()</code></h2>
-<p><code>case_when()</code> is particularly useful inside mutate when you want to create a new variable that relies on a complex combination of existing variables. <strong>Write a short sentence that says what this code is doing?</strong></p>
-</section><section id="exploring-old-faithful-goals-1" class="slide level2">
-<h2>Exploring Old Faithful goals</h2>
-<ol type="1">
-<li>Make the <a href="http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png">histogram shown in the book</a> with the black and white theme and an improved x-axis label.</li>
-<li><strong>Use the mutate function to modify our plot to fill the histogram for two groups of waiting times.</strong></li>
-</ol>
-</section><section id="exploring-old-faithful-2" class="slide level2">
-<h2>Exploring Old Faithful (2)</h2>
-<p><img src="day_7_files/figure-revealjs/thestuf33-1.png" /></p>
-</section><section id="exploring-old-faithful-goals-2" class="slide level2">
-<h2>Exploring Old Faithful goals</h2>
-<ol type="1">
-<li>Make the <a href="http://r4ds.had.co.nz/EDA_files/figure-html/unnamed-chunk-9-1.png">histogram shown in the book</a> with the black and white theme and an improved x-axis label.</li>
-<li>Use the mutate function to modify our plot to fill the histogram for two groups of waiting times.</li>
-<li><strong>Use the waiting variable to make a hexbin plot of the relationship between waiting time and duration.</strong></li>
-</ol>
-</section><section id="exploring-old-faithful-3" class="slide level2">
-<h2>Exploring Old Faithful (3)</h2>
-<p><img src="day_7_files/figure-revealjs/realldkdjf-1.png" /></p>
-</section></section>
-<section><section id="understanding-terms" class="titleslide slide level1"><h1>Understanding terms</h1></section><section id="socrative-quiz" class="slide level2">
-<h2>Socrative Quiz</h2>
+<section><section id="vectors" class="titleslide slide level1" data-background="#e8d725"><h1>Vectors</h1></section><section id="quotes-from-the-chapter" class="slide level2">
+<h2>Quotes from the chapter</h2>
 <ul>
-<li><a href="https://socrative.com/">Socrative: Exploratory Analysis</a></li>
+<li>Vectors are particularly important as most of the functions you will write will work with vectors. It is possible to write functions that work with tibbles (like ggplot2, dplyr, and tidyr), but the tools you need to write such functions are currently idiosyncratic and immature.</li>
+</ul>
+<ul>
+<li>There is an important variation of [ called [[. [[ only ever extracts a single element, and always drops names. It’s a good idea to use it whenever you want to make it clear that you’re extracting a single item, as in a for loop. The distinction between [ and [[ is most important for lists, as we’ll see shortly.</li>
+</ul>
+</section><section id="vectors-1" class="slide level2">
+<h2>Vectors</h2>
+<p style="text-align: left;">
+The chief difference between atomic vectors and lists is that atomic vectors are homogeneous, while lists can be heterogeneous. There’s one other related object: NULL. NULL is often used to represent the absence of a vector (as opposed to NA which is used to represent the absence of a value in a vector). NULL typically behaves like a vector of length 0.
+</p>
+</section><section id="checking-truths" class="slide level2">
+<h2>Checking Truths</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>lgl</th>
+<th>int</th>
+<th>dbl</th>
+<th>chr</th>
+<th>list</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>is_logical()</code></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>is_integer()</code></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>is_double()</code></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>is_numeric()</code></td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>is_character()</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>is_atomic()</code></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>is_list()</code></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>x</td>
+</tr>
+<tr class="even">
+<td><code>is_vector()</code></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+</section><section id="scalars-and-recycling-rules" class="slide level2">
+<h2>Scalars and recycling rules</h2>
+<p>Write out this line of code and then map the full process to get to the output</p>
+<p><strong>Input</strong></p>
+<p><code>1:10 + 1:2</code></p>
+<p><strong>Output</strong></p>
+<p><code>#&gt;  [1]  2  4  4  6  6  8  8 10 10 12</code></p>
+</section><section id="lists" class="slide level2">
+<h2>Lists</h2>
+<p>While understanding and using functions is probably more important. Understanding how lists work and the power of lists is a very important key to becoming a master R programmer.</p>
+<ul>
+<li><a href="http://r4ds.had.co.nz/vectors.html">Lists and condiments</a></li>
+</ul>
+<pre><code>a &lt;- list(a = 1:3, b = &quot;a string&quot;, c = pi, d = list(-1, list(-5, &quot;fish&quot;)))
+</code></pre>
+<p><strong>What does this command do?</strong></p>
+<p><code>a[[c(4,2,2)]]</code></p>
+</section><section id="data.frame-and-tbl-1" class="slide level2">
+<h2>data.frame and tbl (1)</h2>
+<p><strong>What is the difference between tibbles and data frames?</strong></p>
+<ul>
+<li class="fragment">Never coerces inputs (i.e. strings stay as strings!).</li>
+<li class="fragment">Never adds row.names.</li>
+<li class="fragment">Never munges column names.</li>
+<li class="fragment">Only recycles length 1 inputs.</li>
+<li class="fragment">Evaluates its arguments lazily and in order.</li>
+<li class="fragment">Adds tbl_df class to output.</li>
+<li class="fragment">Automatically adds column names.</li>
+</ul>
+</section><section id="data.frame-and-tbl-2" class="slide level2">
+<h2>data.frame and tbl (2)</h2>
+<p><strong>What is the difference between tibbles and data frames?</strong></p>
+<ul>
+<li class="fragment">When printed, the tibble diff reports the class of each variable. data.frame objects do not.</li>
+<li class="fragment">When printing a tibble diff to screen, only the first ten rows are displayed. The number of columns printed depends on the window size.</li>
+</ul>
+</section><section id="tbl-settings" class="slide level2">
+<h2>tbl settings</h2>
+<ul>
+<li>Change the maximum and the minimum rows to print: <code>options(tibble.print_max = 20, tibble.print_min = 6)</code></li>
+<li>Always show all rows: <code>options(tibble.print_max = Inf)</code></li>
+<li>Always show all columns: <code>options(tibble.width = Inf)</code></li>
 </ul>
 </section></section>
     </div>

@@ -11,41 +11,16 @@ params:
 
 
 
-# Becoming the Critic.
+# Thought for the day {data-background=#e8d725}
+
+## What I see: Greatness
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/XcbSCnUXOkk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
-```r
-vday <- params$day - 1
-vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
-titlelink <- paste0('{data-background-iframe="', vlink, '"}')
-```
+## What you may think is happening.
 
-# Thought for the day
-
-## Greatness
-
-<iframe width="800" height="400" src="https://www.youtube.com/embed/XcbSCnUXOkk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-
-## The Power to Become
-
-<iframe src='https://players.brightcove.net/710874264001/default_default/index.html?directedMigration=true&videoId=5702222031001&' allowfullscreen frameborder=0 width = 800, height = 400></iframe>
-
-
-## Reboot
-
-Time for a reboot!  Please read the following updates to the course.  By the end of this discussion, I would like each of you to have a proposed a plan to complete the semester strong and what grade you would like based on your plan. 
-
-**Be creative, sincere, and committed.**
-   
-> * Please reread the [syllabus](https://byuistats.github.io/M335/syllabus.html) and address the following question in your repository readme.md. **Why have we built this class with the current grading structure and task format?**
-
-## Reboot Details
-
-**Please address this final question in your repository readme.**
-
->    1. What are your goals for the remainder of the semester to get the grade you desire?
->    2. How will you tackle these goals?
+<iframe width="900" height="500" src="https://www.youtube.com/embed/-KSryJXDpZo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 
@@ -56,7 +31,7 @@ Time for a reboot!  Please read the following updates to the course.  By the end
 
 
 
-# Team Discussion
+# Team Discussion {data-background=#e8d725}
 
 
 
@@ -85,7 +60,7 @@ Time for a reboot!  Please read the following updates to the course.  By the end
 
 
 
-# Discussing Use Cases
+# Discussing Use Cases {data-background=#e8d725}
 
 ## Call Center all
 
@@ -112,14 +87,14 @@ stop times for each of the calls.
 > - [Contractor Calls](callcenter_contract.png){target="blank"}
 > - [Full-Time Calls](callcenter_fulltime.png){target="blank"}
 
-#  Factoring in control
+#  Factoring in control {data-background=#e8d725}
 
 ## Using Factors to improve communication
 
 **Now that we have learned about factors let's take some time to fix our Case Study 6 work.**
 
 >  1. Let's correctly sort our x-axes and then include both bars when we are making bar plots.
->  2. Let's fix our axis labels using legends.
+>  2. Let's fix our axis labels and legends.
 >  3. Is there something better we can do than bar-plots?
 
 
@@ -127,23 +102,59 @@ stop times for each of the calls.
 
 If your code from case study 6 has enough to address the questions you can use your own code.  If not let's use mine.
 
-> - [Hathaway Code for Case Study 6](https://byuistats.github.io/M335/presentations_class/restaurants_idaho.html)
-
+[Hathaway code](restaurant_data_build.R){target="blank"}
 
 ## Sorting and including factor levels
 
-**with tidyr and dplyr**
+**[with tidyr and dplyr](http://www.imachordata.com/you-complete-me/)**
 
 
+```r
+complete()
+```
+
+<!-- #  complete(County,Type2, Year,  fill = list(n = 0)) %>% -->
+<!-- #  mutate(County = fct_reorder(County,n), Type2 = fct_reorder2(Type2, County, n), .desc = TRUE) %>% -->
 
 **with ggplot2**
 
 
-
-
+```r
+scale_x_discrete(drop = FALSE)
+scale_size_continuous(breaks = c(), range = c(), guide = "none")
+```
 
 ## Fixing axes
 
+
+```r
+guides(color = guide_legend(override.aes = list(size = 5)))
+theme(panel.grid.minor = element_blank(), axis.text.x = 
+        element_text(angle = 35, vjust = 1, hjust = 1), 
+      legend.position = "bottom")
+```
+
+
+# Making new R package friends {data-background=#e8d725}
+
+## The challenge
+
+1. Pick one of the R packages on the following slide
+2. Read material on the R package
+3. Build a working script that demonstrates the use of the R package.
+4. Write up a short presentation on the package.
+
+## The packages
+
+- [rio: The double click of data import](https://cran.r-project.org/web/packages/rio/vignettes/rio.html#data_import)
+- [janitor: making the cleaning easy](https://github.com/sfirke/janitor)
+- [tidytext: helps for text mining](https://github.com/juliasilge/tidytext)
+- [fst: yes it is fast](http://www.fstpackage.org/)
+- [glue: why should we paste](https://github.com/tidyverse/glue)
+- [reinstallr: getting your packages back](https://github.com/calligross/reinstallr)
+- [multidplyr: we need more than one dplyr?](http://www.business-science.io/code-tools/2016/12/18/multidplyr.html)
+- [dbplyr: databases with dplyr](https://db.rstudio.com/dplyr/)
+- [skimr: pipeable summary statistics](https://github.com/ropenscilabs/skimr)
 
 
 

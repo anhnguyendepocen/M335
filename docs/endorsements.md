@@ -1,0 +1,14 @@
+---
+title: "Endorsements"
+output: html_document
+---
+
+
+
+## [Colton Kopsa](https://www.linkedin.com/in/coltonkopsa/)
+
+> In writing about your data wrangling class, I'm am impressed with how easy it was to think of things it allowed me to do/experience even almost a year later. I feel like it was done in such a way that learning about telling a story with data and producing high quality work was easy. There were lots of opportunities to learn from each other and help each other succeed. Then, at the end of it all, I was able to "publish" my final report to LinkedIn, which made me work hard to make it be something professional and worth looking at. The class translated easily into things to add to my professional portfolio. - December, 2018 - 
+
+## Share your thoughts
+
+Use [this google form](https://goo.gl/forms/abagqtM0qjJOm8NT2) to share your thoughts.  By sharing your thoughts, you give permission for us to post them on our website.

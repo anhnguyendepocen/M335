@@ -2,7 +2,7 @@
 title: "Practicing with R packages"
 author: J. Hathaway
 params:
-  day: 25
+  day: 26
   ptitle: true
   pbackground: true
   dtype: "none"

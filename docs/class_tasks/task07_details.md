@@ -15,9 +15,11 @@ output:
 
 
 
-## Task 7: World Data Investigations - Part 2 
+## Task 7: Data to Answer Questions 
 ### Background 
-The [Our World in Data](https://ourworldindata.org/){target="blank"} website has world data.  It is nice that they have provided graphics and then the data that they used to generate the graphics. Once again, we are going to recreate some of their visualizations in R and then make them better.
+
+Finding good data takes time, and can take longer than the time to tidy your data.  This task could easily take 3-6 hours to find the data you need for your [semester project](https://byuistats.github.io/M335/project.html).  After you find good data sources make sure to complete the remaining tasks.
+
 
  * [Homework Schedule](../homework_schedule.html)
 
@@ -39,17 +41,22 @@ ul {
 
 This reading will help you complete the tasks below.
 
-* o [Chapter 7: R for Data Science - Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html){target='blank'}
-* o [devtoools R Package](https://github.com/hadley/devtools){target='blank'}
+* o [Finding data to answer your question](https://www.dataquest.io/blog/free-datasets-for-projects/){target='blank'}
+* o [Find a post from the functional art](http://www.thefunctionalart.com){target='blank'}
+* o [Chapter 20: R for Data Science - Vectors](http://r4ds.had.co.nz/vectors.html){target='blank'}
+* o [Chapter 18: R for Data Science - Pipes](http://r4ds.had.co.nz/pipes.html){target='blank'}
 
 
 ### Tasks
 
 
 * [ ] Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
-* [ ] Explore the world data on `financing_healthcare` and create an interesting graphic that highlights this dataset in relation to child mortality.
-    * [ ] Use `devtools::install_github("drsimonj/ourworldindata")` to get a larger dataset on `financing_healthcare`
-    * [ ] Create a graphic that you could use in a final presentation to summarize world child mortatility (`child_mort` column)
-* [ ] Push your `.Rmd`, `.md`, and `.html` to your GitHub repo
+* [ ] Build an interactive document that has links to sources with a description of the quality of each
+    * [ ] Find 3-5 potential data sources (that are free) and document some information about the source
+    * [ ] Build an R script that reads in, formats, and visualizes the data using the principles of exploratory analysis
+    * [ ] Write a short summary of the read in process and some coding secrets you learned
+    * [ ] Include 2-3 quick visualizations that you used to check the quality of your data
+    * [ ] Summarize the limitations of your final compiled data in addressing your original question
+* [ ] After formatting your data identify any follow on or alternate questions that you could use for your project
 
 
